@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/git-lfs/git-lfs/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/git-lfs/git-lfs/commits/master.atom"/>
+  <title>Recent Commits to git-lfs:master</title>
+  <updated>2020-02-21T16:28:19Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/043dddc57c15d59f38514169af97257fc99fda11</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/043dddc57c15d59f38514169af97257fc99fda11"/>
+    <title>
+        Merge pull request #4035 from bk2204/tidy-modules
+    </title>
+    <updated>2020-02-21T16:28:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4035 from bk2204/tidy-modules
+
+Tidy modules&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/44623ac530a7d53af4694c3e9a3c04dc7ed4a097</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/44623ac530a7d53af4694c3e9a3c04dc7ed4a097"/>
+    <title>
+        Tidy modules
+    </title>
+    <updated>2020-02-21T14:44:37Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Tidy modules
+
+Remove some entries which are not needed from go.mod and go.sum.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/39ab81082e1661e755755a64ea2216e4ed1dff53</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/39ab81082e1661e755755a64ea2216e4ed1dff53"/>
+    <title>
+        Merge pull request #4022 from bk2204/verify-releases
+    </title>
+    <updated>2020-02-18T19:33:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4022 from bk2204/verify-releases
+
+README: explain how to verify releases&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/567d4333b0020c84ccd49b67e69f9c5065fd897d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/567d4333b0020c84ccd49b67e69f9c5065fd897d"/>
+    <title>
+        README: explain how to verify releases
+    </title>
+    <updated>2020-02-14T20:06:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;README: explain how to verify releases
+
+Some folks aren&amp;#39;t familiar with the signed SHA-256 sums file we use, or
+aren&amp;#39;t sure how to get the keys to verify releases.  To help them, point
+them to the tag we&amp;#39;ve created that contains the keys (similar to the way
+Git does this) and add an explanation to the README to help them verify
+the releases.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fe094e71199bd59f60213b0b7e6f9fe931c28cd1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/fe094e71199bd59f60213b0b7e6f9fe931c28cd1"/>
+    <title>
+        Merge pull request #4023 from bk2204/migrate-yes
+    </title>
+    <updated>2020-02-14T20:00:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4023 from bk2204/migrate-yes
+
+docs: document git lfs migrate --yes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cd5c8d53cad75bea305b26ef0fe0f49969e45825</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/cd5c8d53cad75bea305b26ef0fe0f49969e45825"/>
+    <title>
+        Merge pull request #4026 from bk2204/linux-no-cgo
+    </title>
+    <updated>2020-02-14T20:00:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4026 from bk2204/linux-no-cgo
+
+Stop using cgo on amd64 Linux&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/af061ba90a9bd19316012c7b127fa9bf640fc591</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/af061ba90a9bd19316012c7b127fa9bf640fc591"/>
+    <title>
+        .github/workflows: disable cgo when building on Linux
+    </title>
+    <updated>2020-02-14T15:16:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;.github/workflows: disable cgo when building on Linux
+
+In the previous commit, we removed the need for building with cgo on
+Linux.  However, Go still wants to link against glibc by default,
+probably due to support for the name service switch.  This makes our
+binaries not work on musl-based systems, however.
+
+Since we already build the RPMs without cgo, it&amp;#39;s likely that nobody
+actually cares about support for the small number of resolver features
+we&amp;#39;d be missing, so explicitly build with cgo when building binaries in
+workflows.  Note that any binaries built on amd64 Linux for other
+platforms (whether Linux or not) are already not using cgo, since
+they&amp;#39;re cross-compiled and we wouldn&amp;#39;t have the appropriate compilers or
+libcs available to support cgo anyway, so this only affects the amd64
+binaries we produce.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a27bda0eb938c1f0b33efa1d3e9881992a6a7069</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/a27bda0eb938c1f0b33efa1d3e9881992a6a7069"/>
+    <title>
+        tools: remove the use of cgo on Linux
+    </title>
+    <updated>2020-02-14T15:16:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;tools: remove the use of cgo on Linux
+
+We currently import the C package solely for a single value: the FICLONE
+ioctl, which is a constant.  Since this is a constant and also part of
+the Linux kernel ABI, there&amp;#39;s no reason we need to have the C compiler
+generate it for us every time we build.  We can instead hard-code the
+constant in place, since it will never change.
+
+This avoids the need for cgo in order to have a functional invocation of
+git lfs dedup on Linux.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6b69389a5d7babd3ca4631a7ade037fcf24e79a3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/6b69389a5d7babd3ca4631a7ade037fcf24e79a3"/>
+    <title>
+        docs: document git lfs migrate --yes
+    </title>
+    <updated>2020-02-12T20:20:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;docs: document git lfs migrate --yes
+
+We&amp;#39;ve long had the option &amp;quot;--yes&amp;quot; to migrate noninteractively, but have
+never documented it.  Document what it does, and warn users that
+reckless use may cause data loss to avoid potential user sadness.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5f969e6a3e48ecee48b6235adccc42a644e82101</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/5f969e6a3e48ecee48b6235adccc42a644e82101"/>
+    <title>
+        Merge pull request #4017 from shalashik/cherry-pick-panic
+    </title>
+    <updated>2020-02-12T18:16:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4017 from shalashik/cherry-pick-panic
+
+commands/command_filter_process: cherry-pick of several commits cause panic error&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ddbe7eacab32d4ba83254c6d180f26afe3cfec69</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/ddbe7eacab32d4ba83254c6d180f26afe3cfec69"/>
+    <title>
+        commands: close TransferQueue when items processed
+    </title>
+    <updated>2020-02-12T16:20:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/64b8d72cc19cdab3e8db506e94be01e0?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>d.struchkov@corp.mail.ru</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;commands: close TransferQueue when items processed
+
+Close transfer queue after all delayed items are processed&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b6de0510047327e5c6ee02da2a92a8a755cae255</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/b6de0510047327e5c6ee02da2a92a8a755cae255"/>
+    <title>
+        Merge pull request #4016 from bk2204/error-local-storage
+    </title>
+    <updated>2020-02-11T14:49:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4016 from bk2204/error-local-storage
+
+Check error when creating local storage directory&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/26c58fb2a88258d556b8e6917208e45c554b3a59</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/26c58fb2a88258d556b8e6917208e45c554b3a59"/>
+    <title>
+        t: remove unnecessary GIT_TRACE_PACK_ACCESS
+    </title>
+    <updated>2020-02-11T06:19:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/64b8d72cc19cdab3e8db506e94be01e0?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>d.struchkov@corp.mail.ru</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;t: remove unnecessary GIT_TRACE_PACK_ACCESS&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bd2be846028400e60fde166836bcc2b8453f8f57</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/bd2be846028400e60fde166836bcc2b8453f8f57"/>
+    <title>
+        Merge branch &#39;master&#39; into cherry-pick-panic
+    </title>
+    <updated>2020-02-10T20:39:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1118574?s=30&amp;v=4"/>
+    <author>
+      <name>shalashik</name>
+      <uri>https://github.com/shalashik</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge branch &amp;#39;master&amp;#39; into cherry-pick-panic&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/42237255b9fe2153eda0e2ed4913b9050cf71008</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/42237255b9fe2153eda0e2ed4913b9050cf71008"/>
+    <title>
+        commands: avoid send on closed channel on &#39;delay&#39;
+    </title>
+    <updated>2020-02-10T18:45:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/64b8d72cc19cdab3e8db506e94be01e0?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>d.struchkov@corp.mail.ru</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;commands: avoid send on closed channel on &amp;#39;delay&amp;#39;
+
+Fix &amp;#39;panic: send on closed channel&amp;#39; when cherry-pick several commits.
+The issue occurs when LFS files of cherry-picked commits do not
+exist in LFS cache. The first smudge command closes incoming channel
+of TransferQueue and never opens it again. Resolve issue by creating
+TransferQueue each &amp;#39;smudge&amp;#39; command.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a514c7cf435760c52badf53010733957e496327e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/a514c7cf435760c52badf53010733957e496327e"/>
+    <title>
+        Check error when creating local storage directory
+    </title>
+    <updated>2020-02-10T16:07:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Check error when creating local storage directory
+
+When we have an error creating the local storage directory, such as if
+the permissions are wrong, we fail to produce a helpful error message,
+since we fail to check the error we produce.
+
+Let&amp;#39;s take the error we get in such a case and pass it through to the
+transfer queue, where we can handle it as any other error.  This means
+that if only one directory has a problem, we can transfer the rest of
+the objects and fail for only the one problematic object.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c3b776db6ee273a6c231f9d5922e3aa3421b7b3e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/c3b776db6ee273a6c231f9d5922e3aa3421b7b3e"/>
+    <title>
+        Merge pull request #4009 from bk2204/large-file-warning
+    </title>
+    <updated>2020-02-03T17:19:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4009 from bk2204/large-file-warning
+
+Add an option to control warning about files larger than 4 GiB&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/87fb0fff815698bc2a66b475e5a1042dcee5e4e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/87fb0fff815698bc2a66b475e5a1042dcee5e4e7"/>
+    <title>
+        Add an option to control warning about files larger than 4 GiB
+    </title>
+    <updated>2020-01-30T22:37:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add an option to control warning about files larger than 4 GiB
+
+Git on Windows is currently incapable of handling files larger than 4
+GiB in size.  This is because Git uses &amp;quot;unsigned long&amp;quot; for numerous
+types of variables representing files, which on a Unix system is an
+appropriate way to specify a pointer-sized integer, since Unix systems
+are either ILP32 or LP64.  However, Windows is LLP64, meaning that a
+variable of type unsigned long is always 32 bits.
+
+We warn about this case to help alert users to potential corruption when
+they&amp;#39;re working across platforms.  However, there are some users and
+projects who don&amp;#39;t use Windows and therefore don&amp;#39;t have this problem.
+For those users and projects, this warning is not helpful.  Let&amp;#39;s add
+an option to control that warning so folks who don&amp;#39;t wish to see it can
+disable it.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/58ba930794cb9ffa0c85a83e5d7db38ab80411cc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/58ba930794cb9ffa0c85a83e5d7db38ab80411cc"/>
+    <title>
+        Merge pull request #4000 from bk2204/track-filename-already-supported
+    </title>
+    <updated>2020-01-27T15:04:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #4000 from bk2204/track-filename-already-supported
+
+track: detect duplicate patterns with --filename&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ab58f576bf176cf77638ecda51150260e5f12875</id>
+    <link type="text/html" rel="alternate" href="https://github.com/git-lfs/git-lfs/commit/ab58f576bf176cf77638ecda51150260e5f12875"/>
+    <title>
+        track: detect duplicate patterns with --filename
+    </title>
+    <updated>2020-01-23T16:47:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/497054?s=30&amp;v=4"/>
+    <author>
+      <name>bk2204</name>
+      <uri>https://github.com/bk2204</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;track: detect duplicate patterns with --filename
+
+When we add a pattern with git lfs track, we inform the user if the
+pattern is already supported.  However, we fail to do so when the
+--filename argument is passed, due to not having encoded the pattern at
+that point.
+
+To solve this problem, hoist the code that encodes the filename as a
+pattern so it happens before we check if we already have such a pattern.&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,35 @@
+From 03fa9102aa2b3cb15ac2325a00e35cb5a303d03b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Mon, 24 Apr 2017 12:03:20 +0100
+Subject: [PATCH] - Added responsive expand example
+
+---
+ examples/responsiveExpand.html | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 examples/responsiveExpand.html
+
+diff --git a/examples/responsiveExpand.html b/examples/responsiveExpand.html
+new file mode 100644
+index 0000000..259f60e
+--- /dev/null
++++ b/examples/responsiveExpand.html
+@@ -0,0 +1,18 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++    <title>Responsive Expand - multiScroll.js</title>
++    <meta name="author" content="Alvaro Trigo Lopez" />
++    <meta name="description" content="multiScroll.js responsive expand example." />
++    <meta name="keywords"  content="multiscroll.js, multiscroll, responsive, expand, example" />
++    <meta name="Resource-type" content="Document" />
++    <meta http-equiv="refresh" content="0; url=http://alvarotrigo.com/multiScroll/extensions/responsive-expand.html" />
++</head>
++<body>
++
++Redirecting...
++
++</body>
++</html>
+\ No newline at end of file

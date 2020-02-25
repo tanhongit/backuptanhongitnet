@@ -1,0 +1,22 @@
+From ef11829dcd05dee3b48a89f2ffe134023c1ef31a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alvaro=20Trigo=20Lo=CC=81pez?= <atrigol@gmail.com>
+Date: Wed, 7 Mar 2018 16:31:36 +0100
+Subject: [PATCH] - Updating release number
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index cf80b65..67110de 100644
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@
+ ![compatibility](http://alvarotrigo.com/multiScroll/imgs/compatible.gif)
+ 
+ ---
+-![multiScroll.js version](http://img.shields.io/badge/multiscroll.js-v0.1.9-brightgreen.svg)
++![multiScroll.js version](http://img.shields.io/badge/multiscroll.js-v0.2.0-brightgreen.svg)
+ [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+ [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/alvarotrigo/9.95)
+ &nbsp;&nbsp; **|**&nbsp;&nbsp; *3.7Kb gziped* &nbsp;&nbsp;**|**&nbsp;&nbsp; *Created by [@imac2](https://twitter.com/imac2)*

@@ -1,0 +1,30 @@
+From ee8f487520999adba917374043e846606feee9f6 Mon Sep 17 00:00:00 2001
+From: Talgat Uspanov <talgautb@users.noreply.github.com>
+Date: Tue, 29 Oct 2019 22:34:58 +0600
+Subject: [PATCH] update README.md
+
+update docs, add method setMouseWheelScrolling
+
+closes #81
+---
+ README.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/README.md b/README.md
+index df56d2e..32daa87 100644
+--- a/README.md
++++ b/README.md
+@@ -292,6 +292,13 @@ $.fn.multiscroll.moveTo('firstSection');
+ $.fn.multiscroll.moveTo(3);
+ ```
+ 
++### setMouseWheelScrolling
++Adds or remove the possibility of scrolling through sections by using mouse wheel (which is active by default).
++
++```javascript
++$.fn.multiscroll.setMouseWheelScrolling(false);
++```
++
+ ### setKeyboardScrolling
+ Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys (which is active by default).
+ 

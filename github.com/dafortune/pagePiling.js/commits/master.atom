@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/dafortune/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/dafortune/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2015-06-12T09:04:06Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4210b4f7734e4e042235176aa1da9767c5d73687</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/4210b4f7734e4e042235176aa1da9767c5d73687"/>
+    <title>
+        Merge pull request #51 from kkirsche/patch-1
+    </title>
+    <updated>2015-06-12T09:04:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #51 from kkirsche/patch-1
+
+Remove moot `version` property from bower.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cbf3c0ef0bab921830c025af1f015054b672795</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/4cbf3c0ef0bab921830c025af1f015054b672795"/>
+    <title>
+        Remove moot `version` property from bower.json
+    </title>
+    <updated>2015-06-12T01:11:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/947110?s=30&amp;v=4"/>
+    <author>
+      <name>kkirsche</name>
+      <uri>https://github.com/kkirsche</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove moot `version` property from bower.json
+
+Per bower/bower.json-spec@a325da3
+
+Also their maintainer says they probably won&amp;#39;t ever use it: http://stackoverflow.com/questions/24844901/bowers-bower-json-file-version-property&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/be9f447b32312c64c7ddb075e957fc4180981a21</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/be9f447b32312c64c7ddb075e957fc4180981a21"/>
+    <title>
+        - Changed top comments wrap
+    </title>
+    <updated>2015-05-20T14:35:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Changed top comments wrap 
+- Minor change related with pp-scrollable&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f804461e089131c593e5ced2fe97dff0d9606d5a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/f804461e089131c593e5ced2fe97dff0d9606d5a"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2015-04-28T16:11:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f2d60feb408cda477b1b3ad8a40e519828127e9b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/f2d60feb408cda477b1b3ad8a40e519828127e9b"/>
+    <title>
+        Added article: creating HugeInc website with pagePiling.js
+    </title>
+    <updated>2015-04-09T21:35:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added article: creating HugeInc website with pagePiling.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f91cc9b6e9997361565bd56ecacb78dbda4da7a1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/f91cc9b6e9997361565bd56ecacb78dbda4da7a1"/>
+    <title>
+        - Marking the project as Javascript
+    </title>
+    <updated>2015-03-31T09:42:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Marking the project as Javascript&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ea29b19592b8b7351d8e6f1a5dd4588f2a5ff1f4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/ea29b19592b8b7351d8e6f1a5dd4588f2a5ff1f4"/>
+    <title>
+        - Fixed bug with `verticalCentered:true` and pp-scrollable #41
+    </title>
+    <updated>2015-03-31T09:40:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug with `verticalCentered:true` and pp-scrollable #41
+- JSLint validation&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/24e01d5291feba57a2f4076363b28f464cd830d6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/24e01d5291feba57a2f4076363b28f464cd830d6"/>
+    <title>
+        - Improved scrollable feature
+    </title>
+    <updated>2015-03-30T10:44:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improved scrollable feature&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4c17964e40caa03be315b6313a3f5113d5bcc6b4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/4c17964e40caa03be315b6313a3f5113d5bcc6b4"/>
+    <title>
+        - Explaining how to create a scrollable section.
+    </title>
+    <updated>2015-03-24T17:36:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Explaining how to create a scrollable section.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/dc69541c86b20a0e43a10fd610194a2b1326ab40</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/dc69541c86b20a0e43a10fd610194a2b1326ab40"/>
+    <title>
+        - Added new feature to create an scrollable section by using `pp-scro…
+    </title>
+    <updated>2015-03-24T16:28:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added new feature to create an scrollable section by using `pp-scrollable`.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/756e34965b0c351cf4cbf311fa86027c16dd028f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/756e34965b0c351cf4cbf311fa86027c16dd028f"/>
+    <title>
+        Update bower.json
+    </title>
+    <updated>2015-02-22T20:47:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update bower.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e28c1ef8ee77c55f3dcf94fbcf5f92dbc068187f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/e28c1ef8ee77c55f3dcf94fbcf5f92dbc068187f"/>
+    <title>
+        - Solved bug with tooltips
+    </title>
+    <updated>2015-02-22T20:46:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with tooltips
+- Improved performance and magnification&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/863f3b8b9413f0c07d0bdcbe6358b3c9a06b7f4a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/863f3b8b9413f0c07d0bdcbe6358b3c9a06b7f4a"/>
+    <title>
+        - Solved problem with navigation bullets #38
+    </title>
+    <updated>2015-02-18T10:45:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved problem with navigation bullets #38
+- Added compatibility for IE 11 touch screen #34&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/647fecefc18da529cd373f498705bd1e2d6348d9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/647fecefc18da529cd373f498705bd1e2d6348d9"/>
+    <title>
+        - Added website to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2015-01-21T21:54:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/de593c0e99c22e3a5c905a839cae94d47388b9e9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/de593c0e99c22e3a5c905a839cae94d47388b9e9"/>
+    <title>
+        Merge pull request #33 from dawsonbotsford/master
+    </title>
+    <updated>2014-12-30T11:09:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #33 from dawsonbotsford/master
+
+Spelling Correction from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/817f69d51797e3ca6ac45b8331b8d43e4292e562</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/817f69d51797e3ca6ac45b8331b8d43e4292e562"/>
+    <title>
+        Spelling correction automated from Dawson&#39;s Spelling Bee
+    </title>
+    <updated>2014-12-29T22:05:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Spelling correction automated from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05"/>
+    <title>
+        - Solved bug with IE 11 for Windows Phone
+    </title>
+    <updated>2014-12-05T11:43:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with IE 11 for Windows Phone
+- Added `easeInQuart` effect inside the plugin 
+- Added new feature: a class is added to the body on section change&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f8258f16f41717eb48ba82c96142d368b102c526</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/f8258f16f41717eb48ba82c96142d368b102c526"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cb13ded3d3ada0e43e315fe7f479de04c133489</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/4cb13ded3d3ada0e43e315fe7f479de04c133489"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f016843e537f1c662f07e1fcf3f256bab508e7fd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dafortune/pagePiling.js/commit/f016843e537f1c662f07e1fcf3f256bab508e7fd"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-26T15:05:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

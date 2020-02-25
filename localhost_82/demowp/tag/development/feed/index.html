@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Development &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/development/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Mon, 13 Jan 2020 20:10:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Development &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Laravel Error: No application encryption key has been specified</title>
+		<link>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/</link>
+				<comments>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/#respond</comments>
+				<pubDate>Fri, 29 Nov 2019 04:13:02 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Laravel]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7400</guid>
+				<description><![CDATA[<p>Khi chạy web Laravel mà gặp lỗi RuntimeException No application encryption key has been specified tức là trong Laravel app chưa có APP_KEY App key này dùng để mã hóa trong ứng dụng Laravel và bắt buộc phải có, điều này có vẻ đơn giản với các bạn quen với Laravel nhưng với nhiều bạn mới học, đặc biệt lúc Cài đặt Laravel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/">Laravel Error: No application encryption key has been specified</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Khi chạy <strong>web Laravel</strong> mà gặp <strong>lỗi RuntimeException No application encryption key has been specified</strong> tức là trong <strong>Laravel app</strong> chưa có <code>APP_KEY</code></p>
+<p>App key này dùng để mã hóa trong ứng dụng Laravel và bắt buộc phải có, điều này có vẻ đơn giản với các bạn quen với Laravel nhưng với nhiều bạn mới học, đặc biệt lúc Cài đặt Laravel lại chọn cách thủ công nên hay thường xảy ra lỗi như thế này.</p>
+<figure id="attachment_7407" aria-describedby="caption-attachment-7407" style="width: 1146px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png"><img class="size-full wp-image-7407" src="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png" alt="no application encryption key has been specified" width="1146" height="563" srcset="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png 1146w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-300x147.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-1024x503.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-768x377.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-750x368.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-1140x560.png 1140w" sizes="(max-width: 1146px) 100vw, 1146px" /></a><figcaption id="caption-attachment-7407" class="wp-caption-text">no application encryption key has been specified</figcaption></figure>
+<p>Bạn sẽ thường gặp phải vấn đề này khi bạn tải xuống một ứng dụng Laravel hiện có nào đó, và khi bạn sao chép tệp <span style="color: #0000ff;"><strong><code>.env.example</code></strong></span> vào <span style="color: #0000ff;"><strong><code>.env</code></strong></span> để khởi chạy ứng dụng nhưng không đặt giá trị nào cho biến <span style="color: #0000ff;"><strong><code>APP_KEY</code></strong></span>.</p>
+<h3><strong>Cách giải quyết:</strong></h3>
+<p>Mở conmmand-line lên chạy lệnh sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">php artisan key:generate</pre>
+<p>Điều này sẽ tạo một khóa ngẫu nhiên cho <span style="color: #0000ff;"><strong>APP_KEY</strong></span>, Sau khi hoàn thành, file<span style="color: #0000ff;"><strong> .env</strong></span> sẽ tự động chỉnh sửa. Sau đó bạn nên nhập tiếp dong lệnh dưới đây để xoá bộ nhớ cache</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">php artisan config:cache</pre>
+<p>Ngoài ra, nếu bạn đang sử dụng máy chủ web mặc định của PHP (ví dụ: <span style="color: #0000ff;"><strong><code>php artisan serve</code></strong></span>), bạn cần <strong>khởi động lại máy chủ</strong> thay đổi.</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>XEM THÊM:</strong></div>
+<ul>
+<li><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer"><strong>Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</strong></a></li>
+</ul>
+</div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7400"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/">Laravel Error: No application encryption key has been specified</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 05:31:23 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[blogger]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Animate CC]]></category>
+		<category><![CDATA[đồ họa]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[Phần mềm thiết kế]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7275</guid>
+				<description><![CDATA[<p>Download Adobe Animate CC 2020, thay thế Flash Professional, là một môi trường mạnh mẽ để tạo hoạt hình và nội dung đa phương tiện. Cho phép bạn tạo các dự án tương tác biểu cảm được hiển thị với chất lượng tuyệt vời trên máy tính để bàn và các thiết bị khác nhau, [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/">Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Download Adobe Animate CC 2020</strong>, thay thế Flash Professional, là một môi trường mạnh mẽ để tạo hoạt hình và nội dung đa phương tiện. Cho phép bạn tạo các dự án tương tác biểu cảm được hiển thị với chất lượng tuyệt vời trên máy tính để bàn và các thiết bị khác nhau, bao gồm cả máy tính bảng và điện thoại thông minh, cũng như trên màn hình tivi.</p>
+<figure id="attachment_7278" aria-describedby="caption-attachment-7278" style="width: 748px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png"><img class="size-full wp-image-7278" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png" alt="adobe animate cc 2020" width="748" height="498" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png 748w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020-300x200.png 300w" sizes="(max-width: 748px) 100vw, 748px" /></a><figcaption id="caption-attachment-7278" class="wp-caption-text">Full bộ adobe animate cc 2020</figcaption></figure>
+<p><strong>Adobe Animate CC</strong> cũng cho phép bạn làm việc với raster, vector, cũng như đồ họa ba chiều bằng GPU. Cũng hỗ trợ truyền phát hai chiều âm thanh và video.</p>
+<p><strong>Adobe Animate CC </strong>sẽ giúp bạn trở thành một người thiết kế website chuyên nghiệp, tùy biến một cách bát mắt bằng các tạo ra các hiệu ứng<strong> HTML</strong> làm động nội dung web, giúp cho giao diện đẹp hơn trong mới lạ hơn. Tạo nội dung dựa trên web tương tác cho các trò chơi và quảng cáo bằng các công cụ minh họa và hoạt hình mạnh mẽ.</p>
+<h2><strong>Các tính năng của Adobe Animate CC 2020 Tải xuống miễn phí</strong></h2>
+<p>Dưới đây là một số tính năng tuyệt vời mà bạn có thể trải nghiệm sau khi cài đặt Adobe Animate CC 2020 Tải xuống miễn phí, xin lưu ý các tính năng có thể thay đổi và hoàn toàn phụ thuộc nếu hệ thống của bạn hỗ trợ chúng.</p>
+<p><strong>Tạo nhân vật trở nên sống động.</strong></p>
+<ul>
+<li>Phác thảo và vẽ các ký tự biểu cảm hơn bằng các bút vẽ vectơ nhạy áp lực và nghiêng, hoạt động như thật. Làm cho nhân vật của bạn chớp mắt, nói chuyện và đi bộ với hoạt hình theo từng khung hình đơn giản. Và tạo các biểu ngữ web tương tác đáp ứng các tương tác của người dùng như di chuyển chuột, chạm và nhấp chuột.</li>
+</ul>
+<p><strong>Hoạt hình với chân và tay và đầu.</strong></p>
+<ul>
+<li>Tiếp cận đối tượng của bạn trên máy tính để bàn, thiết bị di động và TV bằng cách xuất hình động của bạn sang nhiều nền tảng, bao gồm HTML5 Canvas, WebGL, Flash / Adobe AIR và các nền tảng tùy chỉnh như SVG. Bạn có thể bao gồm mã ngay trong các dự án của bạn và thậm chí thêm các hành động mà không cần phải mã.</li>
+</ul>
+<p><strong>Xem những gì mới có thể làm.</strong></p>
+<ul>
+<li>Animate luôn trở nên tốt hơn, với các tính năng mới được tung ra thường xuyên. Và với tư cách thành viên Creative Cloud của bạn, bạn sẽ có được chúng ngay khi chúng tôi phát hành chúng. Dưới đây là một số cập nhật mới nhất.</li>
+</ul>
+<p><strong>Điêu khắc tài sản</strong></p>
+<ul>
+<li>Tạo tư thế mới cho nội dung vectơ hoặc raster bằng cách sử dụng biến dạng lưới.</li>
+</ul>
+<p><strong>Kiểm soát lớp tốt hơn</strong></p>
+<ul>
+<li>Sắp xếp các lớp của bạn theo phân cấp cha-con để tạo hiệu ứng động dễ dàng hơn giữa các tư thế.</li>
+</ul>
+<p><strong>Tự động hát nhép</strong></p>
+<ul>
+<li>Nhờ Adobe Sensei, Animate giờ đây tự động khớp với tư thế miệng với âm thanh.</li>
+</ul>
+<p><strong>Tác giả và xuất bản VR</strong></p>
+<ul>
+<li>Sử dụng các kỹ năng 2D của bạn để xuất hình động 360 VR và tạo trải nghiệm tuyệt vời cho các bước đi ảo.</li>
+</ul>
+<h2><strong>Yêu cầu hệ thống cho Adobe Animate CC 2020 Tải xuống miễn phí</strong></h2>
+<p>Trước khi bạn cài đặt Tải xuống miễn phí <strong>Adobe Animate CC 2020</strong>, bạn cần biết máy tính của mình có đáp ứng các yêu cầu hệ thống được đề xuất hoặc tối thiểu không</p>
+<ul>
+<li><strong>Hệ điều hành</strong> : Windows 10 (Phiên bản cập nhật mới nhất)</li>
+<li><strong>Bộ nhớ (RAM):</strong>  Yêu cầu 4 GB RAM.</li>
+<li><strong>Dung lượng đĩa cứng</strong> : Cần 3 GB dung lượng trống để cài đặt đầy đủ.</li>
+<li><strong>Bộ xử lý:</strong>  Intel Pentium 4 Dual Core GHz trở lên.</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Download miễn phí Adobe Animate CC 2020</strong></span></h2>
+<p style="text-align: center;"><strong>Phiên bản Adobe Animate 2020 20.0.0.17400</strong></p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1Rxjxrw_ftApvQOXQ9vgh21OvFIRjFxRx" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Animate CC 2020 Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<hr />
+<h2><span id="Huong_dan_cai_dat_phan_mem_Dreamweaver_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Adobe Animate CC 2020</strong></span></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7275"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/">Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</title>
+		<link>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/</link>
+				<comments>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 11:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7188</guid>
+				<description><![CDATA[<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng Open XML và closed XML. điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng <strong>Open XML và closed XML.</strong> điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm tham chiếu XML mở và XML đóng kín từ các gói nugget.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png"><img class="aligncenter size-full wp-image-7214" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png" alt="write file excel in c sharp" width="700" height="321" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp-300x138.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải thư viện <strong>ClosedXML</strong> miễn phí ở địa chỉ: <strong><a href="https://www.nuget.org/packages/ClosedXML/" target="_blank" rel="noopener noreferrer">https://www.nuget.org/packages/ClosedXML/</a></strong></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+<h2><span id="Cach_Cai_dat_truc_tiep_SpireDoc_SpirePDF_vao_Windows" class="ez-toc-section"><strong>Cách Cài đặt trực tiếp ClosedXML vào Windows.</strong></span></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="write file excel c#" width="548" height="100" data-pin-no-hover="true" /></a></p>
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes…</strong></p>
+<p><a href="https://imgur.com/v1lt77N.png"><img class="aligncenter size-full" src="https://imgur.com/v1lt77N.png" width="344" height="242" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>ClosedXML</strong> như hình bên dưới để cài đặt.</p>
+<p><a href="https://imgur.com/M6aSIuL.png"><img class="aligncenter size-full" src="https://imgur.com/M6aSIuL.png" width="1009" height="485" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/AWlx22D.png"><img class="aligncenter size-full" src="https://imgur.com/AWlx22D.png" width="313" height="165" /></a></p>
+<h2><span id="Tao_file_word_va_ghi_1_doan_van_ban_trong_C" class="ez-toc-section"><strong>Tạo file Excel (xlsx) và ghi vào 1 đoạn văn bản trong C#</strong></span></h2>
+<p>Ở đây đang chuyển đổi Dataset thành file Excel, nếu tập dữ liệu chứa nhiều DataTables, nó có thể được lặp vào cùng một Excel với <strong>các trang tính khác nhau</strong>. Dưới đây là code để kết nối Tạo Excel (.xlsx) và lưu vào đường dẫn chỉ định.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Data;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+
+//su dung phong thuc ClosedXML de hoan thanh
+namespace ghifileexcel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Country");
+            dt.Rows.Add("Venkatesh", "India");
+            dt.Rows.Add("Santhosh", "USA");
+            dt.Rows.Add("Venkat Sai", "Dubai");
+            dt.Rows.Add("Venkat Teja", "Pakistan");
+            ds.Tables.Add(dt);
+            ExportDataSetToExcel(ds);
+        }
+
+        public static void ExportDataSetToExcel(DataSet ds)
+        {
+            string AppLocation = "";
+            AppLocation = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            AppLocation = AppLocation.Replace("D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx", "");
+            string date = DateTime.Now.ToShortDateString();
+            date = date.Replace("/", "_");
+            //string filepath = AppLocation + "\\ExcelFiles\\" + "RECEIPTS_COMPARISON_" + date + ".xlsx";
+            string filepath = "D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx";
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                for (int i = 0; i &lt; ds.Tables.Count; i++)
+                {
+                    wb.Worksheets.Add(ds.Tables[i], ds.Tables[i].TableName);
+                }
+                wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                wb.Style.Font.Bold = true;
+                wb.SaveAs(filepath);
+            }
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.fourthbottle.com/2017/07/create-excel-files-in-csharp-using-open-xml.html" target="_blank" rel="noopener noreferrer">Create Excel files in C#</a></li>
+<li><a href="https://stackoverflow.com/questions/9769703/exporting-to-xlsx-using-microsoft-office-interop-excel-saveas-error" target="_blank" rel="noopener noreferrer">Exporting to .xlsx</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7188"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</title>
+		<link>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/</link>
+				<comments>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 06:49:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7184</guid>
+				<description><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện Spire.Doc của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện <strong>Spire.Doc</strong> của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng thư viện Spire.Doc miễn phí, thư viện này giới hạn 500 đoạn và 25 bảng trong 1 tập tin Word và PDF, đủ để tạo 1 tập tin có dung lượng vừa phải.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png"><img class="aligncenter wp-image-7210 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png" alt="write file word pdf c# c sharp" width="700" height="299" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp-300x128.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải 2 thư viện <strong>Spire.Doc</strong> và <strong>Spire.PDF</strong> bản miễn phí ở địa chỉ: <a href="https://www.e-iceblue.com/Download/download-word-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-word-for-net-free.html</a> và <a href="https://www.e-iceblue.com/Download/download-pdf-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-pdf-for-net-free.html</a>.</p>
+<p>Hoặc bạn tải về theo link google drive mình chuẩn bị sẵn   <a class="btn btn-default" href="https://drive.google.com/open?id=1pK7WYtNOcMXDJBGLKS3H84gIveAiPTEX" target="_blank" rel="noopener noreferrer"> Tại Đây</a></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+
+
+<h2><strong>Cách Cài đặt trực tiếp Spire.Doc, Spire.PDF vào Windows.</strong></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" data-pin-no-hover="true"></a></p>
+
+
+
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes&#8230;</strong></p>
+<p style="text-align: center;"><a href="https://imgur.com/PrJxxMw.png"><img class="aligncenter" src="https://imgur.com/PrJxxMw.png" alt="Manage Nuger Packafes" width="336" height="218" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>Spire.Office</strong> (Sẽ bao gồm đọc tất cả các file office và cả pdf) hoặc chọn <strong>Spire.PDF</strong> và <strong>Spire.Doc</strong>.</p>
+<p><a href="https://imgur.com/nL9cKLY.png"><img class="aligncenter" src="https://imgur.com/nL9cKLY.png" alt="Spire.PDF và Spire.Doc" width="982" height="549" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p><a href="https://imgur.com/BqHguk5.png"><img class="aligncenter size-full" src="https://imgur.com/BqHguk5.png" width="516" height="608" /></a></p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/j5s4u0t.png"><img class="aligncenter" src="https://imgur.com/j5s4u0t.png" alt="Tạo file word c#" width="309" height="343" /></a></p>
+<p>Giờ thì bắt đầu Code.</p>
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản trong C#</strong></h2>
+<p>Ví dụ sau tạo 1 đoạn văn bản “Hello World!” in đậm canh giữa vào tập tin mới <strong>test.doc</strong> (hoặc test.pdf). Tập tin mới sẽ nằm ở thư mục Debug, bạn có thể tùy chỉnh đường dẫn tập tin tùy ý nếu muốn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Spire.Doc;
+using Spire.Pdf;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+ 
+namespace TestProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tạo đối tượng tài liệu (Document)
+            Document doc = new Document();
+             
+            // Tạo đối tượng đoạn (Paragraph)
+            Paragraph paragraph = doc.AddSection().AddParagraph();
+ 
+            // Tạo văn bản (TextRange)
+            Spire.Doc.Fields.TextRange text = paragraph.AppendText("Hello World!");
+            //text.CharacterFormat.Italic = true;  // in nghiêng
+            //text.CharacterFormat.UnderlineStyle = UnderlineStyle.Single; // gạch chân
+            text.CharacterFormat.Bold = true;                                   // kiểu in đậm
+            paragraph.Format.TextAlignment = TextAlignment.Center;              // văn bản canh giữa 
+            paragraph.Format.HorizontalAlignment = HorizontalAlignment.Center;  // đoạn canh giữa
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Left;  // đoạn canh trái  
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Right; // đoạn canh phải
+ 
+            // Lưu đối tượng tài liệu vào tập tin test.doc (nằm ở thư mục Debug của dự án)
+            doc.SaveToFile("test.doc", Spire.Doc.FileFormat.Doc);
+            // doc.SaveToFile("test.pdf", Spire.Doc.FileFormat.PDF); -- tạo PDF
+ 
+            // đóng đối tượng
+            doc.Close();
+        }
+    }
+}</pre>
+
+
+
+<h3><strong>Thêm 1 đoạn mới vào file Word C Sharp</strong></h3>
+<p>Nhìn lại code trên, tại dòng 21, khi tạo 1 đoạn mới chúng ta dùng đoạn mã <strong>Paragraph paragraph = doc.AddSection().AddParagraph();</strong></p>
+<p>Tuy nhiên để thêm 1 đoạn mới nữa bạn phải dùng hàm <strong>doc.Sections[0].AddParagraph();</strong>&nbsp;như trong ví dụ sau đây.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// đoạn mới tên biến là  paragraph2
+Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+// tên văn bản mới là text2
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("Nhập nội dung đoạn mới");
+text2.CharacterFormat.FontSize = 18;
+text2.CharacterFormat.Bold = true;</pre>
+
+
+
+<h3><strong>Canh Tab</strong></h3>
+<p>Để canh Tab thì dùng&nbsp;<strong>paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;</strong>&nbsp;với TabJustification.Right là Tab phải và 175 (float) là vị trí Tab, ngoài ra có có Tab trái ở vị trí 375 (Left) và Tab giữa (Centered) chưa được thêm vào.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+ 
+// Canh Tab phải vị trí 175
+paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;
+paragraph2.Format.Tabs.AddTab(375).Justification = TabJustification.Left;
+//paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Centered;
+// Phải có \t để dịch đến Tab cần canh
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("\t Canh phải \t Canh trái");</pre>
+
+
+
+<h3><strong>Chèn hình</strong></h3>
+<p>Đầu tiên bạn phải thêm thư viện&nbsp;<strong>System.Drawing</strong>&nbsp;vào dự án (Add Reference), sau đó gọi 2 namespace ở trên đầu file code.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Spire.Doc.Fields;
+using System.Drawing;</pre>
+
+
+
+<p>Tiếp theo tạo đối tượng Bitmap và DocPicture để thêm hình vào đối tượng Document.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng hình ảnh DocPicture (using using Spire.Doc.Fields;)
+DocPicture picture = doc.Sections[0].Paragraphs[0].AppendPicture(b1);
+ 
+// Vị trí ảnh theo chiều dọc, ngang
+picture.HorizontalPosition = 50.0F;
+picture.VerticalPosition = 200.0F;
+ 
+// Kích thước ảnh
+picture.Width = 150;
+picture.Height = 100;
+ 
+ // Kiểu chèn ảnh nổi trên văn bản
+ picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;</pre>
+
+
+
+<h3><strong>Thêm bảng biểu</strong></h3>
+<p>Chúng ta dùng đối tượng Table để tạo bảng, trong đó tạo dòng tiêu đề trước và phần dữ liệu từng dòng sau.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Dữ liệu mẫu
+List&lt;string> list = new List&lt;string> { "One", "True", "Three" };
+ 
+// Tạo đối tượng bảng Table
+Spire.Doc.Table table = doc.Sections[0].AddTable(true);
+ 
+// Tạo cột
+String[] Header = { "STT", "Tên"};
+ 
+// Số dòng và số cột cho bảng
+table.ResetCells(list.Count + 1, Header.Length);
+ 
+// Độ rộng bảng ở dòng 0 và 2 cột STT và Tên (tạo tiêu đề bảng)
+doc.Sections[0].Tables[0].Rows[0].Cells[0].Width = 200;
+doc.Sections[0].Tables[0].Rows[0].Cells[1].Width = 200;
+ 
+// Tạo dòng tiêu đề cho bảng (dòng 0)
+Spire.Doc.TableRow FRow = table.Rows[0];
+FRow.IsHeader = true;
+FRow.Height = 23;
+ 
+for (int i = 0; i &lt; Header.Length; i++)
+{
+    // Định dạng cell
+    Paragraph p = FRow.Cells[i].AddParagraph();
+    FRow.Cells[i].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    p.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    // Định dạng văn bản trong bảng
+    Spire.Doc.Fields.TextRange TR = p.AppendText(Header[i]);
+    TR.CharacterFormat.FontName = "Times New Roman";
+    TR.CharacterFormat.FontSize = 13;
+    TR.CharacterFormat.Bold = true;
+}
+ 
+// Định dạng dữ liệu từng dòng (lấy từ list)
+for (int r = 0; r &lt; list.Count; r++)
+{
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[0].Width = 200;
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[1].Width = 200;
+ 
+    // Định dạng dòng thứ r + 1 (bỏ dòng đầu là tiêu đề)
+    Spire.Doc.TableRow DataRow = table.Rows[r + 1];
+    DataRow.Height = 20;
+ 
+    DataRow.Cells[0].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p1 = DataRow.Cells[0].AddParagraph();
+    Spire.Doc.Fields.TextRange TR1 = p1.AppendText((r + 1).ToString()); // STT
+    p1.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    DataRow.Cells[1].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p2 = DataRow.Cells[1].AddParagraph();
+    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(list[r].ToString()); // Tên
+    p2.Format.HorizontalAlignment = HorizontalAlignment.Center;
+}</pre>
+
+
+
+<hr />
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản nhập từ bàn phím trong C#</strong></h2>
+<p>Tương tự như đoạn code mẫu bên trên. ở phần này mình có thay đổi một chút xíu đó là những gì cần ghi vào file word sẽ phải nhập từ màn hình Console. Các bạn có thể tham khảo.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System.Drawing;
+using System;
+using Spire.Doc;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+using Spire.Doc.Formatting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+//ghi text vao file word su dụng phương thức Spire
+namespace ghifileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Document doc = new Document();
+            Section sec = doc.AddSection();
+            Paragraph par = sec.AddParagraph();
+
+            TextBox textBox = par.AppendTextBox(180, 30);
+            textBox.Format.VerticalOrigin = VerticalOrigin.Margin;
+            textBox.Format.VerticalPosition = 100;
+            textBox.Format.HorizontalOrigin = HorizontalOrigin.Margin;
+            textBox.Format.HorizontalPosition = 50;
+            textBox.Format.NoLine = true;
+
+            CharacterFormat format = new CharacterFormat(doc);
+            format.FontName = "Calibri";
+            format.FontSize = 15;
+            format.Bold = true;
+
+            Paragraph par1 = textBox.Body.AddParagraph();
+            string line = "";
+            Console.WriteLine("Nhap  chu can ghi vao file word : ");
+            line = Console.ReadLine();
+            par1.AppendText(line).ApplyCharacterFormat(format);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.docx", FileFormat.Docx);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.doc", FileFormat.Doc);
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.e-iceblue.com/Tutorials/Spire.Doc/Spire.Doc-Program-Guide/Text/How-to-Insert-Text-to-Word-at-Exact-Position-in-C-VB.NET.html" target="_blank" rel="noopener noreferrer">How to Insert Text to Word at Exact Position in C#, VB.NET</a></li>
+<li><a href="https://www.dammio.com/2017/03/20/cach-tao-tap-tin-word-pdf-voi-thu-vien-spire-doc-spire-pdf-bang-c" target="_blank" rel="noopener noreferrer">tạo tệp tin word excel trong c#</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua&nbsp;<a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a>&nbsp;để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+
+
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+
+
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7184"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Đánh số phiên bản phần mềm – Software Versioning</title>
+		<link>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/#respond</comments>
+				<pubDate>Wed, 28 Aug 2019 13:28:29 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6811</guid>
+				<description><![CDATA[<p>Mình thấy một bài viết rất hay nói về việc đánh số các phiên bản cho phần mềm mỗi khi các hãng phát hành nên mình xin thuật lại trong bài viết này cho các bạn cùng đọc và tham khảo. Bài viết này giúp chúng ta hiểu thêm về quy tắc đánh số hiệu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/">Đánh số phiên bản phần mềm – Software Versioning</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Mình thấy một bài viết rất hay nói về việc đánh số các phiên bản cho phần mềm mỗi khi các hãng phát hành nên mình xin thuật lại trong bài viết này cho các bạn cùng đọc và tham khảo.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png"><img class="aligncenter size-full wp-image-6815" src="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png" alt="software versioning" width="649" height="288" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png 649w, http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning-300x133.png 300w" sizes="(max-width: 649px) 100vw, 649px" /></a></p>
+<p>Bài viết này giúp chúng ta hiểu thêm về quy tắc đánh số hiệu các phiên bản (version) của phần mềm máy tính do các hãng, các lập trình viên sử dụng phát hành.</p>
+<h3><strong>Đặt vấn đề</strong></h3>
+<p><a href="https://imgur.com/92ngjws.png"><img class="alignright " src="https://imgur.com/92ngjws.png" alt="Software versioning number" width="147" height="783" /></a></p>
+<p>Người “ngoại đạo” hoặc thậm chí những người sử dụng máy tính chuyên nghiệp cũng chưa chắc hiểu rõ ý nghĩa đằng sau những dãy số “bí ẩn” đi kèm với phần mềm mình vừa cài đặt. Ví dụ: <strong>Mozilla Firefox 68.0.1; Google Chrome 76.0.3809.132; TeamViewer 14.0.13880 …v.v</strong>. Câu hỏi lớn nhất với chúng ta là:</p>
+<ul>
+<li>Tại sao phiên bản của phần mềm lại được đánh số?</li>
+<li>Phiên bản phần mềm 1.0 và 2.0 khác nhau như thế nào?</li>
+<li>Nếu bây giờ tôi bắt tay viết một phần mềm mà đặt mã hiệu phiên bản của tôi như thế nào thì phù hợp?</li>
+</ul>
+<p>&nbsp;</p>
+<h3><strong>Định nghĩa</strong></h3>
+<p>Hệ thống đánh số hiệu phiên bản phần mềm là quy tắc để xác định tên duy nhất của một phần mềm ở mỗi giai đoạn phát triển của nó</p>
+<p>Thông thường, một phần mềm trong quá trình phát triển nó được chỉnh sửa, nâng cấp hoặc vá lỗi nhiều lần. Có những lần chỉnh sửa chỉ đơn thuần là những hiệu chỉnh nhỏ không đáng kể, những cũng có những lần “nâng cấp” toàn diện khiến cho nó không còn là thứ giống như nguyên thủy (bản thân hệ điều hành Windows là 1 ví dụ), hay nói cách khác lần “nâng cấp” này đã đưa phần mềm lên “level” mới.</p>
+<p>Hiện có một số phương pháp gán số hiệu phiên bản phần mềm được dùng phổ biến là:</p>
+<ul>
+<li>Đánh số phiên bản bằng các con số <strong>(Sequence-based identifiers)</strong></li>
+<li>Đánh số hiệu phiên bản dựa theo mức độ ổn định của sản phẩm <strong>(Stage-based identifiers)</strong></li>
+</ul>
+<h3><strong>Sequence-based identifers</strong></h3>
+<p>Phương pháp này sử dụng các con số (đôi khi kết hợp thêm các chữ cái) để gán số hiệu cho các phiên bản. Công thức đánh số hiệu phiên bản như sau:</p>
+<p><strong><span style="color: #0000ff;">major.minor.[build [.revision]]</span>   </strong>hoặc<br />
+<span style="color: #0000ff;"><strong>major.minor [maintenance[.build]]</strong></span></p>
+<p>Ý nghĩa các số <strong><em>major, minor, build, revision</em></strong> như sau</p>
+<ul>
+<li><strong>major</strong>: Chuỗi phiên bản chính.</li>
+<li><strong>minor</strong>: Chuỗi phiên bản phụ</li>
+<li><strong>build</strong>: Chuỗi phiên bản cấu tạo. Đánh dấu sự khác nhau trong cùng 1 phiên bản phụ, 2 chữ số.</li>
+<li><strong>revision</strong>: Lần sửa đổi. đánh dấu lần sửa đổi của mã nguồn.</li>
+</ul>
+<p>Chỉ số <strong><em>major</em> </strong>sẽ tăng mỗi khi:  Có sự <strong>thay đổi lớn trong “nhân hệ thống”</strong> mà theo đó hệ thống mới có thể khác 1 phần hay hoàn toàn hệ thống cũ.</p>
+<p>Chỉ số <strong><em>minor</em> </strong>sẽ tăng mỗi khi: Có sự thay đổi phần “core” của hệ thống mà <strong>không làm mất đi hoàn toàn tính tương thích</strong> trong cùng phiên bản chính.</p>
+<p>Còn chỉ số <strong><em>build</em> </strong>sẽ tăng mỗi khi: Có đóng gói gửi đi ra ngoài đội code (đội phát triển) nhằm các mục đích phát hành hay thử nghiệm…</p>
+<p>Chỉ số <strong><em>revision </em></strong>có thể được sử dụng mỗi khi<strong>: </strong>Cần thay thế code phát hành trước đó mà chưa cần thiết phải thay tên phiên bản. Chỉ số này là lần sửa đổi (revisions) của mã nguồn, nó đánh dấu số lần sửa đổi của mã nguồn và được thường được hệ thống kiểm quản lý mã nguồn của hãng kiểm soát:<strong><br />
+</strong></p>
+<h4><strong>Quy tắc quan trọng đối với phương pháp đánh số phiên bản bằng cách này như sau:</strong></h4>
+<ol>
+<li>Khi phát hành một phiên bản mới các chỉ số <em><strong>major, minor</strong>, <strong>build</strong></em><strong> </strong>phải được tăng ổn định và có thứ tự. Ví dụ 1.9.0 → 1.10.0 → 1.10.1</li>
+<li>Mỗi khi phiên bản mới đã được phát hành, tất cả nội dung (bao gồm mã nguồn, API) của phiên bản đó phải giữ nguyên không được thay đổi. Bất kỳ thay đổi phát sinh nào đều phải được công bố như phát hành một phiên bản mới.</li>
+<li>Các phiên bản phát triển ban đầu thường được đánh số major = <strong><code>0</code></strong> (dạng <strong><code>0.y.z</code></strong>). Bạn có thể thực hiện bất kỳ thay đổi nào trong các phiên bản ở giai đoạn này.</li>
+<li>Chỉ số <em><strong>build</strong> </em>tăng nếu phiên bản này chỉ sửa các lỗi phát sinh, và đảm bảo tương thích với các bản cũ trước đó.</li>
+<li>Chỉ số phiên bản phụ <strong><em>minor</em> </strong>tăng nếu phiên bản này:
+<ul>
+<li>Tương thích ngược với các bản cũ có cùng phiên bản chính</li>
+<li>Cung cấp thêm mới hoặc loại bỏ ít nhất 1 chức năng của phần mềm</li>
+</ul>
+<p><strong>Thông thường người ta thường tăng chỉ số <em>minor </em>nếu:</strong></p>
+<ul>
+<li>Thêm mới một chức năng quan trọng</li>
+<li>Có sự cải thiện trong mã nguồn (giúp chương trình xử lý tốt hơn, nhanh hơn…)</li>
+</ul>
+<p>Sau khi tăng chỉ số phiên bản phụ <em>minor </em>thì số hiệu phiên bản vá <em>build</em>thường được thiết lập về 0</li>
+</ol>
+<h3><strong>Stage-based identifers</strong></h3>
+<p><figure style="width: 250px" class="wp-caption alignright"><a href="https://imgur.com/QmVSJWC.png"><img class="size-full" src="https://imgur.com/QmVSJWC.png" alt="Software release life cycle map" width="250" height="529" /></a><figcaption class="wp-caption-text">Software release life cycle map</figcaption></figure></p>
+<p>Tên gọi cho các phiên bản phần mềm khi phát hành gồm : <span style="color: #0000ff;"><strong><em>Closebeta</em>, <em>Openbeta</em>, <em>Release</em><em>Candidate</em>, </strong></span><em><span style="color: #0000ff;"><strong>Official version</strong></span>.</em> Ý nghĩa của từng phiên bản như sau:</p>
+<h4><strong>Closebeta</strong>: Phiên bản thử nghiệm hạn chế.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản <strong>closebeta</strong> là bản thử nghiệm các tính năng mới phát triển, nó thường không mang đầy đủ các đặc điểm của hệ thống và dễ dàng thay đổi hoặc bị loại bỏ nếu nhận được các phản ứng không tốt sau khi thử nghiệm.</li>
+<li><strong>Ý nghĩa</strong>: Phiên bản này được sử dụng để khảo sát một hoặc một vài tính năng mới xây dựng nào đó của hệ thống (khi chỉ số <em>major</em>thay đổi).</li>
+<li><strong>Mục đích</strong>: Bản closebeta là bản phát hành sớm của một phần mềm nhằm mục đích tập hợp và sử dụng sức mạnh cộng đồng trong việc đóng góp ý kiến, cải tiến tính năng; phát hiện các lỗi trước khi phân phối rộng rãi tới người sử dụng thông thường.</li>
+<li><strong>Đối tượng được mời thử nghiệm</strong>: các lập trình viên và nhóm người dùng có kinh nghiệm.<br />
+Bản closebeta không phải bản phát hành rộng rãi đến tay người sử dụng, do đó chỉ gửi hạn chế đến những người có trình độ và thực sự quan tâm đến việc phát triển hệ thống.</li>
+<li><strong>Nâng cấp</strong>: Không.</li>
+</ul>
+<h4><strong>Openbeta</strong>: Phiên bản thử nghiệm diện rộng.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản openbeta là bản thử nghiệm các tính năng đã phát triển, nó thường mang đầy đủ các đặc điểm của hệ thống và hiếm khi thay đổi hoặc bị loại bỏ khỏi hệ thống trừ khi có phản hồi không tốt từ cộng đồng.</li>
+<li><strong>Ý nghĩa</strong>: Phiên bản này được sử dụng để thử nghiệm một cách đầy đủ và toàn diện hệ thống mới phát triển.</li>
+<li><strong>Mục đích</strong>: Bản openbeta là bản thử nghiệm đầy đủ nhằm mục đích tập hợp và sử dụng sức mạnh cộng đồng trong việc dò tìm để vá các lỗi có thể xảy ra mà quá trình thử nghiệm hạn chế (closebeta) không phát hiện ra.</li>
+<li><strong>Đối tượng được mời thử nghiệm</strong>: tất cả mọi người là thành viên diễn đàn</li>
+<li><strong>Hỗ trợ thử nghiệm</strong>: Có đầy đủ.</li>
+<li><strong>Hỗ trợ sử dụng</strong>: 1 phần. Người thử nghiệm được cung cấp các tài liệu hướng dẫn sử dụng, được trợ giúp trực tiếp trên diễn đàn.</li>
+<li><strong>Nâng cấp</strong>: Không.</li>
+</ul>
+<h4><strong>Release Candidate</strong>: Phiên bản ứng viên.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản Release Candidate là bản ổn định, là ứng cử viên cho phiên bản chính thức. Các lỗi được phát hiện trong giai đoạn này sẽ tiếp tục được sửa chữa.</li>
+<li><strong>Mục đích &amp; Ý nghĩa</strong>: Phiên bản này được sử dụng như một bản đệm trong thời gian chờ phiên bản chính thức ra mắt nhằm tránh trường hợp một bản chính thức có thể bị lỗi ngay sau khi ra mắt.</li>
+<li><strong>Đối tượng người dùng</strong>: tất cả mọi người</li>
+<li><strong>Hỗ trợ sử dụng</strong>: đầy đủ</li>
+<li><strong>Nâng cấp:</strong> Có thể. Cả việc nâng cấp từ phiên bản cũ lên và nâng cấp lên phiên bản chính thức đều có thể được hỗ trợ.</li>
+</ul>
+<h4><strong>Official version</strong>: Phiên bản chính thức.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản Official version là bản chính thức đầu tiên của giai đoạn phát triển của dòng phiên bản mới. Official version là tên gọi của lần phát hành phiên bản duy nhất, các phiên bản tiếp theo sau đó sẽ chỉ được gọi tên bằng số phiên bản.</li>
+<li><strong>Mục đích &amp; Ý nghĩa</strong>: Phiên bản này đánh dấu việc ra mắt dòng phiên bản mới và khuyến khích người sử dụng chuyển tiếp lên phiên bản mới.</li>
+</ul>
+<p><strong>Các căn cứ để đưa ra tên gọi cho các phiên bản mới phát hành</strong>:Tên gọi xếp theo mức độ ổn định sẽ được gán cho một phiên bản đặt theo số nhất định, việc đặt tên do đội code chọn dựa trên đánh giá về tính ổn định của code sau phát hành. Các căn cứ để đưa ra tên gọi như sau:</p>
+<ol>
+<li><strong>Closebeta</strong>:<br />
+Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: Closebeta 1, Closebeta 2, Closebeta 3… để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau không nhất thiết phải bao gồm các tính năng của phiên bản trước và cũng không có quy định về mặt thời gian giữa mỗi phiên bản. Giai đoạn Closebeta sẽ kết thúc khi không còn những thay đổi lớn trong nhân hệ thống.</li>
+<li><strong>Openbeta</strong>:<br />
+Nếu không có sự cố nào nghiêm trọng trong bản Closebeta cuối cùng, bản thử nghiệm diện rộng (Openbeta) đầu tiên sẽ được phát hành tới tất cả các thành viên. Trong giai đoạn này, đều đặn mỗi tuần sẽ có một phiên bản Openbeta ra mắt để fix lỗi phiên bản Openbeta trước.<br />
+Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: <strong>Openbeta 1, Openbeta 2, Openbeta 3…</strong> để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau bắt buộc bao gồm các tính năng của phiên bản trước.<br />
+Giai đoạn Openbeta sẽ kết thúc khi số lượng lỗi được phát hiện giảm xuống, không còn các lỗi nghiêm trọng sau 2 phiên bản Openbeta.</li>
+<li><strong>Release Candidate (RC)</strong><br />
+Khi số lượng lỗi được phát hiện giảm xuống, không còn các lỗi nghiêm trọng sau 2 phiên bản Openbeta, thì một bản Release Candidate sẽ được phát hành. Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: <strong>RC1, RC2, RC3…</strong> để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau bắt buộc bao gồm các tính năng của phiên bản trước. Một bản Release Candidate mới sẽ được ra mắt sớm hơn thông lệ thời gian (như quy định ở bản Openbeta) nếu nó bị phát hiện các lỗi nghiêm trọng</li>
+<li><strong>Official version</strong><br />
+Phiên bản chính thức chỉ được phát hành sau một khoảng thời gian 2 tuần, khi bản RC gần nhất không phát hiện các lỗi tính năng.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ol>
+<li>Software versioning <strong><a href="http://en.wikipedia.org/wiki/Software_versioning" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/Software_versioning</a></strong></li>
+<li>Software Development and Release Stages <strong><a class="postlink" href="http://en.wikipedia.org/wiki/Software_release_life_cycle" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/Software_release_life_cycle</a></strong></li>
+<li>Concurrent Versions System <strong><a href="http://vi.wikipedia.org/wiki/CVS%20" target="_blank" rel="noopener noreferrer">http://vi.wikipedia.org/wiki/CVS</a></strong></li>
+</ol>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong><span style="text-decoration: underline; font-size: 24px;">Xem thêm:</span> </strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/" target="_blank" rel="noopener noreferrer">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/" target="_blank" rel="noopener noreferrer">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6811"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/">Đánh số phiên bản phần mềm – Software Versioning</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</title>
+		<link>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/</link>
+				<comments>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/#respond</comments>
+				<pubDate>Sun, 25 Aug 2019 08:41:53 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6718</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học Java Programming Fundamentals từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình. Bạn sẽ học được gì từ khóa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học <strong>Java Programming Fundamentals</strong> từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình.</p>
+<p><figure id="attachment_6995" aria-describedby="caption-attachment-6995" style="width: 482px" class="wp-caption aligncenter"><img class="wp-image-6995 size-full" title="Khoá học lập trình Java từ cơ bản đến nâng cao" src="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png" alt="Lập trình Java từ cơ bản đến nâng cao" width="482" height="270" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/08/Java-300x168.png 300w" sizes="(max-width: 482px) 100vw, 482px" /><figcaption id="caption-attachment-6995" class="wp-caption-text">Lập trình Java từ cơ bản đến nâng cao</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm vững các kiến thức cơ bản.</li>
+<li>Cải thiện tư duy logic của bạn.</li>
+<li>Phát triển kỹ năng lập trình của bạn bằng cách thực hành các bài tập từ khóa học.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li class="requirements__item">Máy tính Windows, Mac hoặc Linux.</li>
+<li class="requirements__item">Bạn phải cài đặt trình soạn thảo JDK và IntelliJ IDEA để thực hành.</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Khóa học dành cho những người không có kiến ​​thức lập trình.</li>
+<li>Dành cho những người muốn lấy lập trình làm nghề nghiệp của họ.</li>
+<li>Và dành cho những người muốn cải thiện kỹ năng của mình.</li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Download Khóa Học Java Tại Đây:</strong></span></span></h4>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <b>Java Programming Fundamentals</b></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=17u4NJHo1PXhBDzqmf6dwXt30kCSHC0rw" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/tai-lieu/development/" target="_blank" rel="noopener noreferrer">Những khoá học cho lập trình viên</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/" target="_blank" rel="noopener noreferrer">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></strong></span></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6718"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 99px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">4.5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Khóa Học Angular 8 từ cơ bản đến nâng cao</title>
+		<link>http://localhost:82/demowp/khoa-hoc/download-khoa-hoc-angular-8-tu-co-ban-den-nang-cao/</link>
+				<comments>http://localhost:82/demowp/khoa-hoc/download-khoa-hoc-angular-8-tu-co-ban-den-nang-cao/#respond</comments>
+				<pubDate>Sat, 24 Aug 2019 04:32:58 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Angular]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Framwork]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6685</guid>
+				<description><![CDATA[<p>Tân Hồng IT chia sẻ để các bạn Download Khóa Học Complete Angular 8 from Zero to Hero &#124; Get Hired Course từ trang web học tập online nổi tiếng thế giới là Udemy để các bạn có thể học tập và nâng cao trình độ của mình hơn nữa. Bạn sẽ học được gì [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/download-khoa-hoc-angular-8-tu-co-ban-den-nang-cao/">Download Khóa Học Angular 8 từ cơ bản đến nâng cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT chia sẻ để các bạn Download Khóa Học <strong>Complete Angular 8 from Zero to Hero | Get Hired Course</strong> từ trang web học tập online nổi tiếng thế giới là Udemy để các bạn có thể học tập và nâng cao trình độ của mình hơn nữa.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/08/angular-8-tu-co-ban-đen-nang-cao.png"><img class="aligncenter size-full wp-image-6686" src="http://localhost:82/demowp/wp-content/uploads/2019/08/angular-8-tu-co-ban-đen-nang-cao.png" alt="angular 8 tu co ban đen nang cao" width="480" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/angular-8-tu-co-ban-đen-nang-cao.png 480w, http://localhost:82/demowp/wp-content/uploads/2019/08/angular-8-tu-co-ban-đen-nang-cao-300x169.png 300w" sizes="(max-width: 480px) 100vw, 480px" /></a></p>
+<div>
+<div>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Tất cả các chủ đề Angular trong một khóa học với vô số ví dụ</li>
+<li>Hiểu đầy đủ Angular Framework &amp; Xây dựng nhiều ứng dụng góc thực</li>
+<li>Hiểu đầy đủ các Components, Directives, Pipe, Service Layer và Observable data quan sát được</li>
+<li>Sử dụng dịch vụ HTTP</li>
+<li>Hiểu biết đầy đủ về xác thực bằng cách sử dụng JSON Web Tokens (JWT)</li>
+<li>Hoàn thành Angular 8 Project từng bước</li>
+<li>Bản thảo 4.0</li>
+<li>Câu hỏi phỏng vấn Angular và câu trả lời. Các mẹo và thủ thuật. Nhiệm vụ công việc hàng ngày.</li>
+<li>Bootstrap 4.0 &amp; FontAwesome</li>
+</ul>
+<h3>Có bất kỳ yêu cầu khóa học hoặc điều kiện tiên quyết?</h3>
+<ul>
+<li>Chúng tôi sẽ bắt đầu ở cấp độ cơ bản và dần dần chuyển lên cấp độ chuyên gia</li>
+<li>Kiến thức về HTML và CSS cơ bả, nhưng không phải là thứ bắt buộc phải có</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Dành cho những người muốn tìm hiểu phiên bản mới nhất của Angular 8 từ đầu</li>
+<li>Khóa học này dành cho những người có một số kinh nghiệm về JavaScript</li>
+</ul>
+<hr />
+<h4 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Download Khóa Học Tại Đây:</strong></span></span></h4>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <strong>Complete Angular 8 from Zero to Hero | Get Hired Course</strong></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1bFhBlNuMPMQBofHeq9RI1Wprhp4Wehx2" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<h4>Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả <a href="https://www.udemy.com/course/angular-course-from-scratch-get-hired/" target="_blank" rel="noopener noreferrer"><strong><span style="color: #ff00ff;">Tại Đây</span></strong></a></h4>
+<h4>Giá gốc $99.99 ≈ 2.346.803 VNĐ</h4>
+<p><img class="aligncenter size-full" src="https://imgur.com/RPgIFoh.png" alt="Angular 8 Course" width="1177" height="694" /></p>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/tai-lieu/development/" target="_blank" rel="noopener noreferrer">Những khoá học cho lập trình viên</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/" target="_blank" rel="noopener noreferrer">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></strong></span></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6685"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/download-khoa-hoc-angular-8-tu-co-ban-den-nang-cao/">Download Khóa Học Angular 8 từ cơ bản đến nâng cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/khoa-hoc/download-khoa-hoc-angular-8-tu-co-ban-den-nang-cao/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ Khóa Học Git &#038; Github cho lập trình và thiết kế website</title>
+		<link>http://localhost:82/demowp/code-web/khoa-hoc-git-github/</link>
+				<comments>http://localhost:82/demowp/code-web/khoa-hoc-git-github/#respond</comments>
+				<pubDate>Mon, 06 May 2019 14:12:33 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Git]]></category>
+		<category><![CDATA[Github]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6085</guid>
+				<description><![CDATA[<p>Bài viết này Tân Hồng IT chia sẻ để các bạn Khóa Học về Git &#38; Github cho lập trình và thiết kế website. Với khóa học bạn sẽ học được cách tạo và sử dụng Git &#38; Gitbhub cũng như tạo một Website CV Cá nhân, Upload file lên lưu trữ miễn phí,&#8230; Bạn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/">Chia sẻ Khóa Học Git &#038; Github cho lập trình và thiết kế website</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-family: verdana, geneva, sans-serif;">Bài viết này <strong>Tân Hồng IT</strong> chia sẻ để các bạn Khóa Học về <strong>Git &amp; Github cho lập trình và thiết kế website. </strong>Với khóa học bạn sẽ học được cách tạo và sử dụng <strong>Git &amp; Gitbhub</strong> cũng như tạo một <strong>Website CV Cá nhân, Upload file lên lưu trữ miễn phí,&#8230;</strong></span></p>
+<p><figure id="attachment_6086" aria-describedby="caption-attachment-6086" style="width: 480px" class="wp-caption aligncenter"><img class="size-full wp-image-6086" src="http://localhost:82/demowp/wp-content/uploads/2019/05/Git-Github-cho-lập-trình-và-thiết-kế-website.jpg" alt="Khóa học Git &amp; Github cho lập trình và thiết kế website" width="480" height="270" srcset="http://localhost:82/demowp/wp-content/uploads/2019/05/Git-Github-cho-lập-trình-và-thiết-kế-website.jpg 480w, http://localhost:82/demowp/wp-content/uploads/2019/05/Git-Github-cho-lập-trình-và-thiết-kế-website-300x169.jpg 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption id="caption-attachment-6086" class="wp-caption-text">Khóa học Git &amp; Github cho lập trình và thiết kế website</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Cách cài đặt <strong>git</strong> và <strong>Github</strong></li>
+<li>Cách up và tải file và lưu trữ trên github</li>
+<li>Sử dụng các lệnh trong<strong> Git</strong></li>
+<li><strong>Web Development</strong></li>
+<li><strong>Front End Development</strong></li>
+<li>Sử dụng<strong> Git &amp; Github</strong> trong việc tạo ra một<strong> website cá nhân</strong> trực tuyến với <strong>tên miền tùy chọn</strong></li>
+<li>Sử dụng <strong>Github</strong> làm domain và hosting riêng để làm <strong>Website CV Cá nhân </strong></li>
+<li>Cách nhúng <strong>facebook comment vào github</strong></li>
+</ul>
+<h3>Yêu cầu cần có cho khóa học hoặc điều kiện tiên quyết?</h3>
+<ul>
+<li>Một chút kiến ​​thức lập trình, không cần phải kiến ​​thức nâng cao</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Beginner Developers</li>
+<li>Intermediate Developers</li>
+<li>Người muốn tìm hiểu và sử dụng <strong>GitHub</strong></li>
+<li>Bất cứ ai muốn bắt đầu phát triển các trang web tuyệt đẹp với khung web hiện đại</li>
+</ul>
+<hr />
+<h3 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Tải Khóa Học Tại Đây:</strong></span></span></h3>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1D4X78b6xL7da4XnurNhyNbOwPDHCzTLV" target="_blank" rel="noopener noreferrer">LINK Xem Online Hoặc DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<p><img class="aligncenter" src="https://cdn.lynda.com/course/409275/409275-636924006644152751-16x9.jpg" alt="Káº¿t quáº£ hÃ¬nh áº£nh cho Git &amp; Github" /></p>
+<p><span style="font-size: 20px; font-family: verdana, geneva, sans-serif;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <strong><a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> </strong>&#8211; bảo vệ bản quyền tác giả. Hãy cùng là những người văn minh. <strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn TanHongIT.Net. Xin cảm ơn.</strong></span></p>
+<p><span style="font-family: verdana, geneva, sans-serif;">Các bạn hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</span></p>
+<p><span style="font-family: verdana, geneva, sans-serif;">Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</span></p>
+<div class="alert alert-success"><span style="font-size: 20px; font-family: verdana, geneva, sans-serif;"><strong>Nếu các bạn cảm thấy Website này thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Chân thành cảm ơn các bạn! </strong></span></div>
+<h4 style="text-align: center;"><span style="font-family: verdana, geneva, sans-serif;">Donate – Xin Ủng Hộ Đóng Góp Website <strong>TanHongIT.Net</strong></span></h4>
+<p style="text-align: center;"><span style="font-family: verdana, geneva, sans-serif;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR TANHONGIT</a></span></p>
+<div class="alert alert-warning">
+<p><span style="text-decoration: underline;"><strong><span style="font-size: 20px;">XEM THÊM:</span> </strong></span></p>
+<h3 class="jeg_post_title"><strong><a href="http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/" target="_blank" rel="noopener noreferrer">Tổng Hợp Những Câu Lệnh GIT Cơ Bản Hữu Dụng – GitHub</a></strong></h3>
+<h3 class="jeg_post_title"><strong><a href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/">Những lệnh GIT – GitHub cơ bản hữu dụng cần nhớ</a></strong></h3>
+</div>
+<p style="text-align: center;"><span style="font-family: verdana, geneva, sans-serif;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6085"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/">Chia sẻ Khóa Học Git &#038; Github cho lập trình và thiết kế website</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/khoa-hoc-git-github/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</title>
+		<link>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/</link>
+				<comments>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/#respond</comments>
+				<pubDate>Tue, 26 Mar 2019 05:22:40 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Bootstrap]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Bootstrap Studio]]></category>
+		<category><![CDATA[Bootstrap Studio 4 Full Key]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Crack]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Key]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5620</guid>
+				<description><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn phần mềm Bootstrap Studio 4 Full Key Crack kích hoạt bản quyền để các bạn sử dụng và học tập nhé! Giới thiệu Bootstrap Studio Full Bootstrap Studio là một ứng dụng để tạo ra các trang web (thiết kế website). Nó đi kèm với [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn phần mềm <strong>Bootstrap Studio 4 Full Key Crack</strong> kích hoạt bản quyền để các bạn sử dụng và học tập nhé!</p>
+<p><figure id="attachment_5631" aria-describedby="caption-attachment-5631" style="width: 719px" class="wp-caption aligncenter"><img class="size-full wp-image-5631" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Bootstrap-Studio-4-Full-Key.jpg" alt="Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website" width="719" height="309" /><figcaption id="caption-attachment-5631" class="wp-caption-text">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website</figcaption></figure></p>
+<h2><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Giới thiệu Bootstrap Studio Full</span></strong></span></h2>
+<p><strong>Bootstrap Studio</strong> là một ứng dụng để tạo ra các <strong>trang web (thiết kế website).</strong> Nó đi kèm với một số lượng lớn các thành phần tích hợp khác, và bạn có thể kéo và thả để lắp ráp các trang web mà không cần phải đụng vào code. <strong>Bootstrap</strong> là <strong>Framework</strong> được sử dụng phổ biến nhất hiện nay.</p>
+<p>Sau khi hoàn thành bạn sẽ xuất ra <strong>HTML</strong> sạch và ngữ nghĩa. Nếu bạn đã có mẫu thiết kế sẵn chắc chắn đây là công cụ bạn không thể bỏ qua để thiết kết <strong>HTML</strong> nhanh chóng nhất.</p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Gioi_thieu_Bootstrap_Studio_Full" title="Giới thiệu Bootstrap Studio Full">Giới thiệu Bootstrap Studio Full</a></li><li><a href="#Cac_tinh_nang_cua_Bootstrap_Studio_Full_Key" title="Các tính năng của Bootstrap Studio Full Key">Các tính năng của Bootstrap Studio Full Key</a><ul><li><a href="#Giao_dien" title="Giao diện">Giao diện</a></li><li><a href="#Tinh_nang_Xem_truoc_thoi_gian_thuc" title="Tính năng Xem trước thời gian thực">Tính năng Xem trước thời gian thực</a></li><li><a href="#Editing_Code" title="Editing Code">Editing Code</a></li><li><a href="#Co_cac_mau_Templates_dep" title="Có các mẫu Templates đẹp">Có các mẫu Templates đẹp</a></li></ul></li><li><a href="#15_Tinh_nang_cuc_ky_manh_me_co_tren_Bootstrap_Studio" title="15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio">15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio</a></li><li><a href="#Download_Bootstrap_Studio_4_Full_Key" title="Download Bootstrap Studio 4 Full Key">Download Bootstrap Studio 4 Full Key</a><ul><li><a href="#Download_File_Setup_Bootstrap_Studio_4" title="Download File Setup Bootstrap Studio 4">Download File Setup Bootstrap Studio 4</a></li><li><a href="#Download_File_Crack_Key_cho_Bootstrap_Studio_4" title="Download File Crack Key cho Bootstrap Studio 4">Download File Crack Key cho Bootstrap Studio 4</a></li></ul></li><li><a href="#Huong_dan_cai_dat_va_crack_key_Bootstrap_Studio_4" title="Hướng dẫn cài đặt và crack key Bootstrap Studio 4">Hướng dẫn cài đặt và crack key Bootstrap Studio 4</a></li></ul></nav></div>
+<h2><span style="text-decoration: underline; color: #ff0000;"><strong>Các tính năng của Bootstrap Studio Full Key</strong></span></h2>
+<p><strong>Bootstrap</strong> là một <strong>Framework</strong> <strong>HTML, CSS, và JavaScript</strong> cho phép thiết kế phát triên các <strong>website</strong> hỗ trợ <strong>responsive</strong>, hiện tại <strong>Bootstrap</strong> là một trong những thư viện <strong>CSS</strong> và <strong>Javascript</strong> được dùng nhiều nhất trên thế giới với nhiều ưu điểm như:</p>
+<ul>
+<li>Chuẩn hiển thị trên mọi màn hình, mọi trình duyệt Tự động điều chỉnh kích thước trang theo kích thước trình duyệt</li>
+<li>Tốc độ load cao Hỗ trợ nhiều kiểu hiển thị sẵn, nhiều kiểu box, nhiều kiểu form đẹp và sang trọng</li>
+<li>Hỗ trợ LESS và SASS giúp lập trình viên nhanh chóng tích hợp Bootstrap</li>
+<li>Việc tích hợp Bootstrap vào website cũng rất dễ dàng và thuận tiện</li>
+</ul>
+<h3><span style="color: #0000ff;"><strong>Giao diện</strong></span></h3>
+<p><strong>Bootstrap Studio</strong> có giao diện đẹp và mạnh mẽ, được xây dựng xung quanh sự đơn giản của kéo và thả. Điều này làm cho nó trở thành công cụ hoàn hảo để tạo mẫu và thiết kế các trang web và ứng dụng.</p>
+<p><img class="aligncenter" title="Giao diện Bootstrap Studio " src="https://bootstrapstudio.io/assets/img/app_2.jpg" alt="Giao diện Bootstrap Studio " width="1566" height="1023" /></p>
+<h3><span style="color: #0000ff;"><strong>Tính năng Xem trước thời gian thực</strong></span></h3>
+<p>Bootstrap Studio có một tính năng mạnh mẽ được gọi là <strong>Preview. </strong>Với nó, bạn có thể mở thiết kế của mình trong nhiều trình duyệt web và thiết bị và mọi thay đổi bạn thực hiện trong ứng dụng sẽ được hiển thị ngay lập tức ở mọi nơi.</p>
+<p><img class="aligncenter" title="Xem trước thời gian thực" src="https://bootstrapstudio.io/assets/img/real_time_preview.jpg" alt="Xem trước thời gian thực" width="600" height="400" /></p>
+<h3><strong><span style="color: #0000ff;">Editing Code</span></strong></h3>
+<p>Tính năng này cho phép bạn trích xuất ra các mã nguồn từ việc bạn kéo thả.</p>
+<h3><img class="aligncenter" title="Editing Code" src="https://bootstrapstudio.io/assets/img/css-editing.png" alt="Editing Code" width="697" height="462" /><span style="color: #0000ff;"><strong>Có các mẫu Templates đẹp</strong></span></h3>
+<p>Ứng dụng đi kèm với một số mẫu cao cấp, đáp ứng đầy đủ mà bạn có thể tùy chỉnh. Mỗi mẫu bao gồm nhiều trang và widget bạn có thể chọn và kết hợp vào trang web hoàn hảo.</p>
+<p><img class="aligncenter" title="mẫu Templates đẹp 1" src="https://bootstrapstudio.io/assets/img/templates/template_5.jpg" alt="mẫu Templates đẹp 1" width="1100" height="800" /><img class="aligncenter" title="mẫu Templates đẹp 2" src="https://bootstrapstudio.io/assets/img/templates/template_6.jpg" alt="mẫu Templates đẹp 2" width="1308" height="963" /><img class="aligncenter" title="mẫu Templates đẹp 3" src="https://bootstrapstudio.io/assets/img/templates/template_1.jpg" alt="kích hoạt Bootstrap Studio 4 key crack" width="1308" height="964" /><img class="aligncenter" title="mẫu Templates đẹp 4" src="https://bootstrapstudio.io/assets/img/templates/template_4.png" alt="Bootstrap Studio 4 key crack" width="1100" height="800" /></p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM TẠI: <a href="https://bootstrapstudio.io/" target="_blank" rel="noopener noreferrer">https://bootstrapstudio.io/</a></strong></span></p>
+<h2><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio</strong></span></span></h2>
+<p style="text-align: center;"><div class="su-youtube su-u-responsive-media-yes"><iframe width="700" height="440" src="https://www.youtube.com/embed/KSJ7Kfonn7I?" frameborder="0" allowfullscreen="true" allow="autoplay; fullscreen" title=""></iframe></div>
+<h2><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>Download Bootstrap Studio 4 Full Key</strong></span></span></h2>
+<p>Các bạn tải <strong>file cài đặt</strong> và<strong> file crack key kích hoạt</strong> bản quyền <strong>Bootstrap Studio 4</strong> tại đây:</p>
+<ul>
+<li>
+<h3><span style="color: #0000ff;"><strong>Download File Setup Bootstrap Studio 4</strong></span></h3>
+</li>
+</ul>
+<p style="text-align: center;"><strong>Link Download trực tiếp từ trang chủ : <a class="btn btn-default" href="https://bootstrapstudio.io/download" target="_blank" rel="noopener noreferrer">DOWNLOAD TỪ TRANG CHỦ</a></strong></p>
+<p style="text-align: center;"><strong>Dự Phòng &#8211; Download theo link google Drive: <a class="btn btn-default" href="https://drive.google.com/open?id=1awpdxe-HSx9HFFZTij_P1kjk3E6O3nCb" target="_blank" rel="noopener noreferrer">LINK GG DRIVE</a></strong></p>
+<ul>
+<li>
+<h3><strong><span style="color: #0000ff;">Download File Crack Key cho Bootstrap Studio 4</span></strong></h3>
+</li>
+</ul>
+<p style="text-align: center;"><strong>Download Theo Link Google Drive: <a class="btn btn-default" href="https://drive.google.com/open?id=1c4ox4PRjga7z9DtDUeAOzuWjuxlP9uNP" target="_blank" rel="noopener noreferrer">LINK GG DRIVE</a></strong></p>
+<p style="text-align: center;"><strong>Link Download File Key Crack Dự Phòng <a class="btn btn-default" href="https://mshare.io/file/l5pikLwP" target="_blank" rel="noopener noreferrer">LINK DỰ PHÒNG</a></strong></p>
+<p>Hiện tại phần mềm mềm bootstrap có giá 29$ với bản <strong>standard</strong> và 60$ với bản <strong>lifetime</strong>, nếu có điều kiện các bạn có thể mua tại trang chủ của hãng.</p>
+<h2><span style="text-decoration: underline; color: #ff0000;"><strong>Hướng dẫn cài đặt và crack key Bootstrap Studio 4</strong></span></h2>
+<ol>
+<li>Tải file cài đặt và file crack Key theo link phía trên về máy.</li>
+<li>Giải nén và khởi chạy file setup để cài đặt.</li>
+<li>Sau khi cài đặt xong phần mềm bạn hãy tắt triệt để phần mềm đi.</li>
+<li>Copy file crack trong thư mục <strong>Key</strong> vào đường dẫn <strong>C:\Program Files\Bootstrap Studio\resources</strong></li>
+<li>Mở chạy phần mềm và sử dụng.</li>
+</ol>
+<p><span style="font-size: 24pt;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/cong-cu-lap-trinh/" target="_blank" rel="noopener noreferrer">Các công cụ lập trình khác.</a></strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/tai-lieu/development/angular-7-course-by-lior-avital-become-an-angular-expert/" target="_blank" rel="noopener noreferrer">Download Khóa Học Angular 7 Course by Lior Avital &#8211; Become an Angular Expert</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/ky-nang-song/lam-chu-hay-lam-thue/" target="_blank" rel="noopener noreferrer">Làm Chủ Hay Làm Thuê: Bạn Muốn Tự Do Bay Lượn Như Đại Bàng Hay Mãi Sống Như Kiếp Gà?</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5620"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">12</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Active Jetbrains IntelliJ IDEA Ultimate License Key 2018.3.5 (Update)</title>
+		<link>http://localhost:82/demowp/uncategorized/jetbrains-intellij-idea-ultimate/</link>
+				<comments>http://localhost:82/demowp/uncategorized/jetbrains-intellij-idea-ultimate/#respond</comments>
+				<pubDate>Sun, 20 Jan 2019 06:19:07 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Code]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5232</guid>
+				<description><![CDATA[<p>Jetbrains IntelliJ IDEA Ultimate + Key hỗ trợ phát triển các ứng dụng dành cho điện thoại như java, Groovy, Scala hoặc các ứng dụng Android, nó hỗ trợ các ngôn ngữ lập trình khác nhau như JavaScript, HTML, CSS, Ruby hay Python. Ứng dụng phân tích các kịch bản và cung cấp cho bạn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/uncategorized/jetbrains-intellij-idea-ultimate/">Download Active Jetbrains IntelliJ IDEA Ultimate License Key 2018.3.5 (Update)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Jetbrains IntelliJ IDEA</strong> <strong>Ultimate</strong> + Key hỗ trợ phát triển các ứng dụng dành cho điện thoại như<strong> java, Groovy, Scala hoặc các ứng dụng Android,</strong> nó hỗ trợ các ngôn ngữ lập trình khác nhau như <strong>JavaScript, HTML, CSS, Ruby hay Python.</strong> Ứng dụng phân tích các kịch bản và cung cấp cho bạn với các đề xuất.</p>
+<p><figure id="attachment_5233" aria-describedby="caption-attachment-5233" style="width: 699px" class="wp-caption aligncenter"><img class="wp-image-5233 size-full" title="Download Active Jetbrains IntelliJ IDEA Ultimate License Key" src="http://localhost:82/demowp/wp-content/uploads/2019/01/IntelliJ-IDEA-Ultimate.jpg" alt="Download Active Jetbrains IntelliJ IDEA Ultimate License Key" width="699" height="446" /><figcaption id="caption-attachment-5233" class="wp-caption-text">Download Active Jetbrains IntelliJ IDEA Ultimate License Key</figcaption></figure></p>
+<p></p>
+<h2><strong>Tính năng của JetBrains IntelliJ IDEA:</strong></h2>
+<ul>
+<li>Các công cụ phân tích mã cho chất lượng, dễ dàng điều chỉnh, tái cấu trúc tiên tiến và định dạng cho<strong> Java, Groovy, Scala, HTML, CSS, JavaScript, CoffeeScript, ActionScript, LESS, XML và nhiều ngôn ngữ khác.</strong></li>
+<li>Hỗ trợ tất cả các khuôn khổ phổ biến và nền tảng, bao gồm cả<strong> Java EE, Spring Framework, Grails, Play Framework, GWT, Struts, Node.js, AngularJS, Android, Flex, AIR Mobile và rất nhiều người khác.</strong></li>
+<li>Tích hợp với các máy chủ ứng dụng bao gồm các <strong>Tomcat, TomEE, GlassFish, JBoss, WebLogic, WebSphere, Geronimo, nhựa, Jetty và Xử Nữ.</strong></li>
+<li>Dụng cụ làm việc với cơ sở dữ liệu và các tập tin <strong>SQL</strong>, bao gồm cả khách hàng và biên tập thuận tiện cho các giản đồ cơ sở dữ liệu.</li>
+<li>Tích hợp với các hệ thống kiểm soát <strong>phiên bản thương mại, chẳng đả, Team Foundation Server, ClearCase, Visual SourceSafe.</strong></li>
+<li>Công cụ để chạy thử nghiệm và phân tích các mã số bảo hiểm, bao gồm hỗ trợ cho tất cả các khuôn khổ phổ biến để thử nghiệm.</li>
+</ul>
+<p><img class="size-full aligncenter" src="https://imgur.com/MiZvKHf.png" width="640" height="400" /></p>
+<p>Kể từ khi nó được phát triển như là một Java đơn giản<strong> IDE, IntelliJ IDEA</strong> không cung cấp hỗ trợ cho <strong>web</strong>, doanh nghiệp và các khung thoại di động và hỗ trợ mã cho tất cả các ngôn ngữ được hỗ trợ và khuôn khổ.</p>
+<p>Không phân biệt trong đó lập trình ngôn ngữ mà bạn chọn để phát triển ứng dụng di động với, có thể là .<strong>NET, C++ hoặc C #, IntelliJ IDEA</strong> đi kèm với các công cụ hữu ích bao gồm thiết kế<strong> UML, SQL Editor hoặc Bug Tracker</strong> Tích hợp mà làm cho sự phát triển hiệu quả hơn.</p>
+<h2><strong>Một số hình ảnh về IntelliJ IDEA Ultimate.</strong></h2>
+<p><img class="size-full aligncenter" src="https://www.jetbrains.com/idea/img/screenshots/idea_overview_5_1@2x.png" width="2016" height="1410" /><img class="size-full aligncenter" src="https://sg.fiverrcdn.com/photos/91785281/original/93e481d9896240e6833fb822340babc7d94bc9b9.jpg?1492994456" width="2560" height="1492" /><img class="aligncenter" src="https://viblo.asia/uploads/cbd2c95a-64be-4557-aa25-b916013bfbbc.jpg" alt="key IntelliJ IDEA Ultimate" width="825" height="462" /></p>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Tải về IntelliJ IDEA Ultimate cho máy.</strong></span></h2>
+<p style="text-align: center;"><span style="font-size: 20px;"><strong>(Version 2018.3.5 Update 24/3/2019)</strong></span></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1X-cUeidl2nnv75wGHwP74vfhCV5V-Rmn" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-code" style="font-size:21px;color:#ffffff"></i> Tải IntelliJ IDEA Ultimate + Key Mới nhất tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<p style="text-align: center;"><strong>Tải về phiên bản 2018.3.4 + Full Key</strong> <a class="btn btn-default" href="https://drive.google.com/open?id=1DNAzV4lJj--0ktqb9PqcRuR7aiCZOk0q" target="blank" rel="noopener noreferrer">Tại đây</a></p>
+<p style="text-align: center;"><strong>Tải về phiên bản 2018.3.3 + Full Key</strong> <a class="btn btn-default" href="https://drive.google.com/open?id=1Mr4QGMx4eSCidCfBRhIn6hnVK-fKyb3n" target="blank" rel="noopener noreferrer">Tại đây</a></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Lưu ý:</strong></span> sẽ không chịu trách nhiệm cho các cá nhân sử dụng key được cung cấp</p>
+<p>Nếu có điều kiện tài chính, hãy mua sản phẩm tại: <a href="https://www.jetbrains.com/idea/buy/" target="blank" rel="noopener noreferrer">https://www.jetbrains.com/idea/buy/ </a></p>
+<h2><span style="text-decoration: underline;">Hướng dẫn cài đặt và crack <strong>Jetbrains IntelliJ IDEA Ultimate.</strong></span></h2>
+<ol>
+<li>Cài đặt phần mềm bẳng cách chạy file setup.</li>
+<li>Thêm dòng sau vào <strong>file hosts</strong>: Các bạn có thể sử dụng phần mềm <a class="btn btn-default" href="http://localhost:82/demowp/phan-mem/host-editor/" target="blank" rel="noopener noreferrer">Host Editor</a><br />
+0.0.0.0 account.jetbrains.com</li>
+<li>Mở file &#8220;<strong>key.txt</strong>&#8221; lấy key nhập vào phần mềm</li>
+<li>Hoàn thành!</li>
+</ol>
+<h2><strong>Ngoài ra key kích hoạt trên còn có thể kích hoạt cho một số phần mềm khác</strong></h2>
+<p><img class="size-full aligncenter" src="https://imgur.com/0RHJiPa.png" width="1000" height="1193" /></p>
+<ul>
+<li><strong>Khóa IntelliJ IDEA Ultimate / Mã kích hoạt IntelliJ IDEA Ultimate</strong></li>
+<li><strong>Key ReSharper Ultimate / Mã kích hoạt ReSharper Ultimate</strong></li>
+<li><strong>Rider Rider / Mã kích hoạt Rider</strong></li>
+<li><strong>Mã khóa GoLand / Mã kích hoạt GoLand</strong></li>
+<li><strong>Mã khóa mã nguồn / Mã kích hoạt AppCode</strong></li>
+<li><strong>Khóa CLion / Mã kích hoạt CLion</strong></li>
+<li><strong>Key PyCharm Professional / Mã kích hoạt PyCharm Professional</strong></li>
+<li><strong>WebStorm chính / Mã kích hoạt WebStorm</strong></li>
+<li><strong>Mã khóa RubyMine / Mã kích hoạt RubyMine</strong></li>
+</ul>
+<p><span style="text-decoration: underline;"><strong><span style="font-size: 24px;">Xem thêm:</span></strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 &#8211; Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/ccleaner/" target="_blank" rel="noopener noreferrer">Download CCleaner Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/" target="_blank" rel="noopener noreferrer">Download Và Cách Crack Full IDM Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5232"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">8</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/uncategorized/jetbrains-intellij-idea-ultimate/">Download Active Jetbrains IntelliJ IDEA Ultimate License Key 2018.3.5 (Update)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/uncategorized/jetbrains-intellij-idea-ultimate/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C++ &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/c/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Tue, 22 Oct 2019 11:00:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>C++ &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</title>
+		<link>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/</link>
+				<comments>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 11:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7188</guid>
+				<description><![CDATA[<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng Open XML và closed XML. điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng <strong>Open XML và closed XML.</strong> điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm tham chiếu XML mở và XML đóng kín từ các gói nugget.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png"><img class="aligncenter size-full wp-image-7214" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png" alt="write file excel in c sharp" width="700" height="321" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp-300x138.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải thư viện <strong>ClosedXML</strong> miễn phí ở địa chỉ: <strong><a href="https://www.nuget.org/packages/ClosedXML/" target="_blank" rel="noopener noreferrer">https://www.nuget.org/packages/ClosedXML/</a></strong></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+<h2><span id="Cach_Cai_dat_truc_tiep_SpireDoc_SpirePDF_vao_Windows" class="ez-toc-section"><strong>Cách Cài đặt trực tiếp ClosedXML vào Windows.</strong></span></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="write file excel c#" width="548" height="100" data-pin-no-hover="true" /></a></p>
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes…</strong></p>
+<p><a href="https://imgur.com/v1lt77N.png"><img class="aligncenter size-full" src="https://imgur.com/v1lt77N.png" width="344" height="242" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>ClosedXML</strong> như hình bên dưới để cài đặt.</p>
+<p><a href="https://imgur.com/M6aSIuL.png"><img class="aligncenter size-full" src="https://imgur.com/M6aSIuL.png" width="1009" height="485" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/AWlx22D.png"><img class="aligncenter size-full" src="https://imgur.com/AWlx22D.png" width="313" height="165" /></a></p>
+<h2><span id="Tao_file_word_va_ghi_1_doan_van_ban_trong_C" class="ez-toc-section"><strong>Tạo file Excel (xlsx) và ghi vào 1 đoạn văn bản trong C#</strong></span></h2>
+<p>Ở đây đang chuyển đổi Dataset thành file Excel, nếu tập dữ liệu chứa nhiều DataTables, nó có thể được lặp vào cùng một Excel với <strong>các trang tính khác nhau</strong>. Dưới đây là code để kết nối Tạo Excel (.xlsx) và lưu vào đường dẫn chỉ định.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Data;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+
+//su dung phong thuc ClosedXML de hoan thanh
+namespace ghifileexcel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Country");
+            dt.Rows.Add("Venkatesh", "India");
+            dt.Rows.Add("Santhosh", "USA");
+            dt.Rows.Add("Venkat Sai", "Dubai");
+            dt.Rows.Add("Venkat Teja", "Pakistan");
+            ds.Tables.Add(dt);
+            ExportDataSetToExcel(ds);
+        }
+
+        public static void ExportDataSetToExcel(DataSet ds)
+        {
+            string AppLocation = "";
+            AppLocation = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            AppLocation = AppLocation.Replace("D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx", "");
+            string date = DateTime.Now.ToShortDateString();
+            date = date.Replace("/", "_");
+            //string filepath = AppLocation + "\\ExcelFiles\\" + "RECEIPTS_COMPARISON_" + date + ".xlsx";
+            string filepath = "D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx";
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                for (int i = 0; i &lt; ds.Tables.Count; i++)
+                {
+                    wb.Worksheets.Add(ds.Tables[i], ds.Tables[i].TableName);
+                }
+                wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                wb.Style.Font.Bold = true;
+                wb.SaveAs(filepath);
+            }
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.fourthbottle.com/2017/07/create-excel-files-in-csharp-using-open-xml.html" target="_blank" rel="noopener noreferrer">Create Excel files in C#</a></li>
+<li><a href="https://stackoverflow.com/questions/9769703/exporting-to-xlsx-using-microsoft-office-interop-excel-saveas-error" target="_blank" rel="noopener noreferrer">Exporting to .xlsx</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7188"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</title>
+		<link>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/</link>
+				<comments>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 06:49:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7184</guid>
+				<description><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện Spire.Doc của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện <strong>Spire.Doc</strong> của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng thư viện Spire.Doc miễn phí, thư viện này giới hạn 500 đoạn và 25 bảng trong 1 tập tin Word và PDF, đủ để tạo 1 tập tin có dung lượng vừa phải.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png"><img class="aligncenter wp-image-7210 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png" alt="write file word pdf c# c sharp" width="700" height="299" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp-300x128.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải 2 thư viện <strong>Spire.Doc</strong> và <strong>Spire.PDF</strong> bản miễn phí ở địa chỉ: <a href="https://www.e-iceblue.com/Download/download-word-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-word-for-net-free.html</a> và <a href="https://www.e-iceblue.com/Download/download-pdf-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-pdf-for-net-free.html</a>.</p>
+<p>Hoặc bạn tải về theo link google drive mình chuẩn bị sẵn   <a class="btn btn-default" href="https://drive.google.com/open?id=1pK7WYtNOcMXDJBGLKS3H84gIveAiPTEX" target="_blank" rel="noopener noreferrer"> Tại Đây</a></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+
+
+<h2><strong>Cách Cài đặt trực tiếp Spire.Doc, Spire.PDF vào Windows.</strong></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" data-pin-no-hover="true"></a></p>
+
+
+
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes&#8230;</strong></p>
+<p style="text-align: center;"><a href="https://imgur.com/PrJxxMw.png"><img class="aligncenter" src="https://imgur.com/PrJxxMw.png" alt="Manage Nuger Packafes" width="336" height="218" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>Spire.Office</strong> (Sẽ bao gồm đọc tất cả các file office và cả pdf) hoặc chọn <strong>Spire.PDF</strong> và <strong>Spire.Doc</strong>.</p>
+<p><a href="https://imgur.com/nL9cKLY.png"><img class="aligncenter" src="https://imgur.com/nL9cKLY.png" alt="Spire.PDF và Spire.Doc" width="982" height="549" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p><a href="https://imgur.com/BqHguk5.png"><img class="aligncenter size-full" src="https://imgur.com/BqHguk5.png" width="516" height="608" /></a></p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/j5s4u0t.png"><img class="aligncenter" src="https://imgur.com/j5s4u0t.png" alt="Tạo file word c#" width="309" height="343" /></a></p>
+<p>Giờ thì bắt đầu Code.</p>
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản trong C#</strong></h2>
+<p>Ví dụ sau tạo 1 đoạn văn bản “Hello World!” in đậm canh giữa vào tập tin mới <strong>test.doc</strong> (hoặc test.pdf). Tập tin mới sẽ nằm ở thư mục Debug, bạn có thể tùy chỉnh đường dẫn tập tin tùy ý nếu muốn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Spire.Doc;
+using Spire.Pdf;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+ 
+namespace TestProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tạo đối tượng tài liệu (Document)
+            Document doc = new Document();
+             
+            // Tạo đối tượng đoạn (Paragraph)
+            Paragraph paragraph = doc.AddSection().AddParagraph();
+ 
+            // Tạo văn bản (TextRange)
+            Spire.Doc.Fields.TextRange text = paragraph.AppendText("Hello World!");
+            //text.CharacterFormat.Italic = true;  // in nghiêng
+            //text.CharacterFormat.UnderlineStyle = UnderlineStyle.Single; // gạch chân
+            text.CharacterFormat.Bold = true;                                   // kiểu in đậm
+            paragraph.Format.TextAlignment = TextAlignment.Center;              // văn bản canh giữa 
+            paragraph.Format.HorizontalAlignment = HorizontalAlignment.Center;  // đoạn canh giữa
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Left;  // đoạn canh trái  
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Right; // đoạn canh phải
+ 
+            // Lưu đối tượng tài liệu vào tập tin test.doc (nằm ở thư mục Debug của dự án)
+            doc.SaveToFile("test.doc", Spire.Doc.FileFormat.Doc);
+            // doc.SaveToFile("test.pdf", Spire.Doc.FileFormat.PDF); -- tạo PDF
+ 
+            // đóng đối tượng
+            doc.Close();
+        }
+    }
+}</pre>
+
+
+
+<h3><strong>Thêm 1 đoạn mới vào file Word C Sharp</strong></h3>
+<p>Nhìn lại code trên, tại dòng 21, khi tạo 1 đoạn mới chúng ta dùng đoạn mã <strong>Paragraph paragraph = doc.AddSection().AddParagraph();</strong></p>
+<p>Tuy nhiên để thêm 1 đoạn mới nữa bạn phải dùng hàm <strong>doc.Sections[0].AddParagraph();</strong>&nbsp;như trong ví dụ sau đây.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// đoạn mới tên biến là  paragraph2
+Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+// tên văn bản mới là text2
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("Nhập nội dung đoạn mới");
+text2.CharacterFormat.FontSize = 18;
+text2.CharacterFormat.Bold = true;</pre>
+
+
+
+<h3><strong>Canh Tab</strong></h3>
+<p>Để canh Tab thì dùng&nbsp;<strong>paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;</strong>&nbsp;với TabJustification.Right là Tab phải và 175 (float) là vị trí Tab, ngoài ra có có Tab trái ở vị trí 375 (Left) và Tab giữa (Centered) chưa được thêm vào.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+ 
+// Canh Tab phải vị trí 175
+paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;
+paragraph2.Format.Tabs.AddTab(375).Justification = TabJustification.Left;
+//paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Centered;
+// Phải có \t để dịch đến Tab cần canh
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("\t Canh phải \t Canh trái");</pre>
+
+
+
+<h3><strong>Chèn hình</strong></h3>
+<p>Đầu tiên bạn phải thêm thư viện&nbsp;<strong>System.Drawing</strong>&nbsp;vào dự án (Add Reference), sau đó gọi 2 namespace ở trên đầu file code.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Spire.Doc.Fields;
+using System.Drawing;</pre>
+
+
+
+<p>Tiếp theo tạo đối tượng Bitmap và DocPicture để thêm hình vào đối tượng Document.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng hình ảnh DocPicture (using using Spire.Doc.Fields;)
+DocPicture picture = doc.Sections[0].Paragraphs[0].AppendPicture(b1);
+ 
+// Vị trí ảnh theo chiều dọc, ngang
+picture.HorizontalPosition = 50.0F;
+picture.VerticalPosition = 200.0F;
+ 
+// Kích thước ảnh
+picture.Width = 150;
+picture.Height = 100;
+ 
+ // Kiểu chèn ảnh nổi trên văn bản
+ picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;</pre>
+
+
+
+<h3><strong>Thêm bảng biểu</strong></h3>
+<p>Chúng ta dùng đối tượng Table để tạo bảng, trong đó tạo dòng tiêu đề trước và phần dữ liệu từng dòng sau.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Dữ liệu mẫu
+List&lt;string> list = new List&lt;string> { "One", "True", "Three" };
+ 
+// Tạo đối tượng bảng Table
+Spire.Doc.Table table = doc.Sections[0].AddTable(true);
+ 
+// Tạo cột
+String[] Header = { "STT", "Tên"};
+ 
+// Số dòng và số cột cho bảng
+table.ResetCells(list.Count + 1, Header.Length);
+ 
+// Độ rộng bảng ở dòng 0 và 2 cột STT và Tên (tạo tiêu đề bảng)
+doc.Sections[0].Tables[0].Rows[0].Cells[0].Width = 200;
+doc.Sections[0].Tables[0].Rows[0].Cells[1].Width = 200;
+ 
+// Tạo dòng tiêu đề cho bảng (dòng 0)
+Spire.Doc.TableRow FRow = table.Rows[0];
+FRow.IsHeader = true;
+FRow.Height = 23;
+ 
+for (int i = 0; i &lt; Header.Length; i++)
+{
+    // Định dạng cell
+    Paragraph p = FRow.Cells[i].AddParagraph();
+    FRow.Cells[i].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    p.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    // Định dạng văn bản trong bảng
+    Spire.Doc.Fields.TextRange TR = p.AppendText(Header[i]);
+    TR.CharacterFormat.FontName = "Times New Roman";
+    TR.CharacterFormat.FontSize = 13;
+    TR.CharacterFormat.Bold = true;
+}
+ 
+// Định dạng dữ liệu từng dòng (lấy từ list)
+for (int r = 0; r &lt; list.Count; r++)
+{
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[0].Width = 200;
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[1].Width = 200;
+ 
+    // Định dạng dòng thứ r + 1 (bỏ dòng đầu là tiêu đề)
+    Spire.Doc.TableRow DataRow = table.Rows[r + 1];
+    DataRow.Height = 20;
+ 
+    DataRow.Cells[0].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p1 = DataRow.Cells[0].AddParagraph();
+    Spire.Doc.Fields.TextRange TR1 = p1.AppendText((r + 1).ToString()); // STT
+    p1.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    DataRow.Cells[1].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p2 = DataRow.Cells[1].AddParagraph();
+    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(list[r].ToString()); // Tên
+    p2.Format.HorizontalAlignment = HorizontalAlignment.Center;
+}</pre>
+
+
+
+<hr />
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản nhập từ bàn phím trong C#</strong></h2>
+<p>Tương tự như đoạn code mẫu bên trên. ở phần này mình có thay đổi một chút xíu đó là những gì cần ghi vào file word sẽ phải nhập từ màn hình Console. Các bạn có thể tham khảo.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System.Drawing;
+using System;
+using Spire.Doc;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+using Spire.Doc.Formatting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+//ghi text vao file word su dụng phương thức Spire
+namespace ghifileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Document doc = new Document();
+            Section sec = doc.AddSection();
+            Paragraph par = sec.AddParagraph();
+
+            TextBox textBox = par.AppendTextBox(180, 30);
+            textBox.Format.VerticalOrigin = VerticalOrigin.Margin;
+            textBox.Format.VerticalPosition = 100;
+            textBox.Format.HorizontalOrigin = HorizontalOrigin.Margin;
+            textBox.Format.HorizontalPosition = 50;
+            textBox.Format.NoLine = true;
+
+            CharacterFormat format = new CharacterFormat(doc);
+            format.FontName = "Calibri";
+            format.FontSize = 15;
+            format.Bold = true;
+
+            Paragraph par1 = textBox.Body.AddParagraph();
+            string line = "";
+            Console.WriteLine("Nhap  chu can ghi vao file word : ");
+            line = Console.ReadLine();
+            par1.AppendText(line).ApplyCharacterFormat(format);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.docx", FileFormat.Docx);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.doc", FileFormat.Doc);
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.e-iceblue.com/Tutorials/Spire.Doc/Spire.Doc-Program-Guide/Text/How-to-Insert-Text-to-Word-at-Exact-Position-in-C-VB.NET.html" target="_blank" rel="noopener noreferrer">How to Insert Text to Word at Exact Position in C#, VB.NET</a></li>
+<li><a href="https://www.dammio.com/2017/03/20/cach-tao-tap-tin-word-pdf-voi-thu-vien-spire-doc-spire-pdf-bang-c" target="_blank" rel="noopener noreferrer">tạo tệp tin word excel trong c#</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua&nbsp;<a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a>&nbsp;để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+
+
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+
+
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7184"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</title>
+		<link>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/#respond</comments>
+				<pubDate>Sat, 05 Oct 2019 18:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Word]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7156</guid>
+				<description><![CDATA[<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé! Với NET 4+ cho phép C # đọc và thao tác các tệp Microsoft Word Excel, đối với các máy tính đã cài đặt Word, Excel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png"><img class="aligncenter size-full wp-image-7163" src="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png" alt="mo doc file word c sharp" width="505" height="226" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png 505w, http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp-300x134.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Với<strong> NET 4+ cho phép C #</strong> đọc và thao tác các tệp <strong>Microsoft Word Excel</strong>, đối với các máy tính đã cài đặt Word, Excel (nếu bạn chưa cài đặt Word, Excel, hãy xem <a href="http://npoi.codeplex.com/" target="_blank" rel="nofollow noopener noreferrer">NPOI</a> ).</p>
+<p>Đầu tiên, thêm tham chiếu vào <strong><a href="http://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Word XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Word, Excel.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Word = Microsoft.Office.Interop.Word;       //Microsoft Word 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Word</strong> về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Word.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!u3BEhYRL!MSIaE4Y8ueK3fRMkkgJQbvMVNsWYh6C39sgANQfbcAM" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4603.1000</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter size-full" src="https://imgur.com/LbWXePi.png" alt="console app read file word" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Word </strong>trong danh sách <strong>Component Name . </strong>sau đó nhấn và giữ phím CTRL và chọn <strong>Microsoft.Office.Interop.Excel</strong> nếu có. Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/krK8SSG.png"><img class="aligncenter size-full" src="https://imgur.com/krK8SSG.png" width="945" height="790" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Và cuối cùng bạn chỉ cần thêm đoạn code này vào file <strong>Program.cs</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }</pre>
+
+
+
+<p>Tại line thứ 7, các bạn nhớ sửa lại đường dẫn đến file word trong máy tính của mình nhé!</p>
+<p>Và nhớ truyền đầy đủ các thư viện vào nhé!</p>
+<p><strong>Đây là Code đầy đủ để đọc và mở 1 file Word C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+namespace docfileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }
+}</pre>
+
+
+
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interop/how-to-access-office-onterop-objects" target="_blank" rel="noopener noreferrer">Access Office Interop Objects&#8230;</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">NPOI</a></li>
+<li><a href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">dllme</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">Alias</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7156"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Share code game MegamanX3 viết bằng C++</title>
+		<link>http://localhost:82/demowp/c/code-game-megamanx3-c/</link>
+				<comments>http://localhost:82/demowp/c/code-game-megamanx3-c/#respond</comments>
+				<pubDate>Wed, 20 Feb 2019 14:36:55 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Game]]></category>
+		<category><![CDATA[Giải trí]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Game Design]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Megaman]]></category>
+		<category><![CDATA[Source code]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5473</guid>
+				<description><![CDATA[<p>Trong bài viết này mình xin Share source code game MegamanX3 viết bằng C++ cho các bạn tham khảo nhé! Code game MegamanX3 viết bằng C++ được hoàn thành với tác giả Nguyễn Hồng Phúc và được tối ưu hóa để các bạn có thể tham khảo và học tập từ mã nguồn trên. API: DirectX [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/code-game-megamanx3-c/">Share code game MegamanX3 viết bằng C++</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình xin Share<strong> source code game MegamanX3</strong> viết bằng <strong>C++</strong> cho các bạn tham khảo nhé!</p>
+<p><strong>Code game MegamanX3</strong> viết bằng <strong>C++</strong> được hoàn thành với tác giả <a href="https://www.facebook.com/nguyenhongphuc1998">Nguyễn Hồng Phúc </a>và được tối ưu hóa để các bạn có thể tham khảo và học tập từ mã nguồn trên.</p>
+<p><figure id="attachment_6021" aria-describedby="caption-attachment-6021" style="width: 699px" class="wp-caption aligncenter"><img class="size-full wp-image-6021" src="http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C.jpg" alt="Share code game MegamanX3 viết bằng C++" width="699" height="373" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C-300x160.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /><figcaption id="caption-attachment-6021" class="wp-caption-text">Share code game MegamanX3 viết bằng C++</figcaption></figure></p>
+<p><strong>API: DirectX (june).</strong><br />
+<strong>Language: C++.</strong><br />
+<strong>IDE: Visual studio</strong></p>
+<h4><strong>Trò chơi MegamanX3 có ba phần chính:</strong></h4>
+<ul>
+<li>Quá trình nhập liệu: Tất cả các sự kiện từ đầu vào có thể được xử lý.</li>
+<li>Cập nhật: Cập nhật tất cả Vật thể (megaman, Vật thể ảo, kẻ thù, viên đạn, vật phẩm) &#8211; vị trí, va chạm, trạng thái.</li>
+<li>Kết xuất: Hiển thị đồ họa lên màn hình.</li>
+</ul>
+<h4><strong>List Class and Function:</strong></h4>
+<ol>
+<li><strong>Object</strong>: &#8211; The class used to inherit, contains the full attribute 1 possible object.</li>
+<li><strong>ActionObject</strong>: &#8211; All animated objects are treated as actionObject.</li>
+<li><strong>VirtualObject</strong>: &#8211; Object static as ground, wall,&#8230;</li>
+<li><strong>Megaman</strong>: &#8211; inherit from ActionObject.<br />
+&#8211; have animation state, charing, lifebar.<br />
+&#8211; Update &#8211; with virtual object. tu stand/ jump,..<br />
+&#8211; Process with Bullet: -with enemy, being hurting, and set state bullet to destroy when collision.</li>
+</ol>
+<h4><strong>Một số hình ảnh về MegamanX3</strong></h4>
+<p><img class="size-full aligncenter" src="https://imgur.com/NY4KwzD.png" width="574" height="426" /><img class="aligncenter" src="https://imgur.com/2YNCjXU.png" alt="code game MegamanX3 C++" width="418" height="393" /><img class="size-full aligncenter" src="https://imgur.com/oDmKwKe.png" width="576" height="542" /><img class="size-full aligncenter" src="https://imgur.com/CJkhR46.png" width="576" height="543" /><img class="aligncenter" src="https://imgur.com/iwpWh1k.png" alt="source game code" width="576" height="548" /></p>
+<p>Khi chơi game, để nhân vật luôn được bất tử thì bạn hãy thêm dòng code <strong><code>if (HP&lt;MEGAMAN_MAX_HP) HP =MEGAMAN_MAX_HP</code></strong> ở phần update của megaman là được.</p>
+<h4 style="text-align: center;"><span style="font-size: 24px;"><strong>Download Source Code C++ MegamanX3 </strong></span></h4>
+<p style="text-align: center;"><a href="https://github.com/UIT-Stark-Game/Game" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-code" style="font-size:21px;color:#ffffff"></i> Tải Source Code MegamanX3 tại đây</span></a></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1qiv4Mt6tZZxjTZSmZCSR7oqdPouNL39R" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-code" style="font-size:21px;color:#ffffff"></i> Tải Source Code MegamanX3 &#8211; Link dự phòng<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a><br />
+Xem thêm:</p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-chao-mung-nam-moi-voi-hieu-ung-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Chào Mừng Năm Mới Với Hiệu Ứng Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 – Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/host-editor/" target="_blank" rel="noopener noreferrer">BlueLife Host Editor – Chỉnh Sửa File Host Trên Windows Dễ Dàng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/merry-christmas-source-code/" target="_blank" rel="noopener noreferrer">Merry Christmas Source Code – Template Code Giáng Sinh Noel Đơn Giản</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/share-code/code-web-trung-thu-dep/" target="_blank" rel="noopener noreferrer">Code Web Trung Thu Đẹp, Nhiều Hiệu Ứng</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 32px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THAM KHẢO VÀ HỌC TẬP TỐT</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5473"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/code-game-megamanx3-c/">Share code game MegamanX3 viết bằng C++</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/code-game-megamanx3-c/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete SFML C++ Game Course</title>
+		<link>http://localhost:82/demowp/c/flappy-bird-sfml/</link>
+				<comments>http://localhost:82/demowp/c/flappy-bird-sfml/#respond</comments>
+				<pubDate>Sun, 09 Sep 2018 10:07:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Đồ Họa]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+
+		<guid isPermaLink="false">https://freecourse.tanhongit.net/?p=1022</guid>
+				<description><![CDATA[<p>Tìm hiểu cách tạo trò chơi trên nền tảng bằng cách sử dụng Flappy Bird cực kỳ thành công và gây nghiện làm ví dụ. Quy trình từng bước được sử dụng để hiển thị mọi thứ từ thiết lập dự án đến kỹ thuật thiết kế trò chơi thiết yếu &#160; SFML là một [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/flappy-bird-sfml/">Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete SFML C++ Game Course</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tìm hiểu cách tạo trò chơi trên nền tảng bằng cách sử dụng Flappy Bird cực kỳ thành công và gây nghiện làm ví dụ. Quy trình từng bước được sử dụng để hiển thị mọi thứ từ thiết lập dự án đến kỹ thuật thiết kế trò chơi thiết yếu</p>
+<p><img class="aligncenter size-full wp-image-1026" src="https://freecourse.tanhongit.net/wp-content/uploads/2018/09/2018-09-09_170208.png" alt="" width="426" height="241" /></p>
+<p>&nbsp;</p>
+<p>SFML là một trong những khung công tác trò chơi đơn giản nhất trên thế giới và sẽ cung cấp cho bạn nền tảng vững chắc cho hành trình phát triển trò chơi của bạn. Ngành công nghiệp game lớn hơn Hollywood và không ngừng phát triển, bắt đầu hành trình của bạn ngay bây giờ.</p>
+<p>Tân Hồng IT Blog Xin chia sẻ khoá học<strong> Flappy Bird Clone &#8211; The Complete SFML C++ Game Course</strong></p>
+<p><b><u></u></b><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li>Thích hợp cho các nhà phát triển C ++</li>
+<li>Thích hợp cho các nhà phát triển trò chơi vừa chớm nở</li>
+<li>Fan của Flappy Bird</li>
+<li>Love Video Games &amp; Relish Triển vọng tạo trò chơi</li>
+<li>Thích hợp cho các nhà phát triển tìm cách tìm hiểu SFML</li>
+</ul>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li>Sử dụng C ++ để tạo trò chơi</li>
+<li>Tạo một trò chơi đa thiết bị</li>
+<li>Tạo trò chơi trên nền tảng</li>
+<li>Sử dụng khung công tác SFML để tạo trò chơi</li>
+<li>Hiểu Game Logic</li>
+<li>Tạo một công cụ trò chơi có thể mở rộng</li>
+<li>Hiểu Flappy Bird Game Mechanics</li>
+<li>Hiểu cách tạo mẫu trò chơi thích ứng</li>
+</ul>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b></p>
+<ul>
+<li>Lập trình C ++</li>
+<li>SFML</li>
+<li>Mã hóa</li>
+<li>Phát triển trò chơi (tùy chọn)</li>
+<li>Flappy Bird Game Logic (tùy chọn)</li>
+</ul>
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Tải Khóa Học Tại Đây</strong></span><br />
+<span style="color: #ff0000;"><b>Size: GB</b></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1RNtuwWyKUHcKlpagR3KnFkeW8UCvn6lX" class="su-button su-button-style-soft" style="color:#FFFFFF;background-color:#ef2d75;border-color:#c0245e;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_blank" rel="noopener noreferrer"><span style="color:#FFFFFF;padding:9px 30px;font-size:22px;line-height:33px;border-color:#f46c9f;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-graduation-cap" style="font-size:22px;color:#FFFFFF"></i> Tải Khóa học tại đây<small style="padding-bottom:9px;color:#FFFFFF">Xem và Tải miễn phí </small></span></a></p>
+<h3>Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại: <a href="https://www.udemy.com/flappy-bird-sfml/">https://www.udemy.com/flappy-bird-sfml/</a></h3>
+<h3>Giá $19.99 ≈ 462.344 VNĐ</h3>
+<p><img class="size-full aligncenter" src="https://imgur.com/EK5sDV6.png" width="1024" height="626" /></p>
+<div class="separator" style="clear: both; text-align: left;"></div>
+<div>
+<p>Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. Hãy cùng là những người văn minh.</p>
+<p>Các bạn hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div style="padding-left: 60px;"></div>
+<div>
+<div style="text-align: right;">Source: <a href="http://udemy.com/">Udemy.com</a></div>
+</div>
+<div></div>
+<div style="text-align: center;">
+<h2 style="text-align: center;"><span style="color: #ff0000;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="hosted_button_id" type="hidden" value="JHZ2D98HBKL7Y" />Xin Ủng Hộ Giúp Mua Thêm Những khóa học mới cũng như tiếp tục Duy Trì Và Phát Triển Website <strong>Free Course For You &#8211; Tân Hồng IT</strong><br />
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" /></form>
+</div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="1022"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/flappy-bird-sfml/">Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete SFML C++ Game Course</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/flappy-bird-sfml/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete Cocos2d-x C++ Game Course &#8211; Khóa học trò chơi</title>
+		<link>http://localhost:82/demowp/c/flappy-bird/</link>
+				<comments>http://localhost:82/demowp/c/flappy-bird/#respond</comments>
+				<pubDate>Sun, 09 Sep 2018 09:59:10 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Đồ Họa]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Flappy Bird Clone]]></category>
+
+		<guid isPermaLink="false">https://freecourse.tanhongit.net/?p=1023</guid>
+				<description><![CDATA[<p>Tìm hiểu cách tạo trò chơi trên nền tảng bằng cách sử dụng Flappy Bird cực kỳ thành công và gây nghiện làm ví dụ. Quy trình từng bước được sử dụng để hiển thị mọi thứ từ thiết lập dự án đến kỹ thuật thiết kế trò chơi thiết yếu. &#160; Cocos2d-x là một [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/flappy-bird/">Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete Cocos2d-x C++ Game Course &#8211; Khóa học trò chơi</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tìm hiểu cách tạo trò chơi trên nền tảng bằng cách sử dụng Flappy Bird cực kỳ thành công và gây nghiện làm ví dụ. Quy trình từng bước được sử dụng để hiển thị mọi thứ từ thiết lập dự án đến kỹ thuật thiết kế trò chơi thiết yếu.</p>
+<p><img class="aligncenter size-full wp-image-1024" src="https://freecourse.tanhongit.net/wp-content/uploads/2018/09/2018-09-09_165457.png" alt="" width="425" height="241" /></p>
+<p>&nbsp;</p>
+<p>Cocos2d-x là một trong những khung công tác trò chơi đơn giản nhất trên thế giới và có một trong những cộng đồng lớn nhất. Nó sẽ cung cấp cho bạn một nền tảng vững chắc cho hành trình phát triển trò chơi của bạn.</p>
+<p>Tân Hồng IT Blog Xin chia sẻ khoá học<strong> Flappy Bird Clone &#8211; The Complete Cocos2d-x C++ Game Course</strong></p>
+<p><b><u></u></b><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li>Thích hợp cho các nhà phát triển C ++</li>
+<li>Thích hợp cho các nhà phát triển trò chơi vừa chớm nở</li>
+<li>Fan của Flappy Bird</li>
+<li>Love Video Games &amp; Relish Triển vọng tạo trò chơi</li>
+<li>Thích hợp cho các nhà phát triển Tìm hiểu để tìm hiểu Cocos2d-x</li>
+</ul>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li>Sử dụng C ++ để tạo trò chơi</li>
+<li>Tạo trò chơi trên nền tảng</li>
+<li>Sử dụng khung công tác Cocos2d-x để tạo trò chơi</li>
+<li>Tạo một trò chơi đa thiết bị</li>
+<li>Hiểu Game Logic</li>
+<li>Tạo một công cụ trò chơi có thể mở rộng</li>
+<li>Hiểu cách tạo mẫu trò chơi thích ứng</li>
+<li>Hiểu Flappy Bird Game Mechanics</li>
+</ul>
+<div></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b></p>
+<ul>
+<li>Lập trình C ++</li>
+<li>Cocos2d-x</li>
+<li>Mã hóa</li>
+<li>Phát triển trò chơi (tùy chọn)</li>
+<li>Flappy Bird Game Logic (tùy chọn)</li>
+</ul>
+<div></div>
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Tải Khóa Học Tại Đây</strong></span><br />
+<span style="color: #ff0000;"><b>Size: GB</b></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1S9DKe91nZguxb-jNzCyoZFQp5veyJTKx" class="su-button su-button-style-soft" style="color:#FFFFFF;background-color:#ef2d75;border-color:#c0245e;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_blank" rel="noopener noreferrer"><span style="color:#FFFFFF;padding:9px 30px;font-size:22px;line-height:33px;border-color:#f46c9f;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-graduation-cap" style="font-size:22px;color:#FFFFFF"></i> Tải Khóa học tại đây<small style="padding-bottom:9px;color:#FFFFFF">Xem và Tải miễn phí </small></span></a></p>
+<h3>Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại: <a href="https://www.udemy.com/flappy-bird/">https://www.udemy.com/flappy-bird/</a></h3>
+<h3>Giá $39.99 ≈ 924.689 VNĐ</h3>
+<p><img class="size-full aligncenter" src="https://imgur.com/Um1Mgwu.png" width="1024" height="626" /></p>
+<div class="separator" style="clear: both; text-align: left;"></div>
+<div>
+<p>Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. Hãy cùng là những người văn minh.</p>
+<p>Các bạn hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div style="padding-left: 60px;"></div>
+<div>
+<div style="text-align: right;">Source: <a href="http://udemy.com/">Udemy.com</a></div>
+</div>
+<div></div>
+<div style="text-align: center;">
+<h2 style="text-align: center;"><span style="color: #ff0000;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="hosted_button_id" type="hidden" value="JHZ2D98HBKL7Y" />Xin Ủng Hộ Giúp Mua Thêm Những khóa học mới cũng như tiếp tục Duy Trì Và Phát Triển Website <strong>Free Course For You &#8211; Tân Hồng IT</strong><br />
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" /></form>
+</div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="1023"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/flappy-bird/">Chia sẻ khóa học Flappy Bird Clone &#8211; The Complete Cocos2d-x C++ Game Course &#8211; Khóa học trò chơi</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/flappy-bird/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khoá học phát triển Unreal Engine &#8211; Tìm hiểu C ++ &#038; Make Games &#8211; The Unreal Engine Developer Course &#8211; Learn C++ &#038; Make Games &#8211; Tân Hồng IT</title>
+		<link>http://localhost:82/demowp/c/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/</link>
+				<comments>http://localhost:82/demowp/c/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/#comments</comments>
+				<pubDate>Thu, 28 Jun 2018 05:56:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Unreal]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/tai-lieu/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/</guid>
+				<description><![CDATA[<p>Share khoá học phát triển Unreal Engine &#8211; Tìm hiểu C ++ &#38; Make Games &#8211; The Unreal Engine Developer Course &#8211; Learn C++ &#38; Make Games. Bạn muốn tìm hiểu C ++ từ đầu. Cách tạo trò chơi video đầu tiên trong công cụ Unreal. Đạt được sự tự tin trong lập trình. hãy [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/">Chia sẻ khoá học phát triển Unreal Engine &#8211; Tìm hiểu C ++ &#038; Make Games &#8211; The Unreal Engine Developer Course &#8211; Learn C++ &#038; Make Games &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Share khoá học phát triển Unreal Engine &#8211; Tìm hiểu C ++ &amp; Make Games &#8211; The Unreal Engine Developer Course &#8211; Learn C++ &amp; Make Games. Bạn muốn tìm hiểu C ++ từ đầu. Cách tạo trò chơi video đầu tiên trong công cụ Unreal. Đạt được sự tự tin trong lập trình. hãy đến với kháo học này.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/dkytdkd.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/dkytdkd-300x157.png" width="640" height="332" border="0" data-original-height="261" data-original-width="498" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;">Tìm hiểu cách tạo và sửa đổi trò chơi điện tử bằng Unreal Engine 4, nền tảng phát triển trò chơi miễn phí được sử dụng bởi các studio AAA và các nhà phát triển độc lập trên toàn thế giới.</span><br />
+<span style="font-size: large;"><br />
+</span> <span style="font-size: large;">bạn không cần phải có kinh nghiệm trước đây của Unreal hoặc mã hóa! Với hướng dẫn của khoá học, bạn sẽ ngạc nhiên về những gì bạn có thể đạt được.</span><br />
+<span style="font-size: large;"><b><u><br />
+</u></b></span><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Có năng lực và tự tin với việc sử dụng máy tính.</span></li>
+<li><span style="font-size: large;">Các nhà phát triển muốn tái kỹ năng để mã hóa.</span></li>
+<li><span style="font-size: large;">Hoàn thành người mới bắt đầu sẵn sàng làm việc chăm chỉ.</span></li>
+<li><span style="font-size: large;">Các lập trình viên hiện có muốn tái phát triển kỹ năng để phát triển trò chơi.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Tìm hiểu C ++, ngôn ngữ chuẩn của ngành trò chơi.</span></li>
+<li><span style="font-size: large;">Phát triển kỹ năng giải quyết vấn đề mạnh mẽ và có thể chuyển nhượng.</span></li>
+<li><span style="font-size: large;">Có được một kiến ​​thức tuyệt vời về phát triển trò chơi hiện đại.</span></li>
+<li><span style="font-size: large;">Tìm hiểu cách lập trình hướng đối tượng hoạt động trong thực tế.</span></li>
+<li><span style="font-size: large;">Hiểu rõ hơn về hoạt động của máy tính.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Máy Mac hoặc PC 64 bit có khả năng chạy Unreal 4 (PC được khuyến nghị).</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 54GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1PnG9YF1RQ_MwPtEdYE1ihWc4uYcVlCE2&#8243; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<div></div>
+<div><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/unrealcourse/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/unrealcourse/</a></span><br />
+<span style="font-size: large;">Giá $195.99 </span><span style="font-size: large;">≈ </span><span style="font-size: large;">4.458.827</span><span style="font-size: large;"> VNĐ</span></div>
+<div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-28_125209.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-28_125209-300x186.png" width="640" height="392" border="0" data-original-height="635" data-original-width="1024" /></a></div>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy cùng là những người văn minh.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: <a href="http://udemy.com/">Udemy.com</a></span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5584"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/">Chia sẻ khoá học phát triển Unreal Engine &#8211; Tìm hiểu C ++ &#038; Make Games &#8211; The Unreal Engine Developer Course &#8211; Learn C++ &#038; Make Games &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/chia-se-khoa-hoc-phat-trien-unreal-engine-tim-hieu-c-make-games-the-unreal-engine-developer-course-learn-c-make-games-tan-hong-it/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khoá học Unity 5 : Beginner to Advanced &#8211; Complete Course &#8211; Tân Hồng IT</title>
+		<link>http://localhost:82/demowp/c/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/</link>
+				<comments>http://localhost:82/demowp/c/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/#respond</comments>
+				<pubDate>Wed, 27 Jun 2018 08:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Đồ Họa]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Unity]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/27/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/</guid>
+				<description><![CDATA[<p>Tân Hồng IT Blog hôm nay xin chia sẻ cho các bạn khoá học Hướng dẫn phát triển Unity 5 : Beginner to Advanced &#8211; Complete Course. Đối tượng, mục tiêu: Bất kỳ ai muốn tìm hiểu cách cải thiện trò chơi của họ. Bất cứ ai muốn tìm hiểu làm thế nào để làm cho trò [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/">Chia sẻ khoá học Unity 5 : Beginner to Advanced &#8211; Complete Course &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<div style="clear: both; text-align: start;"><span style="font-size: large;">Tân Hồng IT Blog hôm nay xin chia sẻ cho các bạn khoá học Hướng dẫn phát triển</span><span style="font-size: large;"> Unity 5 : Beginner to Advanced &#8211; Complete Course.</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/hgkghhggh.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/hgkghhggh-300x169.png" width="640" height="360" border="0" data-original-height="240" data-original-width="427" /></a></div>
+<p><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Bất kỳ ai muốn tìm hiểu cách cải thiện trò chơi của họ.</span></li>
+<li><span style="font-size: large;">Bất cứ ai muốn tìm hiểu làm thế nào để làm cho trò chơi.</span></li>
+<li><span style="font-size: large;">Bất cứ ai có tình yêu dành cho người phát triển trò chơi.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Hiểu toán học đằng sau trò chơi 3D để tạo chuyển động, hoạt ảnh và hành vi đáng tin cậy</span></li>
+<li><span style="font-size: large;">Sử dụng và hiểu Unity 5.</span></li>
+<li><span style="font-size: large;">Biến các trò chơi trong mơ thành hiện thực với Unity 5.</span></li>
+<li><span style="font-size: large;">Thực hành phát triển trò chơi tốt.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Có một máy có thể chạy Unity 5.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: magenta; font-size: x-large;"><b>Size: 1.52GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=19BHaWiLgX4tdrp5gTz2dRJWJ9qrwDVtg&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div><i></i></p>
+</div>
+<div><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/draft/1648518/learn/v4/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/draft/1648518/learn/v4/</a> ( Đã hết bán.)</span><br />
+<span style="font-size: large;">Giá $185 </span><span style="font-size: large;">≈ </span><span style="font-size: large;">4.216.155</span><span style="font-size: large;"> VNĐ</span></div>
+<div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-27_150554.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-27_150554-300x186.png" width="640" height="392" border="0" data-original-height="635" data-original-width="1024" /></a></div>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="http://localhost:82/demowp/2018/06/dmca-la-gi-dmca-bao-ve-ban-nhung-gi.html" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy cùng là những người văn minh.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: <a href="http://udemy.com/">Udemy.com</a></span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5586"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/">Chia sẻ khoá học Unity 5 : Beginner to Advanced &#8211; Complete Course &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/chia-se-khoa-hoc-unity-5-beginner-to-advanced-complete-course-tan-hong-it/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tài liệu khóa học Selenium with C# and Java Titbits</title>
+		<link>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/</link>
+				<comments>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/#respond</comments>
+				<pubDate>Sun, 03 Jun 2018 04:28:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Udemy]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/03/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/</guid>
+				<description><![CDATA[<p>Khóa học Selenium Titbits dành cho những người muốn nắm bắt được sự hiểu biết cơ bản về Selenium một cách chi tiết hơn. Đối tượng và mục tiêu: Khóa học này dành cho tất cả những ai muốn học Selenium từ đầu. Khóa học này sẽ giúp nẵm vững các kiến thức để có [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/">Tài liệu khóa học Selenium with C# and Java Titbits</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Khóa học Selenium Titbits dành cho những người muốn nắm bắt được sự hiểu biết cơ bản về Selenium một cách chi tiết hơn.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-XWc7xUo-xqA/WxNt7ohhY7I/AAAAAAAAIi0/JNds58HvT8o_oZ1wRfYROZNLHxW2dyMGgCLcBGAs/s1600/hkghkhgk.png"><img class="aligncenter" src="https://1.bp.blogspot.com/-XWc7xUo-xqA/WxNt7ohhY7I/AAAAAAAAIi0/JNds58HvT8o_oZ1wRfYROZNLHxW2dyMGgCLcBGAs/s640/hkghkhgk.png" width="640" height="360" border="0" data-original-height="240" data-original-width="426" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Khóa học này dành cho tất cả những ai muốn học Selenium từ đầu.</span></li>
+<li><span style="font-size: large;">Khóa học này sẽ giúp nẵm vững các kiến thức để có một số công việc thường xuyên được thực hiện trong selenium ngày này qua ngày khác.</span></li>
+</ul>
+<p><span style="font-size: large;"><b><u><span style="font-size: large;"><b><u><br />
+</u></b></span>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Bắt đầu hiểu kiến ​​thức cơ bản về Selenium Webdriver rất rõ ràng.</span></li>
+<li><span style="font-size: large;">Làm việc với nhiều tính năng có sẵn với Selenium.</span></li>
+<li><span style="font-size: large;">Khám phá các câu hỏi thường gặp nhất trong Selenium Webdriver.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Hiểu biết cơ bản về C # và Java là quá đủ để hiểu được khóa học.</span></li>
+</ul>
+<p><span style="font-size: large;"> </span></p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 800MB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1JWz66ICLgYnZXbbYFhvu3h7j7BNZmZo5&#8243; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/selenium-csharp-and-java-titbits/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/selenium-csharp-a. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-m9ZscwhNwMA/WxNs15ous8I/AAAAAAAAIio/zkhUjiQ_6m0sAXNosQIyqUF2DGPcoLpKACLcBGAs/s1600/2018-06-03_111958.png"><img class="aligncenter" src="https://1.bp.blogspot.com/-m9ZscwhNwMA/WxNs15ous8I/AAAAAAAAIio/zkhUjiQ_6m0sAXNosQIyqUF2DGPcoLpKACLcBGAs/s640/2018-06-03_111958.png" width="640" height="392" border="0" data-original-height="637" data-original-width="1024" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="81"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/">Tài liệu khóa học Selenium with C# and Java Titbits</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tài liệu Lập trình C# và lập trình game với Unity cơ bản</title>
+		<link>http://localhost:82/demowp/c/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/</link>
+				<comments>http://localhost:82/demowp/c/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/#respond</comments>
+				<pubDate>Sun, 03 Jun 2018 03:45:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Unity]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/03/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/</guid>
+				<description><![CDATA[<p>Khóa học Lập trình C# và Unity cơ bản được thiết kế riêng cho những bạn chưa biết gì về lập trình. Khóa học sẽ giúp bạn hiểu được những khái niệm cơ bản về lập trình C#. Để tránh nhàm chán, khóa học đã thêm phần lập trình game với Unity để mọi người [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/">Tài liệu Lập trình C# và lập trình game với Unity cơ bản</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Khóa học Lập trình C# và Unity cơ bản được thiết kế riêng cho những bạn chưa biết gì về lập trình.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-QduKT5os-KI/WxNhlk8ucBI/AAAAAAAAIiI/nfP2cqFpkn0wcV9J_HF4I65nT2-82vcyACLcBGAs/s1600/rtuttuf.png"><img src="https://2.bp.blogspot.com/-QduKT5os-KI/WxNhlk8ucBI/AAAAAAAAIiI/nfP2cqFpkn0wcV9J_HF4I65nT2-82vcyACLcBGAs/s640/rtuttuf.png" width="640" height="360" border="0" data-original-height="242" data-original-width="429" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Khóa học sẽ giúp bạn hiểu được những khái niệm cơ bản về lập trình C#.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"><br />
+</span> <span style="font-size: large;">Để tránh nhàm chán, khóa học đã thêm phần lập trình game với Unity để mọi người thấy được ứng dụng của C# trong phát triển game.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Những bạn chưa biết gì về lập trình.</span></li>
+<li><span style="font-size: large;">Những bạn muốn học lập trình online.</span></li>
+</ul>
+<p><span style="font-size: large;"><b><u><span style="font-size: large;"><b><u><br />
+</u></b></span>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Hiểu và vận dụng các kỹ năng lập trình trong C#.</span></li>
+<li><span style="font-size: large;">Hiểu được cách phát triển game cơ bản trong Unity.</span></li>
+<li><span style="font-size: large;">Ứng dụng được C# để làm game trong Unity.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Visual Studio.</span></li>
+<li><span style="font-size: large;">Tinh thần học hỏi.</span></li>
+<li><span style="font-size: large;">Unity.</span></li>
+</ul>
+<p><span style="font-size: large;"> </span></p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 1.47GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=17idU3tOwF7pxKZC0TBEnWQ-H6wtf0YP9&#8243; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/khoa-hoc-lap-trinh-c-sharp-co-ban-den-nang-cao/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/khoa-hoc-lap-trinh-c-. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-pRSuwGZkveQ/WxNcLcWfeaI/AAAAAAAAIh8/NCjPRVAzosI8cy2Tlh1kclckX3hEJD9dQCLcBGAs/s1600/2018-06-03_100853.png"><img class="aligncenter" src="https://1.bp.blogspot.com/-pRSuwGZkveQ/WxNcLcWfeaI/AAAAAAAAIh8/NCjPRVAzosI8cy2Tlh1kclckX3hEJD9dQCLcBGAs/s640/2018-06-03_100853.png" width="640" height="386" border="0" data-original-height="620" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="83"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/">Tài liệu Lập trình C# và lập trình game với Unity cơ bản</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tai-lieu-lap-trinh-c-va-lap-trinh-game-voi-unity-co-ban/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Wordpress &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Thu, 06 Feb 2020 16:21:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Wordpress &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bài 13: Phương thức GET và POST trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/#respond</comments>
+				<pubDate>Thu, 06 Feb 2020 09:06:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backend]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7740</guid>
+				<description><![CDATA[<p>Tiếp tục series học PHP căn bản, ở bài 13 này chúng ta sẽ học về 2 phương thức truyền tải dữ liệu thông dụng trong mô hình Client-Server đó là Get và Post. Các bạn có thể xem lại khái niệm của Client-Server.  Như chúng ta đã biết thì đa số các trang web [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/">Bài 13: Phương thức GET và POST trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tiếp tục series <strong>học PHP căn bản,</strong> ở bài 13 này chúng ta sẽ học về 2 phương thức truyền tải dữ liệu thông dụng trong mô hình Client-Server đó là <strong>Get</strong> và <strong>Post</strong>. Các bạn có thể xem lại <a href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/" target="_blank" rel="noopener noreferrer"><strong>khái niệm của Client-Server. </strong></a></p>
+<figure id="attachment_7747" aria-describedby="caption-attachment-7747" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png"><img class="size-full wp-image-7747" src="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png" alt="phuong thuc get post trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7747" class="wp-caption-text">Phương Thức Get và Post Trong PHP</figcaption></figure>
+<p>Như chúng ta đã biết thì đa số các trang web hiện nay đang hoạt động theo mô hình <strong>client-server.</strong> Việc truyền gửi dữ liệu giữa <strong>client</strong> và <strong>server</strong> rất thường xuyên diễn ra và vô cùng quan trọng.</p>
+<p>Khi các bạn đăng nhập hay đăng ký tài khoản, hoặc là các bạn đăng comment, gửi thông báo đến quản trị web thì dữ liệu sẽ được gửi từ client lên Server, vậy làm sao để Server nhận được những thông tin của bạn? Server sẽ nhận được thông qua hai phương thức POST và GET.</p>
+<h2><span style="color: #0000ff;"><strong>Phương thức GET trong PHP</strong></span></h2>
+<p>Khi người dùng phía client sử dụng phương thức <strong>GET</strong> gửi dữ liệu lên <strong>server</strong> thông qua các <strong>tham số (parameter)</strong> trên thanh địa chỉ <strong>URL</strong> của <strong>Browser</strong>. Các tham số trên URL bắt đầu bằng dấu chấm hỏi ( <span style="color: #0000ff;"><strong>?</strong></span> ) và được ngăn cách với nhau bởi dấu và ( <span style="color: #0000ff;"><strong>&amp; </strong></span>). Server sẽ phân tích tất cả những thông tin đằng sau dấu hỏi (<strong><span style="color: #0000ff;">?</span></strong>) chính là phần dữ liệu mà <strong>Client</strong> gửi lên.</p>
+<p><strong>Ví dụ:</strong> ta có URL <span style="color: #0000ff;"><strong><code>http://localhost:82/demowp/<span style="color: #ff0000;">?</span>p=7740<span style="color: #ff0000;">&amp;</span>preview=true</code></strong></span></p>
+<p>Khi truy cập, từ Server sẽ hiểu giá trị <strong>p = 7740</strong> và giá trị <strong>preview = true</strong>.</p>
+<div class="alert alert-warning"><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 1:</strong></span> khi muốn truyền nhiều cặp giá trị lên Server chúng ta sẽ sử dụng dấu và (</span> <span style="color: #ff0000;"><strong>&amp;</strong> </span><span style="color: #0000ff;">), và vị trí các cặp giá trị không quan trọng. Nghĩa là từ ví dụ trên, giá trị <strong>preview</strong> nằm trước giá trị <strong>p</strong> cũng được.</span></div>
+<p>Đó là ví dụ về phần <strong>Client</strong> truy cập từ thanh địa chỉ URL. Chúng ta bây giờ sẽ chuyên sang các vấn đề trong code PHP.</p>
+<p>Trong code khi các dữ liệu mà <strong>Client</strong> gửi lên bằng phương thức <strong>GET</strong> đều được lưu trong một biến toàn cục mà PHP tự tạo ra đó là biến <strong>$_GET. </strong>( <strong>$_GET</strong> là một biến toàn cục lưu trữ dưới dạng mảng bất tuần tự.)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$_GET = [
+    'name' =&gt; 'TanHongIT',
+    'website' =&gt; 'tanhongit.net'
+];
+?&gt;  //biến $_GET là một mảng chứa nhiều phần tử</pre>
+<h3><strong>Lưu ý về phương thức GET trong PHP</strong></h3>
+<ul>
+<li>Phương thức GET được giới hạn gửi tối đa chỉ 1024 ký tự.</li>
+<li>Không bao giờ sử dụng phương thức GET nếu gửi password hoặc thông tin nhay cảm lên Server.</li>
+<li>GET không thể gửi dữ liệu nhị phân, ví dụ như hình ảnh hoặc các loại tài liệu lên Server.</li>
+<li>Dữ liệu gửi bởi phương thức GET có thể được truy cập bằng cách sử dụng biến môi trường <strong>QUERY_STRING</strong>.</li>
+<li>PHP cung cấp mảng liên hợp <b>$_GET</b> để truy cập tất cả các thông tin đã được gửi bởi phương thức GET.</li>
+</ul>
+<h3><strong>Ví dụ thực hành</strong></h3>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 1:</strong></span> Bạn khởi tạo 1 file <strong>demo.php</strong> nằm trong thư mục <strong>WWW</strong> của <strong>WampServer</strong> hoặc tạo trong thư mục <strong>htdocs</strong> nếu bạn dùng <strong>Xampp</strong>, sau đó bạn dán đoạn code bên dưới vào.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$_GET = [
+    'title' =&gt; 'TanHongIT',
+    'website' =&gt; 'tanhongit.net'
+];
+?&gt; 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+    &lt;form action="&lt;?php $_PHP_SELF ?&gt;" method="GET"&gt;
+        &lt;?php foreach ($_GET as $key =&gt; $value){  
+            echo $key . ' - ' . $value . '&lt;br&gt;';
+        } ?&gt;
+        &lt;input type="submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>khi truy cập vào <code><span style="color: #0000ff;"><strong>http://localhost/demo.php?title=tanhongit&amp;website=tanhongit.net</strong></span></code> hoặc <span style="color: #0000ff;"><strong><code>http://localhost//demo.php</code></strong></span> thì kết quả đều ra như sau:</p>
+<pre>title - TanHongIT
+website - tanhongit.net
+<input type="submit" /></pre>
+<p>Ở ví dụ trên mình sử dụng phương thức GET ngay trong 1 file duy nhất, mình đã sử dụng <strong>vòng lặp Foreach</strong> để lấy toàn bộ key và <strong>value</strong> có trong biến <strong>$_GET</strong> là một <strong>mảng có nhiều phần tử</strong>.</p>
+<p><strong>GET</strong> còn có thể sử dụng để truyền dữ liệu từ file này sang file khác. hãy làm tiếp <strong>ví dụ 2</strong>.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 2:</strong></span> Tạo 2 file, 1 file có tên <strong>get_demo.php</strong> và một file <strong>demo.html</strong></p>
+<p>Đầu tiên, ở trong file <strong>demo.html</strong> ta sẽ tạo 1 form để lấy dữ liệu nhập vào từ bàn phím và gửi lên server.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-title="File demo.html" data-enlighter-group="File demo.html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;form action="get_demo.php" method="GET"&gt; &lt;!--thêm thuộc tính action chuyển hướng đến file get_demo.php --&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Title&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào title..." name="title"&gt; &lt;!--tạo một trường có tên là title để truyền dữ liệu lên file get_demo.php--&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Website&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào url website..." name="web"&gt; &lt;!--tạo một trường có tên là web để truyền dữ liệu lên file get_demo.php--&gt;
+            &lt;/div&gt;
+
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Ở file <strong>demo.html</strong> mình có tạo 2 trường nhập liệu trong form có tên là <span style="color: #0000ff;"><strong>title</strong> </span>và <span style="color: #0000ff;"><strong>web</strong> </span>để truyền dữ liệu nhập từ bàn phím vào file <strong>get_demo.php</strong></p>
+<p>Tiếp theo ta viết code để phía Server xuất ra màn hình sau khi nó đã nhận dữ liệu được nhập vào từ file <strong>demo.html </strong>thông qua file<strong> get_demo.php</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-group="File get_demo.php" data-enlighter-title="File get_demo.php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+echo 'Title: ' . $_GET['title'] . '&lt;br&gt;';
+echo 'Website: ' . $_GET['web'];</pre>
+<p>Hãy test thử bằng cách chạy file <strong>demo.html</strong> lên theo đường link <strong><code>http://localhost/demo.html</code></strong> sau đó nhập vào các trường dữ liệu và nhấn vào button <strong>Submit</strong>. Lập tức Server sẽ tự động chuyển link sang file <strong>get_demo.php</strong> và xuất ra thông tin bạn đã nhập liệu.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png"><img class="aligncenter wp-image-7761 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png" alt="demo get php" width="305" height="153" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png 305w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638-300x150.png 300w" sizes="(max-width: 305px) 100vw, 305px" /></a> <a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png"><img class="aligncenter wp-image-7762 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png" alt="url method get php" width="700" height="150" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png 700w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737-300x64.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<div class="alert alert-warning">
+<p><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 2:</strong></span> Vì đây là phương thức GET nên khi truyền dữ liệu bạn sẽ có 2 cách truyền, 1 là truyền dữ liệu từ form sau đó gửi lên Server, 2 là ta có thể truyền tham số trực tiếp thông qua paramter trên địa chỉ URL.</span></p>
+</div>
+<p><strong>Ví dụ:</strong> <span style="color: #0000ff;"><strong><code>http://localhost/get_demo.php?<span style="color: #ff0000;">title=hello&amp;web=chaomoinguoi.com</span></code></strong></span></p>
+<p>Kết quả nhận được sau khi <strong>Enter</strong> sẽ như hình dưới:</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png"><img class="aligncenter size-full wp-image-7764" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png" alt="" width="548" height="147" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png 548w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128-300x80.png 300w" sizes="(max-width: 548px) 100vw, 548px" /></a></p>
+<div class="alert alert-warning"><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 3:</strong></span> Dùng phương thức <strong>GET</strong> thì dữ liệu luôn được gửi một cách <strong>tường minh</strong>, chúng ta có thể thấy mọi thông tin trên URL và có thể chỉnh sửa trực tiếp cho nên nó không bảo mật tốt.</span></div>
+<div>Vì thế khi muốn tạo dữ liệu nào đó ta không nên sử dụng phương thức GET mà phải dùng POST vì GET luôn để lộ thông tin trên địa chỉ URL nên rất dễ bị hack đánh cắp dữ liệu.</div>
+<h2><span style="color: #0000ff;"><strong>Phương thức POST trong PHP</strong></span></h2>
+<p>Phương thức <strong>POST</strong> sẽ trái ngược với phương thức <strong>GET</strong> về tính bảo mật cũng như tốc độ.</p>
+<p>Về phương thức <strong>GET</strong>, chúng ta có thể xem thông tin trên thanh địa chỉ <strong>URL</strong>, dữ liệu được gửi đi bằng <strong>GET</strong> sẽ thông qua các paramter trên <strong>URL</strong>. <strong>POST</strong> thì ngược lại, nó không gửi dữ liệu đi bằng <strong>paramter</strong> <strong>trên</strong> <strong>URL</strong> mà thông qua <strong>HTTP</strong> <strong>header</strong>, vì vậy việc bảo mật phụ thuộc vào <strong>giao</strong> <strong>thức HTTP</strong> mà website đó đang sử dụng.</p>
+<p><strong>Parameters</strong> được truyền trong <strong>request</strong> <strong>body</strong> nên có thể truyền dữ liệu lớn, hạn chế tùy thuộc vào cấu hình của <strong>Server</strong>. Không cache và <strong>bookmark</strong> được cũng như không được lưu lại trong <strong>browser</strong> <strong>history</strong>. <strong>POST</strong> không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi, có thể gửi <strong>dữ liệu nhị phân, hình ảnh</strong>.</p>
+<p>Nội dung dữ liệu được gửi đi bằng phương thức <strong>POST</strong> sẽ luôn bị ẩn đi và chúng ta không thể thấy được.</p>
+<h3><strong>Phương thức Post trong mô hình Client-Server</strong></h3>
+<p>Các bạn hãy tìm hiểu và làm ví dụ bên dưới để hiểu cách phương thức POST truyền dữ liệu lên Server như thế nào nhé!</p>
+<h4><strong>Phía Client gửi lên</strong></h4>
+<p>Với phương thức GET, dữ liệu sẽ được thấy trên URL, nhưng phương thức POST thì hoàn toàn ngược lại, POST sẽ phải gửi dữ liệu qua form HTML và các giá trị sẽ được định nghĩa trong các thẻ <strong>input</strong> gồm các kiểu <strong>(<span style="color: #0000ff;">textbox, radio, checkbox, password, textarea, hidden</span>)</strong> và được nhận dang thông qua <span style="color: #0000ff;"><strong>tên (name)</strong> </span>của các thẻ <strong>input</strong> đó.</p>
+<p>Bạn hãy tạo file <strong>demo.html</strong> trong thư mục WWW của WampServer hoặc tạo trong thư mục htdocs nếu bạn dùng Xampp và chèn đoạn code bên dưới vào.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-group="File demo.html - POST method" data-enlighter-title="File demo.html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;form action="post_demo.php" method="POST"&gt; &lt;!--thêm thuộc tính action chuyển hướng đến file post_demo.php và sử dụng phương thức method = post--&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Title&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào title..." name="title"&gt; &lt;!--tạo một trường có tên (name) là title để truyền dữ liệu lên file post_demo.php--&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Website&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào url website..." name="web"&gt; &lt;!--tạo một trường có tên (name) là web để truyền dữ liệu lên file post_demo.php--&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Phần code trên mục đích dùng để nhập liệu từ phía Client để gửi lên Server. Giờ chúng ta sang phần Server.</p>
+<h4><strong>Phía Server nhận dữ liệu và trả về</strong></h4>
+<p>Tất cả các dữ liệu gửi bằng phương thức POST đều được lưu trong một biến toàn cục <strong>$_POST</strong> do PHP tự tạo ra, vì thế từ bây giờ bạn chỉ cần thao tác lấy hoặc gửi dữ liệu thông qua biến <strong>$_POST</strong> này là được.</p>
+<p>Ở file <strong>demo.html</strong> mình có tạo 2 trường nhập liệu trong form có tên là <span style="color: #0000ff;"><strong>title</strong> </span>và <span style="color: #0000ff;"><strong>web</strong> </span>để truyền dữ liệu nhập từ bàn phím vào file <strong>post_demo.php</strong>. Tiếp theo ta sẽ code trên file <strong>post_demo.php</strong> để lấy dữ liệu và xuất ra màn hình.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-group="File post_demo.php" data-enlighter-title="File post_demo.php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+echo 'Title: ' . $_POST['title'] . '&lt;br&gt;';
+echo 'Website: ' . $_POST['web'];</pre>
+<p>Hãy test thử bằng cách chạy file <strong>demo.html</strong> lên theo đường link <strong><code>http://localhost/demo.html</code></strong> sau đó nhập vào các trường dữ liệu và nhấn vào button <strong>Submit</strong>. Lập tức Server sẽ tự động chuyển link sang file <strong>post_demo.php</strong> và xuất ra thông tin bạn đã nhập liệu.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png"><img class="aligncenter size-full wp-image-7780" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png" alt="" width="350" height="157" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png 350w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843-300x135.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png"><img class="aligncenter wp-image-7779 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png" alt="demo post php" width="331" height="145" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png 331w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802-300x131.png 300w" sizes="(max-width: 331px) 100vw, 331px" /></a></p>
+<p>Nhưng có một điều khác biệt ở đây bạn cần quan tâm đó là khi sử dụng <strong>GET</strong>, đường dẫn <strong>URL</strong> sẽ tiết lộ bất kỳ thông tin mà bạn đã nhập liệu, còn khi đã dùng <strong>POST</strong> thì bị ẩn.</p>
+<p>Điều này chứng minh <strong>POST</strong> sẽ có tính bảo mật hơn <strong>GET</strong> và <strong>POST</strong> sẽ phù hợp với các chức năng về tạo dữ liệu, đăng ký, đăng nhập,&#8230;</p>
+<h3><strong>Những lưu ý cần biết trong phương thức POST trong PHP</strong></h3>
+<ul>
+<li>Phương thức POST không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi.</li>
+<li>Phương thức POST có thể sử dụng để gửi ASCII cũng như dữ liệu nhị phân.</li>
+<li>Dữ liệu gửi bởi phương thức POST thông qua HTTP header, vì vậy việc bảo mật phụ thuộc vào giao thức HTTP. Bằng việc sử dụng Secure HTTP, bạn có thể chắc chắn rằng thông tin của mình là an toàn.</li>
+<li>PHP cung cấp mảng liên hợp <b>$_POST</b> để truy cập tất cả các thông tin được gửi bằng phương thức POST.</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Kiểm tra isset với GET và POST trong PHP</strong></span></h2>
+<p>Trước khi lấy một dữ liệu nào đó từ client bạn phải kiểm tra nó đã tồn tại không rồi mới lấy.Vì nếu không kiểm tra trước khi lấy, phía client chưa cung cấp đầy đủ dữ liệu mà server lại nhận thì sẽ có lỗi ngay. Vì thế ở những trường hợp mà ta không chắc chắn <strong>một biến luôn tồn tại hoặc một trường dữ liệu được nhập đầy đủ</strong> thì hãy kiểm tra nó trước khi gửi <strong>request</strong>.</p>
+<p>Để kiểm tra ta sẽ dùng hàm <strong>isset()</strong>. Hàm <strong>isset()</strong> trong PHP có chức năng kiểm tra xem biến có tồn tại hay không. Nó sẽ trả về TRUE nếu biến đó có tồn tại và ngược lại FALSE nếu biến đó không tồn tại. Hàm <strong>isset()</strong> sẽ dùng cho cả 2 phương thức GET và POST.</p>
+<p><strong>Cú pháp:</strong> <span style="color: #0000ff;"><strong>isset($bien);</strong></span></p>
+<p>Trong đó: <strong><code>$bien</code></strong> là biến mà bạn muốn kiểm tra sự tồn tại.</p>
+<p>Từ ví dụ về phần <strong>POST</strong> trong PHP ở trên, nếu bạn trực tiếp truy cập vào <strong>http://localhost/post_demo.php</strong> mà chưa nhập đầy đủ thông tin ở <strong>http://localhost/demo.html</strong> thì sẽ xuất hiện lỗi ngay.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png"><img class="aligncenter size-full wp-image-7790" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png" alt="" width="555" height="206" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png 555w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505-300x111.png 300w" sizes="(max-width: 555px) 100vw, 555px" /></a></p>
+<p>Vậy từ ví dụ trên ta chỉ cần thêm vào file file <strong>post_demo.php</strong> như sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+if (isset($_POST['title']) &amp;&amp; isset($_POST['web'])) {
+    echo 'Title: ' . $_POST['title'] . '&lt;br&gt;';
+    echo 'Website: ' . $_POST['web'];
+}</pre>
+<p>Bây giờ bạn hãy thử truy cập lại <strong>http://localhost/post_demo.php</strong> , nếu chưa đươc nhập đủ dữ liệu ở <strong>http://localhost/demo.html</strong> thì nó sẽ không hiện gì cả, còn nhập đầy đủ các trường dữ liệu thì nó mới hiện lên cho ta xem.</p>
+<p><span style="text-decoration: underline; color: #ff0000;"><strong>Kết luận:</strong></span> Hàm <strong>isset()</strong> thật sự rất hữu ích đối với chúng ta trong việc ràng buộc dữ liệu nên các bạn hãy thường xuyên sử dụng để hiểu rõ và áp dụng dễ dàng hơn sau này nhé!</p>
+<h2><span style="color: #0000ff;"><strong>So sánh giống và khác nhau giữa GET và POST</strong></span></h2>
+<p><strong>GET</strong> và <strong>POST</strong> hầu như chẳng có gì giống nhau ngoài tác dụng là truyền tải dữ liệu lên Server.</p>
+<p>Cho nên mình sẽ nói về những đặc điểm khác nhau của 2 phương thức này nhé!</p>
+<ol>
+<li><strong><span style="color: #0000ff;">Giới hạn dữ liệu</span>: GET</strong> giới hạn gửi tối đa chỉ 1024 ký tự. Còn <strong>POST</strong> không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi.</li>
+<li><strong><span style="color: #0000ff;">Khả năng</span>:</strong> Phương thức <strong>POST</strong> có thể sử dụng để gửi ASCII cũng như dữ liệu nhị phân, các loại tệp, hình ảnh còn <strong>GET</strong> thì không.</li>
+<li><span style="color: #0000ff;"><strong>Tốc độ:</strong></span> <strong>GET nhanh hơn rất nhiều so với POST</strong> về quá trình thực thi &#8211; vì dữ liệu gửi đi luôn được web browser lưu cached lại. Khi dùng phương thức POST thì server luôn thực thi và trả kết quả cho client, còn dùng GET thì web browser cached sẽ kiểm tra có kết quả tương ứng đó trong bộ nhớ cached chưa, nếu có thì trả về ngay mà không cần đưa tới server.</li>
+<li><span style="color: #0000ff;"><strong>Bảo mật</strong></span>: Phương thức <strong>POST</strong> bảo mật hơn <strong>GET</strong> vì dữ liệu được gửi ngầm, <strong>không xuất hiện trên URL</strong>, mắt thường không nhìn thấy được và dữ liệu cũng không được lưu lại. Trong khi đó với GET thì dữ liệu gửi đi được tường minh bạn có thể hiển thị lại được các dữ liệu này trên URL.</li>
+</ol>
+<p>Link tham khảo: <a href="https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests" target="_blank" rel="noopener noreferrer">https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests</a></p>
+<h2><span style="color: #0000ff;"><strong>Khi nào nên dùng GET và POST trong PHP</strong></span></h2>
+<p>Cả 2 phương thức đều có những ưu và nhược điểm khác nhau, vậy khi nào chúng ta nên dùng GET và khi nào nên dùng POST.</p>
+<p>Phương thức <strong>GET</strong> có tốc độ thực thi nhanh như độ bảo mật lại rất kém nên <strong>GET</strong> chỉ nên dùng cho các công việc l<strong>ấy dữ liệu</strong> từ server về client, như vậy quá trình truy xuất sẽ nhanh hơn.</p>
+<p>Đối với POST sẽ có độ bảo mật cao nên phù hợp với các công việc <strong>tạo dữ liệu, upload, truyền tải thông tin</strong> lên server, những công việc mang tính bảo mật cao.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ: </strong></span></p>
+<ul>
+<li>Khi upload hình ảnh lên web thì ta sẽ dùng POST, còn khi muốn tải ảnh từ Web server về ta sẽ dùng GET.</li>
+<li>Khi đăng ký, đăng nhập hoặc comment vào một website ta sẽ dùng POST, còn khi lấy tin bài viết từ web ra thì ta dùng GET.</li>
+<li>Khi request sử dụng câu lệnh select thì dùng GET, khi request có sử dụng lệnh insert update, delete thì nên dùng POST.</li>
+<li>Ngoài ra khi cần xử lý các thông tin nhạy cảm ví dụ như email, password thì bạn phải sử dụng POST.</li>
+</ul>
+<h2>Kết thúc</h2>
+<p>Qua bài viết trên mình đã nếu ra những nội dung liên quan đến 2 phương thức method truyền tải dữ liệu thông dụng trong PHP là GET và POST. Các bạn cần phải hiểu rõ những tính chất của mỗi phương thức này và khi nào nên dùng nó tùy vào từng trường hợp cụ thể.</p>
+<p>Nhưng có một điều lưu ý rằng những nội dung, dữ liệu quan trọng hoặc cần truyền tải một loại thông tin gì đó lên server thì ta phải dùng POST để tăng tính bảo mật cho Website nhé!</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/" target="_blank" rel="noopener noreferrer">Bài 12: Chuỗi (String) Và Các Hàm Xử Lý Chuỗi Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-11-cac-ham-xu-ly-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 11: Các hàm xử lý mảng (Array) trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-10-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 10: Mảng (Array) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-9-ham-function-trong-php/" target="_blank" rel="noopener noreferrer">Bài 9: Hàm (Function) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7740"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/">Bài 13: Phương thức GET và POST trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/#respond</comments>
+				<pubDate>Sat, 26 Oct 2019 06:05:51 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Bootstrap]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[graphic-design]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7248</guid>
+				<description><![CDATA[<p>Download Adobe Dreamweaver CC 2020 &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động. Nó được coi là [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span><strong>Download Adobe Dreamweaver CC 2020</strong> &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. </span><span>Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động.</span></p>
+<p>Nó được coi là trình soạn thảo <strong>HTML</strong> chuẩn <strong>WYSIWYG</strong> tiêu chuẩn của ngành, điều này sẽ làm cho việc thiết kế web trở nên rất dễ dàng cũng như rất thoải mái.</p>
+<figure id="attachment_7250" aria-describedby="caption-attachment-7250" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg"><img class="size-full wp-image-7250" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg" alt="adobe dreamweaver cc 2020" width="699" height="456" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020-300x196.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7250" class="wp-caption-text">Download adobe dreamweaver cc 2020</figcaption></figure>
+<p><strong>Adobe Dreamweaver CC 2020</strong> giúp bạn tạo,  mã và quản lý các trang web động dễ dàng bằng công cụ mã hóa thông minh, đơn giản.</p>
+<p>Đây được coi như là một phần mềm <strong>thiết kế web</strong> chuyên nghiệp cung cấp giao diện hình ảnh trực quan cho việc thiết kế và chỉnh sửa các trang web của Adobe.</p>
+<h2><span id="Cac_tinh_nang_cua_Adobe_Dreamweaver_CC_2019" class="ez-toc-section"><strong>Các tính năng của Adobe Dreamweaver CC</strong></span></h2>
+<ul>
+<li>Được coi là trình soạn thảo HTML WYSIWYG tiêu chuẩn của ngành, điều này sẽ làm cho web desiging rất dễ dàng cũng như rất thoải mái.</li>
+<li>Cho phép nhà thiết kế tạo trang web có khả năng hoạt động trên máy tính để bàn, thiết bị di động và máy tính bảng.</li>
+<li>Có công nghệ Bố cục Lưới Chất lỏng cùng với bảng điều khiển Xem trước MultiScreen sẽ cho phép bạn có được khả năng tương thích với các sản phẩm cầm tay.</li>
+<li>Có một bộ chuyển tiếp CSS sẽ đơn giản hóa quá trình tạo một số hình ảnh động hấp dẫn.</li>
+</ul>
+<h2><strong><span id="Tinh_nang_moi">Các tính năng mới của Adobe Dreamweaver CC 2020</span></strong></h2>
+<ul>
+<li>Thiết kế và xây dựng các trang Web tiêu chuẩn</li>
+<li>Mã hóa được tích hợp với môi trường đồ họa</li>
+<li>Hỗ trợ các công nghệ web và ngôn ngữ lập trình</li>
+<li>Hỗ trợ JavaScript, ActionScript, CSS, ASP, PHP, HTML</li>
+<li>Thiết kế và phát triển nhiều trang động dựa trên công nghệ Ajax</li>
+<li>Khả năng tự động phát hiện loại chương trình mã lập trình</li>
+<li>Xem và chỉnh sửa các trang web được thiết kế trực tuyến</li>
+<li>Khả năng tải lên các trang trực tiếp trên các máy chủ</li>
+<li>Công cụ thiết kế mới và hỗ trợ tích hợp công nghệ CSS</li>
+<li>Tương thích hoàn toàn với các tiêu chuẩn web mới nhất</li>
+<li>Hỗ trợ nhiều màn hình dành cho người dùng Windows</li>
+<li>Giao diện người dùng được thiết kế lại, hiện đại hơn</li>
+<li>Tăng cường tích hợp Bootstrap và hỗ trợ phiên bản mới nhất</li>
+</ul>
+<h2><span id="Cau_hinh_toi_thieu" class="ez-toc-section"><strong>Cấu hình tối thiểu:</strong></span></h2>
+<ul>
+<li>CPU: Intel® Core 2 or AMD Athlon® 64 processor; 2 GHz hoặc cao hơn</li>
+<li>Hệ điều hành: Microsoft Windows 7 SP1, Windows 8.1, or Windows 10 64 bit</li>
+<li>Ram: 2 GB of RAM (4 GB khuyến nghị)</li>
+<li>Ổ cứng: 2 GB</li>
+<li>Màn hình: 1280×1024 display with 16-bit video card</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span id="Download_Adobe_Dreamweaver_CC_2019" class="ez-toc-section" style="color: #ff0000;"><strong>Download Adobe Dreamweaver CC 2020</strong></span></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1LMPndHjZOhD7COxSvna-Eywa2NK0qbwd" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Dreamweaver CC 2020<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h2><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Dreamweaver CC 2020</strong></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/adobe-dreamweaver-cc-2019/" target="_blank" rel="noopener noreferrer">Download Adobe Dreamweaver CC 2019 Full Active &#8211; Phần mềm thiết kế, chỉnh sửa trang web chuyên nghiệp</a></strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7248"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách sửa lỗi error establishing a database connection cho website</title>
+		<link>http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/#respond</comments>
+				<pubDate>Tue, 19 Feb 2019 00:45:17 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Error]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5451</guid>
+				<description><![CDATA[<p>Vừa qua mình gặp một lỗi đối với website TanHongIT.Net này là lỗi &#8220;Error establishing a database connection&#8220;. Nó đã làm cho khách không thể truy cập vào và xem nội dung trên website của mình. Và qua bài viết của hostinger.vn đã viết rất chi tiết và đầy đủ về cách giải quyết lỗi [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/">Cách sửa lỗi error establishing a database connection cho website</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Vừa qua mình gặp một lỗi đối với website <strong><a href="https://TanHongIT.Net">TanHongIT.Net</a></strong> này là lỗi &#8220;<strong>Error establishing a database connection</strong>&#8220;. Nó đã làm cho khách không thể truy cập vào và xem nội dung trên website của mình.</p>
+<figure id="attachment_6024" aria-describedby="caption-attachment-6024" style="width: 722px" class="wp-caption aligncenter"><img class="size-full wp-image-6024" src="http://localhost:82/demowp/wp-content/uploads/2019/02/fix-error-establishing-a-database-connection-cho-website.png" alt="fix error establishing a database connection cho website" width="722" height="267" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/fix-error-establishing-a-database-connection-cho-website.png 722w, http://localhost:82/demowp/wp-content/uploads/2019/02/fix-error-establishing-a-database-connection-cho-website-300x111.png 300w" sizes="(max-width: 722px) 100vw, 722px" /><figcaption id="caption-attachment-6024" class="wp-caption-text">fix error establishing a database connection cho website</figcaption></figure>
+<p>Và qua bài viết của hostinger.vn đã viết rất chi tiết và đầy đủ về cách giải quyết lỗi này và đã giúp mình sửa thành công lỗi. Mình xin được phép chia sẻ đến cho các bạn thông qua bài viết của hostinger.vn nhé!</p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Gioi_thieu_-_Error_establishing_a_database_connection" title="Giới thiệu - Error establishing a database connection">Giới thiệu - Error establishing a database connection</a></li><li><a href="#Ban_can_chuan_bi_gi" title="Bạn cần chuẩn bị gì?">Bạn cần chuẩn bị gì?</a></li><li><a href="#Buoc_1_Xac_dinh_loi_Error_establishing_a_database_connection_do_dau" title="Bước 1 — Xác định lỗi Error establishing a database connection do đâu">Bước 1 — Xác định lỗi Error establishing a database connection do đâu</a></li><li><a href="#Buoc_2_Kiem_tra_cai_dat_ket_noi_database_trong_wp-configphp" title="Bước 2 — Kiểm tra cài đặt kết nối database trong wp-config.php">Bước 2 — Kiểm tra cài đặt kết nối database trong wp-config.php</a><ul><li><a href="#Hostinger_control_panel" title="Hostinger control panel">Hostinger control panel</a></li><li><a href="#cPanel" title="cPanel">cPanel</a></li><li><a href="#Kiem_tra_gia_tri_database_name" title="Kiểm tra giá trị database name">Kiểm tra giá trị database name</a></li><li><a href="#Kiem_tra_thong_tin_database_user" title="Kiểm tra thông tin database user">Kiểm tra thông tin database user</a></li><li><a href="#Them_priviledged_user_bi_thieu" title="Thêm priviledged user bị thiếu">Thêm priviledged user bị thiếu</a></li><li><a href="#Kiem_tra_gia_tri_host" title="Kiểm tra giá trị host">Kiểm tra giá trị host</a></li><li><a href="#Kiem_tra_thong_tin_mat_khau_dang_nhap" title="Kiểm tra thông tin mật khẩu đăng nhập">Kiểm tra thông tin mật khẩu đăng nhập</a></li><li><a href="#Kiem_tra_gia_tri_table_prefix_value" title="Kiểm tra giá trị table prefix value">Kiểm tra giá trị table prefix value</a></li></ul></li><li><a href="#Buoc_3_Vo_hieu_WordPress_plugins" title="Bước 3 — Vô hiệu WordPress plugins ">Bước 3 — Vô hiệu WordPress plugins </a></li><li><a href="#Buoc_4_Thay_doi_WordPress_Core_Files" title="Bước 4 — Thay đổi WordPress Core Files">Bước 4 — Thay đổi WordPress Core Files</a></li><li><a href="#Buoc_5_Lien_he_cong_ty_hosting_cua_ban" title="Bước 5 — Liên hệ công ty hosting của bạn">Bước 5 — Liên hệ công ty hosting của bạn</a></li></ul></nav></div>
+
+<h2><span id="Gioi-thieu">Giới thiệu &#8211; <strong>Error establishing a database connection</strong></span></h2>
+<p>Trong bài hướng dẫn này, mình sẽ đưa ra nhiều phương pháp để sửa loại <strong>Error establishing a database connection</strong> trong WordPress. Sau khi đọc xong, bạn sẽ biết hết tất cả nguyên nhân gây lỗi và cách sửa lỗi <strong>WordPress</strong> này hoàn toàn.</p>
+<p><strong>WordPress</strong> được viết bằng ngôn ngữ <strong>PHP</strong> và <strong>MySQL</strong>. Khi một trang web được mở khi khách truy cập trên website của bạn, mã <strong>PHP</strong> code sẽ truy xuất <strong>database MySQL</strong> và lấy thông tin cần thiết để chạy trang. Một truy vấn <strong>PHP</strong> cần để viết tiêu đề bài viết, một cái khác cần lấy thông tin tác giả, một cái khác để trích ngày xuất bản, vâng vâng.</p>
+<p>Mã lỗi <strong>Error establishing a database connection</strong>, có nghĩa là vì lý do nào đó mà <strong>PHP</strong> <strong>code</strong> không thể kết nối tới <strong>MySQL</strong> <strong>database</strong> để lấy thông tin cần để dựng trang.</p>
+<p><img class="mac-ss aligncenter wp-image-7153 size-full" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-du-loi-error-esatablishing-database-connection.png" sizes="(max-width: 900px) 100vw, 900px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-du-loi-error-esatablishing-database-connection.png 900w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-du-loi-error-esatablishing-database-connection-150x112.png 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-du-loi-error-esatablishing-database-connection-300x224.png 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-du-loi-error-esatablishing-database-connection-768x574.png 768w" alt="Ví dụ lỗi Error establishing a database connection" width="900" height="673" /></p>
+<p>Có nhiều lý do <strong>website</strong> có thể gặp lỗi kết nối <strong>database</strong> trên <strong>WordPress</strong>, nhưng thông thường sẽ rơi vào ba trường hợp:</p>
+<ol>
+<li><strong>Sai thông tin đăng nhập vào MySQL database của WordPress</strong>. Nếu thông tin đăng nhập bị thay đổi do WordPress được chuyển đi, hoặc chuyển qua nhà cung cấp hosting khác, website của bạn sẽ không truy cập được tới database với thông tin cũ. Bạn cũng cần lưu ý là Databse WordPress sử dụng thông tin đăng nhập khác với tài khoản đã được cấp để truy cập hosting account control panel. Theo kinh nghiệm của chúng tôi, lỗi này thường xảy ra nhất.</li>
+<li><strong>Một hoặc nhiều plugin khiến database bị hỏng.</strong> Có nhiều lý do khiến WordPress database bị hỏng, hầu hết là do bạn đã upload plugin chứa lỗi.</li>
+<li><strong>Server chứa database này bị sập.</strong> Database server có thể không hoạt động vì vấn đề kỹ thuật, hoặc bạn có thể gặp trường hợp traffic tăng đột biết khiến bất thình lình server không thể xử lý được. Vì vậy, website sẽ trả về lỗi error establishing a database connection WordPress</li>
+</ol>
+<p>Trong bài hướng dẫn này, bạn sẽ biết cách tìm và sửa lỗi <strong>establishing a database connection</strong> trong WordPress.</p>
+<h2><span id="Ban-can-chuan-bi-gi"><span id="What-you8217ll-need">Bạn cần chuẩn bị gì?</span></span></h2>
+<p>Trước khi bắt đầu bạn cần chuẩn bị:</p>
+<ul>
+<li>Một WordPress website dã từng hoạt động</li>
+<li>Truy cập control panel của tài khoản Hosting nơi wordpress được cài.</li>
+<li>Quyền write vào file cài đặt WordPress website</li>
+<li>Kiến thức cơ bản về cấu trúc WordPress</li>
+</ul>
+<h2><span id="Buoc1-Xac-dinh-loi-Error-establishing-a-database-connection-do-dau"><span id="Step-1-Determining-where-the-error-is-occurring">Bước 1 — Xác định lỗi Error establishing a database connection do đâu</span></span></h2>
+<p>Đầu tiên bạn nên làm là kiểm tra lỗi giống nhau ở cả <strong>front-end và back-end</strong> là <em>yoursite.com</em>, và <em>yoursite.com</em>/wp-admin (thay <em>yoursite.com</em> với trang WordPress của bạn). Nếu lỗi giống nhau là <strong>Error establishing a database connection</strong>, hãy tiếp tục vào <strong>Bước 2</strong>.</p>
+<p>Nhưng nếu website của bạn bị down, và bạn thấy một lỗi khác khi đăng nhập là: <strong>One or more database tables are unavailable. The database may need to be repaired</strong>,  vậy bạn cần sửa database của bạn.</p>
+<p>May mắn là WordPress có cách tự động <strong>repair</strong> <strong>database</strong>. Bạn có thể cần kích hoạt tính năng này trước. Để làm vậy, bạn cần truy cập vào file <strong>wp-config.php</strong> file trong thư mục gốc của files cài <strong>WordPress</strong>.</p>
+<p><img class="aligncenter size-full wp-image-7161" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-tri-file-wp-config.jpg" sizes="(max-width: 900px) 100vw, 900px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-tri-file-wp-config.jpg 900w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-tri-file-wp-config-150x75.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-tri-file-wp-config-300x149.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vi-tri-file-wp-config-768x382.jpg 768w" alt="vị trí file wp-config" width="900" height="448" /></p>
+<p>Mở file<strong> wp-config.php</strong>, thêm dòng sau vào trước <strong><code>* That's all, stop editing! Happy blogging. */</code></strong>và lưu thay đổi:</p>
+<ul>
+<li><strong><code><span class="kw1" style="color: #00ccff;">define</span><span class="br0">(</span> <span class="st0">'<span style="color: #3366ff;">WP_ALLOW_REPAIR</span>'</span><span class="">, true </span><span class="br0">)</span><span class="">;</span></code></strong></li>
+</ul>
+<p>Lưu thay đổi. Dòng trên sẽ kích hoạt nó cho bạn và tối ưu hoặc sửa chữa database bằng cách truy cập tới:</p>
+<p><strong><em>yourwebsite.com</em>/wp-admin/maint/repair.php</strong> (chỉ cần thay thế <em>yourwebsite.com</em> thành địa chỉ URL thật sự).</p>
+<p><img class="alignnone" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/wordpress-database-repair.png" alt="Chọn bất kỳ lựa chọn nào để thực hiện database repair." width="1001" height="519" /></p>
+<p>Bạn có thể thấy hình trên có 2 lựa chọn để sửa hoặc sửa chửa <strong>(</strong><strong>Repair Database) </strong>và vừa sửa chữa vừa tối ưu database (<strong>Repair and Optimize Database)</strong>. Hãy chọn 1 trong 2; lưu ý là cách 2 sẽ mất nhiều thời gian hơn vì sau khi sửa chữa database sẽ được tối ưu.</p>
+<blockquote><p>Hãy lưu ý là trang sửa chữa database này <strong>không an toàn</strong>; bất kỳ ai cũng có thể truy cập <em>yourwebsite.com</em>/wp-admin/maint/repair.php mà không phải đăng nhập. Khi bạn đã sửa xong database của bạn, hãy chắc là bạn đã xóa dòng code mà bạn đã thêm <code>define( 'WP_ALLOW_REPAIR', true );</code> trong<strong> wp-config.php</strong> . Việc này sẽ tắt trang sửa lỗi và ngăn chặn bất kỳ ai có ý đồ xấu với database của bạn.</p></blockquote>
+<p>Hãy vẫn để <strong>wp-config</strong> mở, trừ khi bạn thấy lỗi đã được sửa và website hoạt động trở lại. Nếu bạn vẫn thấy thông báo Error establishing a database connection, bạn cần dùng nó cho bước tiếp theo.</p>
+<h2><span id="Buoc-2-Kiem-tra-cai-dat-ket-noi-database-trong-wp-configphp"><span id="Step-2-Checking-database-connection-settings-in-wp-configphp">Bước 2 — Kiểm tra cài đặt kết nối database trong wp-config.php</span></span></h2>
+<p>Nếu bước trên không hoạt động và không sử dụng được, vậy bước tiếp bạn nên làm là xem lại cấu hình kết nối bạn đã đặt trong file <strong>wp-config.php</strong>.</p>
+<p>Trong trường hợp bạn không biết chắc vì sao thông tin đăng nhập tự dưng ngừng hoạt động, hãy lưu ý là những việc làm như chuyển công ty hosting hoặc thay đổi bất kỳ thứ gì trong <strong>database</strong> hoặc thông tin user có thể gây lỗi nếu file <strong>wp-config.php</strong> chưa được cập nhật với thông tin mới.</p>
+<p>File <strong>wp-config.php</strong> có thể vẫn đang mở ở bước trước. Nếu không, đăng nhập vào <strong>File Manager</strong> của <strong>control</strong> <strong>panel</strong> <strong>hosting</strong> của bạn hoặc qua <a href="https://www.hostinger.vn/lam-the-nao/lam-the-nao-de-tu-cau-hinh-ftp-client">FTP</a> và mở file. Bạn sẽ thấy chỗ cấu hình kết nối tới <strong>database</strong> tương tự giống như sau:</p>
+<div class="EnlighterJSWrapper classicEnlighterJSWrapper">
+<table>
+<tbody>
+<tr>
+<td><span style="font-size: 16px;"><code><span class="co1">// ** MySQL settings - You can get this info from your web host ** //</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** The name of the database for WordPress */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span class="kw1"><span style="color: #1e66d4;"><strong>define</strong></span><span class="br0">(</span><span style="color: #3366ff;"><span class="st0">'DB_NAME'</span><span class="">, </span></span><span class="st0"><span style="color: #3366ff;">'u694443746_aujev</span>'</span></span></code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** MySQL database username */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span style="color: #1e66d4;"><strong><span class="kw1">define</span></strong></span><span class="br0">(</span><span class="st0">'<span style="color: #3366ff;">DB_USER'</span></span><span class="" style="color: #3366ff;">, </span><span class="st0"><span style="color: #3366ff;">'u694443746_vaven</span>'</span><span class="br0">)</span><span class="">;</span></code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** MySQL database password */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span style="color: #1e66d4;"><strong><span class="kw1">define</span></strong></span><span class="br0">(</span><span class="st0">'<span style="color: #3366ff;">DB_PASSWORD'</span></span><span class="" style="color: #3366ff;">, </span><span class="st0"><span style="color: #3366ff;">'zuWupEXEdu</span>'</span><span class="br0">)</span><span class="">;</span></code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** MySQL hostname */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span style="color: #1e66d4;"><strong><span class="kw1">define</span></strong><span class="br0">(</span><span class="st0">'DB_HOST'</span></span><span class="" style="color: #3366ff;"><span style="color: #1e66d4;">,</span> </span><span class="st0"><span style="color: #3366ff;">'mysql</span>'</span><span class="br0">)</span><span class="">;</span></code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** Database Charset to use in creating database tables. */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span style="color: #1e66d4;"><strong><span class="kw1">define</span></strong></span><span class="br0">(</span><span class="st0">'<span style="color: #3366ff;">DB_CHARSET'</span></span><span class="" style="color: #3366ff;">, </span><span class="st0"><span style="color: #3366ff;">'utf8</span>'</span><span class="br0">)</span><span class="">;</span></code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><code><span class="co2">/** The Database Collate type. Don't change this if in doubt. */</span></code></span></p>
+<p><span style="font-size: 16px;"><code><span style="color: #1e66d4;"><strong><span class="kw1">define</span></strong></span><span class="br0">(</span><span class="st0">'<span style="color: #3366ff;">DB_COLLATE</span>'</span><span class="">, </span><span class="st0">''</span><span class="br0">)</span><span class="">;</span></code></span></td>
+</tr>
+</tbody>
+</table>
+<p><code></code><code></code></p>
+</div>
+<p>Ngoài ra, nếu cuộn xuống một chút nữa, bạn sẽ thấy thông tin Prefix:</p>
+<div class="EnlighterJSWrapper classicEnlighterJSWrapper">
+<p><code><span class="">$table_prefix = </span><span class="st0">'<span style="color: #0000ff;">wp_</span>'</span><span class="">;</span></code></p>
+</div>
+<p>Như bạn có thể thấy, có 4 thông tin quan trọng mà WordPress cần dùng để truy cập database:</p>
+<ol>
+<li>Tên database (<strong>DB_NAME</strong>)</li>
+<li>Username đăng nhập (<strong>DB_USER</strong>)</li>
+<li>Mật khẩu đăng nhập (<strong>DB_PASSWORD</strong>)</li>
+<li>Datbase hostname (<strong>DB_HOST</strong>)</li>
+<li>Database prefix (<strong>table_prefix</strong>)</li>
+</ol>
+<p>Nếu có bấ kỳ giá trị nào trong số chúng không đúng, WordPress sẽ không thể kết nối tới database của bạn. Và bạn sẽ gặp lỗi Error establishing a database connection</p>
+<p>Cách xác định các thông tin trên là đúng là bạn phải kiểm tra lại thông tin MySQL database thực sự. Để làm việc này bạn truy cập section <strong>MySQL Databases</strong>. Bên dưới là hướng dẫn kiểm tra MySQL database trên control panel của Hostinger và MySQL Database trong cPanel, phần này cũng giống với các nền tảng control panel cho hosting khác.</p>
+<h3><span id="Hostinger-control-panel">Hostinger control panel</span></h3>
+<p><img class="aligncenter size-full wp-image-7162" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/hostinger-mysql-database-section.jpg" sizes="(max-width: 900px) 100vw, 900px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/hostinger-mysql-database-section.jpg 900w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/hostinger-mysql-database-section-150x91.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/hostinger-mysql-database-section-300x182.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/hostinger-mysql-database-section-768x467.jpg 768w" alt="Hostinger MySQL database section" width="900" height="547" /></p>
+<p>Sau khi vào trong <strong>MySQL Databases</strong>, tìm mục L<strong>ist of Current MySQL Databases And Users</strong>. Nó sẽ liệt kê tất cả database và users đang được dùng cho website. Thông tin bạn cần tìm và đối chiếu nằm ở cột <strong>MySQL</strong> <strong>Database</strong>,<strong> MySQL User</strong> và<strong>MySQL Host</strong>. 3 thông tin của 3 cột này <strong>DB_NAME</strong>, <strong>DB_USER </strong>và <strong>DB_HOST</strong>phải khớp với thông tin trong <strong>wp-config.php</strong> file.</p>
+<p><img class="aligncenter size-full wp-image-7163" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-thong-tin-dang-nhap-mysql-database-trong-wp-config.jpg" sizes="(max-width: 900px) 100vw, 900px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-thong-tin-dang-nhap-mysql-database-trong-wp-config.jpg 900w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-thong-tin-dang-nhap-mysql-database-trong-wp-config-150x78.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-thong-tin-dang-nhap-mysql-database-trong-wp-config-300x155.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-thong-tin-dang-nhap-mysql-database-trong-wp-config-768x397.jpg 768w" alt="Kiểm tra thông tin đăng nhập mysql database với wp-config" width="900" height="465" /></p>
+<p>Nếu thông tin khác nhau, cập nhật file <strong>wp-config.php</strong> để cho giống giá trị và lưu lại thay đổi.</p>
+<p>Tải lại trang WordPress website của bạn. Nếu bạn vẫn còn gặp lỗi kết nối database, vậy thì có thể là 1 trong 2 thông tin còn lại là MySQL user password không khớp với giá trị trong <strong>wp-config.php</strong>. Để chắc là MySQL userpassword giống nhau, bạn chỉ cần đặt lại mật khẩu <strong>MySQL user</strong> bằng cách nhấn vào dấu + kế bên <strong>MySQL database</strong> và chọn nút <strong>Change Password</strong>.</p>
+<p><img class="aligncenter size-full wp-image-7164" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password.png" sizes="(max-width: 1320px) 100vw, 1320px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password.png 1320w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password-150x58.png 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password-300x116.png 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password-768x297.png 768w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password-1024x396.png 1024w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/doi-mysql-password-990x383.png 990w" alt="đổi mysql password" width="1320" height="511" /></p>
+<p>Giờ hãy cập nhật <strong>wp-config.php</strong> với mật khẩu mới bạn vừa đổi và tải lại trang WordPress site.</p>
+<p>Nếu vẫn còn lỗi database connection, vậy bạn hãy kiểm tra thêm thông tin <strong>table prefix</strong>. Bạn có thể kiểm tra lại thông tin này bằng cách chuyển tới <strong>phpMyadmin</strong> trong <strong>MySQL databases</strong>  để mở WordPress database của bạn. Tìm table prefix trong đó và hãy chắc là table prefix giống với giá trị tương ứng trong file <strong>wp-config.php</strong>.</p>
+<p><img class="aligncenter size-full wp-image-7165" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/fix-error-establishing-a-database-connection-bang-table-prefix.png" sizes="(max-width: 899px) 100vw, 899px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/fix-error-establishing-a-database-connection-bang-table-prefix.png 899w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/fix-error-establishing-a-database-connection-bang-table-prefix-150x92.png 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/fix-error-establishing-a-database-connection-bang-table-prefix-300x184.png 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/fix-error-establishing-a-database-connection-bang-table-prefix-768x470.png 768w" alt="fix error establishing a database connection bằng table prefix" width="899" height="550" /></p>
+<p>Nếu vẫn còn gặp lỗi MySQL database connection, hãy làm thêm <strong>bước 3.</strong></p>
+<h3><span id="cPanel">cPanel</span></h3>
+<p><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/mysql-in-cpanel.png" alt="cPanel MySQL Databases đặt trong phần Databases ." width="735" height="430" /></p>
+<p>Khi đã mở<strong> MySQL Databases</strong>, tìm mục <strong>Current Databases</strong>.  Nó sẽ liệt kê tất cả databases và users đã được sử dụng cho website cua bạn. Thông tin mà chúng ta đang tìm kiếm là <strong>Database</strong> và <strong>Privileged Users</strong>. Mục đích là hãy đảm bảo giá trị trong 2 cột này khớp với <strong>DB_NAME</strong> và <strong>DB_USER</strong> trong file <strong>wp-config.php</strong>.</p>
+<p><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/cpanel-current-databases-match.png" alt="Khớp giá trị giữa file wp-config.php với thông tin thật sự trong màn hình Current Databases ." width="738" height="371" /></p>
+<p>Mỗi khi thực hiện thay đổi, nhớ refresh trang để xem sửa lỗi được Error establishing a database connection chưa vì có thể bạn không cần làm hết tất cả các bước thì lỗ đã được sửa rồi.</p>
+<h3>Kiểm tra giá trị database name</h3>
+<p><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/cpanel-current-databases.png" alt="Start with database name." /></p>
+<p>Chúng ta bắt đầu với database name value. Nếu mục <strong>Current Databases</strong> không liệt kê database trong file <strong>wp-config.php</strong> giống với giá trị <strong>DB_NAME</strong>, database đang bị thiếu. Việc này xảy ra khi một website chuyển tới nhà cung cấp hosting mới và database chưa được chuyển hoàn toàn. Chúng tôi khuyên bạn liên hệ của nhà cung cấp hosting mới và nhờ họ hoàn tất chuyển /khôi phục database WordPress. Việc này sẽ bao gồ việc tạo database mới và có thể khôi phục bằng database backup của WordPress.</p>
+<h3>Kiểm tra thông tin database user</h3>
+<p>Bước 2 chúng ta cần kiểm tra cột <strong>Privileged Users</strong>. Trong ví dụ này, bạn có thể nhanh chóng nhận ra <strong>Privileged Users</strong> có thông tin không giống với file <strong>wp-config.php</strong> file – trong file wp-config, thông tin bị thiếu số 0. Khi chúng tôi cập nhật giá trị <strong>DB_USER</strong> từ <em>somuvnet_wp67</em> thành <em>somuvnet_wp670</em>, chúng tôi đã sửa được lỗi sai username. Hãy thử tải lại trang để xem lỗi còn tồn tại hay không.</p>
+<h3>Thêm priviledged user bị thiếu</h3>
+<p>Tuy nhiên, trong quá trình chuyển WordPress tới nhà cung cấp khác hoặc khi cài WordPress thủ công, bạn có thể quên <em>thêm </em>user vào database. Kết quả là <strong>Privileged Users</strong> bị trống như hình bên dưới.</p>
+<p><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/empty-privileged-user.png" alt="This database has no user added." /></p>
+<p>Để sửa lỗi này, chúng tôi đã dùng mục <strong>Add User To Database</strong> ở cuối trang:</p>
+<p><img class="aligncenter size-full wp-image-7212" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/quan-ly-nguoi-dung.png" sizes="(max-width: 736px) 100vw, 736px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/quan-ly-nguoi-dung.png 736w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/quan-ly-nguoi-dung-150x146.png 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/quan-ly-nguoi-dung-300x291.png 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/quan-ly-nguoi-dung-434x420.png 434w" alt="Quản lý người dùng và phân quyền" width="736" height="714" /></p>
+<ol>
+<li>Đầu tiên xem <strong>Current Users</strong> có giống với giá trị <strong>DB_USER</strong> value trong <strong>wp-config.php</strong> được liệt kê ở đây không.</li>
+<li>Nếu nó được liệt kê, chúng ta sẽ dùng user đó trong phần <strong>Add User To Database</strong>-&gt;<strong>User</strong>, chọn database tương ứng trong danh sách và nhấn nút <strong>Add. </strong>Bạn sẽ phải định nghĩa quyền, chọn <strong>All Privileges</strong>, click vào <strong>Make Changes</strong> và quay lại bằng nút <strong>Go Back</strong>.</li>
+<li>Nếu không được liệt kê, chúng ta sẽ sử dụng phần <strong>Add New User</strong> để tạo thêm MySQL username. Tại đây bạn điền username hoặc phần còn thiếu vào trường <strong>Username</strong> và chúng tôi khuyên sử dụng Password generator để tạo <strong>Pasword</strong>.</li>
+</ol>
+<blockquote><p>QUAN TRỌNG: bạn nên cập nhật giá trị <strong>DB_PASSWORD</strong> trong file <strong>wp-config.php</strong> ngay để nó không bị mất trong quá trình thao tác.</p></blockquote>
+<p>Khi user đã được thêm (hoặc được tạo), bạn sẽ cần thực hiện lại <strong>bước (2)</strong> để thêm nó vào database. Khi làm xong hãy tải lại trang để xem lỗi đã được sửa chưa.</p>
+<h3>Kiểm tra giá trị host</h3>
+<p>Nếu cả 2 bước trên vẫn không sửa được, có 2  thông tin còn lại cần phải kiểm tra. Là giá trị host và password. Hãy bắt đầu với giá trị host, giá trị host thường đi kèm với thông tin tài khoản. Chúng tôi khuyên kiểm tra lại thông tin này với nhà cung cấp hosting của bạn nếu không tìm thấy trong email được gửi tới cho bạn từ trước về thông itn tài khoản. Nếu bạn đã đổi <strong>MySQL database host</strong>, hãy tải lại trang và xem lỗi Error establishing a database connection đã được sửa chưa.</p>
+<h3>Kiểm tra thông tin mật khẩu đăng nhập</h3>
+<p>Mật khẩu đăng nhập có thể được tìm thấy trong mục<strong> MySQL Databases</strong>-&gt;<strong>Current Users</strong> trong control panel.</p>
+<ol>
+<li>Xác định đúng user trong cột <strong>Users </strong>và click vào nút <strong>Change Password</strong> .</li>
+<li>Tại đây bạn có thể sử dụng giá trị <code></code>hoặc tạo password mới bằng tool <strong>Password Generator</strong>. Hãy cập nhật giá trị <strong>DB_PASSWORD</strong> trong <strong>wp-config.php</strong> file với password mới.</li>
+<li>Nhấn <strong>Change Password</strong></li>
+</ol>
+<p>Đó là tất cả các bước kiểm tra cho file <strong>wp-config.php</strong>.  Hãy tải lại trang để xem lỗi được sửa chưa. Nếu lỗi vẫn chưa được sửa hãy làm bước cuối cùng.</p>
+<h3><span id="Checking-the-table-prefix-value">Kiểm tra giá trị table prefix value</span></h3>
+<p>Cuối cùng, nhưng không kém phần quan, trọng, hãy chắc là <strong>table prefix</strong> cũng đúng. Mở database WordPress bằng phpMyAdmin và xem giá trị nó có khớp với table prefix trong file <strong>wp-config.php</strong> không.</p>
+<p><img class="aligncenter size-full wp-image-7166" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-wordpress-db-prefix-de-fix-error-establishing-a-database-connection.png" sizes="(max-width: 895px) 100vw, 895px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-wordpress-db-prefix-de-fix-error-establishing-a-database-connection.png 895w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-wordpress-db-prefix-de-fix-error-establishing-a-database-connection-150x92.png 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-wordpress-db-prefix-de-fix-error-establishing-a-database-connection-300x184.png 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/kiem-tra-wordpress-db-prefix-de-fix-error-establishing-a-database-connection-768x470.png 768w" alt="kiểm tra wordpress db prefix để fix error establishing a database connection" width="895" height="548" /></p>
+<h2><span id="Buoc-3-Vo-hieu-WordPress-plugins"><span id="Step-3-DisablingWordPress-plugins"><strong>Bước 3 </strong>—<strong> Vô hiệu WordPress plugins </strong></span></span></h2>
+<p>Nếu cả 2 bước trên không thành công, đã đến lúc kiểm tra WordPress plugins của bạn. Nếu vô hiệu toàn bộ plugins cùng lúc, website hoạt động lại thì khả năng lớn là ít nhất 1 trong các plugin là nguồn gốc của lỗi này. Sau đó bạn có thể tiếp tục kiểm tra xem chính xác plugin nào gây lỗi. Các bước sau sẽ giúp bạn vô hiệu toàn bộ plugin WordPress để sửa “error establishing a database connection”:</p>
+<ol>
+<li>Đăng nhập vào tài khoản bằng file manager hoặc <a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-cau-hinh-filezilla-client/">FTP client</a></li>
+<li>Truy cập vào WordPress core files, và tìm thư mục <strong>wp-content</strong>. Truy cập. Tìm thư mục có tên <strong>plugins</strong>.</li>
+<li>Đổi tên thư mục đó thành tên khác bất kỳ như là <strong>plugins-disabled. </strong>Nó sẽ ngăn không cho WordPress coi đây là thư mục plugin nữa.<br />
+<img class="mac-ss aligncenter wp-image-7167 size-full" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vo-hieu-plugins-cho-wordpress.jpg" sizes="(max-width: 900px) 100vw, 900px" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vo-hieu-plugins-cho-wordpress.jpg 900w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vo-hieu-plugins-cho-wordpress-150x130.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vo-hieu-plugins-cho-wordpress-300x260.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/05/vo-hieu-plugins-cho-wordpress-768x666.jpg 768w" alt="vô hiệu plugins cho WordPress" width="900" height="780" /></li>
+<li>Kiểm tra website của bạn để xem error establishing a database connection có biến mất chưa.</li>
+</ol>
+<p>Nếu chưa, hãy làm theo <strong>bước 4.</strong> Nếu rồi, vấn đề nằm ở trong 1 trong các plugin WordPres. Giờ, để tìm chính xác plugin gây lỗi, bạn chỉ cần làm như sau:</p>
+<ol>
+<li>Đổi tên plugins folder thành <strong>plugins </strong>và truy cập vào nó.</li>
+<li>Đổi tên từng thư mục tuần tự, để WordPress không load plugin đó. Bạn có thể đặt tên nó thành ví dụ như <strong>akismet-disabled</strong>, và tiếp tục.</li>
+<li>Kiểm tra website của bạn mỗi lần bạn vô hiệu một plugin để xem nó có sửa được lỗi hay không.</li>
+</ol>
+<p>Tuy nhiên, , if this didn’t bring your website back to normal, move onto the next step.</p>
+<h2><span id="Buoc-4-Thay-doi-WordPress-Core-Files"><span id="Step-4-Replacing-WordPress-Core-Files">Bước 4 — Thay đổi WordPress Core Files</span></span></h2>
+<blockquote><p>QUAN TRỌNG: Hãy tạo full backup cho website trước khi tiến hành bước này. Bạn có thể backup website <a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-backup-wordpress">như hướng dẫn này.</a></p></blockquote>
+<p>Nếu error establishing a database connection WordPress vẫn còn, cách cuối cùng là phương pháp “bạo lực” nhất: thay thế WordPress core files. Vì có thể file bị nhiễm độc, hoặc bị corrupted sẽ ngăn WordPress hoạt động hoặc có lỗi khi cố kết nối tới database. Trong trường hợp này, bạn có thể thay thế những file này bằng những file mới, chưa bị chỉnh sửa của WordPress core files. Đừng lo, cuối cùng sẽ ổn sau bước này. Bạn chỉ cần chắc là chỉ dùng cách này khi bạn không còn cách nào khác, và các phương pháp trên đã được thực hành.</p>
+<p>Để thay đổi core WordPress files hãy làm theo các bước sau:</p>
+<ol>
+<li>Để thay đổi WordPress core files thủ công, <a href="http://wordpress.org/download/" target="_blank" rel="noopener noreferrer">tải</a> phiên bản mới nhất của WordPress và giải nén thành thư mục</li>
+<li>Truy cập <a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-cau-hinh-filezilla-client/">FTP</a>, xóa hoặc đổi tên thư mục <strong>wp-includes</strong> và <strong>wp-admin</strong> khỏi server.</li>
+<li>Tải 2 thư mục này từ (1) lên tài khoản hosting.</li>
+</ol>
+<p>Vậy là bạn đã đổi core files của WordPress. Để biết thêm thông tin về core file WordPress, hãy xem qua bài <a href="https://codex.wordpress.org/Upgrading_WordPress_-_Extended_Instructions">hướng dẫn này</a>. Cách này sẽ sửa lỗi ‘Error establishing a database connection’ bạn đang gặp phải.</p>
+<h2><span id="Buoc-5-Lien-he-cong-ty-hosting-cua-ban"><span id="Step-3-Contacting-your-hosting-company">Bước 5 — Liên hệ công ty hosting của bạn</span></span></h2>
+<p>Nếu bạn đã làm các bước trên mà vẫn gặp lỗi, bạn vẫn còn thấy Error establishing a database connection,  có nghĩa lỗi do nhà cung cấp hosting. Hãy liên hệ nhà cung cấp dịch vụ web hosting của bạn và cho họ các thông tin cần thiết để tái hiện lỗi, họ có thể xác định nguyên nhân gây lỗi.</p>
+<p>Nhưng trước khi liên hệ tới nhà cung cấp hosting, có một cách để bạn tìm hiểu lý do về lỗi <strong>Error establishing a database connection</strong>. Đôi khi, database bị offline bởi nhà cung cấp hosting của bạn.</p>
+<p>Có nhiều nguyên do gây ra lỗi này, nhưng không phải hiếm gặp. Nếu đúng vậy, bạn có thể thêm thông tin cho nhà cung cấp hosting của bạn để xử lý vấn đề nhanh hơn.</p>
+<p>Để kiểm tra xem database server có bị down hay không , bạn có thể truy cập vào phpMyAdmin trong mụ MySQL hoặc chạy một<a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-ket-noi-php-voi-mysql-database/"> script PHP kết nối</a> đơn giản. Script này để thực hiện một kết nối tới database. Không truy cập được phpMyAdmin hoặc script kết nối báo lỗi kết nối thất bại sẽ cho chúng ta biết server down. Chúng tôi đã viết cho bạn script như sau:</p>
+<table>
+<tbody>
+<tr>
+<td><strong><span style="font-size: 16px;"><code><span class="">&lt;?php</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">$servername = </span><span class="st0">"mysql.hostinger.com"</span><span class="">;</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">$database = </span><span class="st0">"u266072517_name"</span><span class="">;</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">$username = </span><span class="st0">"u266072517_user"</span><span class="">;</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">$password = </span><span class="st0">"buystuffpwd"</span><span class="">;</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="co1">// Create connection</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="">$conn = </span><span class="kw1">mysqli_connect</span><span class="br0">(</span><span class="">$servername, $username, $password, $database</span><span class="br0">)</span><span class="">;</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="co1">// Check connection</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="kw1">if</span> <span class="br0">(</span><span class="">!$conn</span><span class="br0">)</span> <span class="br0">{</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="kw1">die</span><span class="br0">(</span><span class="st0">"Connection failed: "</span><span class=""> . </span><span class="kw1">mysqli_connect_error</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="">;</span></code></span></strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;"><code><span class="br0">}</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">echo </span><span class="st0">"Connected successfully"</span><span class="">;</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="kw1">mysqli_close</span><span class="br0">(</span><span class="">$conn</span><span class="br0">)</span><span class="">;</span></code></span></strong></p>
+<p><strong><span style="font-size: 16px;"><code><span class="">?&gt;</span></code></span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>Như bạn thấy, thông tin bạn cần là server name của bạn (thường được cấp bởi nhà cung cấp hosting), tên database bạn cố truy cập tới, MySQL username và mật khẩu. Chúng tôi đã đề cập vấn đề này ở bài <a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-ket-noi-php-voi-mysql-database/">hướng dẫn kết nối MySQL database bằng PHP</a>. Không cần phải nói, bạn cần kiểm tra chính xác giá trị trong thông tin MySQL có khớp nhau không như ở <strong>Bước 2</strong>.</p>
+<p>Chúng tôi cũng đã tạo một biến  <strong>$conn</strong>, để lưu kết quả trả lời trong phương pháp <strong>mysqli_connect()</strong>. Nếu biến này trống, chúng ta sẽ thấy thông báo <strong>Connection failed: &lt;error_name&gt;</strong>. Ở mặt khác, kết nối thành công vào database sẽ trả về kết quả <strong>Connected successfully</strong> hiển thị trên màn hình.</p>
+<p>Script này sẽ giúp bạn biết database có bị offline hay không, nhà cung cấp web hosting của bạn có thể cần biết thông tin này.<span id="Ket-luan"><span id="Conclusion"></span></span></p>
+<p>Bài hướng dẫn WordPress này có thể giúp bạn sửa lỗi The Error establishing a database connection đang hiện lên trên WordPress. Bằng các bước phù hợp bạn sẽ có thể sửa lỗi nếu lỗi do database bị hỏng hoặc sai thông tin kết nối database trong file wp-config.php. Ngoài ra có thể có lỗi do nhà cung cấp hosting mà chỉ có họ mới sửa được nhưng 90% lỗi nằm ở các vấn đề trên, hãy áp dụng cách sửa trên trước khi liên hệ đội hỗ trợ kỹ thuật.</p>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5451"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/">Cách sửa lỗi error establishing a database connection cho website</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Hướng dẫn activate theme Newspaper v9.6 Update New</title>
+		<link>http://localhost:82/demowp/tai-lieu-web/huong-dan-activate-theme-newspaper-v9-0/</link>
+				<comments>http://localhost:82/demowp/tai-lieu-web/huong-dan-activate-theme-newspaper-v9-0/#respond</comments>
+				<pubDate>Sat, 11 Aug 2018 02:30:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Template]]></category>
+		<category><![CDATA[Theme Web]]></category>
+		<category><![CDATA[Theme Wordpress]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Active]]></category>
+		<category><![CDATA[Newspaper]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[Themeforest]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=2925</guid>
+				<description><![CDATA[<p>Trong bài viết này mình sẽ hướng dẫn hco các bạn cách activate theme Newspaper mới nhất bằng cách chỉnh code trong file manager vô cùng dễ dàng. Newspaper là theme trả phí đang bán rất chạy trên chợ Themeforest. Theme Newspaper là theme được rất nhiều người yêu thích và coi như là sự lựa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/huong-dan-activate-theme-newspaper-v9-0/">Hướng dẫn activate theme Newspaper v9.6 Update New</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình sẽ hướng dẫn hco các bạn cách <strong>activate theme Newspaper</strong> mới nhất bằng cách chỉnh code trong <strong>file manager</strong> vô cùng dễ dàng.</p>
+<p><strong>Newspaper</strong> là theme trả phí đang bán rất chạy trên chợ<strong> Themeforest. Theme Newspaper</strong> là theme được rất nhiều người yêu thích và coi như là sự lựa chọn tốt nhất cho site kiểu tạp chí, tin tức hay blog.</p>
+<figure id="attachment_3008" aria-describedby="caption-attachment-3008" style="width: 653px" class="wp-caption aligncenter"><img class="wp-image-3008" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/newspaper-9-1020x570.jpg" alt="" width="653" height="365" /><figcaption id="caption-attachment-3008" class="wp-caption-text">Theme Newspaper 9 active 100%</figcaption></figure>
+<p>Trong bài viết này mình sẽ hướng dẫn chi tiết cho các bạn cách <strong>active theme newspaper 9.x</strong> &#8211; phiên bản mới nhất hiện tại (<strong>có thể áp dụng cho cả phiên bản v8.5.x đến v8.8.x trở lên).</strong></p>
+<p><span style="font-size: 14pt;"><strong>Nếu các bạn chưa dùng theme thì các bạn tải về tại đây:</strong></span></p>
+<ul>
+<li>Xem chia sẻ theme ở bài viết: <a href="http://localhost:82/demowp/theme-wordpress/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/"><strong>Chia sẻ Theme Newpaper v9.x mới nhất </strong></a></li>
+</ul>
+<p><img class="aligncenter wp-image-3009" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/newspaper-1020x537.png" alt="" width="580" height="305" /></p>
+<p>Nếu phiên bản hiện tại của website các bạn chưa phải là v.9 thì tiến hành update lên v.9 nhé!</p>
+<p><span style="text-decoration: underline; font-size: 18pt; color: #3366ff;"><strong>Bước 1:</strong></span><br />
+Đầu tiên, các bạn truy cập đến <strong>td_ajax.php</strong> bằng cách vào trình quản lý tệp tin cPanel hay 1 trình quản lý fpt nào đó (Winscp ) rồi truy cập vào đường dẫn sau :</p>
+<blockquote><p><strong>/wp-content/themes/Newspaper/includes/wp_booster/td_ajax.php</strong></p></blockquote>
+<p><img class="aligncenter wp-image-3010 size-full" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/td_ajax.png" alt="" width="643" height="433" /></p>
+<p><span style="text-decoration: underline; font-size: 18pt; color: #3366ff;"><strong>Bước 2:</strong></span><br />
+Bạn mở edit file <strong>td_ajax.php</strong> lên bằng bất kỳ trình soạn thảo php nào như trình soạn thảo online từ cPanel hay notepad++. Bạn hãy tìm đến dòng <strong>1915</strong> rồi sửa “<strong>true</strong>” thành “<strong>false</strong>” và sau đó save lại.</p>
+<p><img class="aligncenter wp-image-3013 size-full" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/sbg.png" alt="" width="638" height="440" /></p>
+<p><strong>(Đối với bản 8.7.3 đến bán 8.8.2 thì sửa ở dòng 930 á nha.</strong></p>
+<p><strong>Đối với bản 9.0, 9.1 thì ở dòng 958 hoặc 963</strong></p>
+<p><strong>Còn đối với bản 9.6 thì ở dòng 1915 nhe.)</strong></p>
+<p><span style="text-decoration: underline; font-size: 18pt; color: #3366ff;"><strong>Bước 3:</strong></span><br />
+Bây giờ, bạn đăng nhập vào bảng điều khiển admin của website, rồi vào phần <strong>Newspaper</strong> &#8211;&gt; <strong>Activate theme</strong> &#8211;&gt; Rồi click vào <strong>Activate the theme manually</strong> (Lưu ý ở dưới cùng của trang như hình, các bạn nhớ cuộn xuống mới thấy nhé).</p>
+<p><img class="aligncenter wp-image-3014 size-full" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-11_004706.png" alt="" width="892" height="615" /></p>
+<p><span style="text-decoration: underline; font-size: 18pt; color: #3366ff;"><strong>Bước 4:</strong></span><br />
+Sau đó các bạn điền vào như sau:</p>
+<ul>
+<li><span style="color: #3366ff;">Envato purchase code:</span> tanhongit.net</li>
+<li><span style="color: #3366ff;">TagDiv activation key:</span> tanhongit.net</li>
+</ul>
+<p>Rồi các bạn Click vào <strong>Activate</strong> để hoàn thành.</p>
+<p><img class="aligncenter wp-image-3011 size-large" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/active-theme-newpaper-9-794x570.png" alt="" width="696" height="500" /></p>
+<p>Sau khi thành công bạn sẽ nhận được thông báo như bên dưới.</p>
+<p><img class="aligncenter wp-image-3012" title="Theme Newspaper 9 active 100%" src="http://localhost:82/demowp/wp-content/uploads/2018/08/Active-done.png" alt="" width="593" height="331" /></p>
+<p>Vậy là các bạn đã kích hoạt thành công theme rồi đó. Có thắc mắc gì cứ bình luận bên dưới minh sẽ giải đáp cho các bạn nhé!</p>
+<p>Vui lòng ghi rõ nguồn<strong> TanHongIT.Net</strong> khi chia sẻ sao chép bài viết này. Cảm ơn mọi người.</p>
+<p style="text-align: center;"><strong><span style="font-size: 24pt; color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="2925"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">10</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/huong-dan-activate-theme-newspaper-v9-0/">Hướng dẫn activate theme Newspaper v9.6 Update New</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/tai-lieu-web/huong-dan-activate-theme-newspaper-v9-0/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ theme Newspaper 9.6 Tải Miễn Phí Update Mới Nhất</title>
+		<link>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/</link>
+				<comments>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/#respond</comments>
+				<pubDate>Sat, 11 Aug 2018 02:15:44 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Template]]></category>
+		<category><![CDATA[Theme Web]]></category>
+		<category><![CDATA[Theme Wordpress]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Newspaper]]></category>
+		<category><![CDATA[Newspaper 9]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[Themeforest]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3018</guid>
+				<description><![CDATA[<p>Theme Newspaper DEALS https://themeforest.net/item/newspaper/5489609 $59 VIEW Nếu là một người tìm hiểu về nền tảng WordPress, thì chắc chắn bạn đã từng biết đến theme Newspaper. Đây là theme được cung cấp trên Themeforest với số lượt mua lên đến gần 58.000. Là một trong những theme blog, tin tức được ưa chuộng nhất thế [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/">Chia sẻ theme Newspaper 9.6 Tải Miễn Phí Update Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<div class="jeg_deals jeg_deals_float clearfix">
+                    <div class="jeg_dealsheader clearfix">
+                        <div class="dealstitle">
+                            <h3>Theme Newspaper DEALS</h3>
+                        </div>
+                    </div>
+                    <div class="jeg_storeinfo">
+                        <ul class="jeg_storelist">
+                            <li>
+                                <a href="Mua theme tại themeforest" target="_blank" class="storename">https://themeforest.net/item/newspaper/5489609</a>
+                                <div class="priceinfo">
+                                    <a href="Mua theme tại themeforest" target="_blank" class="price">$59</a>
+                                    <a href="Mua theme tại themeforest" target="_blank" class="productlink">VIEW</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><p>Nếu là một người tìm hiểu về nền tảng WordPress, thì chắc chắn bạn đã từng biết đến <strong>theme Newspaper</strong>. Đây là theme được cung cấp trên <strong>Themeforest</strong> với số lượt mua lên đến gần 58.000. Là một trong những theme blog, tin tức được ưa chuộng nhất thế giới, theme Newspaper cung cấp cho bạn những công cụ tốt nhất để bạn có thể tùy chỉnh, tạo ra giao diện phù hợp với trang của mình rất dễ dàng.</p>
+<p><img class="aligncenter wp-image-3008 size-large" title="share and download theme newspaper new update" src="http://localhost:82/demowp/wp-content/uploads/2018/08/newspaper-9-1020x570.jpg" alt="share and download theme newspaper new update" width="1020" height="570" /></p>
+<p>Gần đây các trang tin tức và blog tại Việt Nam sử dụng theme<strong> Newspaper</strong> rất nhiều, và hiện tại <strong>Tân Hồng IT</strong> cũng từng sử dụng theme này. Với những tính năng ưu việt, lại được tối ưu tốt cả <strong>UI/UX</strong> và cả tối ưu<strong> SEO</strong> rất tốt, nên mình đã quyết định sử dụng theme Newspaper này cho giao diện hiện tại.</p>
+<p><img class="aligncenter wp-image-3023 size-full" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-11_075856.png" alt="" width="543" height="710" /></p>
+<p>Nếu các bạn làm<strong> SEO</strong>, và làm tin tức hay blog cá nhân thì đây là một trong những theme nên được sử dụng nhất, tối ưu<strong> SEO</strong> rất tốt.</p>
+<p>Trong bài viết này mình xin chia sẻ cho các bạn theme <strong>Newpaper v9.6</strong> mới nhất hiện tại có trị giá 59$ trên chợ Themeforest.</p>
+<figure id="attachment_3022" aria-describedby="caption-attachment-3022" style="width: 529px" class="wp-caption aligncenter"><img class="size-full wp-image-3022" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-11_075648.png" alt="" width="529" height="264" /><figcaption id="caption-attachment-3022" class="wp-caption-text">tính năng nổi bật và những cập nhật ở v9</figcaption></figure>
+<h3><span style="text-decoration: underline; font-size: 24px; color: #ff0000;"><strong>Các tính năng nổi bật và cập nhật mới của theme Newspaper 9.6:</strong></span></h3>
+<ul>
+<li>Có 56 giao diện sẵn có cho các bạn setup. Bạn có thể xem trước demo 56 giao diện tại đây: <a href="https://demo.tagdiv.com/select_demo/select_demo_newspaper">https://demo.tagdiv.com/select_demo/select_demo_newspaper</a></li>
+<li>Sử dụng sidebar cố định, rất phù hợp với những blog sở hữu Adsense.</li>
+<li>Newspaper có sẵn plugin AMP cho mình để tạo giao diện AMP phù hợp cho di động cũng như tối ưu cho Google.</li>
+<li>Được update plugin Revolution Slider và Visual Composer miễn phí.</li>
+<li>Với công cụ Tagdiv Composer đã nâng cấp thêm, bạn có thể tùy biến giao diện của mình với rất nhiều blocks khác nhau.</li>
+<li>Hỗ trợ rất nhiều Widget khác nhau như Social Couter, Popular Category, Author Box, Ad Box…</li>
+<li>Hỗ trợ sẵn rất nhiều vị trị để đặt quảng cáo trên website và có thể tùy chỉnh vị trí hiển thị rất dễ dàng.</li>
+<li>Rất nhiều tùy chọn dành cho phần header và footer như sticky menu (thanh menu cố định) hay tùy chỉnh kiểu bố cục của 2 phần này.</li>
+<li>Hỗ trợ sẵn tùy chọn Translator để bạn có thể dễ dàng dịch theme của mình sang ngôn ngữ khác, chẳng hạn ngôn ngữ tiếng Việt.</li>
+<li>Hỗ trợ Lazy load, một trong những tính năng tăng tốc website.</li>
+<li>Còn rất nhìu luôn . . .</li>
+<li>Hỗ trợ rất nhiều Widget khác nhau như Social Couter, Popular Category, Author Box, Ad Box…</li>
+<li>Tương thích với WordPress 5.1</li>
+<li>Bây giờ thì đã hoàn toàn là Lazyload hình ảnh.</li>
+</ul>
+<hr />
+<h3 style="text-align: center;"><span style="text-decoration: underline; font-size: 28px;"><span style="color: #ff0000;"><strong>Download theme Newspaper 9.6</strong></span></span></h3>
+<p style="text-align: center;"><a href="https://mshare.io/file/iwiX9n" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải Theme Newpaper v9.6 mới nhất"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cogs" style="font-size:20px;color:#ffffff"></i> Tải Theme Newpaper v9.6<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Mshare</small></span></a>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1kxP7EouHMOdmIxF-NDNFzFgVIi6LYJOJ" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải Theme Newpaper v9.6 mới nhất"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cogs" style="font-size:20px;color:#ffffff"></i> Tải Theme Newpaper v9.6<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Google drive</small></span></a>
+<p><strong>Theme newspaper v9.6 này là theme gốc, tải từ Themeforest nên không lo bị dính virut, các bạn yên tâm sử dụng nhé!</strong></p>
+<h3><em><span style="text-decoration: underline;"><span style="font-size: 24px;"><strong><span style="color: #ff0000; text-decoration: underline;">Các phiên bản theme khác:</span></strong></span></span></em></h3>
+<ul>
+<li><a href="https://drive.google.com/open?id=18L4j4snGhXNpMwl6dQCSxOIX_V-lLRTH">Tải theme Newspaper 9.5</a></li>
+<li><a href="https://drive.google.com/open?id=1uzUum9sg2xzpSC32CTRKOmHrYLvfovBp">Tải theme Newspaper 9.1</a></li>
+<li><a href="https://drive.google.com/open?id=1D9rdU5v73693J8obsBLjPWBP5WXx26vZ">Tải theme Newspaper 9.0.1</a></li>
+<li><a href="https://drive.google.com/open?id=1D9rdU5v73693J8obsBLjPWBP5WXx26vZ">Tải theme Newspaper 9.0</a></li>
+</ul>
+<h3><strong>Các bạn xem hướng dẫn Active  theme Newpaper v9.6 tại đây nhé:</strong></h3>
+<ul>
+<li>Xem hướng dẫn active ở bài viết: <a href="http://localhost:82/demowp/theme-wordpress/huong-dan-activate-theme-newspaper-v9-0/"><strong>Cách Active theme Newpaper mới nhất</strong></a></li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 24pt;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3018"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">10</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<div class="jeg_review_wrap">
+                <h3 class="jeg_review_subtitle">The Review</h3>
+                <h2 class="jeg_review_title">
+                    Theme Newspaper
+                </h2>
+                <div class="jeg_reviewheader clearfix">
+                    <div class="review_score score_good">
+                    <span class="score_value">9</span>
+                    <span class="score_text">Score</span>
+                </div>
+                    <div class="desc"  style=''>
+                        <p>Là một theme WordPress blog, tin tức có lượt tải trong top các theme tải nhiều nhất trên Themeforest. Theme Newspaper được rất nhiều người ưa chuộng bởi khả năng tùy biến cao và tốc độ tải trang rất tốt.</p>
+                    </div>
+                </div>
+                <div class="jeg_reviewdetail clearfix">
+                    <div class="conspros">
+                    <h3>PROS</h3>
+                    <ul><li><i class="jegicon-check"></i> Khả năng tùy biến tốt với trình builder TD Composer</li><li><i class="jegicon-check"></i> Dễ dàng setup và cài đặt</li><li><i class="jegicon-check"></i> Theme khá nhẹ nhàng, cho tốc độ load tương đối nhanh</li><li><i class="jegicon-check"></i> Đã chính thức hỗ trợ Lazyload hình ảnh hoàn toàn</li><li><i class="jegicon-check"></i> Được cập nhật liên tục với nhiều tính năng và tùy chọn giao diện mới</li></ul>
+                </div>
+                    <div class="conspros">
+                    <h3>CONS</h3>
+                    <ul><li><i class="jegicon-cross"></i> Mức độ hỗ trợ các vị trí quảng cáo tạm được</li></ul>
+                </div>
+                </div>
+                <div class="jeg_reviewscore jeg_reviewbars clearfix" data-scoretype="point">
+                    <h3>Review Breakdown</h3>
+                    <ul><li>
+                        <strong>Dễ sử dụng</strong>
+                        <span class="reviewscore">0</span>
+                        <div class="jeg_reviewbar_wrap">
+                            <span data-width="90" class="barbg"></span>
+                        </div>
+                    </li><li>
+                        <strong>Khả năng tùy biến</strong>
+                        <span class="reviewscore">0</span>
+                        <div class="jeg_reviewbar_wrap">
+                            <span data-width="100" class="barbg"></span>
+                        </div>
+                    </li><li>
+                        <strong> Chi phí</strong>
+                        <span class="reviewscore">0</span>
+                        <div class="jeg_reviewbar_wrap">
+                            <span data-width="90" class="barbg"></span>
+                        </div>
+                    </li><li>
+                        <strong>Cập nhật</strong>
+                        <span class="reviewscore">0</span>
+                        <div class="jeg_reviewbar_wrap">
+                            <span data-width="100" class="barbg"></span>
+                        </div>
+                    </li><li>
+                        <strong> Hỗ trợ vị trí cài đặt quảng cáo</strong>
+                        <span class="reviewscore">0</span>
+                        <div class="jeg_reviewbar_wrap">
+                            <span data-width="70" class="barbg"></span>
+                        </div>
+                    </li></ul>
+                </div>
+                <div class="jeg_deals clearfix">
+                        <div class="jeg_dealsheader clearfix">
+                            <div class="dealstitle">
+                                <h3>Theme Newspaper DEALS</h3>
+                                <p>We collect information from many stores for best price available</p>
+                            </div>
+                            <div class="bestprice">
+                                <h4>Best Price</h4>
+                                <strong class="price">$59</strong>
+                            </div>
+                        </div>
+                        <div class="jeg_storeinfo">
+                            <ul class="jeg_storelist">
+                                <li>
+                                <a href="Mua theme tại themeforest" target="_blank" class="storename">
+                                    <img class='store-icon' src= alt='https://themeforest.net/item/newspaper/5489609'/> https://themeforest.net/item/newspaper/5489609
+                                </a>
+                                <div class="priceinfo">
+                                    <a href="Mua theme tại themeforest" target="_blank" class="price">$59</a>
+                                    <a href="Mua theme tại themeforest" target="_blank" class="productlink">Buy Now</a>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div><p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/">Chia sẻ theme Newspaper 9.6 Tải Miễn Phí Update Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ theme Newspaper 8.8.2 Miễn Phí</title>
+		<link>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-8-8-2-mien-phi/</link>
+				<comments>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-8-8-2-mien-phi/#respond</comments>
+				<pubDate>Sat, 11 Aug 2018 01:40:06 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Template]]></category>
+		<category><![CDATA[Theme Web]]></category>
+		<category><![CDATA[Theme Wordpress]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Newspaper]]></category>
+		<category><![CDATA[Newspaper 8.8]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[Themeforest]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3030</guid>
+				<description><![CDATA[<p>Gần đây các trang tin tức và blog tại Việt Nam sử dụng theme Newspaper rất nhiều, và hiện tại Tân Hồng IT cũng đang sử dụng theme này. Với những tính năng ưu việt, lại được tối ưu tốt cả UI/UX và cả tối ưu SEO rất tốt, nên mình đã quyết định sử [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-8-8-2-mien-phi/">Chia sẻ theme Newspaper 8.8.2 Miễn Phí</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Gần đây các trang tin tức và blog tại Việt Nam sử dụng theme Newspaper rất nhiều, và hiện tại Tân Hồng IT cũng đang sử dụng theme này. Với những tính năng ưu việt, lại được tối ưu tốt cả UI/UX và cả tối ưu SEO rất tốt, nên mình đã quyết định sử dụng theme Newspaper này cho giao diện hiện tại.</p>
+<p><img class="size-full wp-image-3032 aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-11_083538.png" alt="" width="651" height="319" /></p>
+<p>Nếu các bạn làm SEO, và làm tin tức hay blog cá nhân thì đây là một trong những theme nên được sử dụng nhất, tối ưu SEO rất tốt.</p>
+<p><span style="text-decoration: underline; color: #ff0000; font-size: 14pt;"><strong>Các tính năng nổi bật theme Newspaper 8.8.2:</strong></span></p>
+<ul>
+<li>Có rất nhiều giao diện sẵn có cho các bạn setup. Bạn có thể xem trước demo giao diện tại đây: <a href="https://demo.tagdiv.com/select_demo/select_demo_newspaper">https://demo.tagdiv.com/select_demo/select_demo_newspaper</a></li>
+<li>Hỗ trợ rất nhiều Widget khác nhau như Social Couter, Popular Category, Author Box, Ad Box…</li>
+<li>Hỗ trợ sẵn rất nhiều vị trị để đặt quảng cáo trên website và có thể tùy chỉnh vị trí hiển thị rất dễ dàng.</li>
+<li>Rất nhiều tùy chọn dành cho phần header và footer như sticky menu (thanh menu cố định) hay tùy chỉnh kiểu bố cục của 2 phần này.</li>
+<li>Hỗ trợ sẵn tùy chọn Translator để bạn có thể dễ dàng dịch theme của mình sang ngôn ngữ khác, chẳng hạn ngôn ngữ tiếng Việt.</li>
+<li>Hỗ trợ Lazy load, một trong những tính năng tăng tốc website.</li>
+<li>Thêm tính tăng tạo template riêng bằng Could Template.</li>
+<li>Còn rất nhìu luôn . . .</li>
+</ul>
+<p><img class="aligncenter wp-image-3023 size-full" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-11_075856.png" alt="" width="543" height="710" /></p>
+<p><span style="font-size: 18pt;"><strong>Và Giờ thì tải về thôi nào!</strong></span></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1fWU2JPe_IQEzeHL13c2ESjVsOuk8LSRY" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải Theme Newpaper v8.8.2 mới nhất"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cogs" style="font-size:20px;color:#ffffff"></i> Tải Theme Newpaper v8.8.2<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Googledrive</small></span></a>
+<p>Đây là theme gốc không lo bị dính virut nên các bạn yên tâm sử dụng nhé!</p>
+<p>Xem Thêm:</p>
+<ul>
+<li><a href="http://localhost:82/demowp/theme-wordpress/chia-se-theme-newspaper-moi-nhat-tai-mien-phi-hoan-toan/">Chia sẻ theme Newpaper v9.0 mới nhất.</a></li>
+<li><a href="http://localhost:82/demowp/theme-wordpress/huong-dan-activate-theme-newspaper-v9-0/">Hướng dẫn active theme Newpaper.</a></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 24pt; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3030"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-8-8-2-mien-phi/">Chia sẻ theme Newspaper 8.8.2 Miễn Phí</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/tai-lieu-web/chia-se-theme-newspaper-8-8-2-mien-phi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Khóa xây dựng một website bảo mật cho WordPress</title>
+		<link>http://localhost:82/demowp/tai-lieu-ebook/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/</link>
+				<comments>http://localhost:82/demowp/tai-lieu-ebook/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/#respond</comments>
+				<pubDate>Thu, 08 Mar 2018 12:34:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Đồ Họa]]></category>
+		<category><![CDATA[Tài Liệu Mạng]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/03/08/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/</guid>
+				<description><![CDATA[<p>Với Khóa Học Xây dựng một Website bảo mật cho WordPress của tác giả Jeff Starr thì việc bảo mật Website của bạn sẽ được Tốt hơn và Người dùng sẽ đến nhiều hơn. Để trang web WordPress của bạn không có tính bảo mật sẽ khiến bạn, người dùng và dữ liệu của bạn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-ebook/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/">Khóa xây dựng một website bảo mật cho WordPress</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Với Khóa Học Xây dựng một Website bảo mật cho WordPress của tác giả Jeff Starr thì việc bảo mật Website của bạn sẽ được Tốt hơn và Người dùng sẽ đến nhiều hơn.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-mNxsj6-q3H0/WqEoyhwkmgI/AAAAAAAAFQo/WwGBnWO7LII4y9HpAc4jKO09b-SGLwOggCLcBGAs/s1600/OctSRvx.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-mNxsj6-q3H0/WqEoyhwkmgI/AAAAAAAAFQo/WwGBnWO7LII4y9HpAc4jKO09b-SGLwOggCLcBGAs/s640/OctSRvx.jpg" width="640" height="340" border="0" data-original-height="800" data-original-width="1500" /></span></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Để trang web WordPress của bạn không có tính bảo mật sẽ khiến bạn, người dùng và dữ liệu của bạn dễ bị tấn công. May mắn thay, với một số cấu hình trang cơ bản, cập nhật mã và các plugin miễn phí, bạn có thể tạo trang web WordPress hiện có hoặc mới hoàn toàn an toàn hơn. Thêm vào đó, khám phá các kỹ thuật bảo mật tiên tiến của WordPress để theo dõi hoạt động của người dùng, triển khai tường lửa, ngăn chặn thư rác và chặn các chương trình và tìm hiểu các phương pháp hay nhất để báo cáo các lỗ hổng của WordPress và kiểm tra trang web của bạn.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<p>&nbsp;</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-i2kbhEPIqhE/WqErqbFyyEI/AAAAAAAAFQ4/YidMBJCMm_IskbJuZd-F1wxmWrU-q6P-gCLcBGAs/s1600/rL1eSpP.png"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-i2kbhEPIqhE/WqErqbFyyEI/AAAAAAAAFQ4/YidMBJCMm_IskbJuZd-F1wxmWrU-q6P-gCLcBGAs/s640/rL1eSpP.png" width="640" height="340" border="0" data-original-height="855" data-original-width="1600" /></span></a></div>
+<div style="clear: both; text-align: center;"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-M93xPwu0o7Q/WqAP6i5CSlI/AAAAAAAAFNA/iTcYE2jJbTEQItB9rjpsA5fDhbV8Fc1BQCPcBGAYYCw/s1600/Download.png"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-M93xPwu0o7Q/WqAP6i5CSlI/AAAAAAAAFNA/iTcYE2jJbTEQItB9rjpsA5fDhbV8Fc1BQCPcBGAYYCw/s320/Download.png" width="320" height="71" border="0" data-original-height="357" data-original-width="1600" /></span></a></div>
+<div style="clear: both; text-align: center;"><span style="font-size: large;">link download: <a style="background-color: #ffd966;" href="https://drive.google.com/open?id=1qFMCp1OMsfql7Kxg9Z01ghvcEmXOjMsy" target="_blank" rel="noopener noreferrer">Xây dựng một website bảo mật cho WordPress</a></span></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><b style="background-color: white; color: #2e2e2e; font-family: 'Open Sans', sans-serif; outline: 0px; transition: all 0s ease;"><span style="color: red; margin: 0px; outline: 0px; padding: 0px; transition: all 0s ease;"><span style="font-size: x-large;">Chúc các bạn có được những tài liệu bổ ích</span></span></b></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="152"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 0px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <span class="kksr-muted"></span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/tai-lieu-ebook/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/">Khóa xây dựng một website bảo mật cho WordPress</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/tai-lieu-ebook/khoa-xay-dung-mot-website-bao-mat-cho-wordpress/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

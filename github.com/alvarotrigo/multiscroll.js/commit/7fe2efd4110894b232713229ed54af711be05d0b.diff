@@ -1,0 +1,43 @@
+diff --git a/bower.json b/bower.json
+index 6aa3b48..b93602b 100644
+--- a/bower.json
++++ b/bower.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "multiscroll.js",
+-  "version": "0.1.5",
++  "version": "0.1.6",
+   "homepage": "http://alvarotrigo.com/multiScroll/",
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"
+@@ -31,7 +31,7 @@
+     "examples"
+   ],
+   "dependencies": {
+-      "jquery": "1.x",
++      "jquery": "^1.x",
+       "jquery.ui": "latest"
+     }
+ }
+diff --git a/jquery.multiscroll.js b/jquery.multiscroll.js
+index 97d8d79..a4f3051 100644
+--- a/jquery.multiscroll.js
++++ b/jquery.multiscroll.js
+@@ -1,5 +1,5 @@
+ /**
+- * multiscroll.js 0.1.5 Beta
++ * multiscroll.js 0.1.6 Beta
+  * https://github.com/alvarotrigo/multiscroll.js
+  * MIT licensed
+  *
+diff --git a/jquery.multiscroll.min.js b/jquery.multiscroll.min.js
+index 774025f..309e852 100644
+--- a/jquery.multiscroll.min.js
++++ b/jquery.multiscroll.min.js
+@@ -1,5 +1,5 @@
+ /**
+- * multiscroll.js 0.1.5 Beta
++ * multiscroll.js 0.1.6 Beta
+  * https://github.com/alvarotrigo/multiscroll.js
+  * MIT licensed
+  *

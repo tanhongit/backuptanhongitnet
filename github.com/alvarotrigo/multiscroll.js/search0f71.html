@@ -1,0 +1,1420 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from github.com/alvarotrigo/multiscroll.js/search?l=css&type=Issues by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 04:21:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-ZUjVod2EvYMDbGqRSyW0rpfgBq3i+gnR/4PfrzLsy5f20oIcRfgFQFVKgi3Ztp917bP1K/kdP5q8+nAlJ3+cFA==" rel="stylesheet" href="../../../github.githubassets.com/assets/frameworks-6548d5a1dd84bd83036c6a914b25b4ae.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-0apm5h9SeiFvZrJ0BaPTNTzOkspSjFSFjXCzjZXuaboPWLUxvVT8mHrK/ASlS9tGw+Zz3KGhgeH22hhMesL0tA==" rel="stylesheet" href="../../../github.githubassets.com/assets/site-d1aa66e61f527a216f66b27405a3d335.css" />
+    <link crossorigin="anonymous" media="all" integrity="sha512-aX4OkLpzulpadvOncEEPpJZnQyeKNm2npzJowbL5JxptkoZXNPPy61R059xmEa3YyVF4Y4YXB6g+5o08uvdWpA==" rel="stylesheet" href="../../../github.githubassets.com/assets/github-697e0e90ba73ba5a5a76f3a770410fa4.css" />
+    
+    
+    
+    
+
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Search ·  · GitHub</title>
+    <meta name="description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js">
+    <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="../../fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    <meta name="twitter:image:src" content="https://avatars3.githubusercontent.com/u/1706326?s=400&amp;v=4" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="alvarotrigo/multiscroll.json" /><meta name="twitter:description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js" />
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/1706326?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="alvarotrigo/multiscroll.json" /><meta property="og:url" content="../multiscroll.html" /><meta property="og:description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js" />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  
+  
+
+  <meta name="request-id" content="A264:2FB6:72AE8:A0A7B:5E542DBA" data-pjax-transient="true" /><meta name="html-safe-nonce" content="788323bb112ab6f5856d1f2d243672cb2345b947" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHA6Ly9naXRodWIuY29tL2FsdmFyb3RyaWdvL211bHRpc2Nyb2xsLmpzL3NlYXJjaD9sPWNzcyIsInJlcXVlc3RfaWQiOiJBMjY0OjJGQjY6NzJBRTg6QTBBN0I6NUU1NDJEQkEiLCJ2aXNpdG9yX2lkIjoiMjgzODU4ODM0OTAxMDQwNjgxMCIsInJlZ2lvbl9lZGdlIjoiYXAtc291dGhlYXN0LTEiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="33955172fe4e27820827deb375b0961c6d61e11e2f493950106c5e4c9b4722e9" data-pjax-transient="true" />
+
+
+
+  <meta name="github-keyboard-shortcuts" content="repository" data-pjax-transient="true" />
+
+  
+
+  <meta name="selected-link" value="code_search" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id" />
+<meta name="analytics-location-query-strip" content="true" data-pjax-transient="true" /><meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/repository_search/index" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+
+
+    <meta name="enabled-features" content="MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,RELATED_ISSUES">
+
+  <meta http-equiv="x-pjax-version" content="8310d593c1cc38b86be83242de7e6f3f">
+  
+
+      <meta name="analytics-param-rename" content="q:ga-q" data-pjax-transient>
+  <link href="commits/master.atom" rel="alternate" title="Recent Commits to multiscroll.js:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/alvarotrigo/multiscroll.js git https://github.com/alvarotrigo/multiscroll.js.git">
+
+  <meta name="octolytics-dimension-user_id" content="1706326" /><meta name="octolytics-dimension-user_login" content="alvarotrigo" /><meta name="octolytics-dimension-repository_id" content="19379248" /><meta name="octolytics-dimension-repository_nwo" content="alvarotrigo/multiscroll.json" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="19379248" /><meta name="octolytics-dimension-repository_network_root_nwo" content="alvarotrigo/multiscroll.json" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <link rel="manifest" href="../../manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production page-responsive">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+      <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+
+    
+    
+
+
+
+        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2" role="banner">
+  <div class="container-lg d-lg-flex flex-items-center p-responsive">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+
+          <div class="d-lg-none css-truncate css-truncate-target width-fit p-2">
+            
+              <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+    <a class="Header-link" href="https://github.com/alvarotrigo">alvarotrigo</a>
+    /
+    <a class="Header-link" href="../multiscroll.html">multiscroll.js</a>
+
+
+          </div>
+
+        <div class="d-flex flex-items-center">
+            <a href="https://github.com/join?source=header-repo"
+              class="d-inline-block d-lg-none f5 text-white no-underline border border-gray-dark rounded-2 px-2 py-1 mr-3 mr-sm-5"
+              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="1f5746137e531b2f4e7cf850b01b990511327f32bb57e3b9066784f880831ace"
+              data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">
+              Sign&nbsp;up
+            </a>
+
+          <button class="btn-link d-lg-none mt-1 js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <svg height="24" class="octicon octicon-three-bars text-white" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+          </button>
+        </div>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out position-fixed top-0 right-0 bottom-0 height-fit position-lg-relative d-lg-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-flex d-lg-none flex-justify-end border-bottom bg-gray-light p-3">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0 px-3 px-lg-0 mb-5 mb-lg-0" aria-label="Global">
+          <ul class="d-lg-flex list-style-none">
+              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0 pb-4 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
+                    <a href="../../features.html" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="../../features/code-review/index.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="../../features/project-management/index.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="../../features/integrations.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="../../features/actions.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a></li>
+                          <li class="edge-item-fix"><a href="../../features/packages.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Packages">Packages</a></li>
+                      <li class="edge-item-fix"><a href="../../features/security.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Security">Security</a></li>
+                      <li class="edge-item-fix"><a href="../../features.html#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="../../features.html#hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/customer-stories" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="../../security.html" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class="border-bottom border-lg-bottom-0 mr-0 mr-lg-3">
+                <a href="../../enterprise.html" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a>
+              </li>
+
+              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0 pb-4 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../explore.html" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Explore">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2 border-lg-top pt-lg-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../topics.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                        <li class="edge-item-fix"><a href="../../collections.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="../../trending.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2 border-lg-top pt-lg-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="../../events.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class="border-bottom border-lg-bottom-0 mr-0 mr-lg-3">
+                <a href="../../marketplace.html" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+
+              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
+                    <a href="../../pricing.html" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../pricing.html#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare plans">Compare plans</a></li>
+                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Contact Sales">Contact Sales</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="../../nonprofit.html" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover"  data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-lg-flex flex-items-center px-3 px-lg-0 text-center text-lg-left">
+          <div class="d-lg-flex mb-3 mb-lg-0">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="19379248" data-scoped-search-url="/alvarotrigo/multiscroll.js/search" data-unscoped-search-url="/search" action="https://github.com/alvarotrigo/multiscroll.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations"
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" value="tYsG8BROidnjYJAXyojfIx9Z0xkk0LSUsvD3dEzymaXJGnwsFAgvxeQ4n8RLXHLMRPR930FbJHkv3LcjuCQqVg==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a href="https://github.com/login?return_to=%2Falvarotrigo%2Fmultiscroll.js%2Fsearch%3Fl%3Dcss%26type%3DIssues"
+          class="HeaderMenu-link no-underline mr-3"
+          data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="591972231ac58c83b443161662b4ef5ad1280656a13ab62e6f5053f3045f7f66"
+          data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
+          Sign&nbsp;in
+        </a>
+          <a href="../../join3940.html?source=header-repo&amp;source_repo=alvarotrigo%2Fmultiscroll.js"
+            class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1"
+            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="591972231ac58c83b443161662b4ef5ad1280656a13ab62e6f5053f3045f7f66"
+            data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">
+            Sign&nbsp;up
+          </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+    <div id="js-flash-container">
+
+</div>
+
+
+      
+
+  <include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf"></include-fragment>
+
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf"></include-fragment>
+
+
+<div class="container-lg clearfix new-discussion-timeline  p-0">
+  <div class="repository-content ">
+
+    
+    
+      <div class="container-lg px-md-2 mt-lg-4 clearfix">
+
+    <div class="col-12 px-2 py-2 py-md-3 d-lg-none d-flex">
+      <div class="d-flex flex-auto">
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form flex-auto" action="https://github.com/alvarotrigo/multiscroll.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <input
+            aria-label="Search GitHub"
+            autocapitalize="off"
+            autocomplete="off"
+            autofocus
+            class="form-control input-block"
+            name="q"
+            placeholder="Search GitHub"
+            spellcheck="false"
+            type="text"
+            value=""
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type">
+        </div>
+        <button class="btn ml-2 d-none d-md-block" type="submit">Search</button>
+</form>    </div>
+
+    <div class="col-12 col-md-3 float-left px-md-2">
+      <nav class="menu border d-none d-md-block" data-pjax>
+          <a class="menu-item" href="search957b.html?l=css&amp;type=Code">Code<include-fragment src="search/count957b.html?l=css&amp;type=Code"></include-fragment></a>
+          <a class="menu-item" href="searchd1ab.html?l=css&amp;type=Commits">Commits<span class="ml-1 mt-1 js-codesearch-count Counter" data-search-type="Commits">0</span></a>
+          <a class="menu-item selected" href="search0f71.html?l=css&amp;type=Issues">Issues<span class="ml-1 mt-1 js-codesearch-count Counter Counter--gray" data-search-type="Issues">118</span></a>
+          
+          <a class="menu-item" href="search50e4.html?l=css&amp;type=RegistryPackages">Packages<span class="ml-1 mt-1 js-codesearch-count Counter" data-search-type="RegistryPackages">0</span></a>
+          <a class="menu-item" href="search4f6b.html?l=css&amp;type=Wikis">Wikis<include-fragment src="search/count4f6b.html?l=css&amp;type=Wikis"></include-fragment></a>
+      </nav>
+
+      <nav class="UnderlineNav UnderlineNav--full d-md-none mb-2 border-top" data-pjax>
+        <div class="UnderlineNav-container">
+          <div class="UnderlineNav-body js-codesearch-nav overflow-auto">
+              <a class="UnderlineNav-item flex-shrink-0" href="search957b.html?l=css&amp;type=Code">Code<span class="d-none js-codesearch-deferred-count" data-search-type="Code"></span></a>
+              <a class="UnderlineNav-item flex-shrink-0" href="searchd1ab.html?l=css&amp;type=Commits">Commits<span class="ml-1 mt-1 js-codesearch-count Counter" data-search-type="Commits">0</span></a>
+              <a class="UnderlineNav-item flex-shrink-0 selected" href="search0f71.html?l=css&amp;type=Issues">Issues<span class="ml-1 mt-1 js-codesearch-count Counter Counter--gray" data-search-type="Issues">118</span></a>
+              
+              <a class="UnderlineNav-item flex-shrink-0" href="search50e4.html?l=css&amp;type=RegistryPackages">Packages<span class="ml-1 mt-1 js-codesearch-count Counter" data-search-type="RegistryPackages">0</span></a>
+                <a class="UnderlineNav-item flex-shrink-0" href="search4f6b.html?l=css&amp;type=Wikis">Wikis<span class="d-none js-codesearch-deferred-count" data-search-type="Wikis"></span></a>
+          </div>
+        </div>
+      </nav>
+
+      
+  <div class="border rounded-1 p-3 mb-3 d-none d-md-block">
+    <h2 class="f5 mb-2">
+      States
+    </h2>
+    <ul class="filter-list small" data-pjax>
+      <li>
+          <span class="bar" style="width: 79%;"></span>
+
+          <a class="filter-item" href="search51be.html?l=css&amp;state=closed&amp;type=Issues">
+            <span class="count">93</span>
+            Closed
+</a>      </li>
+      <li>
+          <span class="bar" style="width: 21%;"></span>
+
+          <a class="filter-item" href="search9dc4.html?l=css&amp;state=open&amp;type=Issues">
+            <span class="count">25</span>
+            Open
+</a>      </li>
+  </ul>
+  </div>
+
+  <div class="px-2 pt-2 d-flex d-md-none flex-items-center">
+    <label for="codesearch_select_state" class="col-3 text-small px-2">State</label>
+    <select id="codesearch_select_state" class="col-9 form-select mr-2" data-pjax>
+      <option
+        value="/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues"
+        selected
+      >Any</option>
+        <option
+          value="/alvarotrigo/multiscroll.js/search?l=css&amp;state=closed&amp;type=Issues"
+          
+        >Closed</option>
+        <option
+          value="/alvarotrigo/multiscroll.js/search?l=css&amp;state=open&amp;type=Issues"
+          
+        >Open</option>
+    </select>
+  </div>
+
+
+
+
+<!-- Put sort options in filter area on small screens  -->
+  <div class="px-2 pt-2 d-flex d-md-none flex-items-center">
+    <label for="codesearch_sort_issues" class="col-3 text-small px-2">Sort</label>
+    <select id="codesearch_sort_issues" class="col-9 form-select mr-2" data-pjax>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=desc&amp;s=&amp;type=Issues"
+            selected
+          >Best match</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=desc&amp;s=comments&amp;type=Issues"
+            
+          >Most commented</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=asc&amp;s=comments&amp;type=Issues"
+            
+          >Least commented</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=desc&amp;s=created&amp;type=Issues"
+            
+          >Newest</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=asc&amp;s=created&amp;type=Issues"
+            
+          >Oldest</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=desc&amp;s=updated&amp;type=Issues"
+            
+          >Recently updated</option>
+          <option
+            value="/alvarotrigo/multiscroll.js/search?l=css&amp;o=asc&amp;s=updated&amp;type=Issues"
+            
+          >Least recently updated</option>
+    </select>
+  </div>
+
+
+      <div class="mt-3 d-none d-md-block">
+        <a href="https://github.com/search/advanced?l=CSS&amp;r=alvarotrigo%2Fmultiscroll.js&amp;type=Issues" class="f6">Advanced search</a>
+        <details class="details-reset details-overlay details-overlay-dark d-inline-block">
+          <summary class="btn-link f6 ml-3">Cheat sheet</summary>
+          <details-dialog class="anim-fade-in fast Box Box--overlay Box-overlay--wide d-flex flex-column">
+  <div class="Box-header">
+    <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    <h3 class="Box-title">Search cheat sheet</h3>
+  </div>
+
+  <div class="Box-body overflow-auto markdown-body">
+    <p>GitHub’s search supports a variety of different operations. Here’s a quick cheat sheet for some of the common searches.</p>
+    <p>For more information, visit our <a href="https://help.github.com/articles/about-searching-on-github/">search help section</a>.</p>
+
+    <h2>Basic search</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>This search</th>
+          <th>Finds repositories with…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cat stars:&gt;100</td>
+          <td>Find cat repositories with greater than 100 stars.</td>
+        </tr>
+        <tr>
+          <td>user:defunkt</td>
+          <td>Get all repositories from the user defunkt.</td>
+        </tr>
+        <tr>
+          <td>tom location:"San Francisco, CA"</td>
+          <td>Find all tom users in "San Francisco, CA".</td>
+        </tr>
+        <tr>
+          <td>join extension:coffee</td>
+          <td>Find all instances of join in code with coffee extension.</td>
+        </tr>
+        <tr>
+          <td>NOT cat</td>
+          <td>Excludes all results containing cat.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Repository search
+      <a href="https://help.github.com/articles/searching-repositories"><svg aria-label="Help" class="octicon octicon-link-external" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg></a>
+    </h2>
+    <p>Repository search looks through the projects you have access to on GitHub. You can also filter the results:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>This search</th>
+          <th>Finds repositories with…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cat stars:&gt;100</td>
+          <td>Find cat repositories with greater than 100 stars.</td>
+        </tr>
+        <tr>
+          <td>user:defunkt</td>
+          <td>Get all repositories from the user defunkt.</td>
+        </tr>
+        <tr>
+          <td>pugs pushed:&gt;2013-01-28</td>
+          <td>Pugs repositories pushed to since Jan 28, 2013.</td>
+        </tr>
+        <tr>
+          <td>node.js forks:&lt;200</td>
+          <td>Find all node.js repositories with less than 200 forks.</td>
+        </tr>
+        <tr>
+          <td>jquery size:1024..4089</td>
+          <td>Find jquery repositories between the sizes 1024 and 4089 kB.</td>
+        </tr>
+        <tr>
+          <td>gitx fork:true</td>
+          <td>Repository search includes forks of gitx.</td>
+        </tr>
+        <tr>
+          <td>gitx fork:only</td>
+          <td>Repository search returns only forks of gitx.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Code search
+      <a href="https://help.github.com/articles/searching-code"><svg aria-label="Help" class="octicon octicon-link-external" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg></a>
+    </h2>
+    <p>Code search looks through the files hosted on GitHub. You can also filter the results:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>This search</th>
+          <th>Finds repositories with…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>install repo:charles/privaterepo</td>
+          <td>Find all instances of install in code from the repository charles/privaterepo.</td>
+        </tr>
+        <tr>
+          <td>shogun user:heroku</td>
+          <td>Find references to shogun from all public heroku repositories.</td>
+        </tr>
+        <tr>
+          <td>join extension:coffee</td>
+          <td>Find all instances of join in code with coffee extension.</td>
+        </tr>
+        <tr>
+          <td>system size:&gt;1000</td>
+          <td>Find all instances of system in code of file size greater than 1000kbs.</td>
+        </tr>
+        <tr>
+          <td>examples path:/docs/</td>
+          <td>Find all examples in the path /docs/.</td>
+        </tr>
+        <tr>
+          <td>replace fork:true</td>
+          <td>Search replace in the source code of forks.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Issue search
+      <a href="https://help.github.com/articles/searching-issues"><svg aria-label="Help" class="octicon octicon-link-external" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg></a>
+    </h2>
+    <p>Issue search looks through issues and pull requests on GitHub. You can also filter the results:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>This search</th>
+          <th>Finds issues…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>encoding user:heroku</td>
+          <td>Encoding issues across the Heroku organization.</td>
+        </tr>
+        <tr>
+          <td>cat is:open</td>
+          <td>Find cat issues that are open.</td>
+        </tr>
+        <tr>
+          <td>strange comments:&gt;42</td>
+          <td>Issues with more than 42 comments.</td>
+        </tr>
+        <tr>
+          <td>hard label:bug</td>
+          <td>Hard issues labeled as a bug.</td>
+        </tr>
+        <tr>
+          <td>author:mojombo</td>
+          <td>All issues authored by mojombo.</td>
+        </tr>
+        <tr>
+          <td>mentions:tpope</td>
+          <td>All issues mentioning tpope.</td>
+        </tr>
+        <tr>
+          <td>assignee:rtomayko</td>
+          <td>All issues assigned to rtomayko.</td>
+        </tr>
+        <tr>
+          <td>exception created:&gt;2012-12-31</td>
+          <td>Created since the beginning of 2013.</td>
+        </tr>
+        <tr>
+          <td>exception updated:&lt;2013-01-01</td>
+          <td>Last updated before 2013.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>User search
+      <a href="https://help.github.com/articles/searching-users"><svg aria-label="Help" class="octicon octicon-link-external" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"/></svg></a>
+    </h2>
+    <p>User search finds users with an account on GitHub. You can also filter the results:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>This search</th>
+          <th>Finds repositories with…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fullname:"Linus Torvalds"</td>
+          <td>Find users with the full name "Linus Torvalds".</td>
+        </tr>
+        <tr>
+          <td>tom location:"San Francisco, CA"</td>
+          <td>Find all tom users in "San Francisco, CA".</td>
+        </tr>
+        <tr>
+          <td>chris followers:100..200</td>
+          <td>Find all chris users with followers between 100 and 200.</td>
+        </tr>
+        <tr>
+          <td>ryan repos:&gt;10</td>
+          <td>Find all ryan users with more than 10 repositories.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</details-dialog>
+
+        </details>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-9 float-left px-2 pt-3 pt-md-0 codesearch-results">
+      <div class="px-2">
+
+
+        
+  <div class="d-flex flex-column flex-md-row flex-justify-between border-bottom pb-3 position-relative">
+    <h3>
+    118 issues
+
+    in <a href="../multiscroll.html">alvarotrigo/multiscroll.js</a>
+
+
+</h3>
+
+      <details class="d-none d-md-block mt-2 mt-sm-0 details-reset details-overlay select-menu">
+        <summary class="btn btn-sm select-menu-button">
+          <i>Sort:</i>
+          <span data-menu-button>Best match</span>
+        </summary>
+        <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" aria-label="Sort options">
+          <div class="select-menu-header" tabindex="-1">
+            <span class="select-menu-title">Sort options</span>
+          </div>
+          <div class="select-menu-list">
+                <a class="select-menu-item" role="menuitemradio" aria-checked="true" data-pjax="true" data-pjax-preserve-scroll="true" href="searchec1b.html?l=css&amp;o=desc&amp;s=&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Best match</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="search5a21.html?l=css&amp;o=desc&amp;s=comments&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Most commented</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="search29f2.html?l=css&amp;o=asc&amp;s=comments&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Least commented</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="search086b.html?l=css&amp;o=desc&amp;s=created&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Newest</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="search3e8e.html?l=css&amp;o=asc&amp;s=created&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Oldest</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="search351d.html?l=css&amp;o=desc&amp;s=updated&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Recently updated</span>
+</a>                <a class="select-menu-item" role="menuitemradio" aria-checked="false" data-pjax="true" data-pjax-preserve-scroll="true" href="searchefd8.html?l=css&amp;o=asc&amp;s=updated&amp;type=Issues">
+                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+                  <span class="select-menu-item-text" data-menu-button-text>Least recently updated</span>
+</a>          </div>
+        </details-menu>
+      </details>
+  </div>
+
+        
+  <div id="issue_search_results">
+    <div class="issue-list">
+      <div >
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-opened open flex-shrink-0" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 011.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="on load scrollToAnchor is not enough using Firefox if page is already loaded" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:1,&quot;click_id&quot;:531899299,&quot;result&quot;:{&quot;id&quot;:531899299,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWU1MzE4OTkyOTk=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/119&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="daa5a10008cfdfe27c4eae97188149b92cbb9f1cedace4170a61baa4be2f405c" href="issues/119.html">on load scrollToAnchor is not enough using Firefox if page is already loaded</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#119)
+        </span>
+    </div>
+
+      <p class="mb-0">It works fine on Chrome but not on Firefox.
+
+Hello,
+
+I have a case where the page is already loaded when JS is running (in jquery.multiscroll.js)
+
+ $(window).on(&#39;load&#39;, function() {
+           ...</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            bug
+          </span>
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            enhancement
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="pulse-mind" class="text-bold muted-link" href="https://github.com/pulse-mind">pulse-mind</a>
+
+        opened
+
+        <relative-time datetime="2019-12-03T10:56:21Z" class="no-wrap">Dec 3, 2019</relative-time>
+      </div>
+
+        <span class="mr-3">
+          3
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-git-pull-request merged flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="12" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="update README.md" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:2,&quot;click_id&quot;:514059343,&quot;result&quot;:{&quot;id&quot;:514059343,&quot;global_relay_id&quot;:&quot;MDExOlB1bGxSZXF1ZXN0MzMzNzM1MTcw&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/pull/118&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="26d4f2015c24d280f8ec43fc4a06f5e08af4a6f19425e7780d286a14ccd9fe5a" href="pull/118.html">update README.md</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#118)
+        </span>
+    </div>
+
+      <p class="mb-0">update docs, add method setMouseWheelScrolling
+
+closes #81
+</p>
+
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="talgautb" class="text-bold muted-link" href="https://github.com/talgautb">talgautb</a>
+
+        opened
+
+        <relative-time datetime="2019-10-29T16:35:27Z" class="no-wrap">Oct 29, 2019</relative-time>
+      </div>
+
+        <span class="mr-3">
+          1
+          comment
+        </span>
+
+        <div class="text-small text-gray d-inline mr-3">
+          <span class="text-mono">
+            alvarotrigo:master
+          </span>
+            &larr;
+          <span class="text-mono">
+            talgautb:patch-1
+          </span>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="Callbacks (onLeave) not working?" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:3,&quot;click_id&quot;:491597997,&quot;result&quot;:{&quot;id&quot;:491597997,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWU0OTE1OTc5OTc=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/117&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="4990179ceb436b8cf6408375fa5eb20938438c55b491e1e8cfc6e4d37a652f14" href="issues/117.html">Callbacks (onLeave) not working?</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#117)
+        </span>
+    </div>
+
+      <p class="mb-0">Hi Alvaro, I´m struggeling to get the callbacks working. After several tests with different files, I took your current
+master and tried to get it working with your examples. Doesn´t work there too!
+
+I ...</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            question
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="spaszwerg" class="text-bold muted-link" href="https://github.com/spaszwerg">spaszwerg</a>
+
+        opened
+
+        <relative-time datetime="2019-09-10T10:52:34Z" class="no-wrap">Sep 10, 2019</relative-time>
+      </div>
+
+        <span class="mr-3">
+          7
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="Finish content then only move to another section" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:4,&quot;click_id&quot;:414939980,&quot;result&quot;:{&quot;id&quot;:414939980,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWU0MTQ5Mzk5ODA=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/116&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d42d155e39c84b2b05cc03fd35b2dd77951a14edad78095ca2bad2c43317a9f5" href="issues/116.html">Finish content then only move to another section</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#116)
+        </span>
+    </div>
+
+      <p class="mb-0">I have a long article in the left panel in section 2, how to create the website after scroll to the end then only move
+to section 3? I tried to create an internal scroll bar but not working.
+
+untitled-1 ...</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            question
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="khookeiwai" class="text-bold muted-link" href="https://github.com/khookeiwai">khookeiwai</a>
+
+        opened
+
+        <relative-time datetime="2019-02-27T04:29:59Z" class="no-wrap">Feb 27, 2019</relative-time>
+      </div>
+
+        <span class="mr-3">
+          1
+          comment
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="scrollOverflow is not working" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:5,&quot;click_id&quot;:405969737,&quot;result&quot;:{&quot;id&quot;:405969737,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWU0MDU5Njk3Mzc=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/115&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="fea923f523089dd25f84de80be976e1186535b1c06e525d8c67894b19905131e" href="issues/115.html">scrollOverflow is not working</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#115)
+        </span>
+    </div>
+
+      <p class="mb-0">This is my demo site, and after following the example html structure, the right side overflow content is not working.
+</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            question
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="xtaaaal" class="text-bold muted-link" href="https://github.com/xtaaaal">xtaaaal</a>
+
+        opened
+
+        <relative-time datetime="2019-02-02T10:16:18Z" class="no-wrap">Feb 2, 2019</relative-time>
+      </div>
+
+        <span class="mr-3">
+          3
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="Jump to slide without cross all others" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:6,&quot;click_id&quot;:358133252,&quot;result&quot;:{&quot;id&quot;:358133252,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWUzNTgxMzMyNTI=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/114&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="939c0d1e7674c9cb5e0b03de2d77d812fe9e2afa0504cc449a5ec7aba2d62a30" href="issues/114.html">Jump to slide without cross all others</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#114)
+        </span>
+    </div>
+
+      <p class="mb-0">Hi,
+
+I would like to know if it&#39;s possible, for example, jump from first slide to last slide without cross all other sliders.
+
+Do you think it would be possible to implement?
+
+Thanks, Tiago
+</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            question
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="tiago258" class="text-bold muted-link" href="https://github.com/tiago258">tiago258</a>
+
+        opened
+
+        <relative-time datetime="2018-09-07T16:28:01Z" class="no-wrap">Sep 7, 2018</relative-time>
+      </div>
+
+        <span class="mr-3">
+          2
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-opened open flex-shrink-0" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 011.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="removeTouchHandler" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:7,&quot;click_id&quot;:357349662,&quot;result&quot;:{&quot;id&quot;:357349662,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWUzNTczNDk2NjI=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/113&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9ce6bf409631cf3ba6cfa7cbd342b6a74dde0464c473c8726ddc6421ed78f42b" href="issues/113.html">removeTouchHandler</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#113)
+        </span>
+    </div>
+
+      <p class="mb-0">Hello! tell me, please, how to use &quot;removeTouchHandler()&quot;
+</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            enhancement
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="kaa123" class="text-bold muted-link" href="https://github.com/kaa123">kaa123</a>
+
+        opened
+
+        <relative-time datetime="2018-09-05T18:26:56Z" class="no-wrap">Sep 5, 2018</relative-time>
+      </div>
+
+        <span class="mr-3">
+          2
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="windows scroll not working" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:8,&quot;click_id&quot;:351838621,&quot;result&quot;:{&quot;id&quot;:351838621,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWUzNTE4Mzg2MjE=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/112&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="e92e99b88466104ddd91ac8f30baaa8b0a741af1b3b3e63d275e6c4d3a88c0bb" href="issues/112.html">windows scroll not working</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#112)
+        </span>
+    </div>
+
+      <p class="mb-0">I&#39;m using this script for only one section not for whole page so i want access windows scroll functionality but it&#39;s not
+working when i used multiscroll.js any solution for this one
+</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            question
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="cvaraj" class="text-bold muted-link" href="https://github.com/cvaraj">cvaraj</a>
+
+        opened
+
+        <relative-time datetime="2018-08-18T17:46:36Z" class="no-wrap">Aug 18, 2018</relative-time>
+      </div>
+
+        <span class="mr-3">
+          1
+          comment
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="responsiveExpand not working on localhost" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:9,&quot;click_id&quot;:351409358,&quot;result&quot;:{&quot;id&quot;:351409358,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWUzNTE0MDkzNTg=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/111&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7a48ff16a58fc89060cc887731be1800295ab8bccf1a148638367e3722d000cb" href="issues/111.html">responsiveExpand not working on localhost</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#111)
+        </span>
+    </div>
+
+      <p class="mb-0">I bought a key for this, and it works when I run the site from the domain that I registered the key at, but it doesn&#39;t
+work when I run the site on localhost - how can I get it work on local?
+</p>
+
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="orangegloves" class="text-bold muted-link" href="https://github.com/orangegloves">orangegloves</a>
+
+        opened
+
+        <relative-time datetime="2018-08-17T00:04:36Z" class="no-wrap">Aug 17, 2018</relative-time>
+      </div>
+
+        <span class="mr-3">
+          1
+          comment
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+          
+<div class="issue-list-item d-flex py-4 hx_hit-issue
+  public" data-repository-hovercards-enabled>
+    <svg height="16" class="octicon octicon-issue-closed closed flex-shrink-0" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 012.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 008 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z"/></svg>
+    <div class="ml-1 flex-auto mt-n1">
+
+    <div class="f4 text-normal">
+      <a title="not working anymore on smartphones" data-hydro-click="{&quot;event_type&quot;:&quot;search_result.click&quot;,&quot;payload&quot;:{&quot;page_number&quot;:1,&quot;per_page&quot;:10,&quot;query&quot;:null,&quot;result_position&quot;:10,&quot;click_id&quot;:343097210,&quot;result&quot;:{&quot;id&quot;:343097210,&quot;global_relay_id&quot;:&quot;MDU6SXNzdWUzNDMwOTcyMTA=&quot;,&quot;model_name&quot;:&quot;Issue&quot;,&quot;url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/issues/110&quot;},&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/search?l=css&amp;type=Issues&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="13c7d96ec38995abe1258c5c2d0aed53cd1de92786954082ef8c70906aecb64e" href="issues/110.html">not working anymore on smartphones</a>
+        <span class="flex-shrink-0 text-gray-light">
+          (#110)
+        </span>
+    </div>
+
+      <p class="mb-0">Hello, just to warn you that the split-scroll feature is not working anymore on smartphones (tested on Chrome and
+Safari).
+
+I published a project at the end of May, and all worked fine, tested on various ...</p>
+
+      <div class="text-gray mt-0">
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            bug
+          </span>
+          <span class="d-inline-block IssueLabel bg-gray v-align-text-top">
+            fixed
+          </span>
+      </div>
+
+    <div class="d-flex text-small text-gray flex-wrap position-relative">
+      <div class="d-inline mr-3">
+        <a title="smokingweb" class="text-bold muted-link" href="https://github.com/smokingweb">smokingweb</a>
+
+        opened
+
+        <relative-time datetime="2018-07-20T12:55:47Z" class="no-wrap">Jul 20, 2018</relative-time>
+      </div>
+
+        <span class="mr-3">
+          5
+          comments
+        </span>
+
+
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+      <div class="paginate-container codesearch-pagination-container">
+    <div class="d-flex d-md-inline-block pagination" data-pjax="true"><span class="previous_page disabled">Previous</span> <em class="current" data-total-pages="12">1</em> <a rel="next" href="searchd7bb.html?l=css&amp;p=2&amp;type=Issues">2</a> <a href="search83d6.html?l=css&amp;p=3&amp;type=Issues">3</a> <a href="searchf496.html?l=css&amp;p=4&amp;type=Issues">4</a> <a href="searchaea8.html?l=css&amp;p=5&amp;type=Issues">5</a> <span class="gap">&hellip;</span> <a href="search8972.html?l=css&amp;p=11&amp;type=Issues">11</a> <a href="search4d43.html?l=css&amp;p=12&amp;type=Issues">12</a> <a class="next_page" rel="next" href="searchd7bb.html?l=css&amp;p=2&amp;type=Issues">Next</a></div>
+  </div>
+
+  </div>
+
+      </div>
+    </div>
+
+    <div class="px-3 d-block d-sm-none">
+      <a href="https://github.com/search/advanced?l=CSS" class="f6">Advanced search</a>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full p-responsive" role="contentinfo">
+  <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      <li class="mr-3 mr-lg-0">&copy; 2020 GitHub, Inc.</li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="../../security.html">Security</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3 mr-lg-0"><a href="../../pricing.html" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="../../about.html">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" async="async" integrity="sha512-VTkKwyyXYz1e8w0v/7LXDKSa7yMy1qEQofgf/5bGrUv8wpbpaZxx5S3Uc6oYrvbOe432HJdJG5qsFdM9sbP+wg==" type="application/javascript" id="js-conditional-compat" data-src="../../../github.githubassets.com/assets/compat-bootstrap-55390ac3.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-3yNijdFdVDBZQDWrBvMeD2J9gyXwI5MKUMJSWdEGP44DgS4NEPQw2TmVlDdNAWrseJO5C/sXBSTrL24DvGMDJw==" type="application/javascript" src="../../../github.githubassets.com/assets/vendor-df23628d.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-WZp98krTVri8yp2f8bpVGoTndKcChquCeXJdlvMy65oKppZPzZ52UwQQl0tO7kHoFC75L7MlBMxY3NhWju6CRg==" type="application/javascript" src="../../../github.githubassets.com/assets/frameworks-599a7df2.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-Lap1+NRBH7wIWfmCDnMs6d5Keym1I0bJd3QDvtvFy+lfSMcvPzPioITh++pTkwx/3BvvsDvTYjSlQ6pptb8cGQ==" type="application/javascript" src="../../../github.githubassets.com/assets/github-bootstrap-2daa75f8.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash flash flash-warn flash-banner" hidden
+    >
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="js-stale-session-flash-signed-in" hidden>You signed in with another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+    <span class="js-stale-session-flash-signed-out" hidden>You signed out in another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark hx_rsm" open>
+    <summary role="button" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+
+<!-- Mirrored from github.com/alvarotrigo/multiscroll.js/search?l=css&type=Issues by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 04:21:25 GMT -->
+</html>
+

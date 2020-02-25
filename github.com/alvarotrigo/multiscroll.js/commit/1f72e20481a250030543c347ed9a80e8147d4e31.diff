@@ -1,0 +1,18 @@
+diff --git a/package.json b/package.json
+index bd6fcb9..ef05a46 100644
+--- a/package.json
++++ b/package.json
+@@ -13,8 +13,12 @@
+   "keywords": [
+     "scroll",
+     "split-screen",
++    "split-layout",
++    "mousewheel",
+     "multi",
+-    "split"
++    "split",
++    "multiscroll",
++    "snap"
+   ],
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Game Design &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/game-design/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Wed, 11 Sep 2019 16:25:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Game Design &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Share code game MegamanX3 viết bằng C++</title>
+		<link>http://localhost:82/demowp/c/code-game-megamanx3-c/</link>
+				<comments>http://localhost:82/demowp/c/code-game-megamanx3-c/#respond</comments>
+				<pubDate>Wed, 20 Feb 2019 14:36:55 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Game]]></category>
+		<category><![CDATA[Giải trí]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Game Design]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Megaman]]></category>
+		<category><![CDATA[Source code]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5473</guid>
+				<description><![CDATA[<p>Trong bài viết này mình xin Share source code game MegamanX3 viết bằng C++ cho các bạn tham khảo nhé! Code game MegamanX3 viết bằng C++ được hoàn thành với tác giả Nguyễn Hồng Phúc và được tối ưu hóa để các bạn có thể tham khảo và học tập từ mã nguồn trên. API: DirectX [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/code-game-megamanx3-c/">Share code game MegamanX3 viết bằng C++</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình xin Share<strong> source code game MegamanX3</strong> viết bằng <strong>C++</strong> cho các bạn tham khảo nhé!</p>
+<p><strong>Code game MegamanX3</strong> viết bằng <strong>C++</strong> được hoàn thành với tác giả <a href="https://www.facebook.com/nguyenhongphuc1998">Nguyễn Hồng Phúc </a>và được tối ưu hóa để các bạn có thể tham khảo và học tập từ mã nguồn trên.</p>
+<figure id="attachment_6021" aria-describedby="caption-attachment-6021" style="width: 699px" class="wp-caption aligncenter"><img class="size-full wp-image-6021" src="http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C.jpg" alt="Share code game MegamanX3 viết bằng C++" width="699" height="373" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/02/Share-code-game-MegamanX3-viết-bằng-C-300x160.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /><figcaption id="caption-attachment-6021" class="wp-caption-text">Share code game MegamanX3 viết bằng C++</figcaption></figure>
+<p><strong>API: DirectX (june).</strong><br />
+<strong>Language: C++.</strong><br />
+<strong>IDE: Visual studio</strong></p>
+<h4><strong>Trò chơi MegamanX3 có ba phần chính:</strong></h4>
+<ul>
+<li>Quá trình nhập liệu: Tất cả các sự kiện từ đầu vào có thể được xử lý.</li>
+<li>Cập nhật: Cập nhật tất cả Vật thể (megaman, Vật thể ảo, kẻ thù, viên đạn, vật phẩm) &#8211; vị trí, va chạm, trạng thái.</li>
+<li>Kết xuất: Hiển thị đồ họa lên màn hình.</li>
+</ul>
+<h4><strong>List Class and Function:</strong></h4>
+<ol>
+<li><strong>Object</strong>: &#8211; The class used to inherit, contains the full attribute 1 possible object.</li>
+<li><strong>ActionObject</strong>: &#8211; All animated objects are treated as actionObject.</li>
+<li><strong>VirtualObject</strong>: &#8211; Object static as ground, wall,&#8230;</li>
+<li><strong>Megaman</strong>: &#8211; inherit from ActionObject.<br />
+&#8211; have animation state, charing, lifebar.<br />
+&#8211; Update &#8211; with virtual object. tu stand/ jump,..<br />
+&#8211; Process with Bullet: -with enemy, being hurting, and set state bullet to destroy when collision.</li>
+</ol>
+<h4><strong>Một số hình ảnh về MegamanX3</strong></h4>
+<p><img class="size-full aligncenter" src="https://imgur.com/NY4KwzD.png" width="574" height="426" /><img class="aligncenter" src="https://imgur.com/2YNCjXU.png" alt="code game MegamanX3 C++" width="418" height="393" /><img class="size-full aligncenter" src="https://imgur.com/oDmKwKe.png" width="576" height="542" /><img class="size-full aligncenter" src="https://imgur.com/CJkhR46.png" width="576" height="543" /><img class="aligncenter" src="https://imgur.com/iwpWh1k.png" alt="source game code" width="576" height="548" /></p>
+<p>Khi chơi game, để nhân vật luôn được bất tử thì bạn hãy thêm dòng code <strong><code>if (HP&lt;MEGAMAN_MAX_HP) HP =MEGAMAN_MAX_HP</code></strong> ở phần update của megaman là được.</p>
+<h4 style="text-align: center;"><span style="font-size: 24px;"><strong>Download Source Code C++ MegamanX3 </strong></span></h4>
+<p style="text-align: center;"><a href="https://github.com/UIT-Stark-Game/Game" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-code" style="font-size:21px;color:#ffffff"></i> Tải Source Code MegamanX3 tại đây</span></a>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1qiv4Mt6tZZxjTZSmZCSR7oqdPouNL39R" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-code" style="font-size:21px;color:#ffffff"></i> Tải Source Code MegamanX3 &#8211; Link dự phòng<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<p>Xem thêm:</p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-chao-mung-nam-moi-voi-hieu-ung-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Chào Mừng Năm Mới Với Hiệu Ứng Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 – Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/host-editor/" target="_blank" rel="noopener noreferrer">BlueLife Host Editor – Chỉnh Sửa File Host Trên Windows Dễ Dàng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/merry-christmas-source-code/" target="_blank" rel="noopener noreferrer">Merry Christmas Source Code – Template Code Giáng Sinh Noel Đơn Giản</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/share-code/code-web-trung-thu-dep/" target="_blank" rel="noopener noreferrer">Code Web Trung Thu Đẹp, Nhiều Hiệu Ứng</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 32px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THAM KHẢO VÀ HỌC TẬP TỐT</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5473"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/code-game-megamanx3-c/">Share code game MegamanX3 viết bằng C++</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/code-game-megamanx3-c/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download game Feeding Frenzy 1 2 3 4 Full Cá lớn nuốt cá bé hấp dẫn</title>
+		<link>http://localhost:82/demowp/games-offline/tai-game-feeding-frenzy-full/</link>
+				<comments>http://localhost:82/demowp/games-offline/tai-game-feeding-frenzy-full/#comments</comments>
+				<pubDate>Thu, 29 Nov 2018 13:37:46 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Game]]></category>
+		<category><![CDATA[games offline]]></category>
+		<category><![CDATA[Giải trí]]></category>
+		<category><![CDATA[Feeding Frenzy]]></category>
+		<category><![CDATA[Game Design]]></category>
+		<category><![CDATA[Hack Game]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=4601</guid>
+				<description><![CDATA[<p>Siêu Share chia sẻ cho các bạn bộ Game Feeding Frenzy Full 1, 2, 3, 4 hay còn gọi là game cá lớn nuốt cá bé được hãng PopCap phát triển. Game Feeding Frenzy giúp bạn khám phá thế giới đại dương rộng lớn với nhiều loài sinh vật thú vị, trên nền đồ họa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/games-offline/tai-game-feeding-frenzy-full/">Download game Feeding Frenzy 1 2 3 4 Full Cá lớn nuốt cá bé hấp dẫn</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Siêu Share chia sẻ cho các bạn bộ <strong>Game Feeding Frenzy Full 1, 2, 3, 4</strong> hay còn gọi là game<strong> cá lớn nuốt cá bé</strong> được hãng <strong>PopCap</strong> phát triển.</p>
+<p><strong>Game Feeding Frenzy</strong> giúp bạn khám phá thế giới đại dương rộng lớn với nhiều loài sinh vật thú vị, trên nền đồ họa với màu sắc tươi sáng và âm thanh nền sinh động.</p>
+<figure id="attachment_6860" aria-describedby="caption-attachment-6860" style="width: 619px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2018/11/feeding-frenzy-1-2-3-4-full.jpg"><img class="size-full wp-image-6860" src="http://localhost:82/demowp/wp-content/uploads/2018/11/feeding-frenzy-1-2-3-4-full.jpg" alt="Feeding Frenzy 1 2 3 4 Full" width="619" height="371" srcset="http://localhost:82/demowp/wp-content/uploads/2018/11/feeding-frenzy-1-2-3-4-full.jpg 619w, http://localhost:82/demowp/wp-content/uploads/2018/11/feeding-frenzy-1-2-3-4-full-300x180.jpg 300w" sizes="(max-width: 619px) 100vw, 619px" /></a><figcaption id="caption-attachment-6860" class="wp-caption-text">Feeding Frenzy 1 2 3 4 Full Cá lớn nuốt cá bé hấp dẫn</figcaption></figure>
+<p>Đây là game hấp dẫn người chơi ở nhiều độ tuổi nhờ đồ họa bắt mắt, lối chơi đơn giản và mang tính giải trí cao.</p>
+<h2><span style="text-decoration: underline;"><span style="font-size: 24px;"><strong>Tính năng chính của game Feeding Frenzy:</strong></span></span></h2>
+<ul>
+<li>Đồ họa và hiệu ứng âm thanh giống trong phim hoạt hình</li>
+<li>Dùng chuột điều khiển chú cá di chuyển</li>
+<li>Có 2 chế độ chơi và 40 cấp độ</li>
+<li>Cố gắng ngọc trai trong những vỏ sò và ngôi sao thì điểm số nhiều hơn</li>
+<li>Ăn 1 &#8220;up&#8221; được tăng thêm 1 mạng</li>
+<li>Tham gia các bàn thưởng có nàng tiên cá</li>
+</ul>
+<h2><span style="text-decoration: underline; font-size: 24px;"><strong>Yêu cầu hệ thống:</strong></span></h2>
+<ul>
+<li>RAM: 128 MB</li>
+<li>Bộ xử lý: 500MHz hoặc cao hơn</li>
+<li>DirectX 7.0</li>
+</ul>
+<p>Mục tiêu của game <strong>Feeding Frenzy</strong> là vượt qua vua cá mập. Để làm được điều này, ngoài việc ăn các sinh vật nhỏ hơn, bạn còn phải để ý để thu thập các vật phẩm như ngọc trai và ngôi sao để tích điểm và tăng sức mạnh.</p>
+<p>Tuy nhiên bạn phải hết sức chú ý để tránh ăn phải các thứ có độc chẳng hạn như quả mìn nổ, đồng thời nhanh trốn khỏi các loài cá lớn hơn, nếu không cá của bạn sẽ làm mồi cho chúng.</p>
+<p>Càng về những cấp độ cao hơn, trò chơi sẽ càng có nhiều thách thức và loại cá mới, với những nhiệm vụ liên tục được thay đổi giúp người chơi luôn có cảm giác mới mẻ, thú vị và muốn khám phá.</p>
+<p><img class="alignnone size-full" src="https://imgur.com/d61l4Jn.png" width="1169" height="660" /></p>
+<hr />
+<h2 style="text-align: center;"><strong><span style="color: #ff0000;">Download game Feeding Frenzy 1 2 3 4 Full Cá lớn nuốt cá bé</span></strong></h2>
+<h3 style="text-align: center;"><span style="font-size: 20px;">Tải về bản Feeding Frenzy 1</span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1bMgm1RtqJ0hJ9LmnjXDz94DdsSpHfrWG" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Download Feeding Frenzy 1 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<h3 style="text-align: center;"><span style="font-size: 20px;">Tải về bản Feeding Frenzy 2</span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1Vy3-U3uKhYrT4izrpGtnNXhWGv6OMbiO" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Download Feeding Frenzy 2 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<h3 style="text-align: center;"><span style="font-size: 20px;">Tải về bản Feeding Frenzy 3</span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=11NFfFUlTd_58NzkfPJqNs7qK1HctRM14" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Download Feeding Frenzy 3 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<h3 style="text-align: center;"><span style="font-size: 20px;"> Tải về bản Feeding Frenzy 4</span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1cHx1SroQfuJshr0u2uu0DTYvDalmcva3" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Download Feeding Frenzy 4 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<h2 style="text-align: center;"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/huong-dan-tai-file-phan-mem-va-cac-loai-tai-lieu-khac-tren-tanhongit-net/" target="_blank" rel="noopener noreferrer">HƯỚNG DẪN TẢI FILE</a></strong></span></h2>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/auslogics-disk-defrag-pro/" target="_blank" rel="noopener noreferrer">AusLogics Disk Defrag Pro FULL Final Phần Mềm Chống Phân Mảnh Ổ Đĩa</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/game-may-tinh/never-alone-viet-hoa/" target="_blank" rel="noopener noreferrer">Download Game Never Alone Việt Hóa (KISIMA INGITCHUNA)- TÔI KHÔNG CÔ ĐƠN</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/" target="_blank" rel="noopener noreferrer">Download Và Cách Crack Full IDM Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN CHƠI GAME VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="4601"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/games-offline/tai-game-feeding-frenzy-full/">Download game Feeding Frenzy 1 2 3 4 Full Cá lớn nuốt cá bé hấp dẫn</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/games-offline/tai-game-feeding-frenzy-full/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khóa học Game design Start from zero to hero in Photoshop &#8211; Thiết kế trò chơi</title>
+		<link>http://localhost:82/demowp/game-design/chia-se-khoa-hoc-game-design-start-from-zero-to-hero-in-photoshop-thiet-ke-tro-choi/</link>
+				<comments>http://localhost:82/demowp/game-design/chia-se-khoa-hoc-game-design-start-from-zero-to-hero-in-photoshop-thiet-ke-tro-choi/#respond</comments>
+				<pubDate>Sat, 08 Sep 2018 07:56:52 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[Game Design]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Đồ Họa]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Unity]]></category>
+
+		<guid isPermaLink="false">https://freecourse.tanhongit.net/?p=969</guid>
+				<description><![CDATA[<p>Bạn có muốn học cách thiết kế trò chơi của riêng mình không? Bạn có muốn làm việc như một nhà thiết kế hoặc một freelancer không? Trong khóa học này, bạn sẽ học cách đạt được điều đó và bạn sẽ lên cấp để trở thành một nhà thiết kế chuyên nghiệp. &#160; Tân [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/game-design/chia-se-khoa-hoc-game-design-start-from-zero-to-hero-in-photoshop-thiet-ke-tro-choi/">Chia sẻ khóa học Game design Start from zero to hero in Photoshop &#8211; Thiết kế trò chơi</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Bạn có muốn học cách thiết kế trò chơi của riêng mình không?</p>
+<p>Bạn có muốn làm việc như một nhà thiết kế hoặc một freelancer không?</p>
+<p>Trong khóa học này, bạn sẽ học cách đạt được điều đó và bạn sẽ lên cấp để trở thành một nhà thiết kế chuyên nghiệp.</p>
+<p><img class="aligncenter size-full wp-image-970" src="https://freecourse.tanhongit.net/wp-content/uploads/2018/09/2018-09-08_144545.png" alt="" width="427" height="242" /></p>
+<p>&nbsp;</p>
+<p>Tân Hồng IT Blog Xin chia sẻ khoá học<strong> Game design Start from zero to hero in Photoshop</strong></p>
+<p>Bằng cách tham gia khóa học này, bạn sẽ học các công cụ và kỹ thuật mới sẽ giúp bạn cải thiện kỹ năng của mình trong thiết kế.</p>
+<p>trong khóa học này, bạn sẽ học cách thiết kế một số trò chơi nổi tiếng và bạn sẽ học cách tạo và thiết kế trò chơi của riêng mình.</p>
+<p>&nbsp;</p>
+<p><b><u></u></b><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li>Những người muốn học thiết kế</li>
+<li>Những người muốn học Photoshop</li>
+<li>Những người muốn làm việc như nhà thiết kế đồ họa và dịch giả tự do</li>
+</ul>
+<p>&nbsp;</p>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li>Thiết kế trò chơi của riêng bạn và kiếm lợi nhuận từ đó</li>
+</ul>
+<div></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b></p>
+<ul>
+<li>Làm quen với các khái niệm cơ bản về Photoshop và tất cả các công cụ của anh ấy</li>
+</ul>
+<div></div>
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Tải Khóa Học Tại Đây</strong></span><br />
+<span style="color: #ff0000;"><b>Size: GB</b></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1HrKi4S2UTHUkn_1XgtuPAJBL4ccrt-Gh" class="su-button su-button-style-soft" style="color:#FFFFFF;background-color:#ef2d75;border-color:#c0245e;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px" target="_blank" rel="noopener noreferrer"><span style="color:#FFFFFF;padding:9px 30px;font-size:22px;line-height:33px;border-color:#f46c9f;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-graduation-cap" style="font-size:22px;color:#FFFFFF"></i> Tải Khóa học tại đây<small style="padding-bottom:9px;color:#FFFFFF">Xem và Tải miễn phí </small></span></a>
+<h3>Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại: <a href="https://www.udemy.com/game-design-start-from-zero-to-hero-in-photoshop/">https://www.udemy.com/game-design-start-from-zero-to&#8230;</a></h3>
+<h3>Giá $89.99 ≈ 2.080.555 VNĐ</h3>
+<p><img class="size-full aligncenter" src="https://imgur.com/Dsc6w4b.png" width="1024" height="626" /></p>
+<div>
+<div class="separator" style="clear: both; text-align: left;"></div>
+</div>
+<div>
+<p>Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. Hãy cùng là những người văn minh.</p>
+<p>Các bạn hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div style="padding-left: 60px;"></div>
+<div>
+<div style="text-align: right;">Source: <a href="http://udemy.com/">Udemy.com</a></div>
+</div>
+<div></div>
+<div style="text-align: center;">
+<h2 style="text-align: center;"><span style="color: #ff0000;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="hosted_button_id" type="hidden" value="JHZ2D98HBKL7Y" />Xin Ủng Hộ Giúp Mua Thêm Những khóa học mới cũng như tiếp tục Duy Trì Và Phát Triển Website <strong>Free Course For You &#8211; Tân Hồng IT</strong><br />
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" /></form>
+</div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="969"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/game-design/chia-se-khoa-hoc-game-design-start-from-zero-to-hero-in-photoshop-thiet-ke-tro-choi/">Chia sẻ khóa học Game design Start from zero to hero in Photoshop &#8211; Thiết kế trò chơi</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/game-design/chia-se-khoa-hoc-game-design-start-from-zero-to-hero-in-photoshop-thiet-ke-tro-choi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

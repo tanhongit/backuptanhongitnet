@@ -1,0 +1,2859 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&author=alvarotrigo by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 04:21:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-ZUjVod2EvYMDbGqRSyW0rpfgBq3i+gnR/4PfrzLsy5f20oIcRfgFQFVKgi3Ztp917bP1K/kdP5q8+nAlJ3+cFA==" rel="stylesheet" href="../../../github.githubassets.com/assets/frameworks-6548d5a1dd84bd83036c6a914b25b4ae.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-0apm5h9SeiFvZrJ0BaPTNTzOkspSjFSFjXCzjZXuaboPWLUxvVT8mHrK/ASlS9tGw+Zz3KGhgeH22hhMesL0tA==" rel="stylesheet" href="../../../github.githubassets.com/assets/site-d1aa66e61f527a216f66b27405a3d335.css" />
+    <link crossorigin="anonymous" media="all" integrity="sha512-aX4OkLpzulpadvOncEEPpJZnQyeKNm2npzJowbL5JxptkoZXNPPy61R059xmEa3YyVF4Y4YXB6g+5o08uvdWpA==" rel="stylesheet" href="../../../github.githubassets.com/assets/github-697e0e90ba73ba5a5a76f3a770410fa4.css" />
+    
+    
+    
+    
+
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Commits · alvarotrigo/multiscroll.js · GitHub</title>
+    <meta name="description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js">
+    <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="../../fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    <meta name="twitter:image:src" content="https://avatars3.githubusercontent.com/u/1706326?s=400&amp;v=4" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="alvarotrigo/multiscroll.json" /><meta name="twitter:description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js" />
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/1706326?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="alvarotrigo/multiscroll.json" /><meta property="og:url" content="../multiscroll.html" /><meta property="og:description" content="multiscroll plugin by Alvaro Trigo. Create scrolling split websites. http://alvarotrigo.com/multiScroll/ - alvarotrigo/multiscroll.js" />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  
+  
+
+  <meta name="request-id" content="CE8B:2FB9:4F5CE:6FD3A:5E542DC7" data-pjax-transient="true"/><meta name="html-safe-nonce" content="788323bb112ab6f5856d1f2d243672cb2345b947" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHA6Ly9naXRodWIuY29tL2FsdmFyb3RyaWdvL211bHRpc2Nyb2xsLmpzL2NvbW1pdHM/YXV0aG9yPWFsdmFyb3RyaWdvIiwicmVxdWVzdF9pZCI6IkNFOEI6MkZCOTo0RjVDRTo2RkQzQTo1RTU0MkRDNyIsInZpc2l0b3JfaWQiOiIyODM4NTg4MzQ5MDEwNDA2ODEwIiwicmVnaW9uX2VkZ2UiOiJhcC1zb3V0aGVhc3QtMSIsInJlZ2lvbl9yZW5kZXIiOiJhcC1zb3V0aGVhc3QtMSJ9" data-pjax-transient="true"/><meta name="visitor-hmac" content="bdbe2cbb2992f31b8de7f972a525835a6c9109b05133f72b0463d8eed803685e" data-pjax-transient="true"/>
+
+
+
+  <meta name="github-keyboard-shortcuts" content="repository,commit-list" data-pjax-transient="true" />
+
+  
+
+  <meta name="selected-link" value="repo_commits" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-ga_id" content="" class="js-octo-ga-id" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/commits/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+
+
+    <meta name="enabled-features" content="MARKETPLACE_FEATURED_BLOG_POSTS,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS,MARKETPLACE_PENDING_INSTALLATIONS,RELATED_ISSUES">
+
+  <meta http-equiv="x-pjax-version" content="8310d593c1cc38b86be83242de7e6f3f">
+  
+
+      <link href="commits/master.atom" rel="alternate" title="Recent Commits to multiscroll.js:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/alvarotrigo/multiscroll.js git https://github.com/alvarotrigo/multiscroll.js.git">
+
+  <meta name="octolytics-dimension-user_id" content="1706326" /><meta name="octolytics-dimension-user_login" content="alvarotrigo" /><meta name="octolytics-dimension-repository_id" content="19379248" /><meta name="octolytics-dimension-repository_nwo" content="alvarotrigo/multiscroll.json" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="19379248" /><meta name="octolytics-dimension-repository_network_root_nwo" content="alvarotrigo/multiscroll.json" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <link rel="manifest" href="../../manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production min-width-lg">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+      <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+
+    
+    
+
+
+
+        <header class="Header-old header-logged-out  position-relative f4 py-2" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-none">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0" aria-label="Global">
+          <ul class="d-flex list-style-none">
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0  p-4 left-n4 position-absolute">
+                    <a href="../../features.html" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="../../features/code-review/index.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="../../features/project-management/index.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="../../features/integrations.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="../../features/actions.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a></li>
+                          <li class="edge-item-fix"><a href="../../features/packages.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Packages">Packages</a></li>
+                      <li class="edge-item-fix"><a href="../../features/security.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Security">Security</a></li>
+                      <li class="edge-item-fix"><a href="../../features.html#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="../../features.html#hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/customer-stories" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="../../security.html" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class=" mr-3 mr-lg-3">
+                <a href="../../enterprise.html" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0  p-4 left-n4 position-absolute">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../explore.html" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Explore">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../topics.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                        <li class="edge-item-fix"><a href="../../collections.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="../../trending.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="../../events.html" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class=" mr-3 mr-lg-3">
+                <a href="../../marketplace.html" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0  p-4 left-n4 position-absolute">
+                    <a href="../../pricing.html" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="../../pricing.html#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare plans">Compare plans</a></li>
+                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Contact Sales">Contact Sales</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0  border-top pt-3">
+                      <li class="edge-item-fix"><a href="../../nonprofit.html" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover"  data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex flex-items-center px-0 text-center text-left">
+          <div class="d-lg-flex ">
+            <div class="header-search mr-3 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="19379248" data-scoped-search-url="/alvarotrigo/multiscroll.js/search" data-unscoped-search-url="/search" action="https://github.com/alvarotrigo/multiscroll.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations"
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="pzel7W4ipGgvo19IRPWu7G1uPrFHkqmlh28WsnQsjGvbpt8xbmQCdCj7UJvFIQMDNsOQdyIZOUgaQ1blgPo/mA==" />
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0013 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 000-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a href="https://github.com/login?return_to=%2Falvarotrigo%2Fmultiscroll.js%2Fcommits%3Fafter%3Dcdb69c01dea4b037f5a2e9df0df0aaed8089fcd3%2B34%26author%3Dalvarotrigo"
+          class="HeaderMenu-link no-underline mr-3"
+          data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&amp;author=alvarotrigo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9cbf421a878adba0f51d2401de3e82b506fb3fc2253f5b44f0ddc291138e2389"
+          data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
+          Sign&nbsp;in
+        </a>
+          <a href="../../joinca06.html?source_repo=alvarotrigo%2Fmultiscroll.js"
+            class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1"
+            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&amp;author=alvarotrigo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9cbf421a878adba0f51d2401de3e82b506fb3fc2253f5b44f0ddc291138e2389"
+            data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">
+            Sign&nbsp;up
+          </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+    <div id="js-flash-container">
+
+</div>
+
+
+      
+
+  <include-fragment class="js-notification-shelf-include-fragment" data-base-src="https://github.com/notifications/beta/shelf"></include-fragment>
+
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container" data-pjax-container >
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="pagehead repohead hx_repohead readability-menu bg-gray-light pb-0 pt-3">
+
+    <div class="container-lg mb-4 px-3 d-flex">
+
+      <div class="flex-auto min-width-0 width-fit mr-3">
+        <h1 class="public  d-flex flex-wrap flex-items-center break-word float-none ">
+    <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author ml-1 flex-self-stretch" itemprop="author">
+    <a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">alvarotrigo</a>
+  </span>
+  <span class="path-divider flex-self-stretch">/</span>
+  <strong itemprop="name" class="mr-2 flex-self-stretch">
+    <a data-pjax="#js-repo-pjax-container" href="../multiscroll.html">multiscroll.js</a>
+  </strong>
+  
+</h1>
+
+
+      </div>
+
+      <ul class="pagehead-actions flex-shrink-0"  >
+
+
+
+
+  <li>
+    
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&amp;author=alvarotrigo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="de5d82df3e8cd62fd6eb86857e8924c20f3737204192c2740aeeaa90939f3e73" href="../../login2cc7.html?return_to=%2Falvarotrigo%2Fmultiscroll.js">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+</a>    <a class="social-count" href="watchers.html"
+       aria-label="65 users are watching this repository">
+      65
+    </a>
+
+  </li>
+
+  <li>
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:19379248,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&amp;author=alvarotrigo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6f605ad226e8e61ba74e46b3b2cf515e648c711fe2634033fe229a7f3bc7069f" href="../../login2cc7.html?return_to=%2Falvarotrigo%2Fmultiscroll.js">
+      <svg aria-label="star" height="16" class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+
+      Star
+</a>
+    <a class="social-count js-social-count" href="stargazers.html"
+      aria-label="1415 users starred this repository">
+      1.4k
+    </a>
+
+  </li>
+
+  <li>
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:19379248,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&amp;author=alvarotrigo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="c9838dc8a3dddb3c300a594dbd94a822911e15e60498e63093f83eb403adf88e" href="../../login2cc7.html?return_to=%2Falvarotrigo%2Fmultiscroll.js">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+</a>
+    <a href="network/members.html" class="social-count"
+       aria-label="355 users forked this repository">
+      355
+    </a>
+  </li>
+</ul>
+
+    </div>
+      
+<nav class="hx_reponav reponav js-repo-nav js-sidenav-container-pjax clearfix container-lg px-3"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /alvarotrigo/multiscroll.js" href="../multiscroll.html">
+      <div class="d-inline"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></div>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /alvarotrigo/multiscroll.js/issues" href="issues.html">
+        <div class="d-inline"><svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 011.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">22</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" data-skip-pjax="true" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /alvarotrigo/multiscroll.js/pulls" href="pulls.html">
+      <div class="d-inline"><svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg></div>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">3</span>
+      <meta itemprop="position" content="4">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="position-relative float-left">
+      <a data-hotkey="g w" data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="repo_actions /alvarotrigo/multiscroll.js/actions" href="actions/new.html">
+        <div class="d-inline"><svg class="octicon octicon-play" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 8A7 7 0 110 8a7 7 0 0114 0zm-8.223 3.482l4.599-3.066a.5.5 0 000-.832L5.777 4.518A.5.5 0 005 4.934v6.132a.5.5 0 00.777.416z"/></svg></div>
+        Actions
+</a>
+    </span>
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /alvarotrigo/multiscroll.js/projects" href="projects.html">
+      <div class="d-inline"><svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 00-1 1v14a1 1 0 001 1h13a1 1 0 001-1V1a1 1 0 00-1-1z"/></svg></div>
+      Projects
+      <span class="Counter">0</span>
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /alvarotrigo/multiscroll.js/wiki" href="wiki.html">
+      <div class="d-inline"><svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg></div>
+      Wiki
+</a>
+    <a data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="security alerts policy token_scanning code_scanning /alvarotrigo/multiscroll.js/security/advisories" href="security/advisories.html">
+      <div class="d-inline"><svg class="octicon octicon-shield" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 2l7-2 7 2v6.02C14 12.69 8.69 16 7 16c-1.69 0-7-3.31-7-7.98V2zm1 .75L7 1l6 1.75v5.268C13 12.104 8.449 15 7 15c-1.449 0-6-2.896-6-6.982V2.75zm1 .75L7 2v12c-1.207 0-5-2.482-5-5.985V3.5z"/></svg></div>
+      Security
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse people /alvarotrigo/multiscroll.js/pulse" href="pulse.html">
+      <div class="d-inline"><svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg></div>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+
+<div class="container-lg clearfix new-discussion-timeline  px-3">
+  <div class="repository-content ">
+
+    
+    
+      <a href="commit/cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3.html" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+    <div class="file-navigation">
+      
+<details class="details-reset details-overlay branch-select-menu " id="branch-select-menu">
+  <summary class="btn btn-sm css-truncate"
+           data-hotkey="w"
+           title="Switch branches or tags">
+    <i>Branch:</i>
+    <span class="css-truncate-target" data-menu-button>master</span>
+    <span class="dropdown-caret"></span>
+  </summary>
+
+  <details-menu class="SelectMenu SelectMenu--hasFilter" src="refs/master9b6c.html?source_action=show&amp;source_controller=commits" preload>
+    <div class="SelectMenu-modal">
+      <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
+        <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+      </include-fragment>
+    </div>
+  </details-menu>
+</details>
+
+    </div>
+
+    <div class="commits-listing commits-listing-padded js-navigation-container js-active-navigation-container" data-navigation-scroll="page">
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Apr 24, 2017
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:3215e5a263aac27a0e53152561c19a82999ffa15"
+    data-url="/alvarotrigo/multiscroll.js/commit/3215e5a263aac27a0e53152561c19a82999ffa15/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Docs for responsive options" class="message js-navigation-open" data-pjax="true" href="commit/3215e5a263aac27a0e53152561c19a82999ffa15.html">- Docs for responsive options</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-24T10:12:22Z" class="no-wrap">Apr 24, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="3215e5a263aac27a0e53152561c19a82999ffa15" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/3215e5a263aac27a0e53152561c19a82999ffa15.html" class="sha btn btn-outline BtnGroup-item">
+      3215e5a
+    </a>
+  </div>
+  <a href="tree/3215e5a263aac27a0e53152561c19a82999ffa15.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:5d38f6d629efaf62b6d9216c815104de2a68f94a"
+    data-url="/alvarotrigo/multiscroll.js/commit/5d38f6d629efaf62b6d9216c815104de2a68f94a/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Docs for responsive options" class="message js-navigation-open" data-pjax="true" href="commit/5d38f6d629efaf62b6d9216c815104de2a68f94a.html">- Docs for responsive options</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-24T10:07:32Z" class="no-wrap">Apr 24, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="5d38f6d629efaf62b6d9216c815104de2a68f94a" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/5d38f6d629efaf62b6d9216c815104de2a68f94a.html" class="sha btn btn-outline BtnGroup-item">
+      5d38f6d
+    </a>
+  </div>
+  <a href="tree/5d38f6d629efaf62b6d9216c815104de2a68f94a.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Apr 23, 2017
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:88d002734ce6558d3e613c31af88f12dfc0bc0c3"
+    data-url="/alvarotrigo/multiscroll.js/commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Fixed typo" class="message js-navigation-open" data-pjax="true" href="commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3.html">- Fixed typo</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-23T16:44:14Z" class="no-wrap">Apr 23, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="88d002734ce6558d3e613c31af88f12dfc0bc0c3" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3.html" class="sha btn btn-outline BtnGroup-item">
+      88d0027
+    </a>
+  </div>
+  <a href="tree/88d002734ce6558d3e613c31af88f12dfc0bc0c3.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:0117710c188f4da5d01f5f853e415dc15ca99acf"
+    data-url="/alvarotrigo/multiscroll.js/commit/0117710c188f4da5d01f5f853e415dc15ca99acf/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Improve aesthetics" class="message js-navigation-open" data-pjax="true" href="commit/0117710c188f4da5d01f5f853e415dc15ca99acf.html">Improve aesthetics</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-23T14:57:08Z" class="no-wrap">Apr 23, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="0117710c188f4da5d01f5f853e415dc15ca99acf" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/0117710c188f4da5d01f5f853e415dc15ca99acf.html" class="sha btn btn-outline BtnGroup-item">
+      0117710
+    </a>
+  </div>
+  <a href="tree/0117710c188f4da5d01f5f853e415dc15ca99acf.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:1a4d45b08e7de79a18d2a856e74f3f5a51560011"
+    data-url="/alvarotrigo/multiscroll.js/commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added extensions file" class="message js-navigation-open" data-pjax="true" href="commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011.html">- Added extensions file</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-23T14:50:55Z" class="no-wrap">Apr 23, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="1a4d45b08e7de79a18d2a856e74f3f5a51560011" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011.html" class="sha btn btn-outline BtnGroup-item">
+      1a4d45b
+    </a>
+  </div>
+  <a href="tree/1a4d45b08e7de79a18d2a856e74f3f5a51560011.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:693954e70760e2592c76ca8e05070c848474527e"
+    data-url="/alvarotrigo/multiscroll.js/commit/693954e70760e2592c76ca8e05070c848474527e/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Fixing headers" class="message js-navigation-open" data-pjax="true" href="commit/693954e70760e2592c76ca8e05070c848474527e.html">Fixing headers</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2017-04-23T14:44:26Z" class="no-wrap">Apr 23, 2017</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="693954e70760e2592c76ca8e05070c848474527e" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/693954e70760e2592c76ca8e05070c848474527e.html" class="sha btn btn-outline BtnGroup-item">
+      693954e
+    </a>
+  </div>
+  <a href="tree/693954e70760e2592c76ca8e05070c848474527e.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 15, 2016
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:12c2b21a6ebaa22be755e5b1b19e048de6c6a61c"
+    data-url="/alvarotrigo/multiscroll.js/commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #80 from talgautb/master
+
+Fix destroy/build functions, update packages" class="message js-navigation-open" data-pjax="true" href="commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="183209224" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/80" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/80/hovercard" href="pull/80.html">#80</a> <a aria-label="Merge pull request #80 from talgautb/master
+
+Fix destroy/build functions, update packages" class="message js-navigation-open" data-pjax="true" href="commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c.html">from talgautb/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2016-10-15T13:58:28Z" class="no-wrap">Oct 15, 2016</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">Fix destroy/build functions, update packages</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="12c2b21a6ebaa22be755e5b1b19e048de6c6a61c" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c.html" class="sha btn btn-outline BtnGroup-item">
+      12c2b21
+    </a>
+  </div>
+  <a href="tree/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Aug 10, 2016
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:492612b6841843ef4d35641ac5d4c7f5643b4a0c"
+    data-url="/alvarotrigo/multiscroll.js/commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #73 from npostulart/master
+
+Fixes #72 - Missing navigation binding functions on build" class="message js-navigation-open" data-pjax="true" href="commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="170364255" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/73" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/73/hovercard" href="pull/73.html">#73</a> <a aria-label="Merge pull request #73 from npostulart/master
+
+Fixes #72 - Missing navigation binding functions on build" class="message js-navigation-open" data-pjax="true" href="commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c.html">from npostulart/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2016-08-10T09:12:33Z" class="no-wrap">Aug 10, 2016</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small"><span class="issue-keyword tooltipped tooltipped-se" aria-label="This commit closes issue #72.">Fixes</span> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="159420646" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/72" data-hovercard-type="issue" data-hovercard-url="/alvarotrigo/multiscroll.js/issues/72/hovercard" href="issues/72.html">#72</a> - Missing navigation binding functions on build</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="492612b6841843ef4d35641ac5d4c7f5643b4a0c" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c.html" class="sha btn btn-outline BtnGroup-item">
+      492612b
+    </a>
+  </div>
+  <a href="tree/492612b6841843ef4d35641ac5d4c7f5643b4a0c.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jul 7, 2016
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:f1606e5469099ccd8284276230e48877c9ffabd2"
+    data-url="/alvarotrigo/multiscroll.js/commit/f1606e5469099ccd8284276230e48877c9ffabd2/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added gulp and `dist` files
+- Updated package.json 
+- Improved credits comments" class="message js-navigation-open" data-pjax="true" href="commit/f1606e5469099ccd8284276230e48877c9ffabd2.html">- Added gulp and `dist` files</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2016-07-07T14:57:33Z" class="no-wrap">Jul 7, 2016</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">- Updated package.json 
+- Improved credits comments</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="f1606e5469099ccd8284276230e48877c9ffabd2" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/f1606e5469099ccd8284276230e48877c9ffabd2.html" class="sha btn btn-outline BtnGroup-item">
+      f1606e5
+    </a>
+  </div>
+  <a href="tree/f1606e5469099ccd8284276230e48877c9ffabd2.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Nov 18, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:710b3aacea36d85e550c7ea2f00f34ca289b301a"
+    data-url="/alvarotrigo/multiscroll.js/commit/710b3aacea36d85e550c7ea2f00f34ca289b301a/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #59 from talgautb/master
+
+add gulp" class="message js-navigation-open" data-pjax="true" href="commit/710b3aacea36d85e550c7ea2f00f34ca289b301a.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="117608362" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/59" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/59/hovercard" href="pull/59.html">#59</a> <a aria-label="Merge pull request #59 from talgautb/master
+
+add gulp" class="message js-navigation-open" data-pjax="true" href="commit/710b3aacea36d85e550c7ea2f00f34ca289b301a.html">from talgautb/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-11-18T15:46:26Z" class="no-wrap">Nov 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">add gulp</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="710b3aacea36d85e550c7ea2f00f34ca289b301a" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/710b3aacea36d85e550c7ea2f00f34ca289b301a.html" class="sha btn btn-outline BtnGroup-item">
+      710b3aa
+    </a>
+  </div>
+  <a href="tree/710b3aacea36d85e550c7ea2f00f34ca289b301a.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 20, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:e3a528779835f738dbfc81a627d8ceab9bc24b08"
+    data-url="/alvarotrigo/multiscroll.js/commit/e3a528779835f738dbfc81a627d8ceab9bc24b08/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Removed mistakes" class="message js-navigation-open" data-pjax="true" href="commit/e3a528779835f738dbfc81a627d8ceab9bc24b08.html">- Removed mistakes</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-10-20T09:50:25Z" class="no-wrap">Oct 20, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="e3a528779835f738dbfc81a627d8ceab9bc24b08" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/e3a528779835f738dbfc81a627d8ceab9bc24b08.html" class="sha btn btn-outline BtnGroup-item">
+      e3a5287
+    </a>
+  </div>
+  <a href="tree/e3a528779835f738dbfc81a627d8ceab9bc24b08.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 11, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:36c7824ad20b337730f86a4019adf5c0ac2a7052"
+    data-url="/alvarotrigo/multiscroll.js/commit/36c7824ad20b337730f86a4019adf5c0ac2a7052/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #55 from benjaminsweetnam247/master
+
+Adds package.json for use with npm" class="message js-navigation-open" data-pjax="true" href="commit/36c7824ad20b337730f86a4019adf5c0ac2a7052.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="110801109" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/55" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/55/hovercard" href="pull/55.html">#55</a> <a aria-label="Merge pull request #55 from benjaminsweetnam247/master
+
+Adds package.json for use with npm" class="message js-navigation-open" data-pjax="true" href="commit/36c7824ad20b337730f86a4019adf5c0ac2a7052.html">from benjaminsweetnam247/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-10-11T11:19:49Z" class="no-wrap">Oct 11, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">Adds package.json for use with npm</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="36c7824ad20b337730f86a4019adf5c0ac2a7052" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/36c7824ad20b337730f86a4019adf5c0ac2a7052.html" class="sha btn btn-outline BtnGroup-item">
+      36c7824
+    </a>
+  </div>
+  <a href="tree/36c7824ad20b337730f86a4019adf5c0ac2a7052.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 9, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:9d58e9a5b7431c7942dfe95b04530ab1fbe89a41"
+    data-url="/alvarotrigo/multiscroll.js/commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added link to wordpress theme" class="message js-navigation-open" data-pjax="true" href="commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41.html">- Added link to wordpress theme</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-10-09T14:17:34Z" class="no-wrap">Oct 9, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+    <a href="commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41.html#comments" class="muted-link mt-2 mr-2 d-inline-block v-align-middle">
+      <svg class="octicon octicon-comment v-align-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+      2
+    </a>
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="9d58e9a5b7431c7942dfe95b04530ab1fbe89a41" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41.html" class="sha btn btn-outline BtnGroup-item">
+      9d58e9a
+    </a>
+  </div>
+  <a href="tree/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jul 12, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:51f788a332781dcfe94ecd38c42d197ea2023f7a"
+    data-url="/alvarotrigo/multiscroll.js/commit/51f788a332781dcfe94ecd38c42d197ea2023f7a/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #48 from talgautb/patch-1
+
+delete setAllowScrolling from readme" class="message js-navigation-open" data-pjax="true" href="commit/51f788a332781dcfe94ecd38c42d197ea2023f7a.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="94548005" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/48" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/48/hovercard" href="pull/48.html">#48</a> <a aria-label="Merge pull request #48 from talgautb/patch-1
+
+delete setAllowScrolling from readme" class="message js-navigation-open" data-pjax="true" href="commit/51f788a332781dcfe94ecd38c42d197ea2023f7a.html">from talgautb/patch-1</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-07-12T11:25:26Z" class="no-wrap">Jul 12, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">delete setAllowScrolling from readme</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="51f788a332781dcfe94ecd38c42d197ea2023f7a" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/51f788a332781dcfe94ecd38c42d197ea2023f7a.html" class="sha btn btn-outline BtnGroup-item">
+      51f788a
+    </a>
+  </div>
+  <a href="tree/51f788a332781dcfe94ecd38c42d197ea2023f7a.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Mar 18, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193"
+    data-url="/alvarotrigo/multiscroll.js/commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Using IIFE" class="message js-navigation-open" data-pjax="true" href="commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193.html">- Using IIFE</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-03-18T12:06:14Z" class="no-wrap">Mar 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193.html" class="sha btn btn-outline BtnGroup-item">
+      1bfbd70
+    </a>
+  </div>
+  <a href="tree/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:f6bddb69f8d539afaad0158321c6ce3f34de1e06"
+    data-url="/alvarotrigo/multiscroll.js/commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Fixed bug. Navigation bullets get vertically centred now.
+- A class will be added to the `body` element with the active section anchor / index
+- Improved keyboard accessibility
+- Fixed bug with IE touch devices." class="message js-navigation-open" data-pjax="true" href="commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06.html">- Fixed bug. Navigation bullets get vertically centred now.</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-03-18T12:03:34Z" class="no-wrap">Mar 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">- A class will be added to the `body` element with the active section anchor / index
+- Improved keyboard accessibility
+- Fixed bug with IE touch devices.</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="f6bddb69f8d539afaad0158321c6ce3f34de1e06" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06.html" class="sha btn btn-outline BtnGroup-item">
+      f6bddb6
+    </a>
+  </div>
+  <a href="tree/f6bddb69f8d539afaad0158321c6ce3f34de1e06.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:7fe2efd4110894b232713229ed54af711be05d0b"
+    data-url="/alvarotrigo/multiscroll.js/commit/7fe2efd4110894b232713229ed54af711be05d0b/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Version updated" class="message js-navigation-open" data-pjax="true" href="commit/7fe2efd4110894b232713229ed54af711be05d0b.html">- Version updated</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-03-18T11:01:56Z" class="no-wrap">Mar 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="7fe2efd4110894b232713229ed54af711be05d0b" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/7fe2efd4110894b232713229ed54af711be05d0b.html" class="sha btn btn-outline BtnGroup-item">
+      7fe2efd
+    </a>
+  </div>
+  <a href="tree/7fe2efd4110894b232713229ed54af711be05d0b.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:2ac2dc2153d66e66c9320aaae67fcd7a77b69068"
+    data-url="/alvarotrigo/multiscroll.js/commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #30 from talgautb/master
+
+add new methods destory and build" class="message js-navigation-open" data-pjax="true" href="commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="55717323" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/30" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/30/hovercard" href="pull/30.html">#30</a> <a aria-label="Merge pull request #30 from talgautb/master
+
+add new methods destory and build" class="message js-navigation-open" data-pjax="true" href="commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068.html">from talgautb/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-03-18T11:00:30Z" class="no-wrap">Mar 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">add new methods destory and build</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="2ac2dc2153d66e66c9320aaae67fcd7a77b69068" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068.html" class="sha btn btn-outline BtnGroup-item">
+      2ac2dc2
+    </a>
+  </div>
+  <a href="tree/2ac2dc2153d66e66c9320aaae67fcd7a77b69068.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:41b22f194327d162ee67892cf3f6e6bfd7491748"
+    data-url="/alvarotrigo/multiscroll.js/commit/41b22f194327d162ee67892cf3f6e6bfd7491748/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added website to &quot;Who is using multiscroll.js&quot;" class="message js-navigation-open" data-pjax="true" href="commit/41b22f194327d162ee67892cf3f6e6bfd7491748.html">- Added website to "Who is using multiscroll.js"</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-03-18T10:57:38Z" class="no-wrap">Mar 18, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="41b22f194327d162ee67892cf3f6e6bfd7491748" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/41b22f194327d162ee67892cf3f6e6bfd7491748.html" class="sha btn btn-outline BtnGroup-item">
+      41b22f1
+    </a>
+  </div>
+  <a href="tree/41b22f194327d162ee67892cf3f6e6bfd7491748.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jan 29, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:51125f55b0adf0b828fc085c82c5ec20e761286f"
+    data-url="/alvarotrigo/multiscroll.js/commit/51125f55b0adf0b828fc085c82c5ec20e761286f/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Removed some sites" class="message js-navigation-open" data-pjax="true" href="commit/51125f55b0adf0b828fc085c82c5ec20e761286f.html">- Removed some sites</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-01-29T16:27:31Z" class="no-wrap">Jan 29, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="51125f55b0adf0b828fc085c82c5ec20e761286f" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/51125f55b0adf0b828fc085c82c5ec20e761286f.html" class="sha btn btn-outline BtnGroup-item">
+      51125f5
+    </a>
+  </div>
+  <a href="tree/51125f55b0adf0b828fc085c82c5ec20e761286f.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jan 25, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:f4ff80c0231b4a6caa91854730998734ee17c61e"
+    data-url="/alvarotrigo/multiscroll.js/commit/f4ff80c0231b4a6caa91854730998734ee17c61e/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #27 from talgautb/master
+
+Add custom selectors" class="message js-navigation-open" data-pjax="true" href="commit/f4ff80c0231b4a6caa91854730998734ee17c61e.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="55410775" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/27" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/27/hovercard" href="pull/27.html">#27</a> <a aria-label="Merge pull request #27 from talgautb/master
+
+Add custom selectors" class="message js-navigation-open" data-pjax="true" href="commit/f4ff80c0231b4a6caa91854730998734ee17c61e.html">from talgautb/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-01-25T14:30:50Z" class="no-wrap">Jan 25, 2015</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">Add custom selectors</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="f4ff80c0231b4a6caa91854730998734ee17c61e" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/f4ff80c0231b4a6caa91854730998734ee17c61e.html" class="sha btn btn-outline BtnGroup-item">
+      f4ff80c
+    </a>
+  </div>
+  <a href="tree/f4ff80c0231b4a6caa91854730998734ee17c61e.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jan 5, 2015
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2"
+    data-url="/alvarotrigo/multiscroll.js/commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Updated version." class="message js-navigation-open" data-pjax="true" href="commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2.html">- Updated version.</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2015-01-05T12:26:23Z" class="no-wrap">Jan 5, 2015</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2.html" class="sha btn btn-outline BtnGroup-item">
+      d4d1aff
+    </a>
+  </div>
+  <a href="tree/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Dec 30, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:e9c441c54da44819e1c2a482cf0b0054b4804cb9"
+    data-url="/alvarotrigo/multiscroll.js/commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #24 from dawsonbotsford/master
+
+Spelling Correction from Dawson's Spelling Bee" class="message js-navigation-open" data-pjax="true" href="commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="53076036" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/24" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/24/hovercard" href="pull/24.html">#24</a> <a aria-label="Merge pull request #24 from dawsonbotsford/master
+
+Spelling Correction from Dawson's Spelling Bee" class="message js-navigation-open" data-pjax="true" href="commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9.html">from dawsonbotsford/master</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-12-30T11:09:21Z" class="no-wrap">Dec 30, 2014</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">Spelling Correction from Dawson's Spelling Bee</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="e9c441c54da44819e1c2a482cf0b0054b4804cb9" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9.html" class="sha btn btn-outline BtnGroup-item">
+      e9c441c
+    </a>
+  </div>
+  <a href="tree/e9c441c54da44819e1c2a482cf0b0054b4804cb9.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Dec 16, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:213386a7e5bc957e1d674aa7cb3b11c66b65c57b"
+    data-url="/alvarotrigo/multiscroll.js/commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added website to &quot;Who is using multiscroll.js&quot;" class="message js-navigation-open" data-pjax="true" href="commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b.html">- Added website to "Who is using multiscroll.js"</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-12-16T10:46:07Z" class="no-wrap">Dec 16, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="213386a7e5bc957e1d674aa7cb3b11c66b65c57b" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b.html" class="sha btn btn-outline BtnGroup-item">
+      213386a
+    </a>
+  </div>
+  <a href="tree/213386a7e5bc957e1d674aa7cb3b11c66b65c57b.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Dec 12, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:a27da98fb5b7777ae823d94b8be971388718feb2"
+    data-url="/alvarotrigo/multiscroll.js/commit/a27da98fb5b7777ae823d94b8be971388718feb2/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added website to &quot;Who is using multiscroll.js&quot;" class="message js-navigation-open" data-pjax="true" href="commit/a27da98fb5b7777ae823d94b8be971388718feb2.html">- Added website to "Who is using multiscroll.js"</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-12-12T10:23:55Z" class="no-wrap">Dec 12, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="a27da98fb5b7777ae823d94b8be971388718feb2" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/a27da98fb5b7777ae823d94b8be971388718feb2.html" class="sha btn btn-outline BtnGroup-item">
+      a27da98
+    </a>
+  </div>
+  <a href="tree/a27da98fb5b7777ae823d94b8be971388718feb2.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 27, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:3ba13dea8c00b25614802dd4b14ba7c63673de4a"
+    data-url="/alvarotrigo/multiscroll.js/commit/3ba13dea8c00b25614802dd4b14ba7c63673de4a/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Added websites in &quot;who is using multiScroll.js&quot;" class="message js-navigation-open" data-pjax="true" href="commit/3ba13dea8c00b25614802dd4b14ba7c63673de4a.html">Added websites in "who is using multiScroll.js"</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-10-27T21:28:41Z" class="no-wrap">Oct 27, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="3ba13dea8c00b25614802dd4b14ba7c63673de4a" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/3ba13dea8c00b25614802dd4b14ba7c63673de4a.html" class="sha btn btn-outline BtnGroup-item">
+      3ba13de
+    </a>
+  </div>
+  <a href="tree/3ba13dea8c00b25614802dd4b14ba7c63673de4a.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Oct 9, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030"
+    data-url="/alvarotrigo/multiscroll.js/commit/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Solved problem in input elements" class="message js-navigation-open" data-pjax="true" href="commit/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030.html">- Solved problem in input elements</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-10-09T22:03:22Z" class="no-wrap">Oct 9, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030.html" class="sha btn btn-outline BtnGroup-item">
+      0c3ed2d
+    </a>
+  </div>
+  <a href="tree/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Sep 24, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1"
+    data-url="/alvarotrigo/multiscroll.js/commit/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Update README.md" class="message js-navigation-open" data-pjax="true" href="commit/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1.html">Update README.md</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-09-24T10:44:42Z" class="no-wrap">Sep 24, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1.html" class="sha btn btn-outline BtnGroup-item">
+      5ae3b91
+    </a>
+  </div>
+  <a href="tree/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Sep 17, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5"
+    data-url="/alvarotrigo/multiscroll.js/commit/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added support for Windows 8 Tablets
+- Added support for IE 11 on Windows Phone 8.1 
+- Added home/end buttons actions
+- Fixed bug in IE for normalScroll elements
+- Fixed navigation tooltips not fading out correctly
+- Improved bullets tooltips
+- Update bower version" class="message js-navigation-open" data-pjax="true" href="commit/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5.html">- Added support for Windows 8 Tablets</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-09-17T09:55:42Z" class="no-wrap">Sep 17, 2014</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">- Added support for IE 11 on Windows Phone 8.1 
+- Added home/end buttons actions
+- Fixed bug in IE for normalScroll elements
+- Fixed navigation tooltips not fading out correctly
+- Improved bullets tooltips
+- Update bower version</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5.html" class="sha btn btn-outline BtnGroup-item">
+      a0ce5bf
+    </a>
+  </div>
+  <a href="tree/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Sep 15, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:c1cce8913e0a018c2caf42b54d2abfaf126aaf08"
+    data-url="/alvarotrigo/multiscroll.js/commit/c1cce8913e0a018c2caf42b54d2abfaf126aaf08/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Solved bug when using the back button causing an undefined anchor to appear in the URL #17" class="message js-navigation-open" data-pjax="true" href="commit/c1cce8913e0a018c2caf42b54d2abfaf126aaf08.html">- Solved bug when using the back button causing an undefined anchor t…</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-09-15T10:20:29Z" class="no-wrap">Sep 15, 2014</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">…o appear in the URL <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="42739450" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/17" data-hovercard-type="issue" data-hovercard-url="/alvarotrigo/multiscroll.js/issues/17/hovercard" href="issues/17.html">#17</a></pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="c1cce8913e0a018c2caf42b54d2abfaf126aaf08" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/c1cce8913e0a018c2caf42b54d2abfaf126aaf08.html" class="sha btn btn-outline BtnGroup-item">
+      c1cce89
+    </a>
+  </div>
+  <a href="tree/c1cce8913e0a018c2caf42b54d2abfaf126aaf08.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Sep 1, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:c9f01d03b49bfe787d84d8528118072f1bd4a99e"
+    data-url="/alvarotrigo/multiscroll.js/commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #15 from rawcreative/cellResizeFix
+
+Ensure table cells are resized during resize event" class="message js-navigation-open" data-pjax="true" href="commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="41565300" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/15" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/15/hovercard" href="pull/15.html">#15</a> <a aria-label="Merge pull request #15 from rawcreative/cellResizeFix
+
+Ensure table cells are resized during resize event" class="message js-navigation-open" data-pjax="true" href="commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e.html">from rawcreative/cellResizeFix</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-09-01T09:21:56Z" class="no-wrap">Sep 1, 2014</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">Ensure table cells are resized during resize event</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="c9f01d03b49bfe787d84d8528118072f1bd4a99e" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e.html" class="sha btn btn-outline BtnGroup-item">
+      c9f01d0
+    </a>
+  </div>
+  <a href="tree/c9f01d03b49bfe787d84d8528118072f1bd4a99e.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Aug 26, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:a35158606ecbf29c386d86d0f4c434a76108203c"
+    data-url="/alvarotrigo/multiscroll.js/commit/a35158606ecbf29c386d86d0f4c434a76108203c/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="Merge pull request #13 from erickrar/patch-1
+
+resolve missing parenthesis" class="message js-navigation-open" data-pjax="true" href="commit/a35158606ecbf29c386d86d0f4c434a76108203c.html">Merge pull request</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="41172745" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/13" data-hovercard-type="pull_request" data-hovercard-url="/alvarotrigo/multiscroll.js/pull/13/hovercard" href="pull/13.html">#13</a> <a aria-label="Merge pull request #13 from erickrar/patch-1
+
+resolve missing parenthesis" class="message js-navigation-open" data-pjax="true" href="commit/a35158606ecbf29c386d86d0f4c434a76108203c.html">from erickrar/patch-1</a>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target" aria-expanded="false">&hellip;</button>
+      </span>
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-08-26T14:25:46Z" class="no-wrap">Aug 26, 2014</relative-time>
+
+    </div>
+  </div>
+
+    <div class="commit-desc"><pre class="text-small">resolve missing parenthesis</pre></div>
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="a35158606ecbf29c386d86d0f4c434a76108203c" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/a35158606ecbf29c386d86d0f4c434a76108203c.html" class="sha btn btn-outline BtnGroup-item">
+      a351586
+    </a>
+  </div>
+  <a href="tree/a35158606ecbf29c386d86d0f4c434a76108203c.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Aug 22, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:19729722d0e956efd5819a7bb4ef74c03b8f8013"
+    data-url="/alvarotrigo/multiscroll.js/commit/19729722d0e956efd5819a7bb4ef74c03b8f8013/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Solved problem which caused scroll on mouse move on IE 10 and 11 #12" class="message js-navigation-open" data-pjax="true" href="commit/19729722d0e956efd5819a7bb4ef74c03b8f8013.html">- Solved problem which caused scroll on mouse move on IE 10 and 11</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="39984662" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/12" data-hovercard-type="issue" data-hovercard-url="/alvarotrigo/multiscroll.js/issues/12/hovercard" href="issues/12.html">#12</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-08-22T11:49:50Z" class="no-wrap">Aug 22, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="19729722d0e956efd5819a7bb4ef74c03b8f8013" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/19729722d0e956efd5819a7bb4ef74c03b8f8013.html" class="sha btn btn-outline BtnGroup-item">
+      1972972
+    </a>
+  </div>
+  <a href="tree/19729722d0e956efd5819a7bb4ef74c03b8f8013.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jul 16, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:ad5cfe9251480200358fa64d9e8df465dbdd5f42"
+    data-url="/alvarotrigo/multiscroll.js/commit/ad5cfe9251480200358fa64d9e8df465dbdd5f42/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Fixed bug for Safari which created a gap between the two panels #8" class="message js-navigation-open" data-pjax="true" href="commit/ad5cfe9251480200358fa64d9e8df465dbdd5f42.html">- Fixed bug for Safari which created a gap between the two panels</a> <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="37954927" data-permission-text="Issue title is private" data-url="https://github.com/alvarotrigo/multiscroll.js/issues/8" data-hovercard-type="issue" data-hovercard-url="/alvarotrigo/multiscroll.js/issues/8/hovercard" href="issues/8.html">#8</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-07-16T11:56:35Z" class="no-wrap">Jul 16, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="ad5cfe9251480200358fa64d9e8df465dbdd5f42" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/ad5cfe9251480200358fa64d9e8df465dbdd5f42.html" class="sha btn btn-outline BtnGroup-item">
+      ad5cfe9
+    </a>
+  </div>
+  <a href="tree/ad5cfe9251480200358fa64d9e8df465dbdd5f42.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+        <div class="commit-group-title">
+          <svg class="octicon octicon-git-commit" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>Commits on Jun 9, 2014
+        </div>
+
+        <ol class="commit-group table-list table-list-bordered">
+            <li class="commit commits-list-item js-commits-list-item table-list-item js-navigation-item js-details-container Details js-socket-channel js-updatable-content"
+    data-channel="repo:19379248:commit:86523b82b1af2a043e9da16e299cabf459bbb3fb"
+    data-url="/alvarotrigo/multiscroll.js/commit/86523b82b1af2a043e9da16e299cabf459bbb3fb/_render_node/commits/commits_list_item">
+  
+<div class="table-list-cell">
+  <p class="commit-title h5 mb-1 text-gray-dark ">
+      <a aria-label="- Added website to &quot;Who is using multiscroll.js&quot;" class="message js-navigation-open" data-pjax="true" href="commit/86523b82b1af2a043e9da16e299cabf459bbb3fb.html">- Added website to "Who is using multiscroll.js"</a>
+
+  </p>
+
+  <div class="commit-meta commit-author-section no-wrap d-flex flex-items-center mt-1">
+    
+<div class="AvatarStack flex-self-start ">
+  <div class="AvatarStack-body" aria-label="alvarotrigo">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/alvarotrigo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/alvarotrigo">
+          <img height="20" width="20" alt="@alvarotrigo" src="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div>
+      
+      <a href="commits3bf3.html?author=alvarotrigo"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by alvarotrigo">alvarotrigo</a>
+
+
+  committed
+  <relative-time datetime="2014-06-09T09:27:42Z" class="no-wrap">Jun 9, 2014</relative-time>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="commit-links-cell table-list-cell">
+
+  
+
+
+  <div class="commit-links-group BtnGroup">
+    <clipboard-copy value="86523b82b1af2a043e9da16e299cabf459bbb3fb" aria-label="Copy the full SHA" class="btn btn-outline BtnGroup-item">
+      <svg class="octicon octicon-clippy" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg>
+    </clipboard-copy>
+
+    <a href="commit/86523b82b1af2a043e9da16e299cabf459bbb3fb.html" class="sha btn btn-outline BtnGroup-item">
+      86523b8
+    </a>
+  </div>
+  <a href="tree/86523b82b1af2a043e9da16e299cabf459bbb3fb.html" aria-label="Browse the repository at this point in the history" class="btn btn-outline tooltipped tooltipped-sw" rel="nofollow"><svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg></a>
+</div>
+
+</li>
+
+        </ol>
+    </div>
+
+    <div class="paginate-container" data-pjax data-html-cleaner-suppress-children>
+      <div class="BtnGroup" data-test-selector="pagination"><a rel="nofollow" class="btn btn-outline BtnGroup-item" href="commits68c0.html?author=alvarotrigo&amp;before=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+35">Newer</a><a rel="nofollow" class="btn btn-outline BtnGroup-item" href="commits27e8.html?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+69&amp;author=alvarotrigo">Older</a></div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2020 GitHub, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="../../security.html">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="../../pricing.html" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="../../about.html">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" async="async" integrity="sha512-VTkKwyyXYz1e8w0v/7LXDKSa7yMy1qEQofgf/5bGrUv8wpbpaZxx5S3Uc6oYrvbOe432HJdJG5qsFdM9sbP+wg==" type="application/javascript" id="js-conditional-compat" data-src="../../../github.githubassets.com/assets/compat-bootstrap-55390ac3.js"></script>
+    <script crossorigin="anonymous" async="async" integrity="sha512-3yNijdFdVDBZQDWrBvMeD2J9gyXwI5MKUMJSWdEGP44DgS4NEPQw2TmVlDdNAWrseJO5C/sXBSTrL24DvGMDJw==" type="application/javascript" src="../../../github.githubassets.com/assets/vendor-df23628d.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-WZp98krTVri8yp2f8bpVGoTndKcChquCeXJdlvMy65oKppZPzZ52UwQQl0tO7kHoFC75L7MlBMxY3NhWju6CRg==" type="application/javascript" src="../../../github.githubassets.com/assets/frameworks-599a7df2.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-Lap1+NRBH7wIWfmCDnMs6d5Keym1I0bJd3QDvtvFy+lfSMcvPzPioITh++pTkwx/3BvvsDvTYjSlQ6pptb8cGQ==" type="application/javascript" src="../../../github.githubassets.com/assets/github-bootstrap-2daa75f8.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash flash flash-warn flash-banner" hidden
+    >
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="js-stale-session-flash-signed-in" hidden>You signed in with another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+    <span class="js-stale-session-flash-signed-out" hidden>You signed out in another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark hx_rsm" open>
+    <summary role="button" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+
+<!-- Mirrored from github.com/alvarotrigo/multiscroll.js/commits?after=cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3+34&author=alvarotrigo by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 04:22:06 GMT -->
+</html>
+

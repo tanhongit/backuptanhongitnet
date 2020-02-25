@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/hjsix2/Scrolline.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/hjsix2/Scrolline.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/hjsix2/Scrolline.js/commits/master.atom"/>
+  <title>Recent Commits to Scrolline.js:master</title>
+  <updated>2014-12-12T18:30:26Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e2677b5f53314eed1f1efc3c42de458baa5bdd29</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hjsix2/Scrolline.js/commit/e2677b5f53314eed1f1efc3c42de458baa5bdd29"/>
+    <title>
+        Update demo link
+    </title>
+    <updated>2014-12-12T18:30:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/1245918?s=30&amp;v=4"/>
+    <author>
+      <name>anthonyly</name>
+      <uri>https://github.com/anthonyly</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update demo link&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/53811c6fb66767e56cc932729c766073aa35bc15</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hjsix2/Scrolline.js/commit/53811c6fb66767e56cc932729c766073aa35bc15"/>
+    <title>
+        Publish scrolline.js
+    </title>
+    <updated>2014-12-12T18:21:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/1245918?s=30&amp;v=4"/>
+    <author>
+      <name>anthonyly</name>
+      <uri>https://github.com/anthonyly</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Publish scrolline.js&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

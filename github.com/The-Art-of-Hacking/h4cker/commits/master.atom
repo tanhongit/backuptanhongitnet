@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/The-Art-of-Hacking/h4cker/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/The-Art-of-Hacking/h4cker/commits/master.atom"/>
+  <title>Recent Commits to h4cker:master</title>
+  <updated>2020-02-24T23:10:03Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/34e95a7bbd9350d7b1d93232ff12eeda8c3399df</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/34e95a7bbd9350d7b1d93232ff12eeda8c3399df"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-24T23:10:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fc0efe4434fd762d48908ce0a78b6effc0a9b52d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/fc0efe4434fd762d48908ce0a78b6effc0a9b52d"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-24T21:05:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cb1a122fa731fa48b1e82d54352e836b35c6d5e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/cb1a122fa731fa48b1e82d54352e836b35c6d5e7"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-24T11:35:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0bf86d7809bb7619ff586c2f769a450a32e67771</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/0bf86d7809bb7619ff586c2f769a450a32e67771"/>
+    <title>
+        Create learning_python_devnet.md
+    </title>
+    <updated>2020-02-24T01:01:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Create learning_python_devnet.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7be0aa24599e5e48420349f0f385140dd3a423b0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/7be0aa24599e5e48420349f0f385140dd3a423b0"/>
+    <title>
+        Create threat-response-api-example.py
+    </title>
+    <updated>2020-02-23T22:27:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Create threat-response-api-example.py&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b4b0fb1f4d7d812fdf665a0c8b6e41002ca3ad28</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/b4b0fb1f4d7d812fdf665a0c8b6e41002ca3ad28"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-23T21:05:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e6c7493163a4b301ce13139dd13524a6549ef3bf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/e6c7493163a4b301ce13139dd13524a6549ef3bf"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-23T12:35:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/22d67d59a68a77940825a1151850d3de53912d31</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/22d67d59a68a77940825a1151850d3de53912d31"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-22T21:05:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2a1fd69349c6dfd710444552a9625ced8e5b5446</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/2a1fd69349c6dfd710444552a9625ced8e5b5446"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-22T12:35:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/26c69ad14c69ebeac119068e6eedd71741f50cac</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/26c69ad14c69ebeac119068e6eedd71741f50cac"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-21T20:15:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3880281b8de2e15f5e230cd38d37e99b30fabede</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/3880281b8de2e15f5e230cd38d37e99b30fabede"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-21T12:05:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/438cee778c5b2f4ccef8845aff848597a4c8c90c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/438cee778c5b2f4ccef8845aff848597a4c8c90c"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-20T20:35:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0f8e7b5495af73fcf26274b7fd17c173ce41360f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/0f8e7b5495af73fcf26274b7fd17c173ce41360f"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-20T11:45:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f420fd37b2871d30c6ec47f4b10c490cbaae7a56</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/f420fd37b2871d30c6ec47f4b10c490cbaae7a56"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-19T20:35:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/46344a7ed66cf78373bff65828f89bcae55c3440</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/46344a7ed66cf78373bff65828f89bcae55c3440"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-19T12:05:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8e913722efe20e26656c04bdd4e88df6df3ecedc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/8e913722efe20e26656c04bdd4e88df6df3ecedc"/>
+    <title>
+        Merge pull request #21 from nicksherron/nicksherron-patch-1
+    </title>
+    <updated>2020-02-19T01:29:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #21 from nicksherron/nicksherron-patch-1
+
+Update bash_resources.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/205568e513875acec6635e30139ae263ebf3499c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/205568e513875acec6635e30139ae263ebf3499c"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-18T20:20:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5f39b09063fa17a289445d287e0b5abbd6ae449e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/5f39b09063fa17a289445d287e0b5abbd6ae449e"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-18T12:05:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/378fbf155e638b6b387ce88020a600c0b961e340</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/378fbf155e638b6b387ce88020a600c0b961e340"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-18T00:25:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/26bf1d7fceba10ddef618e3b479c5121623d4eeb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/The-Art-of-Hacking/h4cker/commit/26bf1d7fceba10ddef618e3b479c5121623d4eeb"/>
+    <title>
+        Adding new tools
+    </title>
+    <updated>2020-02-17T20:35:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1690898?s=30&amp;v=4"/>
+    <author>
+      <name>santosomar</name>
+      <uri>https://github.com/santosomar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding new tools&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

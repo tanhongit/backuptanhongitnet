@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Công Cụ Lập Trình &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/download/cong-cu-lap-trinh/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Mon, 09 Dec 2019 07:27:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Công Cụ Lập Trình &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</title>
+		<link>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/</link>
+				<comments>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/#respond</comments>
+				<pubDate>Thu, 05 Dec 2019 15:15:23 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7470</guid>
+				<description><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn. Ở Bài 1: Giới thiệu tổng quan ngôn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn.</p>
+<p>Ở <a href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer"><span style="color: #ff0000;"><span style="text-decoration: underline;"><em><strong>Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình</strong></em><strong> PHP</strong></span><span style="color: #000000;">. </span></span></a>Tân Hồng IT đã dùng WampServer làm môi trường chính để lập trình PHP. Cùng tìm hiểu xem web server này có gì thú vị nữa không nhé!!!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png"><img class="aligncenter size-full wp-image-7486" src="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png" alt="loi port truy cap localhost" width="503" height="283" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost-300x169.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a></p>
+<h4><strong>Ưu điểm khi sử dụng WampServer là gì?</strong></h4>
+<p><strong>WampServer</strong> hoạt động giống một máy chủ ảo, chạy ngay trên máy của bạn. Nó cho phép bạn kiểm thử trang web mà không gặp trở ngại hay tác hại nào. Do nó được cài trên máy tính của bạn và chưa được xuất bản. <strong>WampServer</strong> vào lúc này đóng vai trò là một căn nhà an toàn cho website của bạn, bạn chưa phải đưa nó online, nhưng vẫn xem được cách nó hiển thị online trên trình duyệt là như thế nào.</p>
+<p>Các ưu điểm khi cài đặt <strong>WampServer</strong> là:</p>
+<ul>
+<li>Bạn không phải mất thời gian chờ file được upload lên mạng nữa.</li>
+<li>Tạo backup dễ dàng hơn, nhanh hơn.</li>
+<li>Không phụ thuộc vào kết nối internet, máy tính không kết cần nối mạng bạn vẫn có thể phát triển web tại localhost.</li>
+<li>Tăng tốc quá trình xử lý, thao tác. Lập trình viên và chuyên gia thiết kế của bạn sẽ thích điều này.</li>
+<li>Bạn hình dung được nội dung được bố cục như thế nào.</li>
+</ul>
+<p>Sau khi đã có một website hoàn chỉnh tại localhost nhờ vào việc cài WampServer, để đưa website lên mạng bạn chỉ việc mua thêm hosting và tên miền cho nó.</p>
+<h4><strong>Tổng quan về thanh menu của WampServer:</strong></h4>
+<ul>
+<li><strong>Localhost</strong>: Cho phép mở website nằm trong folder web root bằng trình duyệt web.</li>
+<li><strong>phpMyAdmin</strong>: Cho phép mở trang quản lý cơ sở dữ liệu <strong>phpMyAdmin</strong> thông qua trình duyệt web.</li>
+<li><strong>Apache</strong>: Các lệnh liên quan đến web chủ Apache.</li>
+<li><strong>MySQL</strong>: Các lệnh liên quan đế hệ quản trị cơ sở dữ liệu MySQL.</li>
+<li><strong>PHP</strong>: Nơi sẽ hiển thị và cho phép bạn chỉnh sửa các tập tin cấu hình sử dụng ngôn ngữ lập trình PHP.</li>
+<li><strong>Start All Services</strong>: Bật tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Stop All Services</strong>: Tắt tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Restart All Services</strong>: Khởi động lại tất cả các chức năng/dịch vụ của WAMP.</li>
+</ul>
+<h4><strong>Thiết lập Port mới trên WampServer tránh lỗi không truy cập vào localhost:</strong></h4>
+<p>Khi bạn cài đặt nhiều <strong>gói webserver</strong> vào máy tính thì khi này các địa chỉ <strong>localhost</strong> phải được cấu hình khác nhau, Nếu không khi truy cập vào địa chỉ <strong>localhost</strong> sẽ bị lỗi không truy cập được.</p>
+<p>Ví dụ bạn cài đặt <strong>Xampp</strong> đầu tiên, khi này nó sẽ mặc định lấy địa chỉ <strong>https://localhost/</strong> làm port của nó. Sau đó bạn lại cài thêm <strong>Wampserver</strong> vào máy, lúc này khi truy cập vào <strong>https://localhost/</strong> sẽ bị lỗi. Bạn phải chỉnh sửa thành một Port  khác ví dụ như<strong> https://localhost:81/</strong> , <strong>https://localhost:83/ ,&#8230;</strong></p>
+<p>Hãy cùng Tân Hồng IT tìm hiểu về cách thay đổi port trên <strong>WampServer</strong> nha. Thay đổi port giúp cho máy của bạn tránh những xung đột không đáng có khi lập trình.</p>
+<p>Đầu tiên, các bạn mở <strong>WampServer</strong> lên và click chuột trái vào icon <strong>W màu xanh</strong> của Wamp. Sau đó bạn chọn <strong>Apache</strong>, tiếp theo click vào file <strong>httpd.conf</strong>.</p>
+<figure id="attachment_7476" aria-describedby="caption-attachment-7476" style="width: 502px" class="wp-caption aligncenter"><img class="wp-image-7476 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png" alt="Bước 1" width="502" height="360" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png 502w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-300x215.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-120x86.png 120w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-350x250.png 350w" sizes="(max-width: 502px) 100vw, 502px" /><figcaption id="caption-attachment-7476" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>Lúc này file <strong>httpd.conf </strong>đã được mở tự động bằng <strong>Notepad++</strong> nếu máy của bạn có sẵn hoặc một trình soạn thảo khác. Trên file <strong>httpd.conf</strong> các bạn tìm kiếm bằng cách ấn <strong>CTRL+H</strong>, tại <strong>Find What: </strong>nhập <strong>80</strong>, rồi thay đổi lại tại <strong>Replace with</strong>: nhập <strong>82. </strong>Xong tất cả thì bạn chọn <strong>Replace All </strong>và nhớ <strong>CTRL+S </strong>nha <strong>^^.</strong></p>
+<figure id="attachment_7475" aria-describedby="caption-attachment-7475" style="width: 1366px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png"><img class="wp-image-7475 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png" alt="lỗi không truy cập localhost" width="1366" height="728" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png 1366w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-300x160.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1024x546.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-768x409.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-750x400.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1140x608.png 1140w" sizes="(max-width: 1366px) 100vw, 1366px" /></a><figcaption id="caption-attachment-7475" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi đã lưu lại các bạn nhớ nhấn <strong>Restart All Services</strong> để port mới được hoạt động nhé.</p>
+<figure id="attachment_7473" aria-describedby="caption-attachment-7473" style="width: 230px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png"><img class="wp-image-7473 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png" alt="Bước 3" width="230" height="309" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png 230w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh3-223x300.png 223w" sizes="(max-width: 230px) 100vw, 230px" /></a><figcaption id="caption-attachment-7473" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Cuối cùng các bạn mở trình duyệt lên nhập <strong>localhost:82 </strong>và hiện ra như ảnh dưới là các bạn đã thay đổi port thành công rồi đó.</p>
+<figure id="attachment_7477" aria-describedby="caption-attachment-7477" style="width: 1352px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png"><img class="wp-image-7477 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png" alt="Bước 4" width="1352" height="537" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png 1352w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-300x119.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1024x407.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-768x305.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-750x298.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1140x453.png 1140w" sizes="(max-width: 1352px) 100vw, 1352px" /></a><figcaption id="caption-attachment-7477" class="wp-caption-text">Bước 4</figcaption></figure>
+<h4><strong>Tạo thư mục ảo trên WampServer:</strong></h4>
+<p>Khi sử dụng WampServer, file php của bạn thường nằm bên trong thư mục <strong>C:/wamp64/www/*.php</strong>. Điều này rất bất tiện đối với các máy đã đóng băng, vì khi tắt hay reset máy đồng nghĩa với dữ liệu trong ổ C:/ trước đó bạn đã từng thao tác sẽ bay màu. Sau đây mình sẽ hướng dẫn các bạn tạo thư mục ảo để bạn quản lý file dễ dàng hơn.</p>
+<p>Các bạn Click chuột trái vào biểu tượng của <strong>WAMP</strong>, chọn <strong>Apache –&gt; Alias directories –&gt; Add an alias.</strong></p>
+<figure id="attachment_7478" aria-describedby="caption-attachment-7478" style="width: 503px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png"><img class="wp-image-7478 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png" alt="Bước 1" width="503" height="311" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh5-300x185.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a><figcaption id="caption-attachment-7478" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>&nbsp;</p>
+<p>Một cửa sổ <strong>Command</strong> sẽ hiện lên, và các bạn làm theo hướng dẫn trên màn hình. Ở đây mình đặt alias là <strong>larva</strong></p>
+<figure id="attachment_7479" aria-describedby="caption-attachment-7479" style="width: 977px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png"><img class="wp-image-7479 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png" alt="Bước 2" width="977" height="509" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png 977w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-300x156.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-768x400.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-750x391.png 750w" sizes="(max-width: 977px) 100vw, 977px" /></a><figcaption id="caption-attachment-7479" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi Enter nó sẽ yêu cầu bạn gõ đường dẫn đến thư mục cần tạo thư mục ảo (lưu ý thư mục này phải tồn tại), ở đây mình tạo thư mục ảo trỏ đến <strong>D:/larva </strong>và ấn <strong>Enter</strong> và sẽ hiện thông báo bạn đã tạo thư mục ảo thành công.</p>
+<p><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong>Lưu ý:</strong></span></span> Khi bạn đặt tên cho <strong>alias</strong> là tên gì thì thư mục bạn muốn dẫn đến cũng nên đặt tên tương tự để tránh bị lỗi nhé !</p>
+<figure id="attachment_7483" aria-describedby="caption-attachment-7483" style="width: 978px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png"><img class="wp-image-7483 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png" alt="Bước 3" width="978" height="515" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png 978w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-768x404.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-750x395.png 750w" sizes="(max-width: 978px) 100vw, 978px" /></a><figcaption id="caption-attachment-7483" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Sau khi tạo xong, khi muốn chạy file .php trong thư mục<strong> D:/larva/</strong> bạn vào trình duyệt gõ <strong>localhost:82/larva/file php của bạn</strong> ( Tương tự khi các bạn đặt <strong>alias</strong> và trỏ đến thư mục khác ).</p>
+<p>Đến đây mình xin kết thúc bài viết này, hẹn gặp lại các bạn ở những bài tiếp theo nhé. &lt;3</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7470"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/#respond</comments>
+				<pubDate>Sat, 26 Oct 2019 06:05:51 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Bootstrap]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[graphic-design]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7248</guid>
+				<description><![CDATA[<p>Download Adobe Dreamweaver CC 2020 &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động. Nó được coi là [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span><strong>Download Adobe Dreamweaver CC 2020</strong> &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. </span><span>Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động.</span></p>
+<p>Nó được coi là trình soạn thảo <strong>HTML</strong> chuẩn <strong>WYSIWYG</strong> tiêu chuẩn của ngành, điều này sẽ làm cho việc thiết kế web trở nên rất dễ dàng cũng như rất thoải mái.</p>
+<p><figure id="attachment_7250" aria-describedby="caption-attachment-7250" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg"><img class="size-full wp-image-7250" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg" alt="adobe dreamweaver cc 2020" width="699" height="456" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020-300x196.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7250" class="wp-caption-text">Download adobe dreamweaver cc 2020</figcaption></figure></p>
+<p><strong>Adobe Dreamweaver CC 2020</strong> giúp bạn tạo,  mã và quản lý các trang web động dễ dàng bằng công cụ mã hóa thông minh, đơn giản.</p>
+<p>Đây được coi như là một phần mềm <strong>thiết kế web</strong> chuyên nghiệp cung cấp giao diện hình ảnh trực quan cho việc thiết kế và chỉnh sửa các trang web của Adobe.</p>
+<h2><span id="Cac_tinh_nang_cua_Adobe_Dreamweaver_CC_2019" class="ez-toc-section"><strong>Các tính năng của Adobe Dreamweaver CC</strong></span></h2>
+<ul>
+<li>Được coi là trình soạn thảo HTML WYSIWYG tiêu chuẩn của ngành, điều này sẽ làm cho web desiging rất dễ dàng cũng như rất thoải mái.</li>
+<li>Cho phép nhà thiết kế tạo trang web có khả năng hoạt động trên máy tính để bàn, thiết bị di động và máy tính bảng.</li>
+<li>Có công nghệ Bố cục Lưới Chất lỏng cùng với bảng điều khiển Xem trước MultiScreen sẽ cho phép bạn có được khả năng tương thích với các sản phẩm cầm tay.</li>
+<li>Có một bộ chuyển tiếp CSS sẽ đơn giản hóa quá trình tạo một số hình ảnh động hấp dẫn.</li>
+</ul>
+<h2><strong><span id="Tinh_nang_moi">Các tính năng mới của Adobe Dreamweaver CC 2020</span></strong></h2>
+<ul>
+<li>Thiết kế và xây dựng các trang Web tiêu chuẩn</li>
+<li>Mã hóa được tích hợp với môi trường đồ họa</li>
+<li>Hỗ trợ các công nghệ web và ngôn ngữ lập trình</li>
+<li>Hỗ trợ JavaScript, ActionScript, CSS, ASP, PHP, HTML</li>
+<li>Thiết kế và phát triển nhiều trang động dựa trên công nghệ Ajax</li>
+<li>Khả năng tự động phát hiện loại chương trình mã lập trình</li>
+<li>Xem và chỉnh sửa các trang web được thiết kế trực tuyến</li>
+<li>Khả năng tải lên các trang trực tiếp trên các máy chủ</li>
+<li>Công cụ thiết kế mới và hỗ trợ tích hợp công nghệ CSS</li>
+<li>Tương thích hoàn toàn với các tiêu chuẩn web mới nhất</li>
+<li>Hỗ trợ nhiều màn hình dành cho người dùng Windows</li>
+<li>Giao diện người dùng được thiết kế lại, hiện đại hơn</li>
+<li>Tăng cường tích hợp Bootstrap và hỗ trợ phiên bản mới nhất</li>
+</ul>
+<h2><span id="Cau_hinh_toi_thieu" class="ez-toc-section"><strong>Cấu hình tối thiểu:</strong></span></h2>
+<ul>
+<li>CPU: Intel® Core 2 or AMD Athlon® 64 processor; 2 GHz hoặc cao hơn</li>
+<li>Hệ điều hành: Microsoft Windows 7 SP1, Windows 8.1, or Windows 10 64 bit</li>
+<li>Ram: 2 GB of RAM (4 GB khuyến nghị)</li>
+<li>Ổ cứng: 2 GB</li>
+<li>Màn hình: 1280×1024 display with 16-bit video card</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span id="Download_Adobe_Dreamweaver_CC_2019" class="ez-toc-section" style="color: #ff0000;"><strong>Download Adobe Dreamweaver CC 2020</strong></span></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1LMPndHjZOhD7COxSvna-Eywa2NK0qbwd" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Dreamweaver CC 2020<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h2><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Dreamweaver CC 2020</strong></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/adobe-dreamweaver-cc-2019/" target="_blank" rel="noopener noreferrer">Download Adobe Dreamweaver CC 2019 Full Active &#8211; Phần mềm thiết kế, chỉnh sửa trang web chuyên nghiệp</a></strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7248"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</title>
+		<link>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/#respond</comments>
+				<pubDate>Sun, 06 Oct 2019 02:10:26 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7173</guid>
+				<description><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#. Phương pháp này cũng sử dụng thư viện Interop [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#.</p>
+<p>Phương pháp này cũng sử dụng thư viện Interop giống bài viết trước. Đầu tiên, thêm tham chiếu vào <strong><a href="https://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Excel XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Excel.</p>
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;       //Microsoft Excel 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Excel </strong>về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_excel_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Excel.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!C6wyxQIJ!TVdvnUSDGrzcxRNn0hKtQI9mQWAIb05ZeKsqoTbWIbI" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4569.1506</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Excel.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Excel </strong>trong danh sách <strong>Component Name .</strong> Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/VGEKQ1g.png"><img class="aligncenter size-full" src="https://imgur.com/VGEKQ1g.png" width="717" height="879" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+<p>
+
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel; using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Tiếp theo, bạn sẽ cần tạo references cho từng đối tượng COM được truy cập. Mỗi references phải được lưu giữ để thoát khỏi ứng dụng một cách hiệu quả khi hoàn thành.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng COM. Tạo một đối tượng COM cho mọi thứ được tham chiếu
+Excel.Application xlApp = new Excel.Application();
+Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"sandbox_test.xlsx");
+Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+Excel.Range xlRange = xlWorksheet.UsedRange;</pre>
+
+
+
+<p>Sau đó, bạn có thể đọc từ trang tính sheet, hãy nhớ rằng lập chỉ mục trong Excel không dựa trên 0. Điều này chỉ cần đọc các ô và in chúng trở lại giống như trong tệp.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//Lặp lại qua các hàng và cột và in ra bàn điều khiển khi nó xuất hiện trong tệp
+//excel is not zero based!!
+for (int i = 1; i &lt;= rowCount; i++)
+{
+    for (int j = 1; j &lt;= colCount; j++)
+    {
+        //dòng mới
+        if (j == 1)
+            Console.Write("\r\n");
+
+        //ghi giá trị vào bàn điều khiển console
+        if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+            Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t"); 
+    }
+}</pre>
+
+
+
+<p>Cuối cùng, các tham chiếu (references) đến bộ nhớ không được quản lý phải được xuất ra. Nếu điều này không được thực hiện đúng cách, thì sẽ có các quy trình kéo dài giữ quyền truy cập tập tin và ghi vào file Excel của bạn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//cleanup
+GC.Collect();
+GC.WaitForPendingFinalizers();
+
+//quy tắc của việc phát hành các đối tượng com:
+//không bao giờ sử dụng hai dấu chấm, tất cả các đối tượng COM phải được tham chiếu và phát hành riêng lẻ
+//  ví dụ: [somthing].[something].[something] ----&gt; bad
+
+//xuất các đối tượng com để dừng hoàn toàn quá trình excel chạy trong nền
+Marshal.ReleaseComObject(xlRange);
+Marshal.ReleaseComObject(xlWorksheet);
+
+//đóng lại và xuất thông tin
+xlWorkbook.Close();
+Marshal.ReleaseComObject(xlWorkbook);
+
+//thoát và xuất thông tin
+xlApp.Quit();
+Marshal.ReleaseComObject(xlApp);</pre>
+
+
+
+<p><strong>Full Code đầy đủ để đọc 1 file Excel trong C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;           
+using System.Text;
+using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;       //microsoft Excel 14 object in references-&gt; COM tab
+
+namespace Sandbox
+{
+    public class Read_From_Excel
+    {
+        public static void getExcelFile()
+        {
+
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\E56626\Desktop\Teddy\VS2012\Sandbox\sandbox_test - Copy - Copy.xlsx");
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+            //iterate over the rows and columns and print to the console as it appears in the file
+            //excel is not zero based!!
+            for (int i = 1; i &lt;= rowCount; i++)
+            {
+                for (int j = 1; j &lt;= colCount; j++)
+                {
+                    //new line
+                    if (j == 1)
+                        Console.Write("\r\n");
+
+                    //write the value to the console
+                    if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+                        Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t");
+                }
+            }
+
+            //cleanup
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            //rule of thumb for releasing com objects:
+            //  never use two dots, all COM objects must be referenced and released individually
+            //  ex: [somthing].[something].[something] is bad
+
+            //release com objects to fully kill excel process from running in the background
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+        }
+        static void Main(string[] args)
+        {
+            getExcelFile();
+            Console.Read();
+        }
+    }
+}   </pre>
+
+
+
+<div><span style="text-decoration: underline;"><strong>Tài liệu liên quan:</strong></span></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/158706/how-to-properly-clean-up-excel-interop-objects/158752" target="_blank" rel="noopener noreferrer">stackoverflow</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/eaw10et3.aspx" target="_blank" rel="nofollow noopener noreferrer">Interop Marshaling</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7173"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</title>
+		<link>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/#respond</comments>
+				<pubDate>Sat, 05 Oct 2019 18:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Word]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7156</guid>
+				<description><![CDATA[<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé! Với NET 4+ cho phép C # đọc và thao tác các tệp Microsoft Word Excel, đối với các máy tính đã cài đặt Word, Excel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png"><img class="aligncenter size-full wp-image-7163" src="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png" alt="mo doc file word c sharp" width="505" height="226" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png 505w, http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp-300x134.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Với<strong> NET 4+ cho phép C #</strong> đọc và thao tác các tệp <strong>Microsoft Word Excel</strong>, đối với các máy tính đã cài đặt Word, Excel (nếu bạn chưa cài đặt Word, Excel, hãy xem <a href="http://npoi.codeplex.com/" target="_blank" rel="nofollow noopener noreferrer">NPOI</a> ).</p>
+<p>Đầu tiên, thêm tham chiếu vào <strong><a href="http://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Word XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Word, Excel.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Word = Microsoft.Office.Interop.Word;       //Microsoft Word 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Word</strong> về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Word.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!u3BEhYRL!MSIaE4Y8ueK3fRMkkgJQbvMVNsWYh6C39sgANQfbcAM" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4603.1000</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter size-full" src="https://imgur.com/LbWXePi.png" alt="console app read file word" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Word </strong>trong danh sách <strong>Component Name . </strong>sau đó nhấn và giữ phím CTRL và chọn <strong>Microsoft.Office.Interop.Excel</strong> nếu có. Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/krK8SSG.png"><img class="aligncenter size-full" src="https://imgur.com/krK8SSG.png" width="945" height="790" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Và cuối cùng bạn chỉ cần thêm đoạn code này vào file <strong>Program.cs</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }</pre>
+
+
+
+<p>Tại line thứ 7, các bạn nhớ sửa lại đường dẫn đến file word trong máy tính của mình nhé!</p>
+<p>Và nhớ truyền đầy đủ các thư viện vào nhé!</p>
+<p><strong>Đây là Code đầy đủ để đọc và mở 1 file Word C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+namespace docfileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }
+}</pre>
+
+
+
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interop/how-to-access-office-onterop-objects" target="_blank" rel="noopener noreferrer">Access Office Interop Objects&#8230;</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">NPOI</a></li>
+<li><a href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">dllme</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">Alias</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7156"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</title>
+		<link>http://localhost:82/demowp/code-web/plugin-for-vscode/</link>
+				<comments>http://localhost:82/demowp/code-web/plugin-for-vscode/#respond</comments>
+				<pubDate>Mon, 30 Sep 2019 04:47:05 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Front End]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5492</guid>
+				<description><![CDATA[<p>Tổng Hợp Những Plugin Hỗ Trợ không thể thiếu cho VSCode. Visual Studio Code (viết tắt là VSCode) là một trình biên tập được phát triển bởi Microsoft dành cho Windows, Linux và macOS. Nó hỗ trợ chức năng debug, đi kèm với Git, có syntax highlighting, tự hoàn thành mã thông mình, snippets, và [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/plugin-for-vscode/">Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tổng Hợp Những Plugin Hỗ Trợ không thể thiếu cho VSCode. Visual Studio Code (viết tắt là VSCode) là một trình biên tập được phát triển bởi Microsoft dành cho Windows, Linux và macOS. Nó hỗ trợ chức năng debug, đi kèm với Git, có syntax highlighting, tự hoàn thành mã thông mình, snippets, và cải tiến mã nguồn.</p>
+<p><figure id="attachment_7104" aria-describedby="caption-attachment-7104" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg"><img class="size-full wp-image-7104" src="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg" alt="plugin for vscode" width="699" height="437" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode-300x188.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7104" class="wp-caption-text">Những Plugin không thể thiếu cho VSCode</figcaption></figure></p>
+<p>Hiện nay, VSCode chiếm được nhiều cảm tình của dân lập trình web nhờ hiệu suất ổn định, dễ sử dụng, cộng với vô vàn tính năng hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.</p>
+<h2 id="_1-snippets-0"><span id="1-snippets" class="ez-toc-section">1. Snippets</span></h2>
+<p>Đầu tiên phải kể đến những snippets thông dụng. Mặc dù VSCode đã hỗ trợ khá nhiều snippet trong bộ cài đặt, bạn vẫn cần snippets của các frameworks/ thư viện như React, Vue hay Angular. Bạn có thể dễ dàng tìm chúng từ VSCode Marketplace, chẳng hạn như:</p>
+<ul>
+<li>HTML Snippets</li>
+<li>JavaScript (ES6) code snippets</li>
+<li>Vue VSCode Snippets</li>
+<li>Vue 2 Snippets</li>
+</ul>
+<h2 id="_2-bracket-pair-colorizer-va-indent-rainbow-1"><span id="2-bracket-pair-colorizer-va-indent-rainbow" class="ez-toc-section">2. Bracket Pair Colorizer và Indent Rainbow</span></h2>
+<p>“Cặp đôi hoàn hảo” Bracket Pair Colorizer và Indent Rainbow sẽ tô màu cho những cặp dấu ngoặc nhọn khác nhau, đồng thời màu nền của trình soạn thảo cũng thay đổi mỗi khi bạn “đẩy vào” một cột.</p>
+<p><em>Mặc định:</em></p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/c8a8af19-3067-428c-8a63-8e739eae09af.png" alt="Bracket Pair Colorizer" width="412" height="147" data-zoom-target="https://images.viblo.asia/1600/c8a8af19-3067-428c-8a63-8e739eae09af.png" /></p>
+<p>*Với Bracket Pair Colorizer và Indent Rainbow: *</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/abd692ec-acfa-44bc-aa11-c1567cc8ad83.png" alt="Indent Rainbow" width="443" height="156" data-zoom-target="https://images.viblo.asia/1600/abd692ec-acfa-44bc-aa11-c1567cc8ad83.png" /></p>
+<h2 id="_3-indenticator-2"><span id="3-indenticator" class="ez-toc-section">3. Indenticator</span></h2>
+<p>Indenticator giúp bạn nhận biết dễ dàng các block code đang được sử dụng.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/249add0a-4bf7-451c-b350-bfd5a809d071.gif" alt="Indenticator" width="746" height="571" data-zoom-target="https://images.viblo.asia/1600/249add0a-4bf7-451c-b350-bfd5a809d071.gif" /></p>
+<h2 id="_4-gitlens-3"><span id="4-gitlens" class="ez-toc-section">4. GitLens</span></h2>
+<p>Gitlens giống như một GUI tool cho git được tích hợp vào VSCode. Nó bao gồm hàng tá features như commit, add, commit search, history, Gitlens explorer. Nó giúp cho bạn dễ dàng hơn rất nhiều trong việc teamwork khi mọi người cùng làm việc trên cùng một Repo</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/f2754dcc-2ddc-44b8-99d4-855ecaecda05.gif" alt="GitLens vscode" width="727" height="600" data-zoom-target="https://images.viblo.asia/1600/f2754dcc-2ddc-44b8-99d4-855ecaecda05.gif" /></p>
+<h2 id="_5-polacode-4"><span id="5-polacode" class="ez-toc-section">5. Polacode</span></h2>
+<p>Polacode giúp “screenshot” code một cách đẹp đẽ hơn, như ví dụ bên dưới. Rất hữu ích khi bạn cần gửi code lên diễn đàn hay mạng xã hội nhờ trợ giúp.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/1000cdf0-8e0a-495f-9a72-6657300e363c.png" alt="Polacode" width="825" height="576" data-zoom-target="https://images.viblo.asia/1600/1000cdf0-8e0a-495f-9a72-6657300e363c.png" /></p>
+<h2 id="_6-import-cost-5"><span id="6-import-cost" class="ez-toc-section">6. Import Cost</span></h2>
+<p>Bằng cách sử dụng webpack và babili-webpack-plugin, Import Cost hiển thị ngay lập tức dung lượng các thư viện được sử dụng trong dự án. Điều này rất hữu ích vì nếu càng gửi nhiều JavaScript về phía người dùng, trình duyệt càng phải tốn thời gian để dịch và thực thi, làm giảm đi hiệu suất của ứng dụng.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/d8faa20f-67f2-42ea-a046-4456b47d61d8.png" alt="Import Cost" width="825" height="223" data-zoom-target="https://images.viblo.asia/1600/d8faa20f-67f2-42ea-a046-4456b47d61d8.png" /></p>
+<h2 id="_7-material-icon-theme-6"><span id="7-material-icon-theme" class="ez-toc-section">7. Material Icon Theme</span></h2>
+<p>Material Icon Theme là Plugin giúp hiển thị icon theo phong cách Material Design</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/688e4489-4391-47ce-b916-3e956864464c.png" alt="Material Icon Theme" width="806" height="375" data-zoom-target="https://images.viblo.asia/1600/688e4489-4391-47ce-b916-3e956864464c.png" /></p>
+<h2 id="_8-vscode-icons-7"><span id="8-vscode-icons" class="ez-toc-section">8. VSCode-icons</span></h2>
+<p>Là một plugin giúp các icon trên VSCode được hiển thị một cách đẹp mắt hơn, qua đó giúp cho lập trình viên dễ dàng hơn trong quá trình làm việc với VSCode</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/162e4e1e-9591-4321-bda9-ee0d20476aab.jpeg" alt="VSCode-icons" width="528" height="296" data-zoom-target="https://images.viblo.asia/1600/162e4e1e-9591-4321-bda9-ee0d20476aab.jpeg" /></p>
+<h2 id="_loi-ket-8"><span id="loi-ket" class="ez-toc-section">Lời kết</span></h2>
+<p>Trên đây là một số Plugin mà mình đã tổng hợp được từ nhiều bài viết được chia sẻ trên các diễn đàn mà mình nghĩ bạn nên sử dụng khi bắt đầu làm việc cùng với VSCode. Hi vọng bài viết này sẽ giúp cho các bạn dễ dàng hơn trong việc sử dụng và làm việc với VSCode để tạo ra những sản phẩm tốt và ưng ý nhất.</p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/" target="_blank" rel="noopener noreferrer">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/" target="_blank" rel="noopener noreferrer">Đánh số phiên bản phần mềm – Software Versioning</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/video/tang-toc-may-tinh/" target="_blank" rel="noopener noreferrer">Bộ Video Hướng Dẫn Tăng Tốc Máy Tính Của Bạn (Speeding Up Your PC)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 &#8211; Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+</ul>
+<p style="text-align: right;"><strong>via <a href="https://viblo.asia/p/nhung-plugin-khong-the-thieu-cho-vscode-Qbq5QvLzKD8" target="_new" rel="nofollow noopener noreferrer" data-wpel-link="external">Viblo</a></strong></p>
+<p><!-- /wp:syntaxhighlighter/code --><div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5492"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/plugin-for-vscode/">Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/plugin-for-vscode/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</title>
+		<link>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/</link>
+				<comments>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/#respond</comments>
+				<pubDate>Tue, 07 May 2019 12:07:12 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Visual]]></category>
+		<category><![CDATA[Visual Studio]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6105</guid>
+				<description><![CDATA[<p>Tân Hồng IT Chia sẻ đến cho các bạn tổng hợp Full key bản quyền Professional (Pro) + Enterprise của phần mềm Microsoft Visual Studio cùng với link Download tất cả các phiên bản từ phiên bản mới nhất là bản 2019 cho đến phiên bản cũ nhất từ trước đến nay. Microsoft Visual Studio [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Tân Hồng IT</strong> Chia sẻ đến cho các bạn tổng hợp<strong> Full key bản quyền Professional (Pro) + Enterprise</strong> của phần mềm <strong>Microsoft Visual Studio</strong> cùng với link Download tất cả các phiên bản từ phiên bản mới nhất là bản <strong>2019</strong> cho đến phiên <strong>bản cũ nhất</strong> từ trước đến nay.</p>
+<p><figure style="width: 1162px" class="wp-caption alignnone"><img title="Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio" src="https://imgur.com/LA5LWv1.png" alt="Full Key Professional Enterprise Và Link Download Microsoft Visual Studio" width="1162" height="637" /><figcaption class="wp-caption-text">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio</figcaption></figure></p>
+<h2><b>Microsoft Visual Studio </b></h2>
+<p><b>Phần mềm</b> là trình biên dịch nổi tiếng bậc nhất hiện nay do <strong>Microsoft</strong> phát hành, dành cho các lập trình viên viết chương trình phục vụ cho <strong>Windows</strong>, hỗ trợ rất nhiều nền tảng hệ thống, <strong>Visual Studio</strong> có thể hỗ trợ biên dịch rất nhiều ngôn ngữ phổ biến như <strong>C/C++, C#, .NET… </strong></p>
+<p>Thông qua bản cài riêng lẻ <strong>Visual Studio</strong> có thể sử dụng để code các ngôn ngữ như <strong>HTML, APS.NET, CSS</strong>. Phiên bản gần đây nhất là năm 2019 với rất nhiều công cụ hỗ trợ và cài tiến mới nhất,<strong> Visual Studio</strong> được các trường đại học lớn ở Việt Nam để dạy môn lập trình cơ bản với ngôn ngữ<strong> C/C++,&#8230;</strong></p>
+<p>Không chỉ là ứng dụng cơ bản, phần mềm này đã giúp cho <strong>Microsoft</strong> thu về lợi nhuận cực lớn, cộng đồng hỗ trợ cho trình biên dịch này có ở khắp nơi trên thế giới với hàng loạt các giáo trình về hướng dẫn sử dụng được xuất bản và ngày càng được cải tiến.</p>
+<h2><strong>Phiên bản Visual Studio 2019 có những cải tiến như sau</strong></h2>
+<ul>
+<li>Cài đặt sẽ nhanh hơn và có giao diện mới</li>
+<li>Hỗ trợ C++14 tốt hơn xíu và hỗ trợ CMake</li>
+<li>Có các tính năng mới của C# 7.0 vs Visual Basic 15</li>
+<li>Hỗ trợ .NET Core và ASP.NET Core 1.0</li>
+</ul>
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000;"><strong>Key Bản Quyền + Link Download Visual Studio Professional (Pro) + Enterprise Tất Cả Các Phiên Bản</strong></span></h2>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Key Visual Studio 2019</span></strong></h3>
+<table style="width: 780px; height: 197px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 131px; text-align: center; height: 77px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 197px; height: 77px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=16" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 328px; height: 77px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">NYWVH-HT4XC-R2WYW-9Y3CM-X4V3Y</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 131px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 197px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&amp;rel=16" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 328px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">BF8Y8-GN2QH-T84XB-QVY3B-RC4DF</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2017</span></strong></h3>
+<table style="width: 781px; height: 193px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 128px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 204px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=15" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></p>
+<p><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=15" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 325px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<ol>
+<li style="text-align: center;"><span style="font-size: 16px;">KBJFW-NXHK6-W4WJM-CRMQB-G3CDH</span></li>
+<li style="text-align: center;"><span style="font-size: 16px;">HMGNV-WCYXV-X7G9W-YCX63-B98R2</span></li>
+<li style="text-align: center;"><span style="font-size: 16px;">HM6NR-QXX7C-DFW2Y-8B82K-WTYJV</span></li>
+</ol>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 128px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 204px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.fshare.vn/file/XG678AG69G7E" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 325px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">NJVYC-BMHX2-G77MM-4XJMR-6Q8QF</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2015</span></strong></h3>
+<table style="height: 246px; width: 785px;" width="781">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 128px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 209px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://download.microsoft.com/download/e/b/c/ebc2c43f-3821-4a0b-82b1-d05368af1604/vs2015.3.pro_enu.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 324px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">HMGNV-WCYXV-X7G9W-YCX63-B98R2</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 128px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 209px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://doc-0c-cc-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ldhpf472nmphci29e8s3gljgclh8lbo1/1555790400000/17916142987483214272/*/0BzT7Wop1SSOJZXB2QlFYQjEwbXc?e=download" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 324px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">2XNFG-KFHR8-QV3CP-3W6HT-683CH</span><br />
+<span style="font-size: 16px;">HM6NR-QXX7C-DFW2Y-8B82K-WTYJV</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2013</span></strong></h3>
+<p>&nbsp;</p>
+<table style="height: 192px; width: 780px;" width="780">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 132px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 207px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/A/F/1/AF128362-A6A8-4DB3-A39A-C348086472CC/VS2013_RTM_PRO_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">FBJVC-3CMTX-D8DVP-RTQCT-92494</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 132px; text-align: center; height: 72px;"><span style="font-size: 16px;"><b>Premium</b></span></td>
+<td style="width: 207px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/D/B/D/DBDEE6BB-AF28-4C76-A5F8-710F610615F7/VS2013_RTM_PREM_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">FBJVC-3CMTX-D8DVP-RTQCT-92494</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 132px; text-align: center; height: 65px;"><span style="font-size: 16px;"><b>Ultimate</b></span></td>
+<td style="width: 207px; text-align: center; height: 65px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/C/F/B/CFBB5FF1-0B27-42E0-8141-E4D6DA0B8B13/VS2013_RTM_ULT_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 65px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">BWG7X-J98B3-W34RT-33B3R-JVYW9</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2012</span></strong></h3>
+<table style="height: 10px; width: 779px;" width="779">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 137px; text-align: center; height: 10px;"><span style="font-size: 16px;"><b>Ultimate</b> </span></td>
+<td style="text-align: center; width: 206px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/D/B/0/DB03922C-FF91-4845-B7F2-FC68595AB730/VS2012_ULT_enu.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 312px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">YKCW6-BPFPF-BT8C9-7DCTH-QXGWC</span><br />
+<span style="font-size: 16px;">RBCXF-CVBGR-382MK-DFHJ4-C69G8</span><br />
+<span style="font-size: 16px;">YQ7PR-QTHDM-HCBCV-9GKGG-TB2TM</span><br />
+<span style="font-size: 16px;">MMVJ9-FKY74-W449Y-RB79G-8GJGJ</span><br />
+<span style="font-size: 16px;">YCFHQ-9DWCY-DKV88-T2TMH-G7BHP</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="height: 66px; width: 779px;">
+<tbody>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 348px; text-align: center;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="height: 17px; width: 349px; text-align: center;"><span style="font-size: 16px;">4D974-9QX42-9Y43G-YJ7JG-JDYBP</span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 348px; text-align: center;"><span style="font-size: 16px;"><strong>Premium</strong></span></td>
+<td style="height: 17px; width: 349px; text-align: center;"><span style="font-size: 16px;">MH2FR-BC9R2-84433-47M63-KQVWC</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2010</span></strong></h3>
+<table style="height: 10px; width: 779px;" width="779">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 137px; text-align: center; height: 10px;"><span style="font-size: 16px;"><b>Ultimate &amp;</b></span></p>
+<p><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 206px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://drive.google.com/open?id=1RLJCaOwU0vglmMLun37dunyDPLYW-RKg" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 312px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">YCFHQ-9DWCY-DKV88-T2TMH-G7BHP</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2008</span></strong></h3>
+<table style="width: 780px; height: 10px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 140px; text-align: center; height: 10px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 205px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/8/1/d/81d3f35e-fa03-485b-953b-ff952e402520/VS2008ProEdition90dayTrialENUX1435622.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 311px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;">XMQ2Y-4T3V6-XJ48Y-D3K2V-6C4WT<br />
+WPX3J-BXC3W-BPYWP-PJ8CM-F7M8T<br />
+PYHYP-WXB3B-B2CCM-V9DX9-VDY8T<br />
+WPDW8-M962C-VJX9M-HQB4Q-JVTDM</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2005</span></strong></h3>
+<table style="height: 40px; width: 779px;" width="778">
+<tbody>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 345px; text-align: center;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="height: 17px; width: 352px; text-align: center;"><span style="font-size: 16px;">KGR3T-F2C26-RRTGT-D6DQT-QBBB3</span></td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 6.0</span></strong></h3>
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;">111-1111111</p>
+<p style="text-align: center;">0123456789</p>
+<p style="text-align: center;">1234567890</p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/tag/microsoft/" target="_blank" rel="noopener noreferrer">NHỮNG PHẦN MỀM VÀ ỨNG DỤNG CŨNG NHƯ HỆ ĐIỀU HÀNH CUNG CẤP BỞI MICROSOFT</a></strong></span></p>
+<ul>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/" target="_blank" rel="noopener noreferrer">IDM Full Toolkit &#8211; Crack IDM Tiện Lợi &#8211; Không Báo Fake Serial</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></span></li>
+</ul>
+<p style="text-align: center;"><strong><span style="color: #ff0000; font-size: 28px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6105"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</title>
+		<link>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/</link>
+				<comments>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/#respond</comments>
+				<pubDate>Tue, 26 Mar 2019 05:22:40 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Bootstrap]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Bootstrap Studio]]></category>
+		<category><![CDATA[Bootstrap Studio 4 Full Key]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Crack]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Key]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5620</guid>
+				<description><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn phần mềm Bootstrap Studio 4 Full Key Crack kích hoạt bản quyền để các bạn sử dụng và học tập nhé! Giới thiệu Bootstrap Studio Full Bootstrap Studio là một ứng dụng để tạo ra các trang web (thiết kế website). Nó đi kèm với [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn phần mềm <strong>Bootstrap Studio 4 Full Key Crack</strong> kích hoạt bản quyền để các bạn sử dụng và học tập nhé!</p>
+<p><figure id="attachment_5631" aria-describedby="caption-attachment-5631" style="width: 719px" class="wp-caption aligncenter"><img class="size-full wp-image-5631" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Bootstrap-Studio-4-Full-Key.jpg" alt="Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website" width="719" height="309" /><figcaption id="caption-attachment-5631" class="wp-caption-text">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website</figcaption></figure></p>
+<h2><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Giới thiệu Bootstrap Studio Full</span></strong></span></h2>
+<p><strong>Bootstrap Studio</strong> là một ứng dụng để tạo ra các <strong>trang web (thiết kế website).</strong> Nó đi kèm với một số lượng lớn các thành phần tích hợp khác, và bạn có thể kéo và thả để lắp ráp các trang web mà không cần phải đụng vào code. <strong>Bootstrap</strong> là <strong>Framework</strong> được sử dụng phổ biến nhất hiện nay.</p>
+<p>Sau khi hoàn thành bạn sẽ xuất ra <strong>HTML</strong> sạch và ngữ nghĩa. Nếu bạn đã có mẫu thiết kế sẵn chắc chắn đây là công cụ bạn không thể bỏ qua để thiết kết <strong>HTML</strong> nhanh chóng nhất.</p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Gioi_thieu_Bootstrap_Studio_Full" title="Giới thiệu Bootstrap Studio Full">Giới thiệu Bootstrap Studio Full</a></li><li><a href="#Cac_tinh_nang_cua_Bootstrap_Studio_Full_Key" title="Các tính năng của Bootstrap Studio Full Key">Các tính năng của Bootstrap Studio Full Key</a><ul><li><a href="#Giao_dien" title="Giao diện">Giao diện</a></li><li><a href="#Tinh_nang_Xem_truoc_thoi_gian_thuc" title="Tính năng Xem trước thời gian thực">Tính năng Xem trước thời gian thực</a></li><li><a href="#Editing_Code" title="Editing Code">Editing Code</a></li><li><a href="#Co_cac_mau_Templates_dep" title="Có các mẫu Templates đẹp">Có các mẫu Templates đẹp</a></li></ul></li><li><a href="#15_Tinh_nang_cuc_ky_manh_me_co_tren_Bootstrap_Studio" title="15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio">15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio</a></li><li><a href="#Download_Bootstrap_Studio_4_Full_Key" title="Download Bootstrap Studio 4 Full Key">Download Bootstrap Studio 4 Full Key</a><ul><li><a href="#Download_File_Setup_Bootstrap_Studio_4" title="Download File Setup Bootstrap Studio 4">Download File Setup Bootstrap Studio 4</a></li><li><a href="#Download_File_Crack_Key_cho_Bootstrap_Studio_4" title="Download File Crack Key cho Bootstrap Studio 4">Download File Crack Key cho Bootstrap Studio 4</a></li></ul></li><li><a href="#Huong_dan_cai_dat_va_crack_key_Bootstrap_Studio_4" title="Hướng dẫn cài đặt và crack key Bootstrap Studio 4">Hướng dẫn cài đặt và crack key Bootstrap Studio 4</a></li></ul></nav></div>
+<h2><span style="text-decoration: underline; color: #ff0000;"><strong>Các tính năng của Bootstrap Studio Full Key</strong></span></h2>
+<p><strong>Bootstrap</strong> là một <strong>Framework</strong> <strong>HTML, CSS, và JavaScript</strong> cho phép thiết kế phát triên các <strong>website</strong> hỗ trợ <strong>responsive</strong>, hiện tại <strong>Bootstrap</strong> là một trong những thư viện <strong>CSS</strong> và <strong>Javascript</strong> được dùng nhiều nhất trên thế giới với nhiều ưu điểm như:</p>
+<ul>
+<li>Chuẩn hiển thị trên mọi màn hình, mọi trình duyệt Tự động điều chỉnh kích thước trang theo kích thước trình duyệt</li>
+<li>Tốc độ load cao Hỗ trợ nhiều kiểu hiển thị sẵn, nhiều kiểu box, nhiều kiểu form đẹp và sang trọng</li>
+<li>Hỗ trợ LESS và SASS giúp lập trình viên nhanh chóng tích hợp Bootstrap</li>
+<li>Việc tích hợp Bootstrap vào website cũng rất dễ dàng và thuận tiện</li>
+</ul>
+<h3><span style="color: #0000ff;"><strong>Giao diện</strong></span></h3>
+<p><strong>Bootstrap Studio</strong> có giao diện đẹp và mạnh mẽ, được xây dựng xung quanh sự đơn giản của kéo và thả. Điều này làm cho nó trở thành công cụ hoàn hảo để tạo mẫu và thiết kế các trang web và ứng dụng.</p>
+<p><img class="aligncenter" title="Giao diện Bootstrap Studio " src="https://bootstrapstudio.io/assets/img/app_2.jpg" alt="Giao diện Bootstrap Studio " width="1566" height="1023" /></p>
+<h3><span style="color: #0000ff;"><strong>Tính năng Xem trước thời gian thực</strong></span></h3>
+<p>Bootstrap Studio có một tính năng mạnh mẽ được gọi là <strong>Preview. </strong>Với nó, bạn có thể mở thiết kế của mình trong nhiều trình duyệt web và thiết bị và mọi thay đổi bạn thực hiện trong ứng dụng sẽ được hiển thị ngay lập tức ở mọi nơi.</p>
+<p><img class="aligncenter" title="Xem trước thời gian thực" src="https://bootstrapstudio.io/assets/img/real_time_preview.jpg" alt="Xem trước thời gian thực" width="600" height="400" /></p>
+<h3><strong><span style="color: #0000ff;">Editing Code</span></strong></h3>
+<p>Tính năng này cho phép bạn trích xuất ra các mã nguồn từ việc bạn kéo thả.</p>
+<h3><img class="aligncenter" title="Editing Code" src="https://bootstrapstudio.io/assets/img/css-editing.png" alt="Editing Code" width="697" height="462" /><span style="color: #0000ff;"><strong>Có các mẫu Templates đẹp</strong></span></h3>
+<p>Ứng dụng đi kèm với một số mẫu cao cấp, đáp ứng đầy đủ mà bạn có thể tùy chỉnh. Mỗi mẫu bao gồm nhiều trang và widget bạn có thể chọn và kết hợp vào trang web hoàn hảo.</p>
+<p><img class="aligncenter" title="mẫu Templates đẹp 1" src="https://bootstrapstudio.io/assets/img/templates/template_5.jpg" alt="mẫu Templates đẹp 1" width="1100" height="800" /><img class="aligncenter" title="mẫu Templates đẹp 2" src="https://bootstrapstudio.io/assets/img/templates/template_6.jpg" alt="mẫu Templates đẹp 2" width="1308" height="963" /><img class="aligncenter" title="mẫu Templates đẹp 3" src="https://bootstrapstudio.io/assets/img/templates/template_1.jpg" alt="kích hoạt Bootstrap Studio 4 key crack" width="1308" height="964" /><img class="aligncenter" title="mẫu Templates đẹp 4" src="https://bootstrapstudio.io/assets/img/templates/template_4.png" alt="Bootstrap Studio 4 key crack" width="1100" height="800" /></p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM TẠI: <a href="https://bootstrapstudio.io/" target="_blank" rel="noopener noreferrer">https://bootstrapstudio.io/</a></strong></span></p>
+<h2><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>15 Tính năng cực kỳ mạnh mẽ có trên Bootstrap Studio</strong></span></span></h2>
+<p style="text-align: center;"><div class="su-youtube su-u-responsive-media-yes"><iframe width="700" height="440" src="https://www.youtube.com/embed/KSJ7Kfonn7I?" frameborder="0" allowfullscreen="true" allow="autoplay; fullscreen" title=""></iframe></div>
+<h2><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>Download Bootstrap Studio 4 Full Key</strong></span></span></h2>
+<p>Các bạn tải <strong>file cài đặt</strong> và<strong> file crack key kích hoạt</strong> bản quyền <strong>Bootstrap Studio 4</strong> tại đây:</p>
+<ul>
+<li>
+<h3><span style="color: #0000ff;"><strong>Download File Setup Bootstrap Studio 4</strong></span></h3>
+</li>
+</ul>
+<p style="text-align: center;"><strong>Link Download trực tiếp từ trang chủ : <a class="btn btn-default" href="https://bootstrapstudio.io/download" target="_blank" rel="noopener noreferrer">DOWNLOAD TỪ TRANG CHỦ</a></strong></p>
+<p style="text-align: center;"><strong>Dự Phòng &#8211; Download theo link google Drive: <a class="btn btn-default" href="https://drive.google.com/open?id=1awpdxe-HSx9HFFZTij_P1kjk3E6O3nCb" target="_blank" rel="noopener noreferrer">LINK GG DRIVE</a></strong></p>
+<ul>
+<li>
+<h3><strong><span style="color: #0000ff;">Download File Crack Key cho Bootstrap Studio 4</span></strong></h3>
+</li>
+</ul>
+<p style="text-align: center;"><strong>Download Theo Link Google Drive: <a class="btn btn-default" href="https://drive.google.com/open?id=1c4ox4PRjga7z9DtDUeAOzuWjuxlP9uNP" target="_blank" rel="noopener noreferrer">LINK GG DRIVE</a></strong></p>
+<p style="text-align: center;"><strong>Link Download File Key Crack Dự Phòng <a class="btn btn-default" href="https://mshare.io/file/l5pikLwP" target="_blank" rel="noopener noreferrer">LINK DỰ PHÒNG</a></strong></p>
+<p>Hiện tại phần mềm mềm bootstrap có giá 29$ với bản <strong>standard</strong> và 60$ với bản <strong>lifetime</strong>, nếu có điều kiện các bạn có thể mua tại trang chủ của hãng.</p>
+<h2><span style="text-decoration: underline; color: #ff0000;"><strong>Hướng dẫn cài đặt và crack key Bootstrap Studio 4</strong></span></h2>
+<ol>
+<li>Tải file cài đặt và file crack Key theo link phía trên về máy.</li>
+<li>Giải nén và khởi chạy file setup để cài đặt.</li>
+<li>Sau khi cài đặt xong phần mềm bạn hãy tắt triệt để phần mềm đi.</li>
+<li>Copy file crack trong thư mục <strong>Key</strong> vào đường dẫn <strong>C:\Program Files\Bootstrap Studio\resources</strong></li>
+<li>Mở chạy phần mềm và sử dụng.</li>
+</ol>
+<p><span style="font-size: 24pt;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/cong-cu-lap-trinh/" target="_blank" rel="noopener noreferrer">Các công cụ lập trình khác.</a></strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/tai-lieu/development/angular-7-course-by-lior-avital-become-an-angular-expert/" target="_blank" rel="noopener noreferrer">Download Khóa Học Angular 7 Course by Lior Avital &#8211; Become an Angular Expert</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/ky-nang-song/lam-chu-hay-lam-thue/" target="_blank" rel="noopener noreferrer">Làm Chủ Hay Làm Thuê: Bạn Muốn Tự Do Bay Lượn Như Đại Bàng Hay Mãi Sống Như Kiếp Gà?</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5620"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">12</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Plugin Yoast SEO Premium 12.3 mới nhất miễn phí [Update]</title>
+		<link>http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/</link>
+				<comments>http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/#respond</comments>
+				<pubDate>Fri, 15 Mar 2019 05:27:32 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Plugin]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5581</guid>
+				<description><![CDATA[<p>Trong bài viết này mình chia sẻ đến cho các bạn Plugin Yoast SEO Premium 12.3 được cập nhật mới nhất để các bạn có thể tải về miễn phí và sử dụng cho website của các bạn. Nếu bạn sử dụng WordPress thì chắc hẳn Plugin Yoast SEO Premium không còn xa lạ gì với [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/">Download Plugin Yoast SEO Premium 12.3 mới nhất miễn phí [Update]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Trong bài viết này mình chia sẻ đến cho các bạn Plugin Yoast SEO Premium 12.3 </strong>được cập nhật mới nhất để các bạn có thể tải về miễn phí và sử dụng cho website của các bạn.</p>
+<p>Nếu bạn sử dụng <strong>WordPress</strong> thì chắc hẳn <strong>Plugin Yoast SEO Premium </strong>không còn xa lạ gì với bạn và gần như không thể thiếu với bất kỳ <strong>website WordPress</strong> nào.</p>
+<p><strong>Plugin Yoast SEO </strong>có thể coi là<strong> <em>plugin tối ưu seo cho WordPress</em></strong> tốt nhất hiện nay.</p>
+<p><figure id="attachment_5852" aria-describedby="caption-attachment-5852" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/03/Download-Free-Yoast-SEO-Plugins-Premium.jpg"><img class="wp-image-5852 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Download-Free-Yoast-SEO-Plugins-Premium.jpg" alt="Download Free Yoast SEO Plugins Premium" width="699" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/Download-Free-Yoast-SEO-Plugins-Premium.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/03/Download-Free-Yoast-SEO-Plugins-Premium-300x157.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-5852" class="wp-caption-text">Download Free Yoast SEO Plugins Premium</figcaption></figure></p>
+<p>Để sở hữu <strong>plugin Yoast SEO</strong> bạn có thể tải <em>miễn phí</em> từ thư viện plugin của WordPress hoặc tải<strong> </strong><a href="https://vi.wordpress.org/plugins/wordpress-seo/" target="_blank" rel="noopener noreferrer"><strong>Tại đây</strong></a> và cài đặt thủ công. Tuy nhiên đó chỉ là phiên bản <em>miễn phí</em> do nhà phát triển phát hành và giới hạn một số tính năng đối với các <strong>Webmaster</strong> và <strong>SEOer</strong>…</p>
+<p></p>
+<p>Sẽ có những khác biệt nhất định của phiên bản <strong>SEO by Yoast miễn phí</strong> và phiên bản <strong>Yoast SEO Premium cho Website.</strong></p>
+<p>Về cơ bản,<strong> Yoast SEO miễn phí và Yoast SEO Premium</strong> đều cho các bạn những tùy chỉnh trực tiếp liên quan đến tối ưu<strong> SEO cho website</strong>: Tối ưu tiêu đề, mô tả, tối ưu đường dẫn, mạng xã hội hay tạo sitemap. Những tính năng như vậy thì Yoast SEO miễn phí đã đủ cho bạn sử dụng.</p>
+<p>Nhưng một vài tính năng mà chỉ có <strong>Plugin</strong> <strong>Yoast SEO Website Premium</strong> mới có.</p>
+<h3><span style="text-decoration: underline; font-size: 24px; color: #ff0000;"><strong>Những Lợi Ích mà Plugin Yoast SEO Premium Mang Lại.</strong></span></h3>
+<ul>
+<li>
+<h4><strong><span style="font-size: 20px;"><span style="color: #0000ff;">Có thể thêm đến 5 Focus keyword</span><img class="alignright" src="https://imgur.com/DMjBgUj.png" alt="công cụ cho website" width="252" height="374" /></span></strong></h4>
+</li>
+</ul>
+<p>Tính năng Focus Keyword của Yoast SEO là tính năng tính toán xem nội dung có tối ưu cho từ khóa đó không, hay còn những vấn đề nào chưa tối ưu cho từ khóa đó:</p>
+<p>Với plugin SEO by Yoast miễn phí, các bạn chỉ có thể sử dụng Focus Keyword cho 1 từ khóa. Tuy nhiên, đối với bản Premium, thì bạn có thể sử dụng cho tối đa 5 từ khóa.</p>
+<ul>
+<li>
+<h4><span style="color: #0000ff;"><strong>Tối ưu đường dẫn bài viết (url).</strong></span></h4>
+</li>
+<li>
+<h4><span style="color: #0000ff;"><strong>Có tối ưu mô tả bài viết (description).</strong></span></h4>
+</li>
+<li>
+<h4><span style="color: #0000ff;"><strong>Tối ưu thông tin chia sẻ lên bài viết lên mạng xã hội như facebook, twitter.</strong></span></h4>
+</li>
+<li>
+<h4><span style="color: #0000ff;"><strong>Tính năng Social Preview mạng xã hội như facebook, twitter.</strong></span></h4>
+</li>
+</ul>
+<p>Đây là tính năng cho phép bạn xem trước bài đăng khi chia sẻ lên mạng xã hội. Xem cách hiển thị để có thể điều chỉnh lại cho phù hợp:</p>
+<p><img class="aligncenter" src="https://imgur.com/opg2dou.png" alt="tăng seo cho website " width="514" height="777" /></p>
+<p>Với tính năng<strong> Social Preview</strong> này, bạn có thể tùy chỉnh lại các đoạn nội dung hiển thị như tiêu đề, mô tả và cả hình ảnh để có kết quả chia sẻ trên các mạng xã hội tốt nhất.</p>
+<p>Đây là tính năng đáng giá với những website thường xuyên chia sẻ nội dung của mình lên<strong> Facebook hay Twitter.</strong></p>
+<p>Và còn rất nhiều tính năng khác các bạn có thể xem <a href="https://yoast.com/wordpress/plugins/seo/" target="_blank" rel="noopener noreferrer"><strong>tại đây.</strong></a></p>
+<ul>
+<li>
+<h4><span id="3_De_xuat_lien_ket_noi_bo_Internal_linking_suggestions_Tinh_nang_nay_da_bi_bo_tren_cac_phien_ban_Yoast_SEO_moi"><strong><span style="color: #0000ff;">Đề xuất liên kết nội bộ (Internal linking suggestions)</span><img class="alignright" src="https://imgur.com/UVGQYpK.png" alt="plugin Yoast SEO Premium" width="235" height="284" /></strong> </span></h4>
+</li>
+</ul>
+<p><span id="3_De_xuat_lien_ket_noi_bo_Internal_linking_suggestions_Tinh_nang_nay_da_bi_bo_tren_cac_phien_ban_Yoast_SEO_moi">Tính năng này đã bị bỏ trên các phiên bản Yoast SEO mới.</span></p>
+<p>Hiển thị các đề xuất liên kết nội bộ đến các bài viết khác trên trang của bạn. Đây cũng là một trong những tính năng đáng đồng tiền của Yoast SEO Premium mà Yoast SEO miễn phí không có.</p>
+<p>Trong mỗi bài viết sẽ có đề xuất các liên kết nội bộ đến các bài viết khác trên trang của bạn và có nội dung liên quan và tương đồng với nội dung bạn đang viết. Với đề xuất này bạn có thể chọn ngay các <em>internal links</em> cho các bài viết của mình mà không cần phải tự tìm kiếm bài viết. Rất tiện đúng không nào !</p>
+<ul>
+<li>
+<h4><span style="font-size: 20px; color: #0000ff;"><strong><span id="5_Tinh_nang_chuyen_huong_lien_ket_Redirect_manager">Tính năng chuyển hướng liên kết (Redirect manager)</span></strong></span></h4>
+</li>
+</ul>
+<p>Đây là tính năng đáng giá nhất theo đánh giá của mình mà <strong>SEO by Yoast Premium</strong> sở hữu so với<strong> Yoast SEO miễn phí.</strong> Thay vì sử dụng các<strong> plugin Redirect</strong> hay sử dụng <strong>htaccess</strong> để chuyển hướng các liên kết. Thì bây giờ bạn sẽ có sẵn công cụ để chuyển hướng liên kết này:</p>
+<p><img class="aligncenter" src="https://imgur.com/p7SIern.png" alt="website" width="804" height="397" /></p>
+<p>Cụ thể khi bạn thay đổi hoặc xóa đường dẫn bài viết hay trang của bạn thì công cụ này sẽ tự động tạo link redirect từ đường dẫn url cũ sang đường dẫn url mới giúp website bạn không bị thông báo lỗi 404 khi bot các công cụ tìm kiếm truy cập.</p>
+<ul>
+<li>
+<h4><span style="font-size: 20px; color: #0000ff;"><strong><span id="6_Tinh_nang_xuat_toan_bo_tu_khoa_tu_tat_ca_cac_bai_viet_ra_file_excel_Focus_keyword_export">Tính năng xuất toàn bộ từ khóa từ tất cả các bài viết ra file excel (Focus keyword export)</span></strong></span></h4>
+</li>
+</ul>
+<p>Bạn có thể xuất tất cả các thông tin từ khóa từ các bài viết và điểm seo của nó ra file excel (CSV export).</p>
+<ul>
+<li>
+<h4><span style="color: #0000ff;"><strong><span id="4_De_xuat_tu_khoa_cho_bai_viet_Content_insights" style="font-size: 20px;">Đề xuất từ khóa cho bài viết (Content insights)</span></strong></span></h4>
+</li>
+</ul>
+<p>Hiển thị đề xuất 5 từ khóa hoặc cụm từ khóa được sử dụng nhiều nhất trong nội dung bài viết để so sánh với các từ khóa bạn lựa chọn cho bài viết xem có phù hợp hay không ?</p>
+<hr />
+<h3 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000; font-size: 32px;"><strong>Download plugin Yoast SEO Premium 12.3 cho Website mới nhất</strong></span></h3>
+<p>Đây là phiên bản<span style="color: #0000ff;"> <strong>Plugin Yoast SEO Premium</strong></span> Website sạch hoàn toàn được tải từ nhà phát hành về nên các bạn có thể yên tâm tải về và sủ dụng.</p>
+<p style="text-align: center;">Tải về plugin <strong>Yoast SEO Premium 12.3 </strong>mới nhất cập nhật ngày <strong>26/10/2019</strong>.</p>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/YJJUBRKDRIZ4?token=1572026958" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:21px;color:#ffffff"></i> Free Download plugin Yoast SEO Premium 12.3 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Fshare</small></span></a></p>
+<p style="text-align: center;"><a href="https://www.mediafire.com/file/gsk3ptsh4jihlpi/wordpress-seo-premium-12.3.zip/file" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:21px;color:#ffffff"></i> Link tải dự phòng<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a><br />
+Cần lưu ý với các bạn rằng, nếu đang sử dụng phiên bản<strong> SEO by Yoast</strong> miễn phí mà muốn chuyển sang dùng <strong>Yoast SEO Premium</strong> này, thì các bạn chỉ cần <strong>gỡ bỏ plugin Yoast miễn phí.</strong> Sau đó <em>tải plugin Yoast SEO Premium</em> này lên, thì mọi cài đặt sẽ được phục hồi lại như cũ.</p>
+<p>Các bạn có thể theo dõi bài viết này thường xuyên hoặc đăng ký thông báo từ cái <strong>Chuông màu Hồng</strong> ở bên trái góc dưới màn hình để biết khi nào mình cập nhật<strong> plugin Yoast Premium</strong> này.</p>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>5/10/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1Uj2A2CsocQ2G2T_4cDjlkmpAMjocWfd2" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO 12.2</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>23/09/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1wtYNMzrtbctOSQottK3Z5Qi8A1akDWqU" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO 12.1</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>16/08/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1RqRwpwcph8AQlAdbASHS8S3eEnpdMuYz" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO 11.8</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>25/07/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1RqRwpwcph8AQlAdbASHS8S3eEnpdMuYz" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO 11.7</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>10/07/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1LoCHNKjsS4K6TMv10zAilme53d_nbcci" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO 11.6</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>25/04/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1o3ei5fLktFC1d-qN__WwAp5WjxNz5kJh" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO Premium 11.2</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>16/04/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1o3ei5fLktFC1d-qN__WwAp5WjxNz5kJh" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO by Yoast 11.1.1</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>16/04/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1vd95iOZExqrY4Il5YNnNOOlvAyS79Kcp" target="_blank" rel="noopener noreferrer"><strong>Phiên Bản SEO Premium 11.0.0</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>10/04/2019</strong>: </span><a style="font-size: 20px;" href="https://drive.google.com/open?id=1wsOzCriL2Zuj6WAprnmw4QfpTDa0WhJQ" target="_blank" rel="noopener noreferrer"><strong>Yoast SEO by Yoast 10.1.2</strong></a></h5>
+<h5 class="note" style="text-align: center;"><span id="12032019_Cap_nhat_Yoast_SEO_Premium_1000" style="font-size: 20px;"><strong>12/03/2019</strong>: <a href="https://drive.google.com/open?id=14QGWn6eJSoI37YagM-pcV-cubgkk37Wf"><strong>Yoast SEO Premium 10.0.0</strong></a></span></h5>
+<ul style="text-align: center;">
+<li><span style="font-size: 20px;"><strong>Yoast SEO Changelog bạn có thể xem <a href="https://yoast.com/wordpress/plugins/seo/change-log-wordpress-seo/" target="_blank" rel="noopener noreferrer">Tại đây</a></strong></span></li>
+</ul>
+<p style="text-align: center;"><strong>Để update plugin dễ dàng bạn cài: <a class="external" href="https://vi.wordpress.org/plugins/easy-theme-and-plugin-upgrades/" target="_blank" rel="nofollow noopener noreferrer">Easy theme and plugin upgrades</a></strong><br />
+Cài xong cứ update file plugin lên như bình thường, nó sẽ ghi đè được nha.</p>
+<h3><strong>Những đổi mới trong các phiên bản.</strong></h3>
+<p>Các bạn truy cập link để xem những thay đổi chi tiết: <strong><a href="https://yoast.com/tag/release-post/" target="_blank" rel="noopener noreferrer">https://yoast.com/tag/release-post/</a></strong></p>
+<p>Đặc biệt. Từ phiên bản <strong>11.6</strong> trở đi đã có những thay đổi mới về giao diện. Các bạn hãy xem chi tiết tại link trên nhé!</p>
+<h3><span style="text-decoration: underline; color: #ff0000;"><span id="Huong_dan_cai_dat"><strong>Hướng dẫn cài đặt</strong></span></span></h3>
+<div>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Lưu ý khi cài đặt:</strong></span> nếu bạn đang sử dụng phiên bản <em><strong>Yoast SEO miễn phí</strong> </em>mà muốn chuyển sang dùng phiên bản <strong><em>Yoast SEO Premium</em> </strong>này, thì các bạn chỉ cần <strong>gỡ bỏ plugin Yoast SEO miễn phí.</strong> Sau đó <strong><em>tải plugin Yoast SEO Premium</em></strong> này về và tiến hành cài đặt bình thường, thì mọi cài đặt của phiên bản Yoast SEO miễn phí cũ sẽ được cập nhật lại như cũ.</p>
+<p>Để cập nhật các phiên bản<strong> Yoast SEO Premium</strong> mới nhất từ nhà phát hành các bạn có thể theo dõi bài viết này thường xuyên để cập nhật nhé !</p>
+<p><strong>XEM THÊM: <a href="http://localhost:82/demowp/plugin/">Một số Plugin khác.</a></strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/bootstrap/bootstrap-studio-4-full-key/" target="_blank" rel="noopener noreferrer">Download Bootstrap Studio 4 Full Key – Phần Mềm Thiết Kế Website Với Bootstrap Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/" target="_blank" rel="noopener noreferrer">Công cụ Visbug, chính chủ Google làm ra hỗ trợ cho FrontEnd Designer (cập nhật v2.17)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/" target="_blank" rel="noopener noreferrer">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a></strong></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong><span style="color: #ff0000; font-size: 32px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5608"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">9</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<div class="jeg_review_wrap">
+<h3 class="jeg_review_subtitle">The Review</h3>
+<h2 class="jeg_review_title">
+                    Đánh Giá Plugin<br />
+                </h2>
+<div class="jeg_reviewheader clearfix">
+<div class="review_score score_good">
+                    <span class="score_value">94<span class="percentsym">%</span> </span><br />
+                    <span class="score_text">Score</span>
+                </div>
+<div class="desc"  style=''>
+<p>Là một trong những Plugin tối ưu SEO tốt nhất cho website WordPress. Cập nhật nhanh các thay đổi SEO theo Google. Tính năng đa dạng, phù hợp với các dự án SEO website, blog</p>
+</p></div></div>
+<div class="jeg_reviewdetail clearfix">
+<div class="conspros">
+<h3>PROS</h3>
+<ul>
+<li><i class="jegicon-check"></i> Có nhiều tính năng tốt để tối ưu SEO</li>
+<li><i class="jegicon-check"></i> Được cập nhật thường xuyên</li>
+<li><i class="jegicon-check"></i> Các tính năng dễ thao tác và sử dụng</li>
+<li><i class="jegicon-check"></i> Giao diện đẹp mắt dễ sử dụng</li>
+</ul></div>
+<div class="conspros">
+<h3>CONS</h3>
+<ul>
+<li><i class="jegicon-cross"></i> Chi phí bản Premium khá cao</li>
+</ul></div></div>
+<div class="jeg_reviewscore jeg_reviewbars clearfix" data-scoretype="percent">
+<h3>Review Breakdown</h3>
+<ul>
+<li>
+                        <strong>Dễ sử dụng</strong><br />
+                        <span class="reviewscore">0%</span></p>
+<div class="jeg_reviewbar_wrap">
+                            <span data-width="100" class="barbg"></span>
+                        </div>
+</li>
+<li>
+                        <strong>Cập nhật</strong><br />
+                        <span class="reviewscore">0%</span></p>
+<div class="jeg_reviewbar_wrap">
+                            <span data-width="100" class="barbg"></span>
+                        </div>
+</li>
+<li>
+                        <strong>Hỗ trợ 24/7</strong><br />
+                        <span class="reviewscore">0%</span></p>
+<div class="jeg_reviewbar_wrap">
+                            <span data-width="100" class="barbg"></span>
+                        </div>
+</li>
+<li>
+                        <strong>Tính năng</strong><br />
+                        <span class="reviewscore">0%</span></p>
+<div class="jeg_reviewbar_wrap">
+                            <span data-width="90" class="barbg"></span>
+                        </div>
+</li>
+<li>
+                        <strong>Chi phí</strong><br />
+                        <span class="reviewscore">0%</span></p>
+<div class="jeg_reviewbar_wrap">
+                            <span data-width="80" class="barbg"></span>
+                        </div>
+</li>
+</ul></div></div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/">Download Plugin Yoast SEO Premium 12.3 mới nhất miễn phí [Update]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</title>
+		<link>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/</link>
+				<comments>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/#respond</comments>
+				<pubDate>Wed, 13 Mar 2019 15:15:58 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5574</guid>
+				<description><![CDATA[<p>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc. Thư viện Javascript Particles.js —  Thư viện giúp tạo các floating particle cho [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/">67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc.</p>
+<p></p>
+<p><figure id="attachment_5860" aria-describedby="caption-attachment-5860" style="width: 596px" class="wp-caption aligncenter"><img class="size-full wp-image-5860" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer.jpg" alt="67 công cụ hữu ích, thư viện và tài nguyên cho web developer" width="596" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer.jpg 596w, http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer-300x184.jpg 300w" sizes="(max-width: 596px) 100vw, 596px" /><figcaption id="caption-attachment-5860" class="wp-caption-text">67 công cụ hữu ích, thư viện và tài nguyên cho web developer</figcaption></figure></p>
+<h3 id="f0de" class="graf graf--h3 graf-after--p"><strong>Thư viện Javascript</strong></h3>
+<p id="e7c8" class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="http://vincentgarreau.com/particles.js/" target="_blank" rel="noopener noreferrer" data-href="http://vincentgarreau.com/particles.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Particles.js </strong></a>—  Thư viện giúp tạo các floating particle cho trang web</p>
+<p class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="https://threejs.org/" target="_blank" rel="noopener noreferrer" data-href="https://threejs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Three.js</strong></a> —  Thư viện giúp tạo các đối tượng và không gian 3D trên trang web</p>
+<p id="017a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://alvarotrigo.com/fullPage/#firstPage" target="_blank" rel="noopener noreferrer" data-href="https://alvarotrigo.com/fullPage/#firstPage" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Fullpage.js</strong></a><strong class="markup--strong markup--p-strong"> </strong>—  Giúp dễ dàng thực hiện tính năng cuộn trang</p>
+<p id="b523" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.mattboldt.com/demos/typed-js/" target="_blank" rel="noopener noreferrer" data-href="http://www.mattboldt.com/demos/typed-js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Typed.js</strong></a> — Hiệu ứng đánh máy</p>
+<p id="ca6e" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://imakewebthings.com/waypoints/" target="_blank" rel="noopener noreferrer" data-href="http://imakewebthings.com/waypoints/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Waypoints.js </strong></a>— Kích hoạt một function khi bạn di chuyển đến một element của web</p>
+<p id="f4d2" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://highlightjs.org/" target="_blank" rel="noopener noreferrer" data-href="https://highlightjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Highlight.js</strong> </a>—  Làm nổi bật các cú pháp cho website</p>
+<p id="d10f" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.chartjs.org/" target="_blank" rel="noopener noreferrer" data-href="http://www.chartjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Chart.js</strong></a> —  Tạo các biểu đồ trực quan bằng cách dùng javascript</p>
+<p id="8d19" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://instantclick.io/" target="_blank" rel="noopener noreferrer" data-href="http://instantclick.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Instantclick</strong></a> —  Đẩy nhanh thời gian tải trang, tải trước tài nguyên trên di chuột</p>
+<p id="2b60" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://gionkunz.github.io/chartist-js/index.html" target="_blank" rel="noopener noreferrer" data-href="http://gionkunz.github.io/chartist-js/index.html" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Chartist</strong></a> —  Một thư viện về biểu đồ khác</p>
+<p id="5a8d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://darsa.in/motio/#!introduction" target="_blank" rel="noopener noreferrer" data-href="http://darsa.in/motio/#!introduction" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Motio </strong></a>—  Một thư viện cho các hình động và hoạt họa dựa trên nền sprite</p>
+<p id="3383" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://git.blivesta.com/animsition/" target="_blank" rel="noopener noreferrer" data-href="http://git.blivesta.com/animsition/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animstion</strong></a> —  Plugin Jquery cho chuyển đổi trang bằng css animaton</p>
+<p id="94ce" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/luruke/barba.js" target="_blank" rel="noopener noreferrer" data-href="https://github.com/luruke/barba.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Barba.js</strong></a> — Chuyển trang bằng fluid</p>
+<p id="88b5" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://zurb.com/playground/twentytwenty" target="_blank" rel="noopener noreferrer" data-href="http://zurb.com/playground/twentytwenty" data-wpel-link="external"><strong class="markup--strong markup--p-strong">TwentyTwenty </strong></a>— Một công cụ khác biệt trực quan để tìm những khác biệt</p>
+<p id="9df9" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/maxwellito/vivus#vivusjs" target="_blank" rel="noopener noreferrer" data-href="https://github.com/maxwellito/vivus#vivusjs" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Vivus.js</strong></a> — Thư viện để tạo các ảnh vẽ trên SVG</p>
+<p id="1e98" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://mynameismatthieu.com/WOW/" target="_blank" rel="noopener noreferrer" data-href="http://mynameismatthieu.com/WOW/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Wow.js</strong> </a>— Cung cấp các animation khi bạn cuộn trang</p>
+<p id="9fe5" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/anthonyly/Scrolline.js" target="_blank" rel="noopener noreferrer" data-href="https://github.com/anthonyly/Scrolline.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Scrolline.js</strong></a> —  Theo dõi việc bạn đã cuộn từ đầu cho đến khi kết thúc trang</p>
+<p id="ef37" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://velocityjs.org/" target="_blank" rel="noopener noreferrer" data-href="http://velocityjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Velocity.js</strong></a> —  Tạo hình động với javascript cực nhanh và đẹp</p>
+<p id="8f19" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://michalsnik.github.io/aos/" target="_blank" rel="noopener noreferrer" data-href="http://michalsnik.github.io/aos/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animate on scroll</strong></a> —  Tạo sự đơn giản cho webite</p>
+<p id="1bc8" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://handlebarsjs.com/" target="_blank" rel="noopener noreferrer" data-href="http://handlebarsjs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Handlebars.js</strong></a> — Cung cấp các mẫu  Javascript</p>
+<p id="c071" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.pixxelfactory.net/jInvertScroll/" target="_blank" rel="noopener noreferrer" data-href="http://www.pixxelfactory.net/jInvertScroll/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">jInvertScroll</strong></a> — Cuộn trang với Parallax</p>
+<p id="dea1" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/peachananr/onepage-scroll" target="_blank" rel="noopener noreferrer" data-href="https://github.com/peachananr/onepage-scroll" data-wpel-link="external"><strong class="markup--strong markup--p-strong">One page scroll</strong></a> —  Một trang cuộn thư viện</p>
+<p id="dc3b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/wagerfield/parallax" target="_blank" rel="noopener noreferrer" data-href="https://github.com/wagerfield/parallax" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Parallax.js</strong></a> —  Công cụ Parallax phản ứng với một thiết bị thông minh</p>
+<p id="b87a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://twitter.github.io/typeahead.js/" target="_blank" rel="noopener noreferrer" data-href="http://twitter.github.io/typeahead.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Typeahead.js </strong></a>—  Hoàn thành tìm kiếm</p>
+<p id="b252" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://skidding.github.io/dragdealer/" target="_blank" rel="noopener noreferrer" data-href="http://skidding.github.io/dragdealer/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Dragdealer.js</strong></a> —  Thư viện cung cấp việc minh họa drag</p>
+<p id="b980" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://bouncejs.com/" target="_blank" rel="noopener noreferrer" data-href="http://bouncejs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Bounce.js </strong></a>—  Tạo các hình động CSS3 cool</p>
+<p id="6012" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/alvarotrigo/pagePiling.js" target="_blank" rel="noopener nofollow noreferrer" data-href="https://github.com/alvarotrigo/pagePiling.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Pagepiling.js</strong></a> —  Cuộn một trang</p>
+<p id="1032" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/alvarotrigo/multiscroll.js" target="_blank" rel="noopener nofollow noreferrer" data-href="https://github.com/alvarotrigo/multiscroll.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Multiscroll.js </strong></a>—  Cuộn một trang web thành hai thanh cuộn dọc</p>
+<p id="2b26" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://lab.ejci.net/favico.js/" target="_blank" rel="noopener noreferrer" data-href="http://lab.ejci.net/favico.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Favico.js</strong></a> — Tạo các  favicon đa dạng</p>
+<p id="e06a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://aerolab.github.io/midnight.js/" target="_blank" rel="noopener noreferrer" data-href="http://aerolab.github.io/midnight.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Midnight.js </strong></a>— Chuyển tiêu đề thành cố định</p>
+<p id="eb51" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://animejs.com/" target="_blank" rel="noopener noreferrer" data-href="http://animejs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Anime.js </strong></a>— Thư viện animation</p>
+<p id="e432" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://keycode.info/" target="_blank" rel="noopener noreferrer" data-href="http://keycode.info/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Keycode</strong></a> — Tạo  keycode javascript chỉ với một nút</p>
+<p id="1184" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://rubaxa.github.io/Sortable/" target="_blank" rel="noopener noreferrer" data-href="http://rubaxa.github.io/Sortable/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Sortable</strong></a> — Kéo và thả</p>
+<p id="950b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://projects.sergiodinislopes.pt/flexdatalist/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://projects.sergiodinislopes.pt/flexdatalist/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Flexdatalist </strong></a>—  Tự động điền</p>
+<p id="b120" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://slideout.js.org/" target="_blank" rel="noopener noreferrer" data-href="https://slideout.js.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Slideout.js </strong></a>—  Trình điều hướng trình chiếu cho các ứng dụng di động</p>
+<p id="b3cf" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://jquerymy.com/#/" target="_blank" rel="noopener noreferrer" data-href="http://jquerymy.com/#/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Jquerymy</strong></a> —  Liên kết dữ liệu bằng cách sử dụng jquery</p>
+<p id="2a66" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://nosir.github.io/cleave.js/" target="_blank" rel="noopener noreferrer" data-href="http://nosir.github.io/cleave.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Cleave.js </strong></a>— Định dạng nội dung nhập</p>
+<p id="7e1d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://smalljs.org/client-side-routing/page/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://smalljs.org/client-side-routing/page/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Page</strong></a> — Định tuyến phía client cho các ứng dụng trang đơn</p>
+<p id="2122" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://selectize.github.io/selectize.js/" target="_blank" rel="noopener noreferrer" data-href="http://selectize.github.io/selectize.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Selectize.js</strong></a> — Selected box ghép nối để thêm tag</p>
+<p id="8e3b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://hernansartorio.com/jquery-nice-select/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://hernansartorio.com/jquery-nice-select/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Nice select </strong></a>— Thư viện JQuery để tạo các hộp chọn</p>
+<p id="9118" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://tether.io/" target="_blank" rel="noopener noreferrer" data-href="http://tether.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Tether</strong></a> —  Sử dụng các yếu tố định vị một cách hiệu quả</p>
+<p id="b895" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/HubSpot/shepherd" target="_blank" rel="noopener noreferrer" data-href="https://github.com/HubSpot/shepherd" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Shepherd.js </strong></a>—  Hướng dẫn người dùng thông qua ứng dụng</p>
+<p id="8f4c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/HubSpot/tooltip" target="_blank" rel="noopener noreferrer" data-href="https://github.com/HubSpot/tooltip" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Tooltip</strong></a> — Tên speak cho chính nó</p>
+<p id="6555" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://select2.github.io/" target="_blank" rel="noopener noreferrer" data-href="https://select2.github.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Select2</strong></a> — Thay thế Jquery cho các selected box</p>
+<p id="56bf" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://izitoast.marcelodolce.com/" target="_blank" rel="noopener noreferrer" data-href="http://izitoast.marcelodolce.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">IziToast</strong></a> —Dễ dàng thực hiện các js notification</p>
+<p id="b53b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://izimodal.marcelodolce.com/" target="_blank" rel="noopener noreferrer" data-href="http://izimodal.marcelodolce.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">IziModal </strong></a>— Dễ dàng thực hiện các js modal</p>
+<h3><strong>Thư viện CSS / Công cụ thiết kế</strong></h3>
+<p id="8762" class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener noreferrer" data-href="https://daneden.github.io/animate.css/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animate.css</strong></a> — Thư viện animation</p>
+<p id="6ada" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://flatuicolors.com/" target="_blank" rel="noopener noreferrer" data-href="https://flatuicolors.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Flat UI Colors </strong></a>— Danh sách các màu chính đơn giản và hiệu quả</p>
+<p id="1c43" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://getmdl.io/index.html" target="_blank" rel="noopener noreferrer" data-href="https://getmdl.io/index.html" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Material design lite</strong></a><strong class="markup--strong markup--p-strong"> </strong>— Framework dựa trên material design của Google</p>
+<p id="b056" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.materialui.co/" target="_blank" rel="noopener noreferrer" data-href="https://www.materialui.co/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Materialui.co</strong></a> —  Nhiều tài nguyên cho material design framework</p>
+<p id="ec6c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.webpagefx.com/web-design/random-color-picker/" target="_blank" rel="noopener nofollow noreferrer" data-href="https://www.webpagefx.com/web-design/random-color-picker/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Colorrrs </strong></a>—Generator màu ngẫu nhiên</p>
+<p id="ba35" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://tympanus.net/Development/SectionSeparators/" target="_blank" rel="noopener nofollow noreferrer" data-href="https://tympanus.net/Development/SectionSeparators/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Section separators</strong></a> — Phân chia css</p>
+<p id="a5e0" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://topcoat.io/" target="_blank" rel="noopener noreferrer" data-href="http://topcoat.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Topcoat</strong></a> —  Framework</p>
+<p id="90cb" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.kirupa.com/html5/ken_burns_effect_css.htm" target="_blank" rel="noopener nofollow noreferrer" data-href="https://www.kirupa.com/html5/ken_burns_effect_css.htm" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Create ken burns effect </strong></a>— Ken hiệu ứng bằng cách sử dụng các css3 animation</p>
+<p id="be69" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.vittoriozaccaria.net/dyn-css/" target="_blank" rel="noopener noreferrer" data-href="http://www.vittoriozaccaria.net/dyn-css/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">DynCSS</strong></a> —  Thêm các hàm vào css, làm cho nó trở nên thân thiện</p>
+<p id="9230" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://webkul.github.io/csspin/" target="_blank" rel="noopener noreferrer" data-href="https://webkul.github.io/csspin/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">CSSpin</strong></a> —  Bộ sưu tập của css spinners</p>
+<p id="1866" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://feathericons.com/" target="_blank" rel="noopener noreferrer" data-href="https://feathericons.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Feather icons</strong></a> — Đưa ra  Icon</p>
+<p id="9250" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://ionicons.com/" target="_blank" rel="noopener noreferrer" data-href="http://ionicons.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Ion icons</strong></a> — Các icon</p>
+<p id="2a5c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://fontawesome.io/" target="_blank" rel="noopener noreferrer" data-href="http://fontawesome.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Font awesome</strong></a> — Icon và phông chữ</p>
+<p id="05f1" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://brandmark.io/font-generator/" target="_blank" rel="noopener noreferrer" data-href="http://brandmark.io/font-generator/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Font generator</strong></a> —  Kết hợp các phông chữ và tạo ra mixture</p>
+<p id="b808" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://proto.io/freebies/onoff/" target="_blank" rel="noopener noreferrer" data-href="https://proto.io/freebies/onoff/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">On/Off switch</strong></a> — Tạo chuyển đổi on/off với css</p>
+<p id="d650" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://getuikit.com/" target="_blank" rel="noopener noreferrer" data-href="https://getuikit.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">UI Kit</strong></a> —  Framework</p>
+<p id="9c58" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://getbootstrap.com/" target="_blank" rel="noopener noreferrer" data-href="http://getbootstrap.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Bootstrap</strong></a> — Framework</p>
+<p id="e4fa" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://foundation.zurb.com/" target="_blank" rel="noopener noreferrer" data-href="http://foundation.zurb.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Foundation </strong></a>— Framework</p>
+<h3 id="e0e0" class="graf graf--h3 graf-after--p"><strong>Các sản phẩm/liên kết hữu ích</strong></h3>
+<p><code><strong>&lt;cheat&gt; cheatsheet</strong></code> – một danh sách tất cả mọi thứ có thể đi vào<strong> <code>&lt;head&gt; tag</code></strong></p>
+<p id="8224" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://ghost.org/" target="_blank" rel="noopener noreferrer" data-href="https://ghost.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Ghost </strong></a>—  nền tảng blog đơn giản dựa trên node.js</p>
+<p id="c44d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.whatruns.com/" target="_blank" rel="noopener noreferrer" data-href="https://www.whatruns.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">What runs</strong></a> —  Plugin của Chrome để khám phá công nghệ nào được sử dụng để xây dựng trang web</p>
+<p id="803e" class="graf graf--p graf-after--p graf--trailing"><a class="markup--anchor markup--p-anchor" href="https://learn-anything.xyz/learn-anything" target="_blank" rel="noopener noreferrer" data-href="https://learn-anything.xyz/learn-anything" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Learn anything </strong></a>— Cung cấp các Mindmap để minh họa một các chủ đề khác nhau.</p>
+<p>Đó là những liệt kê cho 67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc.</p>
+<p><strong><span style="font-size: 24px;"><span style="text-decoration: underline;">Xem thêm:</span> <a href="http://localhost:82/demowp/category/kien-thuc/kien-thuc-lap-trinh/">Những kiến thức về lập trình khác tại đây.</a></span></strong><div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5607"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/">67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Công cụ Visbug, chính chủ Google làm ra hỗ trợ cho Lập Trình Viên FrontEnd Designer (cập nhật v2.2)</title>
+		<link>http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/</link>
+				<comments>http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/#respond</comments>
+				<pubDate>Thu, 07 Mar 2019 16:32:02 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Extensions]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5554</guid>
+				<description><![CDATA[<p>Hôm nay mình sẽ giới thiệu công cụ lập trình website front end VisBug mới toanh, chính chủ cho Google Developer Team làm ra. VisBug sẽ giúp cho công việc chỉnh sửa HTML+CSS của các bạn cực kỳ nhàn. Chào các bạn Designer! Hôm nay mình sẽ giới thiệu một công cụ lập trình website [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/">Công cụ Visbug, chính chủ Google làm ra hỗ trợ cho Lập Trình Viên FrontEnd Designer (cập nhật v2.2)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Hôm nay mình sẽ giới thiệu công cụ lập trình website front end <strong>VisBug</strong> mới toanh, chính chủ cho <strong>Google Developer</strong> <strong>Team</strong> làm ra. <strong>VisBug</strong> sẽ giúp cho công việc chỉnh sửa <strong>HTML+CSS</strong> của các bạn cực kỳ nhàn.</p>
+<p><figure id="attachment_5933" aria-describedby="caption-attachment-5933" style="width: 640px" class="wp-caption aligncenter"><img class="size-full wp-image-5933" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-Visbug-chính-chủ-Google-làm-ra-giúp-cuộc-đời-FrontEnd-Designer.png" alt="Công cụ Visbug, chính chủ Google làm ra giúp cuộc đời FrontEnd Designer" width="640" height="396" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-Visbug-chính-chủ-Google-làm-ra-giúp-cuộc-đời-FrontEnd-Designer.png 640w, http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-Visbug-chính-chủ-Google-làm-ra-giúp-cuộc-đời-FrontEnd-Designer-300x186.png 300w" sizes="(max-width: 640px) 100vw, 640px" /><figcaption id="caption-attachment-5933" class="wp-caption-text">Công cụ Visbug, chính chủ Google làm ra giúp cuộc đời FrontEnd Designer</figcaption></figure></p>
+<h2 id="_chao-cac-ban-designer-0">Chào các bạn Designer!</h2>
+<p>Hôm nay mình sẽ giới thiệu một công cụ lập trình website front end <strong>VisBug</strong> mới toanh, chính chủ cho Google Developer Team làm ra. Nó sẽ giúp cho công việc chỉnh sửa HTML+CSS của các bạn cực kỳ nhàn.</p>
+<p>Lâu nay thì các bạn toàn phải căn chỉnh Layout bằng PhotoShop trước rồi sau đó mới cắt ra HTML. Rồi sau đó điều chỉnh dần dần bằng CSS. Tuy nhiên với một element cơ bản, việc căn chỉnh có thể mất vài chục phút. Chỉ vì bạn phải điều chỉnh bằng cách gõ code vào F12 của Chrome thay vì kéo thả hoặc ấn phím tắt như Photoshop.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://miro.medium.com/max/1282/1*fbXbiQonSoLlDGZbmmE8cQ.png" alt="Công cụ Visbug, chính chủ Google làm ra giúp cuộc đời FrontEnd Designer 2" width="649" height="243" /></p>
+<p>Google nhận ra Dev dùng F12 để debug rất nhiều và họ đã cho ra đời một công cụ mạnh hơn F12 gấp nhiều lần. Giúp bạn ngồi chỉnh layout ngay trên giao diện website. Và toàn bộ các best practice về CSS3 sẽ được tự gen ra và tự lưu lại vào style.css cho bạn mỗi khi bạn điều chỉnh một element DOM nào đó.</p>
+<p></p>
+<h2 id="_cai-dat-1">Cài đặt</h2>
+<p>Cài đặt rất đơn giản, công cụ lập trình website front end <strong>VisBug</strong> này là một Chrome Extension. Bạn vào đây để cài vào Chrome của bạn<strong> <a href="https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc" target="_blank" rel="noopener noreferrer">VisBug Chrome Extension</a>.</strong> Tin hơi buồn là bản Firefox Extension đang được Dev chưa ra lò nên bạn thích dùng Firefox sẽ phải đợi một thời gian nữa nhé.</p>
+<h2 id="_chuc-nang-hay-ho-2"><strong>Chức năng hay ho của VisBug</strong></h2>
+<p>Sau khi cài Extension. Bạn muốn debug trang web nào đó. Bạn hãy ấn icon VisBug trên thanh Address. Chúng ta sẽ thấy một thanh công cụ khá giống Photoshop hiện ra ở cạnh bên trái màn hình. Các chức năng chính của các icon như sau:</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/227a340d-b369-4e70-855f-f61f2a3b8b8d.jpg" alt="Công cụ Visbug, chính chủ Google làm ra giúp cuộc đời FrontEnd Designer 3" width="825" height="514" data-zoom-target="https://images.viblo.asia/1600/227a340d-b369-4e70-855f-f61f2a3b8b8d.jpg" /></p>
+<p>Mỗi icon khi di chuột vào đều có một ảnh động, mô tả rõ chức năng mà nó làm được, khá dễ hiểu. Tuy nhiên ảnh rất nhỏ nên bạn khó theo dõi. Vậy nên mình sẽ paste ảnh to ở đây cho các bạn dễ theo dõi nhé</p>
+<blockquote><p>Ảnh mình post lên viblo đã bị hiển thị thu nhỏ bớt, các bạn hãy open ảnh gif ở new tab để xem ảnh to và rõ nét hơn nhé.</p></blockquote>
+<h3 id="_cong-cu-guides-3"><strong>Công cụ Guides</strong></h3>
+<p>Công cụ này sẽ giúp hiển thị các đường kẻ bao quanh một element, thể hiện vị trí và chỗ trống mà nó chiếm.</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/guides.gif?raw=true" alt="Công cụ Guides" width="970" height="546" /><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*XTB30elKmFU4wNchXtcueA.png" alt="Công cụ Guides 2" width="800" height="513" /></p>
+<h3 id="_cong-cu-inspect-4"><strong>Công cụ Inspect</strong></h3>
+<p>Giúp hiển thị nhanh toàn bộ các thuộc tính của một element trên trang.</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/metatip.gif?raw=true" alt="Công cụ Inspect" width="970" height="546" /></p>
+<p><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*yg4ZbJ9YnnEz5Hak_HwJVg.png" alt="Công cụ Inspect 2" width="734" height="682" /></p>
+<h3 id="_cong-cu-accessibility-5"><strong>Công cụ Accessibility</strong></h3>
+<p>Hiển thị các thuộc tính a11y ở góc nhìn người dùng</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/a11y.gif?raw=true" alt="Công cụ Accessibility" width="970" height="546" /><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*GDjCfECNK8drSHnIWtY9fA.png" alt="Công cụ Accessibility 2" width="392" height="528" /></p>
+<h3 id="_cong-cu-move-6"><strong>Công cụ Move</strong></h3>
+<p>Giúp di chuyển một element rất linh hoạt lên xuống trái phải</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/move.gif?raw=true" alt="Công cụ Move" width="970" height="546" /></p>
+<p>Phím tắt Công cụ Move như sau:</p>
+<p><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*6cPh6yTBlVoAJ0110emqoA.png" alt="Công cụ Move 2" width="696" height="172" /></p>
+<h3 id="_cong-cu-margin-7"><strong>Công cụ Margin</strong></h3>
+<p>Giúp tăng giảm margin của element và hiển thị kết quả ngay khi ấn</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/margin.gif?raw=true" alt="Công cụ Margin" width="970" height="546" />Phím tắt Công cụ Margin như sau:</p>
+<p><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*Vj9XIB-oFT-vSZlWXVrNaQ.png" alt="Công cụ Margin 2" width="700" height="168" /></p>
+<h3 id="_cong-cu-padding-8"><strong>Công cụ Padding</strong></h3>
+<p>Giúp tăng giảm padding của element và hiển thị kết quả ngay khi ấn</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/padding.gif?raw=true" alt=" Padding" width="970" height="546" />Phím tắt Công cụ Padding như sau:</p>
+<p><img class="medium-zoom-image" src="https://cdn-images-1.medium.com/max/800/1*DwRanS2A-mgqwb1ECpe9NQ.png" alt="" /></p>
+<h3 id="_cong-cu-flexbox-align-9"><strong>Công cụ Flexbox Align</strong></h3>
+<p>Căn lề cho element sử dụng flexbox rất hiệu quả và dễ</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/flexbox.gif?raw=true" alt="Flexbox Align" width="970" height="546" /></p>
+<p>Phím tắt Công cụ Flexbox Align như sau:<img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*Yqvnytq-Pn_EM4omm7aiJg.png" alt="" /></p>
+<h3 id="_cong-cu-hueshift-10"><strong>Công cụ HueShift</strong></h3>
+<p>Chỉnh màu cho một element rất nhanh chóng</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/hueshift.gif?raw=true" alt="HueShift" width="970" height="546" /></p>
+<p>Phím tắt Công cụ HueShift như sau:</p>
+<p><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*SHxT2bjlG71wmH9JYPW5Hg.png" alt="" /></p>
+<h3 id="_cong-cu-shadow-11"><strong>Công cụ Shadow</strong></h3>
+<p>Chỉnh shadow cho element</p>
+<p><img class="medium-zoom-image alignnone" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/shadow.gif?raw=true" alt="Shadow" width="970" height="546" /></p>
+<p>Phím tắt Công cụ Shadow như sau:</p>
+<p><img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*qONbwSQNH1SRUEJfaLUYYg.png" alt="" /></p>
+<h3 id="_cong-cu-position-12"><strong>Công cụ Position</strong></h3>
+<p>Kéo element và đặt nó vào các vị trí khác nhau như Photoshop</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/position.gif?raw=true" alt="Position" width="970" height="546" /></p>
+<p>Phím tắt Công cụ Positionnhư sau:<img class="medium-zoom-image aligncenter" src="https://cdn-images-1.medium.com/max/800/1*7_qp3p8bJk7Rv9oe3TPVQQ.png" alt="" /></p>
+<h3 id="_cong-cu-fontstyle-13"><strong>Công cụ FontStyle</strong></h3>
+<p>Cho phép chọn font khác nhau cho element và xem trực tiếp</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/typography.gif?raw=true" alt="FontStyle" width="970" height="546" /></p>
+<h3 id="_cong-cu-edittext-14"><strong>Công cụ EditText</strong></h3>
+<p>Cho phép kích đúp và sửa InnerText của một element cực nhanh</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/edittext.gif?raw=true" alt="EditText" width="970" height="546" /></p>
+<h3 id="_cong-cu-search-15"><strong>Công cụ Search</strong></h3>
+<p>Tìm kiếm một element theo id, class hoặc attributes quá dễ</p>
+<p><img class="medium-zoom-image aligncenter" src="https://github.com/GoogleChromeLabs/ProjectVisBug/blob/master/assets/tuts_src/search.gif?raw=true" alt=" Search" width="970" height="546" /></p>
+<h2 id="_tap-luyen-nao-16">Tập luyện nào!</h2>
+<p>Vì VisBug khá mới mẻ và chưa có nhiều tutorial trên mạn, cũng như chưa có bài viết tiếng Việt nào. Do đó cách hay nhất bây giờ là các bạn hãy dùng thử nó, nghịch ngợm với nó xem nó có gì hay ho, có gì tốt hơn so với các công cụ hiện tại mà bạn đang dùng hay không. Mình thì thấy nó giúp ích được rất nhiều.</p>
+<p>Google Team còn cẩn thận đến mức làm ra luôn một trang web để bạn tha hồ thỏa sức nghịch ngợm với tool mới này.</p>
+<p>Các bạn hãy vào đây để vọc nhé. <strong><a href="https://visbug-1337.firebaseapp.com/" target="_blank" rel="noopener noreferrer">https://visbug-1337.firebaseapp.com/</a></strong></p>
+<p>(Chú ý là các bạn nên nhớ phím tắt của công cụ đó. Học thuộc để lần sau cứ thế vào và chiến thôi)</p>
+<h2 id="_xem-video-google-team-gioi-thieu-visbug-de-hieu-hon-cac-thao-tac-voi-no-nhe-17"><strong>Xem video Google Team giới thiệu VisBug để hiểu hơn các thao tác với nó nhé:</strong></h2>
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="//www.youtube.com/embed/zPHyxvPT0gg" width="750" height="421" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+<h2 id="_mot-so-thu-thuat-nho-minh-hoc-duoc-sau-khi-dung-visbug-18"><strong>Một số thủ thuật nhỏ mình học được sau khi dùng VisBug</strong></h2>
+<h3 id="_copypaste-style-cua-element-19"><strong>Copy/Paste style của element</strong></h3>
+<p>Trên trang thì bạn có thể kế thừa style của một element cho element khác, Tuy nhiên nếu bạn muốn nhanh chóng nhìn xem các element cùng style ra sao thì phải tạo class và apply cho toàn bộ element.</p>
+<p>Trong word hoặc excel có một nút khá hay đó là <code>"Format Painter"</code> giúp bê toàn bộ format trang trí cho 1 item sang item khác. <strong>VisBug</strong> có chức năng tương tự.</p>
+<p>Chúng ta chọn 1 element muốn copy style. Ấn <code>Ctrl+Shift+C (MacOS thì ấn CMD+OPT+C)</code>. Sau đó chọn 1 element muốn paste và ấn <code>Ctrl+Shift+V</code> là xong.</p>
+<h3 id="_xoa-inline-style-cua-element-20"><strong>Xóa inline style của element</strong></h3>
+<p>Với một element có viết đè nhiều style dạng inline ngày trong html. Điều này làm bạn khó xử lý khi thiết kế. Bạn hãy chọn element đó và ấn <code>Alt+Delete</code> nhé.</p>
+<h3 id="_chon-cac-element-chacon-anhem-bang-phim-tat-21"><strong>Chọn các element cha/con, anh/em bằng phím tắt</strong></h3>
+<p>Bạn chọn 1 element và muốn chọn element bao quanh là cha của nó, mà không muốn mất công bật F12 để vào lục tìm, bạn có thể nhớ các phím tắt sau đây cho nhanh nhé:</p>
+<table>
+<thead>
+<tr>
+<th>Muốn chọn</th>
+<th>Ấn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chọn element tiếp theo (Next Sibling)</td>
+<td>tab</td>
+</tr>
+<tr>
+<td>Chọn element nằm ngay trước (Previous Sibling)</td>
+<td>shift+tab</td>
+</tr>
+<tr>
+<td>Nhảy vào Div hiện tại và chọn ngay element đầu tiên</td>
+<td>enter</td>
+</tr>
+<tr>
+<td>Nhảy ra khỏi Div hiện tại và chọn ngay element đầu tiên</td>
+<td>shift+enter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_danh-sach-toan-bo-bang-phim-tat-cua-visbug-22"><strong>Danh sách toàn bộ bảng phím tắt của VisBug</strong></h3>
+<p>Các bạn vào đây để tham khảo nhé:<strong> <a href="https://github.com/GoogleChromeLabs/ProjectVisBug/wiki/Keyboard-Master-List" target="_blank" rel="noopener noreferrer">https://github.com/GoogleChromeLabs/ProjectVisBug/wiki/Keyboard-Master-List</a></strong></p>
+<p><span style="font-size: 24px;"><strong>XEM THÊM:<a href="http://localhost:82/demowp/code-web/" target="_blank" rel="noopener noreferrer"> NHỮNG CÔNG CỤ, SOURCE, THỦ THUẬT WEB HỮU ÍCH KHÁC</a></strong></span><div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5554"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/">Công cụ Visbug, chính chủ Google làm ra hỗ trợ cho Lập Trình Viên FrontEnd Designer (cập nhật v2.2)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/cong-cu-visbug-giup-cuoc-doi-frontend-designer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

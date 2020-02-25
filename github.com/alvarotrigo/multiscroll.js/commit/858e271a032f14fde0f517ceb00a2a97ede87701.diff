@@ -1,0 +1,27 @@
+diff --git a/gulpfile.js b/gulpfile.js
+index 9015fc3..12fa347 100644
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -23,7 +23,9 @@ gulp.task('js', function() {
+         .pipe(sourcemaps.init())
+         .pipe(gulp.dest('./dist'))
+         .pipe(uglify({
+-            preserveComments: 'license'
++            output: {
++                comments: 'some'
++            }
+         }))
+         .pipe(rename({suffix: '.min'}))
+         .pipe(sourcemaps.write('.'))
+diff --git a/package.json b/package.json
+index 19ebac5..1522a0e 100644
+--- a/package.json
++++ b/package.json
+@@ -29,6 +29,6 @@
+     "gulp-clean-css": "^2.0.13",
+     "gulp-rename": "^1.2.2",
+     "gulp-sourcemaps": "^2.1.1",
+-    "gulp-uglify": "^2.0.0"
++    "gulp-uglify": "^3.0.0"
+   }
+ }

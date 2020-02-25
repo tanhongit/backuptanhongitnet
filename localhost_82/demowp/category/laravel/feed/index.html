@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Laravel &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/laravel/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Fri, 29 Nov 2019 04:13:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Laravel &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Laravel Error: No application encryption key has been specified</title>
+		<link>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/</link>
+				<comments>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/#respond</comments>
+				<pubDate>Fri, 29 Nov 2019 04:13:02 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Laravel]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7400</guid>
+				<description><![CDATA[<p>Khi chạy web Laravel mà gặp lỗi RuntimeException No application encryption key has been specified tức là trong Laravel app chưa có APP_KEY App key này dùng để mã hóa trong ứng dụng Laravel và bắt buộc phải có, điều này có vẻ đơn giản với các bạn quen với Laravel nhưng với nhiều bạn mới học, đặc biệt lúc Cài đặt Laravel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/">Laravel Error: No application encryption key has been specified</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Khi chạy <strong>web Laravel</strong> mà gặp <strong>lỗi RuntimeException No application encryption key has been specified</strong> tức là trong <strong>Laravel app</strong> chưa có <code>APP_KEY</code></p>
+<p>App key này dùng để mã hóa trong ứng dụng Laravel và bắt buộc phải có, điều này có vẻ đơn giản với các bạn quen với Laravel nhưng với nhiều bạn mới học, đặc biệt lúc Cài đặt Laravel lại chọn cách thủ công nên hay thường xảy ra lỗi như thế này.</p>
+<figure id="attachment_7407" aria-describedby="caption-attachment-7407" style="width: 1146px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png"><img class="size-full wp-image-7407" src="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png" alt="no application encryption key has been specified" width="1146" height="563" srcset="http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified.png 1146w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-300x147.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-1024x503.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-768x377.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-750x368.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/11/no-application-encryption-key-has-been-specified-1140x560.png 1140w" sizes="(max-width: 1146px) 100vw, 1146px" /></a><figcaption id="caption-attachment-7407" class="wp-caption-text">no application encryption key has been specified</figcaption></figure>
+<p>Bạn sẽ thường gặp phải vấn đề này khi bạn tải xuống một ứng dụng Laravel hiện có nào đó, và khi bạn sao chép tệp <span style="color: #0000ff;"><strong><code>.env.example</code></strong></span> vào <span style="color: #0000ff;"><strong><code>.env</code></strong></span> để khởi chạy ứng dụng nhưng không đặt giá trị nào cho biến <span style="color: #0000ff;"><strong><code>APP_KEY</code></strong></span>.</p>
+<h3><strong>Cách giải quyết:</strong></h3>
+<p>Mở conmmand-line lên chạy lệnh sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">php artisan key:generate</pre>
+<p>Điều này sẽ tạo một khóa ngẫu nhiên cho <span style="color: #0000ff;"><strong>APP_KEY</strong></span>, Sau khi hoàn thành, file<span style="color: #0000ff;"><strong> .env</strong></span> sẽ tự động chỉnh sửa. Sau đó bạn nên nhập tiếp dong lệnh dưới đây để xoá bộ nhớ cache</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">php artisan config:cache</pre>
+<p>Ngoài ra, nếu bạn đang sử dụng máy chủ web mặc định của PHP (ví dụ: <span style="color: #0000ff;"><strong><code>php artisan serve</code></strong></span>), bạn cần <strong>khởi động lại máy chủ</strong> thay đổi.</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>XEM THÊM:</strong></div>
+<ul>
+<li><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer"><strong>Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</strong></a></li>
+</ul>
+</div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7400"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/">Laravel Error: No application encryption key has been specified</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

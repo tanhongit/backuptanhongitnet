@@ -1,0 +1,18 @@
+From f91cc9b6e9997361565bd56ecacb78dbda4da7a1 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Tue, 31 Mar 2015 10:42:28 +0100
+Subject: [PATCH] - Marking the project as Javascript
+
+---
+ .gitattributes | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitattributes
+
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..0772b17
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1 @@
++examples/* linguist-vendored
+\ No newline at end of file

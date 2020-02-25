@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Windows &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/windows/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Sat, 25 Jan 2020 08:51:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Windows &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bài 12: Chuỗi (String) Và Các Hàm Xử Lý Chuỗi Trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/#respond</comments>
+				<pubDate>Sat, 25 Jan 2020 08:51:35 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backend]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7725</guid>
+				<description><![CDATA[<p>Tiếp tục series học PHP căn bản, bài này mình sẽ giới thiệu về chuỗi (String) trong PHP và tổng hợp một số hàm xử lý chuỗi nhé! Về chuỗi mình trước đây đã từng có nói sơ qua ở bài 3. các kiểu dữ liệu trong PHP rồi, nhưng ở bài này mình sẽ [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/">Bài 12: Chuỗi (String) Và Các Hàm Xử Lý Chuỗi Trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tiếp tục series học PHP căn bản, bài này mình sẽ giới thiệu về chuỗi (String) trong PHP và tổng hợp một số hàm xử lý chuỗi nhé! Về chuỗi mình trước đây đã từng có nói sơ qua ở <strong><a href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/#Kieu_Chuoi_String_trong_PHP" target="_blank" rel="noopener noreferrer">bài 3. các kiểu dữ liệu trong PHP</a></strong> rồi, nhưng ở bài này mình sẽ giới thiệu lại luôn nhé!</p>
+<figure id="attachment_7731" aria-describedby="caption-attachment-7731" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2020/01/chuoi-string-va-cac-ham-xu-ly-trong-php.png"><img class="size-full wp-image-7731" src="http://localhost:82/demowp/wp-content/uploads/2020/01/chuoi-string-va-cac-ham-xu-ly-trong-php.png" alt="chuoi string va cac ham xu ly trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2020/01/chuoi-string-va-cac-ham-xu-ly-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2020/01/chuoi-string-va-cac-ham-xu-ly-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7731" class="wp-caption-text">Chuỗi và Các hàm xử lý chuỗi trong PHP</figcaption></figure>
+<h2><span style="color: #0000ff;"><strong>Chuỗi trong PHP là gì?</strong></span></h2>
+<p>Kiểu chuỗi trong PHP nói đơn giản nó là 1 dãy các ký tự, nó bao gồm string(chuỗi) và kiểu char(ký tự). Để khai báo chuỗi cho 1 biến, các bạn chỉ cần gán 1 chuỗi vào biến đó.</p>
+<p>Chuỗi phải được bao quanh bằng dấu nháy đơn <code><span style="color: #0000ff;">‘</span></code> hoặc dấu nháy kép <span style="color: #0000ff;"><strong><code>“</code></strong></span>. Chuỗi sử dụng nháy đơn là một chuỗi tĩnh, còn chuỗi sử dụng nháy kép là một chuỗi động, thay đổi tùy theo giá trị của biến.</p>
+<p>Không có giới hạn về độ dài của chuỗi, có thể dài tùy ý nếu bộ nhớ cho phép.</p>
+<p><strong>Ví dụ:</strong></p>
+<div class="EnlighterJSWrapper atomicEnlighterJSWrapper">
+<pre class="EnlighterJSRAW" data-enlighter-language="php">$string_1 = "Chào mừng đến với tanhongit.net";
+$string_2 = "abc 123 hello";</pre>
+</div>
+<h3><strong>Các chuỗi được giới hạn bởi các dấu nháy kép được PHP xử lý bằng 2 cách sau đây:</strong></h3>
+<ul class="list">
+<li>1. Các chuỗi kí tự bắt đầu với (\) được thay thế với một kí tự đặc biệt</li>
+<li>2. Các biến (bắt đầu với $) được thay thế bằng biểu diễn chuỗi của giá trị của nó.</li>
+</ul>
+<h3><strong>Các quy tắc thay thế:</strong></h3>
+<ul class="list">
+<li><strong>\n</strong> được thay thế bằng ký tự newline (dòng mới)</li>
+<li><strong>\r</strong> được thay thế bởi ký tự carriage-return, được hiểu là đưa con trỏ về đầu dòng nhưng không xuống dòng.</li>
+<li><strong>\t</strong> được thay thế bởi ký tự tab</li>
+<li><strong>$</strong> được thay thế bằng một dấu $</li>
+<li><strong>\”</strong> được thay thế bằng một dấu nháy kép “</li>
+<li><strong>\\</strong> được thay thế bằng một dấu nháy đơn \</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Các hàm xử lý chuỗi trong PHP</strong></span></h2>
+<h3 id="load-h3-7"><strong>strlen($string)</strong></h3>
+<p>Hàm này có tác dụng đếm xem chuỗi <strong>$string</strong> có bao nhiêu ký tự và xuất ra màn hình độ dài của chuỗi.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net';
+      echo strlen($string);
+      //kết quả : 13
+?&gt;</pre>
+<h3><strong>strpos($string, $keyword)</strong></h3>
+<p>Hàm này có tác dụng kiểm tra xem đoạn ký tự <strong>$keyword</strong> có tồn tại trong chuỗi <strong>$string</strong> hay không và xuất ra màn hình vị trí bắt đầu tồn tại của <strong>$keyword</strong> đó trong chuỗi.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net';
+      echo strpos($string,'it');
+      //kết quả trả về vị trí bắt đầu của chuỗi cần tìm: 7
+?&gt;</pre>
+<h3><strong>explode($separator, $string, $limit)</strong></h3>
+<p>Hàm này sẽ chuyển một chuỗi <strong>$string</strong> thành một mảng gồm các phần tử là các ký tự trong mảng. Điều kiện tách mảng sẽ là chuỗi ký tự<strong> $separator</strong>, và giới hạn phần tử sẽ là <strong>$limit</strong>.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net welcome';
+      var_dump(explode('t',$string)); //nếu không thêm vào giới hạn tách phần tử $limit thì chuỗi sẽ được tách tối đa phần tử
+      /*array (size=4)
+      0 =&gt; string '' (length=0)
+      1 =&gt; string 'anhongi' (length=7)
+      2 =&gt; string '.ne' (length=3)
+      3 =&gt; string ' welcome' (length=8) */
+
+      var_dump(explode('t',$string,2)); //có thêm giới hạn tách chuỗi chỉ gồm 2 phần tử
+      /*array (size=2)
+      0 =&gt; string '' (length=0)
+      1 =&gt; string 'anhongit.net welcome' (length=20) */
+?&gt;</pre>
+<h3 id="load-h3-6"><strong>implode($separator, $array)</strong></h3>
+<p>Hàm này có tác dụng nối tất cả các phần tử của mảng <span style="color: #0000ff;"><strong><code>$array</code></strong></span> thành chuỗi với mỗi phần tử cách nhau bằng chuỗi <strong>$separator.</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $array = array('tanhongit.net','welcome','123456');
+      var_dump(implode('-', $array)); 
+      //kết quả: 'tanhongit.net-welcome-123456'
+
+      var_dump(implode(' ', $array)); 
+      //kết quả : 'tanhongit.net welcome 123456'
+?&gt;</pre>
+<h3><strong>str_word_count($string)</strong></h3>
+<p>Hàm này sẽ đếm tổng số lượng trả về <strong>số từ</strong> trong chuỗi <strong>$string.</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net welcome';
+      var_dump(str_word_count($string));
+      /*Kết quả: 3 */
+?&gt;</pre>
+<h3><strong>substr($string,$start,$length)</strong></h3>
+<p>Hàm này có tác dụng cắt ra một chuỗi con nằm trong chuỗi <strong>$string</strong> bắt đầu từ ký tự có vị trí thứ <strong>$start</strong> và chiều dài chuỗi con là <strong>$length</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net welcome';
+      echo substr($string,0,9) . '&lt;br&gt;'; // output: tanhongit
+      echo substr($string,-4) . '&lt;br&gt;'; // output: come
+      echo substr($string,-4,3) . '&lt;br&gt;'; // output: com
+      echo substr($string,5) . '&lt;br&gt;'; // output: ngit.net welcome
+?&gt;</pre>
+<p>Nếu <strong>$start</strong> là <strong>số dương</strong> thì vị trí bắt đầu sẽ tính từ trái sang phải trong chuỗi. Ngược lại, nếu <strong>$start</strong> là <strong>số âm</strong> thì vị trí bắt đầu sẽ được tính từ phải sang trái của chuỗi.</p>
+<h3><strong>strstr($string, $start_string)</strong></h3>
+<p>Tác dụng của hàm này sẽ tách một chuỗi con từ chuỗi<strong> $string</strong> được tính bắt đầu từ $<strong>start_string</strong> cho đến hết chuỗi cha.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net welcome';
+      echo strstr($string,'net') . '&lt;br&gt;'; // output: net welcome
+      echo strstr($string,'n') . '&lt;br&gt;'; // output: nhongit.net welcome
+      echo strstr($string,'.') . '&lt;br&gt;'; // output: .net welcome
+?&gt;</pre>
+<h3><strong>strtolower($string)</strong></h3>
+<p>Hàm có tác dụng chuyển chuỗi <strong>$string</strong> sang dạng chữ thường.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'TANHONGIT.NET';
+      echo strtolower($string); //output: tanhongit.net
+?&gt;</pre>
+<h3 id="load-h3-18"><strong>strtoupper($string)</strong></h3>
+<p>Hàm có tác dụng chuyển đổi chuỗi <strong>$string</strong> sang dạng in hoa.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = 'tanhongit.net';
+      echo strtoupper($string); //output: TANHONGIT.NET
+?&gt;</pre>
+<h3 id="load-h3-15"><strong>strip_tags($string, $allow)</strong></h3>
+<p>Hàm này sẽ loại bỏ toàn bộ các thẻ <strong>html</strong> có trong chuỗi <strong>$string</strong>, trừ các thẻ được cho phép <strong>$allow</strong>.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+      $string = '&lt;p&gt;&lt;b&gt;&lt;i&gt;tanhongit.net&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;';
+      echo strip_tags($string); //output: tanhongit.net
+      echo strip_tags($string, '&lt;b&gt;'); //output : &lt;b&gt;tanhongit.net&lt;/b&gt;
+      echo strip_tags($string, '&lt;i&gt;'); //output : &lt;i&gt;tanhongit.net&lt;/i&gt;
+?&gt;</pre>
+<p>&nbsp;</p>
+<p>Sẽ còn cập nhật&#8230;</p>
+<h2><strong>Kết thúc</strong></h2>
+<p>Bài viết này mình đã liệt kê một số hàm thường được sử dụng để xử lý chuỗi trong PHP, Nếu các bạn muốn xem thêm hãy truy cập <a href="https://www.w3schools.com/php/php_ref_string.asp" target="_blank" rel="noopener noreferrer">link này</a> để tham khảo nhé!</p>
+<p>Vậy là trong lộ trình học php căn bản thì tới đây mình đã liệt kê hết các kiến thức về chuỗi giúp các bạn học tập. Cho nên sang bài tiếp theo chúng ta sẽ qua một số phương thức bắt buộc phải biết trong PHP nhé!</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-11-cac-ham-xu-ly-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 11: Các hàm xử lý mảng (Array) trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-10-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 10: Mảng (Array) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-9-ham-function-trong-php/" target="_blank" rel="noopener noreferrer">Bài 9: Hàm (Function) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7725"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/">Bài 12: Chuỗi (String) Và Các Hàm Xử Lý Chuỗi Trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Windows 10 Version 1909 Build 18363.418 Consumer Edition (ISO x64-x86)</title>
+		<link>http://localhost:82/demowp/windows/download-windows-10-version-1909-build-18363-418-consumer-edition-iso-x64-x86/</link>
+				<comments>http://localhost:82/demowp/windows/download-windows-10-version-1909-build-18363-418-consumer-edition-iso-x64-x86/#respond</comments>
+				<pubDate>Sat, 19 Oct 2019 06:22:09 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Windows]]></category>
+		<category><![CDATA[Tải Win 10]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Windows 10]]></category>
+		<category><![CDATA[Windows Server]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7195</guid>
+				<description><![CDATA[<p>Download Windows 10 Version 1909 Build 18363.418 Consumer Edition là một bản cập nhật mới của hệ điều hành Windows 10, được phát hành vào ngày 16/10/2019. Mặc dù Microsoft trước đây đã phát hành các tệp ISO từ nhánh Windows 10 20H1, đây là bản dựng đầu tiên từ Windows 10 19H2 sắp tới [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/windows/download-windows-10-version-1909-build-18363-418-consumer-edition-iso-x64-x86/">Download Windows 10 Version 1909 Build 18363.418 Consumer Edition (ISO x64-x86)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p style="text-align: center;"><b>Download Windows 10 Version 1909 Build 18363.418 Consumer Edition là một bản cập nhật mới của hệ điều hành Windows 10, được phát hành vào ngày 16/10/2019.</b></p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/windows-10-1909.jpg"><img class="aligncenter size-full wp-image-7196" src="http://localhost:82/demowp/wp-content/uploads/2019/10/windows-10-1909.jpg" alt="windows 10 1909" width="699" height="435" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/windows-10-1909.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/10/windows-10-1909-300x187.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a></p>
+<p><b>Mặc dù Microsoft trước đây đã phát hành các tệp ISO từ nhánh Windows 10 20H1, đây là bản dựng đầu tiên từ Windows 10 19H2 sắp tới hay còn gọi là Bản cập nhật tháng 10 năm 2019 để phát hành ISO cho Người trong cuộc. Như đã báo cáo trước đây, phiên bản tiếp theo của hệ điều hành sẽ không phải là một phiên bản chính vì nhà sản xuất Windows đang tập trung chủ yếu vào các cải tiến hiệu suất. Microsoft sẽ cung cấp Windows 10 19H2 dưới dạng bản cập nhật tích lũy.</b></p>
+<h2><strong>Windows 10 Version 1909 Build 18363.418 Consumer Edition (ISO x64-x86) bao gồm các phiên bản Windows sau:</strong></h2>
+<ul>
+<li>Phiên bản Windows 10 Home</li>
+<li>Windows 10 Home N</li>
+<li>Win 10 Core Single Language</li>
+<li>Windows 10 Pro Windows 10 Pro N</li>
+<li>Windows 10 Pro for Workstations</li>
+<li>Win 10 Pro N for Workstations</li>
+<li>Windows 10 Pro Education</li>
+<li>Windows 10 Pro Education N</li>
+<li>Wins 10 Education</li>
+<li>Windows 10 Education N</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><strong>Download Windows 10 1909 ISO 64bit + 32bit:</strong></h2>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1yAqbD1vmJqt9Rh5ckEy_3zhILPvnpSNt" target="_blank" rel="noopener noreferrer">Windows 1909 ISO 64bit Google Drive </a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1KuETxbuAorYRGyx0_NWu_PJMbjUkr_2C" target="_blank" rel="noopener noreferrer">Windows 1909 ISO 32bit Google Drive</a></p>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+</div>
+
+
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/" target="_blank" rel="noopener noreferrer">Download ISO Windows 10 Education Version 1903 OS Build 18362.295 (64-bit)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/khoa-hoc-an-ninh-mang/" target="_blank" rel="noopener noreferrer">Khóa Học An Ninh Mạng &#8211; Ứng Dụng Python Và Web (Cyber Security – Python and Web)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học tự Build một chiếc PC Computer cho chính bạn</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/" target="_blank" rel="noopener noreferrer">Download ISO Windows 10 Education Version 1803 OS Build 17134.915 (64-bit)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<p style="text-align: right;">USBHDDBOOT</p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7195"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/windows/download-windows-10-version-1909-build-18363-418-consumer-edition-iso-x64-x86/">Download Windows 10 Version 1909 Build 18363.418 Consumer Edition (ISO x64-x86)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/windows/download-windows-10-version-1909-build-18363-418-consumer-edition-iso-x64-x86/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download ISO Windows 10 Education Version 1903 OS Build 18362.295 (64-bit)</title>
+		<link>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/</link>
+				<comments>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/#respond</comments>
+				<pubDate>Mon, 16 Sep 2019 04:53:52 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Windows]]></category>
+		<category><![CDATA[Ghost Win10]]></category>
+		<category><![CDATA[Tải Win 10]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Tải Win]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6938</guid>
+				<description><![CDATA[<p>Bộ cài đặt ISO Windows 10 Education Version 1903 được tác giả Lê Hạnh build lại với một số phần mềm được cài sẵn và lược bỏ bớt những phần mềm hệ thông không cần thiết nhằm tăng tốc cho máy tính. Siêu Share Chia sẻ lại cho các bạn download về đẻ cài đặt [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/">Download ISO Windows 10 Education Version 1903 OS Build 18362.295 (64-bit)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Bộ cài đặt ISO Windows 10 Education Version 1903 được tác giả Lê Hạnh build lại với một số phần mềm được cài sẵn và lược bỏ bớt những phần mềm hệ thông không cần thiết nhằm tăng tốc cho máy tính. Siêu Share Chia sẻ lại cho các bạn download về đẻ cài đặt cho chiếc máy tính của mình nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/windows-10-education-version-1903.jpg"><img class="aligncenter size-full wp-image-6940" src="http://localhost:82/demowp/wp-content/uploads/2019/09/windows-10-education-version-1903.jpg" alt="windows 10 iso education version 1903" width="640" height="480" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/windows-10-education-version-1903.jpg 640w, http://localhost:82/demowp/wp-content/uploads/2019/09/windows-10-education-version-1903-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>Được làm từ bộ cài nguyên gốc của Microsoft, không mod Windows, không tinh chỉnh hay can thiệp sâu vào hệ thống nhằm giúp cho Windows chạy mượt mà hơn. Cài xong là sử dụng ngay, không cần cài thêm các phần mềm hỗ trợ khác như Visual C++, Winrar, 7-zip hay .Net Framework &#8230; vì nó đã được cài tất cả, chỉ cần cài thêm phần mềm của bạn cần sử dụng là xong.</p>
+<p><strong>Hỗ trợ cả hai chuẩn Legacy (MBR) và UEFI (GPT). </strong></p>
+<p><b>Tự động kích hoạt bản quyền.</b></p>
+<p><b><span style="text-decoration: underline;">Yêu cầu</span>: Kết nối mạng trong lúc cài đặt.</b></p>
+<p><span style="text-decoration: underline;"><strong>Ghi chú thêm:</strong></span> cần check kỹ mã SHA-1, xem có khớp với mã của file cài mà mình đã đăng dưới mục Download hay không ?. Nếu đúng, cài bình thường, ngược lại, nếu sai, bạn hãy xóa bộ cài mà bạn đã tải, sau đó tải và check SHA-1 lại cho đến khi đúng thì thôi (bắt buộc).</p>
+<h2><b>Những tính năng đã được Thêm và Tắt bớt trong Windows 10 Education Version 1903:</b></h2>
+<div>
+<ul>
+<li>Thêm Attrib: hiện file &amp; thư mục đã bị virus làm ẩn (thêm vào menu chuột phải)</li>
+<li>Có thêm Command Prompt as Administrator: nhấn đè Shift + Chuột phải</li>
+<li>Thêm Hash: dùng để kiểm tra mã SHA-1, MD5 và 1 số mã thông dụng khác (thêm vào menu chuột phải)</li>
+<li>Tắt thủ thuật online và Video trong Settings</li>
+<li>Đã tắt Overlay icon: tắt dấu mũi tên xanh trên thư mục</li>
+<li>Tắt Telemetry và những dịch vụ liên quan đến sưu tầm dữ liệu người dùng của Microsoft.</li>
+<li>Chặn đề xuất quảng cáo, thủ thuật, trong Windows</li>
+<li>Chặn tự động cài những ứng dụng không mong muốn</li>
+<li>Tắt tự động bảo trì máy</li>
+<li>Tắt Timeline</li>
+<li>Xoá vĩnh viễn Windows Defender</li>
+<li>Chặn Error Report</li>
+<li>Tự động bật đèn Num Lock khi vào Windows</li>
+<li>Chất lượng hình nền 100%</li>
+<li>Kích hoạt chế độ xem ảnh Windows Photo Viewer</li>
+<li>Gỡ bỏ thêm nhiều app mặc định của Windows</li>
+<li>Đã cài đặt .NET Framework 4.8 mới nhất</li>
+<li>Nhiều cải tiến mới.</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Download ISO Windows 10 Education Version 1903 OS Build 18362.295</strong></span></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://www.fshare.vn/file/7AKOH2I889AFZH5" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> ISO Windows 10 Education Download<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1pg2LQTBIlkoIyWAbVIp7J81S4ayn7hQZ" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> ISO Windows 10 Education Link Download Dự Phòng<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<p style="text-align: center;"><b>Tên file: windows_10_education_version_1903_build_18362.295_x64.iso</b><br />
+MD5: 5EFA4DB1DBA4D291F5FEC4FDDE97A84E<br />
+SHA1: 15AC0C55EF75476BFF61A41241D1D69680AFE544<br />
+CRC32: 7E091A80</p>
+<h3><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></h3>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/active-windows/script-active-windows-10/" target="_blank" rel="noopener noreferrer">Chia sẻ Script Active Windows 10 Bản Quyền Digital License vô cùng dễ dàng với 1 click</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/wondershare-filmora/" target="_blank" rel="noopener noreferrer">Wondershare Filmora Full Active &#8211; Tạo, Biên Tập Video Đầy Đủ Dễ Dàng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/" target="_blank" rel="noopener noreferrer">Download Acronis True Image 2020 Full (24.3.1.20770) Giúp Sao lưu và Phục hồi dữ liệu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/" target="_blank" rel="noopener noreferrer">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a></strong></li>
+</ul>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6938"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/">Download ISO Windows 10 Education Version 1903 OS Build 18362.295 (64-bit)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1903-os-build-18362-295-64-bit/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</title>
+		<link>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/</link>
+				<comments>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/#respond</comments>
+				<pubDate>Sun, 08 Sep 2019 03:52:25 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backup]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Restore]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6895</guid>
+				<description><![CDATA[<p>Acronis True Image 2020 là gói phần mềm tích hợp giúp Sao lưu và Phục hồi dữ liệu đảm bảo tính bảo mật của tất cả thông tin trên máy tính của bạn. True Image cung cấp khả năng sao lưu hệ điều hành, ứng dụng, cài đặt người dùng và tất cả dữ liệu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/">Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Acronis True Image 2020</strong> là gói phần mềm tích hợp giúp Sao lưu và Phục hồi dữ liệu đảm bảo tính bảo mật của tất cả thông tin trên máy tính của bạn. <strong>True Image</strong> cung cấp khả năng sao lưu hệ điều hành, ứng dụng, cài đặt người dùng và tất cả dữ liệu có sẵn, cũng như phá hủy đáng tin cậy tất cả thông tin bí mật đã trở nên không cần thiết.</p>
+<p><figure id="attachment_6902" aria-describedby="caption-attachment-6902" style="width: 854px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png"><img class="size-full wp-image-6902" src="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png" alt="acronis true image" width="854" height="451" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png 854w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-768x406.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-750x396.png 750w" sizes="(max-width: 854px) 100vw, 854px" /></a><figcaption id="caption-attachment-6902" class="wp-caption-text">acronis true image 2020</figcaption></figure></p>
+<p>Sử dụng phần mềm này, bạn có thể sao lưu các tệp và thư mục đã chọn, cài đặt và email từ khách hàng của <strong>Microsoft</strong> và thậm chí toàn bộ đĩa và phân vùng đã chọn. Lưu trữ trực tuyến cho phép bạn lưu trữ các tệp quan trọng nhất trong một bộ lưu trữ từ xa. Dữ liệu của bạn sẽ được bảo vệ ngay cả trong trường hợp mất, trộm hoặc phá hủy máy tính. <strong>Acronis Nonstop Backup</strong> định kỳ (cứ sau năm phút) lưu các thay đổi đã xảy ra với hệ thống và tệp</p>
+<p>True Image với sức mạnh và tính năng tương tự như Ghost nhưng giao diện thân thiện và dễ sử dụng hơn nhiều. Ngoài ra <strong>Acronis True Image</strong> còn có thềm chức năng không cần đĩa để boot mà khi bật máy tính lên bấm phím F11 tự động máy tính sẽ chạy chương trình để restore lại cho dù lúc đó Win đã lỗi không thể vào được nữa hay bạn đã fomat lại ổ cứng cài Win.</p>
+<p><figure id="attachment_7387" aria-describedby="caption-attachment-7387" style="width: 337px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png"><img class="size-full wp-image-7387" src="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png" alt="acronis true image 2020 full" width="337" height="463" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png 337w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full-218x300.png 218w" sizes="(max-width: 337px) 100vw, 337px" /></a><figcaption id="caption-attachment-7387" class="wp-caption-text">acronis true image 2020 full</figcaption></figure></p>
+<h3><strong>Những tính năng mới trong Acronis True Image 2020</strong></h3>
+<ul>
+<li>Acronis bảo vệ kép làm cho quá trình bảo vệ dễ dàng và hiệu quả hơn bằng cách tự động sao chép các bản sao lưu cục bộ lên đám mây. Vì vậy, bạn sẽ luôn có một bản sao trong bộ nhớ từ xa để phục hồi. Sau khi tạo thành công bản sao lưu đầu tiên, các thao tác sao lưu và sao chép được thực hiện đồng thời.</li>
+<li>Cải thiện công nghệ sao lưu Định dạng sao lưu mới cải thiện hiệu suất tổng thể bằng cách cung cấp duyệt nhanh các bản sao lưu trên đám mây, sao lưu và phục hồi nhanh hơn và sao chép dữ liệu.</li>
+<li>Trung tâm khu vực thông báo.<br />
+Bạn có thể nhận tin nhắn trong khu vực thông báo trên máy tính của bạn. Điều này giúp dễ dàng theo dõi trạng thái của các bản sao lưu, nhận các đề xuất kịp thời để tăng cường bảo vệ và nhanh chóng phản hồi bất kỳ vấn đề nào.</li>
+<li>Cải thiện khả năng bảo vệ chống lại ransomware.<br />
+Trước sự xuất hiện liên tục của các mối đe dọa mạng mới, chúng tôi không ngừng nâng cao khả năng bảo vệ Acronis Active Protection để đi trước một bước. Các mô hình học máy mới làm cho các giải pháp phần mềm của chúng tôi thậm chí còn hiệu quả hơn. Phiên bản mới nhất của bảo vệ hiện dừng các cuộc tấn công bằng việc chấm dứt dịch vụ trái phép. Bạn sẽ được cung cấp thông tin về lý do theo dõi hoặc chặn một quy trình cụ thể.</li>
+<li>Sao lưu trong các mạng Wi-Fi đã chọn.<br />
+Bạn có thể dễ dàng tránh lưu lượng truy cập không mong muốn với các kết nối hạn chế và rủi ro dữ liệu trong các mạng công cộng không an toàn bằng cách chọn một số mạng Wi-Fi nhất định để sao lưu. Điều này sẽ đảm bảo tính bảo mật của dữ liệu đã tải xuống.</li>
+<li>Quản lý năng lượng người dùng Quản.<br />
+lý sao lưu để tiết kiệm pin. Vì vậy, máy tính xách tay của bạn sẽ có sẵn cho công việc. Bạn có thể đặt mức sạc tối thiểu cho các bản sao lưu hoặc chặn hoàn toàn các bản sao lưu khi chạy bằng nguồn pin.</li>
+</ul>
+<p><strong>Các bạn có thể xem thêm những thay đổi ở phiên bản này <a href="https://www.acronis.com/en-us/support/updates/changes.html?p=41999" target="_blank" rel="noopener noreferrer">tại đây</a>.</strong></p>
+<hr />
+<h3 style="text-align: center;"><span style="color: #ff0000;"><strong>Download Acronis True Image 2020 Full (24.5.1.22510) </strong></span></h3>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1SwFSMt2428qSBqtN0DSyAMCIrPi0VHvl" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> link tải Acronis True Image 2020 full Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h4><span style="text-decoration: underline;"><strong>Download các phiên bản cũ:</strong></span></h4>
+<ul>
+<li><a href="https://drive.google.com/open?id=1SY8beOEn67gO6Y1gy8dusnb7pFq7IZLO" target="_blank" rel="noopener noreferrer"><strong>24.3.1.20770 version Acronis True Image 2020</strong></a></li>
+</ul>
+<hr />
+<h3><strong>Hướng dẫn cài đặt phần mềm giúp sao lưu phục hồi</strong></h3>
+<ul>
+<li><strong>Bước 1:</strong> Tải file nén theo đường link ở trên về và giải nén ra</li>
+<li><strong>Bước 2:</strong> Mở chạy file setup có trong folder vừa giải nén lên để cài đặt.</li>
+<li><strong>Tiếp Bước 3:</strong> Lựa chọn ngôn ngữ và nhấn <strong>Next</strong>.</li>
+<li><strong>Bước 4:</strong> Bó tích chọn <strong>&#8220;Install as homepage and&#8230;&#8221;</strong> như hình bên dưới và nhấn <strong>Install</strong>.</li>
+</ul>
+<p><a href="https://imgur.com/xplVJIR.png"><img class="aligncenter size-full" src="https://imgur.com/xplVJIR.png" alt="cài đặt Acronis True Image 2020" width="499" height="388" /></a></p>
+<ul>
+<li><strong>Bước 4:</strong> Chờ cài đặt xong và sử dụng phần mềm.</li>
+</ul>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 &#8211; Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/ccleaner/" target="_blank" rel="noopener noreferrer">Download CCleaner Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6895"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/">Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download ISO Windows 10 Education Version 1803 OS Build 17134.915 (64-bit)</title>
+		<link>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/</link>
+				<comments>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/#respond</comments>
+				<pubDate>Fri, 26 Jul 2019 16:19:52 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Windows]]></category>
+		<category><![CDATA[Tải Win 10]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[ghost win 10 64bit]]></category>
+		<category><![CDATA[Tải Win]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6382</guid>
+				<description><![CDATA[<p>ISO Windows 10 Education 1803 được làm từ bộ cài nguyên gốc của Microsoft, không mod Windows, không tinh chỉnh hay can thiệp sâu vào hệ thống nhằm giúp cho Windows chạy mượt mà hơn. Cài xong là sử dụng ngay, không cần cài thêm các phần mềm hỗ trợ khác như Visual C++, Winrar, [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/">Download ISO Windows 10 Education Version 1803 OS Build 17134.915 (64-bit)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>ISO Windows 10 Education 1803 được làm từ bộ cài nguyên gốc của Microsoft, không mod Windows, không tinh chỉnh hay can thiệp sâu vào hệ thống nhằm giúp cho Windows chạy mượt mà hơn. Cài xong là sử dụng ngay, không cần cài thêm các phần mềm hỗ trợ khác như Visual C++, Winrar, 7-zip hay .Net Framework &#8230; vì nó đã được cài tất cả, chỉ cần cài thêm phần mềm của bạn cần sử dụng là xong.</p>
+<p><figure id="attachment_6383" aria-describedby="caption-attachment-6383" style="width: 637px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/07/download-iso-windows-10-education-version-1803.png"><img class="size-full wp-image-6383" src="http://localhost:82/demowp/wp-content/uploads/2019/07/download-iso-windows-10-education-version-1803.png" alt="download iso windows 10 education version 1803" width="637" height="479" srcset="http://localhost:82/demowp/wp-content/uploads/2019/07/download-iso-windows-10-education-version-1803.png 637w, http://localhost:82/demowp/wp-content/uploads/2019/07/download-iso-windows-10-education-version-1803-300x226.png 300w" sizes="(max-width: 637px) 100vw, 637px" /></a><figcaption id="caption-attachment-6383" class="wp-caption-text">Download ISO Windows 10 Education Version 1803</figcaption></figure></p>
+<p>Hỗ trợ cả hai chuẩn Legacy (MBR) và UEFI (GPT).</p>
+<p><b>Tự động kích hoạt bản quyền.</b></p>
+<p><b><span style="text-decoration: underline; color: #0000ff;">Yêu cầu:</span> Kết nối mạng trong lúc cài đặt.</b></p>
+<h2><b>Những tính năng đã được Thêm và Tắt bớt:</b></h2>
+<div>
+<ul>
+<li>Thêm Attrib: hiện file &amp; thư mục đã bị virus làm ẩn (thêm vào menu chuột phải)</li>
+<li>Thêm Command Prompt as Administrator: nhấn đè Shift + Chuột phải</li>
+<li>Thêm Hash: dùng để kiểm tra mã SHA-1, MD5 và 1 số mã thông dụng khác (thêm vào menu chuột phải)</li>
+<li>Tắt thủ thuật online và Video trong Settings</li>
+<li>Tắt Overlay icon: tắt dấu mũi tên xanh trên thư mục</li>
+<li>Tắt Telemetry và những dịch vụ liên quan đến sưu tầm dữ liệu người dùng của Microsoft.</li>
+<li>Chặn đề xuất quảng cáo, thủ thuật, trong Windows</li>
+<li>Chặn tự động cài những ứng dụng không mong muốn</li>
+<li>Tắt tự động bảo trì máy</li>
+<li>Tắt Timeline</li>
+<li>Xoá vĩnh viễn Windows Defender</li>
+<li>Chặn Error Report</li>
+<li>Tự động bật đèn Num Lock khi vào Windows</li>
+<li>Chất lượng hình nền 100%</li>
+<li>Kích hoạt chế độ xem ảnh Windows Photo Viewer</li>
+<li>Gỡ bỏ thêm nhiều app mặc định của Windows</li>
+<li>Đã cài đặt .NET Framework 4.8 mới nhất</li>
+<li>Nhiều cải tiến mới.</li>
+</ul>
+<h2 style="text-align: center;"><strong>Download ISO Windows 10 Education Version 1803</strong></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/file/d/1RbUa_fyvU29YC8Ku1TMFBKNBxSY8Jjdk/view" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> ISO Windows 10 Education Version 1803<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<p style="text-align: center;"><b>Tên file: windows_10_education_version_1803_build_17134.915_x64.iso</b><br />
+MD5: BF20BAE074E638647592C200251C3C8E<br />
+SHA1: B254B8189FB5C8B7DBD2BB1EC8A02C3F60A4BFAB<br />
+CRC32: 82B3D647</p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1KZ6nFkzkDZC0wHcNzycF7qjVAnts_xrr" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Link dự phòng<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<div class="alert alert-warning">
+<div class="alert alert-warning"><span style="font-size: 20px;"><b>Warning!!!</b></span></div>
+<div class="alert alert-warning"><span style="font-size: 16px;">– Kiểm tra kỹ MD5 của bản Win hoặc bản GHOST trước khi bung</span></div>
+<div class="alert alert-warning"><span style="font-size: 16px;">– Thường xuyên dọn rác để hệ thống luôn đạt hiểu quả tốt nhất cũng như tốc độ nhanh nhất</span></div>
+</div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+<div><span style="font-size: 16px;"><strong>Xem Thêm:</strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></span></div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6382"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 81.4px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">3.7</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/">Download ISO Windows 10 Education Version 1803 OS Build 17134.915 (64-bit)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/download-iso-windows-10-education-version-1803/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</title>
+		<link>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/</link>
+				<comments>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/#respond</comments>
+				<pubDate>Fri, 26 Jul 2019 08:04:56 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Sửa Chữa Laptop]]></category>
+		<category><![CDATA[Sửa Chữa Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6389</guid>
+				<description><![CDATA[<p>Như các bạn đã biết với các chế độ sata mode mà nhà chip set hỗ trợ hiện này gồm có IDE vs SATA hoăc RAID là phổ biển nhất. Nếu các bạn đã lỡ cài đặt windows ở chế độ IDE hoặc các chế độ khác. Vậy làm sao khi chuyển đổi giữa chế [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Như các bạn đã biết với các chế độ sata mode mà nhà chip set hỗ trợ hiện này gồm có IDE vs SATA hoăc RAID là phổ biển nhất. Nếu các bạn đã lỡ cài đặt windows ở chế độ IDE hoặc các chế độ khác. Vậy làm sao khi chuyển đổi giữa chế độ SATA từ IDE sang AHCI, RAID hoặc ngược lại hay các chế độ khác mà không bị lỗi.</p>
+<p><figure id="attachment_6394" aria-describedby="caption-attachment-6394" style="width: 698px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg"><img class="size-full wp-image-6394" src="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg" alt="chuyen doi giua raid sang ahci" width="698" height="394" srcset="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci-300x169.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /></a><figcaption id="caption-attachment-6394" class="wp-caption-text">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI</figcaption></figure></p>
+<p>Đây là cách an toàn và tỉ lệ thành công cao nhất nên mình chia sẻ lại cho các bạn cùng tham khảo.</p>
+<h2><strong>Chế độ SATA Mode AHCI, RAID và IDE là gì ?</strong></h2>
+<p>Giao diện <strong>SATA</strong> có thể hoạt động ở các chế độ <strong>RAID, IDE</strong> và <strong>AHCI</strong>:</p>
+<p><strong>IDE</strong> – một chế độ tương thích cho các thiết bị với các phần mềm cũ hơn. Trên thực tế, trong chế độ này, cổng cáp SATA không khác với giao diện ATA (hoặc PATA) tiền nhiệm của nó.</p>
+<p><strong>AHCI</strong> – một chế độ mới cho các thiết bị bộ nhớ, trong đó máy tính có thể sử dụng tất cả các ưu thế sức mạnh của cổng SATA, chủ yếu là tốc độ trao đổi dữ liệu cao hơn với SSD và HDD nhờ công nghệ Native Command Queuing technology (NCQ)<br />
+NCQ cho phép chính ổ đĩa xác định thứ tự tối ưu để truy xuất các yêu cầu chưa xử lý. Ví dụ như <span class="">cho phép ổ đĩa thực hiện tất cả các yêu cầu trong ít vòng quay hơn và do đó ít thời gian hơn.</span><br />
+Khi bạn kích hoạt chế độ AHCI, nó sẽ tăng tốc độ truy cập vào các tệp trong thiết bị bộ nhớ và cải thiện hiệu suất tổng thể của máy tính của bạn.</p>
+<p><strong>RAID</strong> – là chữ viết tắt của Redundant Array of Independent Disks. Ban đầu, RAID được sử dụng như một giải pháp phòng hộ vì nó cho phép ghi dữ liệu lên nhiều đĩa cứng cùng lúc. Về sau, RAID đã có nhiều biến thể cho phép không chỉ đảm bảo an toàn dữ liệu mà còn giúp gia tăng đáng kể tốc độ truy xuất dữ liệu từ đĩa cứng.</p>
+<h2><strong>Vì sao phải chuyển RAID sang AHCI, IDE sang AHCI hoặc ngược lại?</strong></h2>
+<p>Điều dễ hiểu là khi cài Windows chúng ta chỉ nhắm mắt nhắm mũi cài mà không <strong>check BIOS, SATA Hard disk</strong> đang được đặt là IDE, AHCI hay RAID.</p>
+<p>Sau khi cài xong mà khi đó bạn lại muốn đổi SATA mode khởi động thì Windows để phù hợp với mục đích sự dụng của bạn hoặc bạn vô tình tự vào đổi thì Windows sẽ <strong>crash</strong> ngay.</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Ví dụ:</strong></span> máy của bạn đang ở chế độ <strong>AHCI</strong>, nhưng vô tình bạn lỡ tay đổi sang chế độ khác như <strong>RAID on</strong> chẳng hạn, Windows của bạn khi đó sẽ báo lỗi ngay. Nếu gặp những bạn không hiểu biết thì sẽ bị các thợ tiệm chém vài chục đến 200 ngàn để sửa chữa.</p>
+<p>Sau đây là cách khắc phục.</p>
+<h2><strong>Hướng dẫn chuyển đổi giữa RAID sang AHCI</strong></h2>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 1:</strong></span></p>
+<p>Vào chế độ <strong>Safe Mode của Windows </strong>hoặc tại giao diện <strong>Windows hiện hành</strong> bạn đang sử dụng, bạn chạy <strong>CMD</strong> với quyền <strong>Admin</strong> nhé!</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 2:</strong></span></p>
+<p>Thêm đoạn code sau vào <strong>cmd</strong> rồi Enter để chạy: <span style="background-color: #ffff99;"><strong><code>bcdedit /set {current} safeboot minimal</code></strong></span></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 3:</strong></span></p>
+<p>Khỏi động lại máy, vào Bios chỉnh từ RAID sang AHCI hoặc ngược lại tuỳ vào muốn của các bạn. (Khuyến nghị nên đổi sang AHCI).</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 4:</strong></span></p>
+<p>Sau khi đã đổi xong thì <strong>Restart</strong> lại máy. Máy của bạn sẽ tự động boot vào chế độ <strong>Safe mode</strong> và sẽ tự <strong>update driver AHCI (từ RAID).</strong></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 5:</strong></span></p>
+<p>Chạy <strong>CMD</strong> với quyền <strong>Admin. V</strong>iết đoạn code sau vào rồi nhấn Enter: <span style="background-color: #ffff99;"><code><strong>bcdedit /deletevalue {current} safeboot</strong></code></span></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 6:</strong></span></p>
+<p><strong>Restart</strong> lại máy và thành công!!!</p>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+<div><span style="font-size: 16px;"><strong>Xem Thêm:</strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></span></div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6389"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</title>
+		<link>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/</link>
+				<comments>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/#respond</comments>
+				<pubDate>Tue, 07 May 2019 12:07:12 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Visual]]></category>
+		<category><![CDATA[Visual Studio]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6105</guid>
+				<description><![CDATA[<p>Tân Hồng IT Chia sẻ đến cho các bạn tổng hợp Full key bản quyền Professional (Pro) + Enterprise của phần mềm Microsoft Visual Studio cùng với link Download tất cả các phiên bản từ phiên bản mới nhất là bản 2019 cho đến phiên bản cũ nhất từ trước đến nay. Microsoft Visual Studio [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Tân Hồng IT</strong> Chia sẻ đến cho các bạn tổng hợp<strong> Full key bản quyền Professional (Pro) + Enterprise</strong> của phần mềm <strong>Microsoft Visual Studio</strong> cùng với link Download tất cả các phiên bản từ phiên bản mới nhất là bản <strong>2019</strong> cho đến phiên <strong>bản cũ nhất</strong> từ trước đến nay.</p>
+<p><figure style="width: 1162px" class="wp-caption alignnone"><img title="Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio" src="https://imgur.com/LA5LWv1.png" alt="Full Key Professional Enterprise Và Link Download Microsoft Visual Studio" width="1162" height="637" /><figcaption class="wp-caption-text">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio</figcaption></figure></p>
+<h2><b>Microsoft Visual Studio </b></h2>
+<p><b>Phần mềm</b> là trình biên dịch nổi tiếng bậc nhất hiện nay do <strong>Microsoft</strong> phát hành, dành cho các lập trình viên viết chương trình phục vụ cho <strong>Windows</strong>, hỗ trợ rất nhiều nền tảng hệ thống, <strong>Visual Studio</strong> có thể hỗ trợ biên dịch rất nhiều ngôn ngữ phổ biến như <strong>C/C++, C#, .NET… </strong></p>
+<p>Thông qua bản cài riêng lẻ <strong>Visual Studio</strong> có thể sử dụng để code các ngôn ngữ như <strong>HTML, APS.NET, CSS</strong>. Phiên bản gần đây nhất là năm 2019 với rất nhiều công cụ hỗ trợ và cài tiến mới nhất,<strong> Visual Studio</strong> được các trường đại học lớn ở Việt Nam để dạy môn lập trình cơ bản với ngôn ngữ<strong> C/C++,&#8230;</strong></p>
+<p>Không chỉ là ứng dụng cơ bản, phần mềm này đã giúp cho <strong>Microsoft</strong> thu về lợi nhuận cực lớn, cộng đồng hỗ trợ cho trình biên dịch này có ở khắp nơi trên thế giới với hàng loạt các giáo trình về hướng dẫn sử dụng được xuất bản và ngày càng được cải tiến.</p>
+<h2><strong>Phiên bản Visual Studio 2019 có những cải tiến như sau</strong></h2>
+<ul>
+<li>Cài đặt sẽ nhanh hơn và có giao diện mới</li>
+<li>Hỗ trợ C++14 tốt hơn xíu và hỗ trợ CMake</li>
+<li>Có các tính năng mới của C# 7.0 vs Visual Basic 15</li>
+<li>Hỗ trợ .NET Core và ASP.NET Core 1.0</li>
+</ul>
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000;"><strong>Key Bản Quyền + Link Download Visual Studio Professional (Pro) + Enterprise Tất Cả Các Phiên Bản</strong></span></h2>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Key Visual Studio 2019</span></strong></h3>
+<table style="width: 780px; height: 197px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 131px; text-align: center; height: 77px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 197px; height: 77px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=16" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 328px; height: 77px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">NYWVH-HT4XC-R2WYW-9Y3CM-X4V3Y</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 131px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 197px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&amp;rel=16" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 328px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">BF8Y8-GN2QH-T84XB-QVY3B-RC4DF</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2017</span></strong></h3>
+<table style="width: 781px; height: 193px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 128px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 204px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=15" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></p>
+<p><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=15" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 325px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<ol>
+<li style="text-align: center;"><span style="font-size: 16px;">KBJFW-NXHK6-W4WJM-CRMQB-G3CDH</span></li>
+<li style="text-align: center;"><span style="font-size: 16px;">HMGNV-WCYXV-X7G9W-YCX63-B98R2</span></li>
+<li style="text-align: center;"><span style="font-size: 16px;">HM6NR-QXX7C-DFW2Y-8B82K-WTYJV</span></li>
+</ol>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 128px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 204px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://www.fshare.vn/file/XG678AG69G7E" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 325px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">NJVYC-BMHX2-G77MM-4XJMR-6Q8QF</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2015</span></strong></h3>
+<table style="height: 246px; width: 785px;" width="781">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 128px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 209px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://download.microsoft.com/download/e/b/c/ebc2c43f-3821-4a0b-82b1-d05368af1604/vs2015.3.pro_enu.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 324px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">HMGNV-WCYXV-X7G9W-YCX63-B98R2</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 128px; text-align: center; height: 72px;"><span style="font-size: 16px;"><strong>Enterprise</strong></span></td>
+<td style="width: 209px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://doc-0c-cc-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ldhpf472nmphci29e8s3gljgclh8lbo1/1555790400000/17916142987483214272/*/0BzT7Wop1SSOJZXB2QlFYQjEwbXc?e=download" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 324px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">2XNFG-KFHR8-QV3CP-3W6HT-683CH</span><br />
+<span style="font-size: 16px;">HM6NR-QXX7C-DFW2Y-8B82K-WTYJV</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2013</span></strong></h3>
+<p>&nbsp;</p>
+<table style="height: 192px; width: 780px;" width="780">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 132px; text-align: center; height: 55px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 207px; height: 55px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/A/F/1/AF128362-A6A8-4DB3-A39A-C348086472CC/VS2013_RTM_PRO_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 55px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">FBJVC-3CMTX-D8DVP-RTQCT-92494</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 132px; text-align: center; height: 72px;"><span style="font-size: 16px;"><b>Premium</b></span></td>
+<td style="width: 207px; text-align: center; height: 72px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/D/B/D/DBDEE6BB-AF28-4C76-A5F8-710F610615F7/VS2013_RTM_PREM_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 72px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">FBJVC-3CMTX-D8DVP-RTQCT-92494</span></p>
+</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 132px; text-align: center; height: 65px;"><span style="font-size: 16px;"><b>Ultimate</b></span></td>
+<td style="width: 207px; text-align: center; height: 65px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/C/F/B/CFBB5FF1-0B27-42E0-8141-E4D6DA0B8B13/VS2013_RTM_ULT_ENU.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 317px; height: 65px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">BWG7X-J98B3-W34RT-33B3R-JVYW9</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2012</span></strong></h3>
+<table style="height: 10px; width: 779px;" width="779">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 137px; text-align: center; height: 10px;"><span style="font-size: 16px;"><b>Ultimate</b> </span></td>
+<td style="text-align: center; width: 206px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/D/B/0/DB03922C-FF91-4845-B7F2-FC68595AB730/VS2012_ULT_enu.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 312px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">YKCW6-BPFPF-BT8C9-7DCTH-QXGWC</span><br />
+<span style="font-size: 16px;">RBCXF-CVBGR-382MK-DFHJ4-C69G8</span><br />
+<span style="font-size: 16px;">YQ7PR-QTHDM-HCBCV-9GKGG-TB2TM</span><br />
+<span style="font-size: 16px;">MMVJ9-FKY74-W449Y-RB79G-8GJGJ</span><br />
+<span style="font-size: 16px;">YCFHQ-9DWCY-DKV88-T2TMH-G7BHP</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="height: 66px; width: 779px;">
+<tbody>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 348px; text-align: center;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="height: 17px; width: 349px; text-align: center;"><span style="font-size: 16px;">4D974-9QX42-9Y43G-YJ7JG-JDYBP</span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 348px; text-align: center;"><span style="font-size: 16px;"><strong>Premium</strong></span></td>
+<td style="height: 17px; width: 349px; text-align: center;"><span style="font-size: 16px;">MH2FR-BC9R2-84433-47M63-KQVWC</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2010</span></strong></h3>
+<table style="height: 10px; width: 779px;" width="779">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 137px; text-align: center; height: 10px;"><span style="font-size: 16px;"><b>Ultimate &amp;</b></span></p>
+<p><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 206px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="https://drive.google.com/open?id=1RLJCaOwU0vglmMLun37dunyDPLYW-RKg" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 312px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key: </strong></span></p>
+<p style="text-align: center;"><span style="font-size: 16px;">YCFHQ-9DWCY-DKV88-T2TMH-G7BHP</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2008</span></strong></h3>
+<table style="width: 780px; height: 10px;">
+<tbody>
+<tr style="height: 77px;">
+<td style="width: 140px; text-align: center; height: 10px;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="text-align: center; width: 205px; height: 10px;"><span style="font-size: 16px;"><a class="btn btn-default" href="http://download.microsoft.com/download/8/1/d/81d3f35e-fa03-485b-953b-ff952e402520/VS2008ProEdition90dayTrialENUX1435622.iso" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD</a></span></td>
+<td style="width: 311px; height: 10px;">
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key Visual Studio: </strong></span></p>
+<p style="text-align: center;">XMQ2Y-4T3V6-XJ48Y-D3K2V-6C4WT<br />
+WPX3J-BXC3W-BPYWP-PJ8CM-F7M8T<br />
+PYHYP-WXB3B-B2CCM-V9DX9-VDY8T<br />
+WPDW8-M962C-VJX9M-HQB4Q-JVTDM</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 2005</span></strong></h3>
+<table style="height: 40px; width: 779px;" width="778">
+<tbody>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 345px; text-align: center;"><span style="font-size: 16px;"><strong>Professional</strong></span></td>
+<td style="height: 17px; width: 352px; text-align: center;"><span style="font-size: 16px;">KGR3T-F2C26-RRTGT-D6DQT-QBBB3</span></td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: center;"><strong><span style="color: #0000ff;">Visual Studio 6.0</span></strong></h3>
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 16px;"><strong>Key:</strong></span></p>
+<p style="text-align: center;">111-1111111</p>
+<p style="text-align: center;">0123456789</p>
+<p style="text-align: center;">1234567890</p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/tag/microsoft/" target="_blank" rel="noopener noreferrer">NHỮNG PHẦN MỀM VÀ ỨNG DỤNG CŨNG NHƯ HỆ ĐIỀU HÀNH CUNG CẤP BỞI MICROSOFT</a></strong></span></p>
+<ul>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/" target="_blank" rel="noopener noreferrer">IDM Full Toolkit &#8211; Crack IDM Tiện Lợi &#8211; Không Báo Fake Serial</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></span></li>
+</ul>
+<p style="text-align: center;"><strong><span style="color: #ff0000; font-size: 28px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6105"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Và Cách Crack Full IDM 6.35 Build 10 Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</title>
+		<link>http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/</link>
+				<comments>http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/#respond</comments>
+				<pubDate>Tue, 07 May 2019 07:47:07 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Crack]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Văn Phòng]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Active]]></category>
+		<category><![CDATA[IDM]]></category>
+		<category><![CDATA[Internet Download Manager]]></category>
+		<category><![CDATA[Patch]]></category>
+		<category><![CDATA[Repack]]></category>
+		<category><![CDATA[Toolkit]]></category>
+		<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6100</guid>
+				<description><![CDATA[<p>Download và crack full Internet Download Manager &#8211; IDM 6.35 Full Toolkit fake serial &#8211; một trong những phần mềm nổi tiếng và phổ biến nhất cho phép bạn tải xuống các tệp từ Internet nhờ khả năng tương thích với hầu hết các trình duyệt, nền tảng hệ điều hành cũng như có thể tải [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/">Download Và Cách Crack Full IDM 6.35 Build 10 Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: 20px;"><strong>Download và crack full Internet Download Manager &#8211; IDM 6.35</strong> <strong>Full Toolkit fake serial</strong> &#8211; một trong những phần mềm nổi tiếng và phổ biến nhất cho phép bạn tải xuống các tệp từ Internet nhờ khả năng tương thích với hầu hết các trình duyệt, nền tảng hệ điều hành cũng như có thể tải về tất cả các loại tập tin khác nhau.</span></p>
+<p><figure id="attachment_6101" aria-describedby="caption-attachment-6101" style="width: 698px" class="wp-caption aligncenter"><img class="size-full wp-image-6101" src="http://localhost:82/demowp/wp-content/uploads/2019/05/idm-full-6.33-crack.jpg" alt="Download Và Cách Crack Full IDM 6.33" width="698" height="394" srcset="http://localhost:82/demowp/wp-content/uploads/2019/05/idm-full-6.33-crack.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/05/idm-full-6.33-crack-300x169.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /><figcaption id="caption-attachment-6101" class="wp-caption-text">Download Và Cách Crack Full IDM 6.35</figcaption></figure></p>
+<p><span style="font-size: 20px;">Có thể nói <strong>IDM</strong> là một công cụ, một phần mềm hỗ trợ download tuyệt vời, được đông đảo mọi người sử dụng.</span></p>
+<h2><span style="font-size: 20px;"><strong>Internet Download Manager (IDM)</strong> </span></h2>
+<p><span style="font-size: 20px;">Tiếp tục cải tiến hơn nữa tốc độ tải file, khả năng nhận dạng âm thanh, video trong trình phát nội dung web, đồng thời hỗ trợ trình duyệt <strong>Firefox 61, 62</strong> và sửa một số lỗi nhỏ khác trong việc tải file.</span></p>
+<p><figure style="width: 800px" class="wp-caption aligncenter"><img src="https://imgur.com/QFKreaQ.png" alt="Crack Full IDM 6.33 Không Báo Fake Serial" width="800" height="458" /><figcaption class="wp-caption-text">Crack Full IDM 6.35 Không Báo Fake Serial</figcaption></figure></p>
+<p><span style="font-size: 20px;">Về độ đa dạng của tính năng thì <strong>IDM</strong> được tích hợp vào tất cả các trình duyệt web phổ biến, ví dụ: <strong>Google Chrome, Internet Explorer, Mozilla Firefox, Opera, Safari.</strong></span></p>
+<h2><span id="Cac_tinh_nang_cua_Internet_Download_Manager" class="ez-toc-section"><strong><span id="2_Cac_tinh_nang_cua_phan_mem_IDM">Các tính năng của Internet Download Manager</span></strong></span></h2>
+<ul>
+<li>Tự động thay đổi băng thông hay tải xuống theo lịch trình mà người sử dụng cài đặt và lưu lại thành một danh sách những tệp đã được tải xuống.</li>
+<li>Tự động bắt liên kết những file, ứng dụng đang cố tải xuống từ mạng sau khi đã được phát hiện.</li>
+<li>Cho phép người dùng tải xuống nhiều kiểu tập tin cùng một lúc.</li>
+<li>Thuật toán chính của phần mềm này là phân mảnh động các tệp tin tải xuống, chia tệp cần tải ra thành nhiều phần để tốc độ tải xuống nhanh hơn.</li>
+<li>Hỗ trợ phục hồi download những link đang download dở trước đó bằng việc mở lại trang tải xuống để IDM tự bắt lại liên kết mới.</li>
+<li>Tự động bắt liên kết các tập tin đa phương tiện (mp3, mp4,…) đang được xem trực tuyến trên trình duyệt.</li>
+<li>Hỗ trợ việc download video từ các trang như YouTube, Google Video, MySpaceTV,…</li>
+<li>Lưu trữ, quản lý danh sách các tập tin đã được download. Cho phép lập lịch download.</li>
+<li>Hỗ trợ rất nhiều trình duyệt như: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, Opera.</li>
+<li>Hỗ trợ các giao thức tải xuống như HTTP, HTTPS, MMS và FTP.</li>
+<li>Tạo tên tập tin tải xuống và phần mô tả tệp bằng các ký tự Unicode.</li>
+<li>Hỗ trợ nhiều giao thức định danh như Basic,NTLM, Keberos, Negotiate giúp IDM dễ dàng truy cập và tải xuống dữ liệu từ các máy chủ yêu cầu username và password.</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000; font-size: 28px;"><strong>Hướng dẫn Kích hoạt &#8211; Crack Full IDM Không Báo Fake Serial</strong></span></h2>
+<h3><span style="color: #0000ff;"><strong>Cách 1: Tải vài cài đặt IDM Repack Kích hoạt sẵn</strong></span></h3>
+<h3 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000; font-size: 24px;"><strong>Tải Về IDM 6.35 build 10 Repack Đã kích hoạt bản quyền sẵn</strong></span></h3>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/1H3RASVRYA8Z" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download IDM Internet Download Manager Repack"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Download Internet Download Manager Repack<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Fshare</small></span></a><br />
+<strong>Các bạn chỉ cần tải phiên bản này về và sau đó cài đặt vào máy là thành công. Vì nó đã được tích hợp bản quyền sẵn cho các bạn rồi.</strong></p>
+<h3><span style="color: #0000ff;"><strong>Cách 2: <a style="color: #0000ff;" href="http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/" target="_blank" rel="noopener noreferrer">Sử dụng IDM Full Toolkit để Crack Full IDM</a></strong></span></h3>
+<p><figure id="attachment_6096" aria-describedby="caption-attachment-6096" style="width: 620px" class="wp-caption aligncenter"><img class="size-full wp-image-6096" src="http://localhost:82/demowp/wp-content/uploads/2018/08/IDM-Full-Toolkit-1.jpg" alt="IDM Full Toolkit - Crack IDM Tiện Lợi - Không Báo Fake Serial" width="620" height="334" srcset="http://localhost:82/demowp/wp-content/uploads/2018/08/IDM-Full-Toolkit-1.jpg 620w, http://localhost:82/demowp/wp-content/uploads/2018/08/IDM-Full-Toolkit-1-300x162.jpg 300w" sizes="(max-width: 620px) 100vw, 620px" /><figcaption id="caption-attachment-6096" class="wp-caption-text">IDM Full Toolkit &#8211; Crack IDM Tiện Lợi &#8211; Không Báo Fake Serial</figcaption></figure></p>
+<h4 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000; font-size: 24px;"><strong>Download IDM Full Toolkit &#8211; Fake Serial Mới Nhất bản mới nhất </strong></span></h4>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/WWJNGZEO1RJ5" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download IDM Internet Download Manager Permanently + Tool Toolkit Crack IDM Fake Serial Number bản 3.9"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải Toolkit crack IDM cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Fshare</small></span></a></p>
+<p style="text-align: center;"><a href="https://mshare.io/file/vzosBDiA" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + Tool Toolkit Crack IDM Fake Serial Number bản 3.9"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải Toolkit crack IDM cho máy<small style="padding-bottom:8px;color:#ffffff">Dùng Link tải miễn phí Dự phòng</small></span></a><br />
+<strong>Link cập nhật những phiên bản mới chính chủ của IDM: Mới nhất hiện tại là 6.35 build 10. <a href="https://www.internetdownloadmanager.com/download.html" target="_blank" rel="noopener noreferrer">https://www.internetdownloadmanager.com/download.html</a></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: 20px;">Hướng dẫn tải file : <a href="http://localhost:82/demowp/huong-dan-tai-file-phan-mem-va-cac-loai-tai-lieu-khac-tren-tanhongit-net/" target="_blank" rel="noopener noreferrer">xem tại đây</a></span></strong></p>
+<p><span style="font-size: 20px;">Mỗi khi có bản mới cho IDM thì Mình sẽ thường xuyên update lên, các bạn hãy theo dõi website của mình để tải về khi mình update lên bản mới sau này các bạn nhé!</span></p>
+<p><span style="font-size: 20px;"><strong>Ngoài ra các bạn có thể xem IDM Full Toolkit dễ dàng <a href="http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/" target="_blank" rel="noopener noreferrer">tại đây</a></strong></span></p>
+<h3><span style="text-decoration: underline; font-size: 24px;"><strong><span style="color: #0000ff; text-decoration: underline;">Cách 3: Kích hoạt bằng tool IDM Trial Reset</span></strong></span></h3>
+<h4 style="text-align: center;"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">Download tool IDM Trial Reset</span></strong></span></h4>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/SSCZQHXWJNFWZWD" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + tool IDM Trial Reset"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải tool IDM Trial Reset cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Fshare</small></span></a></p>
+<p style="text-align: center;"><a href="https://mshare.io/file/qf3hIVy" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download IDM Internet Download Manager Permanently + tool IDM Trial Reset"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Download tool IDM Trial Reset cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Dự phòng</small></span></a></p>
+<h4><strong><span style="color: #0000ff; font-size: 20px;">Hướng dẫn kích hoạt.</span></strong></h4>
+<p>Chuột phải <strong>idm_trial_reset.exe</strong> chọn <strong>Run as administrator</strong></p>
+<h5><span style="font-size: 16px;"><strong>+ Nếu muốn dùng IDM ở chế độ dùng thử.</strong></span></h5>
+<ul>
+<li>Chọn tab Trial Reset rồi click vào Reset the IDM trial now để đưa thời gian dùng thử IDM về 30 ngày.</li>
+<li>Nếu muốn chương trình tự động hoàn toàn, giải nén file, chọn <strong>Automatically.</strong> (nếu không muốn tự động bật dùng thử nữa bỏ chọn để tắt tự động)</li>
+</ul>
+<h5><span style="font-size: 16px;"><strong>+ Còn nếu muốn dùng IDM ở chế độ đăng ký.</strong></span></h5>
+<ul>
+<li>Chọn tab<strong> Register</strong> rồi click<strong> Register IDM now</strong></li>
+</ul>
+<p><img class="size-full aligncenter" src="https://imgur.com/30ZNxP4.png" width="327" height="139" /></p>
+<p>Công cụ này còn rất nhiều tính năng khác cho các bạn dùng. Nếu có điều kiện các bạn nhớ mua bản quyền để ủng hộ nhà sản xuất IDM nhé!</p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/tai-va-crack-idm-6-32-vinh-vien-2019/" target="_blank" rel="noopener noreferrer">Tải Và Cách Crack IDM Vĩnh Viễn Mới Nhất- Không Báo Fake Serial [UPDATE]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/vmware-workstation-pro/" target="_blank" rel="noopener noreferrer">Download VMware Workstation Pro Full Key &#8211; Bản Quyền Tạo Máy Ảo Hóa Mới Nhất</a></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-nt-3-1/" target="_blank" rel="noopener noreferrer">Download ISO Windows NT 3.1 Cài đặt cho máy</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-2000/" target="_blank" rel="noopener noreferrer">Download Windows 2000 ISO (Windows NT 5) Cài Đặt Cho Máy Tính</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/auslogics-disk-defrag-pro/" target="_blank" rel="noopener noreferrer">AusLogics Disk Defrag Pro FULL Final Phần Mềm Chống Phân Mảnh Ổ Đĩa</a></strong></span></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6100"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">18</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/">Download Và Cách Crack Full IDM 6.35 Build 10 Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Windows 10 Hello Summer 2019 Full Soft &#038; Full Drivers by ThienIT &#8211; Hệ điều hành ổn định nhất</title>
+		<link>http://localhost:82/demowp/download/tai-win/windows-10-hello-summer-2019/</link>
+				<comments>http://localhost:82/demowp/download/tai-win/windows-10-hello-summer-2019/#respond</comments>
+				<pubDate>Mon, 22 Apr 2019 17:19:38 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Windows]]></category>
+		<category><![CDATA[Ghost]]></category>
+		<category><![CDATA[Tải Win 10]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[ghost win 10 64bit]]></category>
+		<category><![CDATA[Ghost Win10]]></category>
+		<category><![CDATA[iso]]></category>
+		<category><![CDATA[Tải Win]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5989</guid>
+				<description><![CDATA[<p>Download Windows 10 Hello Summer 2019 Full Soft &#38; Full Drivers by ThienIT &#8211; Hệ điều hành ổn định nhất &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; THÔNG TIN CHI TIẾT BỘ CÀI ĐẶT &#8211; GHOST &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; Windows 10 Hello Summer 2019 Full Soft &#38; Full Drivers by ThienIT &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;​ Bộ cài ISO của bản 64-bit có thể cài dưới hai [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/tai-win/windows-10-hello-summer-2019/">Download Windows 10 Hello Summer 2019 Full Soft &#038; Full Drivers by ThienIT &#8211; Hệ điều hành ổn định nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 28px;">Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers by ThienIT &#8211; Hệ điều hành ổn định nhất</span></strong></span></p>
+<p style="text-align: center;"><span style="font-size: 20px;"><b>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</b></span></p>
+<p style="text-align: center;"><span style="font-size: 20px; color: #0000ff;"><b>THÔNG TIN CHI TIẾT BỘ CÀI ĐẶT &#8211; GHOST</b></span><br />
+<span style="font-size: 20px; color: #0000ff;"><b>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</b></span><br />
+<span style="font-size: 20px; color: #0000ff;"><b>Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers by ThienIT</b></span><br />
+<span style="font-size: 20px;"><b>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</b>​</span></p>
+<p><figure id="attachment_6030" aria-describedby="caption-attachment-6030" style="width: 699px" class="wp-caption aligncenter"><img class="size-full wp-image-6030" src="http://localhost:82/demowp/wp-content/uploads/2019/04/Download-Windows-10-Hello-Summer-2019.jpg" alt="Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers" width="699" height="437" srcset="http://localhost:82/demowp/wp-content/uploads/2019/04/Download-Windows-10-Hello-Summer-2019.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/04/Download-Windows-10-Hello-Summer-2019-300x188.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /><figcaption id="caption-attachment-6030" class="wp-caption-text">Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers</figcaption></figure></p>
+<p><i><b>Bộ cài ISO của bản 64-bit có thể cài dưới hai dạng là Legacy và UEFI (Các bạn không được sử dụng phần mềm UltraISO để Mount ra ổ ảo cài Win trực tiếp ngay trên Hệ điều hành đang sử dụng cũng như không được giải nén chạy File setup.exe) &#8211; Nếu bạn nào không có USB hoặc DVD để burn bộ cài đặt ra có thể sử dụng phần mềm WinToHDD để cài đặt an toàn và nhanh chóng nhất.</b></i></p>
+<h3><span style="text-decoration: underline; color: #ff0000;"><b>System Infomation</b></span></h3>
+<p>&#8211; Được làm từ bộ cài <strong>Windows 10 Professional</strong> nguyên gốc từ <strong>Microsoft</strong> không lược bỏ (Lite) bất cứ thành phần nào của Windows nhằm tạo sự ổn định tốt nhất cho người dùng.</p>
+<p>&#8211; Không cá nhân hóa bất kỳ thành phần nào của hệ thống.</p>
+<p>&#8211; Được cấu hình và đóng gói bằng tệp tin trả lời tự động của Windows cực sạch.</p>
+<p>&#8211; Giữ lại quá trình thiết lập ban đầu (OOBE) để người dùng tự cá nhân hóa chiếc PC của mình theo tài khoản MS hoặc tài khoản Local</p>
+<p>&#8211; Đã kích hoạt chế độ tự động kích hoạt với máy tính nào đã có bản quyền kỹ thuật số của Windows 10 Pro trước đây, khi cài vào là nhận luôn bản quyền mà không cần kích hoạt</p>
+<p>&#8211; Khi cài đặt xong hệ điều hành bạn có thể vào <strong>SETTING</strong> chọn mục <strong>UPDATE &amp; SECURITY</strong> tại mua <strong>WINDOWS</strong> <strong>UPDATE</strong> bạn chọn vào mục <strong>CHECK</strong> <strong>FOR</strong> <strong>UPDATE</strong> là máy tính tự động cập nhật luôn các <strong>Drivers</strong> cho máy của các bạn luôn.</p>
+<p>&#8211; Tích hợp bản update tháng 04/2019 của Microsoft</p>
+<p>&#8211; <strong>Kích hoạt NET Framework</strong> đầy đủ cho Windows</p>
+<p>&#8211; Tinh chỉnh quá trình khởi động cực nhanh, tốc độ mở <strong>Application</strong> hầu như sẽ không còn độ trễ.</p>
+<p>&#8211; Thêm một số tính năng tùy biến tệp tin tại Menu chuột phải</p>
+<p>&#8211; Bộ <strong>Office 2016 Pro Plus</strong> đầy đủ trọn bộ chưa @ctive</p>
+<p>&#8211; <strong>Windows Media Player</strong> được thay đổi giao diện đẹp hơn, tinh tế hơn.</p>
+<p>&#8211; Add <strong>hàng ngàn font chữ thông dụng</strong> cho dân văn phòng và thiết kế đồ họa</p>
+<h3><span style="text-decoration: underline;"><span style="color: #ff0000;"><b>Software Windows 10 Hello Summer 2019 Full Soft</b></span></span></h3>
+<p>&#8211; Adobe 32 (NPAPI &#8211; PPAPI) + Adobe AIR + Adobe Shockwave Player 12.3 Full Update tự động khi có phiên bản mới</p>
+<p>&#8211;<strong> Thư viện Visual C++</strong> đầy đủ từ 2005 &#8211; 2017</p>
+<p>&#8211; <strong>Microsoft XNA Framwork Redistributable 4.0</strong></p>
+<p>&#8211;<strong> CCleaner 5.55</strong> đã @ctive lên phiên bản thương mại &#8211; Trình dọn dẹp hệ thống.</p>
+<p>&#8211; <strong>WinRAR 5.70 VN</strong> &#8211; Trình đọc, giải file nén tiếng việt thông dụng</p>
+<p>&#8211; <strong>Unikey RC4.3</strong> &#8211; Hỗ trợ gõ tiếng việt thông dụng</p>
+<p>&#8211;<strong> Internet Download Manager 6.32</strong> đã @ctive lên phiên bản thương mại</p>
+<p>&#8211; <strong>Foxit Reader</strong> &#8211; Phần mềm đọc PDF tốt nhất, thông dụng nhất.</p>
+<p>&#8211;<strong> K-Lite Codec Pack 14.7.5 Full</strong> &#8211; Phần mềm đọc tất cả các định dạng video và âm thanh dễ dàng</p>
+<p>&#8211; <strong>Revo Uninstaller Pro v4.0.5</strong> đã @ctive lên phiên bản thương mại &#8211; Phần mềm gỡ ứng dụng triệt để</p>
+<p>&#8211; <strong>UltraISO v9.71</strong> đã kích hoạt lên phiên bản thương mại &#8211; Phần mềm đọc và tạo ổ đĩa ảo.</p>
+<p>&#8211; <strong>Teamviewer 14 ResetID</strong> &#8211; Phần mềm điều khiển máy tính từ xa.</p>
+<p>&#8211; Trình duyệt<strong> Google Chrome</strong> 73.0.3683 &#8211; Trình duyệt Web thông dụng nhất</p>
+<p>&#8211; <strong>AIDA64 Extreme</strong> &#8211; Công cụ kiểm tra và chuẩn đoán lỗi phần cứng máy tính</p>
+<div class="alert alert-warning">
+<div class="alert alert-warning" style="text-align: center;"><span style="font-size: 24px; color: #ff0000;"><b>Warning!!!</b></span></div>
+<div class="alert alert-warning">&#8211; Kiểm tra kỹ MD5 của bản Win hoặc bản GHOST trước khi bung</div>
+<div class="alert alert-warning">&#8211; Thường xuyên dọn rác để hệ thống luôn đạt hiểu quả tốt nhất cũng như tốc độ nhanh nhất</div>
+<div class="alert alert-warning">&#8211; Mọi thắc mắc, yêu cầu liên hệ qua Facebook để được hỗ trợ nhé!! LinkFB: https://www.facebook.com/nhungthien.1209</div>
+</div>
+<hr />
+<h3 style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers</strong></span></h3>
+<h4 style="text-align: center;"><strong><span style="font-size: 20px;">Link Google Drive Windows 10 Hello Summer 2019 Bản 64Bit</span></strong></h4>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1E7A8o6MjSF0emH2lTzUsGqAntRh-KV8O" target="_blank" rel="noopener noreferrer">FILE ISO x64 CHUẨN LEGACY_UEFI</a>  <a class="btn btn-default" href="https://drive.google.com/open?id=1E7A8o6MjSF0emH2lTzUsGqAntRh-KV8O" target="_blank" rel="noopener noreferrer">File .TBI x64_UEFI</a> <a class="btn btn-default" href="https://drive.google.com/open?id=1dS97mUtRmkunIQhVaGwISdJwYXdbhpW0" target="_blank" rel="noopener noreferrer">File .TBI x64_Legacy</a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1SJ0O-e-qcuX3iynop6wwW21VoOy-uEjb" target="_blank" rel="noopener noreferrer">File .ghost x64_Legacy</a> <a class="btn btn-default" href="https://drive.google.com/open?id=16gaXSg54WWr6liUCPss5XkvAYlqljvVi" target="_blank" rel="noopener noreferrer">File .Tib x64_UEFI</a></p>
+<h4 style="text-align: center;"><strong><span style="font-size: 20px;">Link Google Drive Windows 10 Hello Summer 2019 Bản 32Bit</span></strong></h4>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1CPYRg1l2gvUbL-cQYWE5_rJDqO9dOi3_" target="_blank" rel="noopener noreferrer">FILE ISO x86 CHUẨN LEGACY</a>  <a class="btn btn-default" href="https://drive.google.com/open?id=1LTvzb2-JdjUDIUbKQteZqXbZM1j2yKkT" target="_blank" rel="noopener noreferrer">File .ghost x86_legacy</a> <a class="btn btn-default" href="https://drive.google.com/file/d/10FEXD28LbkWasgKlpgdUXdxhUeQwTDW7/view" target="_blank" rel="noopener noreferrer">File .TBI x86_Legacy</a></p>
+<h3 style="text-align: center;"><b>Dự Phòng &#8211; Trọn bộ 1 Folder &#8211; Link Google Drive &amp; Fshare Tốc độ cao</b></h3>
+<p style="text-align: center;"><a class="btn btn-default" href="https://anotepad.com/notes/7nscq3" target="_blank" rel="noopener noreferrer">Download now</a></p>
+<div class="alert alert-warning"><span style="font-size: 24px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/download/" target="_blank" rel="noopener noreferrer">Download Windows &amp; Office các phiên bản.</a></strong></span></div>
+<h3><span style="text-decoration: underline; color: #ff0000;"><b><i>MD5 Checksum</i></b></span></h3>
+<div><b><i>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</i></b><br />
+<i><b>File: Windows10_HelloSummer2019x64_Legacy.GHO<br />
+CRC-32: 8f18b79f<br />
+MD4: f7fd8d481252699aaea6d26e55bbbc44<br />
+MD5: 01c3f501b5645efdf9cad263d7cc2684<br />
+SHA-1: f628c9ea547f99d84dc5a4f3c54d294cca204fce<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+File: Windows10_HelloSummer2019x64_Legacy.TBI<br />
+CRC-32: 377902cd<br />
+MD4: 9d9aace03bf09e4f22907737dc81406d<br />
+MD5: 65f8ff8a48f0e61ec52e1988348a427d<br />
+SHA-1: d88d2a2c0a57251552ffcb7b7af467593a025366<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+File: Windows10_HelloSummer2019x64_Legacy_EFI.iso<br />
+CRC-32: 6d9ae18f<br />
+MD4: e46dd326ca06abf47a8271285adee995<br />
+MD5: 5d13a5a679beea5a184bc168b7bafc2f<br />
+SHA-1: 5388158588ec3788e6db15bf553acca07c58b05a<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+File: Windows10_HelloSummer2019x86_Legacy.GHO<br />
+CRC-32: f1f008db<br />
+MD4: 6a4449a5b414ab64148ab2df187c90fd<br />
+MD5: 491f6123582fe4104c5d59a145cdb7b5<br />
+SHA-1: 97df4f059338535ea600e8c71b84f3152f2dbce8<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+File: Windows10_HelloSummer2019x86_Legacy.iso<br />
+CRC-32: 07416c7f<br />
+MD4: 36a4c282a6a0bc3fa0ff8c1e6ca56fec<br />
+MD5: 1e9e58d94a41dd061186db8f6ecb5fc3<br />
+SHA-1: ef34df8a9bf1c2da56fdddb140f66a47b54eb190<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+File: Windows10_HelloSummer2019x86_Legacy.TBI<br />
+CRC-32: d8e5efae<br />
+MD4: c461c2cfcdf553d69232c80b7308671d<br />
+MD5: b4970063931699bf2ce0e5fc0cd2c64b<br />
+SHA-1: 11916951021225b6b0f201a2927ba1bd41b85388<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</b></i></div>
+<h3><strong><span style="font-size: 24px;">Các hình ảnh minh họa:</span></strong></h3>
+<div><img class="aligncenter size-full" src="https://imgur.com/MvHDQIk.png" alt="Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers" width="1024" height="640" /><img class="aligncenter size-full" src="https://imgur.com/i7AjV5J.png" alt="Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers 2" width="1024" height="576" /><img class="aligncenter size-full" src="https://imgur.com/4jddlFx.png" alt="Download Windows 10 Hello Summer 2019 Full Soft &amp; Full Drivers 3" width="1024" height="640" /><img class="aligncenter size-full" src="https://imgur.com/IkpxkwT.png" width="1024" height="640" /><img class="aligncenter size-full" src="https://imgur.com/wQ2HSpn.png" width="1024" height="640" /><img class="alignnone size-full" src="https://imgur.com/ccwFiwF.png" width="1024" height="640" /></div>
+<div></div>
+<div style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 24px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5989"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/tai-win/windows-10-hello-summer-2019/">Download Windows 10 Hello Summer 2019 Full Soft &#038; Full Drivers by ThienIT &#8211; Hệ điều hành ổn định nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/tai-win/windows-10-hello-summer-2019/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download DLC Boot 2019 v3.6 &#8211; Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</title>
+		<link>http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019-v3-6/</link>
+				<comments>http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019-v3-6/#comments</comments>
+				<pubDate>Mon, 15 Apr 2019 12:33:56 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[tool usb]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Boot]]></category>
+		<category><![CDATA[DLC Boot 2019]]></category>
+		<category><![CDATA[DLCBoot]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5970</guid>
+				<description><![CDATA[<p>USB DLC Boot 2019 v3.6 cứu hộ máy tính được tích hợp nhiều tính năng như hỗ trợ boot trên UEFI và LEGACY với USB định dạng FAT32, hỗ trợ Mini Win, công cụ phân chia phân vùng không mất dữ liệu, công cụ update driver,&#8230; Có rất nhiều công cụ trên DLC Boot hỗ [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019-v3-6/">Download DLC Boot 2019 v3.6 &#8211; Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>USB DLC Boot 2019 v3.6 cứu hộ máy tính </strong>được tích hợp nhiều tính năng như hỗ trợ boot trên<strong> UEFI</strong> và <strong>LEGACY với USB</strong> định dạng <strong>FAT32</strong>, hỗ trợ<strong> Mini Win</strong>, công cụ phân chia phân vùng không mất dữ liệu, công cụ <strong>update</strong> <strong>driver</strong>,&#8230; Có rất nhiều công cụ trên<strong> DLC Boot</strong> hỗ trợ các nhu cầu sử dụng phong phú của người dùng.</p>
+<p><figure style="width: 900px" class="wp-caption alignnone"><img class="size-full" src="https://imgur.com/dRO0PcE.png" alt="Tân Hồng IT Download DLC Boot 2019 v3.6 - Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC" width="900" height="673" /><figcaption class="wp-caption-text">Download DLC Boot 2019 v3.6 &#8211; Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</figcaption></figure></p>
+<p>Trong phiên bản<strong> DLC Boot 2019</strong> này có nhiều sự đổi mới vượt trội so với các phiên bản trước, như tích hợp<strong> Mini Windows 10 32Bit &amp; 64Bit</strong> hỗ trợ nhiều tính năng như: <strong>Soạn thảo, nghe nhạc, xem phim, lướt web, USB 3.0, USB 3G, UEFI.</strong> Đã được xây dựng môi trường làm việc tương tự như<strong> Mini Windows XP trong bản Hiren’s BootCD</strong> bên cạnh đó công cụ này, tích hợp thêm <strong>Mini Windows XP trính xuất từ Hiren’s BootCD 15.2 </strong>và cũng được xây dựng, tỉnh chỉnh, tối ưu lại.</p>
+<p>Và mới đây nhất Tác giả đã cho ra bản <strong>Update DLC Boot 2019 v3.6</strong> cho mọi người với những cập nhật và sửa lỗi hoàn chỉnh.</p>
+<p>Với bản <strong>DLC Boot 2019</strong> này bạn có thể Boot trên các máy tính chạy chuẩn <strong>Legacy, UEFI.</strong> Bạn có thể boot từ <strong>USB, HDD Box, BOOT LAN, Android.</strong></p>
+<p>Bản <strong>DLC BOOT 2019</strong> mới nhất này có khá nhiều thay đổi so với các phiên bản trước đó. Cụ thể thì bạn có thể xem thêm bên dưới.</p>
+<p><figure id="attachment_5974" aria-describedby="caption-attachment-5974" style="width: 640px" class="wp-caption aligncenter"><img class="size-full wp-image-5974" src="http://localhost:82/demowp/wp-content/uploads/2019/04/Download-DLC-Boot-2019-v3.6-Bộ-Công-Cụ-Tạo-USB-Boot-Đa-Năng-Cứu-Hộ-Máy-Tính-PC.jpg" alt="Download DLC Boot 2019 v3.6 - Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC" width="640" height="397" srcset="http://localhost:82/demowp/wp-content/uploads/2019/04/Download-DLC-Boot-2019-v3.6-Bộ-Công-Cụ-Tạo-USB-Boot-Đa-Năng-Cứu-Hộ-Máy-Tính-PC.jpg 640w, http://localhost:82/demowp/wp-content/uploads/2019/04/Download-DLC-Boot-2019-v3.6-Bộ-Công-Cụ-Tạo-USB-Boot-Đa-Năng-Cứu-Hộ-Máy-Tính-PC-300x186.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /><figcaption id="caption-attachment-5974" class="wp-caption-text">Download DLC Boot 2019 v3.6 &#8211; Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</figcaption></figure></p>
+<h2><span style="font-size: 24px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019/" target="_blank" rel="noopener noreferrer">Download DLC Boot 2019 v3.5 – Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</a> Để biết toàn bộ thông tin về DLC BOOT 2019 nhé!</strong></span></h2>
+<h2><strong><span style="color: #008000;">Những thay đổi của bản </span><span style="color: #008000;">DLCBoot 2019 v3</span><span style="color: #008000;">.6 so với bản </span><a href="http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019/"><span style="color: #008000;">DLC Boot 2019 v3</span><span style="color: #008000;">.5</span></a></strong></h2>
+<p><strong>&#8211; Sửa lỗi khi tạo USB Boot.</strong></p>
+<p><strong>&#8211; Sửa lỗi khi chạy Acronis True Image ngoài màn hình Desktop Mini Windows 10.</strong></p>
+<p><strong>&#8211; Fix lỗi Partition Wizard trong Mini Windows 10 64bit.</strong></p>
+<p><strong>&#8211; Sửa lỗi Cent Browser trong Mini Windows.</strong></p>
+<p><strong>&#8211; Sửa lỗi Maxthon trong Mini Windows.</strong></p>
+<p><strong>&#8211; Fix lỗi Check Update và Thanks.</strong></p>
+<p><strong>&#8211; Cập nhật Acronis True Image 2019 và Partition Wizard Technician 11.0.1 cho Mini Windows khi boot qua LAN.</strong></p>
+<h2><span style="font-size: 24px;"><strong>XEM THÊM:  <a href="http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019/">DLC Boot 2019 v3.5</a></strong></span></h2>
+<h2><span style="color: #990099;"><b>Cập nhật các phần mềm có trong DLC Boot lên phiên bản mới nhất, cụ thể:</b></span></h2>
+<p><strong>+ Aomei Partition Assistant Technician 8.1</strong></p>
+<p><strong>+ Partition Wizard Technician 11.0.1</strong></p>
+<p><strong>+ DiskGenius Pro 5.1.1.696</strong></p>
+<p><strong>+  3DP Chip Lite 18.12</strong></p>
+<p><strong>+  Maxthon 5.0.3.4000 (do bản mới không chạy được trên Mini Windows)</strong></p>
+<p><strong>+  Cent Browser 3.2.4.23 (do bản mới không chạy được trên Mini Windows)</strong></p>
+<p><strong>+  UltraSurf 19.02</strong></p>
+<p><strong>+  SoftPerfect Network Scanner 7.2.0</strong></p>
+<p><strong>+  Advanced IP Scanner 2 2.5.3850</strong></p>
+<p><strong>+  HWiNFO32 6.04</strong></p>
+<p><strong>+  CPU-Z 1.88</strong></p>
+<p><strong>+  GPU-Z 2.18.0</strong></p>
+<p><strong>+  Total Commander 9.22a</strong></p>
+<p><strong>+  BurnAware Professional 12.2</strong></p>
+<p><strong>+  CCleaner Technician 5.56.7144</strong></p>
+<p><strong>+  KMS Tools 01.04.2019</strong></p>
+<h2><b><span style="color: #990099;">Thêm 1 số phần mềm mới vào DLC Boot, cụ thể:</span></b></h2>
+<p><strong>+ TeraByte Drive Image 3.28 for Windows and DOS</strong></p>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline;"><span style="color: #0000ff;"><strong>Download DLC Boot 2019 v3.6 &#8211; Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</strong></span></span></h2>
+<p style="text-align: center;"><a class="btn btn-primary" href="https://drive.google.com/file/d/1WoVImkrZhvEGVVwDROkMZs_1VXWOjK0-/view" target="_blank" rel="noopener noreferrer">DLCBOOT 2019 V3.6 LINK GOOGLE DRIVE</a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1kfhZ_emXIPzwxf9QPoya0iogtS7W-3fI" target="_blank" rel="noopener noreferrer">DLCBOOT 2019 LINK DỰ PHÒNG</a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="http://www.mediafire.com/file/id2rg1926cw7mfd/DLC.Boot.2019.V3.6.rar/file" target="_blank" rel="noopener noreferrer">Link DLCBOOT 2019 LINK MEDIAFIRE</a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="http://www.fshare.vn/file/ZGZBA96UE7HN" target="_blank" rel="noopener noreferrer">DLCBOOT 2019 LINK fshare</a></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://1drv.ms/u/s!An58SJdKnXnLaRyGD1sDN46Rygw" target="_blank" rel="noopener noreferrer">DLCBOOT 2019 LINK onedrive</a></p>
+<p style="text-align: center;"><b>Information: </b><strong>DLCBoot 2019 3.6 Build 190411</strong><br />
+<strong>File name: DLC.Boot.2019.V3.6.rar</strong><br />
+<strong>File size: 3,12GB</strong><br />
+<strong>MD5: 943C3884CF2B34F3A37A065AF98F2100</strong></p>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 20px;"><strong><span style="text-decoration: underline;">Pass Giải Nén(Nếu Có):</span> dlcboot2019</strong></span><br />
+<span style="color: #0000ff;"><strong>MD5: 943C3884CF2B34F3A37A065AF98F2100</strong></span></p>
+<p><span style="font-size: 18pt; color: #0000ff;"><strong><span style="text-decoration: underline;">Lưu ý:</span> </strong></span>Vui lòng Check mã <strong>MD5</strong> của file <strong>RAR</strong> sau khi tải về.</p>
+<h2><strong><span id="Nhung_thu_can_chuan_bi_de_tao_mot_chiec_USB_DLC_Boot_2019">Những Chuẩn bị để tạo chiếc USB DLC Boot 2019 Cứu Hộ Máy Tính</span></strong></h2>
+<ul>
+<li>Trước tiên bạn phải có một chiếc USB dung lượng lưu trữ càng cao càng tốt. Khuyến nghị <strong>&gt;=4GB</strong></li>
+<li>Dữ liệu trong USB cần phải sao chép ra ngoài nếu cần thiết, vì quá trình định dạng lại sẽ xoá toàn bộ dữ liệu</li>
+<li>Có kết nối Internet</li>
+<li>Có sẵn trong máy bộ công cụ<strong> DLC Boot trên</strong></li>
+</ul>
+<p><span style="font-size: 20px;"><strong>Xem Thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/anhdv-boot-2018-tao-usb-boot-cuu-ho-may-tinh-da-nang-ho-tro-chuan-uefi-legacy/" target="_blank" rel="noopener noreferrer">Anhdv Boot 2018 &#8211; Hướng dẫn Tạo USB BOOT cứu hộ máy tính đa năng hỗ trợ chuẩn UEFI &#8211; Legacy</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 32px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5970"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019-v3-6/">Download DLC Boot 2019 v3.6 &#8211; Bộ Công Cụ Tạo USB Boot Đa Năng Cứu Hộ Máy Tính, PC</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/tool-usb/dlc-boot-2019-v3-6/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,21 @@
+From f2d60feb408cda477b1b3ad8a40e519828127e9b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Thu, 9 Apr 2015 22:35:44 +0100
+Subject: [PATCH] Added article: creating HugeInc website with pagePiling.js
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index 62d9c6c..53ab691 100644
+--- a/README.md
++++ b/README.md
+@@ -5,6 +5,7 @@
+ Pile your sections one over another and access them scrolling or by URL!
+ 
+ - [Live demo](http://alvarotrigo.com/pagePiling/)
++- [Creating hugeinc.com website with pagePiling.js](http://www.onextrapixel.com/2015/04/09/how-to-create-a-beautiful-fullscreen-single-scrolling-page-like-huge-inc/)
+ - [Who is using it](https://github.com/alvarotrigo/pagePiling.js#who-is-using-pagepilingjs)
+ 
+ Invite me to a coffee

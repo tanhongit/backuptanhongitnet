@@ -1,0 +1,1102 @@
+diff --git a/example.html b/example.html
+new file mode 100644
+index 0000000..ba02c3d
+--- /dev/null
++++ b/example.html
+@@ -0,0 +1,107 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
++	<title>fullPage.js One Page Scroll Sites</title>
++	<meta name="author" content="Alvaro Trigo Lopez" />
++	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
++	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
++	<meta name="Resource-type" content="Document" />
++
++	
++	<link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />
++	<link rel="stylesheet" type="text/css" href="examples.css" />
++
++	<!--[if IE]>
++		<script type="text/javascript">
++			 var console = { log: function() {} };
++		</script>
++	<![endif]-->
++		
++	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++	<script type="text/javascript" src="vendors/jquery.easings.min.js"></script>
++
++
++	<script type="text/javascript" src="jquery.multiscroll.js"></script>
++	<script type="text/javascript">
++	 $(document).ready(function() {
++            $('#myContainer').multiscroll({
++            	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
++            	anchors: ['firstSection', 'second', 'third'],
++            	menu: '#menu',
++            	navigation: true,
++            	navigationTooltips: ['uno', 'dos', 'tres'],
++            	normalScrollElements: '#demo',
++            	loopBottom: true,
++            	loopTop: true,
++            	onLeave: function(index, nextIndex, direction){
++            		console.log("onLeave==> index: " + index +" nextIndex: " + nextIndex + " direction: " + direction );
++            	},
++            	afterLoad: function(anchorLink, index){
++					console.log("afterLoad==> anchorLink: " + anchorLink +" index: " + index);
++            	},
++            	afterRender: function(){
++            		console.log("finish rendering");
++            	}
++            });
++
++            $('#pepe').click(function(){
++            	$.fn.multiscroll.moveTo('third');
++            });
++        });
++    </script>
++
++	<style>
++		#pepe{
++			position:fixed;
++			top: 100px;
++			left: 50px;
++			z-index: 99999;
++		}
++	</style>
++
++</head>
++<body>
++
++
++<div id="pepe">click</div>
++<ul id="menu">
++	<li data-menuanchor="firstSection"><a href="#firstSection">First slide</a></li>
++	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
++	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
++</ul>
++
++<div id="myContainer">
++
++	<div class="ms-left">
++		<div class="ms-section" id="left1">
++			Left 1
++		</div>
++
++		<div class="ms-section" id="left2">
++			Left 2 
++		</div>
++
++		<div class="ms-section" id="left3">
++			Left 3
++		</div>
++	</div>
++	
++	<div class="ms-right">
++		<div class="ms-section" id="right1">
++			Right 1
++		</div>
++
++		<div class="ms-section" id="right2">
++			Right 2
++		</div>
++
++		<div class="ms-section" id="right3">
++			Right 3
++		</div>
++	</div>	
++</div>
++
++</body>
++</html>
+diff --git a/examples.css b/examples.css
+new file mode 100644
+index 0000000..e9147e9
+--- /dev/null
++++ b/examples.css
+@@ -0,0 +1,244 @@
++@CHARSET "ISO-8859-1";
++/* Reset CSS
++ * --------------------------------------- */
++body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
++form,fieldset,input,textarea,p,blockquote,th,td {
++    padding: 0;
++    margin: 0;
++}
++a{
++	text-decoration:none;
++}
++table {
++    border-spacing: 0;    
++}
++fieldset,img {
++    border: 0;
++}
++address,caption,cite,code,dfn,em,strong,th,var {
++    font-weight: normal;
++    font-style: normal;
++}
++strong{
++	font-weight: bold;
++}
++ol,ul {
++    list-style: none;
++    margin:0;
++    padding:0;
++}
++caption,th {
++    text-align: left;
++
++}
++h1,h2,h3,h4,h5,h6 {
++    font-weight: normal;
++    font-size: 100%;
++    margin:0;
++    padding:0;
++    color:#444;
++}
++q:before,q:after {
++    content:'';
++}
++abbr,acronym { border: 0;
++}
++
++
++/* Custom CSS
++ * --------------------------------------- */
++body{
++	font-family: arial,helvetica;
++	color: #333;
++	color: rgba(0,0,0,0.5);
++}
++.wrap{
++	margin-left: auto;
++	margin-right: auto;
++	width: 960px;
++	position: relative;
++}
++h1{
++	font-size: 6em;	
++}
++p{
++	font-size: 2em;
++}
++.intro p{
++	width: 50%;
++	margin: 0 auto;
++	font-size: 1.5em;
++}
++.section{
++	text-align:center;
++}
++#menu li {
++	display:inline-block;
++	margin: 10px;
++	color: #000;
++	background:#fff;
++	background: rgba(255,255,255, 0.5);
++	-webkit-border-radius: 10px; 
++            border-radius: 10px; 
++}
++#menu li.active{
++	background:#666;
++	background: rgba(0,0,0, 0.5);
++	color: #fff;
++}
++#menu li a{
++	text-decoration:none;
++	color: #000;
++}
++#menu li.active a:hover{
++	color: #000;
++}
++#menu li:hover{
++	background: rgba(255,255,255, 0.8);
++}
++#menu li a,
++#menu li.active a{
++	padding: 9px 18px;
++	display:block;
++}
++#menu li.active a{
++	color: #fff;
++}
++#menu{
++	position:fixed;
++	top:0;
++	left:0;
++	height: 40px;
++	z-index: 70;
++	width: 100%;
++	padding: 0;
++	margin:0;
++}
++.twitter-share-button{
++	position: fixed;
++	z-index: 99;
++	right: 149px;
++	top: 9px;
++}
++#download{
++	margin: 10px 0 0 0;
++	padding: 15px 10px;
++	color: #fff;
++	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
++	background-color: #49afcd;
++	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
++	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
++	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
++	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
++	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
++	background-image: linear-gradient(top, #5bc0de, #2f96b4);
++	background-repeat: repeat-x;
++	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
++	border-color: #2f96b4 #2f96b4 #1f6377;
++	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
++	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
++	
++	-webkit-border-radius: 6px;
++	-moz-border-radius: 6px;
++	border-radius: 6px;
++	vertical-align: middle;
++	cursor: pointer;
++	display: inline-block;
++	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
++	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
++	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
++}
++#download a{
++	text-decoration:none;
++	color:#fff;
++}
++#download:hover{
++	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
++	background-color: #2F96B4;
++	background-position: 0 -15px;
++	-webkit-transition: background-position .1s linear;
++	-moz-transition: background-position .1s linear;
++	-ms-transition: background-position .1s linear;
++	-o-transition: background-position .1s linear;
++	transition: background-position .1s linear;
++}
++#infoMenu{
++	height: 20px;
++	color: #f2f2f2;
++	position:fixed;
++	z-index:70;
++	bottom:0;
++	width:100%;
++	text-align:right;
++	font-size:0.9em;
++	padding:8px 0 8px 0;
++}
++#infoMenu ul{
++	padding: 0 40px;
++}
++#infoMenu li a{
++	display: block;
++	margin: 0 22px 0 0;	
++	color: #333;
++}
++#infoMenu li a:hover{
++	text-decoration:underline;
++}
++#infoMenu li{
++	display:inline-block;
++	position:relative;
++}
++#examplesList{
++	display:none;
++	background: #282828;
++	-webkit-border-radius: 6px;
++	-moz-border-radius: 6px;
++	border-radius: 6px;
++	padding: 20px;
++	float: left;
++	position: absolute;
++	bottom: 29px;
++	right: 0;
++	width:638px;
++	text-align:left;
++}
++#examplesList ul{
++	padding:0;
++}
++#examplesList ul li{
++	display:block;
++	margin: 5px 0;
++}
++#examplesList ul li a{
++	color: #BDBDBD;
++	margin:0;
++}
++#examplesList ul li a:hover{
++	color: #f2f2f2;
++}
++#examplesList .column{
++	float: left;
++	margin: 0 20px 0 0;
++}
++#examplesList h3{
++	color: #f2f2f2;
++	font-size: 1.2em;
++	margin: 0 0 15px 0;
++	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
++	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
++	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
++	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
++	padding: 0 0 5px 0;
++}
++
++
++
++/* Demos Menu
++ * --------------------------------------- */
++ #demosMenu{
++	position:fixed;
++	bottom: 10px;
++	right:10px;
++	z-index: 999;
++ }
++
+diff --git a/examples/multiscroll.png b/examples/multiscroll.png
+new file mode 100644
+index 0000000..570bdd2
+Binary files /dev/null and b/examples/multiscroll.png differ
+diff --git a/jquery.multiscroll.css b/jquery.multiscroll.css
+new file mode 100644
+index 0000000..04c1858
+--- /dev/null
++++ b/jquery.multiscroll.css
+@@ -0,0 +1,140 @@
++/**
++ * multiscroll 1.6.7
++ * https://github.com/alvarotrigo/multiscroll.js
++ * MIT licensed
++ *
++ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
++ */
++html, body {
++    margin: 0;
++    padding: 0;
++	overflow:hidden;
++	-webkit-tap-highlight-color: rgba(0,0,0,0);
++}
++.ms-section {
++    position: relative;
++    -webkit-box-sizing: border-box;
++    -moz-box-sizing: border-box;
++    box-sizing: border-box;
++}
++.ms-section.ms-table{
++    display: table;
++    width: 100%;
++}
++.ms-tableCell {
++    display: table-cell;
++    vertical-align: middle;
++    width: 100%;
++    height: 100%;
++}
++.controlArrow {
++    position: absolute;
++    top: 50%;
++    cursor: pointer;
++    width: 0;
++    height: 0;
++    border-style: solid;
++    margin-top: -38px;
++}
++.controlArrow.prev {
++    left: 15px;
++    width: 0;
++    border-width: 38.5px 34px 38.5px 0;
++    border-color: transparent #fff transparent transparent;
++}
++.controlArrow.next {
++    right: 15px;
++    border-width: 38.5px 0 38.5px 34px;
++    border-color: transparent transparent transparent #fff;
++}
++.scrollable {
++    overflow: scroll;
++}
++.ms-easing {
++    -webkit-transition: all 0.7s ease-out;
++    -moz-transition: all 0.7s ease-out;
++    -o-transition: all 0.7s ease-out;
++    transition: all 0.7s ease-out;
++}
++#multiscroll-nav {
++    position: fixed;
++    z-index: 100;
++    margin-top: -32px;
++    top: 50%;
++    opacity: 1;
++}
++#multiscroll-nav.right {
++    right: 17px;
++}
++#multiscroll-nav.left {
++    left: 17px;
++}
++.multiscroll-slidesNav {
++    position: absolute;
++    z-index: 4;
++    left: 50%;
++    opacity: 1;
++}
++.multiscroll-slidesNav.bottom {
++    bottom: 17px;
++}
++.multiscroll-slidesNav.top {
++    top: 17px;
++}
++#multiscroll-nav ul,
++.multiscroll-slidesNav ul {
++  margin: 0;
++  padding: 0;
++}
++#multiscroll-nav li,
++.multiscroll-slidesNav li {
++    display: block;
++    width: 14px;
++    height: 13px;
++    margin: 7px;
++    position:relative;
++}
++.multiscroll-slidesNav li {
++    display: inline-block;
++}
++#multiscroll-nav li a,
++.multiscroll-slidesNav li a {
++    display: block;
++    position: relative;
++    z-index: 1;
++    width: 100%;
++    height: 100%;
++    cursor: pointer;
++    text-decoration: none;
++}
++#multiscroll-nav li .active span,
++.multiscroll-slidesNav .active span {
++    background: #333;
++}
++#multiscroll-nav span,
++.multiscroll-slidesNav span {
++    top: 2px;
++    left: 2px;
++    width: 8px;
++    height: 8px;
++    border: 1px solid #000;
++    background: rgba(0, 0, 0, 0);
++    -webkit-border-radius: 50%;
++    -moz-border-radius: 50%;
++    border-radius: 50%;
++    position: absolute;
++    z-index: 1;
++}
++.multiscroll-tooltip {
++    position: absolute;
++    color: #fff;
++    font-size: 14px;
++    font-family: arial, helvetica, sans-serif;
++    top: -2px;
++}
++.multiscroll-tooltip.right {
++    right: 20px;
++}
++.multiscroll-tooltip.left {
++    left: 20px;
++}
+diff --git a/jquery.multiscroll.js b/jquery.multiscroll.js
+new file mode 100644
+index 0000000..e80db75
+--- /dev/null
++++ b/jquery.multiscroll.js
+@@ -0,0 +1,542 @@
++/**
++ * multiscroll.js 0.0.1 Beta
++ * https://github.com/alvarotrigo/multiscroll.js
++ * MIT licensed
++ *
++ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
++ */
++
++(function($) {
++	$.fn.multiscroll = function(options) {
++		// Create some defaults, extending them with any options that were provided
++		options = $.extend({
++			'verticalCentered' : true,
++			'scrollingSpeed': 700,
++			'easing': 'easeInQuart',
++			'menu': true,
++			'sectionsColor': false,
++			'navigation': false,
++			'navigationPosition': 'right',
++			'navigationColor': '#000',
++			'navigationTooltips': [],
++			'loopBottom': false,
++			'loopTop': false,
++			'css3': false,
++			'paddingTop': 0,
++			'paddingBottom': 0,
++			'fixedElements': null,
++			'normalScrollElements': null, 
++			'keyboardScrolling': true,
++
++			//events
++			'afterLoad': null,
++			'onLeave': null,
++			'afterRender': null,
++			'afterResize': null
++		}, options);		
++		
++
++		//Defines the delay to take place before being able to scroll to the next section
++		//BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and 
++		//Apple devices (laptops, mouses...)
++		var scrollDelay = 600;
++
++		var numberSections = $('.ms-left').find('.ms-section').length;
++		var isMoving = false;
++		var nav;
++		var windowHeight = $(window).height();
++
++
++		addMouseWheelHandler();
++
++		//if css3 is not supported, it will use jQuery animations
++		if(options.css3){
++			options.css3 = support3d();
++		}
++
++		//creating the navigation dots 
++		if (options.navigation) {
++			$('body').append('<div id="multiscroll-nav"><ul></ul></div>');
++			nav = $('#multiscroll-nav');
++
++			nav.css('color', options.navigationColor);
++			nav.addClass(options.navigationPosition);
++		}
++		
++		$('.ms-right, .ms-left').css({
++			'width': '50%',
++			'position': 'absolute',
++			'height': '100%'
++		});
++
++		$('.ms-right').css({
++			'right': '0',
++			'top': '0' 
++		});
++
++		$('.ms-left').css({
++			'left': '0',
++			'top': '0' 
++		});
++
++
++		$('.ms-left .ms-section, .ms-right .ms-section').each(function(){
++			var sectionIndex = $(this).index();
++
++			if (typeof options.sectionsColor[sectionIndex] !==  'undefined') {
++				$(this).css('background-color', options.sectionsColor[sectionIndex]);
++			}
++
++			if (typeof options.anchors[sectionIndex] !== 'undefined') {
++				$(this).attr('data-anchor', options.anchors[sectionIndex]);
++			}	
++
++			if(options.verticalCentered){
++				addTableClass($(this));
++			}
++
++			//only for the left panel
++			if($(this).closest('.ms-left').length && options.navigation) {
++				var link = '';
++				if(options.anchors.length){
++					link = options.anchors[sectionIndex];
++				}
++				var tooltip = options.navigationTooltips[sectionIndex];
++				if(typeof tooltip === 'undefined'){
++					tooltip = '';
++				}
++
++				nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '"><span></span></a></li>');
++			}
++		});
++
++		//inverting the right panel
++		$('.ms-right').html( $('.ms-right').find('.ms-section').get().reverse());
++
++		$('.ms-left .ms-section, .ms-right .ms-section').each(function(){
++			var sectionIndex = $(this).index();
++			fromTop = sectionIndex  * 100;
++
++			$(this).css({
++				'height': '100%',
++				'display': 'block'
++			});
++	
++			if(!sectionIndex){
++				$(this).addClass('active');
++				nav.find('li').eq(sectionIndex).find('a').addClass('active');
++			}
++		}).promise().done(function(){	
++			$.isFunction( options.afterRender ) && options.afterRender.call( this);
++		});
++
++
++		positionRightPanel();
++
++		
++		
++		//detecting any change on the URL to scroll to the given anchor link
++		//(a way to detect back history button as we play with the hashes on the URL)
++		$(window).on('hashchange',function(){
++			var value =  window.location.hash.replace('#', '');
++			var sectionAnchor = value;
++
++			if(isNaN(sectionAnchor)){
++				var section = $('.ms-left').find('[data-anchor="'+sectionAnchor+'"]');
++			}else{
++				var section = $('.ms-left .ms-section').eq( (destiny -1) );
++			} 
++			
++			var isFirstScrollMove = (typeof lastScrolledDestiny === 'undefined' );
++
++			if (isFirstScrollMove || sectionAnchor !== lastScrolledDestiny){
++				scrollPage(section);
++			}
++		});
++		
++
++		/**
++		 * Sliding with arrow keys, both, vertical and horizontal
++		 */
++		$(document).keydown(function(e) {
++			//Moving the main page with the keyboard arrows if keyboard scrolling is enabled
++			if (options.keyboardScrolling && !isMoving) {
++				switch (e.which) {
++					//up
++					case 38:
++					case 33:
++						$.fn.multiscroll.moveSectionUp();
++						break;
++
++					//down
++					case 40:
++					case 34:
++						$.fn.multiscroll.moveSectionDown();
++						break;
++			
++					default:
++						return; // exit this handler for other keys
++				}
++			}
++		});
++
++		//navigation action 
++		$(document).on('click', '#multiscroll-nav a', function(e){
++			e.preventDefault();
++			var index = $(this).parent().index();
++			scrollPage($('.ms-left .ms-section').eq(index));
++		});
++		
++		//navigation tooltips 
++		$(document).on({
++			mouseenter: function(){
++				var tooltip = $(this).data('tooltip');
++				$('<div class="multiscroll-tooltip ' + options.navigationPosition +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
++			},
++			mouseleave: function(){
++				$(this).find('.multiscroll-tooltip').fadeOut().remove();
++			}
++		}, '#multiscroll-nav li');
++
++
++		if(options.normalScrollElements){
++			$(document).on('mouseover', options.normalScrollElements, function () {
++				$.fn.multiscroll.setMouseWheelScrolling(false);
++			});
++			
++			$(document).on('mouseout', options.normalScrollElements, function(){
++				$.fn.multiscroll.setMouseWheelScrolling(true);
++			});
++		}
++
++
++		//when resizing the site, we adjust the heights of the sections
++		$(window).resize(function() {
++			doneResizing();
++		});
++
++		/**
++		 * When resizing is finished, we adjust the slides sizes and positions
++		 */
++		function doneResizing() {
++			windowHeight = $(window).height();
++
++			positionRightPanel();
++			$.isFunction( options.afterResize ) && options.afterResize.call( this);
++		}
++
++		function positionRightPanel(){
++			//moving the right section to the bottom
++			if(options.css3){
++				transformContainer($('.ms-right'), 'translate3d(0px, -' + $('.ms-right').find('.ms-section').last().position().top + 'px, 0px)', false);
++			}else{
++				$('.ms-right').css('top', -$('.ms-right').find('.ms-section').last().position().top );
++			}
++		}
++
++		$.fn.multiscroll.moveSectionUp = function(){
++			var prev = $('.ms-left .ms-section.active').prev('.ms-section');
++
++			if(!prev.length && options.loopTop){
++				prev = $('.ms-left .ms-section').last();
++			}
++
++			if (prev.length) {
++				scrollPage(prev);
++			}
++		};
++
++		$.fn.multiscroll.moveSectionDown = function (){
++			var next = $('.ms-left .ms-section.active').next('.ms-section');
++
++			if(!next.length && options.loopBottom ){
++				next = $('.ms-left .ms-section').first();
++			}
++
++			if(next.length){
++				scrollPage(next);
++			}
++		};
++
++		$.fn.multiscroll.moveTo = function (section){
++			var destiny = '';
++			
++			if(isNaN(section)){
++				destiny = $('.ms-left [data-anchor="'+section+'"]');
++			}else{
++				destiny = $('.section').eq( (section -1) );
++			}
++			
++			scrollPage(destiny);
++		};
++
++		function scrollPage(leftDestination){
++			var leftDestinationIndex = leftDestination.index();
++			var rightDestination = $('.ms-right').find('.ms-section').eq( numberSections -1 - leftDestinationIndex);
++			var rightDestinationIndex = numberSections - 1 - leftDestinationIndex;
++			var anchorLink  = leftDestination.data('anchor');
++			var activeSection = $('.ms-left .ms-section.active');
++			var leavingSection = activeSection.index() + 1;
++			var yMovement = getYmovement(leftDestination);
++
++			//preventing from activating the MouseWheelHandler event
++			//more than once if the page is scrolling
++			isMoving = true;
++
++			setURLHash(anchorLink);
++
++			var topPos = {
++				'left' : leftDestination.position().top,
++				'right': rightDestination.position().top
++			};
++
++			rightDestination.addClass('active').siblings().removeClass('active');
++			leftDestination.addClass('active').siblings().removeClass('active');
++
++			// Use CSS3 translate functionality or...
++			if (options.css3){				
++				//callback (onLeave) 
++				$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);
++
++				var translate3dLeft = 'translate3d(0px, -' + topPos['left'] + 'px, 0px)';
++				var translate3dRight = 'translate3d(0px, -' + topPos['right'] + 'px, 0px)';
++
++				transformContainer($('.ms-left'), translate3dLeft, true);
++				transformContainer($('.ms-right'), translate3dRight, true);
++
++				setTimeout(function () {
++					//callback (afterLoad) 
++					$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));
++
++					setTimeout(function () {
++						isMoving = false;
++					}, scrollDelay);
++				}, options.scrollingSpeed);
++			}else{
++				//callback (onLeave) 
++				$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);
++
++				$('.ms-left').animate({
++					'top': -topPos['left']
++				}, options.scrollingSpeed, options.easing, function(){
++					$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));
++
++					setTimeout(function () {
++						isMoving = false;
++					}, scrollDelay);
++				});
++
++				$('.ms-right').animate({
++					'top': -topPos['right']
++				}, options.scrollingSpeed, options.easing);
++			}
++			
++			//flag to avoid callingn `scrollPage()` twice in case of using anchor links
++			lastScrolledDestiny = anchorLink;
++
++			//avoid firing it twice (as it does also on scroll)
++			activateMenuElement(anchorLink);
++			activateNavDots(anchorLink, leftDestinationIndex);
++			
++		}
++
++		/**
++		* Removes the auto scrolling action fired by the mouse wheel and tackpad.
++		* After this function is called, the mousewheel and trackpad movements won't scroll through sections.
++		*/
++		function removeMouseWheelHandler(){
++			if (document.addEventListener) {
++				document.removeEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
++				document.removeEventListener('wheel', MouseWheelHandler, false); //Firefox
++			} else {
++				document.detachEvent("onmousewheel", MouseWheelHandler); //IE 6/7/8
++			}
++		}
++
++		/**
++		* Adds the auto scrolling action for the mouse wheel and tackpad.
++		* After this function is called, the mousewheel and trackpad movements will scroll through sections
++		*/
++		function addMouseWheelHandler(){
++			if (document.addEventListener) {
++				document.addEventListener("mousewheel", MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
++				document.addEventListener("wheel", MouseWheelHandler, false); //Firefox
++			} else {
++				document.attachEvent("onmousewheel", MouseWheelHandler); //IE 6/7/8
++			}
++		}
++
++		/**
++		 * Detecting mousewheel scrolling
++		 * 
++		 * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html
++		 * http://www.sitepoint.com/html5-javascript-mouse-wheel/
++		 */
++		function MouseWheelHandler(e) {
++			if(options.autoScrolling){
++				// cross-browser wheel delta
++				e = window.event || e;
++				var delta = Math.max(-1, Math.min(1,
++						(e.wheelDelta || -e.deltaY || -e.detail)));
++
++				if (!isMoving) { //if theres any #
++
++					//scrolling down?
++					if (delta < 0) {
++						$.fn.multiscroll.moveSectionDown();
++					}
++
++					//scrolling up?
++					else {
++						$.fn.multiscroll.moveSectionUp();
++					}
++				}
++			
++
++				return false;
++			}
++		}
++
++		/**
++		* Adds a css3 transform property to the container class with or without animation depending on the animated param.
++		*/
++		function transformContainer(container, translate3d, animated){
++			container.toggleClass('easing', animated);
++			
++			container.css(getTransforms(translate3d));
++		}
++
++
++		function getTransforms(translate3d){
++			return {
++				'-webkit-transform': translate3d,
++				'-moz-transform': translate3d,
++				'-ms-transform':translate3d,
++				'transform': translate3d
++			};
++		}
++
++		/**
++		 * Activating the website navigation dots according to the given slide name.
++		 */
++		function activateNavDots(name, sectionIndex){
++			if(options.navigation){
++				$('#multiscroll-nav').find('.active').removeClass('active');
++				if(name){ 
++					$('#multiscroll-nav').find('a[href="#' + name + '"]').addClass('active');
++				}else{
++					$('#multiscroll-nav').find('li').eq(sectionIndex).find('a').addClass('active');
++				}
++			}
++		}
++
++		/**
++		 * Activating the website main menu elements according to the given slide name.
++		 */
++		function activateMenuElement(name){
++			if(options.menu){
++				$(options.menu).find('.active').removeClass('active');
++				$(options.menu).find('[data-menuanchor="'+name+'"]').addClass('active');
++			}
++		}
++
++		/**
++		* Retuns `up` or `down` depending on the scrolling movement to reach its destination
++		* from the current section.
++		*/
++		function getYmovement(destiny){
++			var fromIndex = $('.ms-left .ms-section.active').index();
++			var toIndex = destiny.index();
++
++			if(fromIndex > toIndex){
++				return 'up';
++			}
++			return 'down';
++		}	
++
++
++		/**
++		* Sets the URL hash for a section with slides
++		*/
++		function setURLHash(anchorLink){
++			if(options.anchors.length){
++				location.hash = anchorLink;
++			}
++		}
++
++
++		/**
++		* Checks for translate3d support 
++		* @return boolean
++		* http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
++		*/
++		function support3d() {
++			var el = document.createElement('p'), 
++				has3d,
++				transforms = {
++					'webkitTransform':'-webkit-transform',
++					'OTransform':'-o-transform',
++					'msTransform':'-ms-transform',
++					'MozTransform':'-moz-transform',
++					'transform':'transform'
++				};
++
++			// Add it to the body to get the computed style.
++			document.body.insertBefore(el, null);
++
++			for (var t in transforms) {
++				if (el.style[t] !== undefined) {
++					el.style[t] = "translate3d(1px,1px,1px)";
++					has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
++				}
++			}
++			
++			document.body.removeChild(el);
++
++			return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
++		}
++
++		function addTableClass(element){
++			element.addClass('ms-table').wrapInner('<div class="ms-tableCell" style="height: ' + getTableHeight(element) + 'px" />');
++		}
++
++		function getTableHeight(section){
++			var sectionHeight = windowHeight;
++
++			if(options.paddingTop || options.paddingBottom){			
++				var paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));
++				sectionHeight = (windowHeight - paddings);
++			}
++
++			return sectionHeight;
++		}
++
++
++		/**
++		* Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys
++		*/
++		$.fn.multiscroll.setKeyboardScrolling = function (value){
++			options.keyboardScrolling = value;
++		};
++
++		/**
++		* Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad. 
++		*/
++		$.fn.multiscroll.setMouseWheelScrolling = function (value){
++			if(value){
++				addMouseWheelHandler();
++			}else{
++				removeMouseWheelHandler();
++			}
++		};
++
++		/**
++		* Defines the scrolling speed 
++		*/
++		$.fn.multiscroll.setScrollingSpeed = function(value){
++		   options.scrollingSpeed = value;
++		};
++
++
++	};	
++})(jQuery);
+diff --git a/jquery.multiscroll.min.js b/jquery.multiscroll.min.js
+new file mode 100644
+index 0000000..51aec75
+--- /dev/null
++++ b/jquery.multiscroll.min.js
+@@ -0,0 +1,21 @@
++/**
++ * multiscroll.js 0.0.1 Beta
++ * https://github.com/alvarotrigo/multiscroll.js
++ * MIT licensed
++ *
++ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
++ */
++(function(a){a.fn.multiscroll=function(c){function t(){m=a(window).height();p();a.isFunction(c.afterResize)&&c.afterResize.call(this)}function p(){c.css3?n(a(".ms-right"),"translate3d(0px, -"+a(".ms-right").find(".ms-section").last().position().top+"px, 0px)",!1):a(".ms-right").css("top",-a(".ms-right").find(".ms-section").last().position().top)}function g(b){var d=b.index(),q=a(".ms-right").find(".ms-section").eq(u-1-d),e=b.data("anchor"),f=a(".ms-left .ms-section.active").index()+1,g=v(b);k=!0;
++c.anchors.length&&(location.hash=e);var h={left:b.position().top,right:q.position().top};q.addClass("active").siblings().removeClass("active");b.addClass("active").siblings().removeClass("active");c.css3?(a.isFunction(c.onLeave)&&c.onLeave.call(this,f,d+1,g),b="translate3d(0px, -"+h.left+"px, 0px)",h="translate3d(0px, -"+h.right+"px, 0px)",n(a(".ms-left"),b,!0),n(a(".ms-right"),h,!0),setTimeout(function(){a.isFunction(c.afterLoad)&&c.afterLoad.call(this,e,d+1);setTimeout(function(){k=!1},r)},c.scrollingSpeed)):
++(a.isFunction(c.onLeave)&&c.onLeave.call(this,f,d+1,g),a(".ms-left").animate({top:-h.left},c.scrollingSpeed,c.easing,function(){a.isFunction(c.afterLoad)&&c.afterLoad.call(this,e,d+1);setTimeout(function(){k=!1},r)}),a(".ms-right").animate({top:-h.right},c.scrollingSpeed,c.easing));lastScrolledDestiny=e;w(e);x(e,d)}function s(){document.addEventListener?(document.addEventListener("mousewheel",f,!1),document.addEventListener("wheel",f,!1)):document.attachEvent("onmousewheel",f)}function f(b){if(c.autoScrolling)return b=
++window.event||b,b=Math.max(-1,Math.min(1,b.wheelDelta||-b.deltaY||-b.detail)),k||(0>b?a.fn.multiscroll.moveSectionDown():a.fn.multiscroll.moveSectionUp()),!1}function n(b,a,c){b.toggleClass("easing",c);b.css({"-webkit-transform":a,"-moz-transform":a,"-ms-transform":a,transform:a})}function x(b,d){c.navigation&&(a("#multiscroll-nav").find(".active").removeClass("active"),b?a("#multiscroll-nav").find('a[href="#'+b+'"]').addClass("active"):a("#multiscroll-nav").find("li").eq(d).find("a").addClass("active"))}
++function w(b){c.menu&&(a(c.menu).find(".active").removeClass("active"),a(c.menu).find('[data-menuanchor="'+b+'"]').addClass("active"))}function v(b){var c=a(".ms-left .ms-section.active").index();b=b.index();return c>b?"up":"down"}function y(){var b=document.createElement("p"),a,c={webkitTransform:"-webkit-transform",OTransform:"-o-transform",msTransform:"-ms-transform",MozTransform:"-moz-transform",transform:"transform"};document.body.insertBefore(b,null);for(var e in c)void 0!==b.style[e]&&(b.style[e]=
++"translate3d(1px,1px,1px)",a=window.getComputedStyle(b).getPropertyValue(c[e]));document.body.removeChild(b);return void 0!==a&&0<a.length&&"none"!==a}function z(a){var d=m;if(c.paddingTop||c.paddingBottom)a=parseInt(a.css("padding-top"))+parseInt(a.css("padding-bottom")),d=m-a;return d}c=a.extend({verticalCentered:!0,scrollingSpeed:700,easing:"easeInQuart",menu:!0,sectionsColor:!1,navigation:!1,navigationPosition:"right",navigationColor:"#000",navigationTooltips:[],controlArrowColor:"#fff",loopBottom:!1,
++loopTop:!1,loopHorizontal:!0,autoScrolling:!0,scrollOverflow:!1,css3:!1,paddingTop:0,paddingBottom:0,fixedElements:null,normalScrollElements:null,keyboardScrolling:!0,afterLoad:null,onLeave:null,afterRender:null,afterResize:null},c);var r=600,u=a(".ms-left").find(".ms-section").length,k=!1,l,m=a(window).height();s();c.css3&&(c.css3=y());c.navigation&&(a("body").append('<div id="multiscroll-nav"><ul></ul></div>'),l=a("#multiscroll-nav"),l.css("color",c.navigationColor),l.addClass(c.navigationPosition));
++a(".ms-right, .ms-left").css({width:"50%",position:"absolute",height:"100%"});a(".ms-right").css({right:"0",top:"0"});a(".ms-left").css({left:"0",top:"0"});a(".ms-left .ms-section, .ms-right .ms-section").each(function(){var b=a(this).index();"undefined"!==typeof c.sectionsColor[b]&&a(this).css("background-color",c.sectionsColor[b]);"undefined"!==typeof c.anchors[b]&&a(this).attr("data-anchor",c.anchors[b]);if(c.verticalCentered){var d=a(this);d.addClass("ms-table").wrapInner('<div class="ms-tableCell" style="height: '+
++z(d)+'px" />')}a(this).closest(".ms-left").length&&c.navigation&&(d="",c.anchors.length&&(d=c.anchors[b]),b=c.navigationTooltips[b],"undefined"===typeof b&&(b=""),l.find("ul").append('<li data-tooltip="'+b+'"><a href="#'+d+'"><span></span></a></li>'))});a(".ms-right").html(a(".ms-right").find(".ms-section").get().reverse());a(".ms-left .ms-section, .ms-right .ms-section").each(function(){var b=a(this).index();fromTop=100*b;a(this).css({height:"100%",display:"block"});b||(a(this).addClass("active"),
++l.find("li").eq(b).find("a").addClass("active"))}).promise().done(function(){a.isFunction(c.afterRender)&&c.afterRender.call(this)});p();a(window).on("hashchange",function(){var b=window.location.hash.replace("#",""),c=isNaN(b)?a(".ms-left").find('[data-anchor="'+b+'"]'):a(".ms-left .ms-section").eq(destiny-1);"undefined"!==typeof lastScrolledDestiny&&b===lastScrolledDestiny||g(c)});a(document).keydown(function(b){if(c.keyboardScrolling&&!k)switch(b.which){case 38:case 33:a.fn.multiscroll.moveSectionUp();
++break;case 40:case 34:a.fn.multiscroll.moveSectionDown()}});a(document).on("click","#multiscroll-nav a",function(b){b.preventDefault();b=a(this).parent().index();g(a(".ms-left .ms-section").eq(b))});a(document).on({mouseenter:function(){var b=a(this).data("tooltip");a('<div class="multiscroll-tooltip '+c.navigationPosition+'">'+b+"</div>").hide().appendTo(a(this)).fadeIn(200)},mouseleave:function(){a(this).find(".multiscroll-tooltip").fadeOut().remove()}},"#multiscroll-nav li");c.normalScrollElements&&
++(a(document).on("mouseover",c.normalScrollElements,function(){a.fn.multiscroll.setMouseWheelScrolling(!1)}),a(document).on("mouseout",c.normalScrollElements,function(){a.fn.multiscroll.setMouseWheelScrolling(!0)}));a(window).resize(function(){t()});a.fn.multiscroll.moveSectionUp=function(){var b=a(".ms-left .ms-section.active").prev(".ms-section");!b.length&&c.loopTop&&(b=a(".ms-left .ms-section").last());b.length&&g(b)};a.fn.multiscroll.moveSectionDown=function(){var b=a(".ms-left .ms-section.active").next(".ms-section");
++!b.length&&c.loopBottom&&(b=a(".ms-left .ms-section").first());b.length&&g(b)};a.fn.multiscroll.moveTo=function(b){var c="",c=isNaN(b)?a('.ms-left [data-anchor="'+b+'"]'):a(".section").eq(b-1);g(c)};a.fn.multiscroll.setKeyboardScrolling=function(a){c.keyboardScrolling=a};a.fn.multiscroll.setMouseWheelScrolling=function(a){a?s():document.addEventListener?(document.removeEventListener("mousewheel",f,!1),document.removeEventListener("wheel",f,!1)):document.detachEvent("onmousewheel",f)};a.fn.multiscroll.setScrollingSpeed=
++function(a){c.scrollingSpeed=a}}})(jQuery);
+\ No newline at end of file
+diff --git a/vendors/jquery.easings.min.js b/vendors/jquery.easings.min.js
+new file mode 100644
+index 0000000..2bc2c3b
+--- /dev/null
++++ b/vendors/jquery.easings.min.js
+@@ -0,0 +1,6 @@
++/*! jQuery UI - v1.9.2 - 2014-03-21
++* http://jqueryui.com
++* Includes: jquery.ui.effect.js
++* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
++
++jQuery.effects||function(e,t){var i=e.uiBackCompat!==!1,a="ui-effects-";e.effects={effect:{}},function(t,i){function a(e,t,i){var a=c[t.type]||{};return null==e?i||!t.def?null:t.def:(e=a.floor?~~e:parseFloat(e),isNaN(e)?t.def:a.mod?(e+a.mod)%a.mod:0>e?0:e>a.max?a.max:e)}function s(e){var a=u(),s=a._rgba=[];return e=e.toLowerCase(),m(l,function(t,n){var r,o=n.re.exec(e),h=o&&n.parse(o),l=n.space||"rgba";return h?(r=a[l](h),a[d[l].cache]=r[d[l].cache],s=a._rgba=r._rgba,!1):i}),s.length?("0,0,0,0"===s.join()&&t.extend(s,r.transparent),a):r[e]}function n(e,t,i){return i=(i+1)%1,1>6*i?e+6*(t-e)*i:1>2*i?t:2>3*i?e+6*(t-e)*(2/3-i):e}var r,o="backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor".split(" "),h=/^([\-+])=\s*(\d+\.?\d*)/,l=[{re:/rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,parse:function(e){return[e[1],e[2],e[3],e[4]]}},{re:/rgba?\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,parse:function(e){return[2.55*e[1],2.55*e[2],2.55*e[3],e[4]]}},{re:/#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})/,parse:function(e){return[parseInt(e[1],16),parseInt(e[2],16),parseInt(e[3],16)]}},{re:/#([a-f0-9])([a-f0-9])([a-f0-9])/,parse:function(e){return[parseInt(e[1]+e[1],16),parseInt(e[2]+e[2],16),parseInt(e[3]+e[3],16)]}},{re:/hsla?\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,space:"hsla",parse:function(e){return[e[1],e[2]/100,e[3]/100,e[4]]}}],u=t.Color=function(e,i,a,s){return new t.Color.fn.parse(e,i,a,s)},d={rgba:{props:{red:{idx:0,type:"byte"},green:{idx:1,type:"byte"},blue:{idx:2,type:"byte"}}},hsla:{props:{hue:{idx:0,type:"degrees"},saturation:{idx:1,type:"percent"},lightness:{idx:2,type:"percent"}}}},c={"byte":{floor:!0,max:255},percent:{max:1},degrees:{mod:360,floor:!0}},p=u.support={},f=t("<p>")[0],m=t.each;f.style.cssText="background-color:rgba(1,1,1,.5)",p.rgba=f.style.backgroundColor.indexOf("rgba")>-1,m(d,function(e,t){t.cache="_"+e,t.props.alpha={idx:3,type:"percent",def:1}}),u.fn=t.extend(u.prototype,{parse:function(n,o,h,l){if(n===i)return this._rgba=[null,null,null,null],this;(n.jquery||n.nodeType)&&(n=t(n).css(o),o=i);var c=this,p=t.type(n),f=this._rgba=[];return o!==i&&(n=[n,o,h,l],p="array"),"string"===p?this.parse(s(n)||r._default):"array"===p?(m(d.rgba.props,function(e,t){f[t.idx]=a(n[t.idx],t)}),this):"object"===p?(n instanceof u?m(d,function(e,t){n[t.cache]&&(c[t.cache]=n[t.cache].slice())}):m(d,function(t,i){var s=i.cache;m(i.props,function(e,t){if(!c[s]&&i.to){if("alpha"===e||null==n[e])return;c[s]=i.to(c._rgba)}c[s][t.idx]=a(n[e],t,!0)}),c[s]&&0>e.inArray(null,c[s].slice(0,3))&&(c[s][3]=1,i.from&&(c._rgba=i.from(c[s])))}),this):i},is:function(e){var t=u(e),a=!0,s=this;return m(d,function(e,n){var r,o=t[n.cache];return o&&(r=s[n.cache]||n.to&&n.to(s._rgba)||[],m(n.props,function(e,t){return null!=o[t.idx]?a=o[t.idx]===r[t.idx]:i})),a}),a},_space:function(){var e=[],t=this;return m(d,function(i,a){t[a.cache]&&e.push(i)}),e.pop()},transition:function(e,t){var i=u(e),s=i._space(),n=d[s],r=0===this.alpha()?u("transparent"):this,o=r[n.cache]||n.to(r._rgba),h=o.slice();return i=i[n.cache],m(n.props,function(e,s){var n=s.idx,r=o[n],l=i[n],u=c[s.type]||{};null!==l&&(null===r?h[n]=l:(u.mod&&(l-r>u.mod/2?r+=u.mod:r-l>u.mod/2&&(r-=u.mod)),h[n]=a((l-r)*t+r,s)))}),this[s](h)},blend:function(e){if(1===this._rgba[3])return this;var i=this._rgba.slice(),a=i.pop(),s=u(e)._rgba;return u(t.map(i,function(e,t){return(1-a)*s[t]+a*e}))},toRgbaString:function(){var e="rgba(",i=t.map(this._rgba,function(e,t){return null==e?t>2?1:0:e});return 1===i[3]&&(i.pop(),e="rgb("),e+i.join()+")"},toHslaString:function(){var e="hsla(",i=t.map(this.hsla(),function(e,t){return null==e&&(e=t>2?1:0),t&&3>t&&(e=Math.round(100*e)+"%"),e});return 1===i[3]&&(i.pop(),e="hsl("),e+i.join()+")"},toHexString:function(e){var i=this._rgba.slice(),a=i.pop();return e&&i.push(~~(255*a)),"#"+t.map(i,function(e){return e=(e||0).toString(16),1===e.length?"0"+e:e}).join("")},toString:function(){return 0===this._rgba[3]?"transparent":this.toRgbaString()}}),u.fn.parse.prototype=u.fn,d.hsla.to=function(e){if(null==e[0]||null==e[1]||null==e[2])return[null,null,null,e[3]];var t,i,a=e[0]/255,s=e[1]/255,n=e[2]/255,r=e[3],o=Math.max(a,s,n),h=Math.min(a,s,n),l=o-h,u=o+h,d=.5*u;return t=h===o?0:a===o?60*(s-n)/l+360:s===o?60*(n-a)/l+120:60*(a-s)/l+240,i=0===d||1===d?d:.5>=d?l/u:l/(2-u),[Math.round(t)%360,i,d,null==r?1:r]},d.hsla.from=function(e){if(null==e[0]||null==e[1]||null==e[2])return[null,null,null,e[3]];var t=e[0]/360,i=e[1],a=e[2],s=e[3],r=.5>=a?a*(1+i):a+i-a*i,o=2*a-r;return[Math.round(255*n(o,r,t+1/3)),Math.round(255*n(o,r,t)),Math.round(255*n(o,r,t-1/3)),s]},m(d,function(e,s){var n=s.props,r=s.cache,o=s.to,l=s.from;u.fn[e]=function(e){if(o&&!this[r]&&(this[r]=o(this._rgba)),e===i)return this[r].slice();var s,h=t.type(e),d="array"===h||"object"===h?e:arguments,c=this[r].slice();return m(n,function(e,t){var i=d["object"===h?e:t.idx];null==i&&(i=c[t.idx]),c[t.idx]=a(i,t)}),l?(s=u(l(c)),s[r]=c,s):u(c)},m(n,function(i,a){u.fn[i]||(u.fn[i]=function(s){var n,r=t.type(s),o="alpha"===i?this._hsla?"hsla":"rgba":e,l=this[o](),u=l[a.idx];return"undefined"===r?u:("function"===r&&(s=s.call(this,u),r=t.type(s)),null==s&&a.empty?this:("string"===r&&(n=h.exec(s),n&&(s=u+parseFloat(n[2])*("+"===n[1]?1:-1))),l[a.idx]=s,this[o](l)))})})}),m(o,function(e,i){t.cssHooks[i]={set:function(e,a){var n,r,o="";if("string"!==t.type(a)||(n=s(a))){if(a=u(n||a),!p.rgba&&1!==a._rgba[3]){for(r="backgroundColor"===i?e.parentNode:e;(""===o||"transparent"===o)&&r&&r.style;)try{o=t.css(r,"backgroundColor"),r=r.parentNode}catch(h){}a=a.blend(o&&"transparent"!==o?o:"_default")}a=a.toRgbaString()}try{e.style[i]=a}catch(l){}}},t.fx.step[i]=function(e){e.colorInit||(e.start=u(e.elem,i),e.end=u(e.end),e.colorInit=!0),t.cssHooks[i].set(e.elem,e.start.transition(e.end,e.pos))}}),t.cssHooks.borderColor={expand:function(e){var t={};return m(["Top","Right","Bottom","Left"],function(i,a){t["border"+a+"Color"]=e}),t}},r=t.Color.names={aqua:"#00ffff",black:"#000000",blue:"#0000ff",fuchsia:"#ff00ff",gray:"#808080",green:"#008000",lime:"#00ff00",maroon:"#800000",navy:"#000080",olive:"#808000",purple:"#800080",red:"#ff0000",silver:"#c0c0c0",teal:"#008080",white:"#ffffff",yellow:"#ffff00",transparent:[null,null,null,0],_default:"#ffffff"}}(jQuery),function(){function i(){var t,i,a=this.ownerDocument.defaultView?this.ownerDocument.defaultView.getComputedStyle(this,null):this.currentStyle,s={};if(a&&a.length&&a[0]&&a[a[0]])for(i=a.length;i--;)t=a[i],"string"==typeof a[t]&&(s[e.camelCase(t)]=a[t]);else for(t in a)"string"==typeof a[t]&&(s[t]=a[t]);return s}function a(t,i){var a,s,r={};for(a in i)s=i[a],t[a]!==s&&(n[a]||(e.fx.step[a]||!isNaN(parseFloat(s)))&&(r[a]=s));return r}var s=["add","remove","toggle"],n={border:1,borderBottom:1,borderColor:1,borderLeft:1,borderRight:1,borderTop:1,borderWidth:1,margin:1,padding:1};e.each(["borderLeftStyle","borderRightStyle","borderBottomStyle","borderTopStyle"],function(t,i){e.fx.step[i]=function(e){("none"!==e.end&&!e.setAttr||1===e.pos&&!e.setAttr)&&(jQuery.style(e.elem,i,e.end),e.setAttr=!0)}}),e.effects.animateClass=function(t,n,r,o){var h=e.speed(n,r,o);return this.queue(function(){var n,r=e(this),o=r.attr("class")||"",l=h.children?r.find("*").andSelf():r;l=l.map(function(){var t=e(this);return{el:t,start:i.call(this)}}),n=function(){e.each(s,function(e,i){t[i]&&r[i+"Class"](t[i])})},n(),l=l.map(function(){return this.end=i.call(this.el[0]),this.diff=a(this.start,this.end),this}),r.attr("class",o),l=l.map(function(){var t=this,i=e.Deferred(),a=jQuery.extend({},h,{queue:!1,complete:function(){i.resolve(t)}});return this.el.animate(this.diff,a),i.promise()}),e.when.apply(e,l.get()).done(function(){n(),e.each(arguments,function(){var t=this.el;e.each(this.diff,function(e){t.css(e,"")})}),h.complete.call(r[0])})})},e.fn.extend({_addClass:e.fn.addClass,addClass:function(t,i,a,s){return i?e.effects.animateClass.call(this,{add:t},i,a,s):this._addClass(t)},_removeClass:e.fn.removeClass,removeClass:function(t,i,a,s){return i?e.effects.animateClass.call(this,{remove:t},i,a,s):this._removeClass(t)},_toggleClass:e.fn.toggleClass,toggleClass:function(i,a,s,n,r){return"boolean"==typeof a||a===t?s?e.effects.animateClass.call(this,a?{add:i}:{remove:i},s,n,r):this._toggleClass(i,a):e.effects.animateClass.call(this,{toggle:i},a,s,n)},switchClass:function(t,i,a,s,n){return e.effects.animateClass.call(this,{add:i,remove:t},a,s,n)}})}(),function(){function s(t,i,a,s){return e.isPlainObject(t)&&(i=t,t=t.effect),t={effect:t},null==i&&(i={}),e.isFunction(i)&&(s=i,a=null,i={}),("number"==typeof i||e.fx.speeds[i])&&(s=a,a=i,i={}),e.isFunction(a)&&(s=a,a=null),i&&e.extend(t,i),a=a||i.duration,t.duration=e.fx.off?0:"number"==typeof a?a:a in e.fx.speeds?e.fx.speeds[a]:e.fx.speeds._default,t.complete=s||i.complete,t}function n(t){return!t||"number"==typeof t||e.fx.speeds[t]?!0:"string"!=typeof t||e.effects.effect[t]?!1:i&&e.effects[t]?!1:!0}e.extend(e.effects,{version:"1.9.2",save:function(e,t){for(var i=0;t.length>i;i++)null!==t[i]&&e.data(a+t[i],e[0].style[t[i]])},restore:function(e,i){var s,n;for(n=0;i.length>n;n++)null!==i[n]&&(s=e.data(a+i[n]),s===t&&(s=""),e.css(i[n],s))},setMode:function(e,t){return"toggle"===t&&(t=e.is(":hidden")?"show":"hide"),t},getBaseline:function(e,t){var i,a;switch(e[0]){case"top":i=0;break;case"middle":i=.5;break;case"bottom":i=1;break;default:i=e[0]/t.height}switch(e[1]){case"left":a=0;break;case"center":a=.5;break;case"right":a=1;break;default:a=e[1]/t.width}return{x:a,y:i}},createWrapper:function(t){if(t.parent().is(".ui-effects-wrapper"))return t.parent();var i={width:t.outerWidth(!0),height:t.outerHeight(!0),"float":t.css("float")},a=e("<div></div>").addClass("ui-effects-wrapper").css({fontSize:"100%",background:"transparent",border:"none",margin:0,padding:0}),s={width:t.width(),height:t.height()},n=document.activeElement;try{n.id}catch(r){n=document.body}return t.wrap(a),(t[0]===n||e.contains(t[0],n))&&e(n).focus(),a=t.parent(),"static"===t.css("position")?(a.css({position:"relative"}),t.css({position:"relative"})):(e.extend(i,{position:t.css("position"),zIndex:t.css("z-index")}),e.each(["top","left","bottom","right"],function(e,a){i[a]=t.css(a),isNaN(parseInt(i[a],10))&&(i[a]="auto")}),t.css({position:"relative",top:0,left:0,right:"auto",bottom:"auto"})),t.css(s),a.css(i).show()},removeWrapper:function(t){var i=document.activeElement;return t.parent().is(".ui-effects-wrapper")&&(t.parent().replaceWith(t),(t[0]===i||e.contains(t[0],i))&&e(i).focus()),t},setTransition:function(t,i,a,s){return s=s||{},e.each(i,function(e,i){var n=t.cssUnit(i);n[0]>0&&(s[i]=n[0]*a+n[1])}),s}}),e.fn.extend({effect:function(){function t(t){function i(){e.isFunction(n)&&n.call(s[0]),e.isFunction(t)&&t()}var s=e(this),n=a.complete,r=a.mode;(s.is(":hidden")?"hide"===r:"show"===r)?i():o.call(s[0],a,i)}var a=s.apply(this,arguments),n=a.mode,r=a.queue,o=e.effects.effect[a.effect],h=!o&&i&&e.effects[a.effect];return e.fx.off||!o&&!h?n?this[n](a.duration,a.complete):this.each(function(){a.complete&&a.complete.call(this)}):o?r===!1?this.each(t):this.queue(r||"fx",t):h.call(this,{options:a,duration:a.duration,callback:a.complete,mode:a.mode})},_show:e.fn.show,show:function(e){if(n(e))return this._show.apply(this,arguments);var t=s.apply(this,arguments);return t.mode="show",this.effect.call(this,t)},_hide:e.fn.hide,hide:function(e){if(n(e))return this._hide.apply(this,arguments);var t=s.apply(this,arguments);return t.mode="hide",this.effect.call(this,t)},__toggle:e.fn.toggle,toggle:function(t){if(n(t)||"boolean"==typeof t||e.isFunction(t))return this.__toggle.apply(this,arguments);var i=s.apply(this,arguments);return i.mode="toggle",this.effect.call(this,i)},cssUnit:function(t){var i=this.css(t),a=[];return e.each(["em","px","%","pt"],function(e,t){i.indexOf(t)>0&&(a=[parseFloat(i),t])}),a}})}(),function(){var t={};e.each(["Quad","Cubic","Quart","Quint","Expo"],function(e,i){t[i]=function(t){return Math.pow(t,e+2)}}),e.extend(t,{Sine:function(e){return 1-Math.cos(e*Math.PI/2)},Circ:function(e){return 1-Math.sqrt(1-e*e)},Elastic:function(e){return 0===e||1===e?e:-Math.pow(2,8*(e-1))*Math.sin((80*(e-1)-7.5)*Math.PI/15)},Back:function(e){return e*e*(3*e-2)},Bounce:function(e){for(var t,i=4;((t=Math.pow(2,--i))-1)/11>e;);return 1/Math.pow(4,3-i)-7.5625*Math.pow((3*t-2)/22-e,2)}}),e.each(t,function(t,i){e.easing["easeIn"+t]=i,e.easing["easeOut"+t]=function(e){return 1-i(1-e)},e.easing["easeInOut"+t]=function(e){return.5>e?i(2*e)/2:1-i(-2*e+2)/2}})}()}(jQuery);
+\ No newline at end of file

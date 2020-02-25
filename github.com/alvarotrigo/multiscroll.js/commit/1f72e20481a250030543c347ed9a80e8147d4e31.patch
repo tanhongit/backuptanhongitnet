@@ -1,0 +1,27 @@
+From 1f72e20481a250030543c347ed9a80e8147d4e31 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alvaro=20Trigo=20Lo=CC=81pez?= <atrigol@gmail.com>
+Date: Mon, 5 Mar 2018 18:21:38 +0100
+Subject: [PATCH] - Updating keywords
+
+---
+ package.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/package.json b/package.json
+index bd6fcb9..ef05a46 100644
+--- a/package.json
++++ b/package.json
+@@ -13,8 +13,12 @@
+   "keywords": [
+     "scroll",
+     "split-screen",
++    "split-layout",
++    "mousewheel",
+     "multi",
+-    "split"
++    "split",
++    "multiscroll",
++    "snap"
+   ],
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"

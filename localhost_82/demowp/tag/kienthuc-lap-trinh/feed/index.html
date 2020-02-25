@@ -1,0 +1,2031 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>KiếnThức Lập Trình &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/kienthuc-lap-trinh/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Tue, 22 Oct 2019 11:00:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>KiếnThức Lập Trình &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</title>
+		<link>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/</link>
+				<comments>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 11:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7188</guid>
+				<description><![CDATA[<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng Open XML và closed XML. điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng <strong>Open XML và closed XML.</strong> điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm tham chiếu XML mở và XML đóng kín từ các gói nugget.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png"><img class="aligncenter size-full wp-image-7214" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png" alt="write file excel in c sharp" width="700" height="321" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp-300x138.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải thư viện <strong>ClosedXML</strong> miễn phí ở địa chỉ: <strong><a href="https://www.nuget.org/packages/ClosedXML/" target="_blank" rel="noopener noreferrer">https://www.nuget.org/packages/ClosedXML/</a></strong></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+<h2><span id="Cach_Cai_dat_truc_tiep_SpireDoc_SpirePDF_vao_Windows" class="ez-toc-section"><strong>Cách Cài đặt trực tiếp ClosedXML vào Windows.</strong></span></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="write file excel c#" width="548" height="100" data-pin-no-hover="true" /></a></p>
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes…</strong></p>
+<p><a href="https://imgur.com/v1lt77N.png"><img class="aligncenter size-full" src="https://imgur.com/v1lt77N.png" width="344" height="242" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>ClosedXML</strong> như hình bên dưới để cài đặt.</p>
+<p><a href="https://imgur.com/M6aSIuL.png"><img class="aligncenter size-full" src="https://imgur.com/M6aSIuL.png" width="1009" height="485" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/AWlx22D.png"><img class="aligncenter size-full" src="https://imgur.com/AWlx22D.png" width="313" height="165" /></a></p>
+<h2><span id="Tao_file_word_va_ghi_1_doan_van_ban_trong_C" class="ez-toc-section"><strong>Tạo file Excel (xlsx) và ghi vào 1 đoạn văn bản trong C#</strong></span></h2>
+<p>Ở đây đang chuyển đổi Dataset thành file Excel, nếu tập dữ liệu chứa nhiều DataTables, nó có thể được lặp vào cùng một Excel với <strong>các trang tính khác nhau</strong>. Dưới đây là code để kết nối Tạo Excel (.xlsx) và lưu vào đường dẫn chỉ định.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Data;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+
+//su dung phong thuc ClosedXML de hoan thanh
+namespace ghifileexcel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Country");
+            dt.Rows.Add("Venkatesh", "India");
+            dt.Rows.Add("Santhosh", "USA");
+            dt.Rows.Add("Venkat Sai", "Dubai");
+            dt.Rows.Add("Venkat Teja", "Pakistan");
+            ds.Tables.Add(dt);
+            ExportDataSetToExcel(ds);
+        }
+
+        public static void ExportDataSetToExcel(DataSet ds)
+        {
+            string AppLocation = "";
+            AppLocation = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            AppLocation = AppLocation.Replace("D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx", "");
+            string date = DateTime.Now.ToShortDateString();
+            date = date.Replace("/", "_");
+            //string filepath = AppLocation + "\\ExcelFiles\\" + "RECEIPTS_COMPARISON_" + date + ".xlsx";
+            string filepath = "D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx";
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                for (int i = 0; i &lt; ds.Tables.Count; i++)
+                {
+                    wb.Worksheets.Add(ds.Tables[i], ds.Tables[i].TableName);
+                }
+                wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                wb.Style.Font.Bold = true;
+                wb.SaveAs(filepath);
+            }
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.fourthbottle.com/2017/07/create-excel-files-in-csharp-using-open-xml.html" target="_blank" rel="noopener noreferrer">Create Excel files in C#</a></li>
+<li><a href="https://stackoverflow.com/questions/9769703/exporting-to-xlsx-using-microsoft-office-interop-excel-saveas-error" target="_blank" rel="noopener noreferrer">Exporting to .xlsx</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7188"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</title>
+		<link>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/</link>
+				<comments>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 06:49:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7184</guid>
+				<description><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện Spire.Doc của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện <strong>Spire.Doc</strong> của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng thư viện Spire.Doc miễn phí, thư viện này giới hạn 500 đoạn và 25 bảng trong 1 tập tin Word và PDF, đủ để tạo 1 tập tin có dung lượng vừa phải.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png"><img class="aligncenter wp-image-7210 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png" alt="write file word pdf c# c sharp" width="700" height="299" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp-300x128.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải 2 thư viện <strong>Spire.Doc</strong> và <strong>Spire.PDF</strong> bản miễn phí ở địa chỉ: <a href="https://www.e-iceblue.com/Download/download-word-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-word-for-net-free.html</a> và <a href="https://www.e-iceblue.com/Download/download-pdf-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-pdf-for-net-free.html</a>.</p>
+<p>Hoặc bạn tải về theo link google drive mình chuẩn bị sẵn   <a class="btn btn-default" href="https://drive.google.com/open?id=1pK7WYtNOcMXDJBGLKS3H84gIveAiPTEX" target="_blank" rel="noopener noreferrer"> Tại Đây</a></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+
+
+<h2><strong>Cách Cài đặt trực tiếp Spire.Doc, Spire.PDF vào Windows.</strong></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" data-pin-no-hover="true"></a></p>
+
+
+
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes&#8230;</strong></p>
+<p style="text-align: center;"><a href="https://imgur.com/PrJxxMw.png"><img class="aligncenter" src="https://imgur.com/PrJxxMw.png" alt="Manage Nuger Packafes" width="336" height="218" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>Spire.Office</strong> (Sẽ bao gồm đọc tất cả các file office và cả pdf) hoặc chọn <strong>Spire.PDF</strong> và <strong>Spire.Doc</strong>.</p>
+<p><a href="https://imgur.com/nL9cKLY.png"><img class="aligncenter" src="https://imgur.com/nL9cKLY.png" alt="Spire.PDF và Spire.Doc" width="982" height="549" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p><a href="https://imgur.com/BqHguk5.png"><img class="aligncenter size-full" src="https://imgur.com/BqHguk5.png" width="516" height="608" /></a></p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/j5s4u0t.png"><img class="aligncenter" src="https://imgur.com/j5s4u0t.png" alt="Tạo file word c#" width="309" height="343" /></a></p>
+<p>Giờ thì bắt đầu Code.</p>
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản trong C#</strong></h2>
+<p>Ví dụ sau tạo 1 đoạn văn bản “Hello World!” in đậm canh giữa vào tập tin mới <strong>test.doc</strong> (hoặc test.pdf). Tập tin mới sẽ nằm ở thư mục Debug, bạn có thể tùy chỉnh đường dẫn tập tin tùy ý nếu muốn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Spire.Doc;
+using Spire.Pdf;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+ 
+namespace TestProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tạo đối tượng tài liệu (Document)
+            Document doc = new Document();
+             
+            // Tạo đối tượng đoạn (Paragraph)
+            Paragraph paragraph = doc.AddSection().AddParagraph();
+ 
+            // Tạo văn bản (TextRange)
+            Spire.Doc.Fields.TextRange text = paragraph.AppendText("Hello World!");
+            //text.CharacterFormat.Italic = true;  // in nghiêng
+            //text.CharacterFormat.UnderlineStyle = UnderlineStyle.Single; // gạch chân
+            text.CharacterFormat.Bold = true;                                   // kiểu in đậm
+            paragraph.Format.TextAlignment = TextAlignment.Center;              // văn bản canh giữa 
+            paragraph.Format.HorizontalAlignment = HorizontalAlignment.Center;  // đoạn canh giữa
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Left;  // đoạn canh trái  
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Right; // đoạn canh phải
+ 
+            // Lưu đối tượng tài liệu vào tập tin test.doc (nằm ở thư mục Debug của dự án)
+            doc.SaveToFile("test.doc", Spire.Doc.FileFormat.Doc);
+            // doc.SaveToFile("test.pdf", Spire.Doc.FileFormat.PDF); -- tạo PDF
+ 
+            // đóng đối tượng
+            doc.Close();
+        }
+    }
+}</pre>
+
+
+
+<h3><strong>Thêm 1 đoạn mới vào file Word C Sharp</strong></h3>
+<p>Nhìn lại code trên, tại dòng 21, khi tạo 1 đoạn mới chúng ta dùng đoạn mã <strong>Paragraph paragraph = doc.AddSection().AddParagraph();</strong></p>
+<p>Tuy nhiên để thêm 1 đoạn mới nữa bạn phải dùng hàm <strong>doc.Sections[0].AddParagraph();</strong>&nbsp;như trong ví dụ sau đây.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// đoạn mới tên biến là  paragraph2
+Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+// tên văn bản mới là text2
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("Nhập nội dung đoạn mới");
+text2.CharacterFormat.FontSize = 18;
+text2.CharacterFormat.Bold = true;</pre>
+
+
+
+<h3><strong>Canh Tab</strong></h3>
+<p>Để canh Tab thì dùng&nbsp;<strong>paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;</strong>&nbsp;với TabJustification.Right là Tab phải và 175 (float) là vị trí Tab, ngoài ra có có Tab trái ở vị trí 375 (Left) và Tab giữa (Centered) chưa được thêm vào.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+ 
+// Canh Tab phải vị trí 175
+paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;
+paragraph2.Format.Tabs.AddTab(375).Justification = TabJustification.Left;
+//paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Centered;
+// Phải có \t để dịch đến Tab cần canh
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("\t Canh phải \t Canh trái");</pre>
+
+
+
+<h3><strong>Chèn hình</strong></h3>
+<p>Đầu tiên bạn phải thêm thư viện&nbsp;<strong>System.Drawing</strong>&nbsp;vào dự án (Add Reference), sau đó gọi 2 namespace ở trên đầu file code.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Spire.Doc.Fields;
+using System.Drawing;</pre>
+
+
+
+<p>Tiếp theo tạo đối tượng Bitmap và DocPicture để thêm hình vào đối tượng Document.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng hình ảnh DocPicture (using using Spire.Doc.Fields;)
+DocPicture picture = doc.Sections[0].Paragraphs[0].AppendPicture(b1);
+ 
+// Vị trí ảnh theo chiều dọc, ngang
+picture.HorizontalPosition = 50.0F;
+picture.VerticalPosition = 200.0F;
+ 
+// Kích thước ảnh
+picture.Width = 150;
+picture.Height = 100;
+ 
+ // Kiểu chèn ảnh nổi trên văn bản
+ picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;</pre>
+
+
+
+<h3><strong>Thêm bảng biểu</strong></h3>
+<p>Chúng ta dùng đối tượng Table để tạo bảng, trong đó tạo dòng tiêu đề trước và phần dữ liệu từng dòng sau.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Dữ liệu mẫu
+List&lt;string> list = new List&lt;string> { "One", "True", "Three" };
+ 
+// Tạo đối tượng bảng Table
+Spire.Doc.Table table = doc.Sections[0].AddTable(true);
+ 
+// Tạo cột
+String[] Header = { "STT", "Tên"};
+ 
+// Số dòng và số cột cho bảng
+table.ResetCells(list.Count + 1, Header.Length);
+ 
+// Độ rộng bảng ở dòng 0 và 2 cột STT và Tên (tạo tiêu đề bảng)
+doc.Sections[0].Tables[0].Rows[0].Cells[0].Width = 200;
+doc.Sections[0].Tables[0].Rows[0].Cells[1].Width = 200;
+ 
+// Tạo dòng tiêu đề cho bảng (dòng 0)
+Spire.Doc.TableRow FRow = table.Rows[0];
+FRow.IsHeader = true;
+FRow.Height = 23;
+ 
+for (int i = 0; i &lt; Header.Length; i++)
+{
+    // Định dạng cell
+    Paragraph p = FRow.Cells[i].AddParagraph();
+    FRow.Cells[i].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    p.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    // Định dạng văn bản trong bảng
+    Spire.Doc.Fields.TextRange TR = p.AppendText(Header[i]);
+    TR.CharacterFormat.FontName = "Times New Roman";
+    TR.CharacterFormat.FontSize = 13;
+    TR.CharacterFormat.Bold = true;
+}
+ 
+// Định dạng dữ liệu từng dòng (lấy từ list)
+for (int r = 0; r &lt; list.Count; r++)
+{
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[0].Width = 200;
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[1].Width = 200;
+ 
+    // Định dạng dòng thứ r + 1 (bỏ dòng đầu là tiêu đề)
+    Spire.Doc.TableRow DataRow = table.Rows[r + 1];
+    DataRow.Height = 20;
+ 
+    DataRow.Cells[0].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p1 = DataRow.Cells[0].AddParagraph();
+    Spire.Doc.Fields.TextRange TR1 = p1.AppendText((r + 1).ToString()); // STT
+    p1.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    DataRow.Cells[1].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p2 = DataRow.Cells[1].AddParagraph();
+    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(list[r].ToString()); // Tên
+    p2.Format.HorizontalAlignment = HorizontalAlignment.Center;
+}</pre>
+
+
+
+<hr />
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản nhập từ bàn phím trong C#</strong></h2>
+<p>Tương tự như đoạn code mẫu bên trên. ở phần này mình có thay đổi một chút xíu đó là những gì cần ghi vào file word sẽ phải nhập từ màn hình Console. Các bạn có thể tham khảo.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System.Drawing;
+using System;
+using Spire.Doc;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+using Spire.Doc.Formatting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+//ghi text vao file word su dụng phương thức Spire
+namespace ghifileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Document doc = new Document();
+            Section sec = doc.AddSection();
+            Paragraph par = sec.AddParagraph();
+
+            TextBox textBox = par.AppendTextBox(180, 30);
+            textBox.Format.VerticalOrigin = VerticalOrigin.Margin;
+            textBox.Format.VerticalPosition = 100;
+            textBox.Format.HorizontalOrigin = HorizontalOrigin.Margin;
+            textBox.Format.HorizontalPosition = 50;
+            textBox.Format.NoLine = true;
+
+            CharacterFormat format = new CharacterFormat(doc);
+            format.FontName = "Calibri";
+            format.FontSize = 15;
+            format.Bold = true;
+
+            Paragraph par1 = textBox.Body.AddParagraph();
+            string line = "";
+            Console.WriteLine("Nhap  chu can ghi vao file word : ");
+            line = Console.ReadLine();
+            par1.AppendText(line).ApplyCharacterFormat(format);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.docx", FileFormat.Docx);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.doc", FileFormat.Doc);
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.e-iceblue.com/Tutorials/Spire.Doc/Spire.Doc-Program-Guide/Text/How-to-Insert-Text-to-Word-at-Exact-Position-in-C-VB.NET.html" target="_blank" rel="noopener noreferrer">How to Insert Text to Word at Exact Position in C#, VB.NET</a></li>
+<li><a href="https://www.dammio.com/2017/03/20/cach-tao-tap-tin-word-pdf-voi-thu-vien-spire-doc-spire-pdf-bang-c" target="_blank" rel="noopener noreferrer">tạo tệp tin word excel trong c#</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua&nbsp;<a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a>&nbsp;để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+
+
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+
+
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7184"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</title>
+		<link>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/#respond</comments>
+				<pubDate>Sun, 06 Oct 2019 02:10:26 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7173</guid>
+				<description><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#. Phương pháp này cũng sử dụng thư viện Interop [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#.</p>
+<p>Phương pháp này cũng sử dụng thư viện Interop giống bài viết trước. Đầu tiên, thêm tham chiếu vào <strong><a href="https://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Excel XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Excel.</p>
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;       //Microsoft Excel 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Excel </strong>về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_excel_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Excel.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!C6wyxQIJ!TVdvnUSDGrzcxRNn0hKtQI9mQWAIb05ZeKsqoTbWIbI" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4569.1506</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Excel.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Excel </strong>trong danh sách <strong>Component Name .</strong> Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/VGEKQ1g.png"><img class="aligncenter size-full" src="https://imgur.com/VGEKQ1g.png" width="717" height="879" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+<p>
+
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel; using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Tiếp theo, bạn sẽ cần tạo references cho từng đối tượng COM được truy cập. Mỗi references phải được lưu giữ để thoát khỏi ứng dụng một cách hiệu quả khi hoàn thành.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng COM. Tạo một đối tượng COM cho mọi thứ được tham chiếu
+Excel.Application xlApp = new Excel.Application();
+Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"sandbox_test.xlsx");
+Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+Excel.Range xlRange = xlWorksheet.UsedRange;</pre>
+
+
+
+<p>Sau đó, bạn có thể đọc từ trang tính sheet, hãy nhớ rằng lập chỉ mục trong Excel không dựa trên 0. Điều này chỉ cần đọc các ô và in chúng trở lại giống như trong tệp.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//Lặp lại qua các hàng và cột và in ra bàn điều khiển khi nó xuất hiện trong tệp
+//excel is not zero based!!
+for (int i = 1; i &lt;= rowCount; i++)
+{
+    for (int j = 1; j &lt;= colCount; j++)
+    {
+        //dòng mới
+        if (j == 1)
+            Console.Write("\r\n");
+
+        //ghi giá trị vào bàn điều khiển console
+        if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+            Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t"); 
+    }
+}</pre>
+
+
+
+<p>Cuối cùng, các tham chiếu (references) đến bộ nhớ không được quản lý phải được xuất ra. Nếu điều này không được thực hiện đúng cách, thì sẽ có các quy trình kéo dài giữ quyền truy cập tập tin và ghi vào file Excel của bạn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//cleanup
+GC.Collect();
+GC.WaitForPendingFinalizers();
+
+//quy tắc của việc phát hành các đối tượng com:
+//không bao giờ sử dụng hai dấu chấm, tất cả các đối tượng COM phải được tham chiếu và phát hành riêng lẻ
+//  ví dụ: [somthing].[something].[something] ----&gt; bad
+
+//xuất các đối tượng com để dừng hoàn toàn quá trình excel chạy trong nền
+Marshal.ReleaseComObject(xlRange);
+Marshal.ReleaseComObject(xlWorksheet);
+
+//đóng lại và xuất thông tin
+xlWorkbook.Close();
+Marshal.ReleaseComObject(xlWorkbook);
+
+//thoát và xuất thông tin
+xlApp.Quit();
+Marshal.ReleaseComObject(xlApp);</pre>
+
+
+
+<p><strong>Full Code đầy đủ để đọc 1 file Excel trong C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;           
+using System.Text;
+using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;       //microsoft Excel 14 object in references-&gt; COM tab
+
+namespace Sandbox
+{
+    public class Read_From_Excel
+    {
+        public static void getExcelFile()
+        {
+
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\E56626\Desktop\Teddy\VS2012\Sandbox\sandbox_test - Copy - Copy.xlsx");
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+            //iterate over the rows and columns and print to the console as it appears in the file
+            //excel is not zero based!!
+            for (int i = 1; i &lt;= rowCount; i++)
+            {
+                for (int j = 1; j &lt;= colCount; j++)
+                {
+                    //new line
+                    if (j == 1)
+                        Console.Write("\r\n");
+
+                    //write the value to the console
+                    if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+                        Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t");
+                }
+            }
+
+            //cleanup
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            //rule of thumb for releasing com objects:
+            //  never use two dots, all COM objects must be referenced and released individually
+            //  ex: [somthing].[something].[something] is bad
+
+            //release com objects to fully kill excel process from running in the background
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+        }
+        static void Main(string[] args)
+        {
+            getExcelFile();
+            Console.Read();
+        }
+    }
+}   </pre>
+
+
+
+<div><span style="text-decoration: underline;"><strong>Tài liệu liên quan:</strong></span></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/158706/how-to-properly-clean-up-excel-interop-objects/158752" target="_blank" rel="noopener noreferrer">stackoverflow</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/eaw10et3.aspx" target="_blank" rel="nofollow noopener noreferrer">Interop Marshaling</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7173"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</title>
+		<link>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/#respond</comments>
+				<pubDate>Sat, 05 Oct 2019 18:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Word]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7156</guid>
+				<description><![CDATA[<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé! Với NET 4+ cho phép C # đọc và thao tác các tệp Microsoft Word Excel, đối với các máy tính đã cài đặt Word, Excel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png"><img class="aligncenter size-full wp-image-7163" src="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png" alt="mo doc file word c sharp" width="505" height="226" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png 505w, http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp-300x134.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Với<strong> NET 4+ cho phép C #</strong> đọc và thao tác các tệp <strong>Microsoft Word Excel</strong>, đối với các máy tính đã cài đặt Word, Excel (nếu bạn chưa cài đặt Word, Excel, hãy xem <a href="http://npoi.codeplex.com/" target="_blank" rel="nofollow noopener noreferrer">NPOI</a> ).</p>
+<p>Đầu tiên, thêm tham chiếu vào <strong><a href="http://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Word XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Word, Excel.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Word = Microsoft.Office.Interop.Word;       //Microsoft Word 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Word</strong> về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Word.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!u3BEhYRL!MSIaE4Y8ueK3fRMkkgJQbvMVNsWYh6C39sgANQfbcAM" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4603.1000</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter size-full" src="https://imgur.com/LbWXePi.png" alt="console app read file word" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Word </strong>trong danh sách <strong>Component Name . </strong>sau đó nhấn và giữ phím CTRL và chọn <strong>Microsoft.Office.Interop.Excel</strong> nếu có. Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/krK8SSG.png"><img class="aligncenter size-full" src="https://imgur.com/krK8SSG.png" width="945" height="790" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Và cuối cùng bạn chỉ cần thêm đoạn code này vào file <strong>Program.cs</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }</pre>
+
+
+
+<p>Tại line thứ 7, các bạn nhớ sửa lại đường dẫn đến file word trong máy tính của mình nhé!</p>
+<p>Và nhớ truyền đầy đủ các thư viện vào nhé!</p>
+<p><strong>Đây là Code đầy đủ để đọc và mở 1 file Word C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+namespace docfileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }
+}</pre>
+
+
+
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interop/how-to-access-office-onterop-objects" target="_blank" rel="noopener noreferrer">Access Office Interop Objects&#8230;</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">NPOI</a></li>
+<li><a href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">dllme</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">Alias</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7156"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</title>
+		<link>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/</link>
+				<comments>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/#respond</comments>
+				<pubDate>Fri, 04 Oct 2019 06:15:09 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7111</guid>
+				<description><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn cách tính cộng hai số cực lớn code bằng ngôn ngữ java để cho các bạn tham khảo nhé! Về vấn đề cộng hai số cực lớn thì bạn phải nghĩ cách lưu được số lớn đó vào trong bộ nhớ. Vê lưu số [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn cách tính cộng hai số cực lớn code bằng ngôn ngữ java để cho các bạn tham khảo nhé!</p>
+<p>Về vấn đề cộng hai số cực lớn thì bạn phải nghĩ cách lưu được số lớn đó vào trong bộ nhớ. Vê lưu số lớn thì có 2 cách: bạn có thể dùng một mảng số nguyên hoặc dùng một chuỗi kí tự để lưu nó lại. Ở đây mình sẽ dùng phương pháp thứ 2 là cho nó vào một chuỗi String để thực hiện phép tính.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png"><img class="aligncenter size-full wp-image-7140" src="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png" alt="cong hai so cuc lon" width="634" height="315" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png 634w, http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon-300x149.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon-360x180.png 360w" sizes="(max-width: 634px) 100vw, 634px" /></a></p>
+<p>Mỗi thằng có một lợi điểm riêng, như dùng mảng số nguyên thì không phải mất công chuyển đổi từ kiểu string sang int để tính toán, ..</p>
+<p>Đó là việc lưu trữ. Còn về việc tính toán thì lúc này bạn có thể sử dụng cách tính cộng thủ công theo phương pháp cấp 1: tức là cộng lần lượt từ phải sang trái, và có nhớ khi cộng.</p>
+<p>Luyên thuyên đủ rồi, giờ mình sẽ giải thích phương pháp của mình nhé!</p>
+<h3><strong>Cách 1: Dùng Thuật toán Cộng Hai Số Cực Lớn JAVA</strong></h3>
+<p><span style="text-decoration: underline;"><strong>Bước 1:</strong></span> Nhập 2 số nguyên lớn bằng phương pháp nhập theo kiểu chuỗi String.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    //tạo mot ham nhap   
+    static void nhap() {
+        String s1, s2;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Nhap 2 so nguyen lon. ");
+        System.out.print("Nhap so nguyen thu nhat: ");
+        s1 = s.next();
+        System.out.print("Nhap so nguyen thu hai: ");
+        s2 = s.next();
+    }</pre>
+<p><strong><span style="text-decoration: underline;">Bước 2:</span></strong> Tạo một hàm đảo ngược chuỗi. (Mình muốn chuyển ngược chuỗi, ví dụ có chuỗi &#8220;<strong>1234</strong>&#8221; thì sẽ được đảo thành &#8220;<strong>4321</strong>&#8220;. Mục đích của mình là thực hiện phép cộng lần lượt từ <strong>trái qua phải.</strong>)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    
+    static String daoXau(String s) {
+        String s1 = "";
+        for (int i = 0; i &lt; s.length(); i++) {
+            s1 += s.charAt(s.length() - 1 - i);
+        }
+        return s1; //xuat chuoi sau khi dao
+    }</pre>
+<p><span style="text-decoration: underline;"><strong>Bước 3:</strong></span> Tạo Hàm tính tổng.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    //tạo mot ham tinh tong 
+    static String add(String s1, String s2) {
+        String s = "";
+    
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int max = max(len1, len2); //ham max length xuat ra gia tri chieu dai lon nhat trong 2 chuoi
+        s1 = daoXau(s1);
+        s2 = daoXau(s2);
+    
+        //thuc hien noi them so 0 vao chuoi voi muc dich lam cho 2 chuoi so bang nhau
+        if (max &gt; len1) {
+            for (int i = max; i &gt;= len1; i--) {
+                s1 += "0";
+            }
+        }
+        if (max &gt; len2) {
+            for (int i = max; i &gt;= len2; i--) {
+                s2 += "0";
+            }
+        }
+        
+        //thuc hien phep cong
+        int soGhiNho = 0;
+        for (int i = 0; i &lt; max; i++) {
+            int tong = 0;
+            //charAt ky tu tai vi tri thu i trong xau
+            tong = s1.charAt(i) - '0' + s2.charAt(i) - '0' + soGhiNho;
+            s += tong % 10;
+            soGhiNho = tong / 10;
+        }
+        if (soGhiNho == 1) {
+            s += 1;
+        }
+        //thuc hien dao xau truoc khi xuat
+        s = daoXau(s);
+        return s;
+    }</pre>
+<p>Vì mình thực hiện phép cộng từ trái sang phải nên kết quả sau khi tính ra sẽ bị ngược. Vì thế ở cuối hàm cộng trêm, mình phải thực hiện đảo chuỗi một lần nữa rồi mới cho return ra.</p>
+<p><strong>Như vậy ta sẽ có được Code Hoàn chỉnh như sau:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class CongSoNguyenLon {
+    public static void main(String[] args) {
+        nhap();
+    }
+    static String daoXau(String s) {
+        String s1 = "";
+        for (int i = 0; i &lt; s.length(); i++) {
+            s1 += s.charAt(s.length() - 1 - i);
+        }
+        return s1; //chuoi sau khi dao
+    }
+    static String add(String s1, String s2) {
+        String s = "";
+    
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int max = max(len1, len2); //ham max length xuat ra gia tri chieu dai lon nhat trong 2 chuoi
+        s1 = daoXau(s1);
+        s2 = daoXau(s2);
+        
+        //thuc hien noi them so 0 vao chuoi voi muc dich lam cho 2 chuoi so bang nhau
+        if (max &gt; len1) {
+            for (int i = max; i &gt;= len1; i--) {
+                s1 += "0";
+            }
+        }
+        if (max &gt; len2) {
+            for (int i = max; i &gt;= len2; i--) {
+                s2 += "0";
+            }
+        }
+        
+        //thuc hien phep cong
+        int soGhiNho = 0;
+        for (int i = 0; i &lt; max; i++) {
+            int tong = 0;
+            //charAt ky tu tai vi tri thu i trong xau
+            tong = s1.charAt(i) - '0' + s2.charAt(i) - '0' + soGhiNho;
+            s += tong % 10;
+            soGhiNho = tong / 10;
+        }
+        if (soGhiNho == 1) {
+            s += 1;
+        }
+        //thuc hien dao xau truoc khi xuat
+        s = daoXau(s);
+        return s;
+    }
+    static void nhap() {
+        String s1, s2;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Nhap 2 so nguyen lon. ");
+        System.out.print("Nhap so nguyen thu nhat: ");
+        s1 = s.next();
+        System.out.print("Nhap so nguyen thu hai: ");
+        s2 = s.next();
+        //xuat tong
+        System.out.println();
+        String ss = add(s1, s2);
+        System.out.println("Tong 2 so nguyen lon: " + ss);
+    }
+}</pre>
+<p>Đây là kết quả:</p>
+<p><a href="https://imgur.com/hh8U2Py.jpg"><img class="aligncenter" style="border-style: inset;" src="https://imgur.com/hh8U2Py.jpg" alt="" width="1167" height="143" /></a></p>
+<p>Đó là thuật toán hàn chỉnh để tính cộng hai số cực lớn, nếu code mình có sai sót ở đâu mong được sự chỉ giáo của các bạn. </p>
+<p>Ngoài thuật toán mình build ở trên ra. Java thực chất đã có bộ thư viện khổng lồ nhằm phục vụ cho các bạn rồi nên các bạn cũng có thể sử dụng <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html" target="_blank" rel="noopener noreferrer"><strong>BigDecimal</strong> </a>hoặc <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html" target="_blank" rel="noopener noreferrer"><strong>BigInteger</strong> </a>để thực hiện phép cộng này nhé!</p>
+<h3><strong>Cách 2: Sử dụng BigInteger để cộng hai số cực lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args)
+    { 
+        BigInteger num1,num2;
+        num1 = new BigInteger("655555555555555555554365435555555555555544745765476547654765476476");
+        num2 = new BigInteger("65555555465547654755543654365465555555555547654755554765755555555544745765476547654765476476");
+        System.out.println("Tong: " + num1.add(num2));
+        System.out.println("Hieu: " + num1.subtract(num2));
+        System.out.println("Tich: " + num1.multiply(num2));
+        System.out.println("Thuong: " + num1.divide(num2));
+    }</pre>
+
+
+
+<h3><strong>Cách 3: Sử dụng BigDecimal để cộng hai số cực lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        BigDecimal a,b,c;
+        System.out.print("Nhap a: ");
+        a = new BigDecimal(input.next());
+        System.out.print("Nhap b: ");
+        b = new BigDecimal(input.next());
+        
+        c = a.add(b);
+        
+        System.out.println("c = a + b = " + c);
+    }</pre>
+
+
+
+<h3><strong>Và Cách 4: Bạn cũng có thể sử dụng LinkedList để cộng hai số lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args)
+    {   
+        Scanner scan = new Scanner(System.in);
+        /* Create Linked Lists */
+        LinkedList&lt;Integer&gt; num1 = new LinkedList&lt;Integer&gt;();
+        LinkedList&lt;Integer&gt; num2 = new LinkedList&lt;Integer&gt;();
+        LinkedList&lt;Integer&gt; ans = new LinkedList&lt;Integer&gt;();
+        /* Accept numbers */
+        System.out.println("Adding Large Numbers Using Linked Lists Test\n");
+        System.out.println("Enter number 1");
+        String s1 = scan.next();
+        System.out.println("Enter number 2");
+        String s2 = scan.next();
+        /* Store digits in lists */
+        int l1 = s1.length(), l2 = s2.length();       
+        for (int i = l1 - 1; i &gt;= 0; i--)
+            num1.add(s1.charAt(i) - '0');
+        for (int i = l2 - 1; i &gt;= 0; i--)
+            num2.add(s2.charAt(i) - '0');
+        /* Adding digits and storing in ans list */
+        int len = l1 &gt; l2 ? l1 : l2;
+        int carry = 0;
+        for (int i = 0; i &lt; len; i++)
+        {
+            int d1 = 0, d2 = 0;           
+            try {
+                d1 = num1.get(i);
+            }
+            catch(Exception e){}           
+            try {
+                d2 = num2.get(i);
+            }
+            catch(Exception e){}                       
+            int x = d1 + d2 + carry;
+            ans.add(x % 10);
+            carry = x / 10;
+        }
+        /* Adding carry */
+        while (carry != 0)
+        {
+            ans.add(carry % 10);
+            carry /= 10;
+        }
+        /* Printing ans list */
+        System.out.print("\nSum = ");
+        for (int i = ans.size() - 1; i &gt;= 0; i--)
+            System.out.print(ans.get(i));
+        System.out.println();       
+    }</pre>
+
+
+
+<p>Nếu có vấn đề hay thắc mắc gì hoặc bạn không biết cách chỉnh sửa thì hãy bình luận bên dưới để cùng trao đổi và giúp đỡ các bạn nhé!</p>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong> <a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/c/code-game-megamanx3-c/" target="_blank" rel="noopener noreferrer">Share code game MegamanX3 viết bằng C++</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/mau-code-form-login-cho-website/" target="_blank" rel="noopener noreferrer">Chia sẻ 6 mẫu Code Form Login giao diện cực đẹp và dễ thương cho Website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-chao-mung-nam-moi-voi-hieu-ung-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Chào Mừng Năm Mới Với Hiệu Ứng Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-count-down-dem-nguoc-thoi-gian-phong-cach-j2team/" target="_blank" rel="noopener noreferrer">Share Source Code Count-Down Đếm ngược thời gian phong cách J2team</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 28px;">CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ </span></strong></span></p>
+<div id="eJOY__extension_root" style="all: unset;"> </div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7111"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</title>
+		<link>http://localhost:82/demowp/python/khoa-hoc-python/</link>
+				<comments>http://localhost:82/demowp/python/khoa-hoc-python/#respond</comments>
+				<pubDate>Tue, 03 Sep 2019 18:51:16 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6874</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học Python for Beginners: Learn with Examples and Mini-Project. Khóa học sẽ hướng dẫn từ cơ bản đến nâng cao ngôn ngữ lập trình Python. Bên cạnh đó là những ví dụ cùng với những project nhỏ giúp bạn thực hành ngay sau khi học. [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/python/khoa-hoc-python/">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học <strong>Python for Beginners: Learn with Examples and Mini-Project</strong>. Khóa học sẽ hướng dẫn từ cơ bản đến nâng cao ngôn ngữ lập trình Python. Bên cạnh đó là những ví dụ cùng với những project nhỏ giúp bạn thực hành ngay sau khi học.</p>
+<p><figure id="attachment_6989" aria-describedby="caption-attachment-6989" style="width: 480px" class="wp-caption aligncenter"><img class="wp-image-6989 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/09/Python-for-beginners.png" alt="" width="480" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/Python-for-beginners.png 480w, http://localhost:82/demowp/wp-content/uploads/2019/09/Python-for-beginners-300x169.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption id="caption-attachment-6989" class="wp-caption-text">Python For Beginners</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm được các kiến thức cơ bản của ngôn ngữ Python.</li>
+<li>Có được kiến ​​thức về các khái niệm lập trình cốt lõi như biến, kiểu dữ liệu, luồng điều khiển, hàm và nhiều hơn nữa.</li>
+<li>Cách làm việc với Python3 một cách chuyên nghiệp.</li>
+<li>Có kỹ năng và hiểu biết về Python để tự tin áp dụng cho các công việc lập trình Python.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li class="requirements__item">Yêu cầu đầu tiên và quan trọng nhất &#8211; Nhiệt tình tìm hiểu!</li>
+<li class="requirements__item">Máy tính &#8211; Windows, Mac hoặc Linux.</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Bất cứ ai muốn có được kiến ​​thức về các khái niệm lập trình Python từ cơ bản đến nâng cao.</li>
+<li>Các lập trình viên biết các ngôn ngữ khác nhưng muốn học Python.</li>
+<li>Những bạn muốn dùng ngôn ngữ Python cho mục đích liên quan đến nghề nghiệp.</li>
+</ul>
+<div class="requirements__content">
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><strong style="color: #ff0000; font-size: 32px;">Download Khóa Học Python Tại Đây:</strong></h4>
+</div>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <strong>Python for Beginners: Learn with Examples and Mini-Project</strong>.</p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/drive/folders/16W6OvaezKigKrFjEPF1Idowduoi01uQF" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h3 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h3>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/code-web-trung-thu-dep/" target="_blank" rel="noopener noreferrer">Code Web Trung Thu Đẹp, Nhiều Hiệu Ứng</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/tai-lieu/design/1000-cinematic-overlays-bundle/" target="_blank" rel="noopener noreferrer">Chia sẻ Full Bộ 1000 Cinematic Overlays Bundle cho Designer &#8211; Photoshop, Lightroom miễn phí</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></span></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/" target="_blank" rel="noopener noreferrer">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6874"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/python/khoa-hoc-python/">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/python/khoa-hoc-python/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</title>
+		<link>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/</link>
+				<comments>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/#respond</comments>
+				<pubDate>Sun, 25 Aug 2019 08:41:53 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6718</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học Java Programming Fundamentals từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình. Bạn sẽ học được gì từ khóa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học <strong>Java Programming Fundamentals</strong> từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình.</p>
+<p><figure id="attachment_6995" aria-describedby="caption-attachment-6995" style="width: 482px" class="wp-caption aligncenter"><img class="wp-image-6995 size-full" title="Khoá học lập trình Java từ cơ bản đến nâng cao" src="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png" alt="Lập trình Java từ cơ bản đến nâng cao" width="482" height="270" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/08/Java-300x168.png 300w" sizes="(max-width: 482px) 100vw, 482px" /><figcaption id="caption-attachment-6995" class="wp-caption-text">Lập trình Java từ cơ bản đến nâng cao</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm vững các kiến thức cơ bản.</li>
+<li>Cải thiện tư duy logic của bạn.</li>
+<li>Phát triển kỹ năng lập trình của bạn bằng cách thực hành các bài tập từ khóa học.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li class="requirements__item">Máy tính Windows, Mac hoặc Linux.</li>
+<li class="requirements__item">Bạn phải cài đặt trình soạn thảo JDK và IntelliJ IDEA để thực hành.</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Khóa học dành cho những người không có kiến ​​thức lập trình.</li>
+<li>Dành cho những người muốn lấy lập trình làm nghề nghiệp của họ.</li>
+<li>Và dành cho những người muốn cải thiện kỹ năng của mình.</li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Download Khóa Học Java Tại Đây:</strong></span></span></h4>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <b>Java Programming Fundamentals</b></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=17u4NJHo1PXhBDzqmf6dwXt30kCSHC0rw" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/tai-lieu/development/" target="_blank" rel="noopener noreferrer">Những khoá học cho lập trình viên</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/" target="_blank" rel="noopener noreferrer">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></strong></span></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6718"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 99px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">4.5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download khóa học cho bạn toàn bộ kiến thức về NodeJS</title>
+		<link>http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/</link>
+				<comments>http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/#respond</comments>
+				<pubDate>Sun, 04 Aug 2019 13:53:08 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Node.Js]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6455</guid>
+				<description><![CDATA[<p>Tân Hồng IT chia sẻ để các bạn download Khóa học tổng hợp toàn bộ kiến thức về NodeJS từ trang web học tập online uy tín để các bạn có thể bắt đầu học tập và nâng cao trình độ của mình hơn nữa. Hiện nay, công nghệ thông tin xuất hiện ở mọi [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<div>
+<div>
+<p>Tân Hồng IT chia sẻ để các bạn download <strong>Khóa học tổng hợp toàn bộ kiến thức về NodeJS</strong> từ trang web học tập online uy tín để các bạn có thể bắt đầu học tập và nâng cao trình độ của mình hơn nữa.</p>
+<p><figure id="attachment_6460" aria-describedby="caption-attachment-6460" style="width: 696px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/08/kien-thuc-ve-nodejs.png"><img class="size-full wp-image-6460" src="http://localhost:82/demowp/wp-content/uploads/2019/08/kien-thuc-ve-nodejs.png" alt="kien thuc ve nodejs" width="696" height="380" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/kien-thuc-ve-nodejs.png 696w, http://localhost:82/demowp/wp-content/uploads/2019/08/kien-thuc-ve-nodejs-300x164.png 300w" sizes="(max-width: 696px) 100vw, 696px" /></a><figcaption id="caption-attachment-6460" class="wp-caption-text">Khoá học cho bạn toàn bộ kiến thức về NodeJS</figcaption></figure></p>
+<p>Hiện nay, công nghệ thông tin xuất hiện ở mọi nơi, sự phát triển nhanh chóng của nó kéo theo việc ngành lập trình trở thành một một lựa chọn lý tưởng cho các bạn trẻ. Và khi nhắc tới lập trình, ta có thể nói tới NodeJS. NodeJS là một nền tảng viết bằng JavaScript giúp xây dựng các ứng dụng mạng nhanh và khả mở.</p>
+<p>Download Khóa Học Trọn bộ kiến thức NodeJS [Full Tiếng Việt] để các bạn có thể học tập và nâng cao trình độ của mình hơn nữa trong lĩnh vực lập trình ứng dụng web.</p>
+<p>Đầu tiên là ưu điểm về tốc độ thực thi và khả năng mở rộng. Node.js có tốc độ rất nhanh. Đó là một yêu cầu khá quan trọng khi bạn là một startup đang cố gắng tạo ra một sản phẩm lớn và muốn đảm bảo có thể mở rộng nhanh chóng, đáp ứng được một lượng lớn người dùng khi trang web của bạn phát triển lên.</p>
+<p>Node.js có thể xử lý hàng ngàn kết nối đồng thời trong khi PHP sẽ chỉ có nước sụp đổ. Bên cạnh các lợi ích về tốc độ thực thi và khả năng mở rộng, có thể bạn cũng đã biết một chút về JavaScript, vì vậy tại sao lại phải phiền toái để học thêm về một ngôn ngữ lập trình hoàn toàn mới như PHP?</p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm được kiến thức NodeJS chi tiết và bài bản</li>
+<li>Tạo ra các ứng dụng có tốc độ xử lý nhanh</li>
+<li>Áp dụng kiến thức NodeJs cho những sản phẩm startup, yêu cầu thay đổi, mở rộng nhanh, có lượng truy cập lớn</li>
+<li>Cải thiện tốc độ thực thi bằng cách áp dụng NodeJS. Đối với 1 tác vụ HTML đơn giản thì NodeJS có hiệu năng gấp đôi PHP</li>
+</ul>
+<h3>Có bất kỳ yêu cầu khóa học hoặc điều kiện tiên quyết?</h3>
+<ul>
+<li>Một chút kiến ​​thức lập trình, không cần phải kiến ​​thức nâng cao</li>
+<li>Máy tính kết nối Internet</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Những sinh viên chuyên ngành CNTT hoặc người vừa đi làm trong lĩnh vực CNTT</li>
+<li>Các lập trình game muốn tạo ra các sever games online (ứng dụng thời gian thực)</li>
+<li>Những bạn muốn tạo được các ứng dụng Chat live</li>
+<li>Những lập trình viên muốn tạo ứng dụng với số lượng dòng code ít hơn so với khi sử dụng những ngôn ngữ lập trình cơ bản như PHP&#8230;</li>
+</ul>
+<hr />
+<h3 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Tải Khóa Học Tại Đây:</strong></span></span></h3>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=1P5HYYL6XaqYFMZJoBZ0SFMP3Y3618hlP" target="_blank" rel="noopener noreferrer">học Toàn bộ kiến thức về NodeJs- SIZE: 1.68GB (GOOGLE DRIVE)</a></p>
+<p><span style="font-size: 20px;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <strong><a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> </strong>&#8211; bảo vệ bản quyền tác giả. Hãy cùng là những người văn minh. <strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn TanHongIT.Net. Xin cảm ơn.</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website TanHongIT.Net</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR TANHONGIT</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/tai-lieu/development/" target="_blank" rel="noopener noreferrer">Những khoá học cho lập trình viên</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></span></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></strong></span></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6455"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</title>
+		<link>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/</link>
+				<comments>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/#respond</comments>
+				<pubDate>Wed, 13 Mar 2019 15:15:58 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+		<category><![CDATA[Web Developer]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5574</guid>
+				<description><![CDATA[<p>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc. Thư viện Javascript Particles.js —  Thư viện giúp tạo các floating particle cho [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/">67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc.</p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Thu_vien_Javascript" title="Thư viện Javascript">Thư viện Javascript</a></li><li><a href="#Thu_vien_CSS_Cong_cu_thiet_ke" title="Thư viện CSS / Công cụ thiết kế">Thư viện CSS / Công cụ thiết kế</a></li><li><a href="#Cac_san_phamlien_ket_huu_ich" title="Các sản phẩm/liên kết hữu ích">Các sản phẩm/liên kết hữu ích</a></li></ul></nav></div>
+<p><figure id="attachment_5860" aria-describedby="caption-attachment-5860" style="width: 596px" class="wp-caption aligncenter"><img class="size-full wp-image-5860" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer.jpg" alt="67 công cụ hữu ích, thư viện và tài nguyên cho web developer" width="596" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer.jpg 596w, http://localhost:82/demowp/wp-content/uploads/2019/03/Công-cụ-cho-Web-developer-300x184.jpg 300w" sizes="(max-width: 596px) 100vw, 596px" /><figcaption id="caption-attachment-5860" class="wp-caption-text">67 công cụ hữu ích, thư viện và tài nguyên cho web developer</figcaption></figure></p>
+<h3 id="f0de" class="graf graf--h3 graf-after--p"><strong>Thư viện Javascript</strong></h3>
+<p id="e7c8" class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="http://vincentgarreau.com/particles.js/" target="_blank" rel="noopener noreferrer" data-href="http://vincentgarreau.com/particles.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Particles.js </strong></a>—  Thư viện giúp tạo các floating particle cho trang web</p>
+<p class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="https://threejs.org/" target="_blank" rel="noopener noreferrer" data-href="https://threejs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Three.js</strong></a> —  Thư viện giúp tạo các đối tượng và không gian 3D trên trang web</p>
+<p id="017a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://alvarotrigo.com/fullPage/#firstPage" target="_blank" rel="noopener noreferrer" data-href="https://alvarotrigo.com/fullPage/#firstPage" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Fullpage.js</strong></a><strong class="markup--strong markup--p-strong"> </strong>—  Giúp dễ dàng thực hiện tính năng cuộn trang</p>
+<p id="b523" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.mattboldt.com/demos/typed-js/" target="_blank" rel="noopener noreferrer" data-href="http://www.mattboldt.com/demos/typed-js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Typed.js</strong></a> — Hiệu ứng đánh máy</p>
+<p id="ca6e" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://imakewebthings.com/waypoints/" target="_blank" rel="noopener noreferrer" data-href="http://imakewebthings.com/waypoints/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Waypoints.js </strong></a>— Kích hoạt một function khi bạn di chuyển đến một element của web</p>
+<p id="f4d2" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://highlightjs.org/" target="_blank" rel="noopener noreferrer" data-href="https://highlightjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Highlight.js</strong> </a>—  Làm nổi bật các cú pháp cho website</p>
+<p id="d10f" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.chartjs.org/" target="_blank" rel="noopener noreferrer" data-href="http://www.chartjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Chart.js</strong></a> —  Tạo các biểu đồ trực quan bằng cách dùng javascript</p>
+<p id="8d19" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://instantclick.io/" target="_blank" rel="noopener noreferrer" data-href="http://instantclick.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Instantclick</strong></a> —  Đẩy nhanh thời gian tải trang, tải trước tài nguyên trên di chuột</p>
+<p id="2b60" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://gionkunz.github.io/chartist-js/index.html" target="_blank" rel="noopener noreferrer" data-href="http://gionkunz.github.io/chartist-js/index.html" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Chartist</strong></a> —  Một thư viện về biểu đồ khác</p>
+<p id="5a8d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://darsa.in/motio/#!introduction" target="_blank" rel="noopener noreferrer" data-href="http://darsa.in/motio/#!introduction" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Motio </strong></a>—  Một thư viện cho các hình động và hoạt họa dựa trên nền sprite</p>
+<p id="3383" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://git.blivesta.com/animsition/" target="_blank" rel="noopener noreferrer" data-href="http://git.blivesta.com/animsition/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animstion</strong></a> —  Plugin Jquery cho chuyển đổi trang bằng css animaton</p>
+<p id="94ce" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/luruke/barba.js" target="_blank" rel="noopener noreferrer" data-href="https://github.com/luruke/barba.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Barba.js</strong></a> — Chuyển trang bằng fluid</p>
+<p id="88b5" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://zurb.com/playground/twentytwenty" target="_blank" rel="noopener noreferrer" data-href="http://zurb.com/playground/twentytwenty" data-wpel-link="external"><strong class="markup--strong markup--p-strong">TwentyTwenty </strong></a>— Một công cụ khác biệt trực quan để tìm những khác biệt</p>
+<p id="9df9" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/maxwellito/vivus#vivusjs" target="_blank" rel="noopener noreferrer" data-href="https://github.com/maxwellito/vivus#vivusjs" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Vivus.js</strong></a> — Thư viện để tạo các ảnh vẽ trên SVG</p>
+<p id="1e98" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://mynameismatthieu.com/WOW/" target="_blank" rel="noopener noreferrer" data-href="http://mynameismatthieu.com/WOW/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Wow.js</strong> </a>— Cung cấp các animation khi bạn cuộn trang</p>
+<p id="9fe5" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/anthonyly/Scrolline.js" target="_blank" rel="noopener noreferrer" data-href="https://github.com/anthonyly/Scrolline.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Scrolline.js</strong></a> —  Theo dõi việc bạn đã cuộn từ đầu cho đến khi kết thúc trang</p>
+<p id="ef37" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://velocityjs.org/" target="_blank" rel="noopener noreferrer" data-href="http://velocityjs.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Velocity.js</strong></a> —  Tạo hình động với javascript cực nhanh và đẹp</p>
+<p id="8f19" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://michalsnik.github.io/aos/" target="_blank" rel="noopener noreferrer" data-href="http://michalsnik.github.io/aos/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animate on scroll</strong></a> —  Tạo sự đơn giản cho webite</p>
+<p id="1bc8" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://handlebarsjs.com/" target="_blank" rel="noopener noreferrer" data-href="http://handlebarsjs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Handlebars.js</strong></a> — Cung cấp các mẫu  Javascript</p>
+<p id="c071" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.pixxelfactory.net/jInvertScroll/" target="_blank" rel="noopener noreferrer" data-href="http://www.pixxelfactory.net/jInvertScroll/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">jInvertScroll</strong></a> — Cuộn trang với Parallax</p>
+<p id="dea1" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/peachananr/onepage-scroll" target="_blank" rel="noopener noreferrer" data-href="https://github.com/peachananr/onepage-scroll" data-wpel-link="external"><strong class="markup--strong markup--p-strong">One page scroll</strong></a> —  Một trang cuộn thư viện</p>
+<p id="dc3b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/wagerfield/parallax" target="_blank" rel="noopener noreferrer" data-href="https://github.com/wagerfield/parallax" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Parallax.js</strong></a> —  Công cụ Parallax phản ứng với một thiết bị thông minh</p>
+<p id="b87a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://twitter.github.io/typeahead.js/" target="_blank" rel="noopener noreferrer" data-href="http://twitter.github.io/typeahead.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Typeahead.js </strong></a>—  Hoàn thành tìm kiếm</p>
+<p id="b252" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://skidding.github.io/dragdealer/" target="_blank" rel="noopener noreferrer" data-href="http://skidding.github.io/dragdealer/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Dragdealer.js</strong></a> —  Thư viện cung cấp việc minh họa drag</p>
+<p id="b980" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://bouncejs.com/" target="_blank" rel="noopener noreferrer" data-href="http://bouncejs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Bounce.js </strong></a>—  Tạo các hình động CSS3 cool</p>
+<p id="6012" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/alvarotrigo/pagePiling.js" target="_blank" rel="noopener nofollow noreferrer" data-href="https://github.com/alvarotrigo/pagePiling.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Pagepiling.js</strong></a> —  Cuộn một trang</p>
+<p id="1032" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/alvarotrigo/multiscroll.js" target="_blank" rel="noopener nofollow noreferrer" data-href="https://github.com/alvarotrigo/multiscroll.js" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Multiscroll.js </strong></a>—  Cuộn một trang web thành hai thanh cuộn dọc</p>
+<p id="2b26" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://lab.ejci.net/favico.js/" target="_blank" rel="noopener noreferrer" data-href="http://lab.ejci.net/favico.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Favico.js</strong></a> — Tạo các  favicon đa dạng</p>
+<p id="e06a" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://aerolab.github.io/midnight.js/" target="_blank" rel="noopener noreferrer" data-href="http://aerolab.github.io/midnight.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Midnight.js </strong></a>— Chuyển tiêu đề thành cố định</p>
+<p id="eb51" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://animejs.com/" target="_blank" rel="noopener noreferrer" data-href="http://animejs.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Anime.js </strong></a>— Thư viện animation</p>
+<p id="e432" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://keycode.info/" target="_blank" rel="noopener noreferrer" data-href="http://keycode.info/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Keycode</strong></a> — Tạo  keycode javascript chỉ với một nút</p>
+<p id="1184" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://rubaxa.github.io/Sortable/" target="_blank" rel="noopener noreferrer" data-href="http://rubaxa.github.io/Sortable/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Sortable</strong></a> — Kéo và thả</p>
+<p id="950b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://projects.sergiodinislopes.pt/flexdatalist/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://projects.sergiodinislopes.pt/flexdatalist/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Flexdatalist </strong></a>—  Tự động điền</p>
+<p id="b120" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://slideout.js.org/" target="_blank" rel="noopener noreferrer" data-href="https://slideout.js.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Slideout.js </strong></a>—  Trình điều hướng trình chiếu cho các ứng dụng di động</p>
+<p id="b3cf" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://jquerymy.com/#/" target="_blank" rel="noopener noreferrer" data-href="http://jquerymy.com/#/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Jquerymy</strong></a> —  Liên kết dữ liệu bằng cách sử dụng jquery</p>
+<p id="2a66" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://nosir.github.io/cleave.js/" target="_blank" rel="noopener noreferrer" data-href="http://nosir.github.io/cleave.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Cleave.js </strong></a>— Định dạng nội dung nhập</p>
+<p id="7e1d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://smalljs.org/client-side-routing/page/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://smalljs.org/client-side-routing/page/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Page</strong></a> — Định tuyến phía client cho các ứng dụng trang đơn</p>
+<p id="2122" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://selectize.github.io/selectize.js/" target="_blank" rel="noopener noreferrer" data-href="http://selectize.github.io/selectize.js/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Selectize.js</strong></a> — Selected box ghép nối để thêm tag</p>
+<p id="8e3b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://hernansartorio.com/jquery-nice-select/" target="_blank" rel="noopener nofollow noreferrer" data-href="http://hernansartorio.com/jquery-nice-select/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Nice select </strong></a>— Thư viện JQuery để tạo các hộp chọn</p>
+<p id="9118" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://tether.io/" target="_blank" rel="noopener noreferrer" data-href="http://tether.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Tether</strong></a> —  Sử dụng các yếu tố định vị một cách hiệu quả</p>
+<p id="b895" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/HubSpot/shepherd" target="_blank" rel="noopener noreferrer" data-href="https://github.com/HubSpot/shepherd" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Shepherd.js </strong></a>—  Hướng dẫn người dùng thông qua ứng dụng</p>
+<p id="8f4c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/HubSpot/tooltip" target="_blank" rel="noopener noreferrer" data-href="https://github.com/HubSpot/tooltip" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Tooltip</strong></a> — Tên speak cho chính nó</p>
+<p id="6555" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://select2.github.io/" target="_blank" rel="noopener noreferrer" data-href="https://select2.github.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Select2</strong></a> — Thay thế Jquery cho các selected box</p>
+<p id="56bf" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://izitoast.marcelodolce.com/" target="_blank" rel="noopener noreferrer" data-href="http://izitoast.marcelodolce.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">IziToast</strong></a> —Dễ dàng thực hiện các js notification</p>
+<p id="b53b" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://izimodal.marcelodolce.com/" target="_blank" rel="noopener noreferrer" data-href="http://izimodal.marcelodolce.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">IziModal </strong></a>— Dễ dàng thực hiện các js modal</p>
+<h3><strong>Thư viện CSS / Công cụ thiết kế</strong></h3>
+<p id="8762" class="graf graf--p graf-after--h3"><a class="markup--anchor markup--p-anchor" href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener noreferrer" data-href="https://daneden.github.io/animate.css/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Animate.css</strong></a> — Thư viện animation</p>
+<p id="6ada" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://flatuicolors.com/" target="_blank" rel="noopener noreferrer" data-href="https://flatuicolors.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Flat UI Colors </strong></a>— Danh sách các màu chính đơn giản và hiệu quả</p>
+<p id="1c43" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://getmdl.io/index.html" target="_blank" rel="noopener noreferrer" data-href="https://getmdl.io/index.html" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Material design lite</strong></a><strong class="markup--strong markup--p-strong"> </strong>— Framework dựa trên material design của Google</p>
+<p id="b056" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.materialui.co/" target="_blank" rel="noopener noreferrer" data-href="https://www.materialui.co/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Materialui.co</strong></a> —  Nhiều tài nguyên cho material design framework</p>
+<p id="ec6c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.webpagefx.com/web-design/random-color-picker/" target="_blank" rel="noopener nofollow noreferrer" data-href="https://www.webpagefx.com/web-design/random-color-picker/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Colorrrs </strong></a>—Generator màu ngẫu nhiên</p>
+<p id="ba35" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://tympanus.net/Development/SectionSeparators/" target="_blank" rel="noopener nofollow noreferrer" data-href="https://tympanus.net/Development/SectionSeparators/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Section separators</strong></a> — Phân chia css</p>
+<p id="a5e0" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://topcoat.io/" target="_blank" rel="noopener noreferrer" data-href="http://topcoat.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Topcoat</strong></a> —  Framework</p>
+<p id="90cb" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.kirupa.com/html5/ken_burns_effect_css.htm" target="_blank" rel="noopener nofollow noreferrer" data-href="https://www.kirupa.com/html5/ken_burns_effect_css.htm" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Create ken burns effect </strong></a>— Ken hiệu ứng bằng cách sử dụng các css3 animation</p>
+<p id="be69" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://www.vittoriozaccaria.net/dyn-css/" target="_blank" rel="noopener noreferrer" data-href="http://www.vittoriozaccaria.net/dyn-css/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">DynCSS</strong></a> —  Thêm các hàm vào css, làm cho nó trở nên thân thiện</p>
+<p id="9230" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://webkul.github.io/csspin/" target="_blank" rel="noopener noreferrer" data-href="https://webkul.github.io/csspin/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">CSSpin</strong></a> —  Bộ sưu tập của css spinners</p>
+<p id="1866" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://feathericons.com/" target="_blank" rel="noopener noreferrer" data-href="https://feathericons.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Feather icons</strong></a> — Đưa ra  Icon</p>
+<p id="9250" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://ionicons.com/" target="_blank" rel="noopener noreferrer" data-href="http://ionicons.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Ion icons</strong></a> — Các icon</p>
+<p id="2a5c" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://fontawesome.io/" target="_blank" rel="noopener noreferrer" data-href="http://fontawesome.io/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Font awesome</strong></a> — Icon và phông chữ</p>
+<p id="05f1" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://brandmark.io/font-generator/" target="_blank" rel="noopener noreferrer" data-href="http://brandmark.io/font-generator/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Font generator</strong></a> —  Kết hợp các phông chữ và tạo ra mixture</p>
+<p id="b808" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://proto.io/freebies/onoff/" target="_blank" rel="noopener noreferrer" data-href="https://proto.io/freebies/onoff/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">On/Off switch</strong></a> — Tạo chuyển đổi on/off với css</p>
+<p id="d650" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://getuikit.com/" target="_blank" rel="noopener noreferrer" data-href="https://getuikit.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">UI Kit</strong></a> —  Framework</p>
+<p id="9c58" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://getbootstrap.com/" target="_blank" rel="noopener noreferrer" data-href="http://getbootstrap.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Bootstrap</strong></a> — Framework</p>
+<p id="e4fa" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="http://foundation.zurb.com/" target="_blank" rel="noopener noreferrer" data-href="http://foundation.zurb.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Foundation </strong></a>— Framework</p>
+<h3 id="e0e0" class="graf graf--h3 graf-after--p"><strong>Các sản phẩm/liên kết hữu ích</strong></h3>
+<p><code><strong>&lt;cheat&gt; cheatsheet</strong></code> – một danh sách tất cả mọi thứ có thể đi vào<strong> <code>&lt;head&gt; tag</code></strong></p>
+<p id="8224" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://ghost.org/" target="_blank" rel="noopener noreferrer" data-href="https://ghost.org/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Ghost </strong></a>—  nền tảng blog đơn giản dựa trên node.js</p>
+<p id="c44d" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://www.whatruns.com/" target="_blank" rel="noopener noreferrer" data-href="https://www.whatruns.com/" data-wpel-link="external"><strong class="markup--strong markup--p-strong">What runs</strong></a> —  Plugin của Chrome để khám phá công nghệ nào được sử dụng để xây dựng trang web</p>
+<p id="803e" class="graf graf--p graf-after--p graf--trailing"><a class="markup--anchor markup--p-anchor" href="https://learn-anything.xyz/learn-anything" target="_blank" rel="noopener noreferrer" data-href="https://learn-anything.xyz/learn-anything" data-wpel-link="external"><strong class="markup--strong markup--p-strong">Learn anything </strong></a>— Cung cấp các Mindmap để minh họa một các chủ đề khác nhau.</p>
+<p>Đó là những liệt kê cho 67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer. Từ giờ các lập trình viên web có thể giảm thiểu thời gian tìm hiểu các công cụ, thư viện hỗ trợ cho công việc.</p>
+<p><strong><span style="font-size: 24px;"><span style="text-decoration: underline;">Xem thêm:</span> <a href="http://localhost:82/demowp/category/kien-thuc/kien-thuc-lap-trinh/">Những kiến thức về lập trình khác tại đây.</a></span></strong><div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5607"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/">67 công cụ hữu ích, thư viện và tài nguyên để tiết kiệm thời gian cho web developer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/front-end/67-cong-cu-huu-ich-thu-vien-va-tai-nguyen-de-tiet-kiem-thoi-gian-cho-web-developer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</title>
+		<link>http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/#respond</comments>
+				<pubDate>Fri, 15 Feb 2019 01:32:47 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Git]]></category>
+		<category><![CDATA[Github]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5436</guid>
+				<description><![CDATA[<p>Mình giới thiệu khái quát về Git và đưa ra những câu lệnh Git cơ bản mà bạn thường xuyên phải dùng nó. Mình mong bài viết này có thể giúp ích cho các bạn mới bắt đầu sử dụng git có thể tham khảo, hiểu được một phần nào đó về git và vận [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<header class="mb-2">
+<p class="article-content__title">Mình giới thiệu khái quát về <strong>Git</strong> và đưa ra những câu lệnh Git cơ bản mà bạn thường xuyên phải dùng nó. Mình mong bài viết này có thể giúp ích cho các bạn mới bắt đầu sử dụng git có thể tham khảo, hiểu được một phần nào đó về git và vận dụng tốt vào việc sử dụng của các bạn.</p>
+<p><figure id="attachment_6081" aria-describedby="caption-attachment-6081" style="width: 1160px" class="wp-caption aligncenter"><img class="wp-image-6081 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ.png" alt="Những lệnh GIT GitHub cơ bản hữu dụng cần nhớ" width="1160" height="581" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ.png 1160w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-300x150.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-768x385.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-1024x513.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-360x180.png 360w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-750x376.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-1140x571.png 1140w" sizes="(max-width: 1160px) 100vw, 1160px" /><figcaption id="caption-attachment-6081" class="wp-caption-text">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</figcaption></figure></p>
+<p></p>
+</header>
+<div class="md-contents article-content__body my-2 flex-fill">
+<h3 id="_1-co-ban-ve-git-0">1. Cơ bản về Git</h3>
+<p>Git là tên gọi của một Hệ thống quản lý phiên bản phân tán (Distributed Version Control System – DVCS) là một trong những hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay. DVCS nghĩa là hệ thống giúp mỗi máy tính có thể lưu trữ nhiều phiên bản khác nhau của một mã nguồn được nhân bản (clone) từ một kho chứa mã nguồn (repository), mỗi thay đổi vào mã nguồn trên máy tính sẽ có thể ủy thác (commit) rồi đưa lên máy chủ nơi đặt kho chứa chính. Và một máy tính khác (nếu họ có quyền truy cập) cũng có thể clone lại mã nguồn từ kho chứa hoặc clone lại một tập hợp các thay đổi mới nhất trên máy tính kia. Trong Git, thư mục làm việc trên máy tính gọi là Working Tree.</p>
+<h3 id="_2-flow-co-ban-khi-su-dung-git-1">2. Flow cơ bản khi sử dụng Git</h3>
+<p>Sau đây là flow cơ bản khi bạn sử dụng Git:</p>
+<ul>
+<li>Clone project từ server về Local Repository</li>
+<li>Check-out 1 nhánh từ Local Repository về Working Space</li>
+<li>Bạn sẽ làm việc (thêm, sửa, xoá tại Working Space)</li>
+<li>Add : xác nhận sự thay đổi của các files (đưa đến vùng Staging Area)</li>
+<li>Commit: cập nhật sự thay đổi lên Local Repository</li>
+</ul>
+<p>Về cơ bản đến đây là bạn đã hoàn thành 1 chu trình sử dụng Git. Lúc này, nếu như bạn muốn cập nhật sự thay đổi này lên server thì bạn sẽ dùng lệnh push để đẩy chúng lên server.</p>
+<h3 id="_3-nhung-cau-lenh-co-ban-thuong-su-dung-2">3. Những câu lệnh cơ bản thường sử dụng</h3>
+<h3 id="_thiet-lap-chung-thuc-ca-nhan-3">Thiết lập chứng thực cá nhân</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git config --global user.name &quot;User Name&quot;
+$ git config --global user.email &quot;username@gmail.com&quot;</pre><br />
+Lưu ý: &#8211;global được sử dụng để áp dụng cho tất cả các projects. Nếu bạn ko sử dụng &#8211;global thì settings sẽ chỉ dùng cho riêng project đó.</p>
+<h3 id="_tao-mot-kho-chua-git-4">Tạo một kho chứa Git</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git init</pre><br />
+Nếu như bạn muốn theo dõi một dự án cũ trong Git, bạn cần ở trong thư mục của dự án đó. Lệnh này sẽ tạo một thư mục mới có tên .git, thư mục này chứa tất cả các tập tin cần thiết cho kho chứa.</p>
+<h3 id="_sao-chep-mot-kho-chua-da-ton-tai-5">Sao chép một kho chứa đã tồn tại</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git clone https://github.com/user/repository.git</pre><br />
+Câu lệnh trên sẽ tạo một thư mục mới có tên giống trên của repo.</p>
+<h3 id="_nhanh-trong-git-6">Nhánh trong git</h3>
+<p>Khi sử dụng Git, bạn có thể tạo ra nhiều nhánh (branch) khác nhau. Câu lệnh Git này dùng để kiểm tra branch hiện tại:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git branch</pre><br />
+Để tạo mới một branch:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW"> $ git branch &lt;name_branch&gt;</pre><br />
+Để chuyển và tạo mới:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW"> $ git branch -b &lt;name_branch&gt;</pre></p>
+<h3 id="_chuyen-nhanh-7">Chuyển nhánh</h3>
+<p>Trước khi muốn thay đổi source code, điều đầu tiên mà bạn cần phải làm là checkout một nhánh. Để checkout một nhánh, bạn dùng câu lệnh Git sau:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git checkout &lt;name_branch&gt;</pre></p>
+<h3 id="_cap-nhat-thay-doi-8">Cập nhật thay đổi</h3>
+<p>Sau khi bạn thay đổi source code: thêm mới, sửa, xoá files,… Bạn cần phải cập nhật lên Staging Area. Để cập nhật hết các files:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git add .</pre><br />
+Sau lệnh add, bạn cần sử dụng câu lệnh Commit để đây thông tin thay đổi lên Local Respository:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git commit -m &quot;Message&quot;</pre></p>
+<h3 id="_cap-nhat-len-server-9">Cập nhật lên server</h3>
+<p>Sau câu lệnh Commit, thông tin mới chỉ được cập nhật lên Local Repository. Nếu muốn cập nhật lên server thì bạn phải sử dụng câu lệnh push:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git push origin &lt;name_branch&gt;</pre><br />
+Ngoài ra, nếu chưa tồn tại remote trên server thì bạn cần phải add mới một remote trước rồi mới push:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git remote add origin &lt;remote_url&gt;
+$ git push origin &lt;name_branch&gt;</pre></p>
+<h3 id="_gop-nhanh-10">Gộp nhánh</h3>
+<p>Sau một thời gian cập nhật các file và push lên git trên branch mới, bây giờ mình cần ghép (merge) code lại vào nhánh gốc (master). Trước tiên, cần phải checkout ra khỏi branch hiện tại cần gộp để vào branch master, sau đó thì dùng lệnh merge để ghép branch mới vào master:<br />
+<pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git checkout master
+$ git merge &lt;new_branch&gt;</pre></p>
+<h3 id="_xem-lai-lich-su-commit-11">Xem lại lịch sử commit</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git log</pre><br />
+Lệnh git log sẽ cho bạn biết về người commit, ngày giờ, message của những lần commit đó.</p>
+<h3 id="_xem-thay-doi-truoc-khi-push-12">Xem thay đổi trước khi push</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">  $ git diff</pre><br />
+Lệnh này giúp bạn biết những gì đã được thay đổi giữa nhánh hiện tại và nhánh trước nó.</p>
+<h3 id="_gop-commit-13">Gộp commit</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git rebase -i HEAD~</pre><br />
+Sau dấu ~ là số commit bạn muốn gộp. Sau khi gõ lệnh này một cửa sổ trình soạn thảo hiện ra. Thay đổi ký tự pick của dòng các dòng sau dòng đầu thành s rồi lưu lại/kết thúc. Khi đó, trình soạn thảo để chỉnh sửa giải thích commit thiết lập cho commit sau khi đã tổng hợp sẽ được hiển thị, nên hãy chỉnh sửa lưu lại/kết thúc.</p>
+<h3 id="_pull-tu-remote-repository-14">Pull từ remote repository</h3>
+<p><pre data-enlighter-language="generic" class="EnlighterJSRAW">$ git pull origin master</pre><br />
+Lệnh trên sẽ gộp những thay đổi mới kéo về từ máy chủ từ xa với nhánh hiện tại trên máy local.</p>
+<p>Ngoài ra các bạn cũng có thể xem <strong><a href="http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/" target="_blank" rel="noopener noreferrer">bài viết này</a></strong> để biết thêm vầ một số lệnh GIT hữu dụng khác nhé!</p>
+<p><span style="font-size: 24px;"><strong><a href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Download khoá học Git &#8211; Github cho lập trình Website</a></strong></span></p>
+<ul>
+<li><strong><a href="https://drive.google.com/open?id=1D4X78b6xL7da4XnurNhyNbOwPDHCzTLV" target="_blank" rel="noopener noreferrer">Link download trực tiếp</a></strong></li>
+</ul>
+<p><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/" target="_blank" rel="noopener noreferrer">All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</a></strong></p>
+<p><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/" target="_blank" rel="noopener noreferrer">All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</a></strong></p>
+<p><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/ky-nang-song/lam-chu-hay-lam-thue/" target="_blank" rel="noopener noreferrer">Làm Chủ Hay Làm Thuê: Bạn Muốn Tự Do Bay Lượn Như Đại Bàng Hay Mãi Sống Như Kiếp Gà?</a></strong></p>
+<p><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-plugin-yoast-seo-premium/" target="_blank" rel="noopener noreferrer">Download Plugin Yoast SEO Premium 11.8 mới nhất miễn phí [Update]</a></strong></p>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5436"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

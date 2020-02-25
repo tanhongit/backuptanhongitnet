@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/devinivy/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/devinivy/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2015-03-12T14:55:47Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/117cfdc4ef9307d3793eba7f0b3c7a969d5973d3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/117cfdc4ef9307d3793eba7f0b3c7a969d5973d3"/>
+    <title>
+        patch bump, make tags match
+    </title>
+    <updated>2015-03-12T14:55:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;patch bump, make tags match&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4f3ed5a64653f1e08ccdd71f54ed6eab8533ba96</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/4f3ed5a64653f1e08ccdd71f54ed6eab8533ba96"/>
+    <title>
+        minor bump to 1.4
+    </title>
+    <updated>2015-03-12T14:54:16Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;minor bump to 1.4&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/839f147bd3ea7aef94dfe9f6723951262c1ab986</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/839f147bd3ea7aef94dfe9f6723951262c1ab986"/>
+    <title>
+        Merge pull request #1 from cbracco/patch-1
+    </title>
+    <updated>2015-03-12T14:22:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1 from cbracco/patch-1
+
+Update urls in bower.json so we can register it&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0901e03ba8837e81abc78265f32815cf0196e092</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/0901e03ba8837e81abc78265f32815cf0196e092"/>
+    <title>
+        Update urls in bower.json so we can register it
+    </title>
+    <updated>2015-03-12T13:25:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1480677?s=30&amp;v=4"/>
+    <author>
+      <name>cbracco</name>
+      <uri>https://github.com/cbracco</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update urls in bower.json so we can register it&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/87118a7189e320d3c895ec885f273e53a4fdb1d0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/87118a7189e320d3c895ec885f273e53a4fdb1d0"/>
+    <title>
+        make pageover work for touch.
+    </title>
+    <updated>2015-03-11T22:12:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;make pageover work for touch.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2552692b26c0094cf7fe5abe57b4b1aeaaec9f7c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/2552692b26c0094cf7fe5abe57b4b1aeaaec9f7c"/>
+    <title>
+        fix pageover overflow.
+    </title>
+    <updated>2015-03-11T21:59:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix pageover overflow.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a6d62c5e92e1a536c59ce58bd3a4d487bc175370</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/a6d62c5e92e1a536c59ce58bd3a4d487bc175370"/>
+    <title>
+        fix scrolling up.  fix animation timer on pageunder.
+    </title>
+    <updated>2015-03-11T21:09:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix scrolling up.  fix animation timer on pageunder.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/34c94d35391997db84fbb1e73df4eb18a16158e1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/34c94d35391997db84fbb1e73df4eb18a16158e1"/>
+    <title>
+        update to use pageOver option for scrolling main page content.
+    </title>
+    <updated>2015-03-10T16:31:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3150233?s=30&amp;v=4"/>
+    <author>
+      <name>devinivy</name>
+      <uri>https://github.com/devinivy</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;update to use pageOver option for scrolling main page content.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/756e34965b0c351cf4cbf311fa86027c16dd028f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/756e34965b0c351cf4cbf311fa86027c16dd028f"/>
+    <title>
+        Update bower.json
+    </title>
+    <updated>2015-02-22T20:47:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update bower.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e28c1ef8ee77c55f3dcf94fbcf5f92dbc068187f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/e28c1ef8ee77c55f3dcf94fbcf5f92dbc068187f"/>
+    <title>
+        - Solved bug with tooltips
+    </title>
+    <updated>2015-02-22T20:46:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with tooltips
+- Improved performance and magnification&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/863f3b8b9413f0c07d0bdcbe6358b3c9a06b7f4a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/863f3b8b9413f0c07d0bdcbe6358b3c9a06b7f4a"/>
+    <title>
+        - Solved problem with navigation bullets #38
+    </title>
+    <updated>2015-02-18T10:45:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved problem with navigation bullets #38
+- Added compatibility for IE 11 touch screen #34&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/647fecefc18da529cd373f498705bd1e2d6348d9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/647fecefc18da529cd373f498705bd1e2d6348d9"/>
+    <title>
+        - Added website to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2015-01-21T21:54:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/de593c0e99c22e3a5c905a839cae94d47388b9e9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/de593c0e99c22e3a5c905a839cae94d47388b9e9"/>
+    <title>
+        Merge pull request #33 from dawsonbotsford/master
+    </title>
+    <updated>2014-12-30T11:09:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #33 from dawsonbotsford/master
+
+Spelling Correction from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/817f69d51797e3ca6ac45b8331b8d43e4292e562</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/817f69d51797e3ca6ac45b8331b8d43e4292e562"/>
+    <title>
+        Spelling correction automated from Dawson&#39;s Spelling Bee
+    </title>
+    <updated>2014-12-29T22:05:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Spelling correction automated from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05"/>
+    <title>
+        - Solved bug with IE 11 for Windows Phone
+    </title>
+    <updated>2014-12-05T11:43:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with IE 11 for Windows Phone
+- Added `easeInQuart` effect inside the plugin 
+- Added new feature: a class is added to the body on section change&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f8258f16f41717eb48ba82c96142d368b102c526</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/f8258f16f41717eb48ba82c96142d368b102c526"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cb13ded3d3ada0e43e315fe7f479de04c133489</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/4cb13ded3d3ada0e43e315fe7f479de04c133489"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f016843e537f1c662f07e1fcf3f256bab508e7fd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/f016843e537f1c662f07e1fcf3f256bab508e7fd"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-26T15:05:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b42b56fb828de35c5501dba1b44801def041a6a7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/b42b56fb828de35c5501dba1b44801def041a6a7"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-14T10:28:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9050ad6bb551b351faefa547f8b2ca040d354db4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/devinivy/pagePiling.js/commit/9050ad6bb551b351faefa547f8b2ca040d354db4"/>
+    <title>
+        - Fixed bug causing `afterLoad` not to be fired when `css3:false` #24
+    </title>
+    <updated>2014-11-12T10:03:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug causing `afterLoad` not to be fired when `css3:false` #24&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/bdwebteam/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/bdwebteam/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2016-10-15T13:58:28Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c"/>
+    <title>
+        Merge pull request #80 from talgautb/master
+    </title>
+    <updated>2016-10-15T13:58:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #80 from talgautb/master
+
+Fix destroy/build functions, update packages&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7"/>
+    <title>
+        fix issue #64
+    </title>
+    <updated>2016-10-15T13:13:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix issue #64&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e72ac73a9b50f5b59ff89d75db8b527282b6eaf2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/e72ac73a9b50f5b59ff89d75db8b527282b6eaf2"/>
+    <title>
+        update packages, del sass
+    </title>
+    <updated>2016-10-15T12:45:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;update packages, del sass&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c"/>
+    <title>
+        Merge pull request #73 from npostulart/master
+    </title>
+    <updated>2016-08-10T09:12:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #73 from npostulart/master
+
+Fixes #72 - Missing navigation binding functions on build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/797593f870975741ef7fc5ba34b8bd5e2b603eaa</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/797593f870975741ef7fc5ba34b8bd5e2b603eaa"/>
+    <title>
+        Fixes #72 - Missing navigation binding functions on build
+    </title>
+    <updated>2016-08-10T08:33:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://0.gravatar.com/avatar/d5d77579faf8d55ee19d8e83f2aa6e4e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>npostulart@uandi.com</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixes #72 - Missing navigation binding functions on build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f1606e5469099ccd8284276230e48877c9ffabd2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/f1606e5469099ccd8284276230e48877c9ffabd2"/>
+    <title>
+        - Added gulp and `dist` files
+    </title>
+    <updated>2016-07-07T14:57:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added gulp and `dist` files
+- Updated package.json 
+- Improved credits comments&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/710b3aacea36d85e550c7ea2f00f34ca289b301a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/710b3aacea36d85e550c7ea2f00f34ca289b301a"/>
+    <title>
+        Merge pull request #59 from talgautb/master
+    </title>
+    <updated>2015-11-18T15:46:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #59 from talgautb/master
+
+add gulp&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/850a3478faf317188ecb11441d3c112d01704abc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/850a3478faf317188ecb11441d3c112d01704abc"/>
+    <title>
+        add dist directory
+    </title>
+    <updated>2015-11-18T15:31:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add dist directory&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c08ae7ee9c3c9f8296626fb4d0268054fb3409b3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/c08ae7ee9c3c9f8296626fb4d0268054fb3409b3"/>
+    <title>
+        add gulp for build js
+    </title>
+    <updated>2015-11-18T15:12:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add gulp for build js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e3a528779835f738dbfc81a627d8ceab9bc24b08</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/e3a528779835f738dbfc81a627d8ceab9bc24b08"/>
+    <title>
+        - Removed mistakes
+    </title>
+    <updated>2015-10-20T09:50:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Removed mistakes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/36c7824ad20b337730f86a4019adf5c0ac2a7052</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/36c7824ad20b337730f86a4019adf5c0ac2a7052"/>
+    <title>
+        Merge pull request #55 from benjaminsweetnam247/master
+    </title>
+    <updated>2015-10-11T11:19:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #55 from benjaminsweetnam247/master
+
+Adds package.json for use with npm&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3d17acb0a4762cd4c0f9ffc1d97248f6d4c0a868</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/3d17acb0a4762cd4c0f9ffc1d97248f6d4c0a868"/>
+    <title>
+        Update package.json
+    </title>
+    <updated>2015-10-11T02:37:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/5063792?s=30&amp;v=4"/>
+    <author>
+      <name>benjaminsweetnam247</name>
+      <uri>https://github.com/benjaminsweetnam247</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update package.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/14a76e77677fd03c9429022e90eb7046a244da8c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/14a76e77677fd03c9429022e90eb7046a244da8c"/>
+    <title>
+        Update package.json
+    </title>
+    <updated>2015-10-10T15:27:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/5063792?s=30&amp;v=4"/>
+    <author>
+      <name>benjaminsweetnam247</name>
+      <uri>https://github.com/benjaminsweetnam247</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update package.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cb4dcd8b1937b7e3e31454434f8716f5143eb0e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/cb4dcd8b1937b7e3e31454434f8716f5143eb0e7"/>
+    <title>
+        added package.json for use with npm
+    </title>
+    <updated>2015-10-10T14:55:16Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/5063792?s=30&amp;v=4"/>
+    <author>
+      <name>benjaminsweetnam247</name>
+      <uri>https://github.com/benjaminsweetnam247</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;added package.json for use with npm&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/9d58e9a5b7431c7942dfe95b04530ab1fbe89a41"/>
+    <title>
+        - Added link to wordpress theme
+    </title>
+    <updated>2015-10-09T14:17:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added link to wordpress theme&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/51f788a332781dcfe94ecd38c42d197ea2023f7a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/51f788a332781dcfe94ecd38c42d197ea2023f7a"/>
+    <title>
+        Merge pull request #48 from talgautb/patch-1
+    </title>
+    <updated>2015-07-12T11:25:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #48 from talgautb/patch-1
+
+delete setAllowScrolling from readme&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/75d2d8bcc2adeb6d15b9f14ba48d0f28c92d1704</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/75d2d8bcc2adeb6d15b9f14ba48d0f28c92d1704"/>
+    <title>
+        delete setAllowScrolling from readme
+    </title>
+    <updated>2015-07-12T08:41:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;delete setAllowScrolling from readme&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193"/>
+    <title>
+        - Using IIFE
+    </title>
+    <updated>2015-03-18T12:06:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Using IIFE&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06"/>
+    <title>
+        - Fixed bug. Navigation bullets get vertically centred now.
+    </title>
+    <updated>2015-03-18T12:03:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug. Navigation bullets get vertically centred now.
+- A class will be added to the `body` element with the active section anchor / index
+- Improved keyboard accessibility
+- Fixed bug with IE touch devices.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7fe2efd4110894b232713229ed54af711be05d0b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/bdwebteam/multiscroll.js/commit/7fe2efd4110894b232713229ed54af711be05d0b"/>
+    <title>
+        - Version updated
+    </title>
+    <updated>2015-03-18T11:01:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Version updated&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

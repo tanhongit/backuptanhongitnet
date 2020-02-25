@@ -1,0 +1,587 @@
+diff --git a/example/bottom.html b/example/bottom.html
+new file mode 100644
+index 0000000..e8946a1
+--- /dev/null
++++ b/example/bottom.html
+@@ -0,0 +1,56 @@
++<!doctype html>
++<html>
++    <head>
++        <meta charset="utf-8">
++        <meta name="description" content="">
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <title>Scrolline | Example | Bottom and callback</title>
++        <meta name="author" content="Anthony Ly">
++        <meta name="description" content="Scrolline jQuery plugin">
++        <link rel="stylesheet" href="example.css">
++    </head>
++    <body>
++        <a class="github-ribbon" href="https://github.com/anthonyly"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
++    	<div class="wrap">
++            <h1>Scrolline : bottom and callback</h1>
++            <ul>
++                <li><a href="index.html">Scrolline default</a></li>
++                <li><a href="reverse.html">Scrolline reverse</a></li>
++                <li><a href="vertical.html">Scrolline vertical left</a></li>
++                <li><a href="bottom.html">Scrolline bottom with opacity and callback</a></li>
++            </ul>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/1.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/2.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/3.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/4.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p class="copy">&copy; 2014, Lorem ipsum dolor sit amet</p>
++        </div>
++        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
++        <script src="../jquery.scrolline.js"></script>
++        <script>
++            $(function() {
++                $.scrolline({
++                    position : 'bottom',
++                    opacity : 0.6,
++                    backColor : '#2c3e50',
++                    frontColor : '#c0392b',
++                    weight : 16,
++                    scrollEnd : function() {
++                        alert("This is scrolline's callback : scrollEnd :)");
++                    }
++                });
++            });
++        </script>
++    </body>
++</html>
+\ No newline at end of file
+diff --git a/example/example.css b/example/example.css
+new file mode 100644
+index 0000000..6dd36bf
+--- /dev/null
++++ b/example/example.css
+@@ -0,0 +1,85 @@
++/* http://meyerweb.com/eric/tools/css/reset/
++   v2.0 | 20110126
++   License: none (public domain)
++*/
++
++html, body, div, span, applet, object, iframe,
++h1, h2, h3, h4, h5, h6, p, blockquote, pre,
++a, abbr, acronym, address, big, cite, code,
++del, dfn, em, img, ins, kbd, q, s, samp,
++small, strike, strong, sub, sup, tt, var,
++b, u, i, center,
++dl, dt, dd, ol, ul, li,
++fieldset, form, label, legend,
++table, caption, tbody, tfoot, thead, tr, th, td,
++article, aside, canvas, details, embed,
++figure, figcaption, footer, header, hgroup,
++menu, nav, output, ruby, section, summary,
++time, mark, audio, video {
++	margin: 0;
++	padding: 0;
++	border: 0;
++	font-size: 100%;
++	font: inherit;
++	vertical-align: baseline;
++}
++/* HTML5 display-role reset for older browsers */
++article, aside, details, figcaption, figure,
++footer, header, hgroup, menu, nav, section {
++	display: block;
++}
++body {
++	line-height: 1;
++}
++ol, ul {
++	list-style: none;
++}
++blockquote, q {
++	quotes: none;
++}
++blockquote:before, blockquote:after,
++q:before, q:after {
++	content: '';
++	content: none;
++}
++table {
++	border-collapse: collapse;
++	border-spacing: 0;
++}
++
++/* Example style */
++.wrap {
++	font-size: 14px;
++	line-height: 1.8;
++	font-family: Helvetica, Arial, Sans-Serif;
++	width: 100%;
++	max-width: 600px;
++	padding: 100px 0 0;
++	margin: 0 auto;
++	color: #202020;
++	min-width: 200px;
++}
++a {
++	color: #2ecc71;
++}
++h1, p, img, ul {
++	display: block;
++	margin-bottom: 40px;
++}
++h1 {
++	text-align: center;
++	font-size: 32px;
++}
++p {
++	text-align: justify;
++	padding: 0 20px;
++}
++img {
++	width: 100%;
++}
++.copy, ul {
++	text-align: center;
++}
++.github-ribbon img {
++	width: auto;
++}
+\ No newline at end of file
+diff --git a/example/img/1.jpg b/example/img/1.jpg
+new file mode 100644
+index 0000000..772ca7c
+Binary files /dev/null and b/example/img/1.jpg differ
+diff --git a/example/img/2.jpg b/example/img/2.jpg
+new file mode 100644
+index 0000000..83a18d8
+Binary files /dev/null and b/example/img/2.jpg differ
+diff --git a/example/img/3.jpg b/example/img/3.jpg
+new file mode 100644
+index 0000000..9885a09
+Binary files /dev/null and b/example/img/3.jpg differ
+diff --git a/example/img/4.jpg b/example/img/4.jpg
+new file mode 100644
+index 0000000..398a1f3
+Binary files /dev/null and b/example/img/4.jpg differ
+diff --git a/example/index.html b/example/index.html
+new file mode 100644
+index 0000000..75d53a0
+--- /dev/null
++++ b/example/index.html
+@@ -0,0 +1,47 @@
++<!doctype html>
++<html>
++    <head>
++        <meta charset="utf-8">
++        <meta name="description" content="">
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <title>Scrolline | Example | Default</title>
++        <meta name="author" content="Anthony Ly">
++        <meta name="description" content="Scrolline jQuery plugin">
++        <link rel="stylesheet" href="example.css">
++    </head>
++    <body>
++        <a class="github-ribbon" href="https://github.com/anthonyly"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
++    	<div class="wrap">
++            <h1>Scrolline : default</h1>
++            <ul>
++                <li><a href="index.html">Scrolline default</a></li>
++                <li><a href="reverse.html">Scrolline reverse</a></li>
++                <li><a href="vertical.html">Scrolline vertical left</a></li>
++                <li><a href="bottom.html">Scrolline bottom with opacity and callback</a></li>
++            </ul>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/1.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/2.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/3.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/4.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p class="copy">&copy; 2014, Lorem ipsum dolor sit amet</p>
++        </div>
++        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
++        <script src="../jquery.scrolline.js"></script>
++        <script>
++            $(function() {
++                $.scrolline();
++            });
++        </script>
++    </body>
++</html>
+\ No newline at end of file
+diff --git a/example/reverse.html b/example/reverse.html
+new file mode 100644
+index 0000000..f4d9f9f
+--- /dev/null
++++ b/example/reverse.html
+@@ -0,0 +1,52 @@
++<!doctype html>
++<html>
++    <head>
++        <meta charset="utf-8">
++        <meta name="description" content="">
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <title>Scrolline | Example | Reverse</title>
++        <meta name="author" content="Anthony Ly">
++        <meta name="description" content="Scrolline jQuery plugin">
++        <link rel="stylesheet" href="example.css">
++    </head>
++    <body>
++        <a class="github-ribbon" href="https://github.com/anthonyly"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
++    	<div class="wrap">
++            <h1>Scrolline : reverse</h1>
++            <ul>
++                <li><a href="index.html">Scrolline default</a></li>
++                <li><a href="reverse.html">Scrolline reverse</a></li>
++                <li><a href="vertical.html">Scrolline vertical left</a></li>
++                <li><a href="bottom.html">Scrolline bottom with opacity and callback</a></li>
++            </ul>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/1.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/2.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/3.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/4.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p class="copy">&copy; 2014, Lorem ipsum dolor sit amet</p>
++        </div>
++        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
++        <script src="../jquery.scrolline.js"></script>
++        <script>
++            $(function() {
++                $.scrolline({
++                    reverse : true,
++                    backColor : '#2980b9',
++                    frontColor : '#f1c40f',
++                    weight : 12
++                });
++            });
++        </script>
++    </body>
++</html>
+\ No newline at end of file
+diff --git a/example/vertical.html b/example/vertical.html
+new file mode 100644
+index 0000000..e86a335
+--- /dev/null
++++ b/example/vertical.html
+@@ -0,0 +1,53 @@
++<!doctype html>
++<html>
++    <head>
++        <meta charset="utf-8">
++        <meta name="description" content="">
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <title>Scrolline | Example | Vertical</title>
++        <meta name="author" content="Anthony Ly">
++        <meta name="description" content="Scrolline jQuery plugin">
++        <link rel="stylesheet" href="example.css">
++    </head>
++    <body>
++        <a class="github-ribbon" href="https://github.com/anthonyly"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
++    	<div class="wrap">
++            <h1>Scrolline : vertical</h1>
++            <ul>
++                <li><a href="index.html">Scrolline default</a></li>
++                <li><a href="reverse.html">Scrolline reverse</a></li>
++                <li><a href="vertical.html">Scrolline vertical left</a></li>
++                <li><a href="bottom.html">Scrolline bottom with opacity and callback</a></li>
++            </ul>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/1.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/2.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/3.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <img src="img/4.jpg" alt="">
++            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit esse molestiae quis culpa, iure et magni impedit, consectetur odit quidem. Consequatur a sapiente eaque esse, perferendis soluta accusantium itaque expedita.</p>
++            <p class="copy">&copy; 2014, Lorem ipsum dolor sit amet</p>
++        </div>
++        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
++        <script src="../jquery.scrolline.js"></script>
++        <script>
++            $(function() {
++                $.scrolline({
++                    direction : 'vertical',
++                    position : 'left',
++                    backColor : '#8e44ad',
++                    frontColor : '#e67e22',
++                    weight : 8
++                });
++            });
++        </script>
++    </body>
++</html>
+\ No newline at end of file
+diff --git a/jquery.scrolline.js b/jquery.scrolline.js
+new file mode 100644
+index 0000000..13d69cc
+--- /dev/null
++++ b/jquery.scrolline.js
+@@ -0,0 +1,151 @@
++/*
++* Scrolline.js - Create an indication bar line of scroll position
++* Basic usage : $.scrolline();
++* ---
++* Version: 1.0
++* Copyright 2014, Anthony Ly (http://anthonyly.com)
++* Released under the MIT Licence
++*/
++
++(function($, window, document, undefined) {
++    $.extend({
++        scrolline: function (options) {
++            var defaults = {
++                backColor   : '#ecf0f1',
++                direction   : 'horizontal',
++                frontColor  : '#2ecc71',
++                opacity     : 1,
++                position    : 'top',
++                reverse     : false,
++                weight      : 5,
++                zindex      : 10,
++                scrollEnd   : function() {}
++            };
++
++            function Plugin(options) {
++                this.params = $.extend(defaults, options);
++                this.$back = $(document.createElement('div'));
++                this.$front = $(document.createElement('div'));
++                this.init();
++            }
++
++            Plugin.prototype = {
++                init : function() {
++                    var self = this,
++                        tBack, rBack, bBack, lBack, bgBack,
++                        tFront, rFront, bFront, lFront, bgFront;
++
++                    // Direction and position
++                    if(self.params.direction != 'vertical') self.params.direction = 'horizontal';
++                    if(self.params.direction == 'vertical' && self.params.position != 'right') self.params.position = 'left';
++                    if(self.params.direction == 'horizontal' && self.params.position != 'bottom') self.params.position = 'top';
++
++                    if(self.params.direction == 'vertical') {
++                        bBack = tBack = 0;
++                        if(self.params.position == 'right') {
++                            rBack = 0;
++                            lBack = 'auto';
++                        } else {
++                            rBack = 'auto';
++                            lBack = 0;
++                        }
++                    } else {
++                        rBack = lBack = 0;
++                        if(self.params.position == 'bottom') {
++                            tBack = 'auto';
++                            bBack = 0;
++                        } else {
++                            tBack =  0;
++                            bBack = 'auto';
++                        }
++                    }
++
++                    if(self.params.reverse && self.params.reverse === true) {
++                        if(self.params.direction == 'vertical') {
++                            bFront = rFront = lFront = 0;
++                            tFront = 'auto';
++                        } else {
++                            bFront = rFront = rFront = 0;
++                            lFront = 'auto';
++                        }
++                    } else {
++                        tFront = lFront = 0;
++                        bFront = rFront = 'auto';
++                    }
++
++                    self.$front.css({
++                        background : self.params.frontColor,
++                        bottom : bFront,
++                        height : 0,
++                        left : lFront,
++                        margin: 0,
++                        overflow: 'hidden',
++                        padding: 0,
++                        position: 'absolute',
++                        right : rFront,
++                        top: tFront,
++                        width : 0
++                    }).appendTo(self.$back);
++
++                    self.$back.css({
++                        background : self.params.backColor,
++                        bottom: bBack,
++                        height : 0,
++                        left : lBack,
++                        opacity: self.params.opacity,
++                        margin: 0,
++                        overflow: 'hidden',
++                        position: 'fixed',
++                        padding: 0,
++                        right : rBack,
++                        top: tBack,
++                        width : 0,
++                        zIndex : self.params.zindex,
++                    }).appendTo('body');
++
++                    $(window).on("load resize scroll orientationchange", function() {
++                        self.scrollListener();
++                    });
++                },
++
++                scrollListener : function() {
++                    var self = this,
++                        hWin = $(window).height(),
++                        wWin = $(window).width(),
++                        hDoc = $(document).height(),
++                        scrollValue = $(window).scrollTop(),
++                        wBack, hBack, wFront, hFront, scrollineVal, wRef;
++
++                    if(self.params.direction == 'vertical') {
++                        scrollineVal = (scrollValue + hWin) * hWin / hDoc;
++                        wBack = self.params.weight;
++                        hBack = wRef = hWin;
++                        wFront = self.params.weight;
++                        hFront = scrollineVal;
++                    } else {
++                        scrollineVal = (scrollValue + hWin) * wWin / hDoc;
++                        wBack = wRef = wWin;
++                        hBack = self.params.weight;
++                        wFront = scrollineVal;
++                        hFront = self.params.weight;
++                    }
++
++                    self.$back.css({
++                        height: hBack,
++                        width: wBack
++                    });
++                    self.$front.css({
++                        height: hFront,
++                        width: wFront
++                    });
++
++                    if(scrollineVal >= wRef) {
++                        self.params.scrollEnd();
++                    }
++                }
++            };
++
++            new Plugin(options);
++        }
++    });
++})(jQuery, window, document);
+\ No newline at end of file
+diff --git a/readme.md b/readme.md
+new file mode 100644
+index 0000000..86c708e
+--- /dev/null
++++ b/readme.md
+@@ -0,0 +1,78 @@
++Scrolline.js
++========================================
++
++A jQuery plugin. Create a scroll line bar indicator on the page.
++
++## Demonstrations
++
++* [Demonstration](http://anthonyly.com/scrolline)
++
++## Documentation
++
++### Basic Usage
++
++Include scrolline.js file in the page, along with jQuery.
++
++```html
++<script src="js/jquery.js"></script>
++<script src="js/scrolline.js"></script>
++```
++
++Then call ``$.scrolline();`` to launch the plugin.
++
++### Options
++
++You can apply a set of optional options:
++
++* ``backColor`` - Define the color of back's scrolline (default ``'#ecf0f1'``)
++* ``direction`` - Can be **vertical** or **horizontal** (default ``'horizontal'``)
++* ``frontColor`` - Define the color of front's scrolline (default ``'#2ecc71'``)
++* ``opacity`` - Define alpha's scrolline, value must be between **0** and **1** (default ``1``)
++* ``position`` -  Define the position of scrolline : **top** and **bottom** for horizontal's position, **left** or **right** for vertical's position (default ``top`` in horizontal and ``left`` in vertical)
++* ``reverse`` - Revert the front line sens on set value at **true** (default ``false``)
++* ``weight`` - Define the larger of scrolline on pixels (default ``5``)
++* ``zindex`` - Change the z-index value if needed (default ``10``)
++* ``scrollEnd`` - Callback's **function** call at the end of scrolling
++
++### Example
++
++Scrolline revert with custom color at bottom position:
++
++```js
++$.scrolline({
++    reverse : true,
++    position : 'bottom',
++    backColor : '#2980b9',
++    frontColor : '#f1c40f',
++    weight : 12
++});
++```
++
++Scrolline vertical at right position with callback:
++
++```js
++$.scrolline({
++    position : 'right',
++    direction : 'vertical',
++    weight : 30,
++    scrollEnd : function() {
++		alert('End of scroll!');
++	}
++});
++```
++
++## Compatibility
++
++* Safari
++* Firefox
++* Chrome
++* IE
++* Safari mobile
++
++## Credits
++
++### Author
++[Anthony Ly](http://anthonyly.com), on twitter [@Pik_at](http://twitter.com/pik_at)
++
++### Licence
++Licence MIT
+\ No newline at end of file

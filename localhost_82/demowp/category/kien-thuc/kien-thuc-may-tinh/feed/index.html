@@ -1,0 +1,1750 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Kiến Thức Máy Tính &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/kien-thuc/kien-thuc-may-tinh/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Mon, 13 Jan 2020 20:10:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Kiến Thức Máy Tính &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</title>
+		<link>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/</link>
+				<comments>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/#respond</comments>
+				<pubDate>Thu, 05 Dec 2019 15:15:23 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7470</guid>
+				<description><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn. Ở Bài 1: Giới thiệu tổng quan ngôn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn.</p>
+<p>Ở <a href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer"><span style="color: #ff0000;"><span style="text-decoration: underline;"><em><strong>Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình</strong></em><strong> PHP</strong></span><span style="color: #000000;">. </span></span></a>Tân Hồng IT đã dùng WampServer làm môi trường chính để lập trình PHP. Cùng tìm hiểu xem web server này có gì thú vị nữa không nhé!!!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png"><img class="aligncenter size-full wp-image-7486" src="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png" alt="loi port truy cap localhost" width="503" height="283" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost-300x169.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a></p>
+<h4><strong>Ưu điểm khi sử dụng WampServer là gì?</strong></h4>
+<p><strong>WampServer</strong> hoạt động giống một máy chủ ảo, chạy ngay trên máy của bạn. Nó cho phép bạn kiểm thử trang web mà không gặp trở ngại hay tác hại nào. Do nó được cài trên máy tính của bạn và chưa được xuất bản. <strong>WampServer</strong> vào lúc này đóng vai trò là một căn nhà an toàn cho website của bạn, bạn chưa phải đưa nó online, nhưng vẫn xem được cách nó hiển thị online trên trình duyệt là như thế nào.</p>
+<p>Các ưu điểm khi cài đặt <strong>WampServer</strong> là:</p>
+<ul>
+<li>Bạn không phải mất thời gian chờ file được upload lên mạng nữa.</li>
+<li>Tạo backup dễ dàng hơn, nhanh hơn.</li>
+<li>Không phụ thuộc vào kết nối internet, máy tính không kết cần nối mạng bạn vẫn có thể phát triển web tại localhost.</li>
+<li>Tăng tốc quá trình xử lý, thao tác. Lập trình viên và chuyên gia thiết kế của bạn sẽ thích điều này.</li>
+<li>Bạn hình dung được nội dung được bố cục như thế nào.</li>
+</ul>
+<p>Sau khi đã có một website hoàn chỉnh tại localhost nhờ vào việc cài WampServer, để đưa website lên mạng bạn chỉ việc mua thêm hosting và tên miền cho nó.</p>
+<h4><strong>Tổng quan về thanh menu của WampServer:</strong></h4>
+<ul>
+<li><strong>Localhost</strong>: Cho phép mở website nằm trong folder web root bằng trình duyệt web.</li>
+<li><strong>phpMyAdmin</strong>: Cho phép mở trang quản lý cơ sở dữ liệu <strong>phpMyAdmin</strong> thông qua trình duyệt web.</li>
+<li><strong>Apache</strong>: Các lệnh liên quan đến web chủ Apache.</li>
+<li><strong>MySQL</strong>: Các lệnh liên quan đế hệ quản trị cơ sở dữ liệu MySQL.</li>
+<li><strong>PHP</strong>: Nơi sẽ hiển thị và cho phép bạn chỉnh sửa các tập tin cấu hình sử dụng ngôn ngữ lập trình PHP.</li>
+<li><strong>Start All Services</strong>: Bật tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Stop All Services</strong>: Tắt tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Restart All Services</strong>: Khởi động lại tất cả các chức năng/dịch vụ của WAMP.</li>
+</ul>
+<h4><strong>Thiết lập Port mới trên WampServer tránh lỗi không truy cập vào localhost:</strong></h4>
+<p>Khi bạn cài đặt nhiều <strong>gói webserver</strong> vào máy tính thì khi này các địa chỉ <strong>localhost</strong> phải được cấu hình khác nhau, Nếu không khi truy cập vào địa chỉ <strong>localhost</strong> sẽ bị lỗi không truy cập được.</p>
+<p>Ví dụ bạn cài đặt <strong>Xampp</strong> đầu tiên, khi này nó sẽ mặc định lấy địa chỉ <strong>https://localhost/</strong> làm port của nó. Sau đó bạn lại cài thêm <strong>Wampserver</strong> vào máy, lúc này khi truy cập vào <strong>https://localhost/</strong> sẽ bị lỗi. Bạn phải chỉnh sửa thành một Port  khác ví dụ như<strong> https://localhost:81/</strong> , <strong>https://localhost:83/ ,&#8230;</strong></p>
+<p>Hãy cùng Tân Hồng IT tìm hiểu về cách thay đổi port trên <strong>WampServer</strong> nha. Thay đổi port giúp cho máy của bạn tránh những xung đột không đáng có khi lập trình.</p>
+<p>Đầu tiên, các bạn mở <strong>WampServer</strong> lên và click chuột trái vào icon <strong>W màu xanh</strong> của Wamp. Sau đó bạn chọn <strong>Apache</strong>, tiếp theo click vào file <strong>httpd.conf</strong>.</p>
+<figure id="attachment_7476" aria-describedby="caption-attachment-7476" style="width: 502px" class="wp-caption aligncenter"><img class="wp-image-7476 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png" alt="Bước 1" width="502" height="360" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png 502w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-300x215.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-120x86.png 120w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-350x250.png 350w" sizes="(max-width: 502px) 100vw, 502px" /><figcaption id="caption-attachment-7476" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>Lúc này file <strong>httpd.conf </strong>đã được mở tự động bằng <strong>Notepad++</strong> nếu máy của bạn có sẵn hoặc một trình soạn thảo khác. Trên file <strong>httpd.conf</strong> các bạn tìm kiếm bằng cách ấn <strong>CTRL+H</strong>, tại <strong>Find What: </strong>nhập <strong>80</strong>, rồi thay đổi lại tại <strong>Replace with</strong>: nhập <strong>82. </strong>Xong tất cả thì bạn chọn <strong>Replace All </strong>và nhớ <strong>CTRL+S </strong>nha <strong>^^.</strong></p>
+<figure id="attachment_7475" aria-describedby="caption-attachment-7475" style="width: 1366px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png"><img class="wp-image-7475 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png" alt="lỗi không truy cập localhost" width="1366" height="728" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png 1366w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-300x160.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1024x546.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-768x409.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-750x400.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1140x608.png 1140w" sizes="(max-width: 1366px) 100vw, 1366px" /></a><figcaption id="caption-attachment-7475" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi đã lưu lại các bạn nhớ nhấn <strong>Restart All Services</strong> để port mới được hoạt động nhé.</p>
+<figure id="attachment_7473" aria-describedby="caption-attachment-7473" style="width: 230px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png"><img class="wp-image-7473 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png" alt="Bước 3" width="230" height="309" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png 230w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh3-223x300.png 223w" sizes="(max-width: 230px) 100vw, 230px" /></a><figcaption id="caption-attachment-7473" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Cuối cùng các bạn mở trình duyệt lên nhập <strong>localhost:82 </strong>và hiện ra như ảnh dưới là các bạn đã thay đổi port thành công rồi đó.</p>
+<figure id="attachment_7477" aria-describedby="caption-attachment-7477" style="width: 1352px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png"><img class="wp-image-7477 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png" alt="Bước 4" width="1352" height="537" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png 1352w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-300x119.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1024x407.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-768x305.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-750x298.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1140x453.png 1140w" sizes="(max-width: 1352px) 100vw, 1352px" /></a><figcaption id="caption-attachment-7477" class="wp-caption-text">Bước 4</figcaption></figure>
+<h4><strong>Tạo thư mục ảo trên WampServer:</strong></h4>
+<p>Khi sử dụng WampServer, file php của bạn thường nằm bên trong thư mục <strong>C:/wamp64/www/*.php</strong>. Điều này rất bất tiện đối với các máy đã đóng băng, vì khi tắt hay reset máy đồng nghĩa với dữ liệu trong ổ C:/ trước đó bạn đã từng thao tác sẽ bay màu. Sau đây mình sẽ hướng dẫn các bạn tạo thư mục ảo để bạn quản lý file dễ dàng hơn.</p>
+<p>Các bạn Click chuột trái vào biểu tượng của <strong>WAMP</strong>, chọn <strong>Apache –&gt; Alias directories –&gt; Add an alias.</strong></p>
+<figure id="attachment_7478" aria-describedby="caption-attachment-7478" style="width: 503px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png"><img class="wp-image-7478 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png" alt="Bước 1" width="503" height="311" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh5-300x185.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a><figcaption id="caption-attachment-7478" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>&nbsp;</p>
+<p>Một cửa sổ <strong>Command</strong> sẽ hiện lên, và các bạn làm theo hướng dẫn trên màn hình. Ở đây mình đặt alias là <strong>larva</strong></p>
+<figure id="attachment_7479" aria-describedby="caption-attachment-7479" style="width: 977px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png"><img class="wp-image-7479 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png" alt="Bước 2" width="977" height="509" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png 977w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-300x156.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-768x400.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-750x391.png 750w" sizes="(max-width: 977px) 100vw, 977px" /></a><figcaption id="caption-attachment-7479" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi Enter nó sẽ yêu cầu bạn gõ đường dẫn đến thư mục cần tạo thư mục ảo (lưu ý thư mục này phải tồn tại), ở đây mình tạo thư mục ảo trỏ đến <strong>D:/larva </strong>và ấn <strong>Enter</strong> và sẽ hiện thông báo bạn đã tạo thư mục ảo thành công.</p>
+<p><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong>Lưu ý:</strong></span></span> Khi bạn đặt tên cho <strong>alias</strong> là tên gì thì thư mục bạn muốn dẫn đến cũng nên đặt tên tương tự để tránh bị lỗi nhé !</p>
+<figure id="attachment_7483" aria-describedby="caption-attachment-7483" style="width: 978px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png"><img class="wp-image-7483 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png" alt="Bước 3" width="978" height="515" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png 978w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-768x404.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-750x395.png 750w" sizes="(max-width: 978px) 100vw, 978px" /></a><figcaption id="caption-attachment-7483" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Sau khi tạo xong, khi muốn chạy file .php trong thư mục<strong> D:/larva/</strong> bạn vào trình duyệt gõ <strong>localhost:82/larva/file php của bạn</strong> ( Tương tự khi các bạn đặt <strong>alias</strong> và trỏ đến thư mục khác ).</p>
+<p>Đến đây mình xin kết thúc bài viết này, hẹn gặp lại các bạn ở những bài tiếp theo nhé. &lt;3</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7470"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</title>
+		<link>http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/</link>
+				<comments>http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/#respond</comments>
+				<pubDate>Sat, 07 Sep 2019 14:40:44 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Kỹ Năng]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Theme Web]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Wix]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6893</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn khóa học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu. Bên cạnh WordPress, Wix cũng là hình thức thiết kế Website có sẵn miễn phí và khá phổ biến. Đến với khóa học này, bạn sẽ được làm quen với WIX và có thể [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn khóa học <strong>Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</strong>. Bên cạnh WordPress, Wix cũng là hình thức thiết kế Website có sẵn miễn phí và khá phổ biến. Đến với khóa học này, bạn sẽ được làm quen với WIX và có thể tự thiết kế trang web cho riêng mình.</p>
+<p><figure id="attachment_6986" aria-describedby="caption-attachment-6986" style="width: 481px" class="wp-caption aligncenter"><img class="wp-image-6986 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/09/WIX.png" alt="" width="481" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/WIX.png 481w, http://localhost:82/demowp/wp-content/uploads/2019/09/WIX-300x169.png 300w" sizes="(max-width: 481px) 100vw, 481px" /><figcaption id="caption-attachment-6986" class="wp-caption-text">Thiết kế Website với WIX</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm được các kiến thức cơ bản để thiết kế một trang web thông qua WIX.</li>
+<li>Hướng dẫn dễ hiểu, thao tác dễ dàng.</li>
+<li>Thiết kế website một cách chuyên nghiệp.</li>
+<li>Có khả năng cập nhật trang web của bạn bất cứ lúc nào.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li class="requirements__item">Máy tính có kết nối Internet.</li>
+</ul>
+</div>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Người mới bắt đầu tìm kiếm một hướng dẫn trang web WIX toàn diện.</li>
+<li>Những người muốn thiết kế web miễn phí.</li>
+<li>Bất cứ ai muốn tự tạo và cập nhật trang web WIX cho riêng mình.</li>
+</ul>
+<div class="requirements__content">
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><strong style="color: #ff0000; font-size: 32px;">Download Khóa Học WIX Tại Đây:</strong></h4>
+</div>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <strong>WIX Tutorial For Beginners &#8211; Make A Wix Website Today!</strong></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/drive/folders/1lpjCMHfw8j4L5BqLhC35alHn8mDRb6Sq" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h3 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h3>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/code-web-trung-thu-dep/" target="_blank" rel="noopener noreferrer">Code Web Trung Thu Đẹp, Nhiều Hiệu Ứng</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/tai-lieu/design/1000-cinematic-overlays-bundle/" target="_blank" rel="noopener noreferrer">Chia sẻ Full Bộ 1000 Cinematic Overlays Bundle cho Designer &#8211; Photoshop, Lightroom miễn phí</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></span></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/" target="_blank" rel="noopener noreferrer">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6893"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 99px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">4.5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khóa học tự Build một chiếc PC Computer cho chính bạn</title>
+		<link>http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/#respond</comments>
+				<pubDate>Sun, 01 Sep 2019 16:38:45 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Build a Computer]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6862</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học Build Your Own Custom PC Computer Course dành cho những bạn muốn học tập hoặc tự build cho chính mình một chiếc máy tính hoàn hảo. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/">Chia sẻ khóa học tự Build một chiếc PC Computer cho chính bạn</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học <strong>Build Your Own Custom PC Computer Course</strong> dành cho những bạn muốn học tập hoặc tự build cho chính mình một chiếc máy tính hoàn hảo. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình.</p>
+<p><figure id="attachment_6863" aria-describedby="caption-attachment-6863" style="width: 478px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/build-your-pc-computer.png"><img class="size-full wp-image-6863" src="http://localhost:82/demowp/wp-content/uploads/2019/09/build-your-pc-computer.png" alt="build your pc computer" width="478" height="269" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/build-your-pc-computer.png 478w, http://localhost:82/demowp/wp-content/uploads/2019/09/build-your-pc-computer-300x169.png 300w" sizes="(max-width: 478px) 100vw, 478px" /></a><figcaption id="caption-attachment-6863" class="wp-caption-text">Build Your PC Computer</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Xây dựng máy tính tùy chỉnh của riêng bạn.</li>
+<li>Tìm hiểu làm thế nào để tối ưu hóa hệ thống hiện tại của bạn.</li>
+<li>Tìm hiểu xử lý sự cố cơ bản và các tiện ích Windows.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li>Nếu bạn muốn xây dựng PC của riêng mình, bạn sẽ cần nhiều bộ phận máy tính khác nhau và một hệ điều hành.</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Khóa học này là hoàn hảo cho những người muốn xây dựng máy tính của riêng họ!</li>
+<li>Tham gia khóa học này nếu bạn tò mò về hoạt động bên trong của máy tính.</li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<h3 style="text-align: center;"><strong style="color: #ff0000; font-size: 32px;">Download Khóa Học <strong>Build Your PC Computer</strong> Tại Đây:</strong></h3>
+</div>
+<h4 style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <strong>Build Your Own Custom Computer!</strong></h4>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=14KSfKO_40efu1xLL71yFnSLWgvE_X6LR" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<p><a href="https://imgur.com/Dp1IdaO.png"><img class="aligncenter size-full" src="https://imgur.com/Dp1IdaO.png" alt="Build xây dựng máy tính tùy chỉnh của riêng bạn" width="1164" height="694" /></a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn TanHongIT.Net. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của tanhongit.net</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website Tân Hồng IT</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Tanhongit.net</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/code-web-trung-thu-dep/" target="_blank" rel="noopener noreferrer">Code Web Trung Thu Đẹp, Nhiều Hiệu Ứng</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/tai-lieu/design/1000-cinematic-overlays-bundle/" target="_blank" rel="noopener noreferrer">Chia sẻ Full Bộ 1000 Cinematic Overlays Bundle cho Designer &#8211; Photoshop, Lightroom miễn phí</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/mau-code-form-login-cho-website/" target="_blank" rel="noopener noreferrer">Chia sẻ 6 mẫu Code Form Login giao diện cực đẹp và dễ thương cho Website</a></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></span></strong></li>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/" target="_blank" rel="noopener noreferrer">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6862"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/">Chia sẻ khóa học tự Build một chiếc PC Computer cho chính bạn</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/kien-thuc-may-tinh/build-your-pc-computer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Đánh số phiên bản phần mềm – Software Versioning</title>
+		<link>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/#respond</comments>
+				<pubDate>Wed, 28 Aug 2019 13:28:29 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6811</guid>
+				<description><![CDATA[<p>Mình thấy một bài viết rất hay nói về việc đánh số các phiên bản cho phần mềm mỗi khi các hãng phát hành nên mình xin thuật lại trong bài viết này cho các bạn cùng đọc và tham khảo. Bài viết này giúp chúng ta hiểu thêm về quy tắc đánh số hiệu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/">Đánh số phiên bản phần mềm – Software Versioning</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Mình thấy một bài viết rất hay nói về việc đánh số các phiên bản cho phần mềm mỗi khi các hãng phát hành nên mình xin thuật lại trong bài viết này cho các bạn cùng đọc và tham khảo.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png"><img class="aligncenter size-full wp-image-6815" src="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png" alt="software versioning" width="649" height="288" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning.png 649w, http://localhost:82/demowp/wp-content/uploads/2019/08/software-versioning-300x133.png 300w" sizes="(max-width: 649px) 100vw, 649px" /></a></p>
+<p>Bài viết này giúp chúng ta hiểu thêm về quy tắc đánh số hiệu các phiên bản (version) của phần mềm máy tính do các hãng, các lập trình viên sử dụng phát hành.</p>
+<h3><strong>Đặt vấn đề</strong></h3>
+<p><a href="https://imgur.com/92ngjws.png"><img class="alignright " src="https://imgur.com/92ngjws.png" alt="Software versioning number" width="147" height="783" /></a></p>
+<p>Người “ngoại đạo” hoặc thậm chí những người sử dụng máy tính chuyên nghiệp cũng chưa chắc hiểu rõ ý nghĩa đằng sau những dãy số “bí ẩn” đi kèm với phần mềm mình vừa cài đặt. Ví dụ: <strong>Mozilla Firefox 68.0.1; Google Chrome 76.0.3809.132; TeamViewer 14.0.13880 …v.v</strong>. Câu hỏi lớn nhất với chúng ta là:</p>
+<ul>
+<li>Tại sao phiên bản của phần mềm lại được đánh số?</li>
+<li>Phiên bản phần mềm 1.0 và 2.0 khác nhau như thế nào?</li>
+<li>Nếu bây giờ tôi bắt tay viết một phần mềm mà đặt mã hiệu phiên bản của tôi như thế nào thì phù hợp?</li>
+</ul>
+<p>&nbsp;</p>
+<h3><strong>Định nghĩa</strong></h3>
+<p>Hệ thống đánh số hiệu phiên bản phần mềm là quy tắc để xác định tên duy nhất của một phần mềm ở mỗi giai đoạn phát triển của nó</p>
+<p>Thông thường, một phần mềm trong quá trình phát triển nó được chỉnh sửa, nâng cấp hoặc vá lỗi nhiều lần. Có những lần chỉnh sửa chỉ đơn thuần là những hiệu chỉnh nhỏ không đáng kể, những cũng có những lần “nâng cấp” toàn diện khiến cho nó không còn là thứ giống như nguyên thủy (bản thân hệ điều hành Windows là 1 ví dụ), hay nói cách khác lần “nâng cấp” này đã đưa phần mềm lên “level” mới.</p>
+<p>Hiện có một số phương pháp gán số hiệu phiên bản phần mềm được dùng phổ biến là:</p>
+<ul>
+<li>Đánh số phiên bản bằng các con số <strong>(Sequence-based identifiers)</strong></li>
+<li>Đánh số hiệu phiên bản dựa theo mức độ ổn định của sản phẩm <strong>(Stage-based identifiers)</strong></li>
+</ul>
+<h3><strong>Sequence-based identifers</strong></h3>
+<p>Phương pháp này sử dụng các con số (đôi khi kết hợp thêm các chữ cái) để gán số hiệu cho các phiên bản. Công thức đánh số hiệu phiên bản như sau:</p>
+<p><strong><span style="color: #0000ff;">major.minor.[build [.revision]]</span>   </strong>hoặc<br />
+<span style="color: #0000ff;"><strong>major.minor [maintenance[.build]]</strong></span></p>
+<p>Ý nghĩa các số <strong><em>major, minor, build, revision</em></strong> như sau</p>
+<ul>
+<li><strong>major</strong>: Chuỗi phiên bản chính.</li>
+<li><strong>minor</strong>: Chuỗi phiên bản phụ</li>
+<li><strong>build</strong>: Chuỗi phiên bản cấu tạo. Đánh dấu sự khác nhau trong cùng 1 phiên bản phụ, 2 chữ số.</li>
+<li><strong>revision</strong>: Lần sửa đổi. đánh dấu lần sửa đổi của mã nguồn.</li>
+</ul>
+<p>Chỉ số <strong><em>major</em> </strong>sẽ tăng mỗi khi:  Có sự <strong>thay đổi lớn trong “nhân hệ thống”</strong> mà theo đó hệ thống mới có thể khác 1 phần hay hoàn toàn hệ thống cũ.</p>
+<p>Chỉ số <strong><em>minor</em> </strong>sẽ tăng mỗi khi: Có sự thay đổi phần “core” của hệ thống mà <strong>không làm mất đi hoàn toàn tính tương thích</strong> trong cùng phiên bản chính.</p>
+<p>Còn chỉ số <strong><em>build</em> </strong>sẽ tăng mỗi khi: Có đóng gói gửi đi ra ngoài đội code (đội phát triển) nhằm các mục đích phát hành hay thử nghiệm…</p>
+<p>Chỉ số <strong><em>revision </em></strong>có thể được sử dụng mỗi khi<strong>: </strong>Cần thay thế code phát hành trước đó mà chưa cần thiết phải thay tên phiên bản. Chỉ số này là lần sửa đổi (revisions) của mã nguồn, nó đánh dấu số lần sửa đổi của mã nguồn và được thường được hệ thống kiểm quản lý mã nguồn của hãng kiểm soát:<strong><br />
+</strong></p>
+<h4><strong>Quy tắc quan trọng đối với phương pháp đánh số phiên bản bằng cách này như sau:</strong></h4>
+<ol>
+<li>Khi phát hành một phiên bản mới các chỉ số <em><strong>major, minor</strong>, <strong>build</strong></em><strong> </strong>phải được tăng ổn định và có thứ tự. Ví dụ 1.9.0 → 1.10.0 → 1.10.1</li>
+<li>Mỗi khi phiên bản mới đã được phát hành, tất cả nội dung (bao gồm mã nguồn, API) của phiên bản đó phải giữ nguyên không được thay đổi. Bất kỳ thay đổi phát sinh nào đều phải được công bố như phát hành một phiên bản mới.</li>
+<li>Các phiên bản phát triển ban đầu thường được đánh số major = <strong><code>0</code></strong> (dạng <strong><code>0.y.z</code></strong>). Bạn có thể thực hiện bất kỳ thay đổi nào trong các phiên bản ở giai đoạn này.</li>
+<li>Chỉ số <em><strong>build</strong> </em>tăng nếu phiên bản này chỉ sửa các lỗi phát sinh, và đảm bảo tương thích với các bản cũ trước đó.</li>
+<li>Chỉ số phiên bản phụ <strong><em>minor</em> </strong>tăng nếu phiên bản này:
+<ul>
+<li>Tương thích ngược với các bản cũ có cùng phiên bản chính</li>
+<li>Cung cấp thêm mới hoặc loại bỏ ít nhất 1 chức năng của phần mềm</li>
+</ul>
+<p><strong>Thông thường người ta thường tăng chỉ số <em>minor </em>nếu:</strong></p>
+<ul>
+<li>Thêm mới một chức năng quan trọng</li>
+<li>Có sự cải thiện trong mã nguồn (giúp chương trình xử lý tốt hơn, nhanh hơn…)</li>
+</ul>
+<p>Sau khi tăng chỉ số phiên bản phụ <em>minor </em>thì số hiệu phiên bản vá <em>build</em>thường được thiết lập về 0</li>
+</ol>
+<h3><strong>Stage-based identifers</strong></h3>
+<p><figure style="width: 250px" class="wp-caption alignright"><a href="https://imgur.com/QmVSJWC.png"><img class="size-full" src="https://imgur.com/QmVSJWC.png" alt="Software release life cycle map" width="250" height="529" /></a><figcaption class="wp-caption-text">Software release life cycle map</figcaption></figure></p>
+<p>Tên gọi cho các phiên bản phần mềm khi phát hành gồm : <span style="color: #0000ff;"><strong><em>Closebeta</em>, <em>Openbeta</em>, <em>Release</em><em>Candidate</em>, </strong></span><em><span style="color: #0000ff;"><strong>Official version</strong></span>.</em> Ý nghĩa của từng phiên bản như sau:</p>
+<h4><strong>Closebeta</strong>: Phiên bản thử nghiệm hạn chế.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản <strong>closebeta</strong> là bản thử nghiệm các tính năng mới phát triển, nó thường không mang đầy đủ các đặc điểm của hệ thống và dễ dàng thay đổi hoặc bị loại bỏ nếu nhận được các phản ứng không tốt sau khi thử nghiệm.</li>
+<li><strong>Ý nghĩa</strong>: Phiên bản này được sử dụng để khảo sát một hoặc một vài tính năng mới xây dựng nào đó của hệ thống (khi chỉ số <em>major</em>thay đổi).</li>
+<li><strong>Mục đích</strong>: Bản closebeta là bản phát hành sớm của một phần mềm nhằm mục đích tập hợp và sử dụng sức mạnh cộng đồng trong việc đóng góp ý kiến, cải tiến tính năng; phát hiện các lỗi trước khi phân phối rộng rãi tới người sử dụng thông thường.</li>
+<li><strong>Đối tượng được mời thử nghiệm</strong>: các lập trình viên và nhóm người dùng có kinh nghiệm.<br />
+Bản closebeta không phải bản phát hành rộng rãi đến tay người sử dụng, do đó chỉ gửi hạn chế đến những người có trình độ và thực sự quan tâm đến việc phát triển hệ thống.</li>
+<li><strong>Nâng cấp</strong>: Không.</li>
+</ul>
+<h4><strong>Openbeta</strong>: Phiên bản thử nghiệm diện rộng.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản openbeta là bản thử nghiệm các tính năng đã phát triển, nó thường mang đầy đủ các đặc điểm của hệ thống và hiếm khi thay đổi hoặc bị loại bỏ khỏi hệ thống trừ khi có phản hồi không tốt từ cộng đồng.</li>
+<li><strong>Ý nghĩa</strong>: Phiên bản này được sử dụng để thử nghiệm một cách đầy đủ và toàn diện hệ thống mới phát triển.</li>
+<li><strong>Mục đích</strong>: Bản openbeta là bản thử nghiệm đầy đủ nhằm mục đích tập hợp và sử dụng sức mạnh cộng đồng trong việc dò tìm để vá các lỗi có thể xảy ra mà quá trình thử nghiệm hạn chế (closebeta) không phát hiện ra.</li>
+<li><strong>Đối tượng được mời thử nghiệm</strong>: tất cả mọi người là thành viên diễn đàn</li>
+<li><strong>Hỗ trợ thử nghiệm</strong>: Có đầy đủ.</li>
+<li><strong>Hỗ trợ sử dụng</strong>: 1 phần. Người thử nghiệm được cung cấp các tài liệu hướng dẫn sử dụng, được trợ giúp trực tiếp trên diễn đàn.</li>
+<li><strong>Nâng cấp</strong>: Không.</li>
+</ul>
+<h4><strong>Release Candidate</strong>: Phiên bản ứng viên.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản Release Candidate là bản ổn định, là ứng cử viên cho phiên bản chính thức. Các lỗi được phát hiện trong giai đoạn này sẽ tiếp tục được sửa chữa.</li>
+<li><strong>Mục đích &amp; Ý nghĩa</strong>: Phiên bản này được sử dụng như một bản đệm trong thời gian chờ phiên bản chính thức ra mắt nhằm tránh trường hợp một bản chính thức có thể bị lỗi ngay sau khi ra mắt.</li>
+<li><strong>Đối tượng người dùng</strong>: tất cả mọi người</li>
+<li><strong>Hỗ trợ sử dụng</strong>: đầy đủ</li>
+<li><strong>Nâng cấp:</strong> Có thể. Cả việc nâng cấp từ phiên bản cũ lên và nâng cấp lên phiên bản chính thức đều có thể được hỗ trợ.</li>
+</ul>
+<h4><strong>Official version</strong>: Phiên bản chính thức.</h4>
+<ul>
+<li><strong>Đặc điểm</strong>: Bản Official version là bản chính thức đầu tiên của giai đoạn phát triển của dòng phiên bản mới. Official version là tên gọi của lần phát hành phiên bản duy nhất, các phiên bản tiếp theo sau đó sẽ chỉ được gọi tên bằng số phiên bản.</li>
+<li><strong>Mục đích &amp; Ý nghĩa</strong>: Phiên bản này đánh dấu việc ra mắt dòng phiên bản mới và khuyến khích người sử dụng chuyển tiếp lên phiên bản mới.</li>
+</ul>
+<p><strong>Các căn cứ để đưa ra tên gọi cho các phiên bản mới phát hành</strong>:Tên gọi xếp theo mức độ ổn định sẽ được gán cho một phiên bản đặt theo số nhất định, việc đặt tên do đội code chọn dựa trên đánh giá về tính ổn định của code sau phát hành. Các căn cứ để đưa ra tên gọi như sau:</p>
+<ol>
+<li><strong>Closebeta</strong>:<br />
+Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: Closebeta 1, Closebeta 2, Closebeta 3… để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau không nhất thiết phải bao gồm các tính năng của phiên bản trước và cũng không có quy định về mặt thời gian giữa mỗi phiên bản. Giai đoạn Closebeta sẽ kết thúc khi không còn những thay đổi lớn trong nhân hệ thống.</li>
+<li><strong>Openbeta</strong>:<br />
+Nếu không có sự cố nào nghiêm trọng trong bản Closebeta cuối cùng, bản thử nghiệm diện rộng (Openbeta) đầu tiên sẽ được phát hành tới tất cả các thành viên. Trong giai đoạn này, đều đặn mỗi tuần sẽ có một phiên bản Openbeta ra mắt để fix lỗi phiên bản Openbeta trước.<br />
+Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: <strong>Openbeta 1, Openbeta 2, Openbeta 3…</strong> để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau bắt buộc bao gồm các tính năng của phiên bản trước.<br />
+Giai đoạn Openbeta sẽ kết thúc khi số lượng lỗi được phát hiện giảm xuống, không còn các lỗi nghiêm trọng sau 2 phiên bản Openbeta.</li>
+<li><strong>Release Candidate (RC)</strong><br />
+Khi số lượng lỗi được phát hiện giảm xuống, không còn các lỗi nghiêm trọng sau 2 phiên bản Openbeta, thì một bản Release Candidate sẽ được phát hành. Có thể có nhiều phiên bản đánh số theo thứ tự phát hành: <strong>RC1, RC2, RC3…</strong> để phân biệt. Mỗi phiên bản tương ứng với một phiên bản số khác nhau &amp; duy nhất. Phiên bản sau bắt buộc bao gồm các tính năng của phiên bản trước. Một bản Release Candidate mới sẽ được ra mắt sớm hơn thông lệ thời gian (như quy định ở bản Openbeta) nếu nó bị phát hiện các lỗi nghiêm trọng</li>
+<li><strong>Official version</strong><br />
+Phiên bản chính thức chỉ được phát hành sau một khoảng thời gian 2 tuần, khi bản RC gần nhất không phát hiện các lỗi tính năng.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ol>
+<li>Software versioning <strong><a href="http://en.wikipedia.org/wiki/Software_versioning" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/Software_versioning</a></strong></li>
+<li>Software Development and Release Stages <strong><a class="postlink" href="http://en.wikipedia.org/wiki/Software_release_life_cycle" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/Software_release_life_cycle</a></strong></li>
+<li>Concurrent Versions System <strong><a href="http://vi.wikipedia.org/wiki/CVS%20" target="_blank" rel="noopener noreferrer">http://vi.wikipedia.org/wiki/CVS</a></strong></li>
+</ol>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong><span style="text-decoration: underline; font-size: 24px;">Xem thêm:</span> </strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/" target="_blank" rel="noopener noreferrer">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/" target="_blank" rel="noopener noreferrer">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6811"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/">Đánh số phiên bản phần mềm – Software Versioning</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</title>
+		<link>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/#respond</comments>
+				<pubDate>Sun, 05 May 2019 16:41:41 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Acc Vip]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows Server]]></category>
+		<category><![CDATA[Free]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[VPS]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6067</guid>
+				<description><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến VPS là gì và cách tạo 1 con VPS Free(miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé! VPS là gì ? VPS là chữ viết tắt của Virtual Private Server – máy chủ ảo cá [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến <strong>VPS</strong> là gì và cách tạo 1 con <strong>VPS Free(</strong>miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé!</p>
+<p><figure id="attachment_6072" aria-describedby="caption-attachment-6072" style="width: 698px" class="wp-caption aligncenter"><img class="size-full wp-image-6072" src="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg" alt="Tạo VPS Free Tốc Độ Cao" width="698" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao-300x157.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /><figcaption id="caption-attachment-6072" class="wp-caption-text">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn</figcaption></figure></p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#VPS_la_gi" title="VPS là gì ?">VPS là gì ?</a></li><li><a href="#Huong_dan_tao_VPS_Free_mien_phi_Han_Dung_1_Gio" title="Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ">Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</a><ul><li><a href="#Buoc_1" title="Bước 1:">Bước 1:</a></li><li><a href="#Buoc_2" title="Bước 2">Bước 2</a><ul><li><a href="#Cach_1_-_khoi_tao_he_thong" title="Cách 1 - khởi tạo hệ thống:">Cách 1 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_3" title="Bước 3:">Bước 3:</a><ul><li><a href="#Cach_2_-_khoi_tao_he_thong" title="Cách 2 - khởi tạo hệ thống:">Cách 2 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_4" title="Bước 4:">Bước 4:</a></li><li><a href="#Buoc_5" title="Bước 5:">Bước 5:</a></li><li><a href="#Buoc_6" title="Bước 6:">Bước 6:</a></li><li><a href="#Buoc_7" title="Bước 7:">Bước 7:</a></li><li><a href="#Buoc_8" title="Bước 8:">Bước 8:</a></li><li><a href="#Buoc_9" title="Bước 9:">Bước 9:</a></li><li><a href="#Thanh_qua" title="Thành quả:">Thành quả:</a></li></ul></li></ul></nav></div>
+<h2><span style="text-decoration: underline;"><strong>VPS là gì ?</strong></span></h2>
+<p><strong>VPS</strong> là chữ viết tắt của <strong>V</strong>irtual <strong>P</strong>rivate <strong>S</strong>erver – máy chủ ảo cá nhân.</p>
+<p>VPS hosting là một hệ thống <strong>hoàn toàn riêng biệt,</strong> có một phần <strong>CPU riêng</strong>, dung lượng<strong> RAM riêng</strong>, dung lượng ổ <strong>HDD/SSD riêng</strong>,<strong> địa chỉ IP riêng</strong> và <strong>hệ điều hành riêng</strong>, người dùng có toàn quyền quản lý <strong>root</strong> và có thể <strong>restart</strong> lại hệ thống bất cứ lúc nào.</p>
+<p><strong>VPS hosting</strong> còn là một trong các dịch vụ <strong>hosting</strong> phổ biến nhất để bạn có thể sử dụng làm nền tảng cho <strong>website</strong>. Nó dùng công nghệ ảo hóa để tạo tài nguyên riêng trên <strong>server</strong> cho bạn sử dụng để tách biệt tài nguyên đó khỏi dùng chung với các người dùng khác cùng<strong> server vật lý.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="vps free tốc độ cao" width="1920" height="1080" /></p>
+<h2><span style="text-decoration: underline;"><strong>Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</strong></span></h2>
+<h3><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Bước 1:</strong></span></h3>
+<p>Đầu tiên bạn vào <strong>link</strong> sau và <strong>đăng nhập</strong> bằng tài khoản <strong>Microsoft</strong> của bạn.</p>
+<p><strong>Link đăng nhập và tạo VPS Free(miễn phí)</strong>: <a class="btn btn-default" href="https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/4-create-a-vm?pivots=windows-cloud" target="_blank" rel="noopener noreferrer">NHẤN VÀO ĐÂY</a></p>
+<p>Sau khi đăng nhập bạn nhấn chọn vào <strong>Activate Sandbox.</strong></p>
+<p><img class="aligncenter size-full" src="https://imgur.com/ThOWEfN.png" alt="Hướng dẫn cách tạo VPS 14GB RAM hạn dùng 1 giờ miễn phí" width="896" height="660" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 2</strong></span></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 1 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<p>Bạn chờ 1 chút cho hệ thống cài đặt xong bạn sẽ thấy có màn hình của sổ <strong>cmd</strong> màu đen phía bên phải màn hình như sau:</p>
+<p><img class="aligncenter size-full" src="https://imgur.com/bYUQ0fN.png" alt="Hướng dẫn cách tạo VPS hạn dùng 1 giờ miễn phí 2" width="1920" height="937" /></p>
+<p><strong>Tiếp tục bạn kéo chuột xuống và sẽ thấy một đoạn code như hình bên dưới đây:</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/yOGEVHQ.png" alt="code tạo vps free" width="660" height="394" /></p>
+<p>Bạn sẽ phải sửa 2 dòng cuối dùng của đoạn code đó lại:</p>
+<div class="alert alert-warning"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span class="hljs-variable">$USERNAME</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password $PASSWORD</span></strong></span></div>
+<div>
+<p><strong>Sửa lại như sau:</strong></p>
+<div class="alert alert-info"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span style="color: #ff0000;">tanhongi</span> <span style="color: #ff0000;">\</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+</div>
+<p><strong><span style="text-decoration: underline; color: #ff0000; font-size: 20px;">Ví dụ</span> <span style="font-size: 16px;">mình có một đoạn code sau khi đã chỉnh sửa như sau:</span></strong></p>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">az vm create \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;name myVM \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;resource-group<span style="color: #ff0000;"> 76e442a1-eea2-4f6e-a4e3-a0cfb66ee121</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;image Win2016Datacenter \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;size Standard_DS2_v2 \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;location eastus \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username<span style="color: #ff0000;"> tanhongi \</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+<div><span style="font-size: 20px;"><strong><span style="color: #ff0000;">Những nơi có tô màu đó bạn phải dựa vào code mà hệ thống đã đưa sẵn cho bạn nhé!</span></strong></span></div>
+<div></div>
+<div>Tiếp theo bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy nhé!</div>
+<div><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></div>
+<div>
+<div class="alert alert-warning" style="text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 32px;"><strong>Lưu ý</strong> </span></span></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Đoạn code phía trên là mình đã gom cả mật khẩu và tên người dùng vào chung để khỏi khắc rối cho các bạn khi cài đặt hệ thống. Nếu các bạn đã sử dụng đoạn code ở bước 2 này thì các bạn có thể đi đến <span style="color: #0000ff;">bước 5 và bước 6</span> luôn nhé!</span></strong></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Nếu các bạn muốn tạo tên người dùng riêng hoặc cài đặt cho hệ thống VPS theo từng bước thì các bạn <span style="color: #0000ff;">bỏ qua bước 2</span> và <span style="color: #0000ff;">làm từ bước 3 trở đi</span> nhé!</span></strong></div>
+</div>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 3:</span></strong></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 2 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<div>Bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy.</div>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong>az vm create \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;name myVM \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;resource-group <span style="color: #ff0000;">a79c55ee-9ab4-4792-aa7d-b164400fb1bb \</span></strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;image Win2016Datacenter \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;size Standard_DS2_v2 \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;location eastus \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;admin-username <span style="color: #ff0000;">tanhongi</span></strong></span></div>
+<div><span style="font-size: 20px; color: #0000ff;"><strong>Với username bạn có thể đặt thành tên khác với bắt buộc là 8 kí tự chữ cái nhé!</strong></span></div>
+<p><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 4:</span></strong></h3>
+<p>Tiếp theo bạn<strong> copy password</strong> vào bằng cách nhấn chuột phải vào màn hình <strong>cmd</strong> và nhấn <strong>Paste(Dán)</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/htD8fqW.png" width="702" height="766" /></p>
+<blockquote class="pullquote align-center"><p><span style="color: #0000ff;"><strong><span style="text-decoration: underline;">Lưu ý:</span></strong></span> Username thì có thể sửa được nhưng password này là<strong> sử dụng bắt buộc</strong>, bạn không được chỉnh sửa gì thêm.</p>
+<p><strong>Pass:</strong> <span style="color: #0000ff;"><strong>123456789aA@</strong></span></p></blockquote>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 5:</span></strong></h3>
+<p>Tiếp theo bạn <strong>copy</strong> <strong>lại mật khẩu</strong> <strong>ở bước 4</strong> một lần nữa khi xuất hiện dòng <strong>Confirm Admin Pasword</strong> nhé! Sau đó nhấn <strong>Enter</strong> và cho nó <strong>Running</strong>.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/ghR30d8.png" width="630" height="454" /></p>
+<p>Sau khi hệ thống chạy xong bạn sẽ nhận được một số thông tin như hình bên dưới:</p>
+<p><img class="aligncenter" src="https://imgur.com/UeMojXm.png" alt="Public Ip Address" width="949" height="768" /></p>
+<p>Các bạn chú ý địa chỉ IP ở dòng <strong>&#8220;PublicIpAddress&#8221;</strong> nhé. Đây là địa chỉ IP mà bạn sẽ phải dùng để truy cập vào VPS đó&#8230;</p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 6:</span></strong></h3>
+<p>Bạn tìm kiếm phần mềm<strong> &#8220;Remote Desktop Connection&#8221;</strong> có sẵn trên các hệ điều hành <strong>Windows</strong> và khởi chạy phần mềm lên nhé!</p>
+<p><img class="aligncenter" src="https://imgur.com/Awrq3vv.png" alt="Remote Desktop Connection" width="835" height="681" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 7:</strong></span></h3>
+<p>Sau khi mở phần mềm lên bạn copy địa chỉ IP ở dòng <strong>&#8220;publicIpAddress&#8221; </strong>mà hệ thống đã cung cấp cho bạn vào rồi nhấn<strong> Contect.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/aQYBTVf.png" alt="đại chỉ ip của vps" width="686" height="639" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 8:</strong></span></h3>
+<p>Bạn chọn vào<strong> sử dụng với tài khoản mới (Use a diferent account). </strong></p>
+<p>Sau đó nhập <strong>User</strong> và <strong>password</strong> mà nãy bạn đã cài đặt vào 2 ô phía trên và nhấn tiếp <strong>OK</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/2L9Li9g.png" width="456" height="532" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 9:</strong></span></h3>
+<p>Sẽ xuất hiện một thông báo và bạn chỉ cần nhấn <strong>Yes</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/XuMQHdy.png" alt="kết nối vps free" width="392" height="401" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Thành quả:</strong></span></h3>
+<p>Bạn sẽ có một VPS Sử dụng hệ điều hành Windows 10 và có tốc độ siêu lớn luôn&#8230;</p>
+<p><img class="aligncenter" src="https://imgur.com/WfV08WA.png" alt="tạo một vps free" width="1920" height="1080" /><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="tốc độ siêu cao của vps free" width="1920" height="1080" /></p>
+<p>Mong rằng với thủ thuật này sẽ hỗ trợ cho công việc và học tập của các bạn thật tốt.</p>
+<p>Nếu các bạn vẫn chưa làm được hoặc có thắc mắc gì cứ để lại comment bên dưới bài viết này nhé! Mình sẽ giải đáp cho các bạn!</p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/tag/vps/" target="_blank" rel="noopener noreferrer">Một số bài viết khác về VPS</a></strong></span></p>
+<p>Nếu thấy hữu ích đừng quên chia sẻ cho mọi người nha. Cảm ơn các bạn !!!</p>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6067"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</title>
+		<link>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/#respond</comments>
+				<pubDate>Sat, 09 Feb 2019 07:26:31 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Google Chrome]]></category>
+		<category><![CDATA[Phím Tắt]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5404</guid>
+				<description><![CDATA[<p>Google Chrome được biết đến là trình duyệt khá nổi tiếng và được nhiều người sử dụng hiện nay bởi các tính năng tuyệt vời tích hợp trong nó. Để sử dụng trình duyệt này hiệu quả hơn bạn nên biết những phím tắt hữu ích trên Google Chrome. Sử dụng phím tắt Google Chrome giúp [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Google Chrome</strong> được biết đến là trình duyệt khá nổi tiếng và được nhiều người sử dụng hiện nay bởi các tính năng tuyệt vời tích hợp trong nó. Để sử dụng trình duyệt này hiệu quả hơn bạn nên biết những phím tắt hữu ích trên <strong>Google Chrome.</strong></p>
+<p><figure id="attachment_6256" aria-describedby="caption-attachment-6256" style="width: 845px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png"><img class="size-full wp-image-6256" src="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png" alt="phim tat huu ich cua trinh duyet google chrome" width="845" height="455" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png 845w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-300x162.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-768x414.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-750x404.png 750w" sizes="(max-width: 845px) 100vw, 845px" /></a><figcaption id="caption-attachment-6256" class="wp-caption-text">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</figcaption></figure></p>
+<h3><strong>Sử dụng phím tắt <a href="https://www.google.com/intl/vi_vn/chrome/" target="_blank" rel="noopener noreferrer">Google Chrome</a> giúp người dùng thao tác, sử dụng trình duyệt web nhanh hơn.</strong></h3>
+<ul>
+<li><strong>Ctrl+O</strong>: Mở tệp từ máy tính của bạn trong Google Chrome.</li>
+<li><strong>Ctrl+1 đến Ctrl+8</strong>: Chuyển sang tab tại số vị trí đã chỉ định trên thanh tab.</li>
+<li><strong>Ctrl+9</strong>: Chuyển sang tab cuối cùng.</li>
+<li><strong>Ctrl+Nhấp vào links liên kết</strong>: Mở liên kết trong một tab mới dưới nền.</li>
+<li><strong>Ctrl+N</strong>: Mở cửa sổ mới.</li>
+<li><strong>Ctrl+T</strong>: Mở tab mới.</li>
+<li><strong>Ctrl+Shift+N</strong>: Mở cửa sổ mới ở chế độ ẩn danh.</li>
+<li><strong>Ctrl+Shift+Nhấp vào links liên kết</strong>: Mở liên kết trong tab mới và chuyển sang tab vừa mới mở.</li>
+<li><strong>Shift+Nhấp vào links liên kết</strong>: Mở liên kết trong cửa sổ mới.</li>
+<li><strong>Ctrl+Shift+T</strong>: Mở lại tab cuối cùng mà bạn đã đóng. Google Chrome ghi nhớ 10 tab cuối cùng mà bạn đã đóng.</li>
+<li><strong>Nhấn Esc khi kéo tab</strong>: Trả tab lại vị trí ban đầu.</li>
+<li><strong>Backspace</strong> hoặc<strong> Alt+Kết hợp với phím mũi tên trái</strong>: Chuyển về trang trước trong lịch sử duyệt web của bạn cho tab.</li>
+<li><strong>Shift+Backspace</strong> hoặc <strong>Alt+Phím mũi tên phải</strong>: Chuyển đến trang tiếp theo trong lịch sử duyệt web của bạn cho tab.</li>
+<li><strong>F1</strong>: Mở Trung tâm trợ giúp trong tab mới.</li>
+<li><strong>Ctrl+Shift+B</strong>: Chuyển đổi giữa trạng thái bật và tắt của thanh dấu trang.</li>
+<li><strong>Ctrl+H</strong>: Mở trang Lịch sử.</li>
+<li><strong>Ctrl+J</strong>: Mở trang Tài nguyên đã tải xuống.</li>
+<li><strong>Shift+Esc</strong>: Mở Trình quản lý tác vụ.</li>
+<li><strong>Ctrl+Shift+J</strong>: Mở Công cụ dành cho nhà phát triển.</li>
+<li><strong>Ctrl+Shift+Delete</strong>: Mở hộp thoại Xóa dữ liệu duyệt web.</li>
+<li><strong>Ctrl+Shift+M</strong>: Chuyển đổi giữa nhiều người dùng.</li>
+<li><strong>Ctrl+P</strong>: In trang hiện tại của bạn.</li>
+<li><strong>F5 </strong>hoặc <strong>Ctrl+R</strong>: Tải lại trang hiện tại của bạn.</li>
+<li><strong>Esc</strong>: Dừng tải trang hiện tại của bạn.</li>
+<li><strong>Ctrl+F</strong>: Mở thanh tìm kiếm.</li>
+<li><strong>Ctrl+G</strong> hoặc <strong>F3</strong>: Tìm kiếm kết quả phù hợp kế tiếp cho thông tin bạn nhập trong thanh tìm kiếm.</li>
+<li><strong>Ctrl+Shift+G</strong>, <strong>Shift+F3</strong> hoặc <strong>Shift+Enter</strong>: Tìm kiếm kết quả phù hợp trước cho thông tin bạn nhập trong thanh tìm kiếm.</li>
+<li><strong>Ctrl+F5 </strong>hoặc <strong>Shift+F5</strong>: Tải lại trang hiện tại của bạn, bỏ qua nội dung được lưu trong bộ nhớ cache.</li>
+<li><strong>Alt+Nhấp vào links liên kết</strong>: Tải xuống trang đích của liên kết.</li>
+<li><strong>Ctrl+U</strong>: Mở nguồn của trang hiện tại của bạn.</li>
+<li><strong>Ctrl+D</strong>: Lưu trang web hiện tại của bạn dưới dạng dấu trang.</li>
+<li><strong>Ctrl+Shift+D</strong>: Lưu tất cả các trang đang mở dưới dạng dấu trang trong thư mục mới.</li>
+<li><strong>F11</strong>: Mở trang của bạn ở chế độ toàn màn hình: Nhấn lại F11 để thoát khỏi chế độ toàn màn hình.</li>
+<li><strong>Ctrl và + </strong>hoặc N<strong>hấn Ctrl và cuộn con lăn chuột của bạn lên</strong>: Phóng to mọi nội dung trên trang.</li>
+<li><strong>Ctrl và &#8211; </strong>hoặc<strong> Nhấn Ctrl và cuộn con lăn chuột của bạn xuống</strong>: Thu nhỏ mọi nội dung trên trang.</li>
+<li><strong>Ctrl+0</strong>: Trả lại mọi nội dung trên trang về kích thước bình thường.</li>
+<li><strong>Thanh space</strong>: Cuộn xuống trang web.</li>
+<li><strong>Home</strong>: Chuyển đến đầu trang.</li>
+<li><strong>End</strong>: Chuyển đến cuối trang.</li>
+<li><strong>Nhấn Shift và cuộn con lăn chuột của bạn</strong>: Cuộn theo chiều ngang trên trang.</li>
+</ul>
+<hr />
+<p>Để dễ dàng nhớ và phân biệt các bạn hãy xem những phím tắt được phân chia theo dạng bảng như bên dưới đây:</p>
+<h3><strong><span style="color: #ff0000;">Những phím tắt dành cho tab và cửa sổ Google Chrome:</span></strong></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Mở menu Chrome</td>
+<td><strong>Alt + f</strong> hoặc <strong>Alt + e</strong> hoặc <strong>F10 + Enter</strong></td>
+</tr>
+<tr>
+<td>Hiển thị hoặc ẩn thanh Dấu trang</td>
+<td><strong>Ctrl + Shift + b</strong></td>
+</tr>
+<tr>
+<td>Mở Trình quản lý dấu trang</td>
+<td><strong>Ctrl + Shift + o</strong></td>
+</tr>
+<tr>
+<td>Mở trang Lịch sử trong tab mới</td>
+<td><strong>Ctrl + h</strong></td>
+</tr>
+<tr>
+<td>Mở trang Tài nguyên đã tải xuống trong tab mới</td>
+<td><strong>Ctrl + j</strong></td>
+</tr>
+<tr>
+<td>Mở Trình quản lý tác vụ Chrome</td>
+<td><strong>Shift + Esc</strong></td>
+</tr>
+<tr>
+<td>Đặt con trỏ vào mục đầu tiên trong thanh công cụ Chrome</td>
+<td><strong>Shift + Alt + t</strong></td>
+</tr>
+<tr>
+<td>Đặt con trỏ vào mục cuối cùng trong thanh công cụ Chrome</td>
+<td><strong>F10 </strong></td>
+</tr>
+<tr>
+<td>Chuyển con trỏ tới hộp thoại chưa đặt con trỏ (nếu hiển thị)</td>
+<td><strong>F6</strong></td>
+</tr>
+<tr>
+<td>Mở Thanh tìm kiếm để tìm kiếm trên trang hiện tại</td>
+<td><strong>Ctrl + f</strong> hoặc <strong>F3</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến kết quả phù hợp tiếp theo với tìm kiếm trên Thanh tìm kiếm</td>
+<td><strong>Ctrl + g</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến kết quả phù hợp trước với tìm kiếm trên Thanh tìm kiếm</td>
+<td><strong>Ctrl + Shift + g</strong></td>
+</tr>
+<tr>
+<td>Mở Công cụ dành cho nhà phát triển</td>
+<td><strong>Ctrl + Shift + j</strong> hoặc <strong>F12</strong></td>
+</tr>
+<tr>
+<td>Mở tùy chọn Xóa dữ liệu duyệt web</td>
+<td><strong>Ctrl + Shift + Delete</strong></td>
+</tr>
+<tr>
+<td>Mở Trung tâm trợ giúp Chrome trong tab mới</td>
+<td><strong>F1</strong></td>
+</tr>
+<tr>
+<td>Đăng nhập dưới tên người dùng khác hoặc duyệt web với tư cách Khách</td>
+<td><strong>Ctrl + Shift + m</strong></td>
+</tr>
+<tr>
+<td>Mở biểu mẫu phản hồi</td>
+<td><strong>Alt + Shift + i</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><strong><span style="color: #ff0000;">Phím tắt cho thanh địa chỉ trên trình duyệt</span></strong></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Tìm kiếm bằng công cụ tìm kiếm mặc định của bạn</td>
+<td>Nhập cụm từ tìm kiếm <strong>+ </strong><strong>Enter</strong></td>
+</tr>
+<tr>
+<td>Tìm kiếm bằng một công cụ tìm kiếm khác</td>
+<td>Nhập tên một công cụ tìm kiếm rồi nhấn vào<strong> </strong><strong>Tab</strong></td>
+</tr>
+<tr>
+<td>Thêm <code class="notranslate">www.</code> và <code class="notranslate">.com</code> vào tên trang web rồi mở trang web đó trong tab hiện tại</td>
+<td>Nhập tên trang web <strong>+ Ctrl + Enter</strong></td>
+</tr>
+<tr>
+<td>Mở tab mới và thực hiện tìm kiếm trên Google</td>
+<td>Nhập cụm từ tìm kiếm <strong>+ </strong><strong>Alt + Enter</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến thanh địa chỉ</td>
+<td><strong>Ctrl + l</strong> hoặc <strong>Alt + d</strong> hoặc <strong>F6</strong></td>
+</tr>
+<tr>
+<td>Tìm kiếm từ bất cứ đâu trên trang</td>
+<td><strong>Ctrl + k</strong> hoặc <strong>Ctrl + e</strong></td>
+</tr>
+<tr>
+<td>Xóa dự đoán khỏi thanh địa chỉ</td>
+<td><b>Mũi tên xuống</b> để đánh dấu <strong>+ Shift + Delete</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><span style="color: #ff0000;"><strong>Phím tắt cho trang web Google Chrome:</strong></span></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Mở tùy chọn để in trang hiện tại</td>
+<td><strong>Ctrl + p</strong></td>
+</tr>
+<tr>
+<td>Mở tùy chọn để lưu trang hiện tại</td>
+<td><strong>Ctrl + s</strong></td>
+</tr>
+<tr>
+<td>Tải lại trang hiện tại</td>
+<td><strong>F5</strong> hoặc <strong>Ctrl + r</strong></td>
+</tr>
+<tr>
+<td>Tải lại trang hiện tại, bỏ qua nội dung được lưu trong bộ nhớ cache</td>
+<td><strong>Shift + F5</strong> hoặc <strong>Ctrl + Shift + r</strong></td>
+</tr>
+<tr>
+<td>Dừng tải trang</td>
+<td><strong>Esc</strong></td>
+</tr>
+<tr>
+<td>Duyệt qua các mục tiến có thể nhấp</td>
+<td><strong>Tab</strong></td>
+</tr>
+<tr>
+<td>Duyệt qua các mục lùi có thể nhấp</td>
+<td><strong>Shift + Tab</strong></td>
+</tr>
+<tr>
+<td>Mở tệp từ máy tính của bạn trong Chrome</td>
+<td><strong>Ctrl + o +</strong> Chọn tệp</td>
+</tr>
+<tr>
+<td>Hiển thị mã nguồn HTML không thể chỉnh sửa của trang hiện tại</td>
+<td><strong>Ctrl + u</strong></td>
+</tr>
+<tr>
+<td>Lưu trang web hiện tại dưới dạng dấu trang</td>
+<td><strong>Ctrl + d</strong></td>
+</tr>
+<tr>
+<td>Lưu tất cả các tab đang mở dưới dạng dấu trang trong thư mục mới</td>
+<td><strong>Ctrl + Shift + d</strong></td>
+</tr>
+<tr>
+<td>Bật hoặc tắt chế độ toàn màn hình</td>
+<td><strong>F11</strong></td>
+</tr>
+<tr>
+<td>Phóng to mọi nội dung trên trang</td>
+<td><strong>Ctrl và +</strong></td>
+</tr>
+<tr>
+<td>Thu nhỏ mọi nội dung trên trang</td>
+<td><strong>Ctrl và &#8211;</strong></td>
+</tr>
+<tr>
+<td>Trả lại mọi nội dung trên trang về kích thước mặc định</td>
+<td><strong>Ctrl + 0</strong></td>
+</tr>
+<tr>
+<td>Cuộn xuống một trang web, một màn hình tại một thời điểm</td>
+<td><strong>Phím cách</strong> hoặc <strong>PgDn</strong></td>
+</tr>
+<tr>
+<td>Cuộn lên một trang web, một màn hình tại một thời điểm</td>
+<td><strong>Shift + Phím cách</strong> hoặc <strong>PgUp</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến đầu trang</td>
+<td><strong>Trang chủ</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến cuối trang</td>
+<td><strong>Cuối cùng</strong></td>
+</tr>
+<tr>
+<td>Cuộn ngang trên trang</td>
+<td><strong>Shift +</strong> Cuộn con lăn chuột</td>
+</tr>
+<tr>
+<td>Di chuyển con trỏ tới phía trước của từ trước trong trường văn bản</td>
+<td><strong>Ctrl + Mũi tên trái</strong></td>
+</tr>
+<tr>
+<td>Di chuyển con trỏ tới phía sau của từ tiếp theo trong trường văn bản</td>
+<td><strong>Ctrl + Mũi tên phải</strong></td>
+</tr>
+<tr>
+<td>Xóa từ trước trong trường văn bản</td>
+<td><strong>Ctrl + Phím xóa lùi</strong></td>
+</tr>
+<tr>
+<td>Mở Trang chủ trong tab hiện tại</td>
+<td><strong>Alt + Home</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><span style="color: #ff0000;"><strong>Những phím tắt với chuột trên Chrome:</strong></span></h3>
+<table class="nice-table" style="height: 382px;">
+<tbody>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết trong tab hiện tại (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo liên kết vào tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Mở liên kết trong tab nền mới</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết và chuyển đến liên kết đó</td>
+<td style="height: 34px; width: 467px;"><strong>Ctrl + Shift +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết và chuyển đến liên kết đó (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo liên kết vào khoảng trống của thanh tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Mở liên kết trong cửa sổ mới</td>
+<td style="height: 17px; width: 467px;"><strong>Shift +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở tab trong cửa sổ mới (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo tab ra khỏi thanh tab</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Di chuyển tab đến cửa sổ hiện tại (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo tab vào cửa sổ hiện có</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Trả tab lại vị trí ban đầu</td>
+<td style="height: 17px; width: 467px;">Nhấn <strong>Esc</strong> trong khi kéo</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Lưu trang web hiện tại của bạn dưới dạng dấu trang</td>
+<td style="height: 34px; width: 467px;">Kéo địa chỉ web đến Thanh dấu trang</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Tải xuống trang đích của liên kết</td>
+<td style="height: 17px; width: 467px;"><strong>Alt +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 42px;">
+<td style="height: 42px; width: 201px;">Hiển thị lịch sử duyệt web của bạn</td>
+<td style="height: 42px; width: 467px;">Nhấp chuột phải vào biểu tượng Quay lại <img title="Quay lại" src="https://lh3.googleusercontent.com/u8GsV4Wm3XNjCmpc3qkbAIPf2Tmily1qNewCqzlV9L32bAeITAp7AWsD9IvYjJVjfx0=w18-h18" alt="Quay lại" width="18" height="18" /> hoặc Tiếp theo <img title="Tiếp theo" src="https://lh3.googleusercontent.com/2XV3kvUf2fdl-UElXpPIVaqjdNC_fzLbBnWlPmj2_4BnsqX7pYcf-qF0n62Xo2ZxFg=w18-h18" alt="Tiếp theo" width="18" height="18" />hoặc nhấp và giữ biểu tượng Quay lại <img title="Quay lại" src="https://lh3.googleusercontent.com/u8GsV4Wm3XNjCmpc3qkbAIPf2Tmily1qNewCqzlV9L32bAeITAp7AWsD9IvYjJVjfx0=w18-h18" alt="Quay lại" width="18" height="18" /> hoặc Tiếp theo <img title="Tiếp theo" src="https://lh3.googleusercontent.com/2XV3kvUf2fdl-UElXpPIVaqjdNC_fzLbBnWlPmj2_4BnsqX7pYcf-qF0n62Xo2ZxFg=w18-h18" alt="Tiếp theo" width="18" height="18" />,</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Chuyển đổi giữa chế độ phóng to và chế độ cửa sổ</td>
+<td style="height: 34px; width: 467px;">Nhấp đúp vào khoảng trống của thanh tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Phóng to mọi nội dung trên trang</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Cuộn con lăn chuột lên</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Thu nhỏ mọi nội dung trên trang</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Cuộn con lăn chuột xuống</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><strong>XEM THÊM CÁC THỦ THUẬT KHÁC:</strong></td>
+<td><a href="http://localhost:82/demowp/category/thu-thuat/" target="_blank" rel="noopener noreferrer"><span style="font-size: 20px;"><strong>Xem thêm các thủ thuật khác tại đây</strong></span></a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: right;">
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5404"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</title>
+		<link>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/#respond</comments>
+				<pubDate>Fri, 18 Jan 2019 15:00:44 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Windows Server]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5190</guid>
+				<description><![CDATA[<p>Theo bài viết của TECHRUM chia sẻ cho các bạn thì có 6 điều khi sử dụng Máy Tính, Laptop mà có thể bạn đã từng làm hay hiểu sai. Những hiểu lầm này có từ rất lâu nhưng vẫn còn tồn tại cho đến thời điểm này. Mình sẽ thuật lại như sau: Sai [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Theo bài viết của TECHRUM chia sẻ cho các bạn thì có 6 điều khi sử dụng Máy Tính, Laptop mà có thể bạn đã từng làm hay hiểu sai. Những hiểu lầm này có từ rất lâu nhưng vẫn còn tồn tại cho đến thời điểm này. Mình sẽ thuật lại như sau:</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg"><img class="aligncenter size-full wp-image-6748" src="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg" alt="6 đieu hieu sai khi su dung may tinh" width="719" height="464" srcset="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg 719w, http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh-300x194.jpg 300w" sizes="(max-width: 719px) 100vw, 719px" /></a></p>
+<h2><strong><span style="font-size: 24px;">Sai lầm 1: Sử dụng nút Refesh sẽ làm tăng tốc Windows</span></strong></h2>
+<p><b>Người dùng hiểu:</b> Nhấn nút <b>Refesh </b>trong <b>Windows </b>sẽ làm mượt máy tính. Do đó máy tính sẽ hoạt động nhanh và mạnh hơn.</p>
+<p><b>Suy nghĩ đúng:</b> Tác dụng của refesh là gì? Bản chất của <b>refesh</b> chỉ là cập nhật mọi thay đổi diễn ra trên <b>Desktop</b>, ngoài ra tính năng này không mang bất kỳ ý nghĩa gì. Ví dụ: Khi bạn sử dụng các thao tác thay đổi tên thư mục nhưng Windows chưa hiển thị, thì refesh sẽ khắc phục điều đó.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/brrwx.jpg" alt="Sử dụng nút Refesh sẽ làm tăng tốc Windows" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/brrwx.jpg" /></div>
+<p>Cách duy nhất để làm cho máy tính bạn hoạt động nhanh hơn chính là cài lại phiên bản Windows phù hợp, nâng cấp cấu hình. Sự thật là: thay vì làm máy tính chạy nhanh hơn, <b>refesh sẽ làm máy tính chậm hơn.</b> Để làm mới lại các biểu tượng trên Desktop, CPU phải hao tốn rất nhiều tài nguyên. Điều này có thể làm chậm các tiến trình khác của bạn.</p>
+<p><img class="bbCodeImage LbImage aligncenter" src="http://www.techrum.vn/chevereto/images/2019/01/16/rQ8R2.jpg" alt="[​IMG]" data-url="http://www.techrum.vn/chevereto/images/2019/01/16/rQ8R2.jpg" /></p>
+<div><i>Theo tác giả của Hongkiat, sau khi click refresh 5 lần thì CPU Usage lên đến 76%</i>​</div>
+<h2><span style="font-size: 24px;"><strong>Sai lầm 2: RAM nhiều thì tốc độ PC sẽ mạnh hơn</strong></span></h2>
+<p><b>Người dùng hiểu: RAM càng cao thì máy tính của bạn sẽ chạy càng nhanh</b></p>
+<p><b>Suy nghĩ đúng:</b> Sự thật là RAM nhiều không làm cho máy tính của các bạn chạy nhanh hơn, mà nó chỉ giúp cho máy tính chạy được nhiều chương trình hơn. Tăng RAM chỉ tạo nên sự khác biệt một chút, khi lượng RAM hiện tại của bạn không đủ để xử lý các phần mềm.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r2e3k.jpg" alt="RAM nhiều thì tốc độ PC sẽ mạnh hơn" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r2e3k.jpg" /></div>
+<p>Giả sử bạn thường mở nhiều phần mềm yêu cầu<b> 3GB RAM</b>, nhưng máy tính bạn chỉ có 2GB RAM mà thôi. Trong trường hợp đó máy tính của bạn sẽ rất chậm, vì không đủ dung lượng RAM để xử lý phần mềm. Để tốc độ xử lý phần mềm đó nhanh hơn, bạn có thể nâng cấp lên RAM 4GB. Tuy nhiên, ngay cả khi bạn tăng <b>RAM 8GB</b> thì tốc độ vẫn sẽ như <b>RAM 4GB</b> mà thôi. Nếu bạn quan tâm đến tốc độ thì hãy nâng cấp loại RAM lên phiên bản cao hơn, DDR3 lên DDR4&#8230;</p>
+<h2><span style="font-size: 24px;"><strong>Sai lầm 3: Bắt buộc phải ngắt USB ở chế độ an toàn.</strong></span></h2>
+<p><b>Người dùng hiểu:</b> Muốn ngắt USB, bạn hãy click phải vào USB chọn Eject. Hoặc ngắt USB như hình dưới:</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4BId.jpg" alt="Bắt buộc phải ngắt USB ở chế độ an toàn" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4BId.jpg" /></div>
+<p><b>Suy nghĩ đúng:</b> Nếu USB đang di chuyển dữ liệu, bạn không nên rút USB ra. Còn lại nếu chỉ đang cắm vào máy thì bất kỳ trường hợp nào bạn cũng có thể rút ra khỏi máy tính. Thao tác trên cũng chỉ là ngắt kết nối USB với máy tính mà thôi.</p>
+<p>Việc rút USB đột ngột gây ra hỏng file đa số thường xảy ra trên hai hệ điều hành là MacOS và Linux. Tuy nhiên câu hỏi đặt ra ở đây là: tại sao Windows lại không bị vấn đề này? Câu trả lời là do Microsoft đã vô hiệu hóa tính năng ghi bộ nhớ cache cho các ổ đĩa mà hệ điều hành coi là có thể tháo rời được. Windows cung cấp cho bạn một tùy chọn để cải thiện hiệu suất (nên chọn) và hoặc loại bỏ nhanh chóng. Bạn có thể vào xem tùy chọn này bằng cách vào <b>Device Manager &gt; Disk Drives &gt; Name of drive &gt; Properties &gt; Policies</b>. Có thể máy tính Windows của bạn đã cài đặt loại bỏ nhanh được kích hoạt theo mặc định.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/16/r06zP.jpg" alt="hiểu sai khi sử dụng Máy Tính" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/16/r06zP.jpg" />Tuy là như thế nhưng theo mình thì mình vẫn khuyến khích các bạn nên Eject USB trước khi rút ra khỏi máy các bạn nhé!</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 4: Phần mềm diệt Virus sẽ bảo vệ thiết bị khỏi tất cả Virus.</span></strong></h2>
+<p><b>Người dùng:</b> Các phần mềm diệt Virus có thể chăm sóc tất cả các loại vi-rút và sẽ bảo vệ bạn ngay cả khỏi các mối đe dọa mới nhất. Chỉ cần cài đặt phần mềm chống vi-rút và bạn đã an toàn.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4vGR.jpg" alt="Phần mềm diệt Virus" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4vGR.jpg" />​<b>Suy nghĩ đúng:</b> Các chương trình diệt Virus không thể bảo vệ hoàn toàn thiết bị của bạn. Có hai mối đe dọa chính khiến phần mềm diệt virus không thể làm gì được, đó chính là Virus online trên trình duyệt hay virus mà bạn cho phép chạy với quyền Administrator (Quyền cao nhất của Windows).</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 5: Làm sạch thùng rác (Recycle Bin) sẽ xóa vĩnh viễn tập tin</span></strong></h2>
+<p><b>Người dùng hiểu:</b> Để xóa một dữ liệu vĩnh viễn, chỉ cần xóa nó khỏi ổ đĩa và sau đó xóa nó hoàn toàn khỏi Thùng rác.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4Dd8.jpg" alt="hiểu sai khi dùng laptop" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4Dd8.jpg" />​<b>Suy nghĩ đúng:</b> Nhiều người tin rằng, một khi dùng tính năng xóa vĩnh viễn tập tin trong <b>Recycle Bin</b> thì dữ liệu của họ sẽ bị xóa vĩnh viễn. Điều này không đúng! Khi bạn xóa dữ liệu khỏi thùng rác, bất kỳ hệ điều hành nào cũng chỉ đánh dấu nó đã bị xóa và giải phóng không gian bộ nhớ. Bạn vẫn có thể phục hồi bằng các phần mềm chuyên dụng như: Recuva&#8230;</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 6: Chế độ ẩn danh trong trình duyệt sẽ giúp bản ẩn danh hoàn toàn.</span></strong></h2>
+<p><b>Người dùng hiểu: </b>Nếu không muốn bị theo dõi hoặc để lại bất kỳ thông tin gì thì bạn nên sử dụng trình duyệt ở chế độ ẩn danh.</p>
+<p><img class="aligncenter" src="https://imgur.com/t7FPw9A.png" alt="Chế độ ẩn danh trong trình duyệt" width="1920" height="1040" /></p>
+<p><b>Suy nghĩ đúng:</b> Dù bạn có sử dụng chế độ ẩn danh thì trình duyệt và nhà mạng vẫn theo dõi được vị trí, website bạn truy cập cũng như thông tin của bạn. Bạn hãy bật chế độ ẩn danh, sau đó tìm kiếm với từ khóa bất kỳ trên Google. Kéo xuống dưới cùng, bạn sẽ thấy vị trí của bạn được <b>Google </b>xác định là ở đâu. Nếu bạn muốn ẩn danh hoàn toàn thì hãy sử dụng <b>VPN</b>.</p>
+<p>Bạn đã Hãy chia sẻ cho mọi người cùng biết nếu bạn thấy bài viết nói về những nhìn nhận hiểu sai khi sử dụng Máy tính này nhé!</p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+</ul>
+<p style="text-align: right;">via <a href="http://www.techrum.vn/threads/6-diu-ban-co-th-hiu-sai-khi-s-dung-pc.201514/?fbclid=IwAR2D6Gmd9uKTZw6gsA3ZPHSlots6s76z84OcF-MJXgx_UCfPszMgOVVm3f8">techrum</a></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5190"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>ESET NOD32 Antivirus V11.2.49.0 Final + License Key 2019 Mới Nhất</title>
+		<link>http://localhost:82/demowp/anit-virut/eset-nod32-antivirus-v11-2-49-0-final-license-repack-2018-moi-nhat/</link>
+				<comments>http://localhost:82/demowp/anit-virut/eset-nod32-antivirus-v11-2-49-0-final-license-repack-2018-moi-nhat/#comments</comments>
+				<pubDate>Thu, 20 Sep 2018 01:07:32 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Anit-Virut]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[anti-virut]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Diệt Virut]]></category>
+		<category><![CDATA[Eset]]></category>
+		<category><![CDATA[Eset Internet]]></category>
+		<category><![CDATA[Eset Internet Security]]></category>
+		<category><![CDATA[Eset Nod32]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3079</guid>
+				<description><![CDATA[<p>ESET NOD32 Antivirus là phần mềm diệt virus bảo vệ máy tính được trang bị nhiều tính năng bảo vệ độc đáo. Nó có thể phát hiện và diệt ngay nhiều loại virus, worms, trojans, phần mềm gián điệp và rootkit ngay khi chúng vừa xuất hiện giúp bạn an toàn hơn trước các mối de dọa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/anit-virut/eset-nod32-antivirus-v11-2-49-0-final-license-repack-2018-moi-nhat/">ESET NOD32 Antivirus V11.2.49.0 Final + License Key 2019 Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>ESET NOD32 Antivirus</strong> là phần mềm diệt virus bảo vệ máy tính được trang bị nhiều tính năng bảo vệ độc đáo. Nó có thể phát hiện và diệt ngay nhiều loại virus, worms, trojans, phần mềm gián điệp và rootkit ngay khi chúng vừa xuất hiện giúp bạn an toàn hơn trước các mối de dọa đến từ Internet.</p>
+<p><img class="aligncenter size-full wp-image-4864" src="http://localhost:82/demowp/wp-content/uploads/2018/09/eset-nod32.jpg" alt="" width="648" height="411" /></p>
+<p><strong>ESET NOD32 Antivirus 11 </strong>không ảnh hưởng đến hiệu suất máy tính. ESET Nod32 là phần mềm diệt Virus mạnh, mượt và nhanh nhất hiện nay. Điểm mình đánh giá cao ở ESET là nó rất nhẹ nhưng vô cùng mạnh mẽ.</p>
+<p><strong>ESET NOD32 Antivirus 11</strong> sử dụng tính năng bảo vệ đa lớp kết hợp với công nghệ bảo mật mạng tiên tiến Heuristic giúp phát hiện ra những loại virus mới và chưa từng xuất hiện. Điều này rất có lợi khi máy tính của bạn sẽ được chủ động bảo vệ trước các mối đe dọa từ Internet.</p>
+<h1><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Những tính năng hữu ích của ESET Nod32 Antivirus</strong></span></em></span></h1>
+<ul>
+<li>Ngăn chặn các mối đe dọa mới nhất chủ động, trước khi các nhà cung cấp khác đã ban hành một chữ ký, tối đa hóa bảo vệ bạn chống lại các mối đe dọa mới và chưa biết.​</li>
+<li>Quét và làm sạch lưu lượng truy cập Internet và thư điện tử, ngay cả khi nó được mã hóa SSL, vì vậy email của bạn luôn luôn an toàn.​</li>
+<li>Giữ bạn an toàn khỏi virus, phần mềm gián điệp, trojan, ăn cắp mật khẩu và các mối đe dọa phần mềm độc hại khác.​</li>
+<li>Ngăn chặn các mối đe dọa xâm nhập vào thông qua các thiết bị di động để bạn có thể thoải mái chia sẻ tập tin.​</li>
+<li>Tích hợp SysInspector và SysRescue giúp đơn giản hóa chẩn đoán và phục hồi hệ thống</li>
+<li>Tự bảo vệ ngăn chặn phần mềm độc hại làm giảm mức bảo vệ.​</li>
+<li>Cập nhật chữ ký âm thầm khi cần thiết và sẽ không làm chậm hệ thống của bạn.​</li>
+</ul>
+<h1><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Những tính năng mới trong Eset Nod32 Antivirus 11</strong></span></em></span></h1>
+<ul>
+<li><strong>ESET Live Grid</strong> : Light FootprQuét bằng điện toán đám mây</li>
+<li><strong>Chế độ tiết kiệm năng lượng :</strong> Xác định thời điểm máy tính xách tay đang chạy trên pin và tự động trì hoãn các tác vụ nhằm tiết kiệm pin.</li>
+<li><strong>Enhanced Media Control: </strong>Tự động quét tất cả các ổ USB flash, thẻ nhớ và đĩa CD / DVD.</li>
+<li><strong>Chức năng HIPS nâng cao</strong></li>
+<li><strong>Phát hiện thông minh</strong></li>
+<li><strong>Light Footprint</strong></li>
+<li><strong>Nhiều tính năng mới khác&#8230;</strong></li>
+</ul>
+<h1><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Yêu cầu hệ thống:</strong></span></em></span></h1>
+<ul>
+<li>Bộ vi xử lý hỗ trợ: Intel® hoặc AMD x86-x64.</li>
+<li>Hệ điều hành: Microsoft® Windows® 10, 8.1, 8, 7, Vista.</li>
+<li>Hỗ trợ cả 2 phiên bản 32bit và 64bit.</li>
+</ul>
+<hr />
+<h1 style="text-align: center;"><span style="font-size: 24px;"><em><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Tải Về Phần Mềm Eset Nod32 Antivirus</span></strong></span></em></span></h1>
+<p style="text-align: center;"><span style="font-size: 20px;"><strong>(Update bản Eset Nod32 Antivirus Premium 11.2.49.0 | 21/01/2019)</strong></span></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=18-C1VRU04ofdcm1s_Wzy3UyBv2jMRLUV" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về tại đây"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-shield" style="font-size:20px;color:#ffffff"></i> Tải Eset Nod32 Antivirus Premium Mới nhất <small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<hr />
+<h1 style="text-align: center;"><span style="font-size: 24px;"><em><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Xem key Eset Nod32 Antivirus để kích hoạt</span></strong></span></em></span></h1>
+<p style="text-align: center;"><a href="http://bit.ly/2RF3Bah" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về tại đây"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-shield" style="font-size:20px;color:#ffffff"></i> Key Eset Nod32 Antivirus <small style="padding-bottom:8px;color:#ffffff">Key dùng để kích hoạt</small></span></a></p>
+<p style="text-align: center;">thanks <strong>Nguyen Cao Nguyen</strong></p>
+<hr />
+<h1><span style="text-decoration: underline;"><strong><span style="color: #ff0000; font-size: 20px; text-decoration: underline;">Một số ưu điểm khác của Eset Nod32 Antivirus:</span></strong></span></h1>
+<ul>
+<li>Giao diện đơn giản, thân thiện, dễ dàng sử dụng với hầu hết người dùng</li>
+<li>Bảo vệ thời gian thực rất mạnh với công nghệ Heuristic, có thể phát hiện những virus chưa từng xuất hiện</li>
+<li>Thời gian quét cực nhanh, gấp nhiều lần các đối thủ</li>
+<li>Vượt qua xuất sắc các bài thử nghiệm của Virus bullentin, được các tạp chí công nghệ PCWorld, Cnet đánh giá rất cao</li>
+<li>Tiêu tốn rất ít tài nguyên hệ thống (CPU, RAM) vì ứng dụng dạng service, không lo màn hình xanh, xung đột hệ thống, xung đột phần mềm, thích hợp đa nền tảng từ XP tới W10</li>
+<li>Tường lửa thông minh giúp ngăn cản người dùng truy cập trái phép máy tính, giám sát lưu lượng mạng</li>
+<li>Chế độ Gamer mode, khi sang full màn hình, giúp chuyển sang chế độ im lặng, giúp tiết kiệm tài nguyên hệ thống hoặc tập trung vào công việc không bị popup</li>
+<li>Chế độ nâng cao dành cho người dùng chuyên sâu, chế độ Parental Control kiểm soát con trẻ.</li>
+</ul>
+<p>Qua bài viết mình đã giới thiệu về Eset Nod32 Antivirus cho các bạn. Nhờ phần mềm này các bạn không phải lo gì nhiều nữa gì nó giúp người dùng bảo mật cho hầu hết các mối nguy hại trên môi trường internet như các ứng dụng nguy hiểm, hay những nguồn virut lạ khi định xâm nhập từ usb vào máy.</p>
+<p>Hãy tải và cài cho máy ngay các bạn nhé!</p>
+<p style="text-align: center;"><strong><span style="color: #ff0000; font-size: 32px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div id="eJOY__extension_root" style="all: unset;"></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3079"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/anit-virut/eset-nod32-antivirus-v11-2-49-0-final-license-repack-2018-moi-nhat/">ESET NOD32 Antivirus V11.2.49.0 Final + License Key 2019 Mới Nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/anit-virut/eset-nod32-antivirus-v11-2-49-0-final-license-repack-2018-moi-nhat/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Tổng hợp 9 cách mở hộp thoại CMD (Command Prompt) dễ dàng, dễ hiểu trên win 10</title>
+		<link>http://localhost:82/demowp/kien-thuc/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/#respond</comments>
+				<pubDate>Mon, 20 Aug 2018 23:44:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[CMD]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2017/06/01/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/</guid>
+				<description><![CDATA[<p>Win 10 hiện nay đang rất phát triển, đôi khi người dùng cần phải mở Command Prompt để làm việc. Bài viết này mình xin hướng dẫn tổng cộng 9 cách để mở Command Prompt (hay viết tắt là cmd ) trên win 10.   1. Mở Command Prompt bằng cách chuột phải vào biểu tượng start hoặc [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/">Tổng hợp 9 cách mở hộp thoại CMD (Command Prompt) dễ dàng, dễ hiểu trên win 10</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1">
+<p><span style="font-size: large;">Win 10 hiện nay đang rất phát triển, đôi khi người dùng cần phải mở Command Prompt để làm việc.</span></p>
+</div>
+<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1">
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-EiNDsmn2IOY/WS-sceOIvgI/AAAAAAAADDs/4BB_7Fw51aYH0JVro15kzoRNDcLJnt0FwCLcB/s1600/advanced-cmd-windows-10.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-EiNDsmn2IOY/WS-sceOIvgI/AAAAAAAADDs/4BB_7Fw51aYH0JVro15kzoRNDcLJnt0FwCLcB/s640/advanced-cmd-windows-10.jpg" width="640" height="474" border="0" data-original-height="726" data-original-width="977" /></a></div>
+</div>
+<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Bài viết này mình xin hướng dẫn tổng cộng 9 cách để mở Command Prompt (hay viết tắt là cmd ) trên win 10.</span></div>
+<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">1. Mở Command Prompt bằng cách chuột phải vào biểu tượng start hoặc tổ hợp phím Win+X</span></b></div>
+<div style="color: #141414; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1">
+<p><b><span style="font-size: large;"> </span></b></p>
+<div style="clear: both; text-align: center;"><b><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-fXnBgbR04Kc/WS-nARtB0pI/AAAAAAAADCU/-tLUNaNUC6Mo_8i0ZNKKp9vgpQYgSG4IgCLcB/s1600/bandicam%2B2017-06-01%2B11-33-03-168.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-fXnBgbR04Kc/WS-nARtB0pI/AAAAAAAADCU/-tLUNaNUC6Mo_8i0ZNKKp9vgpQYgSG4IgCLcB/s640/bandicam%2B2017-06-01%2B11-33-03-168.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></b></div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">bạn nhấn tổ hợp phím <b>Win + X </b>hoặc chuột phải vào nút <b>start,</b> chọn mục <b>Command Prompt</b> (nếu muốn khởi động ở chế độ thường) hoặc <b>Command Prompt </b>(Admin) nếu muốn mở công cụ này ở chế độ Admin nha.</span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="font-weight: normal;"><span style="font-size: large;"> </span></div>
+<div style="font-weight: normal;"><span style="font-size: large;">H</span><span style="font-size: large;"><span style="font-family: 'helvetica' , 'arial' , sans-serif; font-size: 14.6667px;"><span style="font-size: 22px;">oặc các bạn có thể dùng tổ hợp phím <b>win + X </b>rồi nhấn <b>A</b> để mở theo quyền admin, và nhấn <b>Win + X</b> rồi nhấn<b> C</b> để mở theo quyền thông thường nhé&#8230;</span></span></span></div>
+<div></div>
+</div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">2. Mở Command Prompt (cmd ) từ hộp thoại Run</span></b></div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"> </span></b></div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Trên màn hình nhấn tổ hợp phím <b>Win + R</b> để mở hộp thoại Run. Sau đó nhập <b>cmd</b> vào hộp thoại và chọn OK hoặc nhấn enter.</span></div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; font-weight: bold; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-5jDd7OM4m-4/WS-nAmjh26I/AAAAAAAADDg/_6n3sKmEuAU1STvcuyAfgd80JUxbK7FtQCEw/s1600/bandicam%2B2017-06-01%2B11-44-15-823.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-5jDd7OM4m-4/WS-nAmjh26I/AAAAAAAADDg/_6n3sKmEuAU1STvcuyAfgd80JUxbK7FtQCEw/s640/bandicam%2B2017-06-01%2B11-44-15-823.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="font-weight: normal; margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">3. Mở Command Prompt bằng Task Manager</span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Chuột phải vô thanh công cụ và chọn<b> Task Manager</b> sau đó chọn <b>File</b> rồi chọn <b>Run New Task</b>.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-4sE6OT6C68U/WS-nAvyFM0I/AAAAAAAADDg/i7v8T7HW2wkEcLQXEgwEe5uKbFuPU3vTwCEw/s1600/bandicam%2B2017-06-01%2B11-47-32-946.jpg"><span style="font-size: large;"><img src="https://2.bp.blogspot.com/-4sE6OT6C68U/WS-nAvyFM0I/AAAAAAAADDg/i7v8T7HW2wkEcLQXEgwEe5uKbFuPU3vTwCEw/s640/bandicam%2B2017-06-01%2B11-47-32-946.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-x15kC_ACSg4/WS-nBH1fKuI/AAAAAAAADDg/N3NucmapQxMN3q-o0JIUn8U94hKFY9GvgCEw/s1600/bandicam%2B2017-06-01%2B11-47-41-003.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-x15kC_ACSg4/WS-nBH1fKuI/AAAAAAAADDg/N3NucmapQxMN3q-o0JIUn8U94hKFY9GvgCEw/s640/bandicam%2B2017-06-01%2B11-47-41-003.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Trên màn hình xuất hiện hộp thoại <b>Create new task</b>, nhập cmd hoặc cmd.exe, chọn OK để mở cửa sổ dòng lệnh Command Prompt ở chế độ thường.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-X9HgVkodz48/WS-nBIEiC7I/AAAAAAAADDg/vvV0vKDINC0FZI2P5Uw7xRUeqEhW1FnnwCEw/s1600/bandicam%2B2017-06-01%2B11-48-24-351.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-X9HgVkodz48/WS-nBIEiC7I/AAAAAAAADDg/vvV0vKDINC0FZI2P5Uw7xRUeqEhW1FnnwCEw/s640/bandicam%2B2017-06-01%2B11-48-24-351.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Nếu muốn chạy cửa sổ dòng lệnh ở chế độ Admin, bạn chỉ cần đánh dấu tích vào hộp thoại <b>Create this task with administrative . </b></span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"> </span></b></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-i5gg3Hp-7BM/WS-nBVc9ukI/AAAAAAAADDg/kMJ9NPlZFO4JL8XB8rsKTnrFNBrYzXjkwCEw/s1600/bandicam%2B2017-06-01%2B11-48-33-428.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-i5gg3Hp-7BM/WS-nBVc9ukI/AAAAAAAADDg/kMJ9NPlZFO4JL8XB8rsKTnrFNBrYzXjkwCEw/s640/bandicam%2B2017-06-01%2B11-48-33-428.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">4. Mở CMD ở chế độ Admin trên Task Manager với ctrl + click</span></b></div>
+<div style="display: inline !important; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"><br />
+Nếu muốn mở Command Prompt (cmd ) ở chế độ Admin trên <b>Task Manager</b> , bạn nhấn vào <b>File</b> và giữ phím <b>Ctrl</b> đồng thời chọn <b>Run New Task. </b>Như vậy cửa số dòng lệnh Command Prompt sẽ tự động khởi chạy ở chế độ Admin.</span></div>
+</div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="display: inline !important; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+</div>
+<div style="clear: both; text-align: center;"><span style="font-size: large;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-fTznD8wEADQ/WS-nB7T828I/AAAAAAAADDg/prAsq9rlckcQijP0t_bIFjdwFkr585cEQCEw/s1600/bandicam%2B2017-06-01%2B11-56-29-359.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-fTznD8wEADQ/WS-nB7T828I/AAAAAAAADDg/prAsq9rlckcQijP0t_bIFjdwFkr585cEQCEw/s640/bandicam%2B2017-06-01%2B11-56-29-359.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></a></span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="display: inline !important; margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"><b>5. Mở trên khung Search</b></span></div>
+<div data-redactor="1"></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Nhấn win + s để hiện khung search. sau đó nhập <b>&#8220;cmd&#8221;</b> vào khung Search.</span></div>
+<p>&nbsp;</p>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Để chạy với quyền admin, bạn click chuột phải vào nó rồi chọn <b>run as adminítrator .</b></span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"></div>
+<div style="clear: both; text-align: center;"><span style="font-size: large;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-57W9vy649UY/WS-nB_K4XkI/AAAAAAAADDg/bIIlaFjmiVw7dBiqCXngOdfSBVZXt2UqQCEw/s1600/bandicam%2B2017-06-01%2B12-05-10-574.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-57W9vy649UY/WS-nB_K4XkI/AAAAAAAADDg/bIIlaFjmiVw7dBiqCXngOdfSBVZXt2UqQCEw/s640/bandicam%2B2017-06-01%2B12-05-10-574.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></a></span></div>
+</div>
+</div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="display: inline !important; margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Thêm 1 cách  là  click vào biểu tượng micro trên khung Search trong Cortana và nói<b> &#8220;Khởi động Command Prompt&#8221; </b>nhé.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"><b>6. Mở Command Prompt( cmd) </b><b><b>bằng thanh địa chỉ Explorer</b></b></span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><b><b><span style="font-size: large;"> </span></b></b></b></div>
+<p><span style="font-size: large;">Mở <b>File Explorer </b>lên rồi click vào thanh địa chỉ (hoặc nhấn tổ hợp phím Alt + D), nhập<b> cmd</b> và nhấn<b> enter.</b></span></p>
+<p>&nbsp;</p>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Khi đó Command Prompt sẽ tự động xuất hiện và hiển thị đường dẫn của thư mục vừa được nhập lệnh.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-g5qLULbvop8/WS-nB15JV6I/AAAAAAAADDg/s4njmI933XIJVJYsAkp4bQ94ScCM_Co7QCEw/s1600/bandicam%2B2017-06-01%2B12-12-24-089.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-g5qLULbvop8/WS-nB15JV6I/AAAAAAAADDg/s4njmI933XIJVJYsAkp4bQ94ScCM_Co7QCEw/s640/bandicam%2B2017-06-01%2B12-12-24-089.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-rdStuO53F5U/WS-nCvstymI/AAAAAAAADDg/DiY--gztLfAyXLOeOtUCT6fPUpPYilyngCEw/s1600/bandicam%2B2017-06-01%2B12-12-59-325.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-rdStuO53F5U/WS-nCvstymI/AAAAAAAADDg/DiY--gztLfAyXLOeOtUCT6fPUpPYilyngCEw/s640/bandicam%2B2017-06-01%2B12-12-59-325.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="font-weight: bold; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">7. Mở Command Prompt trên File Explorer</span></b></div>
+<div style="font-weight: bold; margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"> </span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Mở<b> File Explorer</b>, sau đó truy cập theo đường dẫn <b>C:WindowsSystem32 </b></span></div>
+<p><span style="font-size: large;">Nhấn chuột phải  chọn <b>run as administrator</b> để mở cmd với quyền Admin</span></p>
+</div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-yn6xYuJf4js/WS-nC8Ymg5I/AAAAAAAADDg/jhm7FlegxqoPRjha3vcOwxMsbCcFy9xrACEw/s1600/bandicam%2B2017-06-01%2B12-16-06-509.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-yn6xYuJf4js/WS-nC8Ymg5I/AAAAAAAADDg/jhm7FlegxqoPRjha3vcOwxMsbCcFy9xrACEw/s640/bandicam%2B2017-06-01%2B12-16-06-509.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">8. Mở Command Prompt trên Menu Start</span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"> </span></b></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Nhấn vào nút <b>start</b> , kéo chuột xuống tìm <b>Windows System</b>, sau đó click chuột vào <b>Command Prompt.</b></span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;"> </span></b></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-hUjd6lhQA0w/WS-nDNpQUnI/AAAAAAAADDg/N_32GvMFyvwnazXhtNtY3sUPzn81AYOSQCEw/s1600/bandicam%2B2017-06-01%2B12-20-03-231.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-hUjd6lhQA0w/WS-nDNpQUnI/AAAAAAAADDg/N_32GvMFyvwnazXhtNtY3sUPzn81AYOSQCEw/s640/bandicam%2B2017-06-01%2B12-20-03-231.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><b><span style="font-size: large;">9. Tạo shortcut cho Command Prompt trên màn hình Desktop</span></b></div>
+<div data-redactor="1"></div>
+</div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Kích phải chuột vào bất kỳ khoảng trống nào trên màn hình Desktop. Sau đó chọn <b>New =&gt; Shortcut</b>.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-78__S32jFYs/WS-nDesLCDI/AAAAAAAADDg/R3wOVC8UOKktaRQnBSHi3K0vRFHOODn0ACEw/s1600/bandicam%2B2017-06-01%2B12-21-46-540.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-78__S32jFYs/WS-nDesLCDI/AAAAAAAADDg/R3wOVC8UOKktaRQnBSHi3K0vRFHOODn0ACEw/s640/bandicam%2B2017-06-01%2B12-21-46-540.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1">
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Trong hộp thoại <b>Type the location of the item</b>, bạn nhập &#8220;<b>cmd.exe</b>&#8220;. </span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">tiếp tục nhấn Next &#8211;&gt; đặt tên rồi chọn Finish.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-Ag3bfQoUuJo/WS-nDjKMxKI/AAAAAAAADDg/l6BV3TtrEI4jXkT17T8ikK6rtjraTXhaQCEw/s1600/bandicam%2B2017-06-01%2B12-22-09-379.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-Ag3bfQoUuJo/WS-nDjKMxKI/AAAAAAAADDg/l6BV3TtrEI4jXkT17T8ikK6rtjraTXhaQCEw/s640/bandicam%2B2017-06-01%2B12-22-09-379.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;">Nếu muốn khởi chạy<b> Command Prompt</b> ở chế độ <b>Admin</b>, bạn kích chuột phải vào shortcut vừa tạo và chọn <b>Properties</b>. Trên màn hình xuất hiện hộp thoại, click vào <b>Advance</b>, đánh dấu tích vào mục<b> Run as administrator</b>.</span></div>
+<div style="margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-9l8wwkc6V64/WS-nD3KNJ0I/AAAAAAAADDg/we-WwZxnr1wm47rzx-UXT7RzaRUWOQ8OQCEw/s1600/bandicam%2B2017-06-01%2B12-27-15-568.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-9l8wwkc6V64/WS-nD3KNJ0I/AAAAAAAADDg/we-WwZxnr1wm47rzx-UXT7RzaRUWOQ8OQCEw/s640/bandicam%2B2017-06-01%2B12-27-15-568.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-eTv7fYlIVr8/WS-nEIcTu-I/AAAAAAAADDg/bdNLfj175J0aZwZuoev2wAK8FLxKBKTUgCEw/s1600/bandicam%2B2017-06-01%2B12-27-49-298.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-eTv7fYlIVr8/WS-nEIcTu-I/AAAAAAAADDg/bdNLfj175J0aZwZuoev2wAK8FLxKBKTUgCEw/s640/bandicam%2B2017-06-01%2B12-27-49-298.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="margin: 0px; padding: 0px; text-align: center;" data-redactor="1"><span style="color: #ff0000; font-size: 28px;"><b>CHÚC CÁC BẠN THỰC HIỆN THÀNH CÔNG NHÉ !!!</b></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="192"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/">Tổng hợp 9 cách mở hộp thoại CMD (Command Prompt) dễ dàng, dễ hiểu trên win 10</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/tong-hop-9-cach-mo-hop-thoai-cmd-command-prompt-de-dang-de-hieu-tren-win-10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tải Và Cài Đặt Eset Internet Security 11 Full License Key Active Online</title>
+		<link>http://localhost:82/demowp/anit-virut/tai-va-cai-dat-eset-internet-security-11-full-license-key-active-online/</link>
+				<comments>http://localhost:82/demowp/anit-virut/tai-va-cai-dat-eset-internet-security-11-full-license-key-active-online/#respond</comments>
+				<pubDate>Tue, 14 Aug 2018 00:40:15 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Anit-Virut]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Network & Security]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Active]]></category>
+		<category><![CDATA[Diệt Virut]]></category>
+		<category><![CDATA[Eset]]></category>
+		<category><![CDATA[Eset Internet]]></category>
+		<category><![CDATA[Eset Internet Security]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Version 11]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3052</guid>
+				<description><![CDATA[<p>Eset Internet Security 11 là phiên bản mới nhất trong thời điểm hiện tại. Đây phần mềm diệt virus nhẹ và chất lượng tốt và rất ổn định. Eset Internet Security 11 phòng chống được Virus, phần mềm gián điệp, tường lửa, bảo mật thanh toán tài chính, chống trộm… Đây được xem là các [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/anit-virut/tai-va-cai-dat-eset-internet-security-11-full-license-key-active-online/">Tải Và Cài Đặt Eset Internet Security 11 Full License Key Active Online</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Eset Internet Security 11</strong> là phiên bản mới nhất trong thời điểm hiện tại. Đây phần mềm diệt virus nhẹ và chất lượng tốt và rất ổn định.</p>
+<p><img class="size-full wp-image-3053 aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-13_091841.png" alt="" width="1008" height="568" /></p>
+<p></p>
+<p><strong>Eset Internet Security 11</strong> phòng chống được Virus, phần mềm gián điệp, tường lửa, bảo mật thanh toán tài chính, chống trộm… Đây được xem là các tính năng chính mà phần mềm bảo mật ESET Internet Security mang đến cho người dùng vô cùng chất lượng và uy tín.</p>
+<h1><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Những tính năng hữu ích của ESET Internet Security</strong></span></em></span></h1>
+<ul>
+<li><strong>Computer Protection</strong>: Giúp bạn bật tính năng bảo vệ theo thời gian thực.</li>
+<li><strong>Internet Protection</strong>: Giúp bạn tùy chỉnh các tính năng bảo mật trên internet bao gồm web, email, chống spam và lừa đảo trực tuyến.</li>
+<li><strong>Network Protection</strong>: Giúp bạn tùy chỉnh các bảo mật về an ninh mạng như tường lửa cá nhân và tấn công mạng có chủ đích.</li>
+<li><strong>Bảo vệ thanh toán trực tuyến.</strong></li>
+<li><strong>Các tùy chỉnh nâng cao khác.</strong></li>
+</ul>
+<p><img class="size-full wp-image-3077 aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/08/2018-08-15_010556.png" alt="" width="900" height="620" /></p>
+<h1><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Yêu cầu hệ thống:</strong></span></em></span></h1>
+<ul>
+<li>Bộ vi xử lý hỗ trợ: Intel® hoặc AMD x86-x64.</li>
+<li>Hệ điều hành: Microsoft® Windows® 10, 8.1, 8, 7, Vista.</li>
+<li>Hỗ trợ cả 2 phiên bản 32bit và 64bit.</li>
+</ul>
+<hr />
+<h1 style="text-align: center;"><span style="font-size: 24px;"><em><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Tải Về Phần Mềm + Key online Active Eset Internet Security 11</span></strong></span></em></span></h1>
+<h2 style="text-align: center;"><span style="font-size: 20px; color: #0000ff;"><strong>Eset Internet Security 11 32bit</strong></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1GLVkz0bod1b43-bHtoNB0_NRDUtRWEFS" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về tại đây"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-shield" style="font-size:20px;color:#ffffff"></i> Tải Eset Internet Security 11 Mới nhất &#8211; 32bit <small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<h2 style="text-align: center;"><span style="font-size: 20px; color: #0000ff;"><strong>Eset Internet Security 11 64bit</strong></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1twGUHUHZb_51P1-epI6CBPiqnMbxFUgW" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về tại đây"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-shield" style="font-size:20px;color:#ffffff"></i> Tải Eset Internet Security 11 Mới nhất &#8211; 64bit <small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000; font-size: 24px;"><em><strong>Key Eset bản quyền Online</strong></em></span></h2>
+<p style="text-align: center;"><a href="http://bit.ly/2RF3Bah" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Xem key tại đây"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-shield" style="font-size:20px;color:#ffffff"></i> Xem key bản quyền Online<small style="padding-bottom:8px;color:#ffffff">Link key sẽ update thường xuyên</small></span></a></p>
+<p style="text-align: center;">thanks <strong>Nguyen Cao Nguyen</strong></p>
+<hr />
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 28px; color: #ff0000;"><strong>Hướng dẫn cài đặt và sử dụng key để kích hoạt cho máy tính trực quan dễ dàng qua video</strong></span></p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/prRwOAA9IWs" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Qua bài viết mình đã giới thiệu, hướng dẫn và share key active online cho các bạn. Nhờ phần mềm này các bạn không phải lo gì nhìu nữa gì nó giúp người dùng bảo mật cho hầu hết các mối nguy hại trên môi trường internet như các ứng dụng nguy hiểm, các trang web nguy hại và cả luôn phần tùy chỉnh thanh toán điện tử và bảo mật ngân hàng.</p>
+<p>Hãy tải và cài cho máy ngay các bạn nhé!</p>
+<p>Nếu thấy hữu ích đừng quên chia sẻ cho mọi người nhé các bạn &lt;3</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong><span style="color: #ff0000; font-size: 32px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3052"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/anit-virut/tai-va-cai-dat-eset-internet-security-11-full-license-key-active-online/">Tải Và Cài Đặt Eset Internet Security 11 Full License Key Active Online</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/anit-virut/tai-va-cai-dat-eset-internet-security-11-full-license-key-active-online/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/electron/electron/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/electron/electron/commits/master.atom"/>
+  <title>Recent Commits to electron:master</title>
+  <updated>2020-02-25T02:11:06Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7b7def7d1eb8c68c99a05756f2946eb756419036</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/7b7def7d1eb8c68c99a05756f2946eb756419036"/>
+    <title>
+        feat: set app.enableRendererProcessReuse to true by default (#22336)
+    </title>
+    <updated>2020-02-25T02:11:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/6634592?s=30&amp;v=4"/>
+    <author>
+      <name>MarshallOfSound</name>
+      <uri>https://github.com/MarshallOfSound</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat: set app.enableRendererProcessReuse to true by default (#22336)
+
+* feat: set app.enableRendererProcessReuse to true by default
+
+* chore: add context aware info to breaking changes doc
+
+* spec: fix nodeIntegration in child windows test for rendererprocessreuse
+
+* spec: fix remote listeners in destroyed renderers spec as the error is now async
+
+* Update api-browser-window-spec.ts
+
+* chore: deprecate affinity
+
+* chore: fix docs
+
+* spec: handle tests crashing without an exist code
+
+* spec: update tests for new rendererprocessreuse default
+
+* spec: with renderer process re-use we get to destroy less views&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7a91078cc78b72633e83f8fa924d253c49ae819c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/7a91078cc78b72633e83f8fa924d253c49ae819c"/>
+    <title>
+        fix: explicitly specify `typeRoots` in devtools-frontend (#22195)
+    </title>
+    <updated>2020-02-24T22:09:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/144914?s=30&amp;v=4"/>
+    <author>
+      <name>adill</name>
+      <uri>https://github.com/adill</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: explicitly specify `typeRoots` in devtools-frontend (#22195)
+
+This is a follow-up to #22078, fixing another instance of the same issue&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f965b13d741559f2952c0bbdff9747816996cc99</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/f965b13d741559f2952c0bbdff9747816996cc99"/>
+    <title>
+        chore: bump node to v12.16.1 (master) (#22168)
+    </title>
+    <updated>2020-02-24T21:02:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/18403005?s=30&amp;v=4"/>
+    <author>
+      <name>electron-bot</name>
+      <uri>https://github.com/electron-bot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore: bump node to v12.16.1 (master) (#22168)
+
+* chore: bump node in DEPS to v12.16.0
+
+* Fixup asar support setup patch
+
+https://github.com/nodejs/node/pull/30862
+
+* Fixup InternalCallbackScope patch
+
+https://github.com/nodejs/node/pull/30236
+
+* Fixup GN buildfiles patch
+
+https://github.com/nodejs/node/pull/30755
+
+* Fixup low-level hooks patch
+
+https://github.com/nodejs/node/pull/30466
+
+* Fixup globals require patch
+
+https://github.com/nodejs/node/pull/31643
+
+* Fixup process stream patch
+
+https://github.com/nodejs/node/pull/30862
+
+* Fixup js2c modification patch
+
+https://github.com/nodejs/node/pull/30755
+
+* Fixup internal fs override patch
+
+https://github.com/nodejs/node/pull/30610
+
+* Fixup context-aware warn patch
+
+https://github.com/nodejs/node/pull/30336
+
+* Fixup Node.js with ltcg config
+
+https://github.com/nodejs/node/pull/29388
+
+* Fixup oaepLabel patch
+
+https://github.com/nodejs/node/pull/30917
+
+* Remove redundant ESM test patch
+
+https://github.com/nodejs/node/pull/30997
+
+* Remove redundant cli flag patch
+
+https://github.com/nodejs/node/pull/30466
+
+* Update filenames.json
+
+* Remove macro generation in GN build files
+
+https://github.com/nodejs/node/pull/30755
+
+* Fix some compilation errors upstream
+
+* Add uvwasi to deps
+
+https://github.com/nodejs/node/pull/30258
+
+* Fix BoringSSL incompatibilities
+
+* Fixup linked module patch
+
+https://github.com/nodejs/node/pull/30274
+
+* Add missing sources to GN uv build
+
+https://github.com/libuv/libuv/pull/2347
+
+* Patch some uvwasi incompatibilities
+
+* chore: bump Node.js to v12.6.1
+
+* Remove mark_arraybuffer_as_untransferable.patch
+
+https://github.com/nodejs/node/pull/30549
+
+* Fix uvwasi build failure on win
+
+* Fixup --perf-prof cli option error
+
+* Fixup early cjs module loading
+
+* fix: initialize diagnostics properly
+
+https://github.com/nodejs/node/pull/30025
+
+* Disable new esm syntax specs
+
+https://github.com/nodejs/node/pull/30219
+
+* Fixup v8 weakref hook spec
+
+https://github.com/nodejs/node/pull/29874
+
+* Fix async context timer issue
+
+* Disable monkey-patch-main spec
+
+It relies on https://github.com/nodejs/node/pull/29777, and we don&amp;#39;t
+override prepareStackTrace.
+
+* Disable new tls specs
+
+https://github.com/nodejs/node/pull/23188
+
+We don&amp;#39;t support much of TLS owing to schisms between BoringSSL and
+OpenSSL.
+
+Co-authored-by: Shelley Vohr &amp;lt;shelley.vohr@gmail.com&amp;gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/360c1cad1b40676be43ecf353ff6afe7b178f22f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/360c1cad1b40676be43ecf353ff6afe7b178f22f"/>
+    <title>
+        chore: do not override history methods when rendererprocessreuse is e…
+    </title>
+    <updated>2020-02-24T20:14:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/6634592?s=30&amp;v=4"/>
+    <author>
+      <name>MarshallOfSound</name>
+      <uri>https://github.com/MarshallOfSound</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore: do not override history methods when rendererprocessreuse is enabled (#22335)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fd46bc653f97aa3e1659c14d279cf9b98b497359</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/fd46bc653f97aa3e1659c14d279cf9b98b497359"/>
+    <title>
+        chore: wrap process restart flag in renderer process reuse check (#22…
+    </title>
+    <updated>2020-02-24T19:43:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/6634592?s=30&amp;v=4"/>
+    <author>
+      <name>MarshallOfSound</name>
+      <uri>https://github.com/MarshallOfSound</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore: wrap process restart flag in renderer process reuse check (#22334)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1848e3f6583dfc994283509ab0b2b38ba682a3dc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/1848e3f6583dfc994283509ab0b2b38ba682a3dc"/>
+    <title>
+        feat: Add OtherItemsProxy TouchBar item (#22270)
+    </title>
+    <updated>2020-02-24T08:55:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/16010076?s=30&amp;v=4"/>
+    <author>
+      <name>erickzhao</name>
+      <uri>https://github.com/erickzhao</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat: Add OtherItemsProxy TouchBar item (#22270)
+
+* feat: Add OtherItemsProxy touchbar item
+
+* review!&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8cc0435d9c97a7db7feeacf01da0217ec6ffe6bb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/8cc0435d9c97a7db7feeacf01da0217ec6ffe6bb"/>
+    <title>
+        fix(extensions): set lowest isolated world id (#22212)
+    </title>
+    <updated>2020-02-24T04:33:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1656324?s=30&amp;v=4"/>
+    <author>
+      <name>samuelmaddock</name>
+      <uri>https://github.com/samuelmaddock</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix(extensions): set lowest isolated world id (#22212)
+
+* fix(extensions): set lowest isolated world id
+
+* refactor: move world IDs into separate header file
+
+Several files are including electron_render_frame_observer.h just for the world IDs.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/68c6d53156f2d74fe936e8000d9937f03cc997f2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/68c6d53156f2d74fe936e8000d9937f03cc997f2"/>
+    <title>
+        feat(extensions): add more properties to extension object (#22244)
+    </title>
+    <updated>2020-02-24T03:30:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1656324?s=30&amp;v=4"/>
+    <author>
+      <name>samuelmaddock</name>
+      <uri>https://github.com/samuelmaddock</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat(extensions): add more properties to extension object (#22244)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/41931aa5fa83e4b5cbb935e10ce67a5caea37ce0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/41931aa5fa83e4b5cbb935e10ce67a5caea37ce0"/>
+    <title>
+        fix: disable remote layer APIs in MAS build (#20965)
+    </title>
+    <updated>2020-02-24T03:08:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/639601?s=30&amp;v=4"/>
+    <author>
+      <name>zcbenz</name>
+      <uri>https://github.com/zcbenz</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: disable remote layer APIs in MAS build (#20965)
+
+* fix: add patch to disable remote layer APIs
+
+* fix: use --disable-gpu-memory-buffer-compositor-resources for MAS build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1502ecf9f71624cb1b2a63c5d169f01558469b7e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/1502ecf9f71624cb1b2a63c5d169f01558469b7e"/>
+    <title>
+        Bump v10.0.0-nightly.20200223
+    </title>
+    <updated>2020-02-23T15:31:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/18403005?s=30&amp;v=4"/>
+    <author>
+      <name>electron-bot</name>
+      <uri>https://github.com/electron-bot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump v10.0.0-nightly.20200223&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f1fb5130404d41b012c4140b53618234b3df9168</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/f1fb5130404d41b012c4140b53618234b3df9168"/>
+    <title>
+        Bump v10.0.0-nightly.20200222
+    </title>
+    <updated>2020-02-22T15:31:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/18403005?s=30&amp;v=4"/>
+    <author>
+      <name>electron-bot</name>
+      <uri>https://github.com/electron-bot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump v10.0.0-nightly.20200222&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/50009f66088739593ccea6f8cf1e0819203a310c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/50009f66088739593ccea6f8cf1e0819203a310c"/>
+    <title>
+        chore: allow custom node-spec-runner options (#22315)
+    </title>
+    <updated>2020-02-21T20:19:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/2036040?s=30&amp;v=4"/>
+    <author>
+      <name>codebytere</name>
+      <uri>https://github.com/codebytere</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore: allow custom node-spec-runner options (#22315)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a25d7fa440603020512222c54dd6862d37b02f63</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/a25d7fa440603020512222c54dd6862d37b02f63"/>
+    <title>
+        fix: emit will-navigate for sandboxed contents (#22188)
+    </title>
+    <updated>2020-02-21T19:08:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/172800?s=30&amp;v=4"/>
+    <author>
+      <name>nornagon</name>
+      <uri>https://github.com/nornagon</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: emit will-navigate for sandboxed contents (#22188)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8045152e592e115fafa578c09802956336a4cd99</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/8045152e592e115fafa578c09802956336a4cd99"/>
+    <title>
+        fix: revert {Atom =&gt; Electron}Application rename (#22206)
+    </title>
+    <updated>2020-02-21T19:05:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/172800?s=30&amp;v=4"/>
+    <author>
+      <name>nornagon</name>
+      <uri>https://github.com/nornagon</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: revert {Atom =&amp;gt; Electron}Application rename (#22206)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e0c0875d6fc104c799c06dde55b7b10430108f07</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/e0c0875d6fc104c799c06dde55b7b10430108f07"/>
+    <title>
+        docs: update session.clearAuthCache (#22292)
+    </title>
+    <updated>2020-02-21T18:40:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/609052?s=30&amp;v=4"/>
+    <author>
+      <name>jkleinsc</name>
+      <uri>https://github.com/jkleinsc</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;docs: update session.clearAuthCache (#22292)
+
+* docs: update session.clearAuthCache
+
+* Update specs to match doc change.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e965703e62de5693a0769226cdda12ef8477733e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/e965703e62de5693a0769226cdda12ef8477733e"/>
+    <title>
+        fix: typo in crash reporter constructor (#22274)
+    </title>
+    <updated>2020-02-21T16:32:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/31096792?s=30&amp;v=4"/>
+    <author>
+      <name>Syed-Umair</name>
+      <uri>https://github.com/Syed-Umair</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: typo in crash reporter constructor (#22274)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/686f53c9da2ce56620efc9153e02562c8b6b8524</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/686f53c9da2ce56620efc9153e02562c8b6b8524"/>
+    <title>
+        Bump v10.0.0-nightly.20200221
+    </title>
+    <updated>2020-02-21T15:31:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/18403005?s=30&amp;v=4"/>
+    <author>
+      <name>electron-bot</name>
+      <uri>https://github.com/electron-bot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump v10.0.0-nightly.20200221&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e7b0a9ca8f937cb351c8205b8541b9fe2342e1b8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/e7b0a9ca8f937cb351c8205b8541b9fe2342e1b8"/>
+    <title>
+        feat: add API for receiving logs from service workers (#20624)
+    </title>
+    <updated>2020-02-20T23:19:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/6634592?s=30&amp;v=4"/>
+    <author>
+      <name>MarshallOfSound</name>
+      <uri>https://github.com/MarshallOfSound</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat: add API for receiving logs from service workers (#20624)
+
+* feat: add API for receiving logs from service workers
+
+* feat: add new serviceWorkerContext APIs
+
+* chore: add missing #include&amp;#39;s
+
+* refactor: rename serviceWorkerContext to serviceWorkers
+
+* chore: clean up based on review
+
+* chore: remove native_mate
+
+* chore: add tests for the service worker module
+
+* Update spec-main/api-service-workers-spec.ts
+
+Co-Authored-By: Jeremy Apthorp &amp;lt;jeremya@chromium.org&amp;gt;
+
+* chore: fix linting
+
+* chore: handle renames
+
+Co-authored-by: Jeremy Apthorp &amp;lt;nornagon@nornagon.net&amp;gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2e6fff885d9a10e07613105973d28903ba53849e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/2e6fff885d9a10e07613105973d28903ba53849e"/>
+    <title>
+        docs: clean up protocol docs (#22262)
+    </title>
+    <updated>2020-02-20T17:27:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/11417?s=30&amp;v=4"/>
+    <author>
+      <name>malept</name>
+      <uri>https://github.com/malept</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;docs: clean up protocol docs (#22262)
+
+* docs: clean up protocol docs
+
+* Fix capitalization&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/57943f4de39885d9b2dc2c251696636441505360</id>
+    <link type="text/html" rel="alternate" href="https://github.com/electron/electron/commit/57943f4de39885d9b2dc2c251696636441505360"/>
+    <title>
+        Bump v10.0.0-nightly.20200220
+    </title>
+    <updated>2020-02-20T15:32:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/18403005?s=30&amp;v=4"/>
+    <author>
+      <name>electron-bot</name>
+      <uri>https://github.com/electron-bot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump v10.0.0-nightly.20200220&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

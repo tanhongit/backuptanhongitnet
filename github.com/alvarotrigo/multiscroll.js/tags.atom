@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/alvarotrigo/multiscroll.js/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/alvarotrigo/multiscroll.js/releases.atom"/>
+  <title>Tags from multiscroll.js</title>
+  <updated>2018-08-01T15:45:20Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.2</id>
+    <updated>2018-08-01T15:51:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.2"/>
+    <title>multiScroll 0.2.2</title>
+    <content></content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.1</id>
+    <updated>2018-03-07T16:36:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.1"/>
+    <title>multiScroll 0.2.1</title>
+    <content type="html">&lt;p&gt;- Fixing issue with scrollOverflow extension and touch devices.&lt;/p&gt;
+
+&lt;p&gt;- Updating version and dist files&lt;/p&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.0</id>
+    <updated>2018-03-07T15:29:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.0"/>
+    <title>multiScroll 0.2.0</title>
+    <content type="html">&lt;p&gt;- Fixing bug #&lt;a class=&quot;issue-link js-issue-link&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/103&quot;&gt;#103&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;- Updating version and dist files&lt;/p&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.9</id>
+    <updated>2018-03-05T17:38:40Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.9"/>
+    <title>multiScroll 0.1.9</title>
+    <content></content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.8</id>
+    <updated>2017-04-24T11:23:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.8"/>
+    <title>multiScroll 0.1.8</title>
+    <content></content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.7</id>
+    <updated>2015-03-18T12:04:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.7"/>
+    <title>multiscroll.js v.0.1.7</title>
+    <content type="html">&lt;p&gt;- Fixed bug. Navigation bullets get vertically centred now.&lt;/p&gt;
+
+&lt;p&gt;- A class will be added to the `body` element with the active section anchor / index
+&lt;br /&gt;- Improved keyboard accessibility
+&lt;br /&gt;- Fixed bug with IE touch devices.&lt;/p&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.6</id>
+    <updated>2015-03-18T11:04:39Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.6"/>
+    <title>multiscroll.js Beta v.0.1.6</title>
+    <content></content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/v.0.1.5</id>
+    <updated>2015-01-05T12:26:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/v.0.1.5"/>
+    <title>multiscroll.js Beta v.0.1.5</title>
+    <content type="html">&lt;p&gt;Merge pull request &lt;a class=&quot;issue-link js-issue-link&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/pull/24&quot;&gt;#24&lt;/a&gt; from dawsonbotsford/master&lt;/p&gt;
+
+&lt;p&gt;Spelling Correction from Dawson&#39;s Spelling Bee&lt;/p&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/v.0.0.4</id>
+    <updated>2015-01-05T12:27:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/v.0.0.4"/>
+    <title>multiscroll.js Beta v.0.0.4</title>
+    <content></content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+</feed>

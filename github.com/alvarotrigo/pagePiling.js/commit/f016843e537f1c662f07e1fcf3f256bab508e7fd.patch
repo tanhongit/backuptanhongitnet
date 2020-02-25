@@ -1,0 +1,21 @@
+From f016843e537f1c662f07e1fcf3f256bab508e7fd Mon Sep 17 00:00:00 2001
+From: alvarotrigo <atrigol@gmail.com>
+Date: Wed, 26 Nov 2014 15:05:07 +0000
+Subject: [PATCH] - Added websites to "who is using pagePilings.js"
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index 4ade003..a9f8adb 100644
+--- a/README.md
++++ b/README.md
+@@ -300,6 +300,7 @@ Example:
+ ## Who is using pagePiling.js
+ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotrigo.com">contact me</a> with the URL.
+ 
++- http://www.facebookgroups.com/
+ - http://fngeats.com/
+ - http://ednahouse.org/statistics/
+ - http://sushi.steadfastlight.com/

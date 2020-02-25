@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/hcxiong/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/hcxiong/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2015-03-18T12:06:14Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/1bfbd707d4ed0a6903d667a5ae0ccb96ebdff193"/>
+    <title>
+        - Using IIFE
+    </title>
+    <updated>2015-03-18T12:06:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Using IIFE&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/f6bddb69f8d539afaad0158321c6ce3f34de1e06"/>
+    <title>
+        - Fixed bug. Navigation bullets get vertically centred now.
+    </title>
+    <updated>2015-03-18T12:03:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug. Navigation bullets get vertically centred now.
+- A class will be added to the `body` element with the active section anchor / index
+- Improved keyboard accessibility
+- Fixed bug with IE touch devices.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7fe2efd4110894b232713229ed54af711be05d0b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/7fe2efd4110894b232713229ed54af711be05d0b"/>
+    <title>
+        - Version updated
+    </title>
+    <updated>2015-03-18T11:01:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Version updated&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/2ac2dc2153d66e66c9320aaae67fcd7a77b69068"/>
+    <title>
+        Merge pull request #30 from talgautb/master
+    </title>
+    <updated>2015-03-18T11:00:30Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #30 from talgautb/master
+
+add new methods destory and build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/41b22f194327d162ee67892cf3f6e6bfd7491748</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/41b22f194327d162ee67892cf3f6e6bfd7491748"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2015-03-18T10:57:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/51125f55b0adf0b828fc085c82c5ec20e761286f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/51125f55b0adf0b828fc085c82c5ec20e761286f"/>
+    <title>
+        - Removed some sites
+    </title>
+    <updated>2015-01-29T16:27:31Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Removed some sites&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/767136c30c4c859b33112e7d646ec3b601363f41</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/767136c30c4c859b33112e7d646ec3b601363f41"/>
+    <title>
+        minify js with Closure
+    </title>
+    <updated>2015-01-28T05:46:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;minify js with Closure&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8bf506f89cec60754a8bb85c0dbee59e2b640d8c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/8bf506f89cec60754a8bb85c0dbee59e2b640d8c"/>
+    <title>
+        del console.log
+    </title>
+    <updated>2015-01-26T06:00:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;del console.log&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2a9724b18c39696acc8356a671fb568df08dda0c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/2a9724b18c39696acc8356a671fb568df08dda0c"/>
+    <title>
+        add gitignore
+    </title>
+    <updated>2015-01-26T05:55:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add gitignore&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/98a6e99584c48643032805f4c45e1b87aafc31e4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/98a6e99584c48643032805f4c45e1b87aafc31e4"/>
+    <title>
+        add destroy and build methods
+    </title>
+    <updated>2015-01-26T05:54:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add destroy and build methods&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f4ff80c0231b4a6caa91854730998734ee17c61e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/f4ff80c0231b4a6caa91854730998734ee17c61e"/>
+    <title>
+        Merge pull request #27 from talgautb/master
+    </title>
+    <updated>2015-01-25T14:30:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #27 from talgautb/master
+
+Add custom selectors&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d57ce251b522c5b6a64f5a6ae78d0dbca4176e52</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/d57ce251b522c5b6a64f5a6ae78d0dbca4176e52"/>
+    <title>
+        add destroy method
+    </title>
+    <updated>2015-01-25T12:23:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add destroy method&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/30b2d13893fc0400000e5f3f4cc4800882642818</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/30b2d13893fc0400000e5f3f4cc4800882642818"/>
+    <title>
+        add custom selectors
+    </title>
+    <updated>2015-01-25T11:04:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add custom selectors&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2"/>
+    <title>
+        - Updated version.
+    </title>
+    <updated>2015-01-05T12:26:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated version.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9"/>
+    <title>
+        Merge pull request #24 from dawsonbotsford/master
+    </title>
+    <updated>2014-12-30T11:09:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #24 from dawsonbotsford/master
+
+Spelling Correction from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/56777e325f114878f021faaa22670613ac97850e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/56777e325f114878f021faaa22670613ac97850e"/>
+    <title>
+        Remove double letter replacements
+    </title>
+    <updated>2014-12-29T22:14:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove double letter replacements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d7e81333a7f106c54d522617a361987119e9e540</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/d7e81333a7f106c54d522617a361987119e9e540"/>
+    <title>
+        Fix URL change
+    </title>
+    <updated>2014-12-29T22:12:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix URL change&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/61b975cd5277bed2d1342f00ff10e44e69626601</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/61b975cd5277bed2d1342f00ff10e44e69626601"/>
+    <title>
+        Spelling correction automated from Dawson&#39;s Spelling Bee
+    </title>
+    <updated>2014-12-29T22:10:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Spelling correction automated from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2014-12-16T10:46:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a27da98fb5b7777ae823d94b8be971388718feb2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hcxiong/multiscroll.js/commit/a27da98fb5b7777ae823d94b8be971388718feb2"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2014-12-12T10:23:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

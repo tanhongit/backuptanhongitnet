@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/alvarotrigo/multiscroll.js/commits/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61</id>
+  <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commits/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/alvarotrigo/multiscroll.js/commits/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61.atom"/>
+  <title>Recent Commits to multiscroll.js:c69fb3338b2dcbfa7452f8695b6b0c6a91526f61</title>
+  <updated>2017-04-24T10:55:41Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:55:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bbda4a73b10ed490262d7fd3cb667061bcf2d24d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/bbda4a73b10ed490262d7fd3cb667061bcf2d24d"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:54:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bde4eb3c868c0aa60506b65c8f35bf914bf735ef</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/bde4eb3c868c0aa60506b65c8f35bf914bf735ef"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:53:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3b0d136f0be190b3c414a5e89e48246fa774fb10</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/3b0d136f0be190b3c414a5e89e48246fa774fb10"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:39:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3215e5a263aac27a0e53152561c19a82999ffa15</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/3215e5a263aac27a0e53152561c19a82999ffa15"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:12:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5d38f6d629efaf62b6d9216c815104de2a68f94a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/5d38f6d629efaf62b6d9216c815104de2a68f94a"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:07:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3"/>
+    <title>
+        - Fixed typo
+    </title>
+    <updated>2017-04-23T16:44:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed typo&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0117710c188f4da5d01f5f853e415dc15ca99acf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/0117710c188f4da5d01f5f853e415dc15ca99acf"/>
+    <title>
+        Improve aesthetics
+    </title>
+    <updated>2017-04-23T14:57:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Improve aesthetics&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011"/>
+    <title>
+        - Added extensions file
+    </title>
+    <updated>2017-04-23T14:50:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added extensions file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/693954e70760e2592c76ca8e05070c848474527e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/693954e70760e2592c76ca8e05070c848474527e"/>
+    <title>
+        Fixing headers
+    </title>
+    <updated>2017-04-23T14:44:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixing headers&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c"/>
+    <title>
+        Merge pull request #80 from talgautb/master
+    </title>
+    <updated>2016-10-15T13:58:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #80 from talgautb/master
+
+Fix destroy/build functions, update packages&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7"/>
+    <title>
+        fix issue #64
+    </title>
+    <updated>2016-10-15T13:13:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix issue #64&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e72ac73a9b50f5b59ff89d75db8b527282b6eaf2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/e72ac73a9b50f5b59ff89d75db8b527282b6eaf2"/>
+    <title>
+        update packages, del sass
+    </title>
+    <updated>2016-10-15T12:45:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;update packages, del sass&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/492612b6841843ef4d35641ac5d4c7f5643b4a0c"/>
+    <title>
+        Merge pull request #73 from npostulart/master
+    </title>
+    <updated>2016-08-10T09:12:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #73 from npostulart/master
+
+Fixes #72 - Missing navigation binding functions on build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/797593f870975741ef7fc5ba34b8bd5e2b603eaa</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/797593f870975741ef7fc5ba34b8bd5e2b603eaa"/>
+    <title>
+        Fixes #72 - Missing navigation binding functions on build
+    </title>
+    <updated>2016-08-10T08:33:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://0.gravatar.com/avatar/d5d77579faf8d55ee19d8e83f2aa6e4e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>npostulart@uandi.com</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixes #72 - Missing navigation binding functions on build&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f1606e5469099ccd8284276230e48877c9ffabd2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/f1606e5469099ccd8284276230e48877c9ffabd2"/>
+    <title>
+        - Added gulp and `dist` files
+    </title>
+    <updated>2016-07-07T14:57:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added gulp and `dist` files
+- Updated package.json 
+- Improved credits comments&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/710b3aacea36d85e550c7ea2f00f34ca289b301a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/710b3aacea36d85e550c7ea2f00f34ca289b301a"/>
+    <title>
+        Merge pull request #59 from talgautb/master
+    </title>
+    <updated>2015-11-18T15:46:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #59 from talgautb/master
+
+add gulp&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/850a3478faf317188ecb11441d3c112d01704abc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/850a3478faf317188ecb11441d3c112d01704abc"/>
+    <title>
+        add dist directory
+    </title>
+    <updated>2015-11-18T15:31:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add dist directory&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c08ae7ee9c3c9f8296626fb4d0268054fb3409b3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/c08ae7ee9c3c9f8296626fb4d0268054fb3409b3"/>
+    <title>
+        add gulp for build js
+    </title>
+    <updated>2015-11-18T15:12:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add gulp for build js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e3a528779835f738dbfc81a627d8ceab9bc24b08</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/commit/e3a528779835f738dbfc81a627d8ceab9bc24b08"/>
+    <title>
+        - Removed mistakes
+    </title>
+    <updated>2015-10-20T09:50:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Removed mistakes&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

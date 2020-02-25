@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/leuro/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/leuro/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2014-12-30T11:09:47Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/de593c0e99c22e3a5c905a839cae94d47388b9e9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/de593c0e99c22e3a5c905a839cae94d47388b9e9"/>
+    <title>
+        Merge pull request #33 from dawsonbotsford/master
+    </title>
+    <updated>2014-12-30T11:09:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #33 from dawsonbotsford/master
+
+Spelling Correction from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/817f69d51797e3ca6ac45b8331b8d43e4292e562</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/817f69d51797e3ca6ac45b8331b8d43e4292e562"/>
+    <title>
+        Spelling correction automated from Dawson&#39;s Spelling Bee
+    </title>
+    <updated>2014-12-29T22:05:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Spelling correction automated from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/adcae39b3123959cdc4b7fe420e3e6eb74f96c05"/>
+    <title>
+        - Solved bug with IE 11 for Windows Phone
+    </title>
+    <updated>2014-12-05T11:43:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with IE 11 for Windows Phone
+- Added `easeInQuart` effect inside the plugin 
+- Added new feature: a class is added to the body on section change&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f8258f16f41717eb48ba82c96142d368b102c526</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/f8258f16f41717eb48ba82c96142d368b102c526"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cb13ded3d3ada0e43e315fe7f479de04c133489</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/4cb13ded3d3ada0e43e315fe7f479de04c133489"/>
+    <title>
+        - Added Facebook to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-26T15:35:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added Facebook to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f016843e537f1c662f07e1fcf3f256bab508e7fd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/f016843e537f1c662f07e1fcf3f256bab508e7fd"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-26T15:05:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b42b56fb828de35c5501dba1b44801def041a6a7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/b42b56fb828de35c5501dba1b44801def041a6a7"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-14T10:28:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9050ad6bb551b351faefa547f8b2ca040d354db4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/9050ad6bb551b351faefa547f8b2ca040d354db4"/>
+    <title>
+        - Fixed bug causing `afterLoad` not to be fired when `css3:false` #24
+    </title>
+    <updated>2014-11-12T10:03:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug causing `afterLoad` not to be fired when `css3:false` #24&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5b41a3e492df41d516a70ceb191048c50ccdb53d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/5b41a3e492df41d516a70ceb191048c50ccdb53d"/>
+    <title>
+        Added websites in &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2014-11-07T21:42:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added websites in &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/537980aaa5b1737830957e547a5b292bcd18cf99</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/537980aaa5b1737830957e547a5b292bcd18cf99"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-11-07T12:48:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f02975d34999b94a5dc0df342bb0bdde289570d9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/f02975d34999b94a5dc0df342bb0bdde289570d9"/>
+    <title>
+        Fixed syntax error #21
+    </title>
+    <updated>2014-11-02T17:31:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed syntax error #21&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/64634f9b5e348aac9856de93160774894b21bdd0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/64634f9b5e348aac9856de93160774894b21bdd0"/>
+    <title>
+        Fixed syntax error #21
+    </title>
+    <updated>2014-11-02T17:29:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed syntax error #21&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/90aef620ee17d9ccad22fca886cd5c83e481d502</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/90aef620ee17d9ccad22fca886cd5c83e481d502"/>
+    <title>
+        Merge pull request #20 from cymruu/master
+    </title>
+    <updated>2014-11-01T20:30:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #20 from cymruu/master
+
+typo in demoPage.html&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ad27b66563bd9f88cd43afa4f6e3e73348a13a87</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/ad27b66563bd9f88cd43afa4f6e3e73348a13a87"/>
+    <title>
+        typo in demoPag.html
+    </title>
+    <updated>2014-11-01T20:24:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/2981598?s=30&amp;v=4"/>
+    <author>
+      <name>cymruu</name>
+      <uri>https://github.com/cymruu</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;typo in demoPag.html&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/da282039ff0a017d84456980c1a158d039e6c231</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/da282039ff0a017d84456980c1a158d039e6c231"/>
+    <title>
+        - Updated bower.json version
+    </title>
+    <updated>2014-10-24T09:57:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated bower.json version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/68eb497915d1517f2f7db40b0a264d2714d56314</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/68eb497915d1517f2f7db40b0a264d2714d56314"/>
+    <title>
+        - Fixed bug when using css3:false or using the plugin in IE9 or lower.
+    </title>
+    <updated>2014-10-24T09:54:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug when using css3:false or using the plugin in IE9 or lower.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3034a2e6ab71ac3422568c3070ffecce4006ca9c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/3034a2e6ab71ac3422568c3070ffecce4006ca9c"/>
+    <title>
+        - Updated donate button in english language
+    </title>
+    <updated>2014-10-23T11:17:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated donate button in english language&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d411764fd07b9530b44dda6beea5edfc05d6056a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/d411764fd07b9530b44dda6beea5edfc05d6056a"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-10-23T08:03:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b440f726396fafc102cdc1ba5ca96aa46990f25a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/b440f726396fafc102cdc1ba5ca96aa46990f25a"/>
+    <title>
+        - Optional installation with bower
+    </title>
+    <updated>2014-10-23T07:54:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Optional installation with bower&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fda961e4ba3291201186686ff5fdf95f89d78d46</id>
+    <link type="text/html" rel="alternate" href="https://github.com/leuro/pagePiling.js/commit/fda961e4ba3291201186686ff5fdf95f89d78d46"/>
+    <title>
+        - Updaing versio numbers #15
+    </title>
+    <updated>2014-10-22T12:13:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updaing versio numbers #15&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,75 @@
+From 24e01d5291feba57a2f4076363b28f464cd830d6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Mon, 30 Mar 2015 11:44:01 +0100
+Subject: [PATCH] - Improved scrollable feature
+
+---
+ bower.json               | 2 +-
+ jquery.pagepiling.css    | 2 +-
+ jquery.pagepiling.js     | 4 ++--
+ jquery.pagepiling.min.js | 4 ++--
+ 4 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/bower.json b/bower.json
+index 83bed32..e3866af 100644
+--- a/bower.json
++++ b/bower.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "pagePiling.js",
+-  "version": "1.4",
++  "version": "1.5",
+   "homepage": "https://github.com/alvarotrigo/pagePiling.js",
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"
+diff --git a/jquery.pagepiling.css b/jquery.pagepiling.css
+index 82400d8..69a6e68 100644
+--- a/jquery.pagepiling.css
++++ b/jquery.pagepiling.css
+@@ -1,5 +1,5 @@
+ /* ===========================================================
+- * pagepiling.js 1.4
++ * pagepiling.js 1.5
+  *
+  * https://github.com/alvarotrigo/fullPage.js
+  * MIT licensed
+diff --git a/jquery.pagepiling.js b/jquery.pagepiling.js
+index 80a7352..0697ad0 100644
+--- a/jquery.pagepiling.js
++++ b/jquery.pagepiling.js
+@@ -1,5 +1,5 @@
+ /* ===========================================================
+- * pagepiling.js 1.4
++ * pagepiling.js 1.5
+  *
+  * https://github.com/alvarotrigo/pagePiling.js
+  * MIT licensed
+@@ -629,7 +629,7 @@
+         * Determines whether the active section or slide is scrollable through and scrolling bar
+         */
+         function isScrollable(activeSection){
+-            scrollable = activeSection.find('.pp-scrollable');
++            scrollable = activeSection.filter('.pp-scrollable');
+ 
+             return scrollable;
+         }
+diff --git a/jquery.pagepiling.min.js b/jquery.pagepiling.min.js
+index dc10837..cad228e 100644
+--- a/jquery.pagepiling.min.js
++++ b/jquery.pagepiling.min.js
+@@ -1,5 +1,5 @@
+ /* ===========================================================
+- * pagepiling.js 1.4
++ * pagepiling.js 1.5
+  *
+  * https://github.com/alvarotrigo/pagePiling.js
+  * MIT licensed
+@@ -12,7 +12,7 @@ I(c.anchorLink,c.sectionIndex),c.destination.addClass("active").siblings().remov
+ b.isFunction(options.onLeave)&&options.onLeave.call(this,c.leavingSection,c.sectionIndex+1,c.yMovement),K(c),L(c.anchorLink),M(c.anchorLink,c.sectionIndex),v=c.anchorLink,w=(new Date).getTime())}function K(a){options.css3?(x(a.animateSection,a.translate3d,a.animated),a.sectionsToMove.each(function(){x(b(this),a.translate3d,a.animated)}),setTimeout(function(){q(a)},options.scrollingSpeed)):(a.scrollOptions=p(a.scrolling),a.animated?a.animateSection.animate(a.scrollOptions,options.scrollingSpeed,options.easing,
+ function(){y(a);q(a)}):(a.animateSection.css(p(a.scrolling)),setTimeout(function(){y(a);q(a)},400)))}function q(a){b.isFunction(options.afterLoad)&&options.afterLoad.call(this,a.anchorLink,a.sectionIndex+1)}function J(a){return"down"===a.yMovement?b(".pp-section").map(function(d){if(d<a.destination.index(".pp-section"))return b(this)}):b(".pp-section").map(function(d){if(d>a.destination.index(".pp-section"))return b(this)})}function y(a){"up"===a.yMovement&&a.sectionsToMove.each(function(d){b(this).css(p(a.scrolling))})}
+ function p(a){return"vertical"===options.direction?{top:a}:{left:a}}function I(a,b){options.anchors.length?(location.hash=a,z(location.hash)):z(String(b))}function z(a){a=a.replace("#","");b("body")[0].className=b("body")[0].className.replace(/\b\s?pp-viewing-[^\s]+\b/g,"");b("body").addClass("pp-viewing-"+a)}function r(){return(new Date).getTime()-w<600+options.scrollingSpeed?!0:!1}function x(a,b,c){a.toggleClass("pp-easing",c);a.css({"-webkit-transform":b,"-moz-transform":b,"-ms-transform":b,transform:b})}
+-function l(a){if(!r()){a=h.event||a;a=Math.max(-1,Math.min(1,a.wheelDelta||-a.deltaY||-a.detail));var d=b(".pp-section.active"),d=A(d);0>a?m("down",d):m("up",d);return!1}}function m(a,b){if("down"==a)var c="bottom",f=e.moveSectionDown;else c="top",f=e.moveSectionUp;if(0<b.length)if(c="top"===c?!b.scrollTop():"bottom"===c?b.scrollTop()+1+b.innerHeight()>=b[0].scrollHeight:void 0,c)f();else return!0;else f()}function A(a){return scrollable=a.find(".pp-scrollable")}function B(){return h.PointerEvent?
++function l(a){if(!r()){a=h.event||a;a=Math.max(-1,Math.min(1,a.wheelDelta||-a.deltaY||-a.detail));var d=b(".pp-section.active"),d=A(d);0>a?m("down",d):m("up",d);return!1}}function m(a,b){if("down"==a)var c="bottom",f=e.moveSectionDown;else c="top",f=e.moveSectionUp;if(0<b.length)if(c="top"===c?!b.scrollTop():"bottom"===c?b.scrollTop()+1+b.innerHeight()>=b[0].scrollHeight:void 0,c)f();else return!0;else f()}function A(a){return scrollable=a.filter(".pp-scrollable")}function B(){return h.PointerEvent?
+ {down:"pointerdown",move:"pointermove",up:"pointerup"}:{down:"MSPointerDown",move:"MSPointerMove",up:"MSPointerUp"}}function C(a){var b=[];b.y="undefined"!==typeof a.pageY&&(a.pageY||a.pageX)?a.pageY:a.touches[0].pageY;b.x="undefined"!==typeof a.pageX&&(a.pageY||a.pageX)?a.pageX:a.touches[0].pageX;return b}function D(a){return"undefined"===typeof a.pointerType||"mouse"!=a.pointerType}function N(a){a=a.originalEvent;D(a)&&(a=C(a),n=a.y,touchStartX=a.x)}function O(a){var d=a.originalEvent;!E(a.target)&&
+ D(d)&&(a.preventDefault(),a=b(".pp-section.active"),a=A(a),r()||(d=C(d),touchEndY=d.y,touchEndX=d.x,"horizontal"===options.direction&&Math.abs(touchStartX-touchEndX)>Math.abs(n-touchEndY)?Math.abs(touchStartX-touchEndX)>f.width()/100*options.touchSensitivity&&(touchStartX>touchEndX?m("down",a):touchEndX>touchStartX&&m("up",a)):Math.abs(n-touchEndY)>f.height()/100*options.touchSensitivity&&(n>touchEndY?m("down",a):touchEndY>n&&m("up",a))))}function E(a,d){d=d||0;var c=b(a).parent();return d<options.normalScrollElementTouchThreshold&&
+ c.is(options.normalScrollElements)?!0:d==options.normalScrollElementTouchThreshold?!1:E(c,++d)}function P(){b("body").append('<div id="pp-nav"><ul></ul></div>');var a=b("#pp-nav");a.css("color",options.navigation.textColor);a.addClass(options.navigation.position);for(var d=0;d<b(".pp-section").length;d++){var c="";options.anchors.length&&(c=options.anchors[d]);if("undefined"!==options.navigation.tooltips){var e=options.navigation.tooltips[d];"undefined"===typeof e&&(e="")}a.find("ul").append('<li data-tooltip="'+

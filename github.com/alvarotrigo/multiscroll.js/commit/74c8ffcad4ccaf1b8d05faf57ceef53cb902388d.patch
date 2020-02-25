@@ -1,0 +1,25 @@
+From 74c8ffcad4ccaf1b8d05faf57ceef53cb902388d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alvaro=20Trigo=20Lo=CC=81pez?= <atrigol@gmail.com>
+Date: Wed, 1 Aug 2018 17:45:20 +0200
+Subject: [PATCH] - Revert
+
+---
+ examples/css3.html | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/examples/css3.html b/examples/css3.html
+index 2b3e4c5..8d79222 100644
+--- a/examples/css3.html
++++ b/examples/css3.html
+@@ -12,8 +12,9 @@
+ 
+ 	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />
+ 	<link rel="stylesheet" type="text/css" href="examples.css" />
+-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+-	<script type="text/javascript" src="../jquery.multiscroll.extensions.min.js?v=3"></script>
++	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
++	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+ 
+ 	<script type="text/javascript">
+ 	 $(document).ready(function() {

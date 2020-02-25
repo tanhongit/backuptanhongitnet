@@ -1,0 +1,11 @@
+diff --git a/bower.json b/bower.json
+index 49d0020..05f4530 100644
+--- a/bower.json
++++ b/bower.json
+@@ -1,6 +1,5 @@
+ {
+   "name": "pagePiling.js",
+-  "version": "1.5.1",
+   "homepage": "https://github.com/alvarotrigo/pagePiling.js",
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"

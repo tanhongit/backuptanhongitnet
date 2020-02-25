@@ -1,0 +1,21 @@
+From b42b56fb828de35c5501dba1b44801def041a6a7 Mon Sep 17 00:00:00 2001
+From: alvarotrigo <atrigol@gmail.com>
+Date: Fri, 14 Nov 2014 10:28:19 +0000
+Subject: [PATCH] - Added websites to "who is using pagePilings.js"
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index fcd1af5..4ade003 100644
+--- a/README.md
++++ b/README.md
+@@ -305,6 +305,7 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
+ - http://sushi.steadfastlight.com/
+ - http://netstorage.com.br/nucs/nucs.html
+ - http://aungthurhahein.me/
++- http://mannydesigns.co
+ 
+ ## Donations
+ Donations would be more than welcome :)

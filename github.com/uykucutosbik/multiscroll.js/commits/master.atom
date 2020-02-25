@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/uykucutosbik/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/uykucutosbik/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2014-09-01T09:21:56Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e"/>
+    <title>
+        Merge pull request #15 from rawcreative/cellResizeFix
+    </title>
+    <updated>2014-09-01T09:21:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #15 from rawcreative/cellResizeFix
+
+Ensure table cells are resized during resize event&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/15aff096e6f1d7cc66670a7fef363cddd9da0871</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/15aff096e6f1d7cc66670a7fef363cddd9da0871"/>
+    <title>
+        Typo in class name
+    </title>
+    <updated>2014-08-30T15:46:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Typo in class name&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8aaa696d5cefa0b52b34b0464dfc1f1a8407e5f7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/8aaa696d5cefa0b52b34b0464dfc1f1a8407e5f7"/>
+    <title>
+        Typo in class name
+    </title>
+    <updated>2014-08-30T15:45:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Typo in class name&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fe4fec5f101f19f8c30e846d46e81a750ba079ae</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/fe4fec5f101f19f8c30e846d46e81a750ba079ae"/>
+    <title>
+        Ensure table cells are resized during resize event
+    </title>
+    <updated>2014-08-30T15:07:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Ensure table cells are resized during resize event
+
+Due to .ms-TableCell elements having an explicit height set upon init,
+they need to be resized during resize event to ensure proper layout.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a35158606ecbf29c386d86d0f4c434a76108203c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/a35158606ecbf29c386d86d0f4c434a76108203c"/>
+    <title>
+        Merge pull request #13 from erickrar/patch-1
+    </title>
+    <updated>2014-08-26T14:25:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #13 from erickrar/patch-1
+
+resolve missing parenthesis&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/23c1052a7cb0f1a220b6f516f45b88f83c82ebb5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/23c1052a7cb0f1a220b6f516f45b88f83c82ebb5"/>
+    <title>
+        resolve missing parenthesis
+    </title>
+    <updated>2014-08-26T13:37:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/6330116?s=30&amp;v=4"/>
+    <author>
+      <name>erickrar</name>
+      <uri>https://github.com/erickrar</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;resolve missing parenthesis&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/19729722d0e956efd5819a7bb4ef74c03b8f8013</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/19729722d0e956efd5819a7bb4ef74c03b8f8013"/>
+    <title>
+        - Solved problem which caused scroll on mouse move on IE 10 and 11 #12
+    </title>
+    <updated>2014-08-22T11:49:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved problem which caused scroll on mouse move on IE 10 and 11 #12&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ad5cfe9251480200358fa64d9e8df465dbdd5f42</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/ad5cfe9251480200358fa64d9e8df465dbdd5f42"/>
+    <title>
+        - Fixed bug for Safari which created a gap between the two panels #8
+    </title>
+    <updated>2014-07-16T11:56:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug for Safari which created a gap between the two panels #8&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/86523b82b1af2a043e9da16e299cabf459bbb3fb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/86523b82b1af2a043e9da16e299cabf459bbb3fb"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2014-06-09T09:27:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4505a0e52d9ab737f83cd3f0d9f9fe81503c54d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/d4505a0e52d9ab737f83cd3f0d9f9fe81503c54d"/>
+    <title>
+        - Solved bug with IE 10.
+    </title>
+    <updated>2014-06-04T09:16:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug with IE 10.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9b9552d562392588d69014157912921434d691e2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/9b9552d562392588d69014157912921434d691e2"/>
+    <title>
+        - Fixed bug which created a gap between the two panels #2
+    </title>
+    <updated>2014-05-28T13:28:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug which created a gap between the two panels #2&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7e1d0893e81382bc1a835ad7dc296d53c225967e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/7e1d0893e81382bc1a835ad7dc296d53c225967e"/>
+    <title>
+        - Added 6 more examples of how to use multiscroll.js
+    </title>
+    <updated>2014-05-22T09:33:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added 6 more examples of how to use multiscroll.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0da2d32afa5596a731e6b13530846617920d4c2a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/0da2d32afa5596a731e6b13530846617920d4c2a"/>
+    <title>
+        - Added paddingTop and paddingBottom options.
+    </title>
+    <updated>2014-05-22T09:33:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added paddingTop and paddingBottom options.
+- Solved bug with css3:true&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3b9b1fa7a5a9e3b1795f4c1957b3227590a96813</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/3b9b1fa7a5a9e3b1795f4c1957b3227590a96813"/>
+    <title>
+        - Added similar website.
+    </title>
+    <updated>2014-05-16T13:48:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added similar website.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/69e175ef25773c79a578168d81d101584f90093f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/69e175ef25773c79a578168d81d101584f90093f"/>
+    <title>
+        - updated version
+    </title>
+    <updated>2014-05-15T14:27:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- updated version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b35784c737f442f20ebbf2c422463f1b5336fd4f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/b35784c737f442f20ebbf2c422463f1b5336fd4f"/>
+    <title>
+        - Added a few more function comments
+    </title>
+    <updated>2014-05-15T14:25:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added a few more function comments 
+- Removed unused variable.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b08163a8085aec250a804e8ee8d0ea6e1b6fd2dd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/b08163a8085aec250a804e8ee8d0ea6e1b6fd2dd"/>
+    <title>
+        - Updated information about starting point on load.
+    </title>
+    <updated>2014-05-15T09:59:30Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated information about starting point on load.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f8ac3b3757d8e1431f4dddbfff5efa8cfad17928</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/f8ac3b3757d8e1431f4dddbfff5efa8cfad17928"/>
+    <title>
+        - Added new feature: Set active section by adding the `active` class …
+    </title>
+    <updated>2014-05-15T09:54:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added new feature: Set active section by adding the `active` class in sections.
+- Added new feature: scroll to the given hashtag in the URL. (useful for bookmarking)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e7c2e163e4974d041e6d05831175612742f166f4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/e7c2e163e4974d041e6d05831175612742f166f4"/>
+    <title>
+        - Added sites using similar effect
+    </title>
+    <updated>2014-05-14T16:29:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added sites using similar effect&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b776b279614a62515d8794690aa5bddb2fc35c95</id>
+    <link type="text/html" rel="alternate" href="https://github.com/uykucutosbik/multiscroll.js/commit/b776b279614a62515d8794690aa5bddb2fc35c95"/>
+    <title>
+        - Updating bower version.
+    </title>
+    <updated>2014-05-14T11:25:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating bower version.&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

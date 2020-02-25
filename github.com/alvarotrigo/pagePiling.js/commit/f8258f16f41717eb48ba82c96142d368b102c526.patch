@@ -1,0 +1,22 @@
+From f8258f16f41717eb48ba82c96142d368b102c526 Mon Sep 17 00:00:00 2001
+From: alvarotrigo <atrigol@gmail.com>
+Date: Wed, 26 Nov 2014 15:35:51 +0000
+Subject: [PATCH] - Added Facebook to "who is using pagePiling.js"
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index ec71757..9d5f1c8 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,7 @@
+ Pile your sections one over another and access them scrolling or by URL!
+ 
+ - [Live demo](http://alvarotrigo.com/pagePiling/)
+-- [Who is using it](http://alvarotrigo.com/pagePiling/)
++- [Who is using it](https://github.com/alvarotrigo/pagePiling.js#who-is-using-pagepilingjs)
+ 
+ Invite me to a coffee
+ [![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BEK5JQCQMED4J&lc=GB&item_name=pagePiling%2ejs&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)

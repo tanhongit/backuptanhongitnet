@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Java &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/java/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Fri, 04 Oct 2019 06:15:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Java &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</title>
+		<link>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/</link>
+				<comments>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/#respond</comments>
+				<pubDate>Fri, 04 Oct 2019 06:15:09 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7111</guid>
+				<description><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn cách tính cộng hai số cực lớn code bằng ngôn ngữ java để cho các bạn tham khảo nhé! Về vấn đề cộng hai số cực lớn thì bạn phải nghĩ cách lưu được số lớn đó vào trong bộ nhớ. Vê lưu số [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình sẽ chia sẻ cho các bạn cách tính cộng hai số cực lớn code bằng ngôn ngữ java để cho các bạn tham khảo nhé!</p>
+<p>Về vấn đề cộng hai số cực lớn thì bạn phải nghĩ cách lưu được số lớn đó vào trong bộ nhớ. Vê lưu số lớn thì có 2 cách: bạn có thể dùng một mảng số nguyên hoặc dùng một chuỗi kí tự để lưu nó lại. Ở đây mình sẽ dùng phương pháp thứ 2 là cho nó vào một chuỗi String để thực hiện phép tính.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png"><img class="aligncenter size-full wp-image-7140" src="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png" alt="cong hai so cuc lon" width="634" height="315" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon.png 634w, http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon-300x149.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/10/cong-hai-so-cuc-lon-360x180.png 360w" sizes="(max-width: 634px) 100vw, 634px" /></a></p>
+<p>Mỗi thằng có một lợi điểm riêng, như dùng mảng số nguyên thì không phải mất công chuyển đổi từ kiểu string sang int để tính toán, ..</p>
+<p>Đó là việc lưu trữ. Còn về việc tính toán thì lúc này bạn có thể sử dụng cách tính cộng thủ công theo phương pháp cấp 1: tức là cộng lần lượt từ phải sang trái, và có nhớ khi cộng.</p>
+<p>Luyên thuyên đủ rồi, giờ mình sẽ giải thích phương pháp của mình nhé!</p>
+<h3><strong>Cách 1: Dùng Thuật toán Cộng Hai Số Cực Lớn JAVA</strong></h3>
+<p><span style="text-decoration: underline;"><strong>Bước 1:</strong></span> Nhập 2 số nguyên lớn bằng phương pháp nhập theo kiểu chuỗi String.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    //tạo mot ham nhap   
+    static void nhap() {
+        String s1, s2;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Nhap 2 so nguyen lon. ");
+        System.out.print("Nhap so nguyen thu nhat: ");
+        s1 = s.next();
+        System.out.print("Nhap so nguyen thu hai: ");
+        s2 = s.next();
+    }</pre>
+<p><strong><span style="text-decoration: underline;">Bước 2:</span></strong> Tạo một hàm đảo ngược chuỗi. (Mình muốn chuyển ngược chuỗi, ví dụ có chuỗi &#8220;<strong>1234</strong>&#8221; thì sẽ được đảo thành &#8220;<strong>4321</strong>&#8220;. Mục đích của mình là thực hiện phép cộng lần lượt từ <strong>trái qua phải.</strong>)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    
+    static String daoXau(String s) {
+        String s1 = "";
+        for (int i = 0; i &lt; s.length(); i++) {
+            s1 += s.charAt(s.length() - 1 - i);
+        }
+        return s1; //xuat chuoi sau khi dao
+    }</pre>
+<p><span style="text-decoration: underline;"><strong>Bước 3:</strong></span> Tạo Hàm tính tổng.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">    //tạo mot ham tinh tong 
+    static String add(String s1, String s2) {
+        String s = "";
+    
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int max = max(len1, len2); //ham max length xuat ra gia tri chieu dai lon nhat trong 2 chuoi
+        s1 = daoXau(s1);
+        s2 = daoXau(s2);
+    
+        //thuc hien noi them so 0 vao chuoi voi muc dich lam cho 2 chuoi so bang nhau
+        if (max &gt; len1) {
+            for (int i = max; i &gt;= len1; i--) {
+                s1 += "0";
+            }
+        }
+        if (max &gt; len2) {
+            for (int i = max; i &gt;= len2; i--) {
+                s2 += "0";
+            }
+        }
+        
+        //thuc hien phep cong
+        int soGhiNho = 0;
+        for (int i = 0; i &lt; max; i++) {
+            int tong = 0;
+            //charAt ky tu tai vi tri thu i trong xau
+            tong = s1.charAt(i) - '0' + s2.charAt(i) - '0' + soGhiNho;
+            s += tong % 10;
+            soGhiNho = tong / 10;
+        }
+        if (soGhiNho == 1) {
+            s += 1;
+        }
+        //thuc hien dao xau truoc khi xuat
+        s = daoXau(s);
+        return s;
+    }</pre>
+<p>Vì mình thực hiện phép cộng từ trái sang phải nên kết quả sau khi tính ra sẽ bị ngược. Vì thế ở cuối hàm cộng trêm, mình phải thực hiện đảo chuỗi một lần nữa rồi mới cho return ra.</p>
+<p><strong>Như vậy ta sẽ có được Code Hoàn chỉnh như sau:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="java">public class CongSoNguyenLon {
+    public static void main(String[] args) {
+        nhap();
+    }
+    static String daoXau(String s) {
+        String s1 = "";
+        for (int i = 0; i &lt; s.length(); i++) {
+            s1 += s.charAt(s.length() - 1 - i);
+        }
+        return s1; //chuoi sau khi dao
+    }
+    static String add(String s1, String s2) {
+        String s = "";
+    
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int max = max(len1, len2); //ham max length xuat ra gia tri chieu dai lon nhat trong 2 chuoi
+        s1 = daoXau(s1);
+        s2 = daoXau(s2);
+        
+        //thuc hien noi them so 0 vao chuoi voi muc dich lam cho 2 chuoi so bang nhau
+        if (max &gt; len1) {
+            for (int i = max; i &gt;= len1; i--) {
+                s1 += "0";
+            }
+        }
+        if (max &gt; len2) {
+            for (int i = max; i &gt;= len2; i--) {
+                s2 += "0";
+            }
+        }
+        
+        //thuc hien phep cong
+        int soGhiNho = 0;
+        for (int i = 0; i &lt; max; i++) {
+            int tong = 0;
+            //charAt ky tu tai vi tri thu i trong xau
+            tong = s1.charAt(i) - '0' + s2.charAt(i) - '0' + soGhiNho;
+            s += tong % 10;
+            soGhiNho = tong / 10;
+        }
+        if (soGhiNho == 1) {
+            s += 1;
+        }
+        //thuc hien dao xau truoc khi xuat
+        s = daoXau(s);
+        return s;
+    }
+    static void nhap() {
+        String s1, s2;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Nhap 2 so nguyen lon. ");
+        System.out.print("Nhap so nguyen thu nhat: ");
+        s1 = s.next();
+        System.out.print("Nhap so nguyen thu hai: ");
+        s2 = s.next();
+        //xuat tong
+        System.out.println();
+        String ss = add(s1, s2);
+        System.out.println("Tong 2 so nguyen lon: " + ss);
+    }
+}</pre>
+<p>Đây là kết quả:</p>
+<p><a href="https://imgur.com/hh8U2Py.jpg"><img class="aligncenter" style="border-style: inset;" src="https://imgur.com/hh8U2Py.jpg" alt="" width="1167" height="143" /></a></p>
+<p>Đó là thuật toán hàn chỉnh để tính cộng hai số cực lớn, nếu code mình có sai sót ở đâu mong được sự chỉ giáo của các bạn. </p>
+<p>Ngoài thuật toán mình build ở trên ra. Java thực chất đã có bộ thư viện khổng lồ nhằm phục vụ cho các bạn rồi nên các bạn cũng có thể sử dụng <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html" target="_blank" rel="noopener noreferrer"><strong>BigDecimal</strong> </a>hoặc <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html" target="_blank" rel="noopener noreferrer"><strong>BigInteger</strong> </a>để thực hiện phép cộng này nhé!</p>
+<h3><strong>Cách 2: Sử dụng BigInteger để cộng hai số cực lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args)
+    { 
+        BigInteger num1,num2;
+        num1 = new BigInteger("655555555555555555554365435555555555555544745765476547654765476476");
+        num2 = new BigInteger("65555555465547654755543654365465555555555547654755554765755555555544745765476547654765476476");
+        System.out.println("Tong: " + num1.add(num2));
+        System.out.println("Hieu: " + num1.subtract(num2));
+        System.out.println("Tich: " + num1.multiply(num2));
+        System.out.println("Thuong: " + num1.divide(num2));
+    }</pre>
+
+
+
+<h3><strong>Cách 3: Sử dụng BigDecimal để cộng hai số cực lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        BigDecimal a,b,c;
+        System.out.print("Nhap a: ");
+        a = new BigDecimal(input.next());
+        System.out.print("Nhap b: ");
+        b = new BigDecimal(input.next());
+        
+        c = a.add(b);
+        
+        System.out.println("c = a + b = " + c);
+    }</pre>
+
+
+
+<h3><strong>Và Cách 4: Bạn cũng có thể sử dụng LinkedList để cộng hai số lớn.</strong></h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">public static void main(String[] args)
+    {   
+        Scanner scan = new Scanner(System.in);
+        /* Create Linked Lists */
+        LinkedList&lt;Integer&gt; num1 = new LinkedList&lt;Integer&gt;();
+        LinkedList&lt;Integer&gt; num2 = new LinkedList&lt;Integer&gt;();
+        LinkedList&lt;Integer&gt; ans = new LinkedList&lt;Integer&gt;();
+        /* Accept numbers */
+        System.out.println("Adding Large Numbers Using Linked Lists Test\n");
+        System.out.println("Enter number 1");
+        String s1 = scan.next();
+        System.out.println("Enter number 2");
+        String s2 = scan.next();
+        /* Store digits in lists */
+        int l1 = s1.length(), l2 = s2.length();       
+        for (int i = l1 - 1; i &gt;= 0; i--)
+            num1.add(s1.charAt(i) - '0');
+        for (int i = l2 - 1; i &gt;= 0; i--)
+            num2.add(s2.charAt(i) - '0');
+        /* Adding digits and storing in ans list */
+        int len = l1 &gt; l2 ? l1 : l2;
+        int carry = 0;
+        for (int i = 0; i &lt; len; i++)
+        {
+            int d1 = 0, d2 = 0;           
+            try {
+                d1 = num1.get(i);
+            }
+            catch(Exception e){}           
+            try {
+                d2 = num2.get(i);
+            }
+            catch(Exception e){}                       
+            int x = d1 + d2 + carry;
+            ans.add(x % 10);
+            carry = x / 10;
+        }
+        /* Adding carry */
+        while (carry != 0)
+        {
+            ans.add(carry % 10);
+            carry /= 10;
+        }
+        /* Printing ans list */
+        System.out.print("\nSum = ");
+        for (int i = ans.size() - 1; i &gt;= 0; i--)
+            System.out.print(ans.get(i));
+        System.out.println();       
+    }</pre>
+
+
+
+<p>Nếu có vấn đề hay thắc mắc gì hoặc bạn không biết cách chỉnh sửa thì hãy bình luận bên dưới để cùng trao đổi và giúp đỡ các bạn nhé!</p>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong> <a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/c/code-game-megamanx3-c/" target="_blank" rel="noopener noreferrer">Share code game MegamanX3 viết bằng C++</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/share-code/mau-code-form-login-cho-website/" target="_blank" rel="noopener noreferrer">Chia sẻ 6 mẫu Code Form Login giao diện cực đẹp và dễ thương cho Website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-chao-mung-nam-moi-voi-hieu-ung-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Chào Mừng Năm Mới Với Hiệu Ứng Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-count-down-dem-nguoc-thoi-gian-phong-cach-j2team/" target="_blank" rel="noopener noreferrer">Share Source Code Count-Down Đếm ngược thời gian phong cách J2team</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 28px;">CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ </span></strong></span></p>
+<div id="eJOY__extension_root" style="all: unset;"> </div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7111"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</title>
+		<link>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/</link>
+				<comments>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/#respond</comments>
+				<pubDate>Sun, 25 Aug 2019 08:41:53 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6718</guid>
+				<description><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học Java Programming Fundamentals từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình. Bạn sẽ học được gì từ khóa [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT xin chia sẻ đến các bạn Khóa Học <strong>Java Programming Fundamentals</strong> từ cơ bản đến nâng cao. Đây là khóa học từ Udemy &#8211; Một trang web học tập online nổi tiếng. Giúp các bạn có thể học tập và nâng cao trình độ của mình.</p>
+<p><figure id="attachment_6995" aria-describedby="caption-attachment-6995" style="width: 482px" class="wp-caption aligncenter"><img class="wp-image-6995 size-full" title="Khoá học lập trình Java từ cơ bản đến nâng cao" src="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png" alt="Lập trình Java từ cơ bản đến nâng cao" width="482" height="270" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/Java.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/08/Java-300x168.png 300w" sizes="(max-width: 482px) 100vw, 482px" /><figcaption id="caption-attachment-6995" class="wp-caption-text">Lập trình Java từ cơ bản đến nâng cao</figcaption></figure></p>
+<h3>Bạn sẽ học được gì từ khóa học:</h3>
+<ul>
+<li>Nắm vững các kiến thức cơ bản.</li>
+<li>Cải thiện tư duy logic của bạn.</li>
+<li>Phát triển kỹ năng lập trình của bạn bằng cách thực hành các bài tập từ khóa học.</li>
+</ul>
+<div class="requirements__title">
+<h3>Yêu cầu khóa học:</h3>
+</div>
+<div class="requirements__content">
+<ul class="requirements__list">
+<li class="requirements__item">Máy tính Windows, Mac hoặc Linux.</li>
+<li class="requirements__item">Bạn phải cài đặt trình soạn thảo JDK và IntelliJ IDEA để thực hành.</li>
+</ul>
+<h3>Khóa học này dành cho ai:</h3>
+<ul>
+<li>Khóa học dành cho những người không có kiến ​​thức lập trình.</li>
+<li>Dành cho những người muốn lấy lập trình làm nghề nghiệp của họ.</li>
+<li>Và dành cho những người muốn cải thiện kỹ năng của mình.</li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<h4 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000; text-decoration: underline;"><strong>Download Khóa Học Java Tại Đây:</strong></span></span></h4>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #0000ff;"><strong>Name:</strong></span> <b>Java Programming Fundamentals</b></p>
+<p style="text-align: center;"><a class="btn btn-default" href="https://drive.google.com/open?id=17u4NJHo1PXhBDzqmf6dwXt30kCSHC0rw" target="_blank" rel="noopener noreferrer">LINK DOWNLOAD KHÓA HỌC (GOOGLE DRIVE)</a></p>
+<div>
+<div>
+<p><span style="font-size: 20px;"><strong>Khi copy hoặc share cho mọi người vui lòng ghi rõ nguồn SieuShare.Com. Xin cảm ơn!</strong></span></p>
+<p>Hãy bật thông báo trên trình duyệt tại website này để nhận được thông tin khi có khóa học mới được up lên các bạn nhé!</p>
+<p>Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình hoặc bình luận dưới bài viết nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</p>
+</div>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+</div>
+<h4 style="text-align: center;">Donate – Xin Ủng Hộ Đóng Góp Website SieuShare.Com</h4>
+<p style="text-align: center;"><a class="btn btn-default" href="http://localhost:82/demowp/donate/" target="_blank" rel="noopener noreferrer">DONATE FOR Sieushare.com</a></p>
+<div class="alert alert-info">
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/category/tai-lieu/development/" target="_blank" rel="noopener noreferrer">Những khoá học cho lập trình viên</a></strong></span></p>
+<ul>
+<li><strong><span style="font-size: 16px;"><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></span></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/toan-bo-kien-thuc-ve-nodejs/" target="_blank" rel="noopener noreferrer">Download khóa học cho bạn toàn bộ kiến thức về NodeJS</a></strong></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/video-hoc-python-danh-cho-nguoi-moi-bat-dau-tu-a-z-khoa-hoc-day-du-2019/" target="_blank" rel="noopener noreferrer">Video Học Python dành cho người mới bắt đầu từ A &#8211; Z [Khóa học đầy đủ] 2019</a></strong></span></li>
+<li><span style="font-size: 16px;"><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/project-management-training-fundamentals-crash-course/" target="_blank" rel="noopener noreferrer">Chia sẻ khóa học Project Management Fundamentals: Complete Crash Course &#8211; Nguyên tắc cơ bản về quản lý dự án</a></strong></span></li>
+</ul>
+</div>
+<p style="text-align: center;"><strong style="text-align: center; font-size: 28px;"><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></p>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6718"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 99px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">4.5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/">Download Khóa Học Lập Trình Java Từ Cơ Bản Đến Nâng Cao</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/khoa-hoc-java-programming-fundamentals/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ khoá học Lập Trình Java &#8211; Become a Java Ninja &#8211; Tân Hồng IT</title>
+		<link>http://localhost:82/demowp/java/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/</link>
+				<comments>http://localhost:82/demowp/java/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/#respond</comments>
+				<pubDate>Tue, 26 Jun 2018 12:08:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/26/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/</guid>
+				<description><![CDATA[<p>Java là một ngôn ngữ di động cao vì nó phải được thực thi thông qua một máy ảo Java tương thích đa nền tảng (JVM). Ngoài ra, các ứng dụng Android cũng được phát triển bằng cách sử dụng Java vì Hệ điều hành Android chạy trên một môi trường ngôn ngữ Java.   [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/">Chia sẻ khoá học Lập Trình Java &#8211; Become a Java Ninja &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<div style="clear: both; text-align: start;"><span style="font-size: large;">Java là một ngôn ngữ di động cao vì nó phải được thực thi thông qua một máy ảo Java tương thích đa nền tảng (JVM). Ngoài ra, các ứng dụng Android cũng được phát triển bằng cách sử dụng Java vì Hệ điều hành Android chạy trên một môi trường ngôn ngữ Java.</span></div>
+<div style="clear: both; text-align: start;"><span style="font-size: large;"> </span></div>
+<div style="clear: both; text-align: start;"><span style="font-size: large;">Tân Hồng IT blog chia sẻ cho các bạn khoá học ngôn ngữ lập trình Java.</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/ghkghk.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/ghkghk-300x170.png" width="640" height="362" border="0" data-original-height="241" data-original-width="425" /></a></div>
+<div style="clear: both; text-align: left;"><span style="font-size: large;">Trong khóa học này, bạn sẽ được tiếp xúc với các khái niệm lập trình cơ bản, bao gồm lập trình hướng đối tượng (OOP), Cấu trúc dữ liệu, Swing, Awt, Cơ sở dữ liệu Etc bằng cách sử dụng Java. Bạn sẽ xây dựng nhiều dự án Java — Trò chơi xếp hình, Hoạt hình, Ứng dụng cơ sở dữ liệu và hơn thế nữa —để giúp bạn thực hành trong công việc và học tập.</span></div>
+<div style="clear: both; text-align: center;"></div>
+<p><b style="font-size: x-large;"><u>Đối tượng, mục tiêu:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Khóa học này thực sự là hoàn hảo cho người mới bắt đầu mà không có kinh nghiệm mã hóa trước đó, để trung gian tìm cách để làm sắc nét các kỹ năng của họ đến cấp độ chuyên gia.</span></li>
+<li><span style="font-size: large;">Người muốn xây dựng các ứng dụng thực tế.</span></li>
+<li><span style="font-size: large;">Người muốn trở thành nhà phát triển trả tiền cao.</span></li>
+<li><span style="font-size: large;">Sinh viên tốt nghiệp mới, những người muốn thực hiện một giấc mơ sự nghiệp trong kỹ nghệ phần mềm.</span></li>
+<li><span style="font-size: large;">Người mới bắt đầu có nền lập trình 0</span></li>
+<li><span style="font-size: large;">Lập trình viên giàu kinh nghiệm với ngôn ngữ lập trình khác hoặc trong java là tốt.</span></li>
+<li><span style="font-size: large;">Ai muốn trở thành Java Ninja</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Vào cuối khóa học này, bạn sẽ có hiểu biết chi tiết về ngôn ngữ lập trình Java.</span></li>
+<li><span style="font-size: large;">Hiểu các khái niệm về Ngôn ngữ lập trình hướng đối tượng</span></li>
+<li><span style="font-size: large;">Bạn sẽ tự tin để xóa các cuộc phỏng vấn</span></li>
+<li><span style="font-size: large;">Bạn được dạy từng bước CÁCH lập trình bằng java.</span></li>
+<li><span style="font-size: large;">Các kỹ năng để có được một JOB với Java theo vành đai của bạn như được dạy bởi tốt nhất</span></li>
+<li><span style="font-size: large;">Tìm hiểu cấu trúc dữ liệu trong java</span></li>
+<li><span style="font-size: large;">Tạo các dự án thực tế trong Java</span></li>
+<li><span style="font-size: large;">Tạo các ứng dụng dựa trên GUI trong java bằng cách sử dụng swing và AWT.</span></li>
+<li><span style="font-size: large;">Và nhiều hơn nữa</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Máy tính có Windows, Mac hoặc Linux để cài đặt tất cả phần mềm và công cụ miễn phí cần thiết để tạo ứng dụng mới của bạn.</span></li>
+<li><span style="font-size: large;">Java SDK, Eclipse, Netbean, JDK1.8</span></li>
+<li><span style="font-size: large;">Java được bảo hiểm trong khóa học, không cần kinh nghiệm</span></li>
+<li><span style="font-size: large;">Người mới bắt đầu sẽ dễ dàng theo dõi khóa học này Không yêu cầu mã hóa nền.</span></li>
+<li><span style="font-size: large;">Một đạo đức làm việc mạnh mẽ, sẵn sàng học hỏi và rất nhiều hứng thú về các chương trình mới tuyệt vời mà bạn sắp xây dựng.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 3.28GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=16m6yY5ga3IJMoraMqTWS6RigAP6u4SOT&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<div><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/become-java-ninja/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/become-java-ninja/</a></span><br />
+<span style="font-size: large;">Giá $194.99 </span><span style="font-size: large;">≈ </span><span style="font-size: large;">4.461.075</span><span style="font-size: large;"> VNĐ</span></div>
+<div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-26_185558.png"><img class="aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2018/06/2018-06-26_185558-300x186.png" width="640" height="392" border="0" data-original-height="635" data-original-width="1024" /></a></div>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy cùng là những người văn minh.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Nếu các bạn có nhu cầu down khoá học cứ liên hệ mình nhé. Mình sẽ sẵn sàng share nếu có. Cảm ơn các bạn.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: <a href="http://udemy.com/">Udemy.com</a></span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5572"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/">Chia sẻ khoá học Lập Trình Java &#8211; Become a Java Ninja &#8211; Tân Hồng IT</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/chia-se-khoa-hoc-lap-trinh-java-become-a-java-ninja-tan-hong-it/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tài liệu khoá học Cấu trúc dữ liệu trong Java cho Noobs (Lite Edition)</title>
+		<link>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/</link>
+				<comments>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/#respond</comments>
+				<pubDate>Sun, 03 Jun 2018 05:37:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Udemy]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/03/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/</guid>
+				<description><![CDATA[<p>Khóa học này sẽ giới thiệu cho bạn các cấu trúc dữ liệu sau.  Singly Linked List.  Danh sách được liên kết đôi &#160; Đối tượng và mục tiêu: Những người biết cách lập trình bằng java. Người có thể sẽ tham gia phỏng vấn xin việc. Những người muốn có kỹ năng lập trình [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/">Tài liệu khoá học Cấu trúc dữ liệu trong Java cho Noobs (Lite Edition)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Khóa học này sẽ giới thiệu cho bạn các cấu trúc dữ liệu sau. </span></p>
+<ul>
+<li><span style="font-size: large;">Singly Linked List. </span></li>
+<li><span style="font-size: large;">Danh sách được liên kết đôi</span></li>
+</ul>
+<p>&nbsp;</p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-Jt_3Abqp-04/WxN-FnWsYFI/AAAAAAAAIjk/ZZMeeY-yBh0Vw7JexGgHjCCn_Se4iV0fwCLcBGAs/s1600/jyhfo.png"><img class="aligncenter" src="https://3.bp.blogspot.com/-Jt_3Abqp-04/WxN-FnWsYFI/AAAAAAAAIjk/ZZMeeY-yBh0Vw7JexGgHjCCn_Se4iV0fwCLcBGAs/s640/jyhfo.png" width="640" height="362" border="0" data-original-height="243" data-original-width="429" /></a></div>
+<p><span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Những người biết cách lập trình bằng java.</span></li>
+<li><span style="font-size: large;">Người có thể sẽ tham gia phỏng vấn xin việc.</span></li>
+<li><span style="font-size: large;">Những người muốn có kỹ năng lập trình tốt hơn.</span></li>
+</ul>
+<p><span style="font-size: large;"><b><u><span style="font-size: large;"><b><u><br />
+</u></b></span>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Bạn sẽ học cách triển khai cấu trúc dữ liệu của riêng mình.</span></li>
+<li><span style="font-size: large;">Bạn sẽ tìm hiểu về thời gian phức tạp của các hoạt động.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<p><span style="font-size: large;"><b><u>Yêu Cầu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Biết ngôn ngữ lập trình Java.</span></li>
+<li><span style="font-size: large;">Cài đặt IDE riêng của họ (Eclipse, Netbeans, IntelliJ).</span></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 209MB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1xZJSRuPUv3HVqSYjQiit7o_GZqDAwhag&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/data-structures-in-java-for-noobs-lite-edition-algorithms-beginners/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/data-structures-in. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-fetwRsLf0_c/WxN8hyaaAkI/AAAAAAAAIjY/mreE7U0YDnQnCF0nA1nc7266z3jyb97_wCLcBGAs/s1600/2018-06-03_122714.png"><img class="aligncenter" src="https://4.bp.blogspot.com/-fetwRsLf0_c/WxN8hyaaAkI/AAAAAAAAIjY/mreE7U0YDnQnCF0nA1nc7266z3jyb97_wCLcBGAs/s640/2018-06-03_122714.png" width="640" height="392" border="0" data-original-height="637" data-original-width="1024" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="79"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/">Tài liệu khoá học Cấu trúc dữ liệu trong Java cho Noobs (Lite Edition)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-cau-truc-du-lieu-trong-java-cho-noobs-lite-edition/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tài liệu khóa học Selenium with C# and Java Titbits</title>
+		<link>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/</link>
+				<comments>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/#respond</comments>
+				<pubDate>Sun, 03 Jun 2018 04:28:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[C++]]></category>
+		<category><![CDATA[IT & Software]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Udemy]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/03/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/</guid>
+				<description><![CDATA[<p>Khóa học Selenium Titbits dành cho những người muốn nắm bắt được sự hiểu biết cơ bản về Selenium một cách chi tiết hơn. Đối tượng và mục tiêu: Khóa học này dành cho tất cả những ai muốn học Selenium từ đầu. Khóa học này sẽ giúp nẵm vững các kiến thức để có [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/">Tài liệu khóa học Selenium with C# and Java Titbits</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Khóa học Selenium Titbits dành cho những người muốn nắm bắt được sự hiểu biết cơ bản về Selenium một cách chi tiết hơn.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-XWc7xUo-xqA/WxNt7ohhY7I/AAAAAAAAIi0/JNds58HvT8o_oZ1wRfYROZNLHxW2dyMGgCLcBGAs/s1600/hkghkhgk.png"><img class="aligncenter" src="https://1.bp.blogspot.com/-XWc7xUo-xqA/WxNt7ohhY7I/AAAAAAAAIi0/JNds58HvT8o_oZ1wRfYROZNLHxW2dyMGgCLcBGAs/s640/hkghkhgk.png" width="640" height="360" border="0" data-original-height="240" data-original-width="426" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Khóa học này dành cho tất cả những ai muốn học Selenium từ đầu.</span></li>
+<li><span style="font-size: large;">Khóa học này sẽ giúp nẵm vững các kiến thức để có một số công việc thường xuyên được thực hiện trong selenium ngày này qua ngày khác.</span></li>
+</ul>
+<p><span style="font-size: large;"><b><u><span style="font-size: large;"><b><u><br />
+</u></b></span>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Bắt đầu hiểu kiến ​​thức cơ bản về Selenium Webdriver rất rõ ràng.</span></li>
+<li><span style="font-size: large;">Làm việc với nhiều tính năng có sẵn với Selenium.</span></li>
+<li><span style="font-size: large;">Khám phá các câu hỏi thường gặp nhất trong Selenium Webdriver.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<p><b style="font-size: x-large;"><u>Yêu cầu:</u></b><span style="font-size: large;"> </span></p>
+<ul>
+<li><span style="font-size: large;">Hiểu biết cơ bản về C # và Java là quá đủ để hiểu được khóa học.</span></li>
+</ul>
+<p><span style="font-size: large;"> </span></p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 800MB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1JWz66ICLgYnZXbbYFhvu3h7j7BNZmZo5&#8243; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/selenium-csharp-and-java-titbits/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/selenium-csharp-a. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-m9ZscwhNwMA/WxNs15ous8I/AAAAAAAAIio/zkhUjiQ_6m0sAXNosQIyqUF2DGPcoLpKACLcBGAs/s1600/2018-06-03_111958.png"><img class="aligncenter" src="https://1.bp.blogspot.com/-m9ZscwhNwMA/WxNs15ous8I/AAAAAAAAIio/zkhUjiQ_6m0sAXNosQIyqUF2DGPcoLpKACLcBGAs/s640/2018-06-03_111958.png" width="640" height="392" border="0" data-original-height="637" data-original-width="1024" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="81"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/">Tài liệu khóa học Selenium with C# and Java Titbits</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tai-lieu-khoa-hoc-selenium-with-c-and-java-titbits/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tài liệu khóa học Hoàn thành từng bước Java cho Testers</title>
+		<link>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/</link>
+				<comments>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/#respond</comments>
+				<pubDate>Sat, 02 Jun 2018 01:38:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Testers]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Web Development]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/02/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/</guid>
+				<description><![CDATA[<p>Đây là một khóa học toàn diện nhưng đơn giản về ngôn ngữ lập trình java và nó tập trung vào các khái niệm lập trình Java cần thiết cho Selenium WebDriver hoặc bất kỳ công cụ Tự động hóa nào khác. Bạn chưa bao giờ viết mã, có kinh nghiệm hoặc có nhiều kinh [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/">Tài liệu khóa học Hoàn thành từng bước Java cho Testers</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Đây là một khóa học toàn diện nhưng đơn giản về ngôn ngữ lập trình java và nó tập trung vào các khái niệm lập trình Java cần thiết cho Selenium WebDriver hoặc bất kỳ công cụ Tự động hóa nào khác.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-fM-YRqsrrPc/WxH0JsVgi1I/AAAAAAAAIdo/AWc5rN5PvfQZc0Gx0_CRY_-Fs3LSxb06wCLcBGAs/s1600/bhsfht.png"><img class="aligncenter" src="https://4.bp.blogspot.com/-fM-YRqsrrPc/WxH0JsVgi1I/AAAAAAAAIdo/AWc5rN5PvfQZc0Gx0_CRY_-Fs3LSxb06wCLcBGAs/s640/bhsfht.png" width="640" height="366" border="0" data-original-height="241" data-original-width="420" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Bạn chưa bao giờ viết mã, có kinh nghiệm hoặc có nhiều kinh nghiệm về bất kỳ ngôn ngữ lập trình nào khác, khóa học này là một nơi dừng chân cho bạn.</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Hiểu các khái niệm về Ngôn ngữ lập trình hướng đối tượng.</span></li>
+<li><span style="font-size: large;">Bạn sẽ có thể GIẢI THÍCH, THIẾT KẾ và THỰC HIỆN chương trình java hiệu quả.</span></li>
+<li><span style="font-size: large;">Bạn sẽ có thể hiểu tất cả các khái niệm Java cần thiết cho Selenium WebDriver hoặc bất kỳ công cụ Tự động hóa nào khác.</span></li>
+<li><span style="font-size: large;">Bạn sẽ tự tin xóa các cuộc phỏng vấn tự động hóa thử nghiệm.</span></li>
+</ul>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Yêu cầu:</u></b> </span></p>
+<ul>
+<li><span style="font-size: large;">Các khái niệm Java được đề cập trong khóa học, không cần kinh nghiệm.</span></li>
+<li><span style="font-size: large;">Trình duyệt (Firefox hoặc Chrome).</span></li>
+<li style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: large; vertical-align: inherit;">Máy tính Windows / MAC.</span></li>
+<li style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: large; vertical-align: inherit;">Tất cả các yêu cầu cài đặt được bao gồm trong các bài giảng và tài liệu đã được tải lên khóa học.</span></li>
+</ul>
+<p><span style="font-size: large;"> </span></p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 1.19GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1GGZrjhYmfrHE1_VJSrBa49jCoriOABMA&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/complete-java-for-test-automation/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/complet. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-urtFdh_Rz7c/WxHyC07kZAI/AAAAAAAAIdc/_pgTu7CWfJ8ZDsPA4B2g09OAzN2K9J0kQCLcBGAs/s1600/2018-06-02_082429.png"><img class="aligncenter" src="https://4.bp.blogspot.com/-urtFdh_Rz7c/WxHyC07kZAI/AAAAAAAAIdc/_pgTu7CWfJ8ZDsPA4B2g09OAzN2K9J0kQCLcBGAs/s640/2018-06-02_082429.png" width="640" height="392" border="0" data-original-height="637" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="http://localhost:82/demowp/2018/06/dmca-la-gi-dmca-bao-ve-ban-nhung-gi.html" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="91"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 0px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <span class="kksr-muted"></span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/java/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/">Tài liệu khóa học Hoàn thành từng bước Java cho Testers</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/java/tai-lieu-khoa-hoc-hoan-thanh-tung-buoc-java-cho-testers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/mystroken/carousso.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/mystroken/carousso.js/commits/master.atom"/>
+  <title>Recent Commits to carousso.js:master</title>
+  <updated>2017-07-18T06:19:34Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b801a7489733188c2e1e9523b76f50d69369f701</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/b801a7489733188c2e1e9523b76f50d69369f701"/>
+    <title>
+        Remove minified file from main (bower)
+    </title>
+    <updated>2017-07-18T06:19:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove minified file from main (bower)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4e858481ae8bc1db211a3ae8981ed47b270dfef</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/d4e858481ae8bc1db211a3ae8981ed47b270dfef"/>
+    <title>
+        Generate the distribution folder
+    </title>
+    <updated>2017-07-18T05:54:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Generate the distribution folder&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7a2c485c6559c7c8a5688b3e26a561ee5ab865c8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/7a2c485c6559c7c8a5688b3e26a561ee5ab865c8"/>
+    <title>
+        Configure npm
+    </title>
+    <updated>2017-07-18T05:52:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Configure npm&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2cd7c24e7ce88456940fe0ec619ab023d744eeb4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/2cd7c24e7ce88456940fe0ec619ab023d744eeb4"/>
+    <title>
+        add gulp, npm and bower registering
+    </title>
+    <updated>2017-07-18T05:33:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add gulp, npm and bower registering&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ca19f51374444399a7927e86b517669774836d5d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/ca19f51374444399a7927e86b517669774836d5d"/>
+    <title>
+        First released version
+    </title>
+    <updated>2017-07-18T04:09:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://0.gravatar.com/avatar/235da5faf5fea79da33b81dc4f0e0dde?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>kouaba@ssh2.mp.ha.ovh.net</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;First released version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/287685c203664e8a1811f2c15d27b86182310039</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/287685c203664e8a1811f2c15d27b86182310039"/>
+    <title>
+        Merging origin with local
+    </title>
+    <updated>2016-11-07T03:15:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merging origin with local&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b957aaad9232507c137c33e1e69aeb4b4ea4883b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/mystroken/carousso.js/commit/b957aaad9232507c137c33e1e69aeb4b4ea4883b"/>
+    <title>
+        add waitBeforeSlide and atTheEnd callback function
+    </title>
+    <updated>2016-11-07T03:10:16Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/9021722?s=30&amp;v=4"/>
+    <author>
+      <name>mystroken</name>
+      <uri>https://github.com/mystroken</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add waitBeforeSlide and atTheEnd callback function&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/carabina/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/carabina/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2014-10-05T11:42:04Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e4eaaa8c6143d97edf10796e8ee0f32d646bf0e9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/e4eaaa8c6143d97edf10796e8ee0f32d646bf0e9"/>
+    <title>
+        Merge pull request #2 from decause/patch-1
+    </title>
+    <updated>2014-10-05T11:42:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #2 from decause/patch-1
+
+Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/11bbec3a21fff04523543bdeebfa8ffa494304fa</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/11bbec3a21fff04523543bdeebfa8ffa494304fa"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-10-04T03:54:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/427420?s=30&amp;v=4"/>
+    <author>
+      <name>decause</name>
+      <uri>https://github.com/decause</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/16ade8b67ced1d3ae590bedf2fe02de56b355df9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/16ade8b67ced1d3ae590bedf2fe02de56b355df9"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-09-26T09:16:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/efa6d4bb3acbed1e719334305423ec327115412a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/efa6d4bb3acbed1e719334305423ec327115412a"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-09-25T09:18:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8d43ac79cb8b394e245060192112cabbd24bb6e0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/8d43ac79cb8b394e245060192112cabbd24bb6e0"/>
+    <title>
+        - Fixed links
+    </title>
+    <updated>2014-09-25T09:13:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed links&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e5db925e6d747ed63ea660eb39354bd68ac60198</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/e5db925e6d747ed63ea660eb39354bd68ac60198"/>
+    <title>
+        - Added examples
+    </title>
+    <updated>2014-09-24T22:43:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added examples&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/baae8ee6001ce6632cc43e2e7cf0c1baa5511df4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/baae8ee6001ce6632cc43e2e7cf0c1baa5511df4"/>
+    <title>
+        Load minified version
+    </title>
+    <updated>2014-09-24T20:18:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Load minified version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e59908068258bf00507639afd6b72cc6f9fb2e70</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/e59908068258bf00507639afd6b72cc6f9fb2e70"/>
+    <title>
+        - Added examples &amp; small fixes
+    </title>
+    <updated>2014-09-24T20:18:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added examples &amp;amp; small fixes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0ee38bdb3cf0c79caf2df4f839794e444fb67449</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/0ee38bdb3cf0c79caf2df4f839794e444fb67449"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-09-24T15:00:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/96356593948af21b7d0c0ba5e3a1f91948cfd373</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/96356593948af21b7d0c0ba5e3a1f91948cfd373"/>
+    <title>
+        Delete LICENSE
+    </title>
+    <updated>2014-09-24T14:59:09Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Delete LICENSE&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/733b9a5502be4ba61a3e9c5f9ef9f1b00344edf6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/733b9a5502be4ba61a3e9c5f9ef9f1b00344edf6"/>
+    <title>
+        - Initial commit
+    </title>
+    <updated>2014-09-24T14:58:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Initial commit&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/df953b924a61df64fd826a07e02cc197176b44fe</id>
+    <link type="text/html" rel="alternate" href="https://github.com/carabina/pagePiling.js/commit/df953b924a61df64fd826a07e02cc197176b44fe"/>
+    <title>
+        Initial commit
+    </title>
+    <updated>2014-09-24T14:33:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Initial commit&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

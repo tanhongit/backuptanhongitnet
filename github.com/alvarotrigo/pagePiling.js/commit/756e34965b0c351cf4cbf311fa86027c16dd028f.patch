@@ -1,0 +1,21 @@
+From 756e34965b0c351cf4cbf311fa86027c16dd028f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Sun, 22 Feb 2015 20:47:34 +0000
+Subject: [PATCH] Update bower.json
+
+---
+ bower.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bower.json b/bower.json
+index 79367f7..f7b3255 100644
+--- a/bower.json
++++ b/bower.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "pagePiling.js",
+-  "version": "1.2",
++  "version": "1.3",
+   "homepage": "https://github.com/alvarotrigo/pagePiling.js",
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"

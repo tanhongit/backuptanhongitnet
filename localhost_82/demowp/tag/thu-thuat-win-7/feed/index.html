@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Thủ Thuật Win 7 &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/thu-thuat-win-7/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Fri, 13 Sep 2019 17:34:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Thủ Thuật Win 7 &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</title>
+		<link>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/</link>
+				<comments>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/#respond</comments>
+				<pubDate>Fri, 26 Jul 2019 08:04:56 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Sửa Chữa Laptop]]></category>
+		<category><![CDATA[Sửa Chữa Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6389</guid>
+				<description><![CDATA[<p>Như các bạn đã biết với các chế độ sata mode mà nhà chip set hỗ trợ hiện này gồm có IDE vs SATA hoăc RAID là phổ biển nhất. Nếu các bạn đã lỡ cài đặt windows ở chế độ IDE hoặc các chế độ khác. Vậy làm sao khi chuyển đổi giữa chế [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Như các bạn đã biết với các chế độ sata mode mà nhà chip set hỗ trợ hiện này gồm có IDE vs SATA hoăc RAID là phổ biển nhất. Nếu các bạn đã lỡ cài đặt windows ở chế độ IDE hoặc các chế độ khác. Vậy làm sao khi chuyển đổi giữa chế độ SATA từ IDE sang AHCI, RAID hoặc ngược lại hay các chế độ khác mà không bị lỗi.</p>
+<figure id="attachment_6394" aria-describedby="caption-attachment-6394" style="width: 698px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg"><img class="size-full wp-image-6394" src="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg" alt="chuyen doi giua raid sang ahci" width="698" height="394" srcset="http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/07/chuyen-doi-giua-raid-sang-ahci-300x169.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /></a><figcaption id="caption-attachment-6394" class="wp-caption-text">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI</figcaption></figure>
+<p>Đây là cách an toàn và tỉ lệ thành công cao nhất nên mình chia sẻ lại cho các bạn cùng tham khảo.</p>
+<h2><strong>Chế độ SATA Mode AHCI, RAID và IDE là gì ?</strong></h2>
+<p>Giao diện <strong>SATA</strong> có thể hoạt động ở các chế độ <strong>RAID, IDE</strong> và <strong>AHCI</strong>:</p>
+<p><strong>IDE</strong> – một chế độ tương thích cho các thiết bị với các phần mềm cũ hơn. Trên thực tế, trong chế độ này, cổng cáp SATA không khác với giao diện ATA (hoặc PATA) tiền nhiệm của nó.</p>
+<p><strong>AHCI</strong> – một chế độ mới cho các thiết bị bộ nhớ, trong đó máy tính có thể sử dụng tất cả các ưu thế sức mạnh của cổng SATA, chủ yếu là tốc độ trao đổi dữ liệu cao hơn với SSD và HDD nhờ công nghệ Native Command Queuing technology (NCQ)<br />
+NCQ cho phép chính ổ đĩa xác định thứ tự tối ưu để truy xuất các yêu cầu chưa xử lý. Ví dụ như <span class="">cho phép ổ đĩa thực hiện tất cả các yêu cầu trong ít vòng quay hơn và do đó ít thời gian hơn.</span><br />
+Khi bạn kích hoạt chế độ AHCI, nó sẽ tăng tốc độ truy cập vào các tệp trong thiết bị bộ nhớ và cải thiện hiệu suất tổng thể của máy tính của bạn.</p>
+<p><strong>RAID</strong> – là chữ viết tắt của Redundant Array of Independent Disks. Ban đầu, RAID được sử dụng như một giải pháp phòng hộ vì nó cho phép ghi dữ liệu lên nhiều đĩa cứng cùng lúc. Về sau, RAID đã có nhiều biến thể cho phép không chỉ đảm bảo an toàn dữ liệu mà còn giúp gia tăng đáng kể tốc độ truy xuất dữ liệu từ đĩa cứng.</p>
+<h2><strong>Vì sao phải chuyển RAID sang AHCI, IDE sang AHCI hoặc ngược lại?</strong></h2>
+<p>Điều dễ hiểu là khi cài Windows chúng ta chỉ nhắm mắt nhắm mũi cài mà không <strong>check BIOS, SATA Hard disk</strong> đang được đặt là IDE, AHCI hay RAID.</p>
+<p>Sau khi cài xong mà khi đó bạn lại muốn đổi SATA mode khởi động thì Windows để phù hợp với mục đích sự dụng của bạn hoặc bạn vô tình tự vào đổi thì Windows sẽ <strong>crash</strong> ngay.</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Ví dụ:</strong></span> máy của bạn đang ở chế độ <strong>AHCI</strong>, nhưng vô tình bạn lỡ tay đổi sang chế độ khác như <strong>RAID on</strong> chẳng hạn, Windows của bạn khi đó sẽ báo lỗi ngay. Nếu gặp những bạn không hiểu biết thì sẽ bị các thợ tiệm chém vài chục đến 200 ngàn để sửa chữa.</p>
+<p>Sau đây là cách khắc phục.</p>
+<h2><strong>Hướng dẫn chuyển đổi giữa RAID sang AHCI</strong></h2>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 1:</strong></span></p>
+<p>Vào chế độ <strong>Safe Mode của Windows </strong>hoặc tại giao diện <strong>Windows hiện hành</strong> bạn đang sử dụng, bạn chạy <strong>CMD</strong> với quyền <strong>Admin</strong> nhé!</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 2:</strong></span></p>
+<p>Thêm đoạn code sau vào <strong>cmd</strong> rồi Enter để chạy: <span style="background-color: #ffff99;"><strong><code>bcdedit /set {current} safeboot minimal</code></strong></span></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 3:</strong></span></p>
+<p>Khỏi động lại máy, vào Bios chỉnh từ RAID sang AHCI hoặc ngược lại tuỳ vào muốn của các bạn. (Khuyến nghị nên đổi sang AHCI).</p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 4:</strong></span></p>
+<p>Sau khi đã đổi xong thì <strong>Restart</strong> lại máy. Máy của bạn sẽ tự động boot vào chế độ <strong>Safe mode</strong> và sẽ tự <strong>update driver AHCI (từ RAID).</strong></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 5:</strong></span></p>
+<p>Chạy <strong>CMD</strong> với quyền <strong>Admin. V</strong>iết đoạn code sau vào rồi nhấn Enter: <span style="background-color: #ffff99;"><code><strong>bcdedit /deletevalue {current} safeboot</strong></code></span></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 6:</strong></span></p>
+<p><strong>Restart</strong> lại máy và thành công!!!</p>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+<div><span style="font-size: 16px;"><strong>Xem Thêm:</strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></span></div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6389"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/">Cách chuyển đổi SATA Mode, bật AHCI, chuyển đổi giữa RAID sang AHCI, IDE sang AHCI hoặc ngược lại trong Windows 10, 8.1, 8, 7</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/sua-chua-may-tinh/cach-chuyen-doi-sata-mode-bat-ahci-chuyen-doi-giua-raid-sang-ahci-ide-sang-ahci-hoac-nguoc-lai-trong-windows-10-8-1-8-7/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Classic Game Windows 7 dành cho Windows 10 / 8.1</title>
+		<link>http://localhost:82/demowp/entertainment/classic-game-windows-7/</link>
+				<comments>http://localhost:82/demowp/entertainment/classic-game-windows-7/#respond</comments>
+				<pubDate>Sat, 19 Jan 2019 14:19:57 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Entertainment]]></category>
+		<category><![CDATA[Game]]></category>
+		<category><![CDATA[Game Design]]></category>
+		<category><![CDATA[Game Máy Tính]]></category>
+		<category><![CDATA[games offline]]></category>
+		<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Giải trí]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Classic]]></category>
+		<category><![CDATA[Game win 10]]></category>
+		<category><![CDATA[Hack Game]]></category>
+		<category><![CDATA[Mod Game]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5211</guid>
+				<description><![CDATA[<p>Classic Game Windows 7 là tổng hợp những game cổ điển được cài đặt sẵn trong hệ điều hành cùng tên. Đây là bộ sưu tầm cho người chơi có cơ hội trải nghiệm lại những dòng game xưa cũ như: dò mìn, game bài, tá lả,… Tuy đã qua hơn 10 năm, nhưng nó [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Classic Game Windows 7</strong> là tổng hợp những game cổ điển được cài đặt sẵn trong hệ điều hành cùng tên. Đây là bộ sưu tầm cho người chơi có cơ hội trải nghiệm lại những dòng game xưa cũ như: <strong>dò mìn, game bài, tá lả,… </strong></p>
+<p>Tuy đã qua hơn 10 năm, nhưng nó vẫn có sự thú vị hấp dẫn và đơn giản trong lối chơi lẫn thiết kế mà không tựa game nào có được.</p>
+<figure id="attachment_6309" aria-describedby="caption-attachment-6309" style="width: 750px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/01/download-classic-game-windows-7.png"><img class="size-full wp-image-6309" src="http://localhost:82/demowp/wp-content/uploads/2019/01/download-classic-game-windows-7.png" alt="download classic game windows 7" width="750" height="495" srcset="http://localhost:82/demowp/wp-content/uploads/2019/01/download-classic-game-windows-7.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/01/download-classic-game-windows-7-300x198.png 300w" sizes="(max-width: 750px) 100vw, 750px" /></a><figcaption id="caption-attachment-6309" class="wp-caption-text">download classic game windows 7</figcaption></figure>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Vi_sao_classic_game_khong_co_o_Windows_10" title="Vì sao classic game không có ở Windows 10">Vì sao classic game không có ở Windows 10</a></li><li><a href="#Cac_tinh_nang_chinh_cua_Classic_Game_Windows_7" title="Các tính năng chính của Classic Game Windows 7">Các tính năng chính của Classic Game Windows 7</a></li><li><a href="#Download_Classic_Game_Windows_7_cho_Windows_10" title="Download Classic Game Windows 7 cho Windows 10">Download Classic Game Windows 7 cho Windows 10</a></li><li><a href="#Huong_dan_cai_dat_Classic_Game_Windows_7_tren_Windows_10" title="Hướng dẫn cài đặt Classic Game Windows 7 trên Windows 10">Hướng dẫn cài đặt Classic Game Windows 7 trên Windows 10</a></li></ul></nav></div>
+
+<p>Bên cạnh những game nổi tiếng hiện nay như Đế chế thì những game cổ điển nhẹ nhàng sẽ giúp bạn thư giãn ở một trạng thái hoàn toàn khác, không có sự căng thẳng đầu óc trong từng trận đấu. Ngoài ra, Đế chế cũng chỉ phù hợp cho những ai có nhiều thời gian và yêu thích game chiến thuật, còn game cổ điển thì có thể chơi và nghỉ bất cứ lúc nào.</p>
+<h2><span style="text-decoration: underline;"><span style="font-size: 24px;"><strong>Vì sao classic game không có ở Windows 10</strong></span></span></h2>
+<p>Theo Anonyviet thì Microsoft đã mạnh tay “cắt gọt” đi rất nhiều tính năng đặc trưng của hệ điều hành cũ khiến nhiều người cảm thấy hối tiếc. Điển hình là bộ game văn phòng như Minesweeper, Chess, Game bài… Để tập trung vào các chức năng khác. Nếu bạn muốn sự hiện đại đến từ Microsoft. Bạn có thể tải trực tiếp các tựa game này trên Windows Store. Nhưng nó bạn sẽ gặp hàng tá quảng cáo và trả phí nếu muốn sử dụng trọn vẹn.</p>
+<p>Có thể nói để chơi các tựa game cũ trên Windows 10 có gì đó gây khó khăn cho người dùng, đặc biệt với những người ít kinh nghiệm, tuy nhiên, nếu biết mẹo, các bạn hoàn toàn có thể chạy game, phần mềm cũ trên Windows 10, nếu chưa biết cách thực hiện, các bạn tham khảo tại bài viết này nhé!</p>
+<h2><span style="text-decoration: underline; font-size: 24px;"><strong>Các tính năng chính của Classic Game Windows 7</strong></span></h2>
+<ul>
+<li>Bộ sưu tập các game cổ điển</li>
+<li>Hỗ trợ trên hệ điều hành windows 10</li>
+<li>Đơn giản trong cách chơi và đồ họa</li>
+<li>Có cạnh tranh về điểm số và bảng xếp hạng</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #ff0000;"><strong>Download Classic Game Windows 7 cho Windows 10</strong></span></h2>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=12Fg8M1XiUK7Anafdreg7JXEY66tdXe8n" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Tải Classic Game Windows 7 tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<hr />
+<h2><span style="font-size: 24px; color: #ff0000;"><strong>Hướng dẫn cài đặt Classic Game Windows 7 trên Windows 10</strong></span></h2>
+<ol>
+<li>Mở file &#8220;<strong>Windows 7 Games for Windows 10 and 8.exe&#8221;</strong> để tiến hành cài đặt.</li>
+<li>Chọn ngôn ngữ là <strong>English</strong> và nhấn<strong> OK.</strong></li>
+<li>Bạn hãy click chọn tất cả các ô rồi nhấn<strong> Next</strong> rồi nhấn<strong> Install.</strong></li>
+<li>Sau khi quá trình cài đặt hoàn tất, bạn nhấp bỏ chọn vào ô &#8220;<strong>Discover Winaero Tweaker to tune up Windows 10/8.1/8&#8243;</strong> và nhấn<strong> Finish</strong> để hoàn tất cài đặt.</li>
+</ol>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/camtasia-studio-2019/" target="_blank" rel="noopener noreferrer">Download Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/" target="_blank" rel="noopener noreferrer">All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-nt-3-5/" target="_blank" rel="noopener noreferrer">Download ISO Windows NT 3.5 cài đặt cho máy</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong><em>CHÚC CÁC BẠN THÀNH CÔNG VÀ CHƠI VUI VẺ.</em></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5211"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/entertainment/classic-game-windows-7/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</title>
+		<link>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/#respond</comments>
+				<pubDate>Fri, 18 Jan 2019 15:00:44 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Windows Server]]></category>
+		<category><![CDATA[Windows 10]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5190</guid>
+				<description><![CDATA[<p>Theo bài viết của TECHRUM chia sẻ cho các bạn thì có 6 điều khi sử dụng Máy Tính, Laptop mà có thể bạn đã từng làm hay hiểu sai. Những hiểu lầm này có từ rất lâu nhưng vẫn còn tồn tại cho đến thời điểm này. Mình sẽ thuật lại như sau: Sai [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Theo bài viết của TECHRUM chia sẻ cho các bạn thì có 6 điều khi sử dụng Máy Tính, Laptop mà có thể bạn đã từng làm hay hiểu sai. Những hiểu lầm này có từ rất lâu nhưng vẫn còn tồn tại cho đến thời điểm này. Mình sẽ thuật lại như sau:</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg"><img class="aligncenter size-full wp-image-6748" src="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg" alt="6 đieu hieu sai khi su dung may tinh" width="719" height="464" srcset="http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh.jpg 719w, http://localhost:82/demowp/wp-content/uploads/2019/01/6-đieu-hieu-sai-khi-su-dung-may-tinh-300x194.jpg 300w" sizes="(max-width: 719px) 100vw, 719px" /></a></p>
+<h2><strong><span style="font-size: 24px;">Sai lầm 1: Sử dụng nút Refesh sẽ làm tăng tốc Windows</span></strong></h2>
+<p><b>Người dùng hiểu:</b> Nhấn nút <b>Refesh </b>trong <b>Windows </b>sẽ làm mượt máy tính. Do đó máy tính sẽ hoạt động nhanh và mạnh hơn.</p>
+<p><b>Suy nghĩ đúng:</b> Tác dụng của refesh là gì? Bản chất của <b>refesh</b> chỉ là cập nhật mọi thay đổi diễn ra trên <b>Desktop</b>, ngoài ra tính năng này không mang bất kỳ ý nghĩa gì. Ví dụ: Khi bạn sử dụng các thao tác thay đổi tên thư mục nhưng Windows chưa hiển thị, thì refesh sẽ khắc phục điều đó.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/brrwx.jpg" alt="Sử dụng nút Refesh sẽ làm tăng tốc Windows" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/brrwx.jpg" /></div>
+<p>Cách duy nhất để làm cho máy tính bạn hoạt động nhanh hơn chính là cài lại phiên bản Windows phù hợp, nâng cấp cấu hình. Sự thật là: thay vì làm máy tính chạy nhanh hơn, <b>refesh sẽ làm máy tính chậm hơn.</b> Để làm mới lại các biểu tượng trên Desktop, CPU phải hao tốn rất nhiều tài nguyên. Điều này có thể làm chậm các tiến trình khác của bạn.</p>
+<p><img class="bbCodeImage LbImage aligncenter" src="http://www.techrum.vn/chevereto/images/2019/01/16/rQ8R2.jpg" alt="[​IMG]" data-url="http://www.techrum.vn/chevereto/images/2019/01/16/rQ8R2.jpg" /></p>
+<div><i>Theo tác giả của Hongkiat, sau khi click refresh 5 lần thì CPU Usage lên đến 76%</i>​</div>
+<h2><span style="font-size: 24px;"><strong>Sai lầm 2: RAM nhiều thì tốc độ PC sẽ mạnh hơn</strong></span></h2>
+<p><b>Người dùng hiểu: RAM càng cao thì máy tính của bạn sẽ chạy càng nhanh</b></p>
+<p><b>Suy nghĩ đúng:</b> Sự thật là RAM nhiều không làm cho máy tính của các bạn chạy nhanh hơn, mà nó chỉ giúp cho máy tính chạy được nhiều chương trình hơn. Tăng RAM chỉ tạo nên sự khác biệt một chút, khi lượng RAM hiện tại của bạn không đủ để xử lý các phần mềm.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r2e3k.jpg" alt="RAM nhiều thì tốc độ PC sẽ mạnh hơn" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r2e3k.jpg" /></div>
+<p>Giả sử bạn thường mở nhiều phần mềm yêu cầu<b> 3GB RAM</b>, nhưng máy tính bạn chỉ có 2GB RAM mà thôi. Trong trường hợp đó máy tính của bạn sẽ rất chậm, vì không đủ dung lượng RAM để xử lý phần mềm. Để tốc độ xử lý phần mềm đó nhanh hơn, bạn có thể nâng cấp lên RAM 4GB. Tuy nhiên, ngay cả khi bạn tăng <b>RAM 8GB</b> thì tốc độ vẫn sẽ như <b>RAM 4GB</b> mà thôi. Nếu bạn quan tâm đến tốc độ thì hãy nâng cấp loại RAM lên phiên bản cao hơn, DDR3 lên DDR4&#8230;</p>
+<h2><span style="font-size: 24px;"><strong>Sai lầm 3: Bắt buộc phải ngắt USB ở chế độ an toàn.</strong></span></h2>
+<p><b>Người dùng hiểu:</b> Muốn ngắt USB, bạn hãy click phải vào USB chọn Eject. Hoặc ngắt USB như hình dưới:</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4BId.jpg" alt="Bắt buộc phải ngắt USB ở chế độ an toàn" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4BId.jpg" /></div>
+<p><b>Suy nghĩ đúng:</b> Nếu USB đang di chuyển dữ liệu, bạn không nên rút USB ra. Còn lại nếu chỉ đang cắm vào máy thì bất kỳ trường hợp nào bạn cũng có thể rút ra khỏi máy tính. Thao tác trên cũng chỉ là ngắt kết nối USB với máy tính mà thôi.</p>
+<p>Việc rút USB đột ngột gây ra hỏng file đa số thường xảy ra trên hai hệ điều hành là MacOS và Linux. Tuy nhiên câu hỏi đặt ra ở đây là: tại sao Windows lại không bị vấn đề này? Câu trả lời là do Microsoft đã vô hiệu hóa tính năng ghi bộ nhớ cache cho các ổ đĩa mà hệ điều hành coi là có thể tháo rời được. Windows cung cấp cho bạn một tùy chọn để cải thiện hiệu suất (nên chọn) và hoặc loại bỏ nhanh chóng. Bạn có thể vào xem tùy chọn này bằng cách vào <b>Device Manager &gt; Disk Drives &gt; Name of drive &gt; Properties &gt; Policies</b>. Có thể máy tính Windows của bạn đã cài đặt loại bỏ nhanh được kích hoạt theo mặc định.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/16/r06zP.jpg" alt="hiểu sai khi sử dụng Máy Tính" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/16/r06zP.jpg" />Tuy là như thế nhưng theo mình thì mình vẫn khuyến khích các bạn nên Eject USB trước khi rút ra khỏi máy các bạn nhé!</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 4: Phần mềm diệt Virus sẽ bảo vệ thiết bị khỏi tất cả Virus.</span></strong></h2>
+<p><b>Người dùng:</b> Các phần mềm diệt Virus có thể chăm sóc tất cả các loại vi-rút và sẽ bảo vệ bạn ngay cả khỏi các mối đe dọa mới nhất. Chỉ cần cài đặt phần mềm chống vi-rút và bạn đã an toàn.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4vGR.jpg" alt="Phần mềm diệt Virus" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4vGR.jpg" />​<b>Suy nghĩ đúng:</b> Các chương trình diệt Virus không thể bảo vệ hoàn toàn thiết bị của bạn. Có hai mối đe dọa chính khiến phần mềm diệt virus không thể làm gì được, đó chính là Virus online trên trình duyệt hay virus mà bạn cho phép chạy với quyền Administrator (Quyền cao nhất của Windows).</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 5: Làm sạch thùng rác (Recycle Bin) sẽ xóa vĩnh viễn tập tin</span></strong></h2>
+<p><b>Người dùng hiểu:</b> Để xóa một dữ liệu vĩnh viễn, chỉ cần xóa nó khỏi ổ đĩa và sau đó xóa nó hoàn toàn khỏi Thùng rác.</p>
+<div><img class="bbCodeImage LbImage aligncenter" src="http://photo.techrum.vn/images/2019/01/15/r4Dd8.jpg" alt="hiểu sai khi dùng laptop" width="1024" height="576" data-url="http://photo.techrum.vn/images/2019/01/15/r4Dd8.jpg" />​<b>Suy nghĩ đúng:</b> Nhiều người tin rằng, một khi dùng tính năng xóa vĩnh viễn tập tin trong <b>Recycle Bin</b> thì dữ liệu của họ sẽ bị xóa vĩnh viễn. Điều này không đúng! Khi bạn xóa dữ liệu khỏi thùng rác, bất kỳ hệ điều hành nào cũng chỉ đánh dấu nó đã bị xóa và giải phóng không gian bộ nhớ. Bạn vẫn có thể phục hồi bằng các phần mềm chuyên dụng như: Recuva&#8230;</div>
+<h2><strong><span style="font-size: 24px;">Sai lầm 6: Chế độ ẩn danh trong trình duyệt sẽ giúp bản ẩn danh hoàn toàn.</span></strong></h2>
+<p><b>Người dùng hiểu: </b>Nếu không muốn bị theo dõi hoặc để lại bất kỳ thông tin gì thì bạn nên sử dụng trình duyệt ở chế độ ẩn danh.</p>
+<p><img class="aligncenter" src="https://imgur.com/t7FPw9A.png" alt="Chế độ ẩn danh trong trình duyệt" width="1920" height="1040" /></p>
+<p><b>Suy nghĩ đúng:</b> Dù bạn có sử dụng chế độ ẩn danh thì trình duyệt và nhà mạng vẫn theo dõi được vị trí, website bạn truy cập cũng như thông tin của bạn. Bạn hãy bật chế độ ẩn danh, sau đó tìm kiếm với từ khóa bất kỳ trên Google. Kéo xuống dưới cùng, bạn sẽ thấy vị trí của bạn được <b>Google </b>xác định là ở đâu. Nếu bạn muốn ẩn danh hoàn toàn thì hãy sử dụng <b>VPN</b>.</p>
+<p>Bạn đã Hãy chia sẻ cho mọi người cùng biết nếu bạn thấy bài viết nói về những nhìn nhận hiểu sai khi sử dụng Máy tính này nhé!</p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+</ul>
+<p style="text-align: right;">via <a href="http://www.techrum.vn/threads/6-diu-ban-co-th-hiu-sai-khi-s-dung-pc.201514/?fbclid=IwAR2D6Gmd9uKTZw6gsA3ZPHSlots6s76z84OcF-MJXgx_UCfPszMgOVVm3f8">techrum</a></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5190"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download CCleaner v5.61.7392 Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</title>
+		<link>http://localhost:82/demowp/cong-cu/ccleaner/</link>
+				<comments>http://localhost:82/demowp/cong-cu/ccleaner/#respond</comments>
+				<pubDate>Tue, 01 Jan 2019 14:53:50 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Văn Phòng]]></category>
+		<category><![CDATA[CCleaner]]></category>
+		<category><![CDATA[Crack]]></category>
+		<category><![CDATA[Gỡ Phần Mềm]]></category>
+		<category><![CDATA[Key]]></category>
+		<category><![CDATA[Phần Mềm Dọn Rác]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Phân Mềm Văn Phòng]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5125</guid>
+				<description><![CDATA[<p>CCleaner v5.61.7392 Full Key là phần mềm rất phổ biến để sử dụng trên máy tính hàng ngày để tối ưu, dọn dẹp và loại bỏ các tập tin rác và lỗi máy tính của người dùng. Đây là phần mềm do Piriform phát triển và chạy với hệ điều hành Windows. Nó hỗ trợ và giúp loại [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/ccleaner/">Download CCleaner v5.61.7392 Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: 16px;"><strong>CCleaner v5.61.7392 Full Key</strong> là phần mềm rất phổ biến để sử dụng trên máy tính hàng ngày để <strong>tối ưu, dọn dẹp và loại bỏ các tập tin rác và lỗi máy tính</strong> của người dùng. Đây là phần mềm do<strong> Piriform</strong> phát triển và chạy với hệ điều hành <strong>Windows.</strong></span></p>
+<figure style="width: 786px" class="wp-caption aligncenter"><img title="Hình ảnh minh họa CCleaner Full Active Key" src="https://imgur.com/zbVwhyL.png" alt="Hình ảnh minh họa CCleaner Full Active Key" width="786" height="593" /><figcaption class="wp-caption-text">Hình ảnh minh họa CCleaner Full Active Key</figcaption></figure>
+
+<p><span style="font-size: 16px;">Nó hỗ trợ và giúp loại bỏ những thứ làm ảnh hưởng đến tốc độ làm việc của máy tính và giúp lấy lại không gian lưu trữ cho ổ cứng hạn chế.</span></p>
+<h2><span style="font-size: 20px;"><strong>CCleaner</strong> </span></h2>
+<p><span style="font-size: 16px;">Đây là phần mềm cho phép người dùng xóa các tập tin tạm không còn sử dụng nữa khỏi các trình duyệt Internet và các ứng dụng hỗ trợ khác đi theo<strong> browsing history, cookies, thùng rác, và AutoComplete form history.</strong></span></p>
+<p><img class="aligncenter" src="https://imgur.com/8wPDi6i.png" alt="ccleaner key update" width="327" height="400" /></p>
+<p><span style="font-size: 16px;">Nó cho phép <strong>xóa thùng rác</strong>,<strong> kết xuất bộ nhớ, phân mảnh tập tin, tập tin nhật ký, bộ đệm hệ thống, dữ liệu ứng dụng, và các dạng dữ liệu khác</strong>. </span></p>
+<p><span style="font-size: 16px;">Chương trình còn cho phép xóa các <strong>registry</strong> để định vị và sửa chữa các vấn đề trong<strong> Windows Registry</strong> như<strong> mất các DLL dùng chung</strong>, các phần mở rộng tập tin không sử dụng và các <strong>application path</strong>.</span></p>
+<h2><span style="text-decoration: underline; color: #ff0000; font-size: 28px;"><em><strong>Tính năng CCleaner Full Bản Quyền</strong></em></span></h2>
+<h3><span style="color: #0000ff;"><strong><span style="font-size: 20px;">Giúp máy tính chạy nhanh hơn</span></strong></span></h3>
+<p><span style="font-size: 16px;">Nó sẽ thu thập các tập tin không sử dụng và các cài đặt mà chiếm không gian ổ cứng làm cho máy chậm hơn ví dụ như file rác, file tạm, registry,&#8230; phần mềm dọn rác <strong>Ccleaner</strong> sẽ giúp các bạn nhanh chóng dọn dẹp những file này đơn giản và hiệu quả nhất để giúp tăng tốc và làm nhẹ máy tính hơn.</span></p>
+<h3><span style="font-size: 20px;"><strong><span style="color: #0000ff;">Duyệt web an toàn hơn</span></strong></span></h3>
+<p><span style="font-size: 16px;">Các nhà quảng cáo và trang web theo dõi hành vi của bạn trực tuyến với các <strong>cookie</strong> vẫn ở trên máy tính của bạn. <strong>CCleaner</strong> xóa lịch sử tìm kiếm trình duyệt của bạn và các tập tin cookie để tránh việc bị theo dõi và lướt web an toàn hơn.</span></p>
+<h3><span style="font-size: 20px;"><strong><span style="color: #0000ff;">Ít Lỗi Và Sự cố</span></strong></span></h3>
+<p>Nếu bạn sử dụng máy tính trong thời gian dài mà không ghost hoặc cài lại win thì có thể gặp khá nhiều lỗi trong khi chạy nhiều chương trình. Vì có thể có nhiều<strong> key regitry</strong> trở nên lộn xộn và bị lỗi. <strong>Ccleaner</strong> cũng giúp xóa sạch những key không cần thiết khỏi máy tính của giúp giảm khả năng đó.</p>
+<h3><strong><span style="color: #0000ff; font-size: 20px;">Khởi động nhanh hơn</span></strong></h3>
+<p>Có thể có khá nhiều phần mềm lặng lẽ trong nền khi bạn khởi động máy tính làm chậm quá trình khởi động windows gây ức chế cho nhiều người. Ccleaner sẽ giúp bạn bỏ những phần mềm tự động khởi động đó.</p>
+<ul>
+<li>Nâng cấp độ tương thích với Windows 10 Creators Update</li>
+<li>Cải thiện hỗ trợ high-DPI</li>
+<li>Cải tiến GUI</li>
+<li>Sửa một số lỗi nhỏ khác</li>
+</ul>
+<p><strong>Xem những tính năng khác có ở những phiên bản cập nhật mới tại</strong> <a href="https://www.ccleaner.com/news/release-announcements" target="_blank" rel="noopener noreferrer"><strong>https://www.ccleaner.com/news/release-announcements</strong></a></p>
+<h2><span style="text-decoration: underline; font-size: 28px;"><strong><span style="color: #ff0000; text-decoration: underline;">Ưu điểm của phần mềm CCleaner</span></strong></span></h2>
+<ul>
+<li>Rất dễ sử dụng</li>
+<li>Xóa tệp rác</li>
+<li>Sửa lỗi đăng ký</li>
+<li>Công cụ nâng cao</li>
+<li>Miễn phí dọn dẹp tạo không gian trống</li>
+<li>Khả dụng cho Mac và Android</li>
+</ul>
+<h2><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>Release Notes</strong></span></span></h2>
+<ul>
+<li>Minor bug fixes</li>
+<li>Localization improvements to several pages including License Information</li>
+<li>Code refactoring for improved stability</li>
+<li>Updated copyright across the application to 2019</li>
+</ul>
+<p><img class="size-full aligncenter" src="https://imgur.com/PijgBSf.png" alt="phần mềm dọn rác ccleacer" width="300" height="300" /></p>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline; font-size: 32px;"><span style="color: #ff0000;"><strong>Download CCleaner v5.61.7392 Full Key</strong></span></span></h2>
+<p style="text-align: center;"><span style="color: #0000ff; font-size: 20px;"><strong>CCleaner bản v5.61.7392 ( update 28/8/2019)</strong></span></p>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/X7VKXRPZLNA6" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Download CCleaner Kích Hoạt File Key Active tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Fshare</small></span></a>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1q8SWry0oLD915YKpVD8k6L4GSqrCv4kx" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> CCleaner File Key Active tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí - dự phòng</small></span></a>
+<p style="text-align: center;"><strong>( Có kèm theo file hướng dẫn bên trong)</strong></p>
+<p>Link tải bản cập nhật phiên bản CCleaner mới nhất từ trang chủ: <strong><a href="https://www.ccleaner.com/ccleaner/download" target="_blank" rel="noopener noreferrer">https://www.ccleaner.com/ccleaner/download</a></strong></p>
+<p>Sau khi kích hoạt bạn có thể Update phần mềm này bình thường mà không sợ bị mất bản quyền gì cả.</p>
+<h2><span style="font-size: 28px;"><em><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Hướng dẫn cài đặt và add key CCleaner</span></strong></span></em></span></h2>
+<ol>
+<li>Cài CCleaner</li>
+<li>Tắt CCleaner dưới thanh taskbar</li>
+<li>Copy 2 file<strong> .dl</strong> và<strong> .bat</strong> vào</li>
+<li><strong>Copy với windows 32 bit:</strong> <span style="color: #0000ff;"><strong>C:\Program Files\CCleaner</strong></span></li>
+<li><strong>Tiếp tục copy với windows 64 bit:</strong> <span style="color: #0000ff;"><strong>C:\Program Files(x86)\CCleaner</strong></span></li>
+<li>Bật CCleaner lên check update</li>
+</ol>
+<h2><span style="text-decoration: underline;"><strong><span style="color: #ff0000; text-decoration: underline;">Cập nhật key kích hoạt online</span></strong></span></h2>
+<p><strong>KeyOnline</strong>: <strong><span style="color: #0000ff;">C2YW-GCVX-C7FB-5GMY-IZPC</span></strong></p>
+<p><strong>Name</strong>: <strong><span style="color: #0000ff;">gerard saves</span></strong><br />
+<strong>License Key</strong>: <strong><span style="color: #0000ff;">C8MQ-AIYE-P6XH-6XAI-S7QC</span></strong></p>
+<p>Update 1 số key <strong>Professional</strong> đăng kí theo tên (ngắt mạng trước khi điền key, sau này có build mới tải về cài đè lên)</p>
+<ol>
+<li style="text-align: center;"><strong>C2YW-IAHG-ZU62-INZQ-WZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-2BAM-ADC2-89RV-YZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-XFCX-ABIG-GZD4-8ZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-XK32-GBVV-N3BH-2ZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-JKW5-KK79-XHR2-4ZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-QTRT-ZVCG-PQDK-CZPC</strong></li>
+<li style="text-align: center;"><strong>C2YW-GP33-TPIU-BGM8-AZPC</strong></li>
+</ol>
+<div class="alert alert-success"><strong style="font-size: 16px;">Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharecommunity/" target="_blank" rel="noopener noreferrer">fanpage của Sieushare.com</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể hỗ trợ donate ủng hộ cho website của mình có thể phát triển hơn nữa. Và chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+</div>
+<p style="text-align: center;"><strong>NẾU CÁC BẠN THẤY HỮU ÍCH ĐỪNG QUÊN CHIA SẺ ĐẾN CÙNG MỌI NGƯỜI NHÉ!</strong></p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/" target="_blank" rel="noopener noreferrer">Download Folder Guard – Đặt mật khẩu cho thư mục có hỗ trợ tiếng Việt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/camtasia-studio-2019/" target="_blank" rel="noopener noreferrer">Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5125"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">12</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/ccleaner/">Download CCleaner v5.61.7392 Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/ccleaner/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Crack IDM &#8211; Crack Internet Download Manager 6.32 build 8 Update thường xuyên</title>
+		<link>http://localhost:82/demowp/cong-cu/crack-idm-update-6-32/</link>
+				<comments>http://localhost:82/demowp/cong-cu/crack-idm-update-6-32/#respond</comments>
+				<pubDate>Sat, 29 Dec 2018 10:43:15 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Crack]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Văn Phòng]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Active]]></category>
+		<category><![CDATA[IDM]]></category>
+		<category><![CDATA[IDM Trial Reset]]></category>
+		<category><![CDATA[Internet Download Manager]]></category>
+		<category><![CDATA[Patch]]></category>
+		<category><![CDATA[Repack]]></category>
+		<category><![CDATA[Toolkit]]></category>
+		<category><![CDATA[Tools]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=4873</guid>
+				<description><![CDATA[<p>Crack Internet Download Manager &#8211; IDM 6.32 build 8 là một trong những phần mềm nổi tiếng và phổ biến hỗ trợ tải về các tập tin với tốc độ nhanh nhất. IDM cho phép bạn tải xuống các tệp từ Internet nhờ khả năng tải về nhiều tập tin và các phân đoạn tập tin cùng một lúc. IDM [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/crack-idm-update-6-32/">Crack IDM &#8211; Crack Internet Download Manager 6.32 build 8 Update thường xuyên</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Crack Internet Download Manager &#8211; IDM 6.32 build 8</strong> là một trong những phần mềm nổi tiếng và phổ biến hỗ trợ tải về các tập tin với tốc độ nhanh nhất. <strong>IDM </strong>cho phép bạn tải xuống các tệp từ<strong> Internet</strong> nhờ khả năng <strong>tải về nhiều tập tin</strong> và <strong>các phân đoạn tập tin cùng một lúc</strong>.</p>
+<figure id="attachment_4582" aria-describedby="caption-attachment-4582" style="width: 798px" class="wp-caption aligncenter"><img class="wp-image-4582 size-full" title="Crack Internet Download Manager - IDM 6.32 Fake Serial " src="http://localhost:82/demowp/wp-content/uploads/2018/11/idm6.32_compressed1.jpg" alt="Crack Internet Download Manager - IDM 6.32 Fake Serial " width="798" height="450" /><figcaption id="caption-attachment-4582" class="wp-caption-text">Crack Internet Download Manager &#8211; IDM 6.32 Fake Serial</figcaption></figure>
+<p><strong>IDM</strong> hỗ trợ tải tập tin mà bạn lựa chọn từ các trình duyệt phổ biến<strong> Internet Explorer, Opera, Mozilla và Netcape…</strong> Khi tải tập tin IDM sẽ hiển thị hộp thoại để bạn kiểm soát được quá trình tải tập tin về.</p>
+<p>Có thể nói <strong>IDM</strong> là một công cụ, một phần mềm hỗ trợ download tuyệt vời, được đông đảo mọi người sử dụng.</p>
+
+<p><strong>Internet Download Manager (IDM)</strong> tiếp tục cải tiến hơn nữa tốc độ tải file, khả năng nhận dạng âm thanh, video trong trình phát nội dung web, đồng thời hỗ trợ trình duyệt <strong>Firefox 61, 62</strong> và sửa một số lỗi nhỏ khác trong việc tải file.</p>
+<p>Ngoài ra IDM có chức năng tự động cập nhật và kiểm tra phiên bản mới một lần một tuần.</p>
+<h2><span style="text-decoration: underline; color: #ff0000;"><em><strong><span style="font-size: 24px;">Tính Năng Của IDM</span></strong></em></span></h2>
+<h3><span style="font-size: 20px; color: #0000ff;"><strong>Phiên bản 6.32 build 8</strong></span></h3>
+<ul>
+<li><span class="style12">Fixed problems with automatic installation of extension in Google Chrome</span></li>
+</ul>
+<h3><span style="font-size: 20px; color: #0000ff;"><strong>Phiên bản 6.32 build 5</strong></span></h3>
+<ul>
+<li>Improved download engine</li>
+<li>Found the cause of &#8220;403 Forbidden&#8221; error when downloading some videos and made a workaround</li>
+<li>Fixed bugs</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline;"><span style="color: #ff0000;"><em><strong>Tải về Internet Download Manager &#8211; IDM 6.32 build 8</strong></em></span></span></h2>
+<p style="text-align: center;"><a href="https://www.internetdownloadmanager.com/download.html" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Tải IDM cập nhật từ trang chủ tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí chính chủ</small></span></a>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline;"><em><strong><span style="color: #ff0000; text-decoration: underline;">HƯỚNG DẪN KÍCH HOẠT CHO IDM 6.32 build 8</span></strong></em></span></h2>
+<p><strong>Mình liệt kê 2 cách kích hoạt cho IDM</strong></p>
+<h3><strong><span style="text-decoration: underline; font-size: 20px;"><span style="color: #0000ff; text-decoration: underline;">Cách 1: Kích hoạt bằng IDM Full Toolkit</span></span></strong></h3>
+<p><strong>Các bạn hãy tải IDM Full Toolkit tại bài viết của mình: <a href="http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/">http://localhost:82/demowp/cong-cu/toolkit-crack-idm-internet-download-manager-fake-serial-number-permanently/</a></strong></p>
+<p style="text-align: center;"><strong>Hoặc các bạn tải trực tiếp tại đây luôn:</strong></p>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/LBIE453PZO35" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + Tool Toolkit Crack IDM Fake Serial Number bản 3.9"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải Toolkit crack IDM cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Fshare</small></span></a>
+<p style="text-align: center;"><a href="https://mshare.io/file/vzosBDiA" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + Tool Toolkit Crack IDM Fake Serial Number bản 3.9"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải Toolkit crack IDM cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Dự phòng</small></span></a>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Lưu ý:</strong></span> Đây là cách dễ thực hiện và dễ dàng thành công nhất nên mình khuyến khích dùng cách này các bạn nhé!</p>
+<h4><strong><span style="color: #0000ff;">Hướng dẫn kích hoạt.</span></strong></h4>
+<p>Bên trong bài viết tải IDM Full Toolkit có hướng dẫn bằng video cho các bạn. Các bạn có thể xem hướng dẫn sơ tại đây:</p>
+<figure id="attachment_1197" aria-describedby="caption-attachment-1197" style="width: 325px" class="wp-caption aligncenter"><img class="wp-image-1197 size-full" src="http://localhost:82/demowp/wp-content/uploads/2018/03/2018-03-25_100528.png" alt="" width="325" height="400" /><figcaption id="caption-attachment-1197" class="wp-caption-text">hình ảnh minh họa</figcaption></figure>
+<ol>
+<li>Tải IDM Setup mới nhất và cài đặt bình thường</li>
+<li>Tắt thông báo kích hoạt IDM</li>
+<li>Tắt Antivirus trong máy</li>
+<li>Chạy công cụ <strong>IDM Full Toolkit</strong> lên và chọn <strong>Kích hoạt IDM</strong></li>
+</ol>
+<h3><span style="text-decoration: underline; font-size: 20px;"><strong><span style="color: #0000ff; text-decoration: underline;">Cách 2: Kích hoạt bằng tool IDM Trial Reset</span></strong></span></h3>
+<h4 style="text-align: center;"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">Tải tool IDM Trial Reset</span></strong></span></h4>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/VNBFX4IYYQJ7" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + tool IDM Trial Reset"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải tool IDM Trial Reset cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Fshare</small></span></a>
+<p style="text-align: center;"><a href="https://mshare.io/file/qf3hIVy" class="su-button su-button-style-soft" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tài về IDM Internet Download Manager Permanently + tool IDM Trial Reset"><span style="color:#ffffff;padding:8px 26px;font-size:20px;line-height:30px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-wrench" style="font-size:20px;color:#ffffff"></i> Tải tool IDM Trial Reset cho máy<small style="padding-bottom:8px;color:#ffffff">Link tải miễn phí Dự phòng</small></span></a>
+<h4><strong><span style="color: #0000ff; font-size: 20px;">Hướng dẫn kích hoạt.</span></strong></h4>
+<p>Chuột phải <strong>idm_trial_reset.exe</strong> chọn <strong>Run as administrator</strong></p>
+<h4><strong>+ Nếu muốn dùng IDM ở chế độ dùng thử.</strong></h4>
+<ul>
+<li>Chọn tab Trial Reset rồi click vào Reset the IDM trial now để đưa thời gian dùng thử IDM về 30 ngày.</li>
+<li>Nếu muốn chương trình tự động hoàn toàn, giải nén file, chọn <strong>Automatically.</strong> (nếu không muốn tự động bật dùng thử nữa bỏ chọn để tắt tự động)</li>
+</ul>
+<h4><strong>+ Nếu muốn dùng IDM ở chế độ đăng ký.</strong></h4>
+<ul>
+<li>Chọn tab<strong> Register</strong> rồi click<strong> Register IDM now</strong></li>
+</ul>
+<p><img class="size-full aligncenter" src="https://imgur.com/30ZNxP4.png" width="327" height="139" /></p>
+<p>Công cụ này còn rất nhiều tính năng khác cho các bạn dùng. Nếu có điều kiện các bạn nhớ mua bản quyền để ủng hộ nhà sản xuất IDM nhé!</p>
+<p>Internet Download Manager là 1 trình <strong>download</strong> mạnh mẽ cần có trên máy tính chạy windows của bạn và hiện nay chưa có phần mềm nào thay thế được nó. Hãy tải về và sử dụng.</p>
+<p><strong><a href="http://localhost:82/demowp/cong-cu/tai-va-crack-idm-6-32-vinh-vien-2019/">Tải Và Cách Crack IDM 6.32 Build 6 Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial</a></strong></p>
+<p>Và nếu thấy hữu ích thì đừng quên chia sẻ đến mọi người các bạn nhé!</p>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="4873"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/crack-idm-update-6-32/">Crack IDM &#8211; Crack Internet Download Manager 6.32 build 8 Update thường xuyên</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/crack-idm-update-6-32/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tool Download ISO Windows and Office chính hãng từ trang chủ Microsoft</title>
+		<link>http://localhost:82/demowp/cong-cu/tool-tai-windows-va-office/</link>
+				<comments>http://localhost:82/demowp/cong-cu/tool-tai-windows-va-office/#respond</comments>
+				<pubDate>Tue, 25 Dec 2018 02:23:04 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Office]]></category>
+		<category><![CDATA[Download Windows]]></category>
+		<category><![CDATA[Ghost]]></category>
+		<category><![CDATA[Ghost Win10]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Office]]></category>
+		<category><![CDATA[Office 2019]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tải Win 10]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Văn Phòng]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Office 2010]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Phân Mềm Văn Phòng]]></category>
+		<category><![CDATA[Tải Win]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[Windows Server]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=4825</guid>
+				<description><![CDATA[<p>Việc tìm một nguồn cung cấp các gói tin ISO cài đặt Windows và Office mới nhất và đáng tin cậy nhất hiện nay rất khó khăn. Việc download 1 gói ISO Windows hoặc Office tại 1 nguồn không tin tưởng sẽ làm cho bạn phải gặp rất nhiều rắc rối khi sử dụng sau [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/tool-tai-windows-va-office/">Tool Download ISO Windows and Office chính hãng từ trang chủ Microsoft</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Việc tìm một nguồn cung cấp các gói tin <strong>ISO cài đặt Windows và Office</strong> mới nhất và đáng tin cậy nhất hiện nay rất khó khăn. Việc download 1 gói ISO Windows hoặc Office tại 1 nguồn không tin tưởng sẽ làm cho bạn phải gặp rất nhiều rắc rối khi sử dụng sau này. Nhưng giờ đã có <strong>Tool Windows and Office ISO Downloader.</strong></p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/03/tool-tai-windows-va-office-microsoft.jpg"><img class="aligncenter size-full wp-image-6920" src="http://localhost:82/demowp/wp-content/uploads/2019/03/tool-tai-windows-va-office-microsoft.jpg" alt="tool tai windows va office microsoft" width="650" height="370" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/tool-tai-windows-va-office-microsoft.jpg 650w, http://localhost:82/demowp/wp-content/uploads/2019/03/tool-tai-windows-va-office-microsoft-300x171.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<p><strong>Windows ISO Downloader </strong>là tool cho phép bạn Download <strong>ISO Windows 7/8.1/10, Office 2010/2013/2016/2019</strong> chính hãng từ <strong>server của Microsoft</strong>. Vì thế nạn sẽ tránh được những bản <strong>windows crack</strong> dính virut hay không ổn định tràn lan trên mạng, Bạn hoàn toàn có thể yên tâm bởi phần mềm này.</p>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000; font-size: 24px;"><em><span style="text-decoration: underline;"><strong>Download Tool Windows &#8211; Office ISO Downloader</strong></span></em></span></h2>
+<p style="text-align: center;"><a href="https://www.heidoc.net/php/Windows-ISO-Downloader.exe" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Tải Tool Windows Downloader tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a>
+<p style="text-align: center;"><a href="https://www.heidoc.net/php/Windows-ISO-Downloader.exe" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-cloud-download" style="font-size:21px;color:#ffffff"></i> Tải Tool Windows ISO Downloader tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ trang Chủ Download</small></span></a>
+<p><span style="font-size: 16px;"><strong>Phiên bản</strong>: 8.16</span><br />
+<span style="font-size: 16px;"><strong>Ngày phát hành:</strong> 3 tháng 8 năm 2019 </span><br />
+<span style="font-size: 16px;"><strong>Yêu cầu:</strong> Windows 7 trở lên, .NET Framework 4.x, Internet Explorer 8 hoặc mới hơn.</span></p>
+<p><strong>Ngày Update bài viết</strong>: <span style="font-size: 16px;">24 tháng 4 năm 2019 </span></p>
+<hr />
+<h2><span style="text-decoration: underline; color: #ff0000; font-size: 24px;"><em><strong>Hướng dẫn sử dụng Windows ISO Downloader</strong></em></span></h2>
+<h3><span style="font-size: 20px;"><strong><span style="text-decoration: underline;"><span style="color: #0000ff; text-decoration: underline;">Bước 1</span></span></strong></span></h3>
+<p>Sau khi khởi động phần mềm bạn sẽ thấy quảng cáo. Bạn chờ rồi tắt quảng cáo đi nhé!</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/2J2ImWt.png" width="1006" height="631" /></p>
+<h3><span style="text-decoration: underline; font-size: 20px; color: #0000ff;"><strong>Bước 2</strong></span></h3>
+<p>Sau khi vào giao diện chính của phần mềm này thì bạn có thể sẽ thấy các tab bao gồm: <strong>Windows, Office, Other và Settings </strong>ở góc phải màn hình. Tích chọn vào hệ điều hành hay phiên bản Office mà bạn muốn tải xuống. Đợi 1 phút bạn sẽ thấy như hình dưới:</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/nl3y72i.png" width="1006" height="631" /></p>
+<h3><span style="text-decoration: underline; font-size: 20px; color: #0000ff;"><strong>Bước 3</strong></span></h3>
+<ol>
+<li>Click vào mục<strong> Select edition</strong> để chọn phiên bản.</li>
+<li>Sau đó click <strong>Confirm </strong></li>
+<li>Chọn ngôn ngữ: <strong>English.</strong></li>
+<li>Tiếp tục click<strong> Confirm.</strong></li>
+</ol>
+<p><img class="size-full aligncenter" src="https://imgur.com/jS8NaH3.png" width="1006" height="631" /></p>
+<h3><span style="text-decoration: underline;"><span style="font-size: 20px; color: #0000ff; text-decoration: underline;"><strong>Bước 4</strong></span></span></h3>
+<p>Tải một trong hai phiên bản 32 hoặc 64 bit sao cho phù hợp với may tính bạn muốn cài.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/EUZ09Jf.png" width="1006" height="631" /></p>
+<p><strong>Windows ISO Downloader</strong> là công cụ này giúp bạn tải file cài đặt Windows và Office từ trang chủ của Microsoft hoàn toàn miễn phí và rất uy tín. Bãn hay yên tâm sử dụng và chia sẻ cho mọi người nếu thấy hữu ích nhé!</p>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><a href="http://localhost:82/demowp/category/download/tai-win/"><strong><span style="font-size: 20px;">Tải các bản windows 10/8.1/7/ xp khác tại đây</span></strong></a></li>
+<li><a href="http://localhost:82/demowp/category/download/download-office/" target="_blank" rel="noopener noreferrer"><strong><span style="font-size: 20px;">Tải các bản Office tại đây</span></strong></a></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-nt-3-1/" target="_blank" rel="noopener noreferrer">Download ISO Windows NT 3.1 Cài đặt cho máy</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/active-windows/script-active-windows-10/" target="_blank" rel="noopener noreferrer">Script Active Windows 10 Bản Quyền Digital License vô cùng dễ dàng với 1 click</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/active-office/activate-aio-tools-version-3/" target="_blank" rel="noopener noreferrer">Script Acivate Kích Hoạt Windows 10 Bản Quyền Digital License + Office Bản Quyền</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/idm-6-33-full-crack/" target="_blank" rel="noopener noreferrer">Download Và Cách Crack Full IDM Vĩnh Viễn Mới Nhất 2019 &#8211; Không Báo Fake Serial [UPDATE]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-whistler/" target="_blank" rel="noopener noreferrer">Download ISO Windows Whistler Cài Đặt Cho Máy Tính</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="4825"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/tool-tai-windows-va-office/">Tool Download ISO Windows and Office chính hãng từ trang chủ Microsoft</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/tool-tai-windows-va-office/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</title>
+		<link>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/</link>
+				<comments>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/#comments</comments>
+				<pubDate>Sun, 22 Apr 2018 15:52:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Boot]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[tool usb]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/04/22/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/</guid>
+				<description><![CDATA[<p>Bạn là một kỹ thuật viên, bạn là người chuyên giải quyết hay giúp đỡ người khác về các vấn đề của máy tính, windows. Và bạn sẽ phải tải cả kho phần mềm, công cụ để phục vụ cho việc hỗ trợ của mình. Vậy thì tại sao bạn không Download và sử dụng [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/">All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Bạn là một kỹ thuật viên, bạn là người chuyên giải quyết hay giúp đỡ người khác về các vấn đề của máy tính, windows. Và bạn sẽ phải tải cả kho phần mềm, công cụ để phục vụ cho việc hỗ trợ của mình. Vậy thì tại sao bạn không Download và sử dụng một bộ công cụ <strong>All In One System Rescue Toolkit 2018</strong> </span><span style="font-size: large;">(tất cả trong 1) , dùng như vậy thì sẽ gọn gàng và thuận tiện hơn.</span></p>
+<figure id="attachment_6137" aria-describedby="caption-attachment-6137" style="width: 515px" class="wp-caption aligncenter"><img class="size-full wp-image-6137" src="http://localhost:82/demowp/wp-content/uploads/2018/04/All-In-One-System-Rescue-Toolkit-2018.jpg" alt="All In One System Rescue Toolkit 2018" width="515" height="293" /><figcaption id="caption-attachment-6137" class="wp-caption-text">All In One System Rescue Toolkit 2018</figcaption></figure>
+<div style="clear: both; text-align: center;"></div>
+<h2><strong>All In One System Rescue Toolkit 2018</strong></h2>
+<div style="clear: both;"><span style="font-size: large;">Nhiều người trong số đó có thể đã sử dụng những công cụ USB Boot mà mình đã từng viết ở các bài trước đây như <b>DLCBoot, HK Boot</b> hay <b>USB HDD Boot</b>, nhưng mình sẽ giới thiệu qua bộ công cụ này vì mình muốn các bạn tự chọn lựa theo sở thích của các bạn.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Được tích hợp để tương thích hầu hết các hệ điều hành như Windows XP, Vista, 7, 8, 8.1, 10 và cả các phiên bản của cấp doanh nghiệp như Windows server 2003/2008/2012.</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-lWOBzouahzI/WtyrKoGcMEI/AAAAAAAAHBI/eVPgzVIJ_3gl_6Cu-SLcig8cgyeZl1l5ACEwYBhgL/s1600/bandicam%2B2018-04-22%2B22-16-49-829.jpg"><img class="aligncenter" src="https://3.bp.blogspot.com/-lWOBzouahzI/WtyrKoGcMEI/AAAAAAAAHBI/eVPgzVIJ_3gl_6Cu-SLcig8cgyeZl1l5ACEwYBhgL/s640/bandicam%2B2018-04-22%2B22-16-49-829.jpg" alt="download All In One System Rescue Toolkit 2018" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></div>
+<p><span style="font-size: large;">Vì đây là file ISO nên bạn có thể cài trực tiếp vào USB để làm thành USBBoot. Hoặc bạn có thể mount ra ổ đĩa ảo để dùng theo tùy chọn Desktop , mình sẽ nói chi tiết về phần này ngay trong bài viết này.</span></p>
+<div>
+<h2><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><span style="font-size: x-large;"><span style="color: red;"><b><u>Tính Năng và sự tiện ích của All In One System Rescue Toolkit:</u></b></span></span></span></h2>
+<p><span style="font-size: large;">Khi đĩa AiO-SRT hoặc USB được đưa vào máy tính Windows, chương trình AiO-SRT.exe có thể được chạy và chứa các tiện ích sau:</span></p>
+<p><span style="font-size: large;"> &#8211; Chung</span><br />
+<span style="font-size: large;">       + Thông tin hệ thống</span><br />
+<span style="font-size: large;">       + Quản lý công việc</span><br />
+<span style="font-size: large;">       + Quản lý tập tin cho kỹ thuật viên</span><br />
+<span style="font-size: large;">       + Command Prompt (Quản trị)</span><br />
+<span style="font-size: large;">       + Whois Domain Lookup</span><br />
+<span style="font-size: large;">       + Bộ phân tích hệ thống</span><br />
+<span style="font-size: large;">       + Quản lý tài nguyên</span><br />
+<span style="font-size: large;">       + Xây dựng Flash Drive AiO-SRT</span><br />
+<span style="font-size: large;">       + Khởi động lại Chế độ An toàn</span><br />
+<span style="font-size: large;">       + AiO-SRT Lite to Desktop</span><br />
+<span style="font-size: large;">  &#8211; Phần cứng</span><br />
+<span style="font-size: large;">       + Thử nghiệm stress CPU</span><br />
+<span style="font-size: large;">       + Chẩn đoán bộ nhớ</span><br />
+<span style="font-size: large;">       + Chẩn đoán ổ cứng</span><br />
+<span style="font-size: large;">       + Quản lý đĩa</span><br />
+<span style="font-size: large;">       + Chống phân mảnh ổ đĩa hệ thống</span><br />
+<span style="font-size: large;">       + Cảm biến giám sát phần cứng</span><br />
+<span style="font-size: large;">       + Quản lý thiết bị</span><br />
+<span style="font-size: large;">       + Kiểm tra điểm chết bằng LCD</span><br />
+<span style="font-size: large;">       + Sử dụng ổ cứng</span><br />
+<span style="font-size: large;">       + Phục hồi dữ liệu</span><br />
+<span style="font-size: large;">  &#8211; Sửa chữa hệ điều hành</span><br />
+<span style="font-size: large;">       + Autoruns</span><br />
+<span style="font-size: large;">       + Kiểm tra tệp hệ thống</span><br />
+<span style="font-size: large;">       + Sửa chữa hệ thống DISM</span><br />
+<span style="font-size: large;">       + Registry Editor</span><br />
+<span style="font-size: large;">       + Sửa chữa Icons Icons</span><br />
+<span style="font-size: large;">       + Trình xem sự kiện</span><br />
+<span style="font-size: large;">       + Chế độ xem màn hình xanh</span><br />
+<span style="font-size: large;">       + Khôi phục hệ thống</span><br />
+<span style="font-size: large;">       + Windows Update Repair</span><br />
+<span style="font-size: large;">       + Dọn dẹp đĩa</span><br />
+<span style="font-size: large;">  &#8211; Phần mềm</span><br />
+<span style="font-size: large;">       + Thông tin Sleep &amp; Wake</span><br />
+<span style="font-size: large;">       + Gỡ cài đặt chương trình</span><br />
+<span style="font-size: large;">       + RichCopy</span><br />
+<span style="font-size: large;">       + Khả năng khởi động ISO sang USB</span><br />
+<span style="font-size: large;">       + Solitaire</span><br />
+<span style="font-size: large;">       + Bật hibernate</span><br />
+<span style="font-size: large;">       + Sản phẩm Keys</span><br />
+<span style="font-size: large;">       + Trình duyệt web</span><br />
+<span style="font-size: large;">       + Trình tạo ổ CD / DVD</span><br />
+<span style="font-size: large;">  &#8211; Mạng</span><br />
+<span style="font-size: large;">       + </span><span style="font-size: large;">Đặt lại TCP / IP &amp; Winsock</span><br />
+<span style="font-size: large;">       + Truy vấn cổng TCP và UDP</span><br />
+<span style="font-size: large;">       + Xem các cổng mở</span><br />
+<span style="font-size: large;">       + Kiểm tra tốc độ LAN</span><br />
+<span style="font-size: large;">       + Thử Ping liên tục</span><br />
+<span style="font-size: large;">       + Windows Firewall</span><br />
+<span style="font-size: large;">       + Khảo sát Địa điểm Không dây</span><br />
+<span style="font-size: large;">       + SSH / Telnet / Serial Console</span><br />
+<span style="font-size: large;">       + Xem các tệp mở được chia sẻ</span><br />
+<span style="font-size: large;">       + Network Mapper</span><br />
+<span style="font-size: large;">  &#8211; Bảo vệ</span><br />
+<span style="font-size: large;">       + Trung tâm Bảo mật của Windows</span><br />
+<span style="font-size: large;">       + Cài đặt Microsoft Security Essentials</span><br />
+<span style="font-size: large;">       + Công cụ diệt Virus Kaspersky</span><br />
+<span style="font-size: large;">       + Máy quét an toàn của Microsoft</span><br />
+<span style="font-size: large;">       + COMODO Cleaning Essentials</span><br />
+<span style="font-size: large;">       + Máy quét trực tuyến ESET</span><br />
+<span style="font-size: large;">       + Norton Power Eraser</span><br />
+<span style="font-size: large;">       + ClamWin Antivirus</span><br />
+<span style="font-size: large;">       + Virus Total Online Scanner</span><br />
+<span style="font-size: large;">       + Kiểm tra Eicar Anti-Virus</span><br />
+<span style="font-size: large;">   &#8211; Loại bỏ AV</span><br />
+<span style="font-size: large;">       + Avast! Công cụ loại bỏ</span><br />
+<span style="font-size: large;">       + Công cụ Loại bỏ AVG</span><br />
+<span style="font-size: large;">       + Công cụ diệt Kaspersky</span><br />
+<span style="font-size: large;">       + Công cụ Loại bỏ McAfee</span><br />
+<span style="font-size: large;">       + Công cụ Xóa MSSE</span><br />
+<span style="font-size: large;">       + Công cụ diệt Norton</span><br />
+<span style="font-size: large;">       + Công cụ diệt Trend Micro</span><br />
+<span style="font-size: large;">       + Công cụ diệt Webroot</span><br />
+<span style="font-size: large;">       + Universal AV Remover</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Ngoài ra bộ này còn có một tính năng rất hữu ích là tiện ích tự động <b>(Auto Fix)</b></span><br />
+<span style="font-size: large;">Tiện ích tự động: </span><br />
+<span style="font-size: large;"> &#8211; Nhiệm vụ tự động &#8211; nhiệm vụ không cần giám sát, tự động khởi động lại, tạo các tệp nhật ký</span><br />
+<span style="font-size: large;"> &#8211; Chẩn đoán Chỉ &#8211; chỉ kiểm tra phần cứng, không có sửa đổi hệ thống</span><br />
+<span style="font-size: large;"> &#8211; Diag &amp; Tune-up &#8211; kiểm tra phần cứng và điều chỉnh chung</span><br />
+<span style="font-size: large;"> &#8211; Xóa Malware &#8211; các tác vụ được nhắm mục tiêu theo phần mềm độc hại</span><br />
+<span style="font-size: large;"> &#8211; Sửa chữa hệ điều hành chung &#8211; các công việc sửa chữa chung của Windows</span><br />
+<span style="font-size: large;"> &#8211; CÔNG TRÌNH &#8211; chạy tất cả các nhiệm vụ</span></p>
+<p><span style="font-size: large;">Chức năng Auto Fix giúp bạn sủa các lỗi windows mà bạn không cần phải thực hiện thêm các bước sau nữa. Rất tiện lợi phải không nào.</span></p>
+</div>
+<div>
+<h6><span style="font-size: large;"> </span></h6>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 36pt; color: #ff0000;"><b>Download All In One System Rescue Toolkit 2018</b></span></span></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/file/d/1Y-Ubs17zNmfx80Vz_9qoB3qVNy6cE-2W/view" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Button text<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<div style="text-align: center;"><span style="font-size: x-large;"><b> </b></span></div>
+<p><span style="color: red; font-size: x-large;"><b><u>Hướng dẫn các bạn cách sử dụng All In One System Rescue Toolkit 2018 trên desktop</u></b></span></p>
+<p><span style="font-size: large;"><b><br />
+</b></span><span style="font-size: large;">Đối với windows 8/8.1/10 bạn chỉ cần chuột phải vào file ISO này và nhấn Mount . Còn nếu bạn dùng windpws XP/ 7 thì bạn cần phải cài đặt phần mềm UtraISO để hỗ trợ nhé.</span><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-r0ld5dF8R7E/WtyqRZp1uZI/AAAAAAAAG_w/ME0vj3Bsq3M1yoGYEusNqclqvXnLvyEvgCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-15-09-258.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-r0ld5dF8R7E/WtyqRZp1uZI/AAAAAAAAG_w/ME0vj3Bsq3M1yoGYEusNqclqvXnLvyEvgCLcBGAs/s640/bandicam%2B2018-04-22%2B22-15-09-258.jpg" alt="sử dụng All In One System Rescue Toolkit 2018" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></p>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Sau đó bạn mở file AIO-SRT.exe với quyền admin như hình nha.</span><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-BgbD30OmW80/WtyqXN8j6iI/AAAAAAAAG_0/6_-G3DjP_uAtUBh9aLTPy62R5zUTSV9WQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-15-29-296.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-BgbD30OmW80/WtyqXN8j6iI/AAAAAAAAG_0/6_-G3DjP_uAtUBh9aLTPy62R5zUTSV9WQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-15-29-296.jpg" alt="khởi động All In One System Rescue Toolkit 2018" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></p>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Khi này sẽ hiên lên hộp thông báo điều khoản sử dụng, &#8230; Và bạn chỉ cần nhấn vào YES là được nha.</span><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-0kiH3diOPm4/WtyqdO8oLPI/AAAAAAAAG_4/jAC43Ca6cHcgeuR33o99KUFzQcqAwBBDQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-15-38-531.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-0kiH3diOPm4/WtyqdO8oLPI/AAAAAAAAG_4/jAC43Ca6cHcgeuR33o99KUFzQcqAwBBDQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-15-38-531.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></p>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Giờ thì chờ phần mềm khởi động nha.</span><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-5foeOtu3z90/Wtyq3EJ-P-I/AAAAAAAAHAI/Li3zT2zfjK8BTzgL_oFsQA5WJg7Zq6PeACLcBGAs/s1600/bandicam%2B2018-04-22%2B22-18-04-302.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-5foeOtu3z90/Wtyq3EJ-P-I/AAAAAAAAHAI/Li3zT2zfjK8BTzgL_oFsQA5WJg7Zq6PeACLcBGAs/s640/bandicam%2B2018-04-22%2B22-18-04-302.jpg" alt="load All In One System Rescue Toolkit 2018" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></p>
+<p><span style="font-size: large;">Giờ thì bạn có thể sử dụng rồi, sẽ có rất nhiều phần mềm khác nhau được phân chia ở các mục khác nhau. Mình sẽ làm video để hướng dẫn cho các bạn chi tiết hơn nhé. Và giờ thì tải về và sử dụng thôi. </span></p>
+<p><span style="font-size: large;">Link tải mình để lại ở dưới bài viết nữa á nha.</span><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-usXfHHfbjoA/WtyrJf-SpUI/AAAAAAAAHAY/jcTU83UjEvQqrHLO6w2bXNQl_8b255ZbQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-14-450.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-usXfHHfbjoA/WtyrJf-SpUI/AAAAAAAAHAY/jcTU83UjEvQqrHLO6w2bXNQl_8b255ZbQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-14-450.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-imP_7w3oK_g/WtyrJUtR1fI/AAAAAAAAHAQ/45oAz6I8k8MccQy7qksbMiP--51OYhVmQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-40-680.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-imP_7w3oK_g/WtyrJUtR1fI/AAAAAAAAHAQ/45oAz6I8k8MccQy7qksbMiP--51OYhVmQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-40-680.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-VfljsvyI1oc/WtyrJdktmQI/AAAAAAAAHAU/FNN2F0WIV0kuzBuFGKaIGyIbhUDgFqRmQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-44-093.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-VfljsvyI1oc/WtyrJdktmQI/AAAAAAAAHAU/FNN2F0WIV0kuzBuFGKaIGyIbhUDgFqRmQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-44-093.jpg" alt="download All In One System Rescue Toolkit 2018" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-y6DribfZ_dM/WtyrKQ9YThI/AAAAAAAAHAc/AT1b2Er0oBgQVDcUZTKG_252ExIGOnEJwCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-46-352.jpg"><img class="aligncenter" src="https://3.bp.blogspot.com/-y6DribfZ_dM/WtyrKQ9YThI/AAAAAAAAHAc/AT1b2Er0oBgQVDcUZTKG_252ExIGOnEJwCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-46-352.jpg" alt="download All In One System Rescue Toolkit 2018 2" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-lWOBzouahzI/WtyrKoGcMEI/AAAAAAAAHAk/WEIITcKbzGMQi0UJ5SB3lkZ-WQVgaywCQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-49-829.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-lWOBzouahzI/WtyrKoGcMEI/AAAAAAAAHAk/WEIITcKbzGMQi0UJ5SB3lkZ-WQVgaywCQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-49-829.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-je8x5W7Y2hk/WtyrKh6MyoI/AAAAAAAAHAg/4C6lLAFRGnoJiOqak6IKl-kK6pbLp4ihgCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-52-664.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-je8x5W7Y2hk/WtyrKh6MyoI/AAAAAAAAHAg/4C6lLAFRGnoJiOqak6IKl-kK6pbLp4ihgCLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-52-664.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-Pe0SkWAGeXI/WtyrLXT_L5I/AAAAAAAAHAo/juyLgr-GUb4NH7ROm3sUSeuSd6wHBp43ACLcBGAs/s1600/bandicam%2B2018-04-22%2B22-16-55-499.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-Pe0SkWAGeXI/WtyrLXT_L5I/AAAAAAAAHAo/juyLgr-GUb4NH7ROm3sUSeuSd6wHBp43ACLcBGAs/s640/bandicam%2B2018-04-22%2B22-16-55-499.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-wu1Mhu2yvOw/WtyrLgZNLRI/AAAAAAAAHAs/Qes6YsMXyDg7BKE-dxNTp3azMa_L2DCMwCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-17-04-087.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-wu1Mhu2yvOw/WtyrLgZNLRI/AAAAAAAAHAs/Qes6YsMXyDg7BKE-dxNTp3azMa_L2DCMwCLcBGAs/s640/bandicam%2B2018-04-22%2B22-17-04-087.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-cfUFjpIHLrg/WtyrLhzIpLI/AAAAAAAAHAw/ePCFAKB6wzsqracyeHn8TcEYwRyyejPoQCLcBGAs/s1600/bandicam%2B2018-04-22%2B22-17-07-376.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-cfUFjpIHLrg/WtyrLhzIpLI/AAAAAAAAHAw/ePCFAKB6wzsqracyeHn8TcEYwRyyejPoQCLcBGAs/s640/bandicam%2B2018-04-22%2B22-17-07-376.jpg" width="640" height="400" border="0" data-original-height="800" data-original-width="1280" /></a></p>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">(nếu link có vấn đề mong các bạn thông cảm và bình luận bên dưới để mình update link nhé, thanks)</span><br />
+<span style="font-size: large;"><span style="font-size: small;"><br />
+</span></span></p>
+<div style="text-align: center;"><span style="font-size: large;"><span style="font-size: small;"><b style="font-size: xx-large;"><a style="background-color: #f9cb9c;" href="https://drive.google.com/file/d/1Y-Ubs17zNmfx80Vz_9qoB3qVNy6cE-2W/view" target="_blank" rel="noopener noreferrer">Link DownLoad Nhấn Vào Đây</a></b></span></span></div>
+<div style="text-align: center;"><span style="font-size: large;"><span style="font-size: small;"> </span></span></div>
+<p><span style="font-size: 24px;"><strong> XEM THÊM: <a href="http://localhost:82/demowp/category/cong-cu/tool-usb/" target="_blank" rel="noopener noreferrer">MỘT SỐ CÔNG CỤ BOOT KHÁC CHO WINDOWS HOẶC USB</a></strong></span></p>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"><b><span style="color: red; font-size: x-large;">CHÚC CÁC BẠN THÀNH CÔNG</span></b></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="124"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/">All In One System Rescue Toolkit 2018 &#8211; Boot cứu hộ cho dân công nghệ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-2018-boot-cuu-ho-cho-dan-cong-nghe/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>All In One System Rescue Toolkit &#8211; Bộ công cụ cho mọi dân công nghệ</title>
+		<link>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/</link>
+				<comments>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/#comments</comments>
+				<pubDate>Sun, 06 Aug 2017 04:09:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Boot]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[tool usb]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2017/08/06/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/</guid>
+				<description><![CDATA[<p>Bạn là một kỹ thuật viên, bạn là người chuyên giải quyết hay giúp đỡ người khác về các vấn đề của máy tính, windows. Và bạn sẽ phải tải cả kho phần mềm, công cụ để phục vụ cho việc hỗ trợ của mình. Vậy thì tại sao bạn không sử dụng một bộ [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/">All In One System Rescue Toolkit &#8211; Bộ công cụ cho mọi dân công nghệ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Bạn là một kỹ thuật viên, bạn là người chuyên giải quyết hay giúp đỡ người khác về các vấn đề của máy tính, windows. Và bạn sẽ phải tải cả kho phần mềm, công cụ để phục vụ cho việc hỗ trợ của mình. Vậy thì tại sao bạn không sử dụng một bộ công cụ <b>All in One</b> (tất cả trong 1) , dùng như vậy thì sẽ gọn gàng và thuận tiện hơn.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-1Mqb-RyfzCU/WYaGnCzsM-I/AAAAAAAADvI/S6gHdY6NX-QTDl_m0oKhllxqnGRk8K79ACPcBGAYYCw/s1600/usbbootcho%2Bwin.png"><img class="aligncenter" src="https://3.bp.blogspot.com/-1Mqb-RyfzCU/WYaGnCzsM-I/AAAAAAAADvI/S6gHdY6NX-QTDl_m0oKhllxqnGRk8K79ACPcBGAYYCw/s400/usbbootcho%2Bwin.png" width="400" height="275" border="0" data-original-height="445" data-original-width="640" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Nhiều người trong số đó có thể đã sử dụng những công cụ USB Boot mà mình đã từng viết ở các bài trước đây như <b>DLCBoot, HK Boot</b> hay <b>USB HDD Boot</b>, nhưng mình sẽ giới thiệu qua bộ công cụ này vì mình muốn các bạn tự chọn lựa theo sở thích của các bạn.</span><br />
+<span style="font-size: large;"><span style="font-size: medium;"><br />
+</span>All In One System Rescue Toolkit là một bộ tập hợp các công cụ được tạo ra bởi tác giả<span style="color: red;"> <b>Paul</b></span> ( <a href="https://paul.is-a-geek.org/" target="_blank" rel="noopener noreferrer">https://paul.is-a-geek.org/</a>) được lưu dưới dạng file ISO. Nó  được tập hợp từ các công cụ  nhỏ bên trong như kiểm tra , tối ưu hay khắc phục các lỗi trên Windows.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Được tích hợp để tương thích hầu hết các hệ điều hành như Windows XP, Vista, 7, 8, 8.1, 10 và cả các phiên bản của cấp doanh nghiệp như Windows server 2003/2008/2012.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-LzpJP_DHn08/WYaX0W3QX6I/AAAAAAAADvU/Hk8EayKHn_MOpE9WPssYThFgF55J7ScDgCLcBGAs/s1600/1fhkfhdjkfd.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-LzpJP_DHn08/WYaX0W3QX6I/AAAAAAAADvU/Hk8EayKHn_MOpE9WPssYThFgF55J7ScDgCLcBGAs/s640/1fhkfhdjkfd.jpg" width="640" height="472" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;">Vì đây là file ISO nên bạn có thể cài trực tiếp vào USB để làm thành USBBoot. Hoặc bạn có thể mount ra ổ đĩa ảo để dùng theo tùy chọn Desktop , mình sẽ nói chi tiết về phần này ngay trong bài viết này.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: x-large;"><span style="font-size: small;"><br />
+</span><b><span style="color: red;">Đầu tiên mình sẽ giới thiện qua về Tính Năng và sự tiện ích của bộ công cụ này:</span></b></span><br />
+<span style="font-size: large;"> Về tính năng thì nó được chia làm 2 phần: Live CD và Desktop .</span><br />
+<span style="font-size: large;"><span style="font-size: medium;"><br />
+</span><b><span style="color: red;">1. Live CD:</span></b></span><br />
+<span style="font-size: large;">Theo nguồn chính thức từ trang của tác giả thì phần Live CD của đĩa có thể được truy cập bằng cách khởi động máy tính từ đĩa CD AiO-SRT hoặc USB. Môi trường Live CD là môi trường Ubuntu tùy biến với sự hỗ trợ cho việc khởi động BIOS và UEFI (cần hỗ trợ phần cứng Apple mới hơn), mạng Ethernet / không dây, các thiết lập raid của mdadm linux, các thiết lập &#8220;fakeraid&#8221; dmraid.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b>Phần Live CD chứa các tiện ích sau:</b></span><br />
+<span style="font-size: large;">&#8211; Khởi động sửa chữa &#8211; công cụ đơn giản để phục hồi quyền truy </span><br />
+<span style="font-size: large;">&#8211; Cập vào hệ điều hành của bạn</span><br />
+<span style="font-size: large;">&#8211; ClamAV &#8211; công cụ chống vi rút mã nguồn mở</span><br />
+<span style="font-size: large;">&#8211; Xfburn  &#8211; công cụ ghi đĩa CD / DVD đơn giản</span><br />
+<span style="font-size: large;">&#8211; Clonezilla &#8211; chương trình phân vùng và chụp ảnh đĩa / nhân bản</span><br />
+<span style="font-size: large;">&#8211; Thử nghiệm mức căng thẳng của CPU  &#8211; Thử nghiệm tấn công</span><br />
+<span style="font-size: large;">&#8211; CPU Mersenne Prime</span><br />
+<span style="font-size: large;">&#8211; Đĩa &#8211; Tiện ích đĩa để quản lý phân vùng SMART và đĩa</span><br />
+<span style="font-size: large;">&#8211; Disk Usage Analyzer &#8211; ứng dụng đồ họa để phân tích việc sử dụng đĩa</span><br />
+<span style="font-size: large;">&#8211; Galculator  &#8211; máy tính toán đại số và RPN GTK 2 / GTK 3</span><br />
+<span style="font-size: large;">&#8211; GParted  &#8211; trình biên tập phân vùng để quản lý đồ họa phân vùng đĩa của bạn</span><br />
+<span style="font-size: large;">&#8211; NT Password Reset &#8211; tiện ích gỡ bỏ mật khẩu Windows</span><br />
+<span style="font-size: large;">&#8211; Phần mềm phục hồi dữ liệu của PhotoRec</span><br />
+<span style="font-size: large;">&#8211; System Profiler and Benchmark &#8211; hiển thị thông tin về phần cứng của bạn</span><br />
+<span style="font-size: large;">&#8211; Giao diện dòng lệnh Terminal &#8211; Lubuntu (CLI)</span><br />
+<span style="font-size: large;">&#8211; TestDisk &#8211; phần mềm khôi phục dữ liệu được thiết kế để giúp phục hồi phân vùng bị mất</span><br />
+<span style="font-size: large;">&#8211; Trình duyệt Web &#8211; một trình duyệt web nhẹ, nhanh và miễn phí</span><br />
+<span style="font-size: large;">&#8211; AisleRiot Solitaire  &#8211; một bộ sưu tập các trò chơi bài</span><br />
+<span style="font-size: large;"><br />
+</span><span style="color: red; font-size: large;"><b>2. Windows Autorun &#8211; Desktop:</b></span><br />
+<span style="font-size: large;">Khi đĩa AiO-SRT hoặc USB được đưa vào máy tính Windows, chương trình AiO-SRT.exe có thể được chạy và chứa các tiện ích sau:</span></p>
+<p><span style="font-size: large;"> &#8211; Chung</span><br />
+<span style="font-size: large;">       + Thông tin hệ thống</span><br />
+<span style="font-size: large;">       + Quản lý công việc</span><br />
+<span style="font-size: large;">       + Quản lý tập tin cho kỹ thuật viên</span><br />
+<span style="font-size: large;">       + Command Prompt (Quản trị)</span><br />
+<span style="font-size: large;">       + Whois Domain Lookup</span><br />
+<span style="font-size: large;">       + Bộ phân tích hệ thống</span><br />
+<span style="font-size: large;">       + Quản lý tài nguyên</span><br />
+<span style="font-size: large;">       + Xây dựng Flash Drive AiO-SRT</span><br />
+<span style="font-size: large;">       + Khởi động lại Chế độ An toàn</span><br />
+<span style="font-size: large;">       + AiO-SRT Lite to Desktop</span><br />
+<span style="font-size: large;">  &#8211; Phần cứng</span><br />
+<span style="font-size: large;">       + Thử nghiệm stress CPU</span><br />
+<span style="font-size: large;">       + Chẩn đoán bộ nhớ</span><br />
+<span style="font-size: large;">       + Chẩn đoán ổ cứng</span><br />
+<span style="font-size: large;">       + Quản lý đĩa</span><br />
+<span style="font-size: large;">       + Chống phân mảnh ổ đĩa hệ thống</span><br />
+<span style="font-size: large;">       + Cảm biến giám sát phần cứng</span><br />
+<span style="font-size: large;">       + Quản lý thiết bị</span><br />
+<span style="font-size: large;">       + Kiểm tra điểm chết bằng LCD</span><br />
+<span style="font-size: large;">       + Sử dụng ổ cứng</span><br />
+<span style="font-size: large;">       + Phục hồi dữ liệu</span><br />
+<span style="font-size: large;">  &#8211; Sửa chữa hệ điều hành</span><br />
+<span style="font-size: large;">       + Autoruns</span><br />
+<span style="font-size: large;">       + Kiểm tra tệp hệ thống</span><br />
+<span style="font-size: large;">       + Sửa chữa hệ thống DISM</span><br />
+<span style="font-size: large;">       + Registry Editor</span><br />
+<span style="font-size: large;">       + Sửa chữa Icons Icons</span><br />
+<span style="font-size: large;">       + Trình xem sự kiện</span><br />
+<span style="font-size: large;">       + Chế độ xem màn hình xanh</span><br />
+<span style="font-size: large;">       + Khôi phục hệ thống</span><br />
+<span style="font-size: large;">       + Windows Update Repair</span><br />
+<span style="font-size: large;">       + Dọn dẹp đĩa</span><br />
+<span style="font-size: large;">  &#8211; Phần mềm</span><br />
+<span style="font-size: large;">       + Thông tin Sleep &amp; Wake</span><br />
+<span style="font-size: large;">       + Gỡ cài đặt chương trình</span><br />
+<span style="font-size: large;">       + RichCopy</span><br />
+<span style="font-size: large;">       + Khả năng khởi động ISO sang USB</span><br />
+<span style="font-size: large;">       + Solitaire</span><br />
+<span style="font-size: large;">       + Bật hibernate</span><br />
+<span style="font-size: large;">       + Sản phẩm Keys</span><br />
+<span style="font-size: large;">       + Trình duyệt web</span><br />
+<span style="font-size: large;">       + Trình tạo ổ CD / DVD</span><br />
+<span style="font-size: large;">  &#8211; Mạng</span><br />
+<span style="font-size: large;">       + </span><span style="font-size: large;">Đặt lại TCP / IP &amp; Winsock</span><br />
+<span style="font-size: large;">       + Truy vấn cổng TCP và UDP</span><br />
+<span style="font-size: large;">       + Xem các cổng mở</span><br />
+<span style="font-size: large;">       + Kiểm tra tốc độ LAN</span><br />
+<span style="font-size: large;">       + Thử Ping liên tục</span><br />
+<span style="font-size: large;">       + Windows Firewall</span><br />
+<span style="font-size: large;">       + Khảo sát Địa điểm Không dây</span><br />
+<span style="font-size: large;">       + SSH / Telnet / Serial Console</span><br />
+<span style="font-size: large;">       + Xem các tệp mở được chia sẻ</span><br />
+<span style="font-size: large;">       + Network Mapper</span><br />
+<span style="font-size: large;">  &#8211; Bảo vệ</span><br />
+<span style="font-size: large;">       + Trung tâm Bảo mật của Windows</span><br />
+<span style="font-size: large;">       + Cài đặt Microsoft Security Essentials</span><br />
+<span style="font-size: large;">       + Công cụ diệt Virus Kaspersky</span><br />
+<span style="font-size: large;">       + Máy quét an toàn của Microsoft</span><br />
+<span style="font-size: large;">       + COMODO Cleaning Essentials</span><br />
+<span style="font-size: large;">       + Máy quét trực tuyến ESET</span><br />
+<span style="font-size: large;">       + Norton Power Eraser</span><br />
+<span style="font-size: large;">       + ClamWin Antivirus</span><br />
+<span style="font-size: large;">       + Virus Total Online Scanner</span><br />
+<span style="font-size: large;">       + Kiểm tra Eicar Anti-Virus</span><br />
+<span style="font-size: large;">   &#8211; Loại bỏ AV</span><br />
+<span style="font-size: large;">       + Avast! Công cụ loại bỏ</span><br />
+<span style="font-size: large;">       + Công cụ Loại bỏ AVG</span><br />
+<span style="font-size: large;">       + Công cụ diệt Kaspersky</span><br />
+<span style="font-size: large;">       + Công cụ Loại bỏ McAfee</span><br />
+<span style="font-size: large;">       + Công cụ Xóa MSSE</span><br />
+<span style="font-size: large;">       + Công cụ diệt Norton</span><br />
+<span style="font-size: large;">       + Công cụ diệt Trend Micro</span><br />
+<span style="font-size: large;">       + Công cụ diệt Webroot</span><br />
+<span style="font-size: large;">       + Universal AV Remover</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Ngoài ra bộ này còn có một tính năng rất hữu ích là tiện ích tự động <b>(Auto Fix)</b></span><br />
+<span style="font-size: large;">Tiện ích tự động: </span><br />
+<span style="font-size: large;"> &#8211; Nhiệm vụ tự động &#8211; nhiệm vụ không cần giám sát, tự động khởi động lại, tạo các tệp nhật ký</span><br />
+<span style="font-size: large;"> &#8211; Chẩn đoán Chỉ &#8211; chỉ kiểm tra phần cứng, không có sửa đổi hệ thống</span><br />
+<span style="font-size: large;"> &#8211; Diag &amp; Tune-up &#8211; kiểm tra phần cứng và điều chỉnh chung</span><br />
+<span style="font-size: large;"> &#8211; Xóa Malware &#8211; các tác vụ được nhắm mục tiêu theo phần mềm độc hại</span><br />
+<span style="font-size: large;"> &#8211; Sửa chữa hệ điều hành chung &#8211; các công việc sửa chữa chung của Windows</span><br />
+<span style="font-size: large;"> &#8211; CÔNG TRÌNH &#8211; chạy tất cả các nhiệm vụ</span><br />
+<span style="font-size: large;">Chức năng Auto Fix giúp bạn sủa các lỗi windows mà bạn không cần phải thực hiện thêm các bước sau nữa. Rất tiện lợi phải không nào.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: x-large;"><b>Giờ mình sẽ hướng dẫn các bạn cách sử dụng bộ công cụ này trên desktop nhé.</b></span><br />
+<span style="font-size: large;"><b><br />
+</b></span><span style="font-size: large;">Đối với windows 8/8.1/10 bạn chỉ cần chuột phải vào file ISO này và nhấn Mount . Còn nếu bạn dùng windpws XP/ 7 thì bạn cần phải cài đặt phần mềm UtraISO để hỗ trợ nhé.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-RMzFKa3YfMg/WYafJRuFlyI/AAAAAAAADwc/rsaPN4zJ4sYcg3n1SkS7b_tPzB2Or0MJACPcBGAYYCw/s1600/1rseuntr.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-RMzFKa3YfMg/WYafJRuFlyI/AAAAAAAADwc/rsaPN4zJ4sYcg3n1SkS7b_tPzB2Or0MJACPcBGAYYCw/s640/1rseuntr.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Sau đó bạn mở file AIO-SRT.exe với quyền admin như hình nha.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-8o0YC3IGKaE/WYafK6lV7MI/AAAAAAAADwc/LLIUI8yMngEbi98NFeiPMdcUKsI0PjAAwCPcBGAYYCw/s1600/1yfrdtyo.jpg"><img class="aligncenter" src="https://3.bp.blogspot.com/-8o0YC3IGKaE/WYafK6lV7MI/AAAAAAAADwc/LLIUI8yMngEbi98NFeiPMdcUKsI0PjAAwCPcBGAYYCw/s640/1yfrdtyo.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Khi này sẽ hiên lên hộp thông báo điều khoản sử dụng, &#8230; Và bạn chỉ cần nhấn vào YES là được nha.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-fuXiDcNI-Lo/WYafLJt0MFI/AAAAAAAADwc/azD3-UN7Vjcb6LYZ_P8LpoX3exS-K3irQCPcBGAYYCw/s1600/1ygfkutgflt.jpg"><img class="aligncenter" src="https://3.bp.blogspot.com/-fuXiDcNI-Lo/WYafLJt0MFI/AAAAAAAADwc/azD3-UN7Vjcb6LYZ_P8LpoX3exS-K3irQCPcBGAYYCw/s640/1ygfkutgflt.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Giờ thì chờ phần mềm khởi động nha.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-BN2WXzasChg/WYafKn2XxxI/AAAAAAAADwc/lT9tF2M5KM4dccvePABLq38Ynzz471jRwCPcBGAYYCw/s1600/1tuldtgufyjj.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-BN2WXzasChg/WYafKn2XxxI/AAAAAAAADwc/lT9tF2M5KM4dccvePABLq38Ynzz471jRwCPcBGAYYCw/s640/1tuldtgufyjj.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Giờ thì bạn có thể sử dụng rồi, sẽ có rất nhiều phần mềm khác nhau được phân chia ở các mục khác nhau. Mình sẽ làm video để hướng dẫn cho các bạn chi tiết hơn nhé. Và giờ thì tải về và sử dụng thôi. </span><br />
+<span style="font-size: large;">Link tải mình để dưới bài viết nha.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-GB6mh_Vp7t4/WYafIPT0VlI/AAAAAAAADwc/eZxysHnTcuI7jdjfSYGcRcrY-uMQih46QCPcBGAYYCw/s1600/1etujdtrujsdfjd.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-GB6mh_Vp7t4/WYafIPT0VlI/AAAAAAAADwc/eZxysHnTcuI7jdjfSYGcRcrY-uMQih46QCPcBGAYYCw/s640/1etujdtrujsdfjd.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-jDniCJsuWO0/WYafKB1Ks5I/AAAAAAAADwc/pFvepheIDB02mvOSgPbyWZ2adkLSbf8OACPcBGAYYCw/s1600/1trjuryjyrfkfy.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-jDniCJsuWO0/WYafKB1Ks5I/AAAAAAAADwc/pFvepheIDB02mvOSgPbyWZ2adkLSbf8OACPcBGAYYCw/s640/1trjuryjyrfkfy.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-8YQ2ZsqSmm8/WYafJnkyUwI/AAAAAAAADwc/iExgej-Fpgcphcyn6lM859o8cnIlDNeVACPcBGAYYCw/s1600/1tfjyfkyfk.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-8YQ2ZsqSmm8/WYafJnkyUwI/AAAAAAAADwc/iExgej-Fpgcphcyn6lM859o8cnIlDNeVACPcBGAYYCw/s640/1tfjyfkyfk.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-2j-E9zYqLa8/WYafJFNk6LI/AAAAAAAADwc/qgH7fECTF2kRT35FLLpsJ2Vx7tLWLLgjACPcBGAYYCw/s1600/1jrskjyfrjkfyjy.jpg"><img class="aligncenter" src="https://4.bp.blogspot.com/-2j-E9zYqLa8/WYafJFNk6LI/AAAAAAAADwc/qgH7fECTF2kRT35FLLpsJ2Vx7tLWLLgjACPcBGAYYCw/s640/1jrskjyfrjkfyjy.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-jxlN49sCszQ/WYafI0XnKEI/AAAAAAAADwc/Xvksjhy_ctAMdOsv_rfCTBm1gsK1OuNYwCPcBGAYYCw/s1600/1fkjyrfxkyrf.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-jxlN49sCszQ/WYafI0XnKEI/AAAAAAAADwc/Xvksjhy_ctAMdOsv_rfCTBm1gsK1OuNYwCPcBGAYYCw/s640/1fkjyrfxkyrf.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-thks0csoFJo/WYafLQ9kx2I/AAAAAAAADwc/0zwjCteS5CgtXqbChW3_Qxx8sTFe6210gCPcBGAYYCw/s1600/1ykutfgikfykfy.jpg"><img class="aligncenter" src="https://1.bp.blogspot.com/-thks0csoFJo/WYafLQ9kx2I/AAAAAAAADwc/0zwjCteS5CgtXqbChW3_Qxx8sTFe6210gCPcBGAYYCw/s640/1ykutfgikfykfy.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-w87u-vfp1ac/WYafKGPlFyI/AAAAAAAADwc/5Y0t8m6XlTcNhEecGFTxbC_vr2io8r6UACPcBGAYYCw/s1600/1trkyifkltudltu.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-w87u-vfp1ac/WYafKGPlFyI/AAAAAAAADwc/5Y0t8m6XlTcNhEecGFTxbC_vr2io8r6UACPcBGAYYCw/s640/1trkyifkltudltu.jpg" width="640" height="480" border="0" data-original-height="768" data-original-width="1024" /></a></div>
+<div>
+<hr />
+</div>
+<div style="clear: both; text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 28px; color: #ff0000;"><b>link tải ở đây:</b></span></span></div>
+<ul>
+<li><span style="font-size: large;">link fshare:     <span style="background-color: yellow;"><a href="https://www.fshare.vn/file/BMZTTE7M6QW1" target="_blank" rel="noopener noreferrer">AiO-SRT_2016-05-15</a>  </span></span></li>
+<li><span style="font-size: large;"><span style="background-color: yellow;"><span style="background-color: white;">link onedrive: </span><a style="background-color: yellow;" href="https://1drv.ms/u/s!AjhrvJyrnbIXlxVY4WFi973TOgT4" target="_blank" rel="noopener noreferrer">AiO-SRT_2016-05-15</a></span></span></li>
+</ul>
+<div><span style="font-size: large;">bản 2017:</span></div>
+<div><span style="font-size: large;">   link googledrive:<a href="https://drive.google.com/file/d/0ByjOfyAoqvjUTXozQkRnN0FQTnM/edit" target="_blank" rel="noopener noreferrer"> <span style="background-color: yellow;">AIO-SRT_2017-5-26</span></a></span><br />
+<span style="font-size: large;"> link fshare:  <a style="background-color: yellow;" href="http://megaurl.top/P7eetsFH" target="_blank" rel="noopener noreferrer">AIO-SRT_2017-5-26</a></span><br />
+(nếu link có vấn đề mong các bạn thông cảm và bình luận bên dưới để mình update link nhé, thanks)</div>
+<div style="text-align: right;"><span style="font-size: large;">nguồn chính: PAUL BRYAN VREELAND</span></div>
+<div style="text-align: right;"></div>
+<div style="text-align: right;"></div>
+<div style="text-align: right;"></div>
+<div style="text-align: right;"></div>
+<div style="text-align: center;"><b><span style="color: red; font-size: x-large;">CHÚC CÁC BẠN THÀNH CÔNG</span></b></div>
+<p>&nbsp;</p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="180"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/">All In One System Rescue Toolkit &#8211; Bộ công cụ cho mọi dân công nghệ</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/all-in-one-system-rescue-toolkit-bo-cong-cu-cho-moi-dan-cong-nghe/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Hướng dẫn sửa lỗi Unikey không gõ được tiếng Việt trên Windows</title>
+		<link>http://localhost:82/demowp/kien-thuc/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/#respond</comments>
+				<pubDate>Fri, 28 Jul 2017 14:02:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2017/07/28/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/</guid>
+				<description><![CDATA[<p>Người dùng windows ở Việt Nam hiện nay có lẽ không ai không dùng đến phần mềm Unikey. Unikey là phần mềm hỗ trợ người dùng gõ được dấu tiếng việt. Nhưng ở một số trường hợp trên Windows 8, windows 8.1 hay windows 10 thì lại khong thể nào gõ được dấu tiếng việt [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/">Hướng dẫn sửa lỗi Unikey không gõ được tiếng Việt trên Windows</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Người dùng windows ở Việt Nam hiện nay có lẽ không ai không dùng đến phần mềm Unikey.</span></p>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Unikey là phần mềm hỗ trợ người dùng gõ được dấu tiếng việt. Nhưng ở một số trường hợp trên Windows 8, windows 8.1 hay windows 10 thì lại khong thể nào gõ được dấu tiếng việt dù đã cài đặt đúng kiểu gõ và bảng mã.</span><br />
+<span style="font-size: large;"><br />
+</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-0aROkSC2TLI/WXtGWPjaplI/AAAAAAAADsM/h0DH60kPfW4AcKLSmj7LPIVGg6w3xuZmACLcBGAs/s1600/liobo.jpg"><img class="aligncenter" src="https://2.bp.blogspot.com/-0aROkSC2TLI/WXtGWPjaplI/AAAAAAAADsM/h0DH60kPfW4AcKLSmj7LPIVGg6w3xuZmACLcBGAs/s640/liobo.jpg" width="640" height="310" border="0" data-original-height="198" data-original-width="403" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Bài viết này mình sẽ hướng dẫn các bạn cách fixx lỗi này , các bạn thử làm theo cách này để khắc phục xem sao nhé&#8230;</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;">Đầu tiên bạn vào địa chỉ sau trên Windows Explorer:</span><br />
+<b><span style="font-size: large;">C:Program FilesUniKey</span></b><br />
+<span style="font-size: large;"><b><br />
+</b>Sau đó bạn chuột phải vào file <b>Unikey.exe</b> và chọn vào <b>Properties.</b></span><br />
+<span style="font-size: large;"><b><br />
+</b></span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-4Uuas_H16LI/WXtDOYVmwoI/AAAAAAAADrw/uBHFhI2YBGspcCeR0E0Qbuq7ZS2wIJstQCLcBGAs/s1600/1aiogi.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-4Uuas_H16LI/WXtDOYVmwoI/AAAAAAAADrw/uBHFhI2YBGspcCeR0E0Qbuq7ZS2wIJstQCLcBGAs/s640/1aiogi.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Của sổ Unikey Properties hiện ra, bạn chọn sang khung<b> Compalibilty.</b></span><br />
+<span style="font-size: large;"><br />
+</span></p>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-YV4uBKdK0mw/WXtD_Bro71I/AAAAAAAADr4/5BPoC9-08KQaetSgnDpSgOt2ZP9rGqg7ACLcBGAs/s1600/2afdisgbu.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-YV4uBKdK0mw/WXtD_Bro71I/AAAAAAAADr4/5BPoC9-08KQaetSgnDpSgOt2ZP9rGqg7ACLcBGAs/s640/2afdisgbu.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Tiếp theo bạn tích chọn vào ô<b> Run this program as an administrator.</b></span><br />
+<span style="font-size: large;"><br />
+</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-OzYNp-1qdvU/WXtEZP2XcEI/AAAAAAAADr8/rA96KX7rKWYVZhZPz35op08jr9tJ0GN1QCLcBGAs/s1600/3aivogu.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-OzYNp-1qdvU/WXtEZP2XcEI/AAAAAAAADr8/rA96KX7rKWYVZhZPz35op08jr9tJ0GN1QCLcBGAs/s640/3aivogu.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Sau đó bạn nhấn vào<b> Apply</b> rồi nhấn chọn<b> OK</b> nhé.</span><br />
+<span style="font-size: large;"><br />
+</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-PshQuA_UOos/WXtFH3ccn-I/AAAAAAAADsA/M_MvjrU9algJlShLVHAg5h2Mc8g9tCU-QCLcBGAs/s1600/4ihov.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-PshQuA_UOos/WXtFH3ccn-I/AAAAAAAADsA/M_MvjrU9algJlShLVHAg5h2Mc8g9tCU-QCLcBGAs/s640/4ihov.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Vậy là xong, giờ bạn có thẻ gõ tiếng Việt trên Windows được rồi.</span><br />
+<span style="font-size: large;"><br />
+</span></p>
+<div style="text-align: center;"><span style="color: red; font-size: large;"><b>CHÚC CÁC BẠN THÀNH CÔNG NHÉ.</b></span></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="183"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 0px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <span class="kksr-muted"></span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/">Hướng dẫn sửa lỗi Unikey không gõ được tiếng Việt trên Windows</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/huong-dan-sua-loi-unikey-khong-go-duoc-tieng-viet-tren-windows/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>HKBoot 2017 &#8211; Hướng dẫn cài USB HKBoot 2017 cứu hộ máy tính hỗ trợ Legacy và UEFI</title>
+		<link>http://localhost:82/demowp/cong-cu/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/</link>
+				<comments>http://localhost:82/demowp/cong-cu/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/#comments</comments>
+				<pubDate>Fri, 21 Jul 2017 07:15:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Boot]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[tool usb]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Thủ Thuật Win 7]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2017/07/21/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/</guid>
+				<description><![CDATA[<p>Trên Internet đang phát triển chóng mặt hiện nay có rất nhiều cách tạo một chiếc USB boot hoàn chỉnh để cứu hộ máy tính . Như là những công cụ USB HDD Boot, DLC BOOT hay HKBoot.   Việc tạo 1 chiếc USB boot vô cùng có ích, nó giúp ta fix các lỗi [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/">HKBoot 2017 &#8211; Hướng dẫn cài USB HKBoot 2017 cứu hộ máy tính hỗ trợ Legacy và UEFI</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Trên Internet đang phát triển chóng mặt hiện nay có rất nhiều cách tạo một chiếc USB boot hoàn chỉnh để cứu hộ máy tính . Như là những công cụ USB HDD Boot, DLC BOOT hay HKBoot.</span><span style="font-size: large;"><br />
+</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-40Lkv1zdK70/WXGnzNXwVeI/AAAAAAAADhg/dLtcOncsFGU62lGcT_Q0wip3fSgoCRxwwCLcBGAs/s1600/create-usb.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-40Lkv1zdK70/WXGnzNXwVeI/AAAAAAAADhg/dLtcOncsFGU62lGcT_Q0wip3fSgoCRxwwCLcBGAs/s640/create-usb.jpg" width="640" height="354" border="0" data-original-height="478" data-original-width="850" /></span></a></div>
+<div style="text-align: left;"><span style="font-size: large;"> </span> <span style="font-size: large;">Việc tạo 1 chiếc USB boot vô cùng có ích, nó giúp ta fix các lỗi khởi động windows,  cứu dữ liệu, chia ổ đĩa, tạo phân vùng cài Windows, test ổ cứng, test lỗi ram, phục hồi dữ liệu, bung file ghost, tạo file ghost, ..v..v&#8230;</span><span style="font-size: large;"><br />
+</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-hmPU5Yt4rsc/WXGnu4yaLjI/AAAAAAAADhc/jxWDzgwvRBYNPkPmzLNuczf2Q_uJiDPwwCLcBGAs/s1600/mobalivecd.png"><span style="font-size: large;"><img class="aligncenter" src="https://3.bp.blogspot.com/-hmPU5Yt4rsc/WXGnu4yaLjI/AAAAAAAADhc/jxWDzgwvRBYNPkPmzLNuczf2Q_uJiDPwwCLcBGAs/s640/mobalivecd.png" width="640" height="290" border="0" data-original-height="300" data-original-width="650" /></span></a></div>
+<p><span style="font-size: large;"><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;">Trong bài viết hôm nay, mình sẽ hướng dẫn các bạn cách tạo một chiếc USB boot hoàn chỉnh với </span><span style="background-color: white; color: #006633; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;">HKboot 2017</span><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;"> nhé.  Đây là bản mới nhất do tác giả </span><span style="background-color: white; color: red; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;">Hoàng Khiển</span><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;"> tạo ra vào tháng 4/2017.</span></span><span style="font-size: large;"><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;"><br />
+</span> </span></p>
+<div style="clear: both; text-align: center;"><strong><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-bcC_y__0Whg/WXGoBC3fUaI/AAAAAAAADhk/zg7tdvbkMog_m0l6Y0TQrOpRakKru-aXwCLcBGAs/s1600/bandicam%2B2017-06-09%2B15-42-27-700.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-bcC_y__0Whg/WXGoBC3fUaI/AAAAAAAADhk/zg7tdvbkMog_m0l6Y0TQrOpRakKru-aXwCLcBGAs/s640/bandicam%2B2017-06-09%2B15-42-27-700.jpg" width="640" height="480" border="0" data-original-height="361" data-original-width="481" /></span></a></strong></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><strong><span style="font-size: 22px;" data-redactor="1"><span style="color: red; font-size: large;">Đối với bản HKBoot 2017 này có gì đổi mới so với bản 2016 trước đó:</span></span></strong></div>
+<ul style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif;">
+<li><span style="font-size: large;" data-redactor="1">các phần mềm trong nền và trong win pe được update lên bản mới nhất.</span></li>
+<li><span style="font-size: large;" data-redactor="1">sửa một số lỗi nhỏ ở bản trước.</span></li>
+<li><span style="font-size: large;" data-redactor="1">tốc độ boot nhanh hơn so với bản trước.</span></li>
+<li><span style="font-size: large;" data-redactor="1">tích hợp nhiều phần mềm cứu hộ máy tính cần thiết.</span></li>
+<li><span style="font-size: large;" data-redactor="1">ngoài ra công cụ tạo boot KHboot_toolkit_2017_1_click được thay đổi dao diện đẹp mắt hơn.</span></li>
+<li><span style="font-size: large;" data-redactor="1">không những thế, còn nhiều tính năng khác mà mình không kể hết được.</span></li>
+</ul>
+<hr />
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px; text-align: center;" data-redactor="1"><span style="text-decoration: underline;"><span style="font-size: 28px; color: #ff0000;"><strong> Hướng dẫn cài đặt</strong></span></span></div>
+<div data-redactor="1"></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Không lòng vòng nhiều nữa, bây giờ bắt đầu làm thôi nào&#8230;</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><b><span data-redactor="1"><span style="color: blue;">&#8211;&gt; </span></span></b>Bây giờ bạn phải chuẩn bị những việc sau:</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Điều trước tiên và quan trọng nhất vẫn là việc bạn phải tải bản HKBoot 2017 về đã nhé.</span><br />
+<span style="font-size: large;" data-redactor="1"><br />
+</span></div>
+<div style="background-color: white; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="color: #37474f;">     </span><b><span style="color: red;"> link ở đây :</span></b></span></div>
+<div style="color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="background-color: white;">                         link fshare: </span><a style="background-color: lime;" href="https://www.fshare.vn/file/NDNTZ5FIYZU1?token=1538294519" target="_blank" rel="noopener noreferrer">tải về</a></span></div>
+<div style="color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="background-color: white;">                         link google drive: </span><a style="background-color: lime;" href="https://drive.google.com/file/d/0ByjOfyAoqvjUN3RVS3ZSRVBmaEU/view" target="_blank" rel="noopener noreferrer">tải về</a></span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"><span style="font-size: 22px;" data-redactor="1">                               </span><span style="font-size: 15px;" data-redactor="1">(các bạn hãy vào  xác nhận để lấy link nhé)</span></span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Và bạn cần phải tải công cụ HKBoot_toolkit_1_click về kèm theo nhé.</span><br />
+<span style="font-size: large;" data-redactor="1"><br />
+</span></div>
+<div style="background-color: white; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="color: #37474f;">   </span><b><span style="color: red;"> link của công cụ này:</span></b></span></div>
+<div style="color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="background-color: white;">                   link fshare: </span><span style="background-color: lime;"> <a href="https://www.fshare.vn/file/T9IKZ354Y6PQ" target="_blank" rel="noopener noreferrer">tải về</a></span></span></div>
+<div style="color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"><span style="background-color: white;">                   link google drive: </span><a style="background-color: lime;" href="https://drive.google.com/file/d/0ByjOfyAoqvjUdUNJS0k3RjBVUE0/view" target="_blank" rel="noopener noreferrer">tải về</a></span></div>
+<div style="color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"><br />
+</span><span style="font-size: large;"><br />
+</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: 26px;" data-redactor="1"><span style="color: #ff4d4d; font-size: large;"><b>Các bạn nhớ kỹ là sau khi tải cả 2 file trên về thì bạn phải đưa chúng vào cùng 1 folder đấy nhé. Nếu không khi cài sẽ gặp lỗi không tìm thấy file setup khi cài đặt đấy.</b></span></span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Tiếp theo bạn cần có một chiếc USB tối thiểu là có 2GB dung lượng.(bạn nhớ hãy sao lưu dữ liệu trong usb trước nhé.)</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Bây giờ thì bắt đầu làm thôi&#8230;</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Bạn hãy vào nơi chứa công cụ toolkit_1_click. Nhấn chuột phải rồi chọn <b>Run as administrator </b>nhé.</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-3R_IHFVwC8g/WXGoQ_ZbH9I/AAAAAAAADho/8Muwc34kDqM2jZ4GS-w4mRziHDfNWkUrwCLcBGAs/s1600/bandicam%2B2017-06-09%2B16-19-09-126.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://4.bp.blogspot.com/-3R_IHFVwC8g/WXGoQ_ZbH9I/AAAAAAAADho/8Muwc34kDqM2jZ4GS-w4mRziHDfNWkUrwCLcBGAs/s640/bandicam%2B2017-06-09%2B16-19-09-126.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a><span style="font-size: large;" data-redactor="1"> </span></div>
+<p><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif; font-size: large;">sau khi nó khởi động xong sẽ có giao diện như thế này:</span><span style="font-size: large;"><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;"><br />
+</span> </span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-Y0HGALquy1w/WXGoao1uqiI/AAAAAAAADhs/AixwoJzazsossKJzWK1lQ_5lQiheS__YACLcBGAs/s1600/bandicam%2B2017-06-09%2B16-24-25-266.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-Y0HGALquy1w/WXGoao1uqiI/AAAAAAAADhs/AixwoJzazsossKJzWK1lQ_5lQiheS__YACLcBGAs/s640/bandicam%2B2017-06-09%2B16-24-25-266.jpg" width="640" height="364" border="0" data-original-height="320" data-original-width="562" /></span></a></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Bây giờ bạn tiếp tục chọn ổ đĩa cần boot, các bạn nhớ chú ý khi lựa chọn nhé, ta chỉ chọn ổ USB đang gắm vào máy mà thôi. </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">ở đây USB của mình ở phân vùng số 2 nên mình sẽ nhập số 2 vào:</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-PPs5vRVFGGQ/WXGoprxlDBI/AAAAAAAADhw/SEdQ-0Ze_YMasKGEeT7hfmnvE0_1BKd9gCLcBGAs/s1600/bandicam%2B2017-06-09%2B16-27-11-301.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-PPs5vRVFGGQ/WXGoprxlDBI/AAAAAAAADhw/SEdQ-0Ze_YMasKGEeT7hfmnvE0_1BKd9gCLcBGAs/s640/bandicam%2B2017-06-09%2B16-27-11-301.jpg" width="640" height="364" border="0" data-original-height="320" data-original-width="562" /></span></a></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Tiếp theo , nó hiện bảng nói rằng chia cho USB 2 phân vùng với 1 phân vùng Boot và 1 phân vùng Chứa dữ liệu. ( bạn có thể lựa chọn phân vùng boot tùy ý, và nhớ là phải từ 2GB trở lên nhé.)</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Mình sẽ chọn  2gb cho phân vùng boot </span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-IuRECdbzLh4/WXGo01DbtFI/AAAAAAAADh4/9Hb9fqYIj70XXFDJR99FR9XGzkLWYs36QCLcBGAs/s1600/bandicam%2B2017-06-09%2B16-32-36-014.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-IuRECdbzLh4/WXGo01DbtFI/AAAAAAAADh4/9Hb9fqYIj70XXFDJR99FR9XGzkLWYs36QCLcBGAs/s640/bandicam%2B2017-06-09%2B16-32-36-014.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a><span style="font-size: large;" data-redactor="1"> </span></div>
+<p><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif; font-size: large;">và nhấn Enter để quá trình Boot bắt đầu:</span><span style="font-size: large;"><span style="background-color: white; color: #37474f; font-family: 'roboto' , 'helvetica' , 'arial' , sans-serif;"><br />
+</span> </span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://2.bp.blogspot.com/-JbiesMB4uhs/WXGpSOEEtRI/AAAAAAAADiA/7b2K3j4I0PsMMsPF881S6zyVI7u0QIZFgCLcBGAs/s1600/bandicam%2B2017-06-09%2B16-34-35-593.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://2.bp.blogspot.com/-JbiesMB4uhs/WXGpSOEEtRI/AAAAAAAADiA/7b2K3j4I0PsMMsPF881S6zyVI7u0QIZFgCLcBGAs/s640/bandicam%2B2017-06-09%2B16-34-35-593.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Giờ chỉ cần chờ cho đến khi nó xong nữa thôi &#8230;</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">SAU KHI XONG NÓ SẼ TỰ ĐỘNG TẮT CHƯƠNG TRÌNH.</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Nếu như sau khi chạy xong, máy có hiện thông báo sau thì bạn chọn vào grub4dos rồi nhấn install nhé.</span></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://1.bp.blogspot.com/-BokblC4Qoo8/WXGpd5We7UI/AAAAAAAADiE/Qawj-aH-X4ctaXfXRmfzIePEw5La4P_dQCLcBGAs/s1600/bandicam%2B2017-06-09%2B16-43-03-206.jpg"><span style="font-size: large;"><img class="aligncenter" src="https://1.bp.blogspot.com/-BokblC4Qoo8/WXGpd5We7UI/AAAAAAAADiE/Qawj-aH-X4ctaXfXRmfzIePEw5La4P_dQCLcBGAs/s640/bandicam%2B2017-06-09%2B16-43-03-206.jpg" width="640" height="474" border="0" data-original-height="768" data-original-width="1024" /></span></a></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">Vậy là USB của bạn đã có thể đem đi cứu hộ được rồi &#8230;.</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1">nếu có thắc mắc thì hãy gửi tin nhắn trẩ lời bên dưới nhé.</span></div>
+<div style="background-color: white; color: #37474f; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px;" data-redactor="1"><span style="font-size: large;" data-redactor="1"> </span></div>
+<div style="background-color: white; font-family: roboto, helvetica, arial, sans-serif; margin: 0px; padding: 0px; text-align: center;" data-redactor="1"><span style="color: red; font-size: 28px;" data-redactor="1"><b>CHÚC CÁC BẠN CÀI ĐẶT THÀNH CÔNG NHÉ&#8230;</b></span></div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="186"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/cong-cu/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/">HKBoot 2017 &#8211; Hướng dẫn cài USB HKBoot 2017 cứu hộ máy tính hỗ trợ Legacy và UEFI</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/cong-cu/hkboot-2017-huong-dan-cai-usb-hkboot-2017-cuu-ho-may-tinh-ho-tro-legacy-va-uefi/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

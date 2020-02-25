@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/OmnicommanderUnicorn/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2017-04-18T12:23:56Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/17139bd5f5741ddffb99c2858ba82913d0412572</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/17139bd5f5741ddffb99c2858ba82913d0412572"/>
+    <title>
+        Merge pull request #125 from bryant1410/master
+    </title>
+    <updated>2017-04-18T12:23:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #125 from bryant1410/master
+
+Fix broken headings in Markdown files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8f86a1bf8e9ceb9d006dc2ca3a4d0b5928b22541</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/8f86a1bf8e9ceb9d006dc2ca3a4d0b5928b22541"/>
+    <title>
+        Fix broken Markdown headings
+    </title>
+    <updated>2017-04-17T01:38:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/3905501?s=30&amp;v=4"/>
+    <author>
+      <name>bryant1410</name>
+      <uri>https://github.com/bryant1410</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix broken Markdown headings&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/405e44d20972f3a7d8efbcd5dfeada11d571712b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/405e44d20972f3a7d8efbcd5dfeada11d571712b"/>
+    <title>
+        - Improved CDN description #118
+    </title>
+    <updated>2017-01-23T15:28:39Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improved CDN description #118&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e89324f978cceda39bc69a7da4a3f5931989944c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/e89324f978cceda39bc69a7da4a3f5931989944c"/>
+    <title>
+        Merge pull request #118 from clairetsai818/add_badge-1
+    </title>
+    <updated>2017-01-23T15:25:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #118 from clairetsai818/add_badge-1
+
+Add CDNJS version badge in README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/eba789938d62ba1e783ca6a85c3100b0b7eb0e11</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/eba789938d62ba1e783ca6a85c3100b0b7eb0e11"/>
+    <title>
+        Add CDNJS version badge in README.md
+    </title>
+    <updated>2017-01-23T15:24:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/23053479?s=30&amp;v=4"/>
+    <author>
+      <name>clairetsai818</name>
+      <uri>https://github.com/clairetsai818</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add CDNJS version badge in README.md
+
+The badge will show the version on CDNJS, and it is added after the &amp;quot;including file&amp;quot; section.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ee55946ee92019ee01677aabc107670646b9be70</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/ee55946ee92019ee01677aabc107670646b9be70"/>
+    <title>
+        - Updating version number to create new release
+    </title>
+    <updated>2017-01-18T12:30:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating version number to create new release&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/22ea76ea47c305138b08d7ae0c9ffb1d30f4d7cb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/22ea76ea47c305138b08d7ae0c9ffb1d30f4d7cb"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2016-08-26T11:33:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/217d1df6ce1221d2e96d68ac8581254ccfc174b5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/217d1df6ce1221d2e96d68ac8581254ccfc174b5"/>
+    <title>
+        - Adding WaltDisney and Logitech in pages which uses pagePiling.js
+    </title>
+    <updated>2016-07-07T15:42:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Adding WaltDisney and Logitech in pages which uses pagePiling.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5235aa5f0c05d12c702411b5a33d0ef871fb8e06</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/5235aa5f0c05d12c702411b5a33d0ef871fb8e06"/>
+    <title>
+        - Added gulp and `dist` files
+    </title>
+    <updated>2016-07-07T14:31:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added gulp and `dist` files 
+- Added package.json file 
+- Added gitignore 
+- Improved credits in CSS and JS files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6b6b1645d66785ca1abd861a98dd93bf6dd9bd8c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/6b6b1645d66785ca1abd861a98dd93bf6dd9bd8c"/>
+    <title>
+        - Added site to &quot;who is using pagePiling.js&quot;
+    </title>
+    <updated>2016-05-04T14:32:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added site to &amp;quot;who is using pagePiling.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c767093672b70ca9c6acfdbdb540f3c254b5e6a6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/c767093672b70ca9c6acfdbdb540f3c254b5e6a6"/>
+    <title>
+        pagePiling 2.5.3
+    </title>
+    <updated>2016-02-23T23:53:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;pagePiling 2.5.3
+
+- Fixed bug when scrolling with an Apple trackpad #87
+- Improved scrolling detection so it won’t scroll when scrolling
+horizontally on Apple trackpads.
+- Improved scrolling to prevent double scroll when scrolling very fast
+on Apple trackpad or kinetic scrolling devices
+- Improved comments so they won’t get deleted on minification.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/303595d9ce0d91763e8a58aab4cd1c7f119887e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/303595d9ce0d91763e8a58aab4cd1c7f119887e7"/>
+    <title>
+        - Fixed security issue
+    </title>
+    <updated>2016-01-14T13:15:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed security issue&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4210b4f7734e4e042235176aa1da9767c5d73687</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/4210b4f7734e4e042235176aa1da9767c5d73687"/>
+    <title>
+        Merge pull request #51 from kkirsche/patch-1
+    </title>
+    <updated>2015-06-12T09:04:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #51 from kkirsche/patch-1
+
+Remove moot `version` property from bower.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cbf3c0ef0bab921830c025af1f015054b672795</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/4cbf3c0ef0bab921830c025af1f015054b672795"/>
+    <title>
+        Remove moot `version` property from bower.json
+    </title>
+    <updated>2015-06-12T01:11:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/947110?s=30&amp;v=4"/>
+    <author>
+      <name>kkirsche</name>
+      <uri>https://github.com/kkirsche</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove moot `version` property from bower.json
+
+Per bower/bower.json-spec@a325da3
+
+Also their maintainer says they probably won&amp;#39;t ever use it: http://stackoverflow.com/questions/24844901/bowers-bower-json-file-version-property&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/be9f447b32312c64c7ddb075e957fc4180981a21</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/be9f447b32312c64c7ddb075e957fc4180981a21"/>
+    <title>
+        - Changed top comments wrap
+    </title>
+    <updated>2015-05-20T14:35:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Changed top comments wrap 
+- Minor change related with pp-scrollable&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f804461e089131c593e5ced2fe97dff0d9606d5a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/f804461e089131c593e5ced2fe97dff0d9606d5a"/>
+    <title>
+        - Added websites to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2015-04-28T16:11:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added websites to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f2d60feb408cda477b1b3ad8a40e519828127e9b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/f2d60feb408cda477b1b3ad8a40e519828127e9b"/>
+    <title>
+        Added article: creating HugeInc website with pagePiling.js
+    </title>
+    <updated>2015-04-09T21:35:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added article: creating HugeInc website with pagePiling.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f91cc9b6e9997361565bd56ecacb78dbda4da7a1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/f91cc9b6e9997361565bd56ecacb78dbda4da7a1"/>
+    <title>
+        - Marking the project as Javascript
+    </title>
+    <updated>2015-03-31T09:42:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Marking the project as Javascript&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ea29b19592b8b7351d8e6f1a5dd4588f2a5ff1f4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/ea29b19592b8b7351d8e6f1a5dd4588f2a5ff1f4"/>
+    <title>
+        - Fixed bug with `verticalCentered:true` and pp-scrollable #41
+    </title>
+    <updated>2015-03-31T09:40:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug with `verticalCentered:true` and pp-scrollable #41
+- JSLint validation&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/24e01d5291feba57a2f4076363b28f464cd830d6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/OmnicommanderUnicorn/pagePiling.js/commit/24e01d5291feba57a2f4076363b28f464cd830d6"/>
+    <title>
+        - Improved scrollable feature
+    </title>
+    <updated>2015-03-30T10:44:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improved scrollable feature&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

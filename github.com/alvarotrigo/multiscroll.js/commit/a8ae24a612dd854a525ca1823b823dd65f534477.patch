@@ -1,0 +1,22 @@
+From a8ae24a612dd854a525ca1823b823dd65f534477 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Mon, 24 Apr 2017 12:22:00 +0100
+Subject: [PATCH] - Update version and dist files
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index cca6c9b..663e770 100644
+--- a/README.md
++++ b/README.md
+@@ -5,7 +5,7 @@
+ 
+ ---
+ 
+-![multiScroll.js version](http://img.shields.io/badge/multiscroll.js-v0.1.7-brightgreen.svg)
++![multiScroll.js version](http://img.shields.io/badge/multiscroll.js-v0.1.8-brightgreen.svg)
+ [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+ [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/alvarotrigo/9.95)
+ &nbsp;&nbsp; **|**&nbsp;&nbsp; *3.7Kb gziped* &nbsp;&nbsp;**|**&nbsp;&nbsp; *Created by [@imac2](https://twitter.com/imac2)*

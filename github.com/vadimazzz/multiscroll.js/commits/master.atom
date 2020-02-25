@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/vadimazzz/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/vadimazzz/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2015-01-29T16:27:31Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/51125f55b0adf0b828fc085c82c5ec20e761286f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/51125f55b0adf0b828fc085c82c5ec20e761286f"/>
+    <title>
+        - Removed some sites
+    </title>
+    <updated>2015-01-29T16:27:31Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Removed some sites&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f4ff80c0231b4a6caa91854730998734ee17c61e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/f4ff80c0231b4a6caa91854730998734ee17c61e"/>
+    <title>
+        Merge pull request #27 from talgautb/master
+    </title>
+    <updated>2015-01-25T14:30:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #27 from talgautb/master
+
+Add custom selectors&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/30b2d13893fc0400000e5f3f4cc4800882642818</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/30b2d13893fc0400000e5f3f4cc4800882642818"/>
+    <title>
+        add custom selectors
+    </title>
+    <updated>2015-01-25T11:04:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add custom selectors&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/d4d1aff8b7d068c1d0b36b27ef8b6b9021284cb2"/>
+    <title>
+        - Updated version.
+    </title>
+    <updated>2015-01-05T12:26:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated version.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/e9c441c54da44819e1c2a482cf0b0054b4804cb9"/>
+    <title>
+        Merge pull request #24 from dawsonbotsford/master
+    </title>
+    <updated>2014-12-30T11:09:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #24 from dawsonbotsford/master
+
+Spelling Correction from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/56777e325f114878f021faaa22670613ac97850e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/56777e325f114878f021faaa22670613ac97850e"/>
+    <title>
+        Remove double letter replacements
+    </title>
+    <updated>2014-12-29T22:14:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove double letter replacements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d7e81333a7f106c54d522617a361987119e9e540</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/d7e81333a7f106c54d522617a361987119e9e540"/>
+    <title>
+        Fix URL change
+    </title>
+    <updated>2014-12-29T22:12:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix URL change&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/61b975cd5277bed2d1342f00ff10e44e69626601</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/61b975cd5277bed2d1342f00ff10e44e69626601"/>
+    <title>
+        Spelling correction automated from Dawson&#39;s Spelling Bee
+    </title>
+    <updated>2014-12-29T22:10:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3408480?s=30&amp;v=4"/>
+    <author>
+      <name>dawsbot</name>
+      <uri>https://github.com/dawsbot</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Spelling correction automated from Dawson&amp;#39;s Spelling Bee&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/213386a7e5bc957e1d674aa7cb3b11c66b65c57b"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2014-12-16T10:46:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a27da98fb5b7777ae823d94b8be971388718feb2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/a27da98fb5b7777ae823d94b8be971388718feb2"/>
+    <title>
+        - Added website to &quot;Who is using multiscroll.js&quot;
+    </title>
+    <updated>2014-12-12T10:23:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;Who is using multiscroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3ba13dea8c00b25614802dd4b14ba7c63673de4a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/3ba13dea8c00b25614802dd4b14ba7c63673de4a"/>
+    <title>
+        Added websites in &quot;who is using multiScroll.js&quot;
+    </title>
+    <updated>2014-10-27T21:28:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added websites in &amp;quot;who is using multiScroll.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/0c3ed2de97b2f71b5dee6a3c4bcc773dc5c88030"/>
+    <title>
+        - Solved problem in input elements
+    </title>
+    <updated>2014-10-09T22:03:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved problem in input elements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/5ae3b91d85b110b864e6ffea4a77ea8c25c0a0a1"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-09-24T10:44:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/a0ce5bfcbf617fc9031ef83a9a3f1284d120a7e5"/>
+    <title>
+        - Added support for Windows 8 Tablets
+    </title>
+    <updated>2014-09-17T09:55:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added support for Windows 8 Tablets
+- Added support for IE 11 on Windows Phone 8.1 
+- Added home/end buttons actions
+- Fixed bug in IE for normalScroll elements
+- Fixed navigation tooltips not fading out correctly
+- Improved bullets tooltips
+- Update bower version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c1cce8913e0a018c2caf42b54d2abfaf126aaf08</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/c1cce8913e0a018c2caf42b54d2abfaf126aaf08"/>
+    <title>
+        - Solved bug when using the back button causing an undefined anchor t…
+    </title>
+    <updated>2014-09-15T10:20:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug when using the back button causing an undefined anchor to appear in the URL #17&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/c9f01d03b49bfe787d84d8528118072f1bd4a99e"/>
+    <title>
+        Merge pull request #15 from rawcreative/cellResizeFix
+    </title>
+    <updated>2014-09-01T09:21:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #15 from rawcreative/cellResizeFix
+
+Ensure table cells are resized during resize event&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/15aff096e6f1d7cc66670a7fef363cddd9da0871</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/15aff096e6f1d7cc66670a7fef363cddd9da0871"/>
+    <title>
+        Typo in class name
+    </title>
+    <updated>2014-08-30T15:46:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Typo in class name&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8aaa696d5cefa0b52b34b0464dfc1f1a8407e5f7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/8aaa696d5cefa0b52b34b0464dfc1f1a8407e5f7"/>
+    <title>
+        Typo in class name
+    </title>
+    <updated>2014-08-30T15:45:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Typo in class name&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fe4fec5f101f19f8c30e846d46e81a750ba079ae</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/fe4fec5f101f19f8c30e846d46e81a750ba079ae"/>
+    <title>
+        Ensure table cells are resized during resize event
+    </title>
+    <updated>2014-08-30T15:07:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1143718?s=30&amp;v=4"/>
+    <author>
+      <name>rawcreative</name>
+      <uri>https://github.com/rawcreative</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Ensure table cells are resized during resize event
+
+Due to .ms-TableCell elements having an explicit height set upon init,
+they need to be resized during resize event to ensure proper layout.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a35158606ecbf29c386d86d0f4c434a76108203c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/vadimazzz/multiscroll.js/commit/a35158606ecbf29c386d86d0f4c434a76108203c"/>
+    <title>
+        Merge pull request #13 from erickrar/patch-1
+    </title>
+    <updated>2014-08-26T14:25:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #13 from erickrar/patch-1
+
+resolve missing parenthesis&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

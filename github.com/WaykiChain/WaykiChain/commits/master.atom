@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/WaykiChain/WaykiChain/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/WaykiChain/WaykiChain/commits/master.atom"/>
+  <title>Recent Commits to WaykiChain:master</title>
+  <updated>2020-02-25T04:19:52Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9cb77a43dd6625afb981345544e319302ca8e9b9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/9cb77a43dd6625afb981345544e319302ca8e9b9"/>
+    <title>
+        fix CSingleAddressCondIn
+    </title>
+    <updated>2020-02-25T04:19:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix CSingleAddressCondIn&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/79311384b29f5cad00a9a5f7b0721da74c28d674</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/79311384b29f5cad00a9a5f7b0721da74c28d674"/>
+    <title>
+        fix utxo
+    </title>
+    <updated>2020-02-25T04:16:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix utxo&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b599bcf093392ca826faf672c99ea2d7ea721f51</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/b599bcf093392ca826faf672c99ea2d7ea721f51"/>
+    <title>
+        fix utxo type conversion issue
+    </title>
+    <updated>2020-02-25T04:03:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix utxo type conversion issue&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/02d95afa237fa70a036dd8faf911d84f00c20313</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/02d95afa237fa70a036dd8faf911d84f00c20313"/>
+    <title>
+        add empty constructor to CUtxoOutput
+    </title>
+    <updated>2020-02-25T03:59:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add empty constructor to CUtxoOutput&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c1db9811df9ef451041379c82c7bf22cbe587dc7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/c1db9811df9ef451041379c82c7bf22cbe587dc7"/>
+    <title>
+        fix format specifier in VerifyMultiSig
+    </title>
+    <updated>2020-02-25T03:54:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix format specifier in VerifyMultiSig&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2b6a1aee12e738fbfac1c45a5fd0e4740c19e875</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/2b6a1aee12e738fbfac1c45a5fd0e4740c19e875"/>
+    <title>
+        fix format specifier in VerifyMultiSig
+    </title>
+    <updated>2020-02-25T03:54:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix format specifier in VerifyMultiSig&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/90073a7ae961430546ccaffea75845c1fc2a7c8a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/90073a7ae961430546ccaffea75845c1fc2a7c8a"/>
+    <title>
+        fix VerifyMultiSig
+    </title>
+    <updated>2020-02-25T03:53:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix VerifyMultiSig&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cf7f64b5447d44995e9d5d1682a11cb9521c116a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/cf7f64b5447d44995e9d5d1682a11cb9521c116a"/>
+    <title>
+        fix VectorToString
+    </title>
+    <updated>2020-02-25T03:43:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix VectorToString&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3f5fb6d108dec4df46f7b42c958606c2d8c5820c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/3f5fb6d108dec4df46f7b42c958606c2d8c5820c"/>
+    <title>
+        fix compile issue for types.h
+    </title>
+    <updated>2020-02-25T03:26:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix compile issue for types.h&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f1fa08169d04b1f6a38294e2b6ecb9024d86d7b5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/f1fa08169d04b1f6a38294e2b6ecb9024d86d7b5"/>
+    <title>
+        use VectorToString conversion for redeemScript generation
+    </title>
+    <updated>2020-02-25T03:24:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;use VectorToString conversion for redeemScript generation&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/660f13d3c5b84c868906be325ff167e3ded6c266</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/660f13d3c5b84c868906be325ff167e3ded6c266"/>
+    <title>
+        fix compile issues
+    </title>
+    <updated>2020-02-24T14:53:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix compile issues&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0348a349d1f9961618fb15cfd72ad3fc10c6fd4e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/0348a349d1f9961618fb15cfd72ad3fc10c6fd4e"/>
+    <title>
+        remove verifysingature from id.h
+    </title>
+    <updated>2020-02-24T14:43:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;remove verifysingature from id.h&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cc7b051bd549902bf47677cee4d7ec5a5635ee8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/4cc7b051bd549902bf47677cee4d7ec5a5635ee8"/>
+    <title>
+        implement local VerifySignature
+    </title>
+    <updated>2020-02-24T14:40:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;implement local VerifySignature&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/eb4b28ae832d3ef841d93c88c9d2895ecf10415c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/eb4b28ae832d3ef841d93c88c9d2895ecf10415c"/>
+    <title>
+        comment Hash256 for not in use
+    </title>
+    <updated>2020-02-24T14:24:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;comment Hash256 for not in use&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d69ac7b0c7051bff6656300f5a682c4daca68597</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/d69ac7b0c7051bff6656300f5a682c4daca68597"/>
+    <title>
+        comment utxo rpc to suppress compile issues
+    </title>
+    <updated>2020-02-24T14:18:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;comment utxo rpc to suppress compile issues&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/03e23c8492b9b703a7eac224d6f840793cd04623</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/03e23c8492b9b703a7eac224d6f840793cd04623"/>
+    <title>
+        impl utxo condition serialization
+    </title>
+    <updated>2020-02-24T14:09:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;impl utxo condition serialization&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6148e45291dfc93f56cf2a1d4c6b5c4e9fad1a93</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/6148e45291dfc93f56cf2a1d4c6b5c4e9fad1a93"/>
+    <title>
+        improve the initialization of CCdpGlobalData
+    </title>
+    <updated>2020-02-24T02:17:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/46482103?s=30&amp;v=4"/>
+    <author>
+      <name>chenxinhua2018</name>
+      <uri>https://github.com/chenxinhua2018</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;improve the initialization of CCdpGlobalData&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9520b9bd30f11c34ae664b423006d9387a6090d6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/9520b9bd30f11c34ae664b423006d9387a6090d6"/>
+    <title>
+        format
+    </title>
+    <updated>2020-02-24T01:48:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;format&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9322752bc6004e6845b69e5f67746e7c49baddc9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/9322752bc6004e6845b69e5f67746e7c49baddc9"/>
+    <title>
+        use HashWriter to generate double hash for signature verification
+    </title>
+    <updated>2020-02-24T01:44:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;use HashWriter to generate double hash for signature verification&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d046b9fb537eb50eac3826ed42d9aaed418929ec</id>
+    <link type="text/html" rel="alternate" href="https://github.com/WaykiChain/WaykiChain/commit/d046b9fb537eb50eac3826ed42d9aaed418929ec"/>
+    <title>
+        use hash256 for signature verification
+    </title>
+    <updated>2020-02-24T01:39:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/4729088?s=30&amp;v=4"/>
+    <author>
+      <name>tigerich</name>
+      <uri>https://github.com/tigerich</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;use hash256 for signature verification&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

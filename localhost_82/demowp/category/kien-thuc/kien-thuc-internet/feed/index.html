@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Kiến Thức Internet &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/kien-thuc/kien-thuc-internet/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Thu, 06 Feb 2020 16:21:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Kiến Thức Internet &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bài 13: Phương thức GET và POST trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/#respond</comments>
+				<pubDate>Thu, 06 Feb 2020 09:06:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backend]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7740</guid>
+				<description><![CDATA[<p>Tiếp tục series học PHP căn bản, ở bài 13 này chúng ta sẽ học về 2 phương thức truyền tải dữ liệu thông dụng trong mô hình Client-Server đó là Get và Post. Các bạn có thể xem lại khái niệm của Client-Server.  Như chúng ta đã biết thì đa số các trang web [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/">Bài 13: Phương thức GET và POST trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tiếp tục series <strong>học PHP căn bản,</strong> ở bài 13 này chúng ta sẽ học về 2 phương thức truyền tải dữ liệu thông dụng trong mô hình Client-Server đó là <strong>Get</strong> và <strong>Post</strong>. Các bạn có thể xem lại <a href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/" target="_blank" rel="noopener noreferrer"><strong>khái niệm của Client-Server. </strong></a></p>
+<figure id="attachment_7747" aria-describedby="caption-attachment-7747" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png"><img class="size-full wp-image-7747" src="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png" alt="phuong thuc get post trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2020/02/phuong-thuc-get-post-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7747" class="wp-caption-text">Phương Thức Get và Post Trong PHP</figcaption></figure>
+<p>Như chúng ta đã biết thì đa số các trang web hiện nay đang hoạt động theo mô hình <strong>client-server.</strong> Việc truyền gửi dữ liệu giữa <strong>client</strong> và <strong>server</strong> rất thường xuyên diễn ra và vô cùng quan trọng.</p>
+<p>Khi các bạn đăng nhập hay đăng ký tài khoản, hoặc là các bạn đăng comment, gửi thông báo đến quản trị web thì dữ liệu sẽ được gửi từ client lên Server, vậy làm sao để Server nhận được những thông tin của bạn? Server sẽ nhận được thông qua hai phương thức POST và GET.</p>
+<h2><span style="color: #0000ff;"><strong>Phương thức GET trong PHP</strong></span></h2>
+<p>Khi người dùng phía client sử dụng phương thức <strong>GET</strong> gửi dữ liệu lên <strong>server</strong> thông qua các <strong>tham số (parameter)</strong> trên thanh địa chỉ <strong>URL</strong> của <strong>Browser</strong>. Các tham số trên URL bắt đầu bằng dấu chấm hỏi ( <span style="color: #0000ff;"><strong>?</strong></span> ) và được ngăn cách với nhau bởi dấu và ( <span style="color: #0000ff;"><strong>&amp; </strong></span>). Server sẽ phân tích tất cả những thông tin đằng sau dấu hỏi (<strong><span style="color: #0000ff;">?</span></strong>) chính là phần dữ liệu mà <strong>Client</strong> gửi lên.</p>
+<p><strong>Ví dụ:</strong> ta có URL <span style="color: #0000ff;"><strong><code>http://localhost:82/demowp/<span style="color: #ff0000;">?</span>p=7740<span style="color: #ff0000;">&amp;</span>preview=true</code></strong></span></p>
+<p>Khi truy cập, từ Server sẽ hiểu giá trị <strong>p = 7740</strong> và giá trị <strong>preview = true</strong>.</p>
+<div class="alert alert-warning"><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 1:</strong></span> khi muốn truyền nhiều cặp giá trị lên Server chúng ta sẽ sử dụng dấu và (</span> <span style="color: #ff0000;"><strong>&amp;</strong> </span><span style="color: #0000ff;">), và vị trí các cặp giá trị không quan trọng. Nghĩa là từ ví dụ trên, giá trị <strong>preview</strong> nằm trước giá trị <strong>p</strong> cũng được.</span></div>
+<p>Đó là ví dụ về phần <strong>Client</strong> truy cập từ thanh địa chỉ URL. Chúng ta bây giờ sẽ chuyên sang các vấn đề trong code PHP.</p>
+<p>Trong code khi các dữ liệu mà <strong>Client</strong> gửi lên bằng phương thức <strong>GET</strong> đều được lưu trong một biến toàn cục mà PHP tự tạo ra đó là biến <strong>$_GET. </strong>( <strong>$_GET</strong> là một biến toàn cục lưu trữ dưới dạng mảng bất tuần tự.)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$_GET = [
+    'name' =&gt; 'TanHongIT',
+    'website' =&gt; 'tanhongit.net'
+];
+?&gt;  //biến $_GET là một mảng chứa nhiều phần tử</pre>
+<h3><strong>Lưu ý về phương thức GET trong PHP</strong></h3>
+<ul>
+<li>Phương thức GET được giới hạn gửi tối đa chỉ 1024 ký tự.</li>
+<li>Không bao giờ sử dụng phương thức GET nếu gửi password hoặc thông tin nhay cảm lên Server.</li>
+<li>GET không thể gửi dữ liệu nhị phân, ví dụ như hình ảnh hoặc các loại tài liệu lên Server.</li>
+<li>Dữ liệu gửi bởi phương thức GET có thể được truy cập bằng cách sử dụng biến môi trường <strong>QUERY_STRING</strong>.</li>
+<li>PHP cung cấp mảng liên hợp <b>$_GET</b> để truy cập tất cả các thông tin đã được gửi bởi phương thức GET.</li>
+</ul>
+<h3><strong>Ví dụ thực hành</strong></h3>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 1:</strong></span> Bạn khởi tạo 1 file <strong>demo.php</strong> nằm trong thư mục <strong>WWW</strong> của <strong>WampServer</strong> hoặc tạo trong thư mục <strong>htdocs</strong> nếu bạn dùng <strong>Xampp</strong>, sau đó bạn dán đoạn code bên dưới vào.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$_GET = [
+    'title' =&gt; 'TanHongIT',
+    'website' =&gt; 'tanhongit.net'
+];
+?&gt; 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+    &lt;form action="&lt;?php $_PHP_SELF ?&gt;" method="GET"&gt;
+        &lt;?php foreach ($_GET as $key =&gt; $value){  
+            echo $key . ' - ' . $value . '&lt;br&gt;';
+        } ?&gt;
+        &lt;input type="submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>khi truy cập vào <code><span style="color: #0000ff;"><strong>http://localhost/demo.php?title=tanhongit&amp;website=tanhongit.net</strong></span></code> hoặc <span style="color: #0000ff;"><strong><code>http://localhost//demo.php</code></strong></span> thì kết quả đều ra như sau:</p>
+<pre>title - TanHongIT
+website - tanhongit.net
+<input type="submit" /></pre>
+<p>Ở ví dụ trên mình sử dụng phương thức GET ngay trong 1 file duy nhất, mình đã sử dụng <strong>vòng lặp Foreach</strong> để lấy toàn bộ key và <strong>value</strong> có trong biến <strong>$_GET</strong> là một <strong>mảng có nhiều phần tử</strong>.</p>
+<p><strong>GET</strong> còn có thể sử dụng để truyền dữ liệu từ file này sang file khác. hãy làm tiếp <strong>ví dụ 2</strong>.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 2:</strong></span> Tạo 2 file, 1 file có tên <strong>get_demo.php</strong> và một file <strong>demo.html</strong></p>
+<p>Đầu tiên, ở trong file <strong>demo.html</strong> ta sẽ tạo 1 form để lấy dữ liệu nhập vào từ bàn phím và gửi lên server.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-title="File demo.html" data-enlighter-group="File demo.html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;form action="get_demo.php" method="GET"&gt; &lt;!--thêm thuộc tính action chuyển hướng đến file get_demo.php --&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Title&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào title..." name="title"&gt; &lt;!--tạo một trường có tên là title để truyền dữ liệu lên file get_demo.php--&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Website&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào url website..." name="web"&gt; &lt;!--tạo một trường có tên là web để truyền dữ liệu lên file get_demo.php--&gt;
+            &lt;/div&gt;
+
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Ở file <strong>demo.html</strong> mình có tạo 2 trường nhập liệu trong form có tên là <span style="color: #0000ff;"><strong>title</strong> </span>và <span style="color: #0000ff;"><strong>web</strong> </span>để truyền dữ liệu nhập từ bàn phím vào file <strong>get_demo.php</strong></p>
+<p>Tiếp theo ta viết code để phía Server xuất ra màn hình sau khi nó đã nhận dữ liệu được nhập vào từ file <strong>demo.html </strong>thông qua file<strong> get_demo.php</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-group="File get_demo.php" data-enlighter-title="File get_demo.php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+echo 'Title: ' . $_GET['title'] . '&lt;br&gt;';
+echo 'Website: ' . $_GET['web'];</pre>
+<p>Hãy test thử bằng cách chạy file <strong>demo.html</strong> lên theo đường link <strong><code>http://localhost/demo.html</code></strong> sau đó nhập vào các trường dữ liệu và nhấn vào button <strong>Submit</strong>. Lập tức Server sẽ tự động chuyển link sang file <strong>get_demo.php</strong> và xuất ra thông tin bạn đã nhập liệu.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png"><img class="aligncenter wp-image-7761 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png" alt="demo get php" width="305" height="153" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638.png 305w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142638-300x150.png 300w" sizes="(max-width: 305px) 100vw, 305px" /></a> <a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png"><img class="aligncenter wp-image-7762 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png" alt="url method get php" width="700" height="150" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737.png 700w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_142737-300x64.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<div class="alert alert-warning">
+<p><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 2:</strong></span> Vì đây là phương thức GET nên khi truyền dữ liệu bạn sẽ có 2 cách truyền, 1 là truyền dữ liệu từ form sau đó gửi lên Server, 2 là ta có thể truyền tham số trực tiếp thông qua paramter trên địa chỉ URL.</span></p>
+</div>
+<p><strong>Ví dụ:</strong> <span style="color: #0000ff;"><strong><code>http://localhost/get_demo.php?<span style="color: #ff0000;">title=hello&amp;web=chaomoinguoi.com</span></code></strong></span></p>
+<p>Kết quả nhận được sau khi <strong>Enter</strong> sẽ như hình dưới:</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png"><img class="aligncenter size-full wp-image-7764" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png" alt="" width="548" height="147" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128.png 548w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-05_143128-300x80.png 300w" sizes="(max-width: 548px) 100vw, 548px" /></a></p>
+<div class="alert alert-warning"><span style="color: #0000ff;"><span style="text-decoration: underline;"><strong>Lưu ý 3:</strong></span> Dùng phương thức <strong>GET</strong> thì dữ liệu luôn được gửi một cách <strong>tường minh</strong>, chúng ta có thể thấy mọi thông tin trên URL và có thể chỉnh sửa trực tiếp cho nên nó không bảo mật tốt.</span></div>
+<div>Vì thế khi muốn tạo dữ liệu nào đó ta không nên sử dụng phương thức GET mà phải dùng POST vì GET luôn để lộ thông tin trên địa chỉ URL nên rất dễ bị hack đánh cắp dữ liệu.</div>
+<h2><span style="color: #0000ff;"><strong>Phương thức POST trong PHP</strong></span></h2>
+<p>Phương thức <strong>POST</strong> sẽ trái ngược với phương thức <strong>GET</strong> về tính bảo mật cũng như tốc độ.</p>
+<p>Về phương thức <strong>GET</strong>, chúng ta có thể xem thông tin trên thanh địa chỉ <strong>URL</strong>, dữ liệu được gửi đi bằng <strong>GET</strong> sẽ thông qua các paramter trên <strong>URL</strong>. <strong>POST</strong> thì ngược lại, nó không gửi dữ liệu đi bằng <strong>paramter</strong> <strong>trên</strong> <strong>URL</strong> mà thông qua <strong>HTTP</strong> <strong>header</strong>, vì vậy việc bảo mật phụ thuộc vào <strong>giao</strong> <strong>thức HTTP</strong> mà website đó đang sử dụng.</p>
+<p><strong>Parameters</strong> được truyền trong <strong>request</strong> <strong>body</strong> nên có thể truyền dữ liệu lớn, hạn chế tùy thuộc vào cấu hình của <strong>Server</strong>. Không cache và <strong>bookmark</strong> được cũng như không được lưu lại trong <strong>browser</strong> <strong>history</strong>. <strong>POST</strong> không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi, có thể gửi <strong>dữ liệu nhị phân, hình ảnh</strong>.</p>
+<p>Nội dung dữ liệu được gửi đi bằng phương thức <strong>POST</strong> sẽ luôn bị ẩn đi và chúng ta không thể thấy được.</p>
+<h3><strong>Phương thức Post trong mô hình Client-Server</strong></h3>
+<p>Các bạn hãy tìm hiểu và làm ví dụ bên dưới để hiểu cách phương thức POST truyền dữ liệu lên Server như thế nào nhé!</p>
+<h4><strong>Phía Client gửi lên</strong></h4>
+<p>Với phương thức GET, dữ liệu sẽ được thấy trên URL, nhưng phương thức POST thì hoàn toàn ngược lại, POST sẽ phải gửi dữ liệu qua form HTML và các giá trị sẽ được định nghĩa trong các thẻ <strong>input</strong> gồm các kiểu <strong>(<span style="color: #0000ff;">textbox, radio, checkbox, password, textarea, hidden</span>)</strong> và được nhận dang thông qua <span style="color: #0000ff;"><strong>tên (name)</strong> </span>của các thẻ <strong>input</strong> đó.</p>
+<p>Bạn hãy tạo file <strong>demo.html</strong> trong thư mục WWW của WampServer hoặc tạo trong thư mục htdocs nếu bạn dùng Xampp và chèn đoạn code bên dưới vào.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="html" data-enlighter-group="File demo.html - POST method" data-enlighter-title="File demo.html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;form action="post_demo.php" method="POST"&gt; &lt;!--thêm thuộc tính action chuyển hướng đến file post_demo.php và sử dụng phương thức method = post--&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Title&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào title..." name="title"&gt; &lt;!--tạo một trường có tên (name) là title để truyền dữ liệu lên file post_demo.php--&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for=""&gt;Website&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="" placeholder="Nhập vào url website..." name="web"&gt; &lt;!--tạo một trường có tên (name) là web để truyền dữ liệu lên file post_demo.php--&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Phần code trên mục đích dùng để nhập liệu từ phía Client để gửi lên Server. Giờ chúng ta sang phần Server.</p>
+<h4><strong>Phía Server nhận dữ liệu và trả về</strong></h4>
+<p>Tất cả các dữ liệu gửi bằng phương thức POST đều được lưu trong một biến toàn cục <strong>$_POST</strong> do PHP tự tạo ra, vì thế từ bây giờ bạn chỉ cần thao tác lấy hoặc gửi dữ liệu thông qua biến <strong>$_POST</strong> này là được.</p>
+<p>Ở file <strong>demo.html</strong> mình có tạo 2 trường nhập liệu trong form có tên là <span style="color: #0000ff;"><strong>title</strong> </span>và <span style="color: #0000ff;"><strong>web</strong> </span>để truyền dữ liệu nhập từ bàn phím vào file <strong>post_demo.php</strong>. Tiếp theo ta sẽ code trên file <strong>post_demo.php</strong> để lấy dữ liệu và xuất ra màn hình.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-group="File post_demo.php" data-enlighter-title="File post_demo.php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+echo 'Title: ' . $_POST['title'] . '&lt;br&gt;';
+echo 'Website: ' . $_POST['web'];</pre>
+<p>Hãy test thử bằng cách chạy file <strong>demo.html</strong> lên theo đường link <strong><code>http://localhost/demo.html</code></strong> sau đó nhập vào các trường dữ liệu và nhấn vào button <strong>Submit</strong>. Lập tức Server sẽ tự động chuyển link sang file <strong>post_demo.php</strong> và xuất ra thông tin bạn đã nhập liệu.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png"><img class="aligncenter size-full wp-image-7780" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png" alt="" width="350" height="157" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843.png 350w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002843-300x135.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></a><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png"><img class="aligncenter wp-image-7779 size-full" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png" alt="demo post php" width="331" height="145" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802.png 331w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_002802-300x131.png 300w" sizes="(max-width: 331px) 100vw, 331px" /></a></p>
+<p>Nhưng có một điều khác biệt ở đây bạn cần quan tâm đó là khi sử dụng <strong>GET</strong>, đường dẫn <strong>URL</strong> sẽ tiết lộ bất kỳ thông tin mà bạn đã nhập liệu, còn khi đã dùng <strong>POST</strong> thì bị ẩn.</p>
+<p>Điều này chứng minh <strong>POST</strong> sẽ có tính bảo mật hơn <strong>GET</strong> và <strong>POST</strong> sẽ phù hợp với các chức năng về tạo dữ liệu, đăng ký, đăng nhập,&#8230;</p>
+<h3><strong>Những lưu ý cần biết trong phương thức POST trong PHP</strong></h3>
+<ul>
+<li>Phương thức POST không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi.</li>
+<li>Phương thức POST có thể sử dụng để gửi ASCII cũng như dữ liệu nhị phân.</li>
+<li>Dữ liệu gửi bởi phương thức POST thông qua HTTP header, vì vậy việc bảo mật phụ thuộc vào giao thức HTTP. Bằng việc sử dụng Secure HTTP, bạn có thể chắc chắn rằng thông tin của mình là an toàn.</li>
+<li>PHP cung cấp mảng liên hợp <b>$_POST</b> để truy cập tất cả các thông tin được gửi bằng phương thức POST.</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Kiểm tra isset với GET và POST trong PHP</strong></span></h2>
+<p>Trước khi lấy một dữ liệu nào đó từ client bạn phải kiểm tra nó đã tồn tại không rồi mới lấy.Vì nếu không kiểm tra trước khi lấy, phía client chưa cung cấp đầy đủ dữ liệu mà server lại nhận thì sẽ có lỗi ngay. Vì thế ở những trường hợp mà ta không chắc chắn <strong>một biến luôn tồn tại hoặc một trường dữ liệu được nhập đầy đủ</strong> thì hãy kiểm tra nó trước khi gửi <strong>request</strong>.</p>
+<p>Để kiểm tra ta sẽ dùng hàm <strong>isset()</strong>. Hàm <strong>isset()</strong> trong PHP có chức năng kiểm tra xem biến có tồn tại hay không. Nó sẽ trả về TRUE nếu biến đó có tồn tại và ngược lại FALSE nếu biến đó không tồn tại. Hàm <strong>isset()</strong> sẽ dùng cho cả 2 phương thức GET và POST.</p>
+<p><strong>Cú pháp:</strong> <span style="color: #0000ff;"><strong>isset($bien);</strong></span></p>
+<p>Trong đó: <strong><code>$bien</code></strong> là biến mà bạn muốn kiểm tra sự tồn tại.</p>
+<p>Từ ví dụ về phần <strong>POST</strong> trong PHP ở trên, nếu bạn trực tiếp truy cập vào <strong>http://localhost/post_demo.php</strong> mà chưa nhập đầy đủ thông tin ở <strong>http://localhost/demo.html</strong> thì sẽ xuất hiện lỗi ngay.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png"><img class="aligncenter size-full wp-image-7790" src="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png" alt="" width="555" height="206" srcset="http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505.png 555w, http://localhost:82/demowp/wp-content/uploads/2020/02/2020-02-06_204505-300x111.png 300w" sizes="(max-width: 555px) 100vw, 555px" /></a></p>
+<p>Vậy từ ví dụ trên ta chỉ cần thêm vào file file <strong>post_demo.php</strong> như sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+echo 'Kết quả nhập liệu của bạn là: &lt;br&gt;';
+if (isset($_POST['title']) &amp;&amp; isset($_POST['web'])) {
+    echo 'Title: ' . $_POST['title'] . '&lt;br&gt;';
+    echo 'Website: ' . $_POST['web'];
+}</pre>
+<p>Bây giờ bạn hãy thử truy cập lại <strong>http://localhost/post_demo.php</strong> , nếu chưa đươc nhập đủ dữ liệu ở <strong>http://localhost/demo.html</strong> thì nó sẽ không hiện gì cả, còn nhập đầy đủ các trường dữ liệu thì nó mới hiện lên cho ta xem.</p>
+<p><span style="text-decoration: underline; color: #ff0000;"><strong>Kết luận:</strong></span> Hàm <strong>isset()</strong> thật sự rất hữu ích đối với chúng ta trong việc ràng buộc dữ liệu nên các bạn hãy thường xuyên sử dụng để hiểu rõ và áp dụng dễ dàng hơn sau này nhé!</p>
+<h2><span style="color: #0000ff;"><strong>So sánh giống và khác nhau giữa GET và POST</strong></span></h2>
+<p><strong>GET</strong> và <strong>POST</strong> hầu như chẳng có gì giống nhau ngoài tác dụng là truyền tải dữ liệu lên Server.</p>
+<p>Cho nên mình sẽ nói về những đặc điểm khác nhau của 2 phương thức này nhé!</p>
+<ol>
+<li><strong><span style="color: #0000ff;">Giới hạn dữ liệu</span>: GET</strong> giới hạn gửi tối đa chỉ 1024 ký tự. Còn <strong>POST</strong> không có bất kì hạn chế nào về kích thước dữ liệu sẽ gửi.</li>
+<li><strong><span style="color: #0000ff;">Khả năng</span>:</strong> Phương thức <strong>POST</strong> có thể sử dụng để gửi ASCII cũng như dữ liệu nhị phân, các loại tệp, hình ảnh còn <strong>GET</strong> thì không.</li>
+<li><span style="color: #0000ff;"><strong>Tốc độ:</strong></span> <strong>GET nhanh hơn rất nhiều so với POST</strong> về quá trình thực thi &#8211; vì dữ liệu gửi đi luôn được web browser lưu cached lại. Khi dùng phương thức POST thì server luôn thực thi và trả kết quả cho client, còn dùng GET thì web browser cached sẽ kiểm tra có kết quả tương ứng đó trong bộ nhớ cached chưa, nếu có thì trả về ngay mà không cần đưa tới server.</li>
+<li><span style="color: #0000ff;"><strong>Bảo mật</strong></span>: Phương thức <strong>POST</strong> bảo mật hơn <strong>GET</strong> vì dữ liệu được gửi ngầm, <strong>không xuất hiện trên URL</strong>, mắt thường không nhìn thấy được và dữ liệu cũng không được lưu lại. Trong khi đó với GET thì dữ liệu gửi đi được tường minh bạn có thể hiển thị lại được các dữ liệu này trên URL.</li>
+</ol>
+<p>Link tham khảo: <a href="https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests" target="_blank" rel="noopener noreferrer">https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests</a></p>
+<h2><span style="color: #0000ff;"><strong>Khi nào nên dùng GET và POST trong PHP</strong></span></h2>
+<p>Cả 2 phương thức đều có những ưu và nhược điểm khác nhau, vậy khi nào chúng ta nên dùng GET và khi nào nên dùng POST.</p>
+<p>Phương thức <strong>GET</strong> có tốc độ thực thi nhanh như độ bảo mật lại rất kém nên <strong>GET</strong> chỉ nên dùng cho các công việc l<strong>ấy dữ liệu</strong> từ server về client, như vậy quá trình truy xuất sẽ nhanh hơn.</p>
+<p>Đối với POST sẽ có độ bảo mật cao nên phù hợp với các công việc <strong>tạo dữ liệu, upload, truyền tải thông tin</strong> lên server, những công việc mang tính bảo mật cao.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ: </strong></span></p>
+<ul>
+<li>Khi upload hình ảnh lên web thì ta sẽ dùng POST, còn khi muốn tải ảnh từ Web server về ta sẽ dùng GET.</li>
+<li>Khi đăng ký, đăng nhập hoặc comment vào một website ta sẽ dùng POST, còn khi lấy tin bài viết từ web ra thì ta dùng GET.</li>
+<li>Khi request sử dụng câu lệnh select thì dùng GET, khi request có sử dụng lệnh insert update, delete thì nên dùng POST.</li>
+<li>Ngoài ra khi cần xử lý các thông tin nhạy cảm ví dụ như email, password thì bạn phải sử dụng POST.</li>
+</ul>
+<h2>Kết thúc</h2>
+<p>Qua bài viết trên mình đã nếu ra những nội dung liên quan đến 2 phương thức method truyền tải dữ liệu thông dụng trong PHP là GET và POST. Các bạn cần phải hiểu rõ những tính chất của mỗi phương thức này và khi nào nên dùng nó tùy vào từng trường hợp cụ thể.</p>
+<p>Nhưng có một điều lưu ý rằng những nội dung, dữ liệu quan trọng hoặc cần truyền tải một loại thông tin gì đó lên server thì ta phải dùng POST để tăng tính bảo mật cho Website nhé!</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-12-chuoi-string-va-cac-ham-xu-ly-chuoi-trong-php/" target="_blank" rel="noopener noreferrer">Bài 12: Chuỗi (String) Và Các Hàm Xử Lý Chuỗi Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-11-cac-ham-xu-ly-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 11: Các hàm xử lý mảng (Array) trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-10-mang-array-trong-php/" target="_blank" rel="noopener noreferrer">Bài 10: Mảng (Array) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-9-ham-function-trong-php/" target="_blank" rel="noopener noreferrer">Bài 9: Hàm (Function) Trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7740"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/">Bài 13: Phương thức GET và POST trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-13-phuong-thuc-get-va-post-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bài 8: lệnh Break, Continue và các hàm (function) exit, die thường dùng trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/break-continue-va-hai-ham-exit-die-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/break-continue-va-hai-ham-exit-die-trong-php/#respond</comments>
+				<pubDate>Fri, 10 Jan 2020 05:48:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backend]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7627</guid>
+				<description><![CDATA[<p>Ở 2 bài học trước mình đã nói qua về các loại vòng lặp trong PHP là for, while, do while, foreach. Tiếp tục series học PHP căn bản thì trong bài này mình sẽ giới thiệu về 1 số lệnh như break, continue thường hay được dùng trong các vòng lặp trên và 2 [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/break-continue-va-hai-ham-exit-die-trong-php/">Bài 8: lệnh Break, Continue và các hàm (function) exit, die thường dùng trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở 2 bài học trước mình đã nói qua về <strong>các loại vòng lặp trong PHP</strong> là <strong>for, while, do while, foreach</strong>. Tiếp tục <strong>series học PHP căn bản</strong> thì trong bài này mình sẽ giới thiệu về 1 số lệnh như <strong>break, continue</strong> thường hay được dùng trong các vòng lặp trên và 2 hàm mới là <strong>exit() </strong>và<strong> die()</strong> có tác dụng gì nhé!</p>
+<figure id="attachment_7639" aria-describedby="caption-attachment-7639" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2020/01/lenh-va-function-thuong-dung-trong-php.png"><img class="size-full wp-image-7639" src="http://localhost:82/demowp/wp-content/uploads/2020/01/lenh-va-function-thuong-dung-trong-php.png" alt="lenh va function thuong dung trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2020/01/lenh-va-function-thuong-dung-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2020/01/lenh-va-function-thuong-dung-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7639" class="wp-caption-text">Lệnh và các Function thường dùng trong PHP</figcaption></figure>
+<h2><span style="color: #0000ff;"><strong>Câu lệnh Break thường dùng trong PHP</strong></span></h2>
+<p>Câu lệnh <strong>Break</strong> dùng để thoát khỏi (hoặc kết thúc sự thực thi của) vòng lặp chứa nó môt cách đột ngột mặc dù vòng lặp vẫn chưa kết thúc. Break áp dụng cho tất cả các loại vòng lặp <strong>(for, while, do while, foreach)</strong>. Ngoài ra, break còn dùng trong <strong>câu điều kiện if else</strong> hay <strong>cấu trúc</strong> <strong>switch case</strong> để thoát khỏi <strong>switch</strong> đó.</p>
+<p>Nó trao bạn toàn quyền điều khiển bất cứ khi nào bạn muốn thoát khỏi vòng lặp. Sau khi ra khỏi vòng lặp, lệnh ngay sau vòng lặp đó sẽ được thực thi.</p>
+<h3><span style="color: #ff0000;"><strong>Break cho vòng lặp, switch lồng nhau.</strong></span></h3>
+<p>Có thể sử dụng tham số integer cho break để xác định kết thúc đối với vòng lặp hay câu lệnh switch lồng nhau ở mức bao nhiêu.</p>
+<ul>
+<li><strong><code><span style="color: #0000ff;">break 1;</span></code></strong> tương tự như<strong> <span style="color: #0000ff;"><code>break;</code></span></strong> sẽ kết thúc <strong>vòng lặp</strong> hoặc câu lệnh <strong>switch</strong> hiện tại.</li>
+<li><span style="color: #0000ff;"><strong><code>break 2;</code></strong> </span>sẽ kết thúc <strong>vòng lặp</strong> hoặc câu lệnh <strong>switch</strong> hiện tại và cũng kết thúc vòng lặp hay câu lệnh bao bên ngoài nó.</li>
+<li>Tương tự<strong> <span style="color: #0000ff;"><code>break n;</code></span></strong> sẽ kết thúc nhiều vòng lập hay câu lệnh switch lồng <strong>n</strong> lần.</li>
+</ul>
+<h4><strong>Ví dụ về break 1;</strong></h4>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 1; $i &lt;= 10; $i++) {
+    echo $i;
+    break; // hoặc có thể code là "break 1;"
+}
+?&gt;</pre>
+<p>Kết quả xuất ra màn hình sẽ duy nhất là số <strong>1</strong>. Bởi vì ngay lần lặp đầu tiên thì nó đã gặp câu lệnh break nên sau khi xuất được số 1 ở lần lặp đầu thì sẽ bị dừng lại và không thực hiện tiếp các lần lặp tiếp theo nữa.</p>
+<h4><strong>Ví dụ về break 2;</strong></h4>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 1; $i &lt;= 10; $i++) {
+    switch ($i) {
+        case 5:
+            echo "i có giá trị 5"."&lt;br&gt;";
+            break; // Chỉ thoát khỏi switch
+        case 8:
+            echo "i có giá trị 8"."&lt;br&gt;";
+            break 2; // Thoát khỏi switch và cả vòng lặp for.
+        default:
+            break;
+    }
+}
+?&gt;
+</pre>
+<p>Kết quả xuất ra màn hình là:</p>
+<pre>i có giá trị 5
+i có giá trị 10</pre>
+<p><span style="text-decoration: underline;"><strong>Lưu ý:</strong></span> Nếu giá trị đối số tùy chọn của <strong>break</strong> lớn hơn số mức lồng ngoài nó thì sẽ cảnh báo lỗi. Ở ví dụ trên, nếu thay break 2; thành break 3; thì sẽ phát sinh lỗi do break chỉ nằm trong 2 mức lồng.</p>
+<p><strong>Ví dụ 2:</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 0; $i &lt;= 3; $i++) {
+    echo "1";
+    while(1){
+        echo "2";
+        while(1){
+            echo "3";
+            break 3;
+        }
+    }
+}
+?&gt;</pre>
+<p>Kết quả xuất ra sẽ là: <strong>123</strong></p>
+<h2><span style="color: #0000ff;"><strong>Câu lệnh Continue </strong></span></h2>
+<p>Câu lệnh continue có mục đích là bỏ qua lần lặp hiện tại trong vòng lặp sau đó nó sẽ nhảy qua kiểm tra điều kiện và thực hiện lần lặp kế tiếp</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 0; $i &lt;= 3; ++$i) {
+    if ($i == 2) {
+        continue;
+    }
+    echo "$i"." - ";
+}
+?&gt;</pre>
+<p>Khi <strong>$i = 2 (ở vòng lặp thứ 3)</strong> thì câu lệnh <strong>continue đã nhảy sang lần lặp thứ 4</strong> cho nên câu lệnh <strong>echo</strong> sẽ không được thực hiện.</p>
+<p>kết quả xuất ra màn hình sẽ là : <strong>0 &#8211; 1 &#8211; 3 &#8211;</strong></p>
+<p>Theo đó, tất cả các câu lệnh phía sau <strong>continue</strong> trong khối lệnh của vòng lặp sẽ bị bỏ qua mà không thực hiện.</p>
+<hr />
+<h3><span style="color: #ff0000;"><strong>Continue cho vòng lặp lồng nhau.</strong></span></h3>
+<p><b>C</b>ũng giống như câu lệnh <strong>break</strong>, câu lệnh <strong>continue</strong> cũng có thể sử dụng tham số <strong>integer</strong> để xác định việc bỏ qua lần lặp hiện tại đối với vòng lặp lồng nhau ở mức tương ứng. Giá trị mặc định sẽ là 1 và nếu <strong>giá trị đối số tùy chọn</strong> của <strong>continue</strong> lớn hơn số mức lồng ngoài nó thì sẽ cảnh báo lỗi.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 0; $i &lt;= 3; $i++) {
+    echo "1";
+    while(1){
+        echo "2";
+        while(1){
+            echo "3";
+            continue 3;
+        }
+    }
+}
+?&gt;</pre>
+<p>Ở bài trên câu lệnh <strong>continue</strong> đã bỏ qua lần lặp hiện tại của vòng lặp <strong>while ở mức 3</strong>, sau đó nó sẽ thực hiện tiếp vòng lặp tiếp theo sau khi đã kiểm tra điều kiện và tăng giá trị của biến <strong>$i</strong>. Vì vậy kết quả xuất ra màn hình sẽ là : <strong>123123123123</strong></p>
+<h2><strong>Function die() và exit() dùng trong PHP</strong></h2>
+<p>Ý nghĩa của 2 lệnh <strong>exit</strong> và <strong>die</strong> đều chung mục đích là thoát khỏi chương trình.</p>
+<p>Khác với lại lệnh <strong>break</strong> và <strong>continue</strong> <strong>(2 lệnh này chỉ ảnh hưởng trong vòng lặp cụ thể chứa nó)</strong> thì 2 hàm <strong>die</strong> và <strong>exit</strong> sẽ ảnh hưởng đến toàn bộ chương trình. Nói rõ hơn, khi 1 trong 2 hàm này được gọi trong chương trình thì toàn bộ các câu lệnh nằm ở phía dưới nó đều sẽ không được thực hiện nữa.</p>
+<h3>Các cách thể hiện function exit</h3>
+<ul>
+<li><span style="color: #0000ff;"><strong><code>exit</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>exit()</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>exit(0)</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>exit(<span class="blue">string</span>)</code></strong></span>: chuỗi string này sẽ được hiển thị trước khi thoát khỏi chương trình</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//Cách 1
+&lt;?php
+echo "Nguyen Van A";
+exit;
+echo "Nguyen Van B";
+?&gt;
+
+//Cách 2
+&lt;?php
+echo "Nguyen Van A";
+exit();
+echo "Nguyen Van B";
+?&gt;
+
+//Cách 3
+&lt;?php
+echo "Nguyen Van A";
+exit(0);
+echo "Nguyen Van B";
+?&gt;
+
+//Kết quả xuất ra màn hình đều là: Nguyen Van A
+//Ta thấy lệnh echo thứ 2 nó nằm dưới exit nên sẽ không được thực hiện</pre>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 2:</strong></span> đối với <strong>exit(string)</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+echo "Nguyen Van A";
+exit("&lt;br&gt;Đã thoát chương trình.");
+echo "Nguyen Van B";
+?&gt;</pre>
+<p>kết quả xuất ra sẽ là:</p>
+<pre>Nguyen Van A
+Đã thoát chương trình</pre>
+<div>
+<h3>Các cách thể hiện function die</h3>
+</div>
+<p>Cách thể hiện hàm die cũng tương tự như hàm exit.</p>
+<div>
+<ul>
+<li><span style="color: #0000ff;"><strong><code>die</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>die()</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>die(0)</code></strong></span></li>
+<li><span style="color: #0000ff;"><strong><code>die(<span class="blue">string</span>)</code></strong></span>: chuỗi string này sẽ được hiển thị trước khi thoát khỏi chương trình</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//Cách 1
+&lt;?php
+echo "Nguyen Van A";
+die;
+echo "Nguyen Van B";
+?&gt;
+
+//Cách 2
+&lt;?php
+echo "Nguyen Van A";
+die();
+echo "Nguyen Van B";
+?&gt;
+
+//Cách 3
+&lt;?php
+echo "Nguyen Van A";
+die(0);
+echo "Nguyen Van B";
+?&gt;
+
+//Kết quả xuất ra màn hình đều là: Nguyen Van A
+//Ta thấy lệnh echo thứ 2 nó nằm dưới die nên sẽ không được thực hiện</pre>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 2:</strong></span> đối với die<strong>(string)</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+echo "Nguyen Van A";
+die("&lt;br&gt;Đã thoát chương trình.");
+echo "Nguyen Van B";
+?&gt;</pre>
+<p>kết quả xuất ra sẽ là:</p>
+<pre>Nguyen Van A
+Đã thoát chương trình</pre>
+<h2>Kết thúc</h2>
+<p>Qua bài trên mình đã nói sơ qua về một số lệnh và các hàm thường dùng như Break, Continue, Exit, Die trong PHP mà các bạn cần biết đến. Nếu có gì thắc mắc bạn hãy để lại comment bên dưới bài viết này nhé!</p>
+<p>Ở bài tiếp theo mình sẽ giới thiệu cho các bạn khái niệm về hàm trong PHP.</p>
+<p>Hãy tiếp tục trong series học PHP căn bản ở các bài viết tiếp theo các bạn nhé!</p>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/" target="_blank" rel="noopener noreferrer">Bài 7: Vòng lặp Foreach trong PHP (Các loại vòng lặp phần 2)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/" target="_blank" rel="noopener noreferrer">Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7627"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/break-continue-va-hai-ham-exit-die-trong-php/">Bài 8: lệnh Break, Continue và các hàm (function) exit, die thường dùng trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/break-continue-va-hai-ham-exit-die-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mô hình Client-Server là gì và cách hoạt động Client-Server</title>
+		<link>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/#respond</comments>
+				<pubDate>Mon, 23 Dec 2019 06:38:33 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7568</guid>
+				<description><![CDATA[<p>Mô hình client-server là một mô hình nổi tiếng trong mạng máy tính, được áp dụng rất rộng rãi và là mô hình của mọi trang web hiện có. Ý tưởng của mô hình này là máy con (đóng vài trò là máy khách) gửi một yêu cầu (request) để máy chủ (đóng vai trò [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/">Mô hình Client-Server là gì và cách hoạt động Client-Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Mô hình</strong> <strong>client-server</strong> là một mô hình nổi tiếng trong <strong>mạng máy tính</strong>, được áp dụng rất rộng rãi và là mô hình của mọi trang web hiện có. Ý tưởng của mô hình này là <strong>máy con (đóng vài trò là máy khách)</strong> gửi một <strong>yêu cầu (request)</strong> để <strong>máy chủ (đóng vai trò người cung ứng dịch vụ)</strong>, máy chủ sẽ xử lý và trả kết quả về cho máy khách.</p>
+<p>Trong mô hình này, chương trình ứng dụng được chia thành 2 thành phần: <strong class="emphasis">Server </strong>và <strong class="emphasis">Client. </strong><strong>Client</strong> hay còn gọi là máy khách, nó bao gồm máy tính và các thiết bị điện tử nói chung. <strong>Server</strong> hay còn gọi là máy chủ, là nơi cài đặt các chương trình dịch vụ và lưu trữ tài nguyên.</p>
+<figure id="attachment_7575" aria-describedby="caption-attachment-7575" style="width: 750px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png"><img class="size-full wp-image-7575" src="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png" alt="client server" width="750" height="424" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server-300x170.png 300w" sizes="(max-width: 750px) 100vw, 750px" /></a><figcaption id="caption-attachment-7575" class="wp-caption-text">Mô hình Client-Server</figcaption></figure>
+<p>Việc yêu cầu của máy khách, đáp ứng, xử lý, và phản hồi của máy chủ tạo thành một dịch vụ. Dịch vụ này hoạt động trên nền web nên nó được gọi là dịch vụ web (hay web service).</p>
+<p>Ngoài ra, việc giao tiếp giữa <strong>Client</strong> với <strong>Server</strong> phải dựa trên các giao thức chuẩn. Các giao thức chuẩn được sử dụng phổ biến nhất hiện nay là : giao thức TCP/IP, giao thức SNA của IBM, OSI, ISDN, X.25 hay giao thức LAN-to-LAN NetBIOS.</p>
+<h2><span style="color: #0000ff;"><strong>Vì sao các Website thường sử dụng mô hình client-server</strong></span></h2>
+<ul>
+<li>Dữ liệu và tài nguyên được tập trung lại và tăng tính toàn vẹn của các dữ liệu.</li>
+<li>Sự linh động trong việc mở rộng được hệ thống mạng.</li>
+<li>Không phụ thuộc vào cùng một nền tảng, chỉ cần chung một định dạng giao tiếp (<strong>protocol</strong>) là có thể hoạt động được.</li>
+</ul>
+<p>Chỉ có điều nhược điểm của mô hình này là <strong>tính an toàn và bảo mật các thông tin trên mạng</strong>. Do phải trao đổi các dữ liệu giữa hai máy ở hai khu vực khác nhau nên dễ dàng xảy ra hiện tượng thông tin trên mạng <strong>bị mất bí mật</strong> và từ đó vai trò của quản trị mạng trở nên quan trọng lên rất nhiều.</p>
+<h2><span id="Bang_so_sanh_mo_hinh_client_server_voi_cac_mo_hinh_khac" style="color: #0000ff;"><strong>Bảng so sánh mô hình client server với các mô hình khác</strong></span></h2>
+<table style="width: 92.1285%;">
+<tbody>
+<tr>
+<td style="width: 16.3424%;"><span style="font-size: 14px; color: #0000ff;"><strong>Mô hình mạng / tiêu chí đánh giá</strong></span></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px; color: #0000ff;"><strong>Client Server</strong></span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px; color: #0000ff;"><strong>Peer-to-Peer</strong></span></td>
+<td style="width: 25.4475%;"><span style="color: #0000ff;"><strong>Hybrid</strong></span></td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Khả năng bảo mật thông tin và độ an toàn</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Khả năng bảo mật và an toàn thông tin cao. Có thể điều chỉnh quyền truy cập thông tin.</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Khả năng bảo mật và an toàn thông tin kém. Phần lớn phụ thuộc vào mức độ quyền được chia sẻ.</span></td>
+<td style="width: 25.4475%;">Khả năng bảo mật và an toàn thông tin cao. Có thể điều chỉnh quyền truy cập thông tin.</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Khả năng cài đặt</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Cài đặt khá khó khăn.</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Cài dặt dễ dàng.</span></td>
+<td style="width: 25.4475%;">Cài đặt khá khó khăn.</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Yêu cầu về phần cứng và phần mềm</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Bao gồm:+ Máy chủ</span><span style="font-size: 14px;">+ Hệ điều hành</span></p>
+<p><span style="font-size: 14px;">+ Phần cứng</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Chỉ cần ít phần cứng bổ sung. Ngoài ra không cần máy chủ và hệ điều hành như 2 mô hình trên.</span></td>
+<td style="width: 25.4475%;">Bao gồm:+ Máy chủ+ Hệ điều hành</p>
+<p>+ Phần cứng</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Yêu cầu về quản trị mạng</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Cần phải có quản trị mạng</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Không cần quản trị mạng</span></td>
+<td style="width: 25.4475%;">Cần phải có quản trị mạng</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Có khả năng xử lý và lưu trữ tập trung không?</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Có</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Không</span></td>
+<td style="width: 25.4475%;">Không</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Chi phí cài đặt</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Chi phí cao</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Chi phí thấp</span></td>
+<td style="width: 25.4475%;">Chi phí thấp</td>
+</tr>
+</tbody>
+</table>
+<h2><span style="color: #0000ff;"><strong>Cách thức mô hình client server hoạt động như thế nào ?</strong></span></h2>
+<p>Quy trình hoạt đông được chia làm 2 bước:</p>
+<h3>Client</h3>
+<p>Các máy trạm trong mô hình này gọi là <strong>máy khách (client)</strong>. Đây là nơi tiếp nhận những thao tác yêu cầu từ người dùng và sau đó<strong>gởi các yêu cầu xử lý</strong> về <strong>máy chủ (server).</strong></p>
+<p>Phần phía Client là nơi trung gian tổ chức giao tiếp giữa người dùng với môi trường làm việc trên <strong>máy khách (client)</strong> và với phía Server. Sau khi tiếp nhận yêu cầu của người dùng, máy khách client sẽ thành lập các query string để gửi về phía Server.</p>
+<h3>Server</h3>
+<p>Phần phía Server <strong>quản lý các giao tiếp</strong> môi trường giữa <strong>Server</strong> và với các <strong>Client</strong>, tiếp nhận các yêu cầu dưới dạng các xâu ký tự (query string). Sau khi phân tích các query string được request từ máy khách client, phần phía Server sẽ xử lý dữ liệu và gửi kết quả trả lời về phía các Client.</p>
+<p>Sau đó sẽ hiện lên màn hình đến cho người dùng.</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Ưu điểm </strong><strong>mô hình client-server là gì?</strong></span></h2>
+<p>Ưu điểm của mô hình client server là với mô hình client server thì mọi thứ dường như đều nằm trên bàn của người sử dụng, nó có thể truy cập dữ liệu từ xa (bao gồm các công việc như gửi và nhận file, tìm kiếm thông tin,…) với nhiều dịch vụ đa dạng mà mô hình cũ không thể làm được.</p>
+<p>Mô hình <strong>client-server</strong> cung cấp một nền tảng lý tưởng cho phép tích hợp các kỹ thuật hiện đại như mô hình thiết kế hướng đối tượng, hệ chuyên gia, hệ thông tin địa lý (GIS)…</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Nhược điểm </strong><strong>mô hình client server là gì?</strong></span></h2>
+<p>Như đã nói ở các phần trên, nhược điểm duy nhất của mô hình này là <strong>tính an toàn và bảo mật các thông tin trên mạng</strong>. Do phải trao đổi các dữ liệu giữa hai máy ở hai khu vực khác nhau ở xa nhau nên dễ dàng xảy ra hiện tượng thông không được an toàn.</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Một số ví dụ về mô hình client server</strong></span></h2>
+<h3><strong>Mail Server </strong></h3>
+<p>Ở bên phía Client, người dùng soạn thảo Email và sẽ gửi đến Mail Server, phía bên Mail Server sẽ tiếp nhận và lưu trữ, tìm kiếm địa chỉ của mail được gửi đến và gửi đi.</p>
+<h3><strong>Web Server </strong></h3>
+<p>Lưu trữ các trang Web. khi người dùng ở phía máy Client nhập địa chỉ của trang web, Client sẽ gửi yêu cầu đến máy chủ Web và máy chủ Web sẽ gửi toàn bộ nội dung của trang web về cho phía Client.</p>
+<h3><strong>File Server </strong></h3>
+<p>Lưu trữ các tập tin. Nhận và truyền đi các tập tin về phía Client , người dùng có thể download – upload các tập tin lên Server qua Web browser hoặc là giao thức FTP</p>
+<h2><span style="color: #0000ff;"><b>Các cấu hình cơ sở dữ liệu Client/Server</b></span></h2>
+<p><span style="font-weight: 400;">Nhìn chung mọi ứng dụng cơ sở dữ liệu đều bao gồm các phần:</span></p>
+<ul>
+<li><span style="font-weight: 400;"><strong>Thành phần xử lý ứng dụng</strong> (Application processing components)</span></li>
+<li><span style="font-weight: 400;"><strong>Thành phần phần mềm cơ sở dữ liệu</strong> (Database software componets)</span></li>
+<li><span style="font-weight: 400;"><strong>Bản thân cơ sở dữ liệu</strong> (The database itself)</span></li>
+</ul>
+<p><span style="font-weight: 400;">Các mô hình về xử lý cơ sở dữ liệu khác nhau là bởi các trường hợp của 3 loại thành phần nói trên định vị ở đâu. Bài viết này này xin giới thiệu 5 mô hình kiến trúc dựa trên cấu hình phân tán về truy nhập dữ liệu của hệ thống máy tính Client/Server.</span></p>
+<ol>
+<li><strong>Mô hình cơ sở dữ liệu tập trung (Centralized database model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu theo kiểu file &#8211; server (File &#8211; server database model)</strong></li>
+<li><strong>Mô hình xử lý từng phần cơ sở dữ liệu (Database extract processing model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu Client/Server (Client/Server database model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu phân tán (Distributed database model)</strong></li>
+</ol>
+<p>Ngoài ra ta còn có m<span style="font-weight: 400;">ột mô hình ngược lại là mô hình <strong>master-slaver</strong>, trong đó máy chủ (đóng vai trò ông chủ) sẽ gửi dữ liệu đến máy con (đóng vai trò nô lệ) bất kể máy con có cần hay không.</span></p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer">Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-2-cu-phap-php-co-ban-khai-bao-hang-va-bien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/" target="_blank" rel="noopener noreferrer">Laravel Error: No application encryption key has been specified</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+<div style="text-align: right;">via wiki, bkhost, internet</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7568"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/">Mô hình Client-Server là gì và cách hoạt động Client-Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bật xem trước hình thu nhỏ của Tab trong Google Chrome</title>
+		<link>http://localhost:82/demowp/thu-thuat/bat-xem-truoc-hinh-thu-nho-cua-tab-trong-google-chrome/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/bat-xem-truoc-hinh-thu-nho-cua-tab-trong-google-chrome/#respond</comments>
+				<pubDate>Wed, 30 Oct 2019 15:37:39 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7297</guid>
+				<description><![CDATA[<p>Bắt đầu trong Google Chrome 78, trình duyệt bao gồm các chú giải công cụ tab mới. Bây giờ chúng bao gồm tiêu đề trang đầy đủ và địa chỉ URL của nó. Ngoài ra, có thể định cấu hình các chú giải công cụ để bao gồm hình ảnh xem trước hình thu nhỏ của trang [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/bat-xem-truoc-hinh-thu-nho-cua-tab-trong-google-chrome/">Bật xem trước hình thu nhỏ của Tab trong Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Bắt đầu trong Google Chrome 78, trình duyệt bao gồm các chú giải công cụ tab mới. Bây giờ chúng bao gồm tiêu đề trang đầy đủ và địa chỉ URL của nó. Ngoài ra, có thể định cấu hình các chú giải công cụ để bao gồm hình ảnh xem trước hình thu nhỏ của trang được mở trong tab.</p>
+<p>Google Chrome là trình duyệt web phổ biến nhất tồn tại cho tất cả các nền tảng chính như Windows, Android và Linux. Nó đi kèm với một công cụ kết xuất mạnh mẽ hỗ trợ tất cả các tiêu chuẩn web hiện đại.</p>
+<figure id="attachment_7298" aria-describedby="caption-attachment-7298" style="width: 516px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/hinh-thu-nho-cua-tab.png"><img class="size-full wp-image-7298" src="http://localhost:82/demowp/wp-content/uploads/2019/10/hinh-thu-nho-cua-tab.png" alt="hinh thu nho cua tab chrome" width="516" height="281" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/hinh-thu-nho-cua-tab.png 516w, http://localhost:82/demowp/wp-content/uploads/2019/10/hinh-thu-nho-cua-tab-300x163.png 300w" sizes="(max-width: 516px) 100vw, 516px" /></a><figcaption id="caption-attachment-7298" class="wp-caption-text">hinh thu nho cua tab chrome</figcaption></figure>
+<p>Chrome 78 đi kèm với giao diện tooltip mới cho các tab. Bây giờ, nó trông giống như một tờ rơi bao gồm tiêu đề và URL toàn trang.</p>
+<p>Chúng ta hãy xem cách bật hình ảnh xem trước hình thu nhỏ cho tab, để bạn có thể nhanh chóng xác định một tab bằng nội dung của nó trong nháy mắt.</p>
+<p><a href="https://imgur.com/KuzoumM.png"><img class="aligncenter size-full" src="https://imgur.com/KuzoumM.png" width="785" height="487" /></a></p>
+<h2><strong>Cách bật Xem trước hình thu nhỏ trên tab trong Google Chrome</strong></h2>
+<p>1. Mở trình duyệt Google Chrome và nhập văn bản sau vào thanh địa chỉ và nhấn Enter: <span style="color: #ff0000;"><strong><code>chrome://flags/#tab-hover-card-images</code></strong></span></p>
+<p>2. Chỉnh sửa tất cả thành Enabled.</p>
+<p><a href="https://imgur.com/Nq02D63.png"><img class="aligncenter size-full" src="https://imgur.com/Nq02D63.png" width="748" height="438" /></a></p>
+<p>3. Khởi động lại Google Chrome bằng cách đóng thủ công hoặc bạn cũng có thể sử dụng nút Khởi chạy lại sẽ xuất hiện ở cuối trang.</p>
+<p>4. Xong.</p>
+<p>Sau khi hoàn thành bàn sẽ được hiệu ứng như trong ảnh.</p>
+<p style="text-align: center;"><div class="su-youtube su-u-responsive-media-yes"><iframe width="600" height="400" src="https://www.youtube.com/embed/8N0i9jN2Fug?" frameborder="0" allowfullscreen="true" allow="autoplay; fullscreen" title=""></iframe></div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7297"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/bat-xem-truoc-hinh-thu-nho-cua-tab-trong-google-chrome/">Bật xem trước hình thu nhỏ của Tab trong Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/bat-xem-truoc-hinh-thu-nho-cua-tab-trong-google-chrome/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tổng Hợp Top Các Trang Rút Gọn Link kiếm Tiền Online Tốt Nhất 2019</title>
+		<link>http://localhost:82/demowp/thu-thuat/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-tot-nhat-2019/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-tot-nhat-2019/#comments</comments>
+				<pubDate>Wed, 24 Jul 2019 13:11:47 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Affiliate Marketing]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiếm Tiền Online]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Rút Gọn Link]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6339</guid>
+				<description><![CDATA[<p>Giới thiệu với các bạn một số trang web chơi Rút Gọn Link kiếm tiền online tốt nhất, tại đây bạn sẽ tìm thấy những website rút gọn link tốt và uy tín nhất để kiếm tiền, tạo ra một hướng đi cụ thể trong chiến lược chơi link rút gọn. MMO là viết tắt 3 [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-tot-nhat-2019/">Tổng Hợp Top Các Trang Rút Gọn Link kiếm Tiền Online Tốt Nhất 2019</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Giới thiệu với các bạn một số trang web chơi Rút Gọn Link kiếm tiền online tốt nhất, tại đây bạn sẽ tìm thấy những website rút gọn link tốt và uy tín nhất để kiếm tiền, tạo ra một hướng đi cụ thể trong chiến lược chơi link rút gọn.</p>
+<p><strong>MMO</strong> là viết tắt 3 chữ cái đầu tiên của từ <strong>M</strong>ake <strong>M</strong>oney <strong>O</strong>nline, dịch ra tiếng Việt gọi là kiếm tiền online. Bạn sẽ sử dụng 1 chiếc máy tính hoặc điện thoại <em>(phần lớn là máy tính)</em> có kết nối mạng Internet để làm các công việc <strong>nhằm mục đích cuối cùng là kiếm được tiền.</strong></p>
+<figure id="attachment_6344" aria-describedby="caption-attachment-6344" style="width: 697px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/07/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online.png"><img class="size-full wp-image-6344" src="http://localhost:82/demowp/wp-content/uploads/2019/07/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online.png" alt="tong hop top cac trang rut gon link kiem tien online" width="697" height="400" srcset="http://localhost:82/demowp/wp-content/uploads/2019/07/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online.png 697w, http://localhost:82/demowp/wp-content/uploads/2019/07/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-300x172.png 300w" sizes="(max-width: 697px) 100vw, 697px" /></a><figcaption id="caption-attachment-6344" class="wp-caption-text">Tổng Hợp Top Các Trang Rút Gọn Link kiếm Tiền Online Tốt Nhất 2019</figcaption></figure>
+<h2 id="goto-h2-0" class="role" data-stt="0"><strong>Rút gọn link là gì?</strong></h2>
+<p>Rút gọn linh là hình thức tạo ra một link mới ngắn gọn hơn link gốc nhằm phục vụ một mục đích cụ thể nào đó. Ví dụ khi bạn muốn chia sẻ đường dẫn một bài viết có URL rất dài trên internet thì người dùng sẽ rất khó để nhập đúng URL đó, nên nếu bạn rút gọn link đó lại chỉ với một vài từ thôi thì sẽ rất dễ dàng.</p>
+<p>Hiện nay có các kênh rút gọn link như <strong><a href="https://bitly.com/" target="_blank" rel="nofollow noopener noreferrer">https://bitly.com</a>,</strong>&#8230; đó là những kênh rút gọn miễn phí, họ cho phép bạn rút gọn link thoải mái mà không cần một yêu cầu nào cả.</p>
+<h2 id="goto-h2-0" class="role" data-stt="0"><strong>Rút gọn link kiếm tiền là gì?</strong></h2>
+<p>Có 2 loại trang rút gọn link cơ bản đó là <strong>rút gọn link không quảng cáo</strong> và <strong>rút gọn link có quảng cáo</strong>. Đối với dạng rút gọn link không quảng cáo thì chúng ta sẽ<strong> không thể kiếm được tiền</strong>, chỉ để rút gọn những đường link dài, link xấu, để theo dõi các nguồn click vào link.</p>
+<p>Kiếm tiền với link rút gọn cũng là hình thức rút gọn link như trên, tuy nhiên cái khác biệt ở đây là bạn sẽ có thu nhập khi chia sẻ link rút gọn đó đến với người sử dụng. Tại sao lại có thu nhập? Các hệ thống rút gọn sẽ đặt các quảng cáo lên link rút gọn đó nên họ sẽ có thu nhập, vì vậy họ sẽ chi trả một khoảng tiền đến với người dùng, điều này sẽ giúp cả hai cùng có tiền.</p>
+<p>Khi tham gia kiếm tiền online bằng rút gọn link bạn sẽ có cơ hội tạo ra thu nhập thụ đông cho riêng mình, điều này sẽ phụ thuộc vào hướng đi của bạn, nếu bạn đi hướng đầu tư bài bản thì thời gian đầu sẽ rất cực, nhưng sau đó bạn sẽ có thu nhập thụ động, chỉ ngồi và không làm gì cũng có tiền.</p>
+<h2><span id="Nhung_trang_rut_gon_link_kiem_tien_tot_nhat_2019_tai_Viet_Nam" class="ez-toc-section"><strong>Top các trang rút gọn link kiếm tiền online tốt nhất 2019</strong></span></h2>
+<h3><span id="EZ4Link" class="ez-toc-section"><strong>EZ4Link</strong></span></h3>
+<p>Trang này của nước ngoài vẫn đang hoạt động rút gọn khá dễ và uy tín.</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: <strong>3.2$ (laptop), 4$ (mobile) từ Việt Nam</strong></li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 8 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng, Bitcoin</li>
+<li><strong>Minpay</strong>: 5$</li>
+<li><strong>Thời gian thanh toán</strong>: 2 – 7 ngày sau khi thực hiện lệnh rút.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://bit.ly/ez4linkdangky" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><strong>Linkvertise</strong></h3>
+<p>Site rút gọn link quốc tế uy tín đến từ Đức.</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: tối đa tới 70€ ~ 1tr8 VND/1000 views</li>
+<li>Payout rate của Linkvertise không cố định theo từng quốc gia, mà căn cứ vào hiệu suất RPM cao nhất dựa theo hành vi của người dùng. Vì thế mà bạn có thể kiếm được tối đa tới 70€ ~ 1tr8 VND/1000 views</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng</li>
+<li><strong>Minpay</strong>: 10€</li>
+<li><strong>Thời gian thanh toán</strong>: 2 – 7 ngày sau khi thực hiện lệnh rút.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://linkvertise.net/ac/33044" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<p>&nbsp;</p>
+<hr />
+<h3><span id="Megalink_Pro" class="ez-toc-section"><strong>Megalink Pro</strong></span></h3>
+<p>Thêm một trang rút gọn từ Việt Nam cũng khá là cao, minpay cực kỳ thấp luôn</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3.2$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 7 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng,</li>
+<li><strong>Minpay</strong>: PayPal 1$, Chuyển khoản Ngân hàng 2.5$, ZaloPay 1$, Momo 1$, ViettelPay 1$</li>
+<li><strong>Thời gian thanh toán</strong>: Hàng ngày</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://bit.ly/megalinkprodangky" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="Shink" class="ez-toc-section"><strong>Shink</strong></span></h3>
+<p>Trang này của nước ngoài đã tồn tại rất lâu và min pay cũng thấp</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 1.8$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 3 click.</li>
+<li><strong>Có Popup</strong></li>
+<li><strong>Nhảy NewTab</strong></li>
+<li><strong>Xác nhận captcha: </strong>Có</li>
+<li><strong>Thời gian chờ</strong>: 3 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal</li>
+<li><strong>Minpay</strong>: 5$</li>
+<li><strong>Thời gian thanh toán</strong>: Ngày 1 và 16 hàng tháng</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://shink.me/" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="AdFly" class="ez-toc-section"><strong>AdFly</strong></span></h3>
+<p>Trang này của nước ngoài</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 0.5-1$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày: </strong>không giới hạn</li>
+<li><strong>Nhảy New Tab</strong></li>
+<li><strong>Xác nhận captcha:</strong> không</li>
+<li><strong>Thời gian chờ</strong>: 5 giây</li>
+<li><strong>Hình thức thanh toán</strong>:  PayPal / Payeer / Payoneer</li>
+<li><strong>Minpay</strong>: 5$</li>
+<li><strong>Thời gian thanh toán</strong>: Ngày 1 hàng tháng</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://adf.ly/" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="OUO" class="ez-toc-section"><strong>OUO</strong></span></h3>
+<p>Trang này của nước ngoài</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 1.5$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Nhảy New Tab</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 3 giây</li>
+<li><strong>Hình thức thanh toán</strong>:  PayPal / Payeer / Payoneer</li>
+<li><strong>Minpay</strong>: 50$</li>
+<li><strong>Thời gian thanh toán</strong>: Ngày 1 và 15 hàng tháng</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://ouo.io/ref/0IyacvGG" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="Link_5s" class="ez-toc-section"><strong>Link 5s</strong></span></h3>
+<p>Thêm một trang rút gọn đến từ Việt Nam</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3.2$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 5 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng, Bitcoin</li>
+<li><strong>Minpay</strong>: 5$</li>
+<li><strong>Thời gian thanh toán</strong>: Trong khoảng 2 ngày sau khi thực hiện lệnh rút.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://bit.ly/32Rjkp0" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="VinaUrl" class="ez-toc-section"><strong>VinaUrl</strong></span></h3>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: Click từ Việt Nam là 4$</li>
+<li><strong>Số click được tính cho mỗi ip:</strong> 1 click</li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 7 giây</li>
+<li><strong>Hình thức thanh toán</strong>:  PayPal, chuyển khoản Ngân hàng.</li>
+<li><strong>Minpay</strong>: 10$</li>
+<li><strong>Thời gian thanh toán</strong>: Thanh toán vào ngày 24 hàng tháng.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://bit.ly/30Rbeuv" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="LinkCC" class="ez-toc-section"><strong>LinkCC</strong></span></h3>
+<p>Thêm một trang rút gọn từ Việt Nam</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Xác nhận captcha: </strong>Có</li>
+<li><strong>Thời gian chờ</strong>: 7 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng, Momo</li>
+<li><strong>Minpay</strong>: 10$</li>
+<li><strong>Thời gian thanh toán</strong>: Trước 7 ngày sau khi thực hiện lệnh rút.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://linkcc.pro/" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="Megaurl-IN" class="ez-toc-section"><strong>Megaurl-IN</strong></span></h3>
+<p>Đây cũng là site rút gọn link của Việt Nam nhiều popup và nhảy newtab khá khó chịu, có thể chơi 18+</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3.2$ PC và 3.05 Moble từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Nhảy New Tab</strong></li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 7 giây</li>
+<li><strong>Có popup</strong></li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng.</li>
+<li><strong>Minpay</strong>: 20$</li>
+<li><strong>Thời gian thanh toán</strong>: 2 – 7 ngày sau khi thực hiện lệnh rút.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="http://bit.ly/2Y2pZOl" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="ClicksFly" class="ez-toc-section"><strong>ClicksFly</strong></span></h3>
+<p>Đây là site rút gọn link kiếm tiền của nước ngoài khá uy tín với rate lên tới 14$ tại Mỹ, Úc, còn tại Việt Nam là 3$.</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li>Nhảy Newtab ghê luôn</li>
+<li><strong>Xác nhận captcha:</strong> Có</li>
+<li><strong>Thời gian chờ</strong>: 8 giây</li>
+<li><strong>Hình thức thanh toán</strong>: PayPal, chuyển khoản Ngân hàng ấn độ</li>
+<li><strong>Minpay</strong>: Paypal 3$, Bank Tranfer 20$, Payoneer 50$, Skrill 20$</li>
+<li><strong>Thời gian thanh toán</strong>: rút tiền trước ngày 23, bạn sẽ nhận được tiền từ ngày 25 – 30 hàng tháng.</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://clicksfly.com/" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<hr />
+<h3><span id="FCLC" class="ez-toc-section"><strong>FCLC</strong></span></h3>
+<p>Trang này của nước ngoài đã tồn tại rất lâu và min pay cực thấp</p>
+<ul>
+<li><strong>Payout Rates (giá 1000 click)</strong>: 3$ từ Việt Nam</li>
+<li><strong>Số click được tính cho mỗi ip trong 1 ngày:</strong> 2 click.</li>
+<li><strong>Không Popup</strong></li>
+<li><strong>Nhảy NewTab</strong></li>
+<li><strong>Xác nhận captcha: </strong>Có</li>
+<li><strong>Thời gian chờ</strong>: 5 giây</li>
+<li><strong>Hình thức thanh toán</strong>:  PayPal, Payoneer, Skrill, Bitcoin</li>
+<li><strong>Minpay</strong>: 3$</li>
+<li><strong>Thời gian thanh toán</strong>: Hằng ngày</li>
+</ul>
+<p style="text-align: center;"><a class="btn btn-success" href="https://fc.lc/" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ NGAY</a></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6339"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-tot-nhat-2019/">Tổng Hợp Top Các Trang Rút Gọn Link kiếm Tiền Online Tốt Nhất 2019</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/tong-hop-top-cac-trang-rut-gon-link-kiem-tien-online-tot-nhat-2019/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
+		<title>Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</title>
+		<link>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/#respond</comments>
+				<pubDate>Sun, 05 May 2019 16:41:41 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Acc Vip]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows Server]]></category>
+		<category><![CDATA[Free]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[VPS]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6067</guid>
+				<description><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến VPS là gì và cách tạo 1 con VPS Free(miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé! VPS là gì ? VPS là chữ viết tắt của Virtual Private Server – máy chủ ảo cá [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến <strong>VPS</strong> là gì và cách tạo 1 con <strong>VPS Free(</strong>miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé!</p>
+<figure id="attachment_6072" aria-describedby="caption-attachment-6072" style="width: 698px" class="wp-caption aligncenter"><img class="size-full wp-image-6072" src="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg" alt="Tạo VPS Free Tốc Độ Cao" width="698" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao-300x157.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /><figcaption id="caption-attachment-6072" class="wp-caption-text">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn</figcaption></figure>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#VPS_la_gi" title="VPS là gì ?">VPS là gì ?</a></li><li><a href="#Huong_dan_tao_VPS_Free_mien_phi_Han_Dung_1_Gio" title="Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ">Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</a><ul><li><a href="#Buoc_1" title="Bước 1:">Bước 1:</a></li><li><a href="#Buoc_2" title="Bước 2">Bước 2</a><ul><li><a href="#Cach_1_-_khoi_tao_he_thong" title="Cách 1 - khởi tạo hệ thống:">Cách 1 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_3" title="Bước 3:">Bước 3:</a><ul><li><a href="#Cach_2_-_khoi_tao_he_thong" title="Cách 2 - khởi tạo hệ thống:">Cách 2 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_4" title="Bước 4:">Bước 4:</a></li><li><a href="#Buoc_5" title="Bước 5:">Bước 5:</a></li><li><a href="#Buoc_6" title="Bước 6:">Bước 6:</a></li><li><a href="#Buoc_7" title="Bước 7:">Bước 7:</a></li><li><a href="#Buoc_8" title="Bước 8:">Bước 8:</a></li><li><a href="#Buoc_9" title="Bước 9:">Bước 9:</a></li><li><a href="#Thanh_qua" title="Thành quả:">Thành quả:</a></li></ul></li></ul></nav></div>
+
+<h2><span style="text-decoration: underline;"><strong>VPS là gì ?</strong></span></h2>
+<p><strong>VPS</strong> là chữ viết tắt của <strong>V</strong>irtual <strong>P</strong>rivate <strong>S</strong>erver – máy chủ ảo cá nhân.</p>
+<p>VPS hosting là một hệ thống <strong>hoàn toàn riêng biệt,</strong> có một phần <strong>CPU riêng</strong>, dung lượng<strong> RAM riêng</strong>, dung lượng ổ <strong>HDD/SSD riêng</strong>,<strong> địa chỉ IP riêng</strong> và <strong>hệ điều hành riêng</strong>, người dùng có toàn quyền quản lý <strong>root</strong> và có thể <strong>restart</strong> lại hệ thống bất cứ lúc nào.</p>
+<p><strong>VPS hosting</strong> còn là một trong các dịch vụ <strong>hosting</strong> phổ biến nhất để bạn có thể sử dụng làm nền tảng cho <strong>website</strong>. Nó dùng công nghệ ảo hóa để tạo tài nguyên riêng trên <strong>server</strong> cho bạn sử dụng để tách biệt tài nguyên đó khỏi dùng chung với các người dùng khác cùng<strong> server vật lý.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="vps free tốc độ cao" width="1920" height="1080" /></p>
+<h2><span style="text-decoration: underline;"><strong>Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</strong></span></h2>
+<h3><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Bước 1:</strong></span></h3>
+<p>Đầu tiên bạn vào <strong>link</strong> sau và <strong>đăng nhập</strong> bằng tài khoản <strong>Microsoft</strong> của bạn.</p>
+<p><strong>Link đăng nhập và tạo VPS Free(miễn phí)</strong>: <a class="btn btn-default" href="https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/4-create-a-vm?pivots=windows-cloud" target="_blank" rel="noopener noreferrer">NHẤN VÀO ĐÂY</a></p>
+<p>Sau khi đăng nhập bạn nhấn chọn vào <strong>Activate Sandbox.</strong></p>
+<p><img class="aligncenter size-full" src="https://imgur.com/ThOWEfN.png" alt="Hướng dẫn cách tạo VPS 14GB RAM hạn dùng 1 giờ miễn phí" width="896" height="660" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 2</strong></span></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 1 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<p>Bạn chờ 1 chút cho hệ thống cài đặt xong bạn sẽ thấy có màn hình của sổ <strong>cmd</strong> màu đen phía bên phải màn hình như sau:</p>
+<p><img class="aligncenter size-full" src="https://imgur.com/bYUQ0fN.png" alt="Hướng dẫn cách tạo VPS hạn dùng 1 giờ miễn phí 2" width="1920" height="937" /></p>
+<p><strong>Tiếp tục bạn kéo chuột xuống và sẽ thấy một đoạn code như hình bên dưới đây:</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/yOGEVHQ.png" alt="code tạo vps free" width="660" height="394" /></p>
+<p>Bạn sẽ phải sửa 2 dòng cuối dùng của đoạn code đó lại:</p>
+<div class="alert alert-warning"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span class="hljs-variable">$USERNAME</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password $PASSWORD</span></strong></span></div>
+<div>
+<p><strong>Sửa lại như sau:</strong></p>
+<div class="alert alert-info"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span style="color: #ff0000;">tanhongi</span> <span style="color: #ff0000;">\</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+</div>
+<p><strong><span style="text-decoration: underline; color: #ff0000; font-size: 20px;">Ví dụ</span> <span style="font-size: 16px;">mình có một đoạn code sau khi đã chỉnh sửa như sau:</span></strong></p>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">az vm create \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;name myVM \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;resource-group<span style="color: #ff0000;"> 76e442a1-eea2-4f6e-a4e3-a0cfb66ee121</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;image Win2016Datacenter \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;size Standard_DS2_v2 \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;location eastus \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username<span style="color: #ff0000;"> tanhongi \</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+<div><span style="font-size: 20px;"><strong><span style="color: #ff0000;">Những nơi có tô màu đó bạn phải dựa vào code mà hệ thống đã đưa sẵn cho bạn nhé!</span></strong></span></div>
+<div></div>
+<div>Tiếp theo bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy nhé!</div>
+<div><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></div>
+<div>
+<div class="alert alert-warning" style="text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 32px;"><strong>Lưu ý</strong> </span></span></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Đoạn code phía trên là mình đã gom cả mật khẩu và tên người dùng vào chung để khỏi khắc rối cho các bạn khi cài đặt hệ thống. Nếu các bạn đã sử dụng đoạn code ở bước 2 này thì các bạn có thể đi đến <span style="color: #0000ff;">bước 5 và bước 6</span> luôn nhé!</span></strong></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Nếu các bạn muốn tạo tên người dùng riêng hoặc cài đặt cho hệ thống VPS theo từng bước thì các bạn <span style="color: #0000ff;">bỏ qua bước 2</span> và <span style="color: #0000ff;">làm từ bước 3 trở đi</span> nhé!</span></strong></div>
+</div>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 3:</span></strong></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 2 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<div>Bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy.</div>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong>az vm create \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;name myVM \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;resource-group <span style="color: #ff0000;">a79c55ee-9ab4-4792-aa7d-b164400fb1bb \</span></strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;image Win2016Datacenter \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;size Standard_DS2_v2 \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;location eastus \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;admin-username <span style="color: #ff0000;">tanhongi</span></strong></span></div>
+<div><span style="font-size: 20px; color: #0000ff;"><strong>Với username bạn có thể đặt thành tên khác với bắt buộc là 8 kí tự chữ cái nhé!</strong></span></div>
+<p><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 4:</span></strong></h3>
+<p>Tiếp theo bạn<strong> copy password</strong> vào bằng cách nhấn chuột phải vào màn hình <strong>cmd</strong> và nhấn <strong>Paste(Dán)</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/htD8fqW.png" width="702" height="766" /></p>
+<blockquote class="pullquote align-center"><p><span style="color: #0000ff;"><strong><span style="text-decoration: underline;">Lưu ý:</span></strong></span> Username thì có thể sửa được nhưng password này là<strong> sử dụng bắt buộc</strong>, bạn không được chỉnh sửa gì thêm.</p>
+<p><strong>Pass:</strong> <span style="color: #0000ff;"><strong>123456789aA@</strong></span></p></blockquote>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 5:</span></strong></h3>
+<p>Tiếp theo bạn <strong>copy</strong> <strong>lại mật khẩu</strong> <strong>ở bước 4</strong> một lần nữa khi xuất hiện dòng <strong>Confirm Admin Pasword</strong> nhé! Sau đó nhấn <strong>Enter</strong> và cho nó <strong>Running</strong>.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/ghR30d8.png" width="630" height="454" /></p>
+<p>Sau khi hệ thống chạy xong bạn sẽ nhận được một số thông tin như hình bên dưới:</p>
+<p><img class="aligncenter" src="https://imgur.com/UeMojXm.png" alt="Public Ip Address" width="949" height="768" /></p>
+<p>Các bạn chú ý địa chỉ IP ở dòng <strong>&#8220;PublicIpAddress&#8221;</strong> nhé. Đây là địa chỉ IP mà bạn sẽ phải dùng để truy cập vào VPS đó&#8230;</p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 6:</span></strong></h3>
+<p>Bạn tìm kiếm phần mềm<strong> &#8220;Remote Desktop Connection&#8221;</strong> có sẵn trên các hệ điều hành <strong>Windows</strong> và khởi chạy phần mềm lên nhé!</p>
+<p><img class="aligncenter" src="https://imgur.com/Awrq3vv.png" alt="Remote Desktop Connection" width="835" height="681" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 7:</strong></span></h3>
+<p>Sau khi mở phần mềm lên bạn copy địa chỉ IP ở dòng <strong>&#8220;publicIpAddress&#8221; </strong>mà hệ thống đã cung cấp cho bạn vào rồi nhấn<strong> Contect.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/aQYBTVf.png" alt="đại chỉ ip của vps" width="686" height="639" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 8:</strong></span></h3>
+<p>Bạn chọn vào<strong> sử dụng với tài khoản mới (Use a diferent account). </strong></p>
+<p>Sau đó nhập <strong>User</strong> và <strong>password</strong> mà nãy bạn đã cài đặt vào 2 ô phía trên và nhấn tiếp <strong>OK</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/2L9Li9g.png" width="456" height="532" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 9:</strong></span></h3>
+<p>Sẽ xuất hiện một thông báo và bạn chỉ cần nhấn <strong>Yes</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/XuMQHdy.png" alt="kết nối vps free" width="392" height="401" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Thành quả:</strong></span></h3>
+<p>Bạn sẽ có một VPS Sử dụng hệ điều hành Windows 10 và có tốc độ siêu lớn luôn&#8230;</p>
+<p><img class="aligncenter" src="https://imgur.com/WfV08WA.png" alt="tạo một vps free" width="1920" height="1080" /><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="tốc độ siêu cao của vps free" width="1920" height="1080" /></p>
+<p>Mong rằng với thủ thuật này sẽ hỗ trợ cho công việc và học tập của các bạn thật tốt.</p>
+<p>Nếu các bạn vẫn chưa làm được hoặc có thắc mắc gì cứ để lại comment bên dưới bài viết này nhé! Mình sẽ giải đáp cho các bạn!</p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/tag/vps/" target="_blank" rel="noopener noreferrer">Một số bài viết khác về VPS</a></strong></span></p>
+<p>Nếu thấy hữu ích đừng quên chia sẻ cho mọi người nha. Cảm ơn các bạn !!!</p>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6067"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook</title>
+		<link>http://localhost:82/demowp/thu-thuat/facebook/cach-tao-link-an-khi-dang-status-hoac-comment-facebook/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/facebook/cach-tao-link-an-khi-dang-status-hoac-comment-facebook/#respond</comments>
+				<pubDate>Tue, 23 Apr 2019 04:55:41 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Facebook]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6050</guid>
+				<description><![CDATA[<p>Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook. Link ẩn(Hidden Link) có nghĩa là bạn sẽ không thấy link này trên màn hình bài đăng, mà đó chỉ là một dòng chữ. Khi bạn rê chuộc click vào dòng chữ đó, bạn sẽ được chuyển hướng sang Link mà bạn đã cố ý [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/facebook/cach-tao-link-an-khi-dang-status-hoac-comment-facebook/">Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook. Link ẩn(Hidden Link)</strong> có nghĩa là bạn sẽ <strong>không thấy link</strong> này trên màn hình bài đăng, mà đó chỉ<strong> là một dòng chữ</strong>. Khi bạn <strong>rê chuộc click vào dòng chữ</strong> đó, bạn sẽ được <strong>chuyển hướng</strong> sang<strong> Link mà bạn đã cố ý ẩn nó.</strong></p>
+<p>Trong thủ thuật <strong>SEO</strong> thì thủ thuật này còn được gọi là<span style="color: #ff0000;"><strong> Anchor Text.</strong></span></p>
+<figure id="attachment_6053" aria-describedby="caption-attachment-6053" style="width: 642px" class="wp-caption aligncenter"><img class="size-full wp-image-6053" src="http://localhost:82/demowp/wp-content/uploads/2019/04/Cách-tạo-Link-Ẩn-khi-đăng-Status-hoặc-Comment-Facebook.png" alt="Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook" width="642" height="440" srcset="http://localhost:82/demowp/wp-content/uploads/2019/04/Cách-tạo-Link-Ẩn-khi-đăng-Status-hoặc-Comment-Facebook.png 642w, http://localhost:82/demowp/wp-content/uploads/2019/04/Cách-tạo-Link-Ẩn-khi-đăng-Status-hoặc-Comment-Facebook-300x206.png 300w" sizes="(max-width: 642px) 100vw, 642px" /><figcaption id="caption-attachment-6053" class="wp-caption-text">Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook</figcaption></figure>
+<p><strong>Mục đích của việc tạo link ẩn là giúp rút gọn nội dung hoặc che dấu link đích khi đăng một bài viết.</strong> Việc nào cũng tạo thêm<strong> thiện cảm</strong> cho người đọc thay vì dẫn một đường link dài lằng ngoằng vào bài viết thì ta chỉ cần ẩn link vào một nội dụng ngắn gọn để tăng tính hấp dẫn cho bài đọc.</p>
+<h3><span style="text-decoration: underline;"><strong>Link ẩn</strong> (Hidden Link) có hai mục bạn cần quan tâm:</span></h3>
+<ul>
+<li><strong>ID trang (page)</strong> hoặc <strong>id của người dùng (user) </strong></li>
+<li>Nội dung link (Xem thêm, Xem tại đây,v,v,…)</li>
+</ul>
+<h3><strong><span style="text-decoration: underline;">Hướng dẫn Tạo Link Ẩn Trên Facebook</span></strong></h3>
+<p>Đầu tiên bạn hãy lấy<strong> ID link trang</strong> hoặc <strong>người dùng</strong> đó trên facebook.</p>
+<p>Trong bài hướng dẫn này mình sẽ lấy link từ chính <strong><a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">Page Tân Hồng IT.</a></strong></p>
+<p><img class="aligncenter" src="https://imgur.com/12HwbTv.png" alt="Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook 1" width="1357" height="634" /></p>
+<p>Bạn vào trang web <strong><a href="https://findmyfbid.com/" target="_blank" rel="noopener noreferrer">https://findmyfbid.com/ </a>sau đó bạn copy link Facebook cần lấy ID vào ô và bấm vào nút ”Find numeric ID”</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/wUFzgOy.png" alt="Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook ID" width="644" height="274" /></p>
+<p>Khi đó bạn có <strong>ID</strong> của link muốn chuyển đến là 1 dãy số như hình bên dưới:</p>
+<p><img class="aligncenter" src="https://imgur.com/P4AEa43.png" alt="Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook ID 2" width="461" height="295" /></p>
+<p>Bây giờ bạn hãy thực hiện theo cú pháp sau:</p>
+<blockquote class="pullquote align-center"><p><strong>@@[0:[ID:1: Nội dung ẩn Link]]. @[ID:#]</strong></p></blockquote>
+<p><strong>Ví dụ mình có một ID trang: <span style="color: #0000ff;">395032531023026</span></strong></p>
+<p>Vậy ta sẽ có một cú pháp như bên dưới:</p>
+<blockquote class="pullquote align-center"><p><strong>@@[0:[<span style="color: #0000ff;">395032531023026</span>:1: <span style="color: #0000ff;">Test Click FanPage</span>]]. @[<span style="color: #0000ff;">395032531023026</span>:#]</strong></p></blockquote>
+<p>Bây giờ ta sẽ tiến hành đăng <strong>status</strong> lên <strong>facebook</strong>.</p>
+<p>Cú pháp trên chỉ hoạt động tốt ở <strong>môi trường web</strong> và <strong>trên điện thoại</strong>, <strong>vì thế nếu bạn sử dụng điện thoại thì mở trình duyệt web bất kì trên điện thoại copy và paste, bấm nút đăng sẽ được.</strong></p>
+<p>Tuy nhiên, nếu <strong>sử dụng trên máy tính</strong> thì hãy <strong>thêm m</strong> vào đầu link <strong>facebook</strong>, rồi bấm <strong>enter</strong>, như hình sau:</p>
+<p><img class="aligncenter" src="https://imgur.com/2jQtEQL.png" alt="Link Ẩn Facebook" width="961" height="407" /></p>
+<p>Hoặc bạn có thể sử dụng link dùng cho các thiết bị điện thoại đời cũ để thực hiện: <strong><a href="https://mbasic.facebook.com/" target="_blank" rel="noopener noreferrer">Link cho thiệt bị di động</a></strong></p>
+<p>Sau khi truy cập vào link trên bạn hãy dán đoạn <strong>cú pháp</strong> vào bài viết mới và nhấn nút<strong> Đăng (Post)</strong>. Bạn cũng có thể <strong>đăng kiểu này ở các comment</strong> của các bài viết khác.</p>
+<p><img class="aligncenter" src="https://imgur.com/o2H0mkk.png" alt="Đăng Link Ẩn khi đăng Status hoặc Comment Facebook" width="620" height="185" /></p>
+<p>Và kết quả cuối cùng bạn sẽ có được một bài viết <strong>ẩn link</strong> như hình bên dưới:</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/vFnomlW.png" width="646" height="256" /></p>
+<p>Khi bạn rê chuột vào dòng chữ màu xanh sẽ thấy hiển thị <strong>Page</strong> hoặc trang cá nhân của link đích. Hoặc khi bạn click vào, bạn sẽ được chuyển sang trang có <strong>ID</strong> là <strong>link ẩn Facebook.</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/1RtOgkg.png" width="642" height="510" /></p>
+<p>Nếu có thắc mắc gì các bạn cứ để lại mình luận bên dưới mình sẽ giải đáp.</p>
+<p>Nếu các bạn thấy hay mong hãy chia sẻ đến cùng mọi người để đều biết đến thủ thuật này nhé! Cảm ơn các bạn!</p>
+<p style="text-align: center;"><span style="font-size: 32px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6050"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/facebook/cach-tao-link-an-khi-dang-status-hoac-comment-facebook/">Cách tạo Link Ẩn khi đăng Status hoặc Comment Facebook</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/facebook/cach-tao-link-an-khi-dang-status-hoac-comment-facebook/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tổng Hợp Những Câu Lệnh GIT Cơ Bản Hữu Dụng &#8211; GitHub</title>
+		<link>http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/#respond</comments>
+				<pubDate>Fri, 15 Feb 2019 01:19:38 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Git]]></category>
+		<category><![CDATA[Github]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5432</guid>
+				<description><![CDATA[<p>Mình xin liệt kê một số các câu lệnh git cơ bản và hữu dụng nhất để các bạn có thể nắm bắt và sử dụng git &#8211; github một cách tốt nhất. Các bạn có thể xem menu điều hướng tại đây: Git config git config --global user.name "John Doe" git config --global user.email [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/">Tổng Hợp Những Câu Lệnh GIT Cơ Bản Hữu Dụng &#8211; GitHub</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Mình xin liệt kê một số các câu lệnh git cơ bản và hữu dụng nhất để các bạn có thể nắm bắt và sử dụng git &#8211; github một cách tốt nhất.</p>
+<figure id="attachment_6081" aria-describedby="caption-attachment-6081" style="width: 1160px" class="wp-caption aligncenter"><img class="size-full wp-image-6081" src="http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ.png" alt="Những lệnh GIT - GitHub cơ bản cần nhớ" width="1160" height="581" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ.png 1160w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-300x150.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-768x385.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-1024x513.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-360x180.png 360w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-750x376.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/02/Những-lệnh-GIT-GitHub-cơ-bản-cần-nhớ-1140x571.png 1140w" sizes="(max-width: 1160px) 100vw, 1160px" /><figcaption id="caption-attachment-6081" class="wp-caption-text">Những lệnh GIT &#8211; GitHub cơ bản cần nhớ</figcaption></figure>
+<p>Các bạn có thể xem menu điều hướng tại đây:</p>
+
+<h3 id="_git-config-0">Git config</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git config --global user.name "John Doe"
+git config --global user.email "john@example.com"
+</code></pre>
+<p><code>--global</code> được sử dụng để áp dụng cho tất cả các projects. Nếu bạn ko sử dụng <code>--global</code> thì settings sẽ chỉ dùng cho riêng project đó.</p>
+<h3 id="_giup-git-bo-qua-file-modes-1">Giúp Git bỏ qua file modes</h3>
+<pre class="language-none" data-filename=""><code class="language-none">cd project/
+git config core.filemode false
+</code></pre>
+<p>Câu lệnh trên hữu dụng khi chúng ta không cần quan tâm đến quyền truy cập files (ví dụ như khi sử dụng Windows).</p>
+<h3 id="_liet-ke-nhung-settings-dang-su-dung-2">Liệt kê những settings đang sử dụng</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git config --list
+</code></pre>
+<h3 id="_khoi-tao-git-repo-cho-code-co-san-3">Khởi tạo Git repo cho code có sẵn</h3>
+<pre class="language-none" data-filename=""><code class="language-none">cd existing-project/
+git init
+</code></pre>
+<h3 id="_clone-mot-remote-repo-4">Clone một remote repo</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git clone https://github.com/user/repository.git
+</code></pre>
+<p>Câu lệnh trên sẽ tạo một thư mục mới có tên giống trên của repo.</p>
+<h3 id="_clone-mot-remote-repo-tai-thu-muc-hien-tai-5">Clone một remote repo tại thư mục hiện tại</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git clone https://github.com/user/repository.git .
+</code></pre>
+<h3 id="_xem-thong-tin-tro-giup-cho-mot-cau-lenh-git-6">Xem thông tin trợ giúp cho một câu lệnh git</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git help clone
+</code></pre>
+<h3 id="_update-va-merge-branch-hien-tai-voi-mot-remote-repo-7">Update và merge branch hiện tại với một remote repo</h3>
+<pre class="language-none" data-filename=""><code class="language-none">cd repo/
+git pull origin master
+</code></pre>
+<p>với <code>origin</code> là remote repo, <code>master</code> là remote branch.</p>
+<p>Nếu bạn không muốn merge những thay đổi của bạn, hãy sử dụng <code>git fetch</code></p>
+<h3 id="_liet-ke-cac-remote-urls-8">Liệt kê các remote urls</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git remote -v
+</code></pre>
+<h3 id="_thay-doi-origin-url-9">Thay đổi origin url</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git remote set-url origin https://github.com/repo.git
+</code></pre>
+<h3 id="_them-remote-repo-10">Thêm remote repo</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git remote add remote-name https://github.com/user/repo.git
+</code></pre>
+<h3 id="_xem-thay-doi-chua-dc-add-cua-nhung-file-hien-tai-11">Xem thay đổi (chưa đc add) của những file hiện tại</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff
+</code></pre>
+<h3 id="_xem-thay-doi-da-duoc-add-chua-commit-12">Xem thay đổi (đã được add, chưa commit)</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff --cached
+</code></pre>
+<h3 id="_xem-thay-doi-giua-local-ma-master-13">Xem thay đổi giữa local mà master</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff origin/master
+</code></pre>
+<h3 id="_xem-thay-doi-giua-hai-commits-14">Xem thay đổi giữa hai commits</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff COMMIT1_ID COMMIT2_ID
+</code></pre>
+<h3 id="_xem-nhung-files-thay-doi-giua-hai-commits-15">Xem những files thay đổi giữa hai commits</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff --name-only COMMIT1_ID COMMIT2_ID
+</code></pre>
+<h3 id="_xem-nhung-files-thay-doi-tai-mot-commit-bat-ky-16">Xem những files thay đổi tại một commit bất kỳ</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff-tree -no-commit-id --name-only -r COMMIT_ID
+</code></pre>
+<p>hoặc</p>
+<pre class="language-none" data-filename=""><code class="language-none">git show --pretty="format:" --name-only COMMIT_ID
+</code></pre>
+<h3 id="_xem-thay-doi-truoc-khi-push-17">Xem thay đổi trước khi push</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff --cached origin/master
+</code></pre>
+<h3 id="_xem-thong-tin-cu-the-cua-mot-commit-18">Xem thông tin cụ thể của một commit</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git show COMMIT_ID
+</code></pre>
+<h3 id="_kiem-tra-status-cua-working-tree-19">Kiểm tra status của working tree</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git status
+</code></pre>
+<h3 id="_tao-vai-thay-doi-roi-commit-20">Tạo vài thay đổi, rồi commit</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git add changed_file.txt
+git add folder-with-changed-files/
+git commit -m "Commiting changes"
+</code></pre>
+<h3 id="_doi-tendi-chuyenxoa-files-21">Đổi tên/Di chuyển/Xoá files</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git rm removeme.txt tmp/crap.txt
+git mv file oldname.txt file_newname.txt
+git commit -m "deleteing 2 files, renaming 1"
+</code></pre>
+<h3 id="_doi-message-cua-commit-cuoi-22">Đổi message của commit cuối</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git commit --amend -m "New commit mesage"
+</code></pre>
+<h3 id="_push-local-commits-sang-nhanh-remote-23">Push local commits sang nhánh remote</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git push origin master
+</code></pre>
+<h3 id="_xem-commit-history-24">Xem commit history</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git log
+</code></pre>
+<h3 id="_xem-commit-history-cho-hai-commits-gan-nhat-25">Xem commit history cho hai commits gần nhất</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git log -2
+</code></pre>
+<h3 id="_xem-commit-history-cho-hai-commits-gan-nhat-bao-gom-ca-thay-doi-26">Xem commit history cho hai commits gần nhất, bao gồm cả thay đổi</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git log -p -2
+</code></pre>
+<h3 id="_xem-commit-history-duoi-dang-mot-dong-27">Xem commit history dưới dạng một dòng</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git log --pretty=oneline
+</code></pre>
+<h3 id="_revert-mot-commit-roi-push-28">Revert một commit rồi push</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git revert COMMIT_ID
+git push origin master
+</code></pre>
+<h3 id="_revert-den-thoi-diem-truoc-mot-commit-29">Revert đến thời điểm trước một commit</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset COMMIT_ID
+git reset --soft HEAD@{1}
+git commit -m "Revert to COMMIT_ID"
+git reset --hard
+</code></pre>
+<h3 id="_undo-commit-gan-nhat-van-giu-thay-doi-o-local-30">Undo commit gần nhất, vẫn giữ thay đổi ở local</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset --soft HEAD~1
+</code></pre>
+<h3 id="_undo-commit-gan-nhat-khong-giu-thay-doi-o-local-31">Undo commit gần nhất, không giữ thay đổi ở local</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset --hard HEAD~1
+</code></pre>
+<h3 id="_undo-commit-gan-nhat-van-giu-thay-doi-o-index-32">Undo commit gần nhất, vẫn giữ thay đổi ở index</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset --mixed HEAD~1
+</code></pre>
+<p>hoặc</p>
+<pre class="language-none" data-filename=""><code class="language-none">git reset HEAD~1
+</code></pre>
+<h3 id="_undo-commits-chua-push-33">Undo commits chưa push</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset origin/master
+</code></pre>
+<h3 id="_reset-ve-trang-thai-cua-remote-34">Reset về trạng thái của remote</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git fetch origin
+git reset --hard origin/master
+</code></pre>
+<h3 id="_xem-cac-nhanh-local-35">Xem các nhánh local</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git branch
+</code></pre>
+<h3 id="_xem-tat-ca-cac-nhanh-36">Xem tất cả các nhánh</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git branch -a
+</code></pre>
+<h3 id="_tao-mot-patch-37">Tạo một patch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff &gt; patch-issue-1.patch
+</code></pre>
+<h3 id="_them-mot-file-roi-tao-patch-38">Thêm một file rồi tạo patch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git add newfile
+git diff --staged &gt; patch-issue-2.patch
+</code></pre>
+<h3 id="_them-mot-file-thay-doi-roi-tao-patch-39">Thêm một file, thay đổi rồi tạo patch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git add newfile
+git diff HEAD &gt; patch-issue-2.patch
+</code></pre>
+<h3 id="_tao-patch-tu-mot-commit-40">Tạo patch từ một commit</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git format-patch COMMIT_ID
+</code></pre>
+<h3 id="_tao-patch-tu-hai-commit-cuoi-41">Tạo patch từ hai commit cuối</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git format-patch HEAD~2
+</code></pre>
+<h3 id="_tao-patch-tu-tat-ca-nhung-commits-chua-push-42">Tạo patch từ tất cả những commits chưa push</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git format-patch origin/master
+</code></pre>
+<h3 id="_tao-patch-chua-du-lieu-nhi-phan-43">Tạo patch chứa dữ liệu nhị phân</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git format-patch --binary --full-index origin/master
+</code></pre>
+<h3 id="_apply-mot-patch-44">Apply một patch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git apply -v patch-name.patch
+</code></pre>
+<h3 id="_apply-mot-patch-duoc-tao-bang-format-patch-45">Apply một patch được tạo bằng format-patch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git am patch1.patch
+</code></pre>
+<h3 id="_tao-mot-tag-46">Tạo một tag</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git tag 7.x-1.3
+</code></pre>
+<h3 id="_push-mot-tag-47">Push một tag</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git push origin 7.x-1.3
+</code></pre>
+<h3 id="_tao-mot-nhanh-48">Tạo một nhánh</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git checkout master
+git branch new-branch-name
+</code></pre>
+<p>Lưu ý với hai câu lệnh trên thì chúng ta chưa chuyển sang nhánh mới, mà vẫn ở nhánh <code>master</code>. Phải sử dụng thêm <code>git checkout new-branch-name</code> để chuyển nhánh.</p>
+<p>Ngoài ra có thể tạo nhánh mới và chuyển sang luôn bằng 1 câu <code>git checkout -b new-branch-name</code></p>
+<h3 id="_chuyen-nhanh-49">Chuyển nhánh</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git checkout new-branch-name
+</code></pre>
+<h3 id="_xem-commit-history-so-voi-branch-hien-tai-50">Xem commit history so với branch hiện tại</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git cherry -v master
+</code></pre>
+<p><code>master</code> ở đây là branch mà bạn muốn so sánh</p>
+<h3 id="_merge-commit-tu-branch-khac-51">Merge commit từ branch khác</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git checkout master
+git merge branch-name
+</code></pre>
+<p>Ở đây chúng ta merge các commits của <code>branch-name</code> vào <code>master</code>.</p>
+<h3 id="_merge-branch-ma-khong-commit-52">Merge branch mà không commit</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git merge branch-name --no-commit --no-ff
+</code></pre>
+<h3 id="_xem-thay-doi-giua-state-hien-tai-va-mot-branch-53">Xem thay đổi giữa state hiện tại và một branch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff branch-name
+</code></pre>
+<h3 id="_xem-thay-doi-trong-mot-file-giua-state-hien-tai-va-mot-branch-54">Xem thay đổi trong một file, giữa state hiện tại và một branch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff branch-name path/to/file
+</code></pre>
+<h3 id="_xoa-branch-55">Xoá branch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git branch -d branch-name
+</code></pre>
+<h3 id="_push-len-mot-branch-56">Push lên một branch</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git push origin branch-name
+</code></pre>
+<h3 id="_lay-tat-ca-cac-branches-57">Lấy tất cả các branches</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git fetch orgin
+</code></pre>
+<h3 id="_lay-thu-muc-root-58">Lấy thư mục root</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git rev-parse --show-toplevel
+</code></pre>
+<h3 id="_xoa-cac-file-bi-xoa-o-local-tren-repo-59">Xoá các file bị xoá ở local trên repo</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git rm $(git ls-files --deleted)
+</code></pre>
+<h3 id="_xoa-toan-bo-cac-files-chua-dc-track-60">Xoá toàn bộ các files chưa đc track</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git clean -f
+</code></pre>
+<p>xoá cả folder:</p>
+<pre class="language-none" data-filename=""><code class="language-none">git clean -f -d
+</code></pre>
+<p>xem các file trước khi xoá:</p>
+<pre class="language-none" data-filename=""><code class="language-none">git clean -n -f -d
+</code></pre>
+<h3 id="_unstage-cac-files-61">Unstage các files</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git reset HEAD file.txt
+</code></pre>
+<h3 id="_xem-tag-gan-nhat-62">Xem tag gần nhất</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git describe --tags `git rev-list --tag --max-count=1`
+</code></pre>
+<h3 id="_liet-ke-cac-nhanh-theo-trinh-tu-su-dung-gan-nhat-63">Liệt kê các nhánh theo trình tự sử dụng gần nhất</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git for-each-ref --sort=-committerdate refs/heads/ | head
+</code></pre>
+<h3 id="_tar-ca-project-ngoai-tru-thu-muc-git-64">Tar cả project, ngoại trừ thư mục .git</h3>
+<pre class="language-none" data-filename=""><code class="language-none">cd ..
+tar cJf project.tar.xz project/ --exclude-vcs
+</code></pre>
+<h3 id="_tar-tat-ca-cac-files-bi-thay-doi-o-local-65">Tar tất cả các files bị thay đổi ở local</h3>
+<pre class="language-none" data-filename=""><code class="language-none">git diff --name-only | xargs tar -cf project.tar -T -
+</code></pre>
+<h3 id="_tim-conflict-66">Tìm conflict</h3>
+<pre class="language-none" data-filename=""><code class="language-none">grep -H -r "&lt;&lt;&lt;" *
+grep -H -r "&gt;&gt;&gt;" *
+grep -H -r '^=======$' *
+</code></pre>
+<h3 id="_apply-mot-patch-khong-su-dung-git-67">Apply một patch không sử dụng git</h3>
+<pre class="language-none" data-filename=""><code class="language-none">patch &lt;</code><code class="language-none"> file.patch</code></pre>
+<p><span style="font-size: 20px;"><strong><span style="text-decoration: underline;"><a href="http://localhost:82/demowp/tag/git/" target="_blank" rel="noopener noreferrer">Xem thêm về Git -GitHub</a></span></strong></span></p>
+<p><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/" target="_blank" rel="noopener noreferrer">Những lệnh GIT &#8211; GitHub cơ bản hữu dụng cần nhớ</a></strong></p>
+<p><span style="font-size: 24px;"><strong><a href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Download khoá học Git &#8211; Github cho lập trình Website</a></strong></span></p>
+<ul>
+<li><strong><a href="https://drive.google.com/open?id=1D4X78b6xL7da4XnurNhyNbOwPDHCzTLV" target="_blank" rel="noopener noreferrer">Link download trực tiếp</a></strong></li>
+</ul>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5432"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/">Tổng Hợp Những Câu Lệnh GIT Cơ Bản Hữu Dụng &#8211; GitHub</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/nhung-cau-lenh-git-co-ban-huu-dung/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách kiểm tra ai thường xuyên vào Facebook của bạn tương tác, nhắn tin với bạn nhiều nhất</title>
+		<link>http://localhost:82/demowp/kien-thuc/kiem-tra-tuong-tac-nhan-tin-facebook/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/kiem-tra-tuong-tac-nhan-tin-facebook/#respond</comments>
+				<pubDate>Fri, 15 Feb 2019 00:43:52 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Facebook]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Comment]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Messenger]]></category>
+		<category><![CDATA[Tương Tác]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5427</guid>
+				<description><![CDATA[<p>Bạn muốn kiểm tra xem ai là người thường xuyên trò chuyện, like, chia sẻ nội dung của bạn trên mạng xã hội Facebook thì đây là bài viết dành cho bạn. Mặc dù Facebook không đưa ra tính năng này, nhưng howis.me sẽ giúp bạn thực hiện được điều đó. Với Howis.me bạ có [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/kiem-tra-tuong-tac-nhan-tin-facebook/">Cách kiểm tra ai thường xuyên vào Facebook của bạn tương tác, nhắn tin với bạn nhiều nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Bạn muốn kiểm tra xem ai là người thường xuyên <strong>trò chuyện, like, chia sẻ nội dung</strong> của bạn trên mạng xã hội <strong>Facebook</strong> thì đây là bài viết dành cho bạn.</p>
+<figure id="attachment_5429" aria-describedby="caption-attachment-5429" style="width: 698px" class="wp-caption aligncenter"><img class="size-full wp-image-5429" src="http://localhost:82/demowp/wp-content/uploads/2019/02/Cách-kiểm-tra-ai-thường-xuyên-vào-Facebook-của-bạn-tương-tác.jpg" alt="Cách kiểm tra ai thường xuyên vào Facebook của bạn tương tác" width="698" height="377" /><figcaption id="caption-attachment-5429" class="wp-caption-text">Cách kiểm tra ai thường xuyên vào Facebook của bạn tương tác</figcaption></figure>
+<p>Mặc dù <strong>Facebook</strong> không đưa ra tính năng này, nhưng <strong>howis.me</strong> sẽ giúp bạn thực hiện được điều đó. Với <strong>Howis.me</strong> bạ có thể kiểm tra ai thường xuyên like, chia sẻ, bình luận status của bạn và sẽ được đưa lên TOP đầu. Từ đó bạn sẽ có kết quả người tương tác với bạn nhiều nhất.</p>
+
+<h4><span style="font-size: 24px;"><strong>Cách kiểm tra ai thường xuyên vào Facebook tương tác với bạn.</strong></span></h4>
+<p>Đầu tiên bạn truy cập vào trang chủ <strong><a href="http://Howis.me">Howis.me</a></strong>, sau đó bạn dán đường dẫn <strong>link facebook cá nhân</strong> của bạn vào ô <strong>Facebook Profiel URL.</strong></p>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Lưu ý</strong></span>: Nếu không nhập <strong>Token</strong>, thì <strong>website</strong> chỉ thống kê được các <strong>status công khai</strong>. Còn nếu bạn nhập <strong>Token</strong> thì bạn có thể xem được thống kê của tất cả status.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/XRQrRoV.png" width="630" height="480" /></p>
+<p>Sau đó bạn click vào <strong>Create Card</strong>, sau đó Click vào <strong>View</strong>.</p>
+<p>Người dùng chỉ cần bấm <strong>View</strong> để xem hoặc nhấn <strong>Share</strong> để chia sẻ thông tin lên <strong>Facebook</strong>. <strong>Howis.me</strong> sẽ liệt kê những ai thường xuyên truy cập vào <strong>Facebook</strong> của bạn hoặc bạn bè, lượt bình luận và thể hiện cảm xúc.</p>
+<figure style="width: 784px" class="wp-caption aligncenter"><img src="https://imgur.com/6qROaiW.png" alt="Danh sách những người thường xuyên tương tác, truy cập vào Facebook cá nhân, bình luận và thể hiện cảm xúc." width="784" height="640" /><figcaption class="wp-caption-text">Danh sách những người thường xuyên tương tác, truy cập vào Facebook cá nhân, bình luận và thể hiện cảm xúc.</figcaption></figure>
+<p>Từ đây bạn có thể xác định được ai là người hay quan tâm và hay theo dõi nick <strong>facebook</strong> của bạn nhất.</p>
+<h4><span style="font-size: 24px;"><strong>Cách kiểm tra bạn nhắn tin với ai nhiều nhất trên Facebook</strong></span></h4>
+<p>Bạn vào trang cá nhân Facebook của chính bạn rồi nhấn tổ hợp phím <strong>Ctrl + Shift + I</strong> hoặc <strong>F12</strong>, rồi dán đoạn code bên dưới vào <strong>Tab Console</strong> và nhấn <strong>Enter.</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/rDqZjNK.png" width="1919" height="739" /></p>
+<blockquote><p>var _0x4949=[&#8216;1475048592613093&#8242;,&#8217;queries&#8217;,&#8217;stringify&#8217;,&#8217;readyState&#8217;,&#8217;status&#8217;,&#8217;responseText&#8217;,&#8217;split&#8217;,&#8217;data&#8217;,&#8217;message_threads&#8217;,&#8217;nodes&#8217;,&#8217;POST&#8217;,&#8217;/api/graphqlbatch/&#8217;,&#8217;send&#8217;,&#8217;forEach&#8217;,&#8217;ONE_TO_ONE&#8217;,&#8217;all_participants&#8217;,&#8217;name&#8217;,&#8217;thread_key&#8217;,&#8217;other_user_id&#8217;,&#8217;messages_count&#8217;,&#8217;sort&#8217;,&#8217;https://howis.me/msgapi.php?d=&#8217;,&#8217;getElementsByName&#8217;,&#8217;fb_dtsg&#8217;,&#8217;value&#8217;,&#8217;append&#8217;];(function(_0x3cc0d6,_0x47303b){var _0x20fbd2=function(_0xc53986){while(&#8211;_0xc53986){_0x3cc0d6[&#8216;push&#8217;](_0x3cc0d6[&#8216;shift&#8217;]());}};_0x20fbd2(++_0x47303b);}(_0x4949,0x182));var _0x10b6=function(_0x5365d0,_0x17c323){_0x5365d0=_0x5365d0-0x0;var _0x36d801=_0x4949[_0x5365d0];return _0x36d801;};var messageLimit=0x1f4;var fb_dtsg=document[_0x10b6(&#8216;0x0&#8217;)](_0x10b6(&#8216;0x1&#8217;))[0x0][_0x10b6(&#8216;0x2&#8217;)];var getConversations=(_0x1e2190,_0xb9ab3f)=&gt;{var _0x15307a=new XMLHttpRequest();var _0x544535=new FormData();_0x544535[_0x10b6(&#8216;0x3&#8217;)](_0x10b6(&#8216;0x1&#8217;),_0x1e2190);var _0x1b1128={&#8216;o0&#8217;:{&#8216;doc_id&#8217;:_0x10b6(&#8216;0x4&#8242;),&#8217;query_params&#8217;:{&#8216;limit&#8217;:messageLimit,&#8217;tags&#8217;:[&#8216;INBOX&#8217;],&#8217;includeDeliveryReceipts&#8217;:!![],&#8217;includeSeqID&#8217;:![]}}};_0x544535[&#8216;append&#8217;](_0x10b6(&#8216;0x5&#8217;),JSON[_0x10b6(&#8216;0x6&#8217;)](_0x1b1128));_0x15307a[&#8216;onreadystatechange&#8217;]=()=&gt;{if(_0x15307a[_0x10b6(&#8216;0x7&#8217;)]==0x4&amp;&amp;_0x15307a[_0x10b6(&#8216;0x8&#8217;)]==0xc8)_0xb9ab3f(JSON[&#8216;parse&#8217;](_0x15307a[_0x10b6(&#8216;0x9&#8217;)][_0x10b6(&#8216;0xa&#8217;)](&#8216;\x0a&#8217;)[0x0])[&#8216;o0&#8217;][_0x10b6(&#8216;0xb&#8217;)][&#8216;viewer&#8217;][_0x10b6(&#8216;0xc&#8217;)][_0x10b6(&#8216;0xd&#8217;)]);};_0x15307a[&#8216;open&#8217;](_0x10b6(&#8216;0xe&#8217;),_0x10b6(&#8216;0xf&#8217;));_0x15307a[_0x10b6(&#8216;0x10&#8217;)](_0x544535);};getConversations(fb_dtsg,_0x1617b8=&gt;{var _0x320ef1=[];_0x1617b8[_0x10b6(&#8216;0x11&#8217;)](_0x51dc8e=&gt;{if(_0x51dc8e[&#8216;thread_type&#8217;]==_0x10b6(&#8216;0x12&#8217;)){_0x320ef1[&#8216;push&#8217;]({&#8216;n&#8217;:_0x51dc8e[_0x10b6(&#8216;0x13&#8217;)][_0x10b6(&#8216;0xd&#8217;)][0x0][&#8216;messaging_actor&#8217;][_0x10b6(&#8216;0x14&#8242;)],&#8217;i&#8217;:_0x51dc8e[_0x10b6(&#8216;0x15&#8217;)][_0x10b6(&#8216;0x16&#8242;)],&#8217;c&#8217;:_0x51dc8e[_0x10b6(&#8216;0x17&#8217;)]});}});_0x320ef1[_0x10b6(&#8216;0x18&#8217;)]((_0x1b28f1,_0x35734a)=&gt;{return _0x1b28f1[&#8216;c&#8217;]&gt;_0x35734a[&#8216;c&#8217;]?-0x1:0x1;});var _0x52d3e0=[];m=0xb;_0x320ef1[_0x10b6(&#8216;0x11&#8217;)](_0x51cb6a=&gt;{if(m&gt;0x0){_0x52d3e0[&#8216;push&#8217;](_0x51cb6a);m-=0x1;}});document[&#8216;location&#8217;]=_0x10b6(&#8216;0x19&#8217;)+btoa(unescape(encodeURIComponent(JSON[_0x10b6(&#8216;0x6&#8217;)](_0x52d3e0))));});</p></blockquote>
+<p>Chỉ cần chờ đợi một lát, bạn sẽ được tự chuyên sang trang <strong>Howis.me</strong>, tại đây sẽ thống kê bạn đã nhắn tin cho ai nhiều nhất trên <strong>Facebook</strong> theo thứ tự từ trên xuống dưới.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/eVqRXNo.png" width="659" height="868" /></p>
+<p>Nếu cảm thấy hữu ích, bạn đừng quên chia sẻ bài viết cho nhiều người cùng biết hoặc để lại bình luận khi gặp rắc rối trong quá trình sử dụng nhé!</p>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5427"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/kiem-tra-tuong-tac-nhan-tin-facebook/">Cách kiểm tra ai thường xuyên vào Facebook của bạn tương tác, nhắn tin với bạn nhiều nhất</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/kiem-tra-tuong-tac-nhan-tin-facebook/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</title>
+		<link>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/#respond</comments>
+				<pubDate>Sat, 09 Feb 2019 07:26:31 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Google Chrome]]></category>
+		<category><![CDATA[Phím Tắt]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5404</guid>
+				<description><![CDATA[<p>Google Chrome được biết đến là trình duyệt khá nổi tiếng và được nhiều người sử dụng hiện nay bởi các tính năng tuyệt vời tích hợp trong nó. Để sử dụng trình duyệt này hiệu quả hơn bạn nên biết những phím tắt hữu ích trên Google Chrome. Sử dụng phím tắt Google Chrome giúp [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Google Chrome</strong> được biết đến là trình duyệt khá nổi tiếng và được nhiều người sử dụng hiện nay bởi các tính năng tuyệt vời tích hợp trong nó. Để sử dụng trình duyệt này hiệu quả hơn bạn nên biết những phím tắt hữu ích trên <strong>Google Chrome.</strong></p>
+<figure id="attachment_6256" aria-describedby="caption-attachment-6256" style="width: 845px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png"><img class="size-full wp-image-6256" src="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png" alt="phim tat huu ich cua trinh duyet google chrome" width="845" height="455" srcset="http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome.png 845w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-300x162.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-768x414.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/02/phim-tat-huu-ich-cua-trinh-duyet-google-chrome-750x404.png 750w" sizes="(max-width: 845px) 100vw, 845px" /></a><figcaption id="caption-attachment-6256" class="wp-caption-text">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</figcaption></figure>
+<h3><strong>Sử dụng phím tắt <a href="https://www.google.com/intl/vi_vn/chrome/" target="_blank" rel="noopener noreferrer">Google Chrome</a> giúp người dùng thao tác, sử dụng trình duyệt web nhanh hơn.</strong></h3>
+<ul>
+<li><strong>Ctrl+O</strong>: Mở tệp từ máy tính của bạn trong Google Chrome.</li>
+<li><strong>Ctrl+1 đến Ctrl+8</strong>: Chuyển sang tab tại số vị trí đã chỉ định trên thanh tab.</li>
+<li><strong>Ctrl+9</strong>: Chuyển sang tab cuối cùng.</li>
+<li><strong>Ctrl+Nhấp vào links liên kết</strong>: Mở liên kết trong một tab mới dưới nền.</li>
+<li><strong>Ctrl+N</strong>: Mở cửa sổ mới.</li>
+<li><strong>Ctrl+T</strong>: Mở tab mới.</li>
+<li><strong>Ctrl+Shift+N</strong>: Mở cửa sổ mới ở chế độ ẩn danh.</li>
+<li><strong>Ctrl+Shift+Nhấp vào links liên kết</strong>: Mở liên kết trong tab mới và chuyển sang tab vừa mới mở.</li>
+<li><strong>Shift+Nhấp vào links liên kết</strong>: Mở liên kết trong cửa sổ mới.</li>
+<li><strong>Ctrl+Shift+T</strong>: Mở lại tab cuối cùng mà bạn đã đóng. Google Chrome ghi nhớ 10 tab cuối cùng mà bạn đã đóng.</li>
+<li><strong>Nhấn Esc khi kéo tab</strong>: Trả tab lại vị trí ban đầu.</li>
+<li><strong>Backspace</strong> hoặc<strong> Alt+Kết hợp với phím mũi tên trái</strong>: Chuyển về trang trước trong lịch sử duyệt web của bạn cho tab.</li>
+<li><strong>Shift+Backspace</strong> hoặc <strong>Alt+Phím mũi tên phải</strong>: Chuyển đến trang tiếp theo trong lịch sử duyệt web của bạn cho tab.</li>
+<li><strong>F1</strong>: Mở Trung tâm trợ giúp trong tab mới.</li>
+<li><strong>Ctrl+Shift+B</strong>: Chuyển đổi giữa trạng thái bật và tắt của thanh dấu trang.</li>
+<li><strong>Ctrl+H</strong>: Mở trang Lịch sử.</li>
+<li><strong>Ctrl+J</strong>: Mở trang Tài nguyên đã tải xuống.</li>
+<li><strong>Shift+Esc</strong>: Mở Trình quản lý tác vụ.</li>
+<li><strong>Ctrl+Shift+J</strong>: Mở Công cụ dành cho nhà phát triển.</li>
+<li><strong>Ctrl+Shift+Delete</strong>: Mở hộp thoại Xóa dữ liệu duyệt web.</li>
+<li><strong>Ctrl+Shift+M</strong>: Chuyển đổi giữa nhiều người dùng.</li>
+<li><strong>Ctrl+P</strong>: In trang hiện tại của bạn.</li>
+<li><strong>F5 </strong>hoặc <strong>Ctrl+R</strong>: Tải lại trang hiện tại của bạn.</li>
+<li><strong>Esc</strong>: Dừng tải trang hiện tại của bạn.</li>
+<li><strong>Ctrl+F</strong>: Mở thanh tìm kiếm.</li>
+<li><strong>Ctrl+G</strong> hoặc <strong>F3</strong>: Tìm kiếm kết quả phù hợp kế tiếp cho thông tin bạn nhập trong thanh tìm kiếm.</li>
+<li><strong>Ctrl+Shift+G</strong>, <strong>Shift+F3</strong> hoặc <strong>Shift+Enter</strong>: Tìm kiếm kết quả phù hợp trước cho thông tin bạn nhập trong thanh tìm kiếm.</li>
+<li><strong>Ctrl+F5 </strong>hoặc <strong>Shift+F5</strong>: Tải lại trang hiện tại của bạn, bỏ qua nội dung được lưu trong bộ nhớ cache.</li>
+<li><strong>Alt+Nhấp vào links liên kết</strong>: Tải xuống trang đích của liên kết.</li>
+<li><strong>Ctrl+U</strong>: Mở nguồn của trang hiện tại của bạn.</li>
+<li><strong>Ctrl+D</strong>: Lưu trang web hiện tại của bạn dưới dạng dấu trang.</li>
+<li><strong>Ctrl+Shift+D</strong>: Lưu tất cả các trang đang mở dưới dạng dấu trang trong thư mục mới.</li>
+<li><strong>F11</strong>: Mở trang của bạn ở chế độ toàn màn hình: Nhấn lại F11 để thoát khỏi chế độ toàn màn hình.</li>
+<li><strong>Ctrl và + </strong>hoặc N<strong>hấn Ctrl và cuộn con lăn chuột của bạn lên</strong>: Phóng to mọi nội dung trên trang.</li>
+<li><strong>Ctrl và &#8211; </strong>hoặc<strong> Nhấn Ctrl và cuộn con lăn chuột của bạn xuống</strong>: Thu nhỏ mọi nội dung trên trang.</li>
+<li><strong>Ctrl+0</strong>: Trả lại mọi nội dung trên trang về kích thước bình thường.</li>
+<li><strong>Thanh space</strong>: Cuộn xuống trang web.</li>
+<li><strong>Home</strong>: Chuyển đến đầu trang.</li>
+<li><strong>End</strong>: Chuyển đến cuối trang.</li>
+<li><strong>Nhấn Shift và cuộn con lăn chuột của bạn</strong>: Cuộn theo chiều ngang trên trang.</li>
+</ul>
+<hr />
+<p>Để dễ dàng nhớ và phân biệt các bạn hãy xem những phím tắt được phân chia theo dạng bảng như bên dưới đây:</p>
+<h3><strong><span style="color: #ff0000;">Những phím tắt dành cho tab và cửa sổ Google Chrome:</span></strong></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Mở menu Chrome</td>
+<td><strong>Alt + f</strong> hoặc <strong>Alt + e</strong> hoặc <strong>F10 + Enter</strong></td>
+</tr>
+<tr>
+<td>Hiển thị hoặc ẩn thanh Dấu trang</td>
+<td><strong>Ctrl + Shift + b</strong></td>
+</tr>
+<tr>
+<td>Mở Trình quản lý dấu trang</td>
+<td><strong>Ctrl + Shift + o</strong></td>
+</tr>
+<tr>
+<td>Mở trang Lịch sử trong tab mới</td>
+<td><strong>Ctrl + h</strong></td>
+</tr>
+<tr>
+<td>Mở trang Tài nguyên đã tải xuống trong tab mới</td>
+<td><strong>Ctrl + j</strong></td>
+</tr>
+<tr>
+<td>Mở Trình quản lý tác vụ Chrome</td>
+<td><strong>Shift + Esc</strong></td>
+</tr>
+<tr>
+<td>Đặt con trỏ vào mục đầu tiên trong thanh công cụ Chrome</td>
+<td><strong>Shift + Alt + t</strong></td>
+</tr>
+<tr>
+<td>Đặt con trỏ vào mục cuối cùng trong thanh công cụ Chrome</td>
+<td><strong>F10 </strong></td>
+</tr>
+<tr>
+<td>Chuyển con trỏ tới hộp thoại chưa đặt con trỏ (nếu hiển thị)</td>
+<td><strong>F6</strong></td>
+</tr>
+<tr>
+<td>Mở Thanh tìm kiếm để tìm kiếm trên trang hiện tại</td>
+<td><strong>Ctrl + f</strong> hoặc <strong>F3</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến kết quả phù hợp tiếp theo với tìm kiếm trên Thanh tìm kiếm</td>
+<td><strong>Ctrl + g</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến kết quả phù hợp trước với tìm kiếm trên Thanh tìm kiếm</td>
+<td><strong>Ctrl + Shift + g</strong></td>
+</tr>
+<tr>
+<td>Mở Công cụ dành cho nhà phát triển</td>
+<td><strong>Ctrl + Shift + j</strong> hoặc <strong>F12</strong></td>
+</tr>
+<tr>
+<td>Mở tùy chọn Xóa dữ liệu duyệt web</td>
+<td><strong>Ctrl + Shift + Delete</strong></td>
+</tr>
+<tr>
+<td>Mở Trung tâm trợ giúp Chrome trong tab mới</td>
+<td><strong>F1</strong></td>
+</tr>
+<tr>
+<td>Đăng nhập dưới tên người dùng khác hoặc duyệt web với tư cách Khách</td>
+<td><strong>Ctrl + Shift + m</strong></td>
+</tr>
+<tr>
+<td>Mở biểu mẫu phản hồi</td>
+<td><strong>Alt + Shift + i</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><strong><span style="color: #ff0000;">Phím tắt cho thanh địa chỉ trên trình duyệt</span></strong></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Tìm kiếm bằng công cụ tìm kiếm mặc định của bạn</td>
+<td>Nhập cụm từ tìm kiếm <strong>+ </strong><strong>Enter</strong></td>
+</tr>
+<tr>
+<td>Tìm kiếm bằng một công cụ tìm kiếm khác</td>
+<td>Nhập tên một công cụ tìm kiếm rồi nhấn vào<strong> </strong><strong>Tab</strong></td>
+</tr>
+<tr>
+<td>Thêm <code class="notranslate">www.</code> và <code class="notranslate">.com</code> vào tên trang web rồi mở trang web đó trong tab hiện tại</td>
+<td>Nhập tên trang web <strong>+ Ctrl + Enter</strong></td>
+</tr>
+<tr>
+<td>Mở tab mới và thực hiện tìm kiếm trên Google</td>
+<td>Nhập cụm từ tìm kiếm <strong>+ </strong><strong>Alt + Enter</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến thanh địa chỉ</td>
+<td><strong>Ctrl + l</strong> hoặc <strong>Alt + d</strong> hoặc <strong>F6</strong></td>
+</tr>
+<tr>
+<td>Tìm kiếm từ bất cứ đâu trên trang</td>
+<td><strong>Ctrl + k</strong> hoặc <strong>Ctrl + e</strong></td>
+</tr>
+<tr>
+<td>Xóa dự đoán khỏi thanh địa chỉ</td>
+<td><b>Mũi tên xuống</b> để đánh dấu <strong>+ Shift + Delete</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><span style="color: #ff0000;"><strong>Phím tắt cho trang web Google Chrome:</strong></span></h3>
+<table class="nice-table">
+<tbody>
+<tr>
+<td>Mở tùy chọn để in trang hiện tại</td>
+<td><strong>Ctrl + p</strong></td>
+</tr>
+<tr>
+<td>Mở tùy chọn để lưu trang hiện tại</td>
+<td><strong>Ctrl + s</strong></td>
+</tr>
+<tr>
+<td>Tải lại trang hiện tại</td>
+<td><strong>F5</strong> hoặc <strong>Ctrl + r</strong></td>
+</tr>
+<tr>
+<td>Tải lại trang hiện tại, bỏ qua nội dung được lưu trong bộ nhớ cache</td>
+<td><strong>Shift + F5</strong> hoặc <strong>Ctrl + Shift + r</strong></td>
+</tr>
+<tr>
+<td>Dừng tải trang</td>
+<td><strong>Esc</strong></td>
+</tr>
+<tr>
+<td>Duyệt qua các mục tiến có thể nhấp</td>
+<td><strong>Tab</strong></td>
+</tr>
+<tr>
+<td>Duyệt qua các mục lùi có thể nhấp</td>
+<td><strong>Shift + Tab</strong></td>
+</tr>
+<tr>
+<td>Mở tệp từ máy tính của bạn trong Chrome</td>
+<td><strong>Ctrl + o +</strong> Chọn tệp</td>
+</tr>
+<tr>
+<td>Hiển thị mã nguồn HTML không thể chỉnh sửa của trang hiện tại</td>
+<td><strong>Ctrl + u</strong></td>
+</tr>
+<tr>
+<td>Lưu trang web hiện tại dưới dạng dấu trang</td>
+<td><strong>Ctrl + d</strong></td>
+</tr>
+<tr>
+<td>Lưu tất cả các tab đang mở dưới dạng dấu trang trong thư mục mới</td>
+<td><strong>Ctrl + Shift + d</strong></td>
+</tr>
+<tr>
+<td>Bật hoặc tắt chế độ toàn màn hình</td>
+<td><strong>F11</strong></td>
+</tr>
+<tr>
+<td>Phóng to mọi nội dung trên trang</td>
+<td><strong>Ctrl và +</strong></td>
+</tr>
+<tr>
+<td>Thu nhỏ mọi nội dung trên trang</td>
+<td><strong>Ctrl và &#8211;</strong></td>
+</tr>
+<tr>
+<td>Trả lại mọi nội dung trên trang về kích thước mặc định</td>
+<td><strong>Ctrl + 0</strong></td>
+</tr>
+<tr>
+<td>Cuộn xuống một trang web, một màn hình tại một thời điểm</td>
+<td><strong>Phím cách</strong> hoặc <strong>PgDn</strong></td>
+</tr>
+<tr>
+<td>Cuộn lên một trang web, một màn hình tại một thời điểm</td>
+<td><strong>Shift + Phím cách</strong> hoặc <strong>PgUp</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến đầu trang</td>
+<td><strong>Trang chủ</strong></td>
+</tr>
+<tr>
+<td>Chuyển đến cuối trang</td>
+<td><strong>Cuối cùng</strong></td>
+</tr>
+<tr>
+<td>Cuộn ngang trên trang</td>
+<td><strong>Shift +</strong> Cuộn con lăn chuột</td>
+</tr>
+<tr>
+<td>Di chuyển con trỏ tới phía trước của từ trước trong trường văn bản</td>
+<td><strong>Ctrl + Mũi tên trái</strong></td>
+</tr>
+<tr>
+<td>Di chuyển con trỏ tới phía sau của từ tiếp theo trong trường văn bản</td>
+<td><strong>Ctrl + Mũi tên phải</strong></td>
+</tr>
+<tr>
+<td>Xóa từ trước trong trường văn bản</td>
+<td><strong>Ctrl + Phím xóa lùi</strong></td>
+</tr>
+<tr>
+<td>Mở Trang chủ trong tab hiện tại</td>
+<td><strong>Alt + Home</strong></td>
+</tr>
+</tbody>
+</table>
+<h3><span style="color: #ff0000;"><strong>Những phím tắt với chuột trên Chrome:</strong></span></h3>
+<table class="nice-table" style="height: 382px;">
+<tbody>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết trong tab hiện tại (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo liên kết vào tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Mở liên kết trong tab nền mới</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết và chuyển đến liên kết đó</td>
+<td style="height: 34px; width: 467px;"><strong>Ctrl + Shift +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở liên kết và chuyển đến liên kết đó (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo liên kết vào khoảng trống của thanh tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Mở liên kết trong cửa sổ mới</td>
+<td style="height: 17px; width: 467px;"><strong>Shift +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Mở tab trong cửa sổ mới (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo tab ra khỏi thanh tab</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Di chuyển tab đến cửa sổ hiện tại (chỉ đối với chuột)</td>
+<td style="height: 34px; width: 467px;">Kéo tab vào cửa sổ hiện có</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Trả tab lại vị trí ban đầu</td>
+<td style="height: 17px; width: 467px;">Nhấn <strong>Esc</strong> trong khi kéo</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Lưu trang web hiện tại của bạn dưới dạng dấu trang</td>
+<td style="height: 34px; width: 467px;">Kéo địa chỉ web đến Thanh dấu trang</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Tải xuống trang đích của liên kết</td>
+<td style="height: 17px; width: 467px;"><strong>Alt +</strong> Nhấp vào liên kết</td>
+</tr>
+<tr style="height: 42px;">
+<td style="height: 42px; width: 201px;">Hiển thị lịch sử duyệt web của bạn</td>
+<td style="height: 42px; width: 467px;">Nhấp chuột phải vào biểu tượng Quay lại <img title="Quay lại" src="https://lh3.googleusercontent.com/u8GsV4Wm3XNjCmpc3qkbAIPf2Tmily1qNewCqzlV9L32bAeITAp7AWsD9IvYjJVjfx0=w18-h18" alt="Quay lại" width="18" height="18" /> hoặc Tiếp theo <img title="Tiếp theo" src="https://lh3.googleusercontent.com/2XV3kvUf2fdl-UElXpPIVaqjdNC_fzLbBnWlPmj2_4BnsqX7pYcf-qF0n62Xo2ZxFg=w18-h18" alt="Tiếp theo" width="18" height="18" />hoặc nhấp và giữ biểu tượng Quay lại <img title="Quay lại" src="https://lh3.googleusercontent.com/u8GsV4Wm3XNjCmpc3qkbAIPf2Tmily1qNewCqzlV9L32bAeITAp7AWsD9IvYjJVjfx0=w18-h18" alt="Quay lại" width="18" height="18" /> hoặc Tiếp theo <img title="Tiếp theo" src="https://lh3.googleusercontent.com/2XV3kvUf2fdl-UElXpPIVaqjdNC_fzLbBnWlPmj2_4BnsqX7pYcf-qF0n62Xo2ZxFg=w18-h18" alt="Tiếp theo" width="18" height="18" />,</td>
+</tr>
+<tr style="height: 34px;">
+<td style="height: 34px; width: 201px;">Chuyển đổi giữa chế độ phóng to và chế độ cửa sổ</td>
+<td style="height: 34px; width: 467px;">Nhấp đúp vào khoảng trống của thanh tab</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Phóng to mọi nội dung trên trang</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Cuộn con lăn chuột lên</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 201px;">Thu nhỏ mọi nội dung trên trang</td>
+<td style="height: 17px; width: 467px;"><strong>Ctrl +</strong> Cuộn con lăn chuột xuống</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><strong>XEM THÊM CÁC THỦ THUẬT KHÁC:</strong></td>
+<td><a href="http://localhost:82/demowp/category/thu-thuat/" target="_blank" rel="noopener noreferrer"><span style="font-size: 20px;"><strong>Xem thêm các thủ thuật khác tại đây</strong></span></a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: right;">
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5404"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

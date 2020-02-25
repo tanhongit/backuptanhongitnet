@@ -1,0 +1,21 @@
+From 647fecefc18da529cd373f498705bd1e2d6348d9 Mon Sep 17 00:00:00 2001
+From: alvarotrigo <atrigol@gmail.com>
+Date: Wed, 21 Jan 2015 21:54:51 +0000
+Subject: [PATCH] - Added website to "who is using pagePiling.js"
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index 51a708d..9e9bb7f 100644
+--- a/README.md
++++ b/README.md
+@@ -304,6 +304,7 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
+ [![Facebook](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/facebook-pagepiling.gif)](http://www.facebookgroups.com/)
+ 
+ - http://www.facebookgroups.com/
++- https://number26.de/
+ - http://fngeats.com/
+ - http://ednahouse.org/statistics/
+ - http://sushi.steadfastlight.com/

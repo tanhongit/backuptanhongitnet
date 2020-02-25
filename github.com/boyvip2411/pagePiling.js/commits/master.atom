@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/boyvip2411/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/boyvip2411/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2014-11-02T17:31:15Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f02975d34999b94a5dc0df342bb0bdde289570d9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/f02975d34999b94a5dc0df342bb0bdde289570d9"/>
+    <title>
+        Fixed syntax error #21
+    </title>
+    <updated>2014-11-02T17:31:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed syntax error #21&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/64634f9b5e348aac9856de93160774894b21bdd0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/64634f9b5e348aac9856de93160774894b21bdd0"/>
+    <title>
+        Fixed syntax error #21
+    </title>
+    <updated>2014-11-02T17:29:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixed syntax error #21&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/90aef620ee17d9ccad22fca886cd5c83e481d502</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/90aef620ee17d9ccad22fca886cd5c83e481d502"/>
+    <title>
+        Merge pull request #20 from cymruu/master
+    </title>
+    <updated>2014-11-01T20:30:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #20 from cymruu/master
+
+typo in demoPage.html&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ad27b66563bd9f88cd43afa4f6e3e73348a13a87</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/ad27b66563bd9f88cd43afa4f6e3e73348a13a87"/>
+    <title>
+        typo in demoPag.html
+    </title>
+    <updated>2014-11-01T20:24:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/2981598?s=30&amp;v=4"/>
+    <author>
+      <name>cymruu</name>
+      <uri>https://github.com/cymruu</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;typo in demoPag.html&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/da282039ff0a017d84456980c1a158d039e6c231</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/da282039ff0a017d84456980c1a158d039e6c231"/>
+    <title>
+        - Updated bower.json version
+    </title>
+    <updated>2014-10-24T09:57:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated bower.json version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/68eb497915d1517f2f7db40b0a264d2714d56314</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/68eb497915d1517f2f7db40b0a264d2714d56314"/>
+    <title>
+        - Fixed bug when using css3:false or using the plugin in IE9 or lower.
+    </title>
+    <updated>2014-10-24T09:54:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug when using css3:false or using the plugin in IE9 or lower.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3034a2e6ab71ac3422568c3070ffecce4006ca9c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/3034a2e6ab71ac3422568c3070ffecce4006ca9c"/>
+    <title>
+        - Updated donate button in english language
+    </title>
+    <updated>2014-10-23T11:17:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated donate button in english language&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d411764fd07b9530b44dda6beea5edfc05d6056a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/d411764fd07b9530b44dda6beea5edfc05d6056a"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-10-23T08:03:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b440f726396fafc102cdc1ba5ca96aa46990f25a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/b440f726396fafc102cdc1ba5ca96aa46990f25a"/>
+    <title>
+        - Optional installation with bower
+    </title>
+    <updated>2014-10-23T07:54:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Optional installation with bower&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fda961e4ba3291201186686ff5fdf95f89d78d46</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/fda961e4ba3291201186686ff5fdf95f89d78d46"/>
+    <title>
+        - Updaing versio numbers #15
+    </title>
+    <updated>2014-10-22T12:13:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updaing versio numbers #15&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/995d64cd6574a29d4181409b217f90efa2d1b749</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/995d64cd6574a29d4181409b217f90efa2d1b749"/>
+    <title>
+        Merge pull request #15 from frostwind/horizontal-scroll-swipe-fix
+    </title>
+    <updated>2014-10-22T12:07:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #15 from frostwind/horizontal-scroll-swipe-fix
+
+Fixed horizontal swipe&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fea483bb92f92bba2afbcc59907fbf1ba8a0d527</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/fea483bb92f92bba2afbcc59907fbf1ba8a0d527"/>
+    <title>
+        A small refactoring of the swiping code
+    </title>
+    <updated>2014-10-22T12:01:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/75196cfaaf58929b4703d045ad61c30e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>hi@frostwind.me</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;A small refactoring of the swiping code
+The new code for horizontal swiping only triggers when the direction is set to horizontal
+Or else, the code behaves as it used to&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cd8d137e57aff964c1a4d7dd37dce1748061b37e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/cd8d137e57aff964c1a4d7dd37dce1748061b37e"/>
+    <title>
+        fixed horizontal swipe
+    </title>
+    <updated>2014-10-22T10:32:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/75196cfaaf58929b4703d045ad61c30e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>hi@frostwind.me</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fixed horizontal swipe&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4bb6d6edba491ea205dbfec5906e386c9611ae88</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/4bb6d6edba491ea205dbfec5906e386c9611ae88"/>
+    <title>
+        Merge pull request #14 from philipheinser/master
+    </title>
+    <updated>2014-10-22T09:46:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #14 from philipheinser/master
+
+Update README.md shorter bower install&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/673b379b64bea53366d7ac4005b03c1ff366219a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/673b379b64bea53366d7ac4005b03c1ff366219a"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-10-22T09:43:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d816c88f3dc8379369966077959c1e4f580db67d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/d816c88f3dc8379369966077959c1e4f580db67d"/>
+    <title>
+        Merge pull request #13 from philipheinser/master
+    </title>
+    <updated>2014-10-22T09:39:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #13 from philipheinser/master
+
+Updated README.md with bower usage&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2d92945eca161df484dc42fe5ec452160a8b182d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/2d92945eca161df484dc42fe5ec452160a8b182d"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-10-22T09:37:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/df4fad5700959289f7ca1438c3689afef3153483</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/df4fad5700959289f7ca1438c3689afef3153483"/>
+    <title>
+        Updated README.md with bower usage
+    </title>
+    <updated>2014-10-22T09:29:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated README.md with bower usage&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e1ee41ff621170b5cf9a6d2a913e66d06272f329</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/e1ee41ff621170b5cf9a6d2a913e66d06272f329"/>
+    <title>
+        - Solved bug when clicking on an active navigation bullet and when lo…
+    </title>
+    <updated>2014-10-22T09:16:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug when clicking on an active navigation bullet and when loading from an anchor. #12&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e797b2888536c9bba59c9d8c547e4500535a0cdc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/boyvip2411/pagePiling.js/commit/e797b2888536c9bba59c9d8c547e4500535a0cdc"/>
+    <title>
+        - Updated version
+    </title>
+    <updated>2014-10-21T16:01:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated version&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

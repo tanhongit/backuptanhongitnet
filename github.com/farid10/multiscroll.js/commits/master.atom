@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/farid10/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/farid10/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2017-05-09T11:00:34Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bfc6d02e5b0e33e07374841eb79142da36f81b38</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/bfc6d02e5b0e33e07374841eb79142da36f81b38"/>
+    <title>
+        - Fixed bug: multiScroll expand related issues
+    </title>
+    <updated>2017-05-09T11:00:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug: multiScroll expand related issues&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/01d5e78f82370639b846a90670c8227f3f46f5a7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/01d5e78f82370639b846a90670c8227f3f46f5a7"/>
+    <title>
+        - Updated extensions file
+    </title>
+    <updated>2017-04-27T17:30:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated extensions file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4a124db0672a40d07ca9b6e7f71a0e9953879c6c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/4a124db0672a40d07ca9b6e7f71a0e9953879c6c"/>
+    <title>
+        - Updated extensions file
+    </title>
+    <updated>2017-04-24T16:26:09Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated extensions file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a8ae24a612dd854a525ca1823b823dd65f534477</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/a8ae24a612dd854a525ca1823b823dd65f534477"/>
+    <title>
+        - Update version and dist files
+    </title>
+    <updated>2017-04-24T11:22:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Update version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4fd0f50b6765e8fc342406b16ef9f797ed876d2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/d4fd0f50b6765e8fc342406b16ef9f797ed876d2"/>
+    <title>
+        - Update version and dist files
+    </title>
+    <updated>2017-04-24T11:21:27Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Update version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/03fa9102aa2b3cb15ac2325a00e35cb5a303d03b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/03fa9102aa2b3cb15ac2325a00e35cb5a303d03b"/>
+    <title>
+        - Added responsive expand example
+    </title>
+    <updated>2017-04-24T11:03:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added responsive expand example&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b75e0f95c43f22c52aeeb8a94ef5c433840b60e6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/b75e0f95c43f22c52aeeb8a94ef5c433840b60e6"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:59:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ca7ca4db74f1192efa06ea15b7db6bf9f4979257</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/ca7ca4db74f1192efa06ea15b7db6bf9f4979257"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:58:16Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/c69fb3338b2dcbfa7452f8695b6b0c6a91526f61"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:55:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bbda4a73b10ed490262d7fd3cb667061bcf2d24d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/bbda4a73b10ed490262d7fd3cb667061bcf2d24d"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:54:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bde4eb3c868c0aa60506b65c8f35bf914bf735ef</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/bde4eb3c868c0aa60506b65c8f35bf914bf735ef"/>
+    <title>
+        - Docs improvements
+    </title>
+    <updated>2017-04-24T10:53:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs improvements&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3b0d136f0be190b3c414a5e89e48246fa774fb10</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/3b0d136f0be190b3c414a5e89e48246fa774fb10"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:39:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3215e5a263aac27a0e53152561c19a82999ffa15</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/3215e5a263aac27a0e53152561c19a82999ffa15"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:12:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5d38f6d629efaf62b6d9216c815104de2a68f94a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/5d38f6d629efaf62b6d9216c815104de2a68f94a"/>
+    <title>
+        - Docs for responsive options
+    </title>
+    <updated>2017-04-24T10:07:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Docs for responsive options&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/88d002734ce6558d3e613c31af88f12dfc0bc0c3"/>
+    <title>
+        - Fixed typo
+    </title>
+    <updated>2017-04-23T16:44:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed typo&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0117710c188f4da5d01f5f853e415dc15ca99acf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/0117710c188f4da5d01f5f853e415dc15ca99acf"/>
+    <title>
+        Improve aesthetics
+    </title>
+    <updated>2017-04-23T14:57:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Improve aesthetics&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/1a4d45b08e7de79a18d2a856e74f3f5a51560011"/>
+    <title>
+        - Added extensions file
+    </title>
+    <updated>2017-04-23T14:50:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added extensions file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/693954e70760e2592c76ca8e05070c848474527e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/693954e70760e2592c76ca8e05070c848474527e"/>
+    <title>
+        Fixing headers
+    </title>
+    <updated>2017-04-23T14:44:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixing headers&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/12c2b21a6ebaa22be755e5b1b19e048de6c6a61c"/>
+    <title>
+        Merge pull request #80 from talgautb/master
+    </title>
+    <updated>2016-10-15T13:58:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #80 from talgautb/master
+
+Fix destroy/build functions, update packages&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/farid10/multiscroll.js/commit/cbcd08e00c8751c038f53a9e259ce1616acf94e7"/>
+    <title>
+        fix issue #64
+    </title>
+    <updated>2016-10-15T13:13:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix issue #64&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,22 @@
+From bbda4a73b10ed490262d7fd3cb667061bcf2d24d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Mon, 24 Apr 2017 11:54:44 +0100
+Subject: [PATCH] - Docs improvements
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 30251fb..8804a6a 100644
+--- a/README.md
++++ b/README.md
+@@ -156,7 +156,7 @@ $(document).ready(function() {
+ });
+ ```
+ 
+-#### Creating links to sections
++### Creating links to sections
+ If you are using multiscroll.js with anchor links for the sections (using the `anchors` option), then you will be able to use anchor links also to navigate directly to a certain section by using the URL.
+ 
+ You can do it by creating accessing to the URL by adding the anchor. For example: `http://youriste.com/#secondSection`.

@@ -1,0 +1,19 @@
+
+<div class="SelectMenu-filter">
+  <input class="SelectMenu-input form-control js-filterable-field" id="projects-filter-field"  type="text"  placeholder="Filter projects" aria-label="Filter projects" autocomplete="off" autofocus>
+</div>
+
+<tab-container>
+  <div class="SelectMenu-tabs" role="tablist" aria-label="Filter tabs">
+      <button class="SelectMenu-tab" type="button" role="tab" aria-selected="true">Repository</button>
+  </div>
+
+    <div class="SelectMenu-list select-menu-list" role="tabpanel" >
+  <div data-filterable-for="projects-filter-field" data-filterable-type="substring">
+  </div>
+
+  <div class="select-menu-no-results">No projects found. Sorry about that.</div>
+</div>
+
+
+</tab-container>

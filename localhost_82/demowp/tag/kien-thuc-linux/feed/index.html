@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Kiến thức Linux &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/kien-thuc-linux/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Wed, 21 Aug 2019 08:04:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Kiến thức Linux &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Tổng hợp các lệnh liên quan tới APT trên Debian</title>
+		<link>http://localhost:82/demowp/kien-thuc/tong-hop-cac-lenh-lien-quan-toi-apt-tren-debian/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/tong-hop-cac-lenh-lien-quan-toi-apt-tren-debian/#respond</comments>
+				<pubDate>Mon, 11 Mar 2019 16:15:54 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Kiến thức Linux]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5571</guid>
+				<description><![CDATA[<p>Advanced Packaging Tool, hay APT, là phần mềm miễn phí dùng để quản lý việc cài đặt phần mềm trên Linux. Lệnh APT trên Debian làm đơn giản các thủ tục quản lý phần mềm trên các máy tính tựa Unix bằng cách tự động hóa việc tải về, cấu hình và cài đặt các gói [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-cac-lenh-lien-quan-toi-apt-tren-debian/">Tổng hợp các lệnh liên quan tới APT trên Debian</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Advanced Packaging Tool</strong>, hay <strong>APT</strong>, là phần mềm miễn phí dùng để quản lý việc cài đặt phần mềm trên <strong>Linux</strong>. <strong>Lệnh APT trên Debian</strong> làm đơn giản các thủ tục quản lý phần mềm trên các máy tính tựa <strong>Unix</strong> bằng cách tự động hóa việc tải về, cấu hình và cài đặt các gói phần mềm, cả ở dạng biên dịch sẵn (dạng binary) hoặc biên dịch mã nguồn.</p>
+<figure id="attachment_5930" aria-describedby="caption-attachment-5930" style="width: 699px" class="wp-caption aligncenter"><img class="size-full wp-image-5930" src="http://localhost:82/demowp/wp-content/uploads/2019/03/Tổng-hợp-các-lệnh-liên-quan-tới-APT-trên-Debian.jpg" alt="Tổng hợp các lệnh liên quan tới APT trên Debian" width="699" height="393" srcset="http://localhost:82/demowp/wp-content/uploads/2019/03/Tổng-hợp-các-lệnh-liên-quan-tới-APT-trên-Debian.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/03/Tổng-hợp-các-lệnh-liên-quan-tới-APT-trên-Debian-300x169.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /><figcaption id="caption-attachment-5930" class="wp-caption-text">Tổng hợp các lệnh liên quan tới APT trên Debian</figcaption></figure>
+<h2><strong>Sau đây là tổng hợp các lệnh liên quan tới APT trên Debian mà bạn cần biết:</strong></h2>
+<ol>
+<li>Liệt kê toàn bộ những package có trên APT: <em><strong>apt-cache pkgnames</strong></em></li>
+<li>Tìm kiếm tên và thông tin về một package: <em><strong>apt-cache search</strong></em> &lt;tên package&gt;</li>
+<li>Tìm kiếm các package bắt đầu bằng abc: <em><strong>apt-cache pkgnames</strong></em> abc</li>
+<li>Kiểm tra thông tin về một package: <em><strong>apt-cache show</strong></em> &lt;tên package&gt;</li>
+<li>Check các phần phụ thuộc của một package: <em><strong>apt-cache showpkg</strong></em> &lt;tên package&gt;</li>
+<li>Kiểm tra thông số về cache của apt: <em><strong>apt-cache stats</strong></em></li>
+<li>Cập nhật các package của hệ thống: <em><strong>apt-get update</strong></em></li>
+<li>Cập nhật các phần mềm của hệ thống: <em><strong>apt-get upgrade</strong></em></li>
+<li>Update các phần mềm của hệ thống (Nếu bạn không quan tâm tới các packages được thêm vào hay gỡ đi do phụ thuộc vào các phần mở rộng): <em><strong>apt-get dist-upgrade</strong></em></li>
+<li>Setup hoặc nâng cấp một package cụ thể: <em><strong>apt-get install</strong></em> &lt;tên package&gt;</li>
+<li>Cài đặt hoặc nâng cấp nhiều package cụ thể cùng một lúc: <em><strong>apt-get install</strong></em> &lt;tên package 1&gt; &lt;tên package 2&gt; (Phân cách bởi dấu cách)</li>
+<li>Setup một vài package bắt đầu hoặc kết thúc bởi một đoạn kí tự: <em><strong>apt-get install</strong></em> *name* (Nếu các bạn muốn cài các package bắt đầu bằng abc thì gõ abc* còn các package kết thúc bằng abc thì gõ *abc)</li>
+<li>Cài đặt package mà không nâng cấp: <em><strong>apt-get install</strong></em> &lt;tên package&gt; <em><strong>–no-upgrade</strong></em></li>
+<li>Cập nhật một package cụ thể: <em><strong>apt-get install</strong></em> &lt;tên package&gt; <em><strong>–only-upgrade</strong></em></li>
+<li>Setup một phiên bản cụ thể của một package: <em><strong>apt-get install</strong></em> &lt;tên package&gt;<em>=phiên bản</em> (Ví dụ: vsftpd=2.3.5-3ubuntu1)</li>
+<li>Gỡ bỏ một packages không thông qua cấu hình: <em><strong>apt-get remove</strong></em> &lt;tên package&gt;</li>
+<li>Gỡ bỏ hoàn toàn một packages: <em><strong>apt-get purge</strong></em> &lt;tên package&gt; hoặc <em><strong>apt-get remove –purge</strong></em> &lt;tên package&gt;</li>
+<li>Dọn dẹp đĩa để tăng khoảng trống: <em><strong>apt-get clean</strong></em></li>
+<li>Chỉ tải về mã nguồn của packages: <em><strong>apt-get –download-only source</strong></em> &lt;tên package&gt;</li>
+<li>Tải về và xả nén một package: <em><strong>apt-get source</strong></em> &lt;tên package&gt;</li>
+<li>Tải về, xả nén và biên dịch một package: <em><strong>apt-get –compile source</strong></em> &lt;tên package&gt;</li>
+<li>Download package nhưng không cài đặt <em><strong>apt-get download</strong></em> &lt;tên package&gt;</li>
+<li>Kiểm tra changelog (Các thay đổi của từng phiên bản) của một package: <em><strong>apt-get changelog</strong></em> &lt;tên package&gt;</li>
+<li>Kiểm tra các phần bổ trợ bị hỏng: <em><strong>apt-get check</strong></em></li>
+<li>Tìm kiếm và cài đặt các phần bổ trợ cần thiết cho một package: <em><strong>apt-get build-dep</strong></em> &lt;tên package&gt;</li>
+<li>Tự động làm sạch Cache: <em><strong>apt-get autoclean</strong></em></li>
+<li>Gỡ bỏ package đã được cài đặt: <em><strong>apt-get autoremove</strong></em>&lt;tên package&gt;</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Xem thêm:</strong> </span></p>
+<ul>
+<li><a href="http://localhost:82/demowp/kien-thuc/nhung-lenh-git-co-ban-can-nho/"><strong>Những lệnh GIT cơ bản</strong></a></li>
+<li><strong><a href="http://localhost:82/demowp/category/kien-thuc/">Một só bài viết kiến thức khác</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/camtasia-studio-2019/" target="_blank" rel="noopener noreferrer">Download Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 28px;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5606"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">6</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/tong-hop-cac-lenh-lien-quan-toi-apt-tren-debian/">Tổng hợp các lệnh liên quan tới APT trên Debian</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/tong-hop-cac-lenh-lien-quan-toi-apt-tren-debian/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

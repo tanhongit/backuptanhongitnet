@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/alvarotrigo/multiscroll.js/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/multiscroll.js/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/alvarotrigo/multiscroll.js/releases.atom"/>
+  <title>Release notes from multiscroll.js</title>
+  <updated>2018-08-01T15:45:20Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.2</id>
+    <updated>2018-08-01T15:51:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.2"/>
+    <title>multiScroll 0.2.2</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Fixed bug: not working anymore on smartphones &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;343097210&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/110&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/alvarotrigo/multiscroll.js/issues/110/hovercard&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/110&quot;&gt;#110&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fixed bug: doneResizing is not defined &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;310878807&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/105&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/alvarotrigo/multiscroll.js/issues/105/hovercard&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/105&quot;&gt;#105&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.1</id>
+    <updated>2018-03-07T16:36:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.1"/>
+    <title>multiScroll 0.2.1</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Fixed bug: extension scrollOverflow was not working properly on android based touch devices&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.2.0</id>
+    <updated>2018-03-07T15:29:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.2.0"/>
+    <title>multiScroll 0.2.0</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Fixing major bug &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;303132960&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/103&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/alvarotrigo/multiscroll.js/issues/103/hovercard&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/103&quot;&gt;#103&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.9</id>
+    <updated>2018-03-05T17:38:40Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.9"/>
+    <title>multiScroll 0.1.9</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Added new extension &lt;a href=&quot;https://alvarotrigo.com/multiScroll/extensions/scrollOverflow.html&quot; rel=&quot;nofollow&quot;&gt;scrollOVerflow&lt;/a&gt; &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load issue title&quot; data-id=&quot;180981453&quot; data-permission-text=&quot;Issue title is private&quot; data-url=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/78&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/alvarotrigo/multiscroll.js/issues/78/hovercard&quot; href=&quot;https://github.com/alvarotrigo/multiscroll.js/issues/78&quot;&gt;#78&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improved: resize handler&lt;/li&gt;
+&lt;li&gt;Improved: mobile detection&lt;/li&gt;
+&lt;li&gt;Documentation: added new pages using fullPage.js&lt;/li&gt;
+&lt;li&gt;Documentation: clarify use of responsive options&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.8</id>
+    <updated>2017-04-24T11:23:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.8"/>
+    <title>multiScroll 0.1.8</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Added new option: &lt;code&gt;responsiveExpand&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Improved documentation&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.7</id>
+    <updated>2015-03-18T12:04:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.7"/>
+    <title>multiscroll.js v.0.1.7</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Fixed bug. Navigation bullets get vertically centred now.&lt;/li&gt;
+&lt;li&gt;A class will be added to the &lt;code&gt;body&lt;/code&gt; element with the active section anchor / index&lt;/li&gt;
+&lt;li&gt;Improved keyboard accessibility&lt;/li&gt;
+&lt;li&gt;Fixed bug with IE touch devices.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/0.1.6</id>
+    <updated>2015-03-18T11:04:39Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/0.1.6"/>
+    <title>multiscroll.js Beta v.0.1.6</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Added new function &lt;code&gt;destroy&lt;/code&gt; to destroy the plugin events&lt;/li&gt;
+&lt;li&gt;Added new function &lt;code&gt;build&lt;/code&gt; to bind the plugin events.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/v.0.1.5</id>
+    <updated>2015-01-05T12:26:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/v.0.1.5"/>
+    <title>multiscroll.js Beta v.0.1.5</title>
+    <content type="html">&lt;p&gt;Changes from v.0.0.4:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Solved problem in input elements&lt;/li&gt;
+&lt;li&gt;Solved bug when using the back button causing an undefined anchor to appear in the URL&lt;/li&gt;
+&lt;li&gt;Ensure table cells are resized during resize event&lt;/li&gt;
+&lt;li&gt;Solved problem which caused scroll on mouse move on IE 10 and 11&lt;/li&gt;
+&lt;li&gt;Fixed bug for Safari which created a gap between the two panels&lt;/li&gt;
+&lt;li&gt;Added paddingTop and paddingBottom options.&lt;/li&gt;
+&lt;li&gt;Solved bug with css3:true&lt;/li&gt;
+&lt;li&gt;Added new feature: Set active section by adding the &lt;code&gt;active&lt;/code&gt; class in sections.&lt;/li&gt;
+&lt;li&gt;Added new feature: scroll to the given hashtag in the URL. (useful for bookmarking)&lt;/li&gt;
+&lt;li&gt;Disabling mouse wheel click scrolling for IE, Chrome, Opera and Safari.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/19379248/v.0.0.4</id>
+    <updated>2015-01-05T12:27:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/alvarotrigo/multiscroll.js/releases/tag/v.0.0.4"/>
+    <title>multiscroll.js Beta v.0.0.4</title>
+    <content>No content.</content>
+    <author>
+      <name>alvarotrigo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1706326?s=60&amp;v=4"/>
+  </entry>
+</feed>

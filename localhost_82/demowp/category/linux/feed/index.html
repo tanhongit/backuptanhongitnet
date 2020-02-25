@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Linux &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/linux/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Mon, 16 Dec 2019 02:39:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Linux &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</title>
+		<link>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/#respond</comments>
+				<pubDate>Sun, 15 Dec 2019 01:58:50 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7538</guid>
+				<description><![CDATA[<p>Biểu thức điều kiện trong PHP là tập hợp các câu điều kiện để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau. Cũng tương tự như các ngôn ngữ lập trình khác, PHP hỗ trợ các biểu thức điều kiện sau: if if&#8230;else if&#8230;elseif&#8230;else switch Giải thích: Chỉnh ta [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Biểu thức điều kiện trong PHP</strong> là tập hợp các câu điều kiện để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.</p>
+<p><span class="fontstyle0">Cũng tương tự như các ngôn ngữ lập trình khác, PHP hỗ trợ các biểu thức điều kiện sau:</span></p>
+<ul>
+<li><span class="fontstyle0">if<br />
+</span></li>
+<li><span class="fontstyle0">if&#8230;else</span></li>
+<li><span class="fontstyle0">if&#8230;elseif&#8230;else<br />
+</span></li>
+<li><span class="fontstyle0">switch</span></li>
+</ul>
+<figure id="attachment_7547" aria-describedby="caption-attachment-7547" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png"><img class="size-full wp-image-7547" src="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png" alt="bieu thuc dieu kien trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7547" class="wp-caption-text">Biểu thức điều kiện trong php</figcaption></figure>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Giải thích:</strong></span> Chỉnh ta hầu hết đều biết các chương trình thường <strong>chạy theo một trình tự từ trên xuống</strong> mà không chừa bất kì một dòng code nào <strong>(ngoại trừ các dòng comment).</strong> Nhưng trong thực tế, đối với một số chương trình chúng ta cần chúng chạy theo nhiều luồng chứ không phải theo trình tự như vậy. Vì thế, biểu thức điều kiện đã ra đời.</p>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if</strong></span></h2>
+<p>Biểu thức điều kiện if, hay còn thường gọi là câu điều kiện if cho phép ta đưa ra các quyết định dựa trên việc kiểm tra điều kiện nào đó đúng (true) hay sai (false).</p>
+<h3>Cú pháp</h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">if(bieu-thuc-dieu-kien){
+  //Câu lệnh
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+  $so=50;
+  if($so % 2 == 0){ //điều kiện kiểm tra số chẵn
+    echo "Số ".$so." là số chẵn";"
+  }
+
+  if($so &gt;= 0){ //điều kiện kiểm tra số dương
+    echo "Số ".$so." là số dương";
+  }
+?&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Ta gán biến $so có giá trị là 50.</li>
+<li>Kiểm tra phần dư sau khi lấy $so chia cho 2 có bằng 0 hay không (toán tử % dùng để chia lấy số dư, tham khảo lại toán tử trong <strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong>). Nếu đúng thì echo ra kết quả.</li>
+<li>Điều kiện kiểm tra số dương từ dòng số 7 trở đi cũng có ý nghĩa tương tự.</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if else trong PHP</strong></span></h2>
+<p>Nói một cách đơn giản, bạn sẽ thực hiện <strong>đoạn code thứ nhất</strong> được bao trong <strong>if()</strong> nếu điều kiện đặt ra là <strong>đúng (true)</strong>, ngược lại nếu điều kiện đó là <strong>sai (false)</strong> thì bạn sẽ thực hiện <strong>đoạn code thứ 2</strong> được bao bởi <strong>else</strong>. Trong trường hợp này, bạn sẽ phải dùng đến <strong>câu lệnh if else trong PHP.</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">if (biểu_thức_điều_kiện){
+   //câu lệnh 1
+   //phần code này được thực thi nếu điều kiện là true
+}
+else{
+   //câu lệnh 1
+   //phần code này được thực thi nếu điều kiện là false
+}</pre>
+<p><strong>Giải thích</strong><u>:</u></p>
+<ul>
+<li>Nếu <strong>biểu_thức_điều_kiện</strong> đúng thì Những Câu Lệnh 1 sẽ được thực hiện và Những Câu Lệnh 2 sẽ không được thực hiện.</li>
+<li>Ngược lại nếu <strong>biểu_thức_điều_kiện</strong> sai thì những câu lệnh 1 sẽ bị bỏ qua và sẽ thực hiện những câu lệnh 2.</li>
+</ul>
+<p>Ví dụ:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">$so = 20;
+if ($so % 2 == 0){
+    echo 'Số ' . $so . ' Là Số Chẵn';
+}
+else{
+    echo 'Số ' . $so . ' Là Số Lẻ';
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Ta gán biến $so có giá trị là 20.</li>
+<li>Kiểm tra phần dư sau khi lấy $so chia cho 2 có bằng 0 hay không (toán tử % dùng để chia lấy số dư, tham khảo lại toán tử trong <strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong>). Nếu đúng thì echo ra kết quả <span style="color: #0000ff;"><strong>Số 20 Là Số Chẵn</strong></span>, nếu sai thì cho ra <span style="color: #0000ff;"><strong>Số 20 Là Số Lẻ</strong></span>.3</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if&#8230;elseif&#8230;else trong PHP</strong></span></h2>
+<p>Nói đơn giản về ý nghĩa của biểu thức này hơn đó là kết hợp nhiều câu lệnh if else trong một bài code. Bới vì trong thực tế, không phải lúc nào cũng chỉ có 2 điều kiện mà sẽ có hàng chục điều kiện khác nhau, lúc này ta phải kết hợp nhuần nhuyễn giữa 2 lệnh <strong>if và else</strong> để xử lý bài toán.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Ta xuất thông tin chào đón các học sinh vào năm học mới theo khối lớp của trường trung học cơ sở.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;html&gt;
+   &lt;body&gt;
+      &lt;?php
+         $lop="Lop 6";
+         if ($lop == "Lop 6")
+            echo "Chào mừng các em học sonh lớp 6!";
+         elseif ($lop == "Lop 7")
+            echo "Chào mừng các em học sonh lớp 7!";
+         elseif ($lop == "Lop 8")
+            echo "Chào mừng các em học sonh lớp 8!";
+         else
+            echo "Chào mừng các em học sonh lớp 9!"; 
+      ?&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Nếu $lop bằng ‘<strong>Lop 6</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 6</strong>”,</li>
+<li>Ngược lại nếu bằng ‘<strong>Lop 7</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 7</strong>”,</li>
+<li>Ngược lại nếu bằng ‘<strong>Lop 8</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 8</strong>”,</li>
+<li>Ngược lại không cần kiểm tra gì nữa vì là trương hợp cuối cùng, không phải là các trưởng hợp ở trên nên ta xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 9</strong>”.</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if else lồng nhau trong PHP</strong></span></h2>
+<p>Biểu thức điều kiện có rất nhiều biến thể, đặc biệt là các biểu thức được lồng vào nhau. Tức là sẽ có 1 hoặc nhiều câu điều kiện if con nằm trong một câu điều kiện if cha nào đó. (Riêng bản thân mình thường tự gọi đây là 1 dạng <strong>biểu thức điều kiện đa cấp</strong>).</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Cho một số và kiểm tra xem số đó bé hơn 100 hay không. Nếu bé hơn thì kiểm tra tiếp xem số đó có là số dương hay không. Nếu số đó cũng là số dương thì hãy kiểm tra tiếp xem số đó là số chẵn hay số lẻ. Sau đó xuất ra màn hình các kêt quả phù hợp.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+    $so = 800; // cho 1 giá trị là 80
+    if ($so &lt; 100) // Nếu số bé hơn 100, thì điều kiện kiểm tra là đúng và ta sẽ chạy tiếp câu lệnh bên trong
+    {
+        if ($so &gt; 0) { // Nếu số lớn hơn 0 thì điều kiện kiểm tra là đúng và chạy tiếp lệnh bên trong
+            if ($so % 2 == 0) { // Nếu số dư khi chia cho 2 = 0, tức là số chẵn ta sẽ chạy tiếp câu lệnh bên trong
+                echo "So " . $so . " Là số chẵn, lớn hơn 0 và bé hơn 100";
+            } else echo "So " . $so . " Là số lẻ, lớn hơn 0 và bé hơn 100";
+        } elseif ($so % 2 == 0) { // Ngược lại đây sẽ là số bé hơn 0 và ta tiếp tục kiểm tra nếu số dư khi chia cho 2 = 0, tức là số chẵn ta sẽ chạy tiếp câu lệnh bên trong
+            echo "So " . $so . " Là số chẵn và bé hơn 0";
+        } else echo "So " . $so . " Là số lẻ và bé hơn 0";
+    }
+    else //trường hợp này đã ra ngoài phạm vi yêu cầu của đề bài, tức là số cho trước khi này sẽ lớn hơn 100
+        echo "Ngoài vùng phủ sóng :3 ";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<h2><span style="color: #0000ff;"><strong>Lưu ý khi dùng các biểu thức quan hệ if, if&#8230;else, if&#8230;elseif&#8230;else</strong></span></h2>
+<div class="alert alert-warning">
+<ul>
+<li><strong><span style="font-size: 16px;">Biểu Thức chứa trong cặp dấu ngoặc tròn <code>()</code> chính là các biểu thức quan hệ. Có thể kết hợp nhiều biểu thức quan hệ thông qua toán tử<span style="color: #0000ff;"> &amp;&amp; </span>(nghĩa là AND) hay <span style="color: #0000ff;">|| </span>(nghĩa là OR)</span></strong></li>
+<li><strong><span style="font-size: 16px;">Trong một khối lệnh nếu bên trong chứa nhiều hơn 2 lệnh thì phải có cặp ngoặc nhọn <code>{}</code> dùng để mở khối lệnh và đóng khối lênh, như vậy trình biên dịch sẽ hiểu đây là một khối lệnh và nó sẽ thực thi hết khối lệnh này.</span></strong></li>
+</ul>
+</div>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức Switch Trong PHP</strong></span></h2>
+<p>Câu lệnh <strong>switch</strong> <strong>trong php</strong> cho phép ta đưa ra quyết định có nhiều cách lựa chọn để giá trị của biểu thức truyền vào. Mục đích của lệnh <strong>switch</strong> hay được sử dụng để tránh các khối <b>if…elseif…else</b> dài.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">switch ($variable) {
+    case $value_1:
+       // các câu lênh 1
+       break;
+    case $value_2:
+        // các câu lệnh 2
+        break;
+    default:
+        // các câu lệnh khác
+        break;
+        //phần code này được thực thi nếu biểu_thức là khác với $value_1, $value_2, ...
+}</pre>
+<p>Giá trị ở <strong>case</strong> chỉ chấp nhận các<strong> kiễu dữ liệu string, INT, boolean, null, foat</strong> hoặc là một <strong>biểu thức</strong> có kết quả trả về một trong năm loại dữ liệu đó và toán tử quan hệ so sánh trong switch luôn luôn là <code>==</code></p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Chương trình xác định 1 số và xuất ra tên tháng tương ứng với số đó.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+        $th = 1;
+        switch ($th)
+        {
+            case 1:
+                echo 'Tháng một';
+                break;
+            case 2:
+                echo 'Tháng hai';
+                break;
+            case 3:
+                echo 'Tháng ba';
+                break;
+            case 4 :
+                echo 'Tháng bốn';
+                break;
+            case 5 :
+                echo 'Tháng năm';
+                break;
+            case 6 :
+                echo 'Tháng sáu';
+                break;
+            case 7 :
+                echo 'Tháng bảy';
+                break;
+            case 8 :
+                echo 'Tháng tám';
+                break;
+            case 9 :
+                echo 'Tháng chín';
+                break;
+            case 10 :
+                echo 'Tháng mười';
+                break;
+            case 11 :
+                echo 'Tháng mười một';
+                break;
+            case 12 :
+                echo 'Tháng mười hai';
+                break;
+            default:
+                echo 'Tháng không tồn tại';
+                break;
+        }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Ngoài ra, cũng tương tự như câu lệnh if, câu lệnh <strong>switch cũng có thể lồng nhau</strong>.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$a = 5;
+// Kiểm tra $a có phải là số nguyên không
+$check = is_int($a); 
+switch ($check) {
+    // Nếu $a là số nguyên thì thực thi dòng lệnh bên dưới
+    case "true": 
+        switch ($a) {
+            case 0:
+                echo "a bằng 0";
+                break;
+            case 2:
+                echo "a bằng 2";
+                break;
+            case 3:
+                echo "a bằng 3";
+                break;
+            case 4:
+                echo "a bằng 4";
+                break;
+            case 5:
+                echo "a bằng 5";
+                break;
+            default:
+                echo "$a";
+        }
+        break;
+    default: // Nếu $a không là số nguyên thì thực thi dòng lệnh bên dưới
+        echo "a không là số nguyên";
+}
+?&gt;</pre>
+<p>Qua bài viết này mình đã giới thiệu sơ lược về các biểu thức điều kiện như if, if&#8230;else, iii&#8230;elseif&#8230;else và câu lệnh switch để các bạn tự học và thực hành cho những bài toán sau này.</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/" target="_blank" rel="noopener noreferrer">Bài 3: Những kiểu dữ liệu trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7538"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Apache là gì? Tổng quan kiến thức về Apache Web Server</title>
+		<link>http://localhost:82/demowp/kien-thuc/apache-web-server-la-gi/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/apache-web-server-la-gi/#respond</comments>
+				<pubDate>Wed, 04 Dec 2019 23:41:07 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7428</guid>
+				<description><![CDATA[<p>Apache là gì? Apache là một phần mềm mã nguồn mở miễn phí được cài đặt trên các máy chủ web server (phần cứng) để xử lý các yêu cầu gửi tới máy chủ dưới giao thức HTTP. Các yêu cầu gửi tới máy chủ sử dụng phương thức HTTP còn được gọi tắt là yêu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/apache-web-server-la-gi/">Apache là gì? Tổng quan kiến thức về Apache Web Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Apache là gì? Apache</strong> là một phần mềm mã nguồn mở miễn phí được cài đặt trên các máy chủ<strong> web server (phần cứng)</strong> để xử lý các yêu cầu gửi tới máy chủ dưới giao thức HTTP. Các yêu cầu gửi tới máy chủ sử dụng phương thức HTTP còn được gọi tắt là yêu cầu <strong>HTTP (hay HTTP request).</strong></p>
+<p>Tên chính thức của <strong>Apache</strong> là <strong>Apache HTTP Server</strong>, được điều hành và phát triển bởi <strong>Apache Software Foundation</strong>. Nó giúp chủ website đưa nội dung lên web – vì vậy có tên gọi là “web server”. <strong>Apache</strong> là một trong số những web server lâu đời và đáng tin cậy nhất.</p>
+<figure id="attachment_7433" aria-describedby="caption-attachment-7433" style="width: 847px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server.png"><img class="size-full wp-image-7433" src="http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server.png" alt="apache web server" width="847" height="327" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server.png 847w, http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server-300x116.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server-768x297.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/apache-web-server-750x290.png 750w" sizes="(max-width: 847px) 100vw, 847px" /></a><figcaption id="caption-attachment-7433" class="wp-caption-text">Kiếm thức Apache Web Server</figcaption></figure>
+<p>Vì được cài đặt trên <strong>web server</strong> (phần cứng) nên <strong>Apache</strong> nhiều khi còn được gọi là <strong>web server</strong> hay <strong>HTTP server</strong>. Khi sử dụng thuật ngữ web server, chúng ta hiểu rằng người nói đang đề cập tới góc độ phần mềm.</p>
+<p>Ví dụ: Khi bạn nhập 1 địa chỉ <strong>IP</strong> hoặc <strong>url</strong> trong trình duyệt và nhấn Enter. Trình duyệt sẽ gửi 1 <strong>yêu cầu HTTP</strong> đến máy chủ chứa tên miền url bạn đã nhập có trên Internet. Khi này Apache sẽ xử lý chuyển những dữ liệu có từ máy chủ đã được yêu cầu về lại cho client và hiện trên trình duyệt.</p>
+<h2><strong><span id="Web-Server-la-gi"><span id="What-is-a-Web-Server">Web Server là gì?</span></span></strong></h2>
+<p>Nhiệm vụ của <strong>web server</strong> là đưa website lên internet. Để làm được điều đó, nó hoạt động giống như là một người đứng giữa <strong>server</strong> và <strong>máy khách (client).</strong> Nó sẽ kéo nội dung từ server về cho mỗi một truy vấn xuất phát từ máy khách(client) để hiển thị kết quả tương ứng dưới hình thức là một website.</p>
+<p>Điểm khó khăn lớn nhất của một web server là kéo dữ liệu cho <strong>nhiều người truy cập vào website cùng một lúc</strong>. Web server xử lý các file này dưới ngôn ngữ lập trình như là PHP, Python, Java,&#8230;Kết quả của quá trình xử lý được gửi trả về cho browser là những file HTML thuần tuý và file trên trình duyệt cho người dùng web thấy được..</p>
+<p><strong>==&gt; Web server có chức năng là mói trung gian nhận trách nhiệm giao tiếp giữa server và client.</strong></p>
+<h2><strong>Cách Apache Web Server Hoạt Động.</strong></h2>
+<p>Mặc dù chúng ta thường gọi Apache là web server, nhưng nó lại không phải là server vật lý, nó là một phần mềm chạy trên server đó. Công việc của nó là thiết lập kết nối giữa server và trình duyệt người dùng và chuyển lui dữ liệu giữa chúng.</p>
+<p><strong>Web Server</strong> còn được gọi là <strong>HTTP server</strong> và chúng sử dụng giao thức <strong>HTTP – hypertext transport protocol</strong> (port 80/TCP).</p>
+<h3><strong>Giới thiệu một số Web Server thịnh hành</strong></h3>
+<ul>
+<li><strong>Apache HTTP Server</strong></li>
+<li><strong>Apache Tomcat</strong></li>
+<li><strong>nginx</strong></li>
+<li><strong>OpenLiteSpeed</strong></li>
+</ul>
+<p>Khi khách truy cập một trang web, trình duyệt sẽ gửi yêu cầu tải trang web đó lên server. Sau đó, Apache sẽ trả kết quả với tất cả đầy đủ các file cấu thành nên trang mà khách hàng muốn truy cập bao gồm cả nội dung, hình ảnh, video,… Server và client sẽ giao tiếp với nhau qua giao thức HTTP, khi đó Apache đảm nhận trách nhiệm đảm bảo tiến trình này diễn ra mượt mà và bảo mật một cách tối ưu nhất.</p>
+<p>Apache là một nền tảng module có độ tùy biến rất cao. Moduels cho phép quản trị server tắt hoặc thêm chức năng. Apache có modules cho bảo mật caching, URL rewriting, chứng thực mật khẩu,&#8230;Giúp bạn bảo vệ trang web của mình một cách an toàn nhất. Bạn cũng có thể thiết lập cấu hình server riêng qua file gọi là .htaccess, vốn là file cấu hình Apache hoạt động trong các gói hosting mà bạn thuê.</p>
+<h2><strong><span id="Uu-diem-va-khuyet-diem-cua-Apache"><span id="Apache-Pros-and-Cons">Ưu điểm và khuyết điểm của Apache</span></span></strong></h2>
+<h3>Ưu điểm:</h3>
+<ul>
+<li>Phần mềm mã nguồn mở và miễn phí, kể cả cho mục đích thương mại</li>
+<li>Linh hoạt vì có cấu trúc module</li>
+<li>Đa nền tảng (hoạt động được cả với server Unix và Windows)</li>
+<li>Hoạt động cực kỳ hiệu quả với WordPress</li>
+<li>Phần mềm đáng tin cậy, ổn định</li>
+</ul>
+<h3>Khuyết điểm:</h3>
+<ul>
+<li>Rất dễ gặp vấn đề hiệu năng nếu website có lượng truy cập cực lớn</li>
+<li>Quá nhiều lựa chọn thiết lập có thể gây ra các điểm yếu bảo mật</li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>XEM THÊM:</strong></div>
+<ul>
+<li><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer"><strong>Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</strong></a></li>
+</ul>
+</div>
+<p>Tài liệu tham khảo</p>
+<ul>
+<li><a href="https://wiki.matbao.net/kb/apache-la-gi-tomcat-la-gi-huong-dan-cai-dat-chi-tiet-nhat/" target="_blank" rel="noopener noreferrer">matbao</a></li>
+<li>https://hostingwiki.org/</li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7428"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/apache-web-server-la-gi/">Apache là gì? Tổng quan kiến thức về Apache Web Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/apache-web-server-la-gi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</title>
+		<link>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/</link>
+				<comments>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/#respond</comments>
+				<pubDate>Sun, 05 May 2019 16:41:41 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Acc Vip]]></category>
+		<category><![CDATA[Internet-mạng]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Thủ Thuật]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows Server]]></category>
+		<category><![CDATA[Free]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[VPS]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6067</guid>
+				<description><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến VPS là gì và cách tạo 1 con VPS Free(miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé! VPS là gì ? VPS là chữ viết tắt của Virtual Private Server – máy chủ ảo cá [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong bài viết này mình giới thiệu cho các bạn biết đến <strong>VPS</strong> là gì và cách tạo 1 con <strong>VPS Free(</strong>miễn phí) tốc độc cực cao để phục vụ một số như cầu cần thiết của các bạn nhé!</p>
+<figure id="attachment_6072" aria-describedby="caption-attachment-6072" style="width: 698px" class="wp-caption aligncenter"><img class="size-full wp-image-6072" src="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg" alt="Tạo VPS Free Tốc Độ Cao" width="698" height="366" srcset="http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao.jpg 698w, http://localhost:82/demowp/wp-content/uploads/2019/05/Shared-Tạo-VPS-Free-Tốc-Độ-Cao-300x157.jpg 300w" sizes="(max-width: 698px) 100vw, 698px" /><figcaption id="caption-attachment-6072" class="wp-caption-text">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn</figcaption></figure>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#VPS_la_gi" title="VPS là gì ?">VPS là gì ?</a></li><li><a href="#Huong_dan_tao_VPS_Free_mien_phi_Han_Dung_1_Gio" title="Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ">Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</a><ul><li><a href="#Buoc_1" title="Bước 1:">Bước 1:</a></li><li><a href="#Buoc_2" title="Bước 2">Bước 2</a><ul><li><a href="#Cach_1_-_khoi_tao_he_thong" title="Cách 1 - khởi tạo hệ thống:">Cách 1 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_3" title="Bước 3:">Bước 3:</a><ul><li><a href="#Cach_2_-_khoi_tao_he_thong" title="Cách 2 - khởi tạo hệ thống:">Cách 2 - khởi tạo hệ thống:</a></li></ul></li><li><a href="#Buoc_4" title="Bước 4:">Bước 4:</a></li><li><a href="#Buoc_5" title="Bước 5:">Bước 5:</a></li><li><a href="#Buoc_6" title="Bước 6:">Bước 6:</a></li><li><a href="#Buoc_7" title="Bước 7:">Bước 7:</a></li><li><a href="#Buoc_8" title="Bước 8:">Bước 8:</a></li><li><a href="#Buoc_9" title="Bước 9:">Bước 9:</a></li><li><a href="#Thanh_qua" title="Thành quả:">Thành quả:</a></li></ul></li></ul></nav></div>
+
+<h2><span style="text-decoration: underline;"><strong>VPS là gì ?</strong></span></h2>
+<p><strong>VPS</strong> là chữ viết tắt của <strong>V</strong>irtual <strong>P</strong>rivate <strong>S</strong>erver – máy chủ ảo cá nhân.</p>
+<p>VPS hosting là một hệ thống <strong>hoàn toàn riêng biệt,</strong> có một phần <strong>CPU riêng</strong>, dung lượng<strong> RAM riêng</strong>, dung lượng ổ <strong>HDD/SSD riêng</strong>,<strong> địa chỉ IP riêng</strong> và <strong>hệ điều hành riêng</strong>, người dùng có toàn quyền quản lý <strong>root</strong> và có thể <strong>restart</strong> lại hệ thống bất cứ lúc nào.</p>
+<p><strong>VPS hosting</strong> còn là một trong các dịch vụ <strong>hosting</strong> phổ biến nhất để bạn có thể sử dụng làm nền tảng cho <strong>website</strong>. Nó dùng công nghệ ảo hóa để tạo tài nguyên riêng trên <strong>server</strong> cho bạn sử dụng để tách biệt tài nguyên đó khỏi dùng chung với các người dùng khác cùng<strong> server vật lý.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="vps free tốc độ cao" width="1920" height="1080" /></p>
+<h2><span style="text-decoration: underline;"><strong>Hướng dẫn tạo VPS Free (miễn phí) Hạn Dùng 1 Giờ</strong></span></h2>
+<h3><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Bước 1:</strong></span></h3>
+<p>Đầu tiên bạn vào <strong>link</strong> sau và <strong>đăng nhập</strong> bằng tài khoản <strong>Microsoft</strong> của bạn.</p>
+<p><strong>Link đăng nhập và tạo VPS Free(miễn phí)</strong>: <a class="btn btn-default" href="https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/4-create-a-vm?pivots=windows-cloud" target="_blank" rel="noopener noreferrer">NHẤN VÀO ĐÂY</a></p>
+<p>Sau khi đăng nhập bạn nhấn chọn vào <strong>Activate Sandbox.</strong></p>
+<p><img class="aligncenter size-full" src="https://imgur.com/ThOWEfN.png" alt="Hướng dẫn cách tạo VPS 14GB RAM hạn dùng 1 giờ miễn phí" width="896" height="660" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 2</strong></span></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 1 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<p>Bạn chờ 1 chút cho hệ thống cài đặt xong bạn sẽ thấy có màn hình của sổ <strong>cmd</strong> màu đen phía bên phải màn hình như sau:</p>
+<p><img class="aligncenter size-full" src="https://imgur.com/bYUQ0fN.png" alt="Hướng dẫn cách tạo VPS hạn dùng 1 giờ miễn phí 2" width="1920" height="937" /></p>
+<p><strong>Tiếp tục bạn kéo chuột xuống và sẽ thấy một đoạn code như hình bên dưới đây:</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/yOGEVHQ.png" alt="code tạo vps free" width="660" height="394" /></p>
+<p>Bạn sẽ phải sửa 2 dòng cuối dùng của đoạn code đó lại:</p>
+<div class="alert alert-warning"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span class="hljs-variable">$USERNAME</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password $PASSWORD</span></strong></span></div>
+<div>
+<p><strong>Sửa lại như sau:</strong></p>
+<div class="alert alert-info"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username <span style="color: #ff0000;">tanhongi</span> <span style="color: #ff0000;">\</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+</div>
+<p><strong><span style="text-decoration: underline; color: #ff0000; font-size: 20px;">Ví dụ</span> <span style="font-size: 16px;">mình có một đoạn code sau khi đã chỉnh sửa như sau:</span></strong></p>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong><span style="color: #0000ff;">az vm create \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;name myVM \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;resource-group<span style="color: #ff0000;"> 76e442a1-eea2-4f6e-a4e3-a0cfb66ee121</span> \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;image Win2016Datacenter \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;size Standard_DS2_v2 \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;location eastus \</span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-username<span style="color: #ff0000;"> tanhongi \</span></span></strong></span><br />
+<span style="font-size: 20px;"><strong><span style="color: #0000ff;">&#8211;admin-password <span style="color: #ff0000;">123456789aA@</span></span></strong></span></div>
+<div><span style="font-size: 20px;"><strong><span style="color: #ff0000;">Những nơi có tô màu đó bạn phải dựa vào code mà hệ thống đã đưa sẵn cho bạn nhé!</span></strong></span></div>
+<div></div>
+<div>Tiếp theo bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy nhé!</div>
+<div><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></div>
+<div>
+<div class="alert alert-warning" style="text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 32px;"><strong>Lưu ý</strong> </span></span></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Đoạn code phía trên là mình đã gom cả mật khẩu và tên người dùng vào chung để khỏi khắc rối cho các bạn khi cài đặt hệ thống. Nếu các bạn đã sử dụng đoạn code ở bước 2 này thì các bạn có thể đi đến <span style="color: #0000ff;">bước 5 và bước 6</span> luôn nhé!</span></strong></div>
+<div class="alert alert-warning"><strong><span style="font-size: 20px;">Nếu các bạn muốn tạo tên người dùng riêng hoặc cài đặt cho hệ thống VPS theo từng bước thì các bạn <span style="color: #0000ff;">bỏ qua bước 2</span> và <span style="color: #0000ff;">làm từ bước 3 trở đi</span> nhé!</span></strong></div>
+</div>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 3:</span></strong></h3>
+<ul>
+<li>
+<h4><span style="text-decoration: underline; color: #0000ff; font-size: 20px;"><strong>Cách 2 &#8211; khởi tạo hệ thống:</strong></span></h4>
+</li>
+</ul>
+<div>Bạn copy đoạn <strong>Code</strong> sau vào màn hình cmd rồi nhấn <strong>enter</strong> để cho nó chạy.</div>
+<div class="alert alert-success"><span style="font-size: 20px;"><strong>az vm create \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;name myVM \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;resource-group <span style="color: #ff0000;">a79c55ee-9ab4-4792-aa7d-b164400fb1bb \</span></strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;image Win2016Datacenter \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;size Standard_DS2_v2 \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;location eastus \</strong></span><br />
+<span style="font-size: 20px;"><strong>&#8211;admin-username <span style="color: #ff0000;">tanhongi</span></strong></span></div>
+<div><span style="font-size: 20px; color: #0000ff;"><strong>Với username bạn có thể đặt thành tên khác với bắt buộc là 8 kí tự chữ cái nhé!</strong></span></div>
+<p><img class="aligncenter size-full" src="https://imgur.com/CasZ9FK.png" width="605" height="415" /></p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 4:</span></strong></h3>
+<p>Tiếp theo bạn<strong> copy password</strong> vào bằng cách nhấn chuột phải vào màn hình <strong>cmd</strong> và nhấn <strong>Paste(Dán)</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/htD8fqW.png" width="702" height="766" /></p>
+<blockquote class="pullquote align-center"><p><span style="color: #0000ff;"><strong><span style="text-decoration: underline;">Lưu ý:</span></strong></span> Username thì có thể sửa được nhưng password này là<strong> sử dụng bắt buộc</strong>, bạn không được chỉnh sửa gì thêm.</p>
+<p><strong>Pass:</strong> <span style="color: #0000ff;"><strong>123456789aA@</strong></span></p></blockquote>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 5:</span></strong></h3>
+<p>Tiếp theo bạn <strong>copy</strong> <strong>lại mật khẩu</strong> <strong>ở bước 4</strong> một lần nữa khi xuất hiện dòng <strong>Confirm Admin Pasword</strong> nhé! Sau đó nhấn <strong>Enter</strong> và cho nó <strong>Running</strong>.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/ghR30d8.png" width="630" height="454" /></p>
+<p>Sau khi hệ thống chạy xong bạn sẽ nhận được một số thông tin như hình bên dưới:</p>
+<p><img class="aligncenter" src="https://imgur.com/UeMojXm.png" alt="Public Ip Address" width="949" height="768" /></p>
+<p>Các bạn chú ý địa chỉ IP ở dòng <strong>&#8220;PublicIpAddress&#8221;</strong> nhé. Đây là địa chỉ IP mà bạn sẽ phải dùng để truy cập vào VPS đó&#8230;</p>
+<h3><strong><span style="text-decoration: underline; color: #0000ff; font-size: 20px;">Bước 6:</span></strong></h3>
+<p>Bạn tìm kiếm phần mềm<strong> &#8220;Remote Desktop Connection&#8221;</strong> có sẵn trên các hệ điều hành <strong>Windows</strong> và khởi chạy phần mềm lên nhé!</p>
+<p><img class="aligncenter" src="https://imgur.com/Awrq3vv.png" alt="Remote Desktop Connection" width="835" height="681" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 7:</strong></span></h3>
+<p>Sau khi mở phần mềm lên bạn copy địa chỉ IP ở dòng <strong>&#8220;publicIpAddress&#8221; </strong>mà hệ thống đã cung cấp cho bạn vào rồi nhấn<strong> Contect.</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/aQYBTVf.png" alt="đại chỉ ip của vps" width="686" height="639" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 8:</strong></span></h3>
+<p>Bạn chọn vào<strong> sử dụng với tài khoản mới (Use a diferent account). </strong></p>
+<p>Sau đó nhập <strong>User</strong> và <strong>password</strong> mà nãy bạn đã cài đặt vào 2 ô phía trên và nhấn tiếp <strong>OK</strong></p>
+<p><img class="size-full aligncenter" src="https://imgur.com/2L9Li9g.png" width="456" height="532" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Bước 9:</strong></span></h3>
+<p>Sẽ xuất hiện một thông báo và bạn chỉ cần nhấn <strong>Yes</strong></p>
+<p><img class="aligncenter" src="https://imgur.com/XuMQHdy.png" alt="kết nối vps free" width="392" height="401" /></p>
+<h3><span style="text-decoration: underline; color: #0000ff;"><strong>Thành quả:</strong></span></h3>
+<p>Bạn sẽ có một VPS Sử dụng hệ điều hành Windows 10 và có tốc độ siêu lớn luôn&#8230;</p>
+<p><img class="aligncenter" src="https://imgur.com/WfV08WA.png" alt="tạo một vps free" width="1920" height="1080" /><img class="aligncenter" src="https://imgur.com/0svxoP6.png" alt="tốc độ siêu cao của vps free" width="1920" height="1080" /></p>
+<p>Mong rằng với thủ thuật này sẽ hỗ trợ cho công việc và học tập của các bạn thật tốt.</p>
+<p>Nếu các bạn vẫn chưa làm được hoặc có thắc mắc gì cứ để lại comment bên dưới bài viết này nhé! Mình sẽ giải đáp cho các bạn!</p>
+<p><span style="font-size: 20px;"><strong>XEM THÊM: <a href="http://localhost:82/demowp/tag/vps/" target="_blank" rel="noopener noreferrer">Một số bài viết khác về VPS</a></strong></span></p>
+<p>Nếu thấy hữu ích đừng quên chia sẻ cho mọi người nha. Cảm ơn các bạn !!!</p>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6067"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/">Hướng Dẫn Tạo VPS Free Tốc Độ Cao Hạn Dùng 1 Giờ &#8211; Hết Hạn 1 Giờ Sau Vẫn Được Tạo VPS Mới Free</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/thu-thuat/tao-vps-1-gio-mien-phi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Kali Linux 2019.1 Release &#8211; Tải về Kali Linux đầu tiên Năm 2019</title>
+		<link>http://localhost:82/demowp/download/kali-linux-2019-1-release/</link>
+				<comments>http://localhost:82/demowp/download/kali-linux-2019-1-release/#respond</comments>
+				<pubDate>Tue, 19 Feb 2019 12:37:26 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Kali]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5465</guid>
+				<description><![CDATA[<p>Offensive Security vừa phát hành Kali Linux 2019.1, phiên bản 2019 đầu tiên dành cho các chuyên gia an ninh mạng. Đây là bộ công cụ thường được ví như dao bấm đa năng của Thụy Sĩ, nghe có vẽ giống với công cụ Netcat – Swiff Army Knife. Giới thiệu Kali Linux 2019.1 Phiên bản [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/kali-linux-2019-1-release/">Kali Linux 2019.1 Release &#8211; Tải về Kali Linux đầu tiên Năm 2019</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Offensive Security</strong> vừa phát hành <strong>Kali Linux 2019.1</strong>, phiên bản 2019 đầu tiên dành cho các chuyên gia an ninh mạng. Đây là bộ công cụ thường được ví như dao bấm đa năng của Thụy Sĩ, nghe có vẽ giống với công cụ <strong>Netcat – Swiff Army Knife.</strong></p>
+<p><img class="size-full aligncenter" src="https://www.kali.org/wp-content/uploads/2019/02/kali-release-2019.png" width="798" height="284" /></p>
+
+<h3><span style="text-decoration: underline;"><strong>Giới thiệu Kali Linux 2019.1</strong></span></h3>
+<p>Phiên bản mới nhất này của hệ điều hành <strong>Kali Linux</strong> với nhân <strong>kernel</strong> được nâng cấp lên<strong> version 4.19.13</strong> và các bản vá cho nhiều lỗi cùng với nhiều phần mềm được cập nhật như <strong>Metasploit, theHarvester, DBeaver, v.v.</strong> Tuy nhiên, các bạn nên lưu trữ nhiều phiên bản <strong>Kali</strong> khác nhau, ngay cả hệ thống <strong>Backtrack 5R3</strong> cũng cần có trong kho vũ khí của mình do nhiều ứng dụng sẽ biến mất trên các phiên bản mới vì lý do bản quyền hay không tương thích &#8230;</p>
+<p><strong>Kali Linux 2019.1</strong> đi kèm với phiên bản mới nhất của công cụ kiểm tra thâm nhập <strong>Metasploit (phiên bản 5.0),</strong> bao gồm <strong>API</strong> cơ sở dữ liệu và tự động hóa, khả năng che dấu hành vi mới giúp cho việc triển khai <strong>pentest</strong> hay <strong>hacking</strong> trở nên hiệu quả hơn.</p>
+<p><img class="size-full aligncenter" src="https://imgur.com/bjPNSBG.png" width="1236" height="926" /></p>
+<h3><strong>Cập nhật ARM</strong></h3>
+<p>Bản phát hành Kali 2019.1 cho ARM bao gồm sự trở lại của Banana Pi và Banana Pro, cả hai đều nằm trên kernel 4.19. Veyron đã được chuyển đến kernel 4.19 và hình ảnh Raspberry Pi đã được đơn giản hóa để dễ dàng tìm ra cái nào sẽ sử dụng. Không còn hình ảnh Raspberry Pi riêng biệt cho người dùng có màn hình LCD LCD vì hiện tại chúng tôi đã bao gồm tập lệnh <strong>kalipi-tft-config</strong> của <strong>re4son</strong> trên tất cả chúng, vì vậy nếu bạn muốn thiết lập bảng với màn hình LCD, hãy chạy &#8216;kalipi-tft-config&#8217; và làm theo lời nhắc.</p>
+<p>Bạn có thể tải xuống<strong> ISO Kali Linux</strong> mới trực tiếp từ trang web chính thức hoặc từ mạng <strong>Torrent</strong> còn nếu như bạn đang sử dụng nó hãy chạy lệnh <strong> apt update &amp;&amp; apt -y</strong> để update nhé!</p>
+<h3 style="text-align: center;"><strong>Tải về Kali Linux 2019.1 Mới Nhất 2019</strong></h3>
+<p style="text-align: center;"><a href="http://cdimage.kali.org/kali-2019.1/kali-linux-light-2019.1-amd64.iso" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 Light 64bit ISO</span></a>
+<p style="text-align: center;"><a href="http://cdimage.kali.org/kali-2019.1/kali-linux-light-2019.1-i386.iso" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 Light 32bit ISO</span></a>
+<p style="text-align: center;"><a href="http://cdimage.kali.org/kali-2019.1/kali-linux-2019.1-amd64.iso" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 64bit ISO</span></a>
+<p style="text-align: center;"><a href="http://cdimage.kali.org/kali-2019.1/kali-linux-2019.1-i386.iso" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 32bit ISO</span></a>
+<h3 style="text-align: center;"><strong>Tải về Kali Linux 2019.1 cho VMware</strong></h3>
+<p style="text-align: center;"><a href="https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vm-amd64.7z.torrent" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 64bit VMware</span></a>
+<p style="text-align: center;"><a href="https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vm-i386.7z.torrent" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 32bit Vmware</span></a>
+<h3 style="text-align: center;"><strong>Tải về Kali Linux 2019.1 cho VirtualBox</strong></h3>
+<p style="text-align: center;"><a href="https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vbox-amd64.ova.torrent" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 64bit VirtualBox</span></a>
+<p style="text-align: center;"><a href="https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vbox-i386.ova.torrent" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-linux" style="font-size:21px;color:#ffffff"></i> Tải Kali Linux 2019.1 32bit VirtualBox</span></a>
+<p><span style="font-size: 20px;"><strong>Khi các bạn chạy trên máy ảo các bạn nhớ đăng nhập với thông tin như sau:</strong></span></p>
+<ul>
+<li><strong>user: root</strong></li>
+<li><strong>pass: toor</strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">CHÚC CÁC BẠN THÀNH CÔNG</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5465"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">7</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/kali-linux-2019-1-release/">Kali Linux 2019.1 Release &#8211; Tải về Kali Linux đầu tiên Năm 2019</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/kali-linux-2019-1-release/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

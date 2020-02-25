@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Word &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/word/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Sun, 06 Oct 2019 02:09:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Word &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</title>
+		<link>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/#respond</comments>
+				<pubDate>Sat, 05 Oct 2019 18:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Word]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7156</guid>
+				<description><![CDATA[<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé! Với NET 4+ cho phép C # đọc và thao tác các tệp Microsoft Word Excel, đối với các máy tính đã cài đặt Word, Excel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png"><img class="aligncenter size-full wp-image-7163" src="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png" alt="mo doc file word c sharp" width="505" height="226" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png 505w, http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp-300x134.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Với<strong> NET 4+ cho phép C #</strong> đọc và thao tác các tệp <strong>Microsoft Word Excel</strong>, đối với các máy tính đã cài đặt Word, Excel (nếu bạn chưa cài đặt Word, Excel, hãy xem <a href="http://npoi.codeplex.com/" target="_blank" rel="nofollow noopener noreferrer">NPOI</a> ).</p>
+<p>Đầu tiên, thêm tham chiếu vào <strong><a href="http://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Word XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Word, Excel.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Word = Microsoft.Office.Interop.Word;       //Microsoft Word 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Word</strong> về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Word.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!u3BEhYRL!MSIaE4Y8ueK3fRMkkgJQbvMVNsWYh6C39sgANQfbcAM" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4603.1000</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter size-full" src="https://imgur.com/LbWXePi.png" alt="console app read file word" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Word </strong>trong danh sách <strong>Component Name . </strong>sau đó nhấn và giữ phím CTRL và chọn <strong>Microsoft.Office.Interop.Excel</strong> nếu có. Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/krK8SSG.png"><img class="aligncenter size-full" src="https://imgur.com/krK8SSG.png" width="945" height="790" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Và cuối cùng bạn chỉ cần thêm đoạn code này vào file <strong>Program.cs</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }</pre>
+
+
+
+<p>Tại line thứ 7, các bạn nhớ sửa lại đường dẫn đến file word trong máy tính của mình nhé!</p>
+<p>Và nhớ truyền đầy đủ các thư viện vào nhé!</p>
+<p><strong>Đây là Code đầy đủ để đọc và mở 1 file Word C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+namespace docfileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }
+}</pre>
+
+
+
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interop/how-to-access-office-onterop-objects" target="_blank" rel="noopener noreferrer">Access Office Interop Objects&#8230;</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">NPOI</a></li>
+<li><a href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">dllme</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">Alias</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7156"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tải bộ Microsoft Office 2010 Kích hoạt sẵn không cần key hoặc crack</title>
+		<link>http://localhost:82/demowp/active-office/bo-microsoft-office-2010-kich-hoat-san/</link>
+				<comments>http://localhost:82/demowp/active-office/bo-microsoft-office-2010-kich-hoat-san/#respond</comments>
+				<pubDate>Thu, 01 Nov 2018 02:05:24 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Active Office]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Office]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[Office]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Word]]></category>
+		<category><![CDATA[Active Win & Office]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Office 2010]]></category>
+		<category><![CDATA[Office Productivity]]></category>
+		<category><![CDATA[văn phòng]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3947</guid>
+				<description><![CDATA[<p>Microsoft Office 2010 Full là bộ phần mềm văn phòng mạnh mẽ, được ra mắt vào năm 2010, Office 2010 được đông đảo người dùng sử dụng nhiệt tình, không những giao diện được cải tiến sinh động mà chức năng cũng được biểu tượng hóa giúp những người mới tiếp cận sử dụng một [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/active-office/bo-microsoft-office-2010-kich-hoat-san/">Tải bộ Microsoft Office 2010 Kích hoạt sẵn không cần key hoặc crack</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Microsoft Office 2010 Full là bộ phần mềm văn phòng mạnh mẽ, được ra mắt vào năm 2010, Office 2010 được đông đảo người dùng sử dụng nhiệt tình, không những giao diện được cải tiến sinh động mà chức năng cũng được biểu tượng hóa giúp những người mới tiếp cận sử dụng một cách chuyên nghiệp hơn.</p>
+<p><figure id="attachment_7024" aria-describedby="caption-attachment-7024" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2018/11/microsoft-office-2010.jpg"><img class="size-full wp-image-7024" src="http://localhost:82/demowp/wp-content/uploads/2018/11/microsoft-office-2010.jpg" alt="microsoft office 2010" width="699" height="387" srcset="http://localhost:82/demowp/wp-content/uploads/2018/11/microsoft-office-2010.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2018/11/microsoft-office-2010-300x166.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7024" class="wp-caption-text">microsoft office 2010</figcaption></figure></p>
+<p><img class="aligncenter size-full wp-image-3949" src="http://localhost:82/demowp/wp-content/uploads/2018/11/2018-11-01_085650.png" alt="" width="1023" height="566" /></p>
+<p>Khi các công cụ Office ra đời như Office 2013 hay Office 2016, Office 2019 thì Office 2010 Full vẫn luôn là lựa chọn hàng đầu của những máy tính sử dụng hệ điều hành Windows.</p>
+<p>Trong bài viết này mình chia sẻ các bạn bộ<strong> Office 2010 đã được kích hoạt sẵn</strong>. Các bạn chỉ cần tải về cài đặt thôi <strong>không cần crack</strong> gì nữa.</p>
+<hr />
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 24px;"><strong>Download bộ Office 2010 Kích hoạt sẵn không cần crack.</strong></span></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1qxflZUQR469Qp3jdckOwq7KM2sdW_8AT" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Tải Office 2010 Full Kích hoạt tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<h3 style="text-align: center;"><strong>Link Dự Phòng</strong></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1B7HI6Pc3grL7RuXhkeI-D0Krh-9dE9fa" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Tải Office 2010 Full Kích hoạt-LINK DỰ PHÒNG</span></a></p>
+<hr />
+<p>Trong mỗi bộ cài <strong>Office 2010 Full</strong> sẽ bao gồm: Word, Excel, PowerPoint, Access, OneNote, Outlook, Publisher,&#8230;</p>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Những tính năng của Office 2010:</strong></span></p>
+<ul>
+<li>Giao diện mở rộng cực kỳ đẹp mắt dễ dàng thao tác</li>
+<li>Bổ sung nhiều công cụ giúp soạn thảo văn bản dễ dàng hơn</li>
+<li>Các chức năng của office được biểu tượng hóa</li>
+<li>Tính năng bảo mật cao</li>
+<li>Hỗ trợ chụp trực tiếp màn hình của phần mềm khác</li>
+<li>Phần mở rộng ở office 2010 được mặt định là .docx .xlx …</li>
+<li>Mã nguồn được tối ưu hóa để tăng trãi nghiệm người dùng</li>
+<li>Thích hợp với tất cả các dòng hệ điều hành của Windows</li>
+<li>Tích hợp nhiều công cụ hơn như Outlook, OneNote…</li>
+</ul>
+<hr />
+<p style="text-align: center;"><span style="text-decoration: underline;"><span style="font-size: 24px;"><em><strong><span style="color: #ff0000; text-decoration: underline;">Hướng dẫn cài đặt Office 2010 tự động kích hoạt sẵn trực tiếp bằng video</span></strong></em></span></span></p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/QjEM7a9mGsQ" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/" target="_blank" rel="noopener noreferrer">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/active-office/activate-aio-tools-version-3/" target="_blank" rel="noopener noreferrer">Script Acivate Kích Hoạt Windows 10 Bản Quyền Digital License + Office Bản Quyền Mọi Phiên Bản Activate AIO Tools Version 3.0</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/" target="_blank" rel="noopener noreferrer">Đánh số phiên bản phần mềm – Software Versioning</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/vmware-workstation-pro/" target="_blank" rel="noopener noreferrer">Download VMware Workstation Pro Full Key &#8211; Bản Quyền Tạo Máy Ảo Hóa Mới Nhất</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3947"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">7</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/active-office/bo-microsoft-office-2010-kich-hoat-san/">Tải bộ Microsoft Office 2010 Kích hoạt sẵn không cần key hoặc crack</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/active-office/bo-microsoft-office-2010-kich-hoat-san/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tải Microsoft Office 2019 Phiên bản chính thức cho Windows 7/8.1/10</title>
+		<link>http://localhost:82/demowp/download/tai-microsoft-office-2019-phien-ban-chinh-thuc-cho-windows-7-8-1-10/</link>
+				<comments>http://localhost:82/demowp/download/tai-microsoft-office-2019-phien-ban-chinh-thuc-cho-windows-7-8-1-10/#comments</comments>
+				<pubDate>Sat, 29 Sep 2018 02:48:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Download Office]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[Office]]></category>
+		<category><![CDATA[Office 2019]]></category>
+		<category><![CDATA[Office Productivity]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Thủ Thuật Win 10]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Word]]></category>
+		<category><![CDATA[Active]]></category>
+		<category><![CDATA[Active Office]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=3283</guid>
+				<description><![CDATA[<p>Microsoft đã hoàn thiện Office 2019 và công bố phiên bản mới nhất của mình cho người dùng Windows và macOS. Office 2019 có các tính năng giống Office 365. Phiên bản Office 2019 này sẽ dành cho người dùng và doanh nghiệp không muốn sử dụng Office 365 của Microsoft. Office 2019 sẽ chỉ [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/tai-microsoft-office-2019-phien-ban-chinh-thuc-cho-windows-7-8-1-10/">Tải Microsoft Office 2019 Phiên bản chính thức cho Windows 7/8.1/10</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Microsoft</strong> đã hoàn thiện <strong>Office 2019</strong> và công bố phiên bản mới nhất của mình cho người dùng Windows và macOS. <strong>Office 2019</strong> có các tính năng giống <strong>Office 365</strong>. Phiên bản Office 2019 này sẽ dành cho người dùng và doanh nghiệp không muốn sử dụng Office 365 của Microsoft.</p>
+<p><img class="aligncenter size-full wp-image-3289" src="http://localhost:82/demowp/wp-content/uploads/2018/09/2018-09-29_093929.png" alt="" width="801" height="451" /></p>
+<p><strong>Office 2019</strong> sẽ chỉ nhận được các bản vá bảo mật và sửa lỗi nếu có, chứ không nhận được các bản cập nhật tính năng mới.</p>
+<p><strong>Office 2019</strong> sẽ bao gồm một số ứng dụng cơ bản như Word, Excel, PowerPoint và Outlook&#8230; Cùng với với đó là các ứng dụng quản lý cho doanh nghiệp như: Exchange, SharePoint và Skype for Business. Cụ thể:</p>
+<ul>
+<li><strong>Microsoft Office Professional Plus 2019</strong></li>
+<li><strong>Microsoft Word</strong></li>
+<li><strong>Microsoft Excel</strong></li>
+<li><strong>Microsoft Access</strong></li>
+<li><strong>Microsoft PowerPoint</strong></li>
+<li><strong>Microsoft OneNote</strong></li>
+<li><strong>Microsoft Outlook</strong></li>
+<li><strong>Microsoft Publisher</strong></li>
+<li><strong>Skype for business</strong></li>
+<li><strong>OneDriver for business</strong></li>
+</ul>
+<hr />
+<p style="text-align: center;"><span style="text-decoration: underline; font-size: 24px;"><span style="color: #ff0000;"><strong>Các thay đổi trong phiên bản Office 2019:</strong></span></span></p>
+<ul>
+<li><strong>Word:</strong> Bổ sung giao diện Black Theme và tính năng điều khiển bằng giọng nói.</li>
+<li><strong>PowerPoint:</strong> Thêm bản đồ 2D, một số biểu đồ mới, một số hàm mới được bổ sung thêm giúp người dùng dễ dàng sử dụng phục vụ cho công việc và cải tiến PowerPivot và PowerQuery.</li>
+<li><strong>PowerPoint:</strong> Khả năng thu phóng slide, tính năng thêm và quản lý các icon, SVG và mô hình 3D được cải thiện. Bổ sung thêm một số hiệu ứng khi chuyển slide giúp dễ dàng tạo các bản trình chiếu với hiệu ứng điện ảnh ấn tượng hơn. Hỗ trợ xuất video 4K.</li>
+</ul>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong><span style="color: #ff0000; text-decoration: underline;">Các tính năng khác:</span></strong></span></p>
+<ul>
+<li>Nâng cấp tính năng đám mây để sao lưu, đồng bộ dữ liệu tốt hơn.</li>
+<li>Bổ sung tính năng vẽ bằng bút chì.</li>
+<li>Bổ sung nhiều công thức, biểu đồ mới.</li>
+<li>Dễ dàng đưa mô hình nhân vật 3 chiều lên slide thuyết trình PowerPoint.</li>
+<li>Thêm các hiệu ứng chuyển slide và nội dung vào PowerPoint.</li>
+</ul>
+<hr />
+<p style="text-align: center;"><span style="font-size: 28px;"><strong><span style="color: #ff0000;">Tải về Microsoft Office 2019:</span></strong></span></p>
+<p><span style="font-size: 20px;"><strong>Microsoft Office 2019 Retail English (en-us) &#8211; phiên bản Office 2019</strong> ( file cài cho cả 32 bit và 64 bit):</span></p>
+<p style="text-align: center;"><a href="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/ProPlus2019Retail.img" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Microsoft Office Professional Plus 2019</span></a></p>
+<p style="text-align: center;"><a href="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/Professional2019Retail.img" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Microsoft Office Professional</span></a><br />
+<span style="font-size: 16px; color: #0000ff;"><em><span style="text-decoration: underline;"><strong>Lưu Ý:</strong></span></em></span> Sau khi tải về, hãy sửa tên từ .img thành .ISO để tiến hành cài đặt.</p>
+<p><span style="font-size: 20px;"><strong>Microsoft Office 2019 Volume License Pack &#8211; phiên bản 2019:</strong></span></p>
+<p style="text-align: center;"><a href="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/Professional2019Retail.img" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-windows" style="font-size:21px;color:#ffffff"></i> Download Microsoft Office 2019 Volume License Pack từ Microsoft</span></a></p>
+<hr />
+<p><span style="text-decoration: underline; font-size: 20px; color: #0000ff;"><em><strong>Key kích hoạt từ Microsoft:</strong></em></span></p>
+<ul>
+<li>Office Professional Plus 2019: NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</li>
+<li>Office Standard 2019: 6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</li>
+<li>Project Professional 2019: B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</li>
+<li>Project Standard 2019: C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</li>
+<li>Visio Professional 2019: 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</li>
+<li>Visio Standard 2019: 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</li>
+<li>Access 2019: 9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</li>
+<li>Excel 2019: TMJWT-YYNMB-3BKTF-644FC-RVXBD</li>
+<li>Outlook 2019: 7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</li>
+<li>PowerPoint 2019: RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</li>
+<li>Publisher 2019: G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</li>
+<li>Skype for Business 2019: NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</li>
+<li>Word 2019: PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</li>
+</ul>
+<p>Source: <a href="https://docs.microsoft.com/en-us/DeployOffice/vlactivation/gvlks">GVLKs for KMS and Active Directory-based activation of Office 2019 and Office 2016</a></p>
+<p>Key có thời hạn sử dụng 6 tháng miễn phí.</p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 24px;">CHÚC CÁC BẠN THÀNH CÔNG VÀ TRẢI NGHIỆM VUI VẺ</span></strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="3283"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">9</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/download/tai-microsoft-office-2019-phien-ban-chinh-thuc-cho-windows-7-8-1-10/">Tải Microsoft Office 2019 Phiên bản chính thức cho Windows 7/8.1/10</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/download/tai-microsoft-office-2019-phien-ban-chinh-thuc-cho-windows-7-8-1-10/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ Tài liệu Giới thiệu về Microsoft Word 2016</title>
+		<link>http://localhost:82/demowp/office/tai-lieu-gioi-thieu-ve-microsoft-word-2016/</link>
+				<comments>http://localhost:82/demowp/office/tai-lieu-gioi-thieu-ve-microsoft-word-2016/#respond</comments>
+				<pubDate>Tue, 05 Jun 2018 02:14:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Office]]></category>
+		<category><![CDATA[Office Productivity]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Word]]></category>
+		<category><![CDATA[Microsoft]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/05/tai-lieu-gioi-thieu-ve-microsoft-word-2016/</guid>
+				<description><![CDATA[<p>Phần giới thiệu về Microsoft Word 2016 là một khóa học nhanh để giúp bạn bắt đầu và thực hành với Word 2016 càng sớm càng tốt. Đối tượng và mục tiêu: Những người hoàn toàn mới đối với Microsoft Word. Những người mới bắt đầu có chút kiến ​​thức và muốn trở nên hoàn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/office/tai-lieu-gioi-thieu-ve-microsoft-word-2016/">Chia sẻ Tài liệu Giới thiệu về Microsoft Word 2016</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Phần giới thiệu về Microsoft Word 2016 là một khóa học nhanh để giúp bạn bắt đầu và thực hành với Word 2016 càng sớm càng tốt.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-gVE5Wh6zcWc/WxXxxypWBvI/AAAAAAAAIq0/QAXb5v9ocK8E9otrUdYRuVHgDpZ2qMhKACLcBGAs/s1600/dgjfyjdfy.png"><img class="aligncenter" src="https://4.bp.blogspot.com/-gVE5Wh6zcWc/WxXxxypWBvI/AAAAAAAAIq0/QAXb5v9ocK8E9otrUdYRuVHgDpZ2qMhKACLcBGAs/s640/dgjfyjdfy.png" width="640" height="364" border="0" data-original-height="243" data-original-width="426" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"><br />
+</span> <span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Những người hoàn toàn mới đối với Microsoft Word.</span></li>
+<li><span style="font-size: large;">Những người mới bắt đầu có chút kiến ​​thức và muốn trở nên hoàn thiện hơn khi sử dụng Microsoft Word.</span></li>
+<li><span style="font-size: large;">Những người khác đấu tranh để có được và duy trì kết quả phù hợp, chuyên nghiệp với chương trình.</span></li>
+<li><span style="font-size: large;">Bất cứ ai sử dụng Word và bị sốc vì khả năng làm bạn thất vọng (dường như) không có lý do gì cả.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<p><b style="font-size: x-large;"><u>Những gì bạn học được:</u></b></p>
+<ul>
+<li><span style="font-size: large;">Những người hoàn toàn mới đối với Microsoft Word.</span></li>
+<li><span style="font-size: large;">Những người mới bắt đầu có chút kiến ​​thức và muốn trở nên hoàn thiện hơn khi sử dụng Microsoft Word</span></li>
+<li><span style="font-size: large;">Những người khác đấu tranh để có được và duy trì kết quả phù hợp, chuyên nghiệp với chương trình.</span></li>
+<li><span style="font-size: large;">Tìm hiểu các nguyên tắc cơ bản cốt lõi của việc sử dụng Word &#8211; nhiều cuộc đấu tranh (đó là một thực tế). Và có một lý do. Nhưng, một khi bạn tìm hiểu các nguyên tắc cơ bản cốt lõi, phần còn lại rất dễ</span></li>
+<li><span style="font-size: large;">Có được một sự hiểu biết về những cách tốt nhất để sử dụng Word &#8211; đó sẽ là phong cách Word sau đó. Yep, kiểu, kiểu, kiểu, kiểu và kiểu.</span></li>
+<li><span style="font-size: large;">Định dạng văn bản: các ký tự và đoạn văn riêng lẻ và tại sao có sự khác biệt lớn như vậy</span></li>
+<li><span style="font-size: large;">Chèn và quản lý hình ảnh &#8211; cũng như cách sử dụng Word để giúp bạn định kích thước hình ảnh của chính xác (để giảm kích thước tệp của bạn)</span></li>
+<li><span style="font-size: large;">Chèn và định dạng bảng &#8211; nhanh chóng và dễ dàng chuyển đổi các bảng buồn tẻ, buồn tẻ của bạn thành những người bắt mắt ngay lập tức</span></li>
+<li><span style="font-size: large;">Chuyển đổi văn bản thành bảng &#8211; điều này sẽ giúp bạn tiết kiệm số giờ làm việc</span></li>
+<li><span style="font-size: large;">Sử dụng các tab hiệu quả &#8211; bạn đã bao giờ thêm dấu cách vào văn bản định vị chưa? Một khi bạn tìm hiểu các tab, bạn sẽ được cả hai đá chính mình và mỉm cười rằng bạn sẽ không bao giờ có không gian một lần nữa!</span></li>
+<li><span style="font-size: large;">Chèn số trang &#8211; tài liệu chuyên nghiệp có số trang được tự động sắp xếp. Họ dễ dàng và mất tất cả những rắc rối đi.</span></li>
+<li><span style="font-size: large;">Chèn trang bìa &#8211; chắc chắn, một thiết kế đồ họa được thiết kế tùy chỉnh sẽ rất tuyệt, nhưng các trang bìa 2-click của Word cũng hoạt động tốt</span></li>
+<li><span style="font-size: large;">Chèn và cập nhật Mục lục &#8211; bạn đã bao giờ thực hiện một bảng nội dung thủ công chưa? Phải thay đổi số trang mỗi lần, bằng tay? Cuối cùng, thở phào nhẹ nhõm vì tự động hóa ở đây.</span></li>
+<li><span style="font-size: large;">Hiểu sự khác biệt giữa các kiểu ký tự và kiểu đoạn văn &#8211; một công trình tuyệt vời và bạn nên sử dụng chúng TẤT CẢ THỜI GIAN. Cái kia, meh! Đừng. Và đây là lý do tại sao &#8230;</span></li>
+<li><span style="font-size: large;">Hiểu được lợi ích của việc sử dụng các kiểu Word &#8211; ahhh, điều cần thiết! Phong cách là những gì bạn PHẢI làm chủ nếu bạn sẽ nhận được tốt ở Word.</span></li>
+<li><span style="font-size: large;">Hiểu lý do chính tại sao hầu hết mọi người đấu tranh với Word và phải làm gì với nó</span></li>
+<li><span style="font-size: large;">Tìm hiểu cách định dạng nhanh các kiểu bằng cách sử dụng Định dạng Painter &#8211; một công cụ tuyệt vời. Không phải là tâm trí nhanh nhất, nhưng nó sẽ giúp bạn tiết kiệm cả hai giờ và ngón tay đau nhức!</span></li>
+<li><span style="font-size: large;">Xem tổng quan về các khía cạnh quan trọng của các tính năng tự động hóa được tích hợp của Word &#8211; chúng tôi đã chạm vào một số đã có, nhưng có rất nhiều tính năng khác</span></li>
+<li><span style="font-size: large;">Tìm hiểu về Ngăn Điều hướng cực mạnh của Word và cách nó sẽ giúp bạn tiết kiệm nhiều giờ làm việc.</span></li>
+</ul>
+<div></div>
+</div>
+<p><span style="font-size: large;"><b><u>Yêu cầu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Microsoft Word 2016 được cài đặt trên máy tính của bạn.</span></li>
+<li><span style="font-size: large;">Kỹ năng máy tính cơ bản (chuột, bàn phím, v.v.).</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=18eQD0zjx9BsO4js0eSFpYqzx34ZU9CwI&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học tại <a href="https://www.udemy.com/introduction-microsoft-word-2016/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/introduction-micr. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-PtJk4BgC_yw/WxXvhQ1yI3I/AAAAAAAAIqo/xMEG-E_pBxQbTkR1QYjalnpIc76xKLwBQCLcBGAs/s1600/2018-06-05_090256.png"><img class="aligncenter" src="https://3.bp.blogspot.com/-PtJk4BgC_yw/WxXvhQ1yI3I/AAAAAAAAIqo/xMEG-E_pBxQbTkR1QYjalnpIc76xKLwBQCLcBGAs/s640/2018-06-05_090256.png" width="640" height="226" border="0" data-original-height="359" data-original-width="1011" /></a></div>
+<div style="clear: both; text-align: center;"></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Mọi hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. </span><span style="font-size: large;">Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="72"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/office/tai-lieu-gioi-thieu-ve-microsoft-word-2016/">Chia sẻ Tài liệu Giới thiệu về Microsoft Word 2016</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/office/tai-lieu-gioi-thieu-ve-microsoft-word-2016/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Chia sẻ Khóa học Microsoft Excel, Outlook và Word 2016 cho người mới bắt đầu</title>
+		<link>http://localhost:82/demowp/excel/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/</link>
+				<comments>http://localhost:82/demowp/excel/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/#respond</comments>
+				<pubDate>Sun, 03 Jun 2018 15:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Excel]]></category>
+		<category><![CDATA[Office Productivity]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Tài Liệu - Ebook]]></category>
+		<category><![CDATA[Udemy]]></category>
+		<category><![CDATA[Word]]></category>
+		<category><![CDATA[Microsoft]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/2018/06/03/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/</guid>
+				<description><![CDATA[<p>Khóa học này bắt đầu việc tìm kiếm Microsoft Excel và cài đặt chương trình này. Sau đó, bạn tìm hiểu từng bước, các phương pháp 1-2-3 đơn giản để bắt đầu và chạy với Excel 2016. Chỉ xem vài video đầu tiên có kiến ​​thức cơ bản về Excel. Sau đó tiếp tục thông [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/excel/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/">Chia sẻ Khóa học Microsoft Excel, Outlook và Word 2016 cho người mới bắt đầu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span style="font-size: large;">Khóa học này bắt đầu việc tìm kiếm Microsoft Excel và cài đặt chương trình này. Sau đó, bạn tìm hiểu từng bước, các phương pháp 1-2-3 đơn giản để bắt đầu và chạy với Excel 2016. Chỉ xem vài video đầu tiên có kiến ​​thức cơ bản về Excel. Sau đó tiếp tục thông qua 32 chương chi tiết của bài học video và 9 luyện tập để dần trở thành người dùng thành thạo.</span></p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://3.bp.blogspot.com/-po_eFiBlpys/WxQGLpYrYkI/AAAAAAAAIkw/t2lavA6yKvE9YJUyBm2gcb5f5VUm9wGjQCLcBGAs/s1600/ngdrhj.png"><img src="https://3.bp.blogspot.com/-po_eFiBlpys/WxQGLpYrYkI/AAAAAAAAIkw/t2lavA6yKvE9YJUyBm2gcb5f5VUm9wGjQCLcBGAs/s640/ngdrhj.png" width="640" height="362" border="0" data-original-height="241" data-original-width="426" /></a></div>
+<p><span style="font-size: large;"><br />
+</span><span style="font-size: large;">Sau khi hoàn thành khóa học này, bạn sẽ biết các yếu tố cần thiết của Microsoft Excel 2016.</span><br />
+<span style="font-size: large;"><br />
+</span><span style="font-size: large;"><b><u>Đối tượng và mục tiêu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Bất kỳ ai mới dùng Microsoft Office hoặc nâng cấp từ phiên bản trước.</span></li>
+<li><span style="font-size: large;">Những người mới sử dụng Microsoft Excel, Outlook và Word 2016.</span></li>
+<li><span style="font-size: large;">Khóa học này được tạo ra cho người mới bắt đầu tuyệt đối.</span></li>
+<li><span style="font-size: large;">Nếu bạn muốn làm mới bộ nhớ và hiểu biết về Excel, Outlook và Word.</span></li>
+<li><span style="font-size: large;">Người dùng các phiên bản Excel, Outlook và Word trước đó.</span></li>
+</ul>
+<p><span style="font-size: large;"><b><u><span style="font-size: large;"><b><u><br />
+</u></b></span>Những gì bạn học được:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Khám phá các tính năng mới và cải tiến trong Excel 2016.</span></li>
+<li><span style="font-size: large;">Cách sử dụng Excel 2016 hiệu quả trên thiết bị màn hình cảm ứng.</span></li>
+<li><span style="font-size: large;">Cách tạo, lưu và mở sổ làm việc.</span></li>
+<li><span style="font-size: large;">Tìm hiểu cách cá nhân hóa việc sử dụng Excel của bạn bằng cách sử dụng Tùy chọn Excel.</span></li>
+<li><span style="font-size: large;">Cách sử dụng và cách tùy chỉnh Thanh công cụ truy cập nhanh.</span></li>
+<li><span style="font-size: large;">Nhập dữ liệu đầy đủ, định dạng ô, làm việc với nhiều trang tính và giao diện &#8220;Ruy-băng&#8221;.</span></li>
+<li><span style="font-size: large;">Thông tin cơ bản về nhập và chỉnh sửa dữ liệu trong sổ làm việc.</span></li>
+<li><span style="font-size: large;">Khám phá cách định dạng ngày và số.</span></li>
+<li><span style="font-size: large;">Tìm hiểu các phương pháp thực tế để bạn có thể sao lưu và khôi phục các bảng tính Excel của mình.</span></li>
+<li><span style="font-size: large;">Sử dụng hiệu ứng tự động điền và chèn lấp để bạn có hiệu quả hơn.</span></li>
+<li><span style="font-size: large;">Khám phá các yếu tố cần thiết của việc sử dụng fomulas và chức năng.</span></li>
+<li><span style="font-size: large;">Cách đổi tên, chèn, di chuyển và tham chiếu trang tính Excel 2016.</span></li>
+<li><span style="font-size: large;">Khám phá cách tạo biểu đồ và đồ thị.</span></li>
+<li><span style="font-size: large;">Tìm hiểu các phương pháp thiết thực để sắp xếp và lọc dữ liệu của bạn.</span></li>
+<li><span style="font-size: large;">Cách bảo vệ và bảo mật dữ liệu Excel của bạn.</span></li>
+<li><span style="font-size: large;">Nắm vững cách sử dụng phổ biến nhất của Word.</span></li>
+<li><span style="font-size: large;">Cách kiểm soát diện mạo trang bao gồm sử dụng cột, thụt lề, chân trang, đường viền và hình mờ.</span></li>
+<li><span style="font-size: large;">Tìm hiểu cách tạo nhiều loại tài liệu.</span></li>
+<li><span style="font-size: large;">Cách tạo phối thư.</span></li>
+<li><span style="font-size: large;">In phong bì và nhãn.</span></li>
+<li><span style="font-size: large;">Khám phá các tùy chọn thiết lập trang khác nhau.</span></li>
+<li><span style="font-size: large;">Cách bảo vệ tài liệu của bạn khỏi những thay đổi.</span></li>
+<li><span style="font-size: large;">Tìm hiểu cách đánh vần kiểm tra tài liệu của bạn.</span></li>
+<li><span style="font-size: large;">Chèn hình ảnh và đồ họa vào tài liệu Word của bạn.</span></li>
+<li><span style="font-size: large;">Khám phá cách chèn và chỉnh sửa bảng.</span></li>
+<li><span style="font-size: large;">Sử dụng &#8220;Chuyển đến, Tìm và Thay thế&#8221;.</span></li>
+<li><span style="font-size: large;">Cách tạo, lưu và mở tài liệu.</span></li>
+<li><span style="font-size: large;">Thiết lập tài khoản email.</span></li>
+<li><span style="font-size: large;">Tạo và gửi tin nhắn email.</span></li>
+<li><span style="font-size: large;">Sắp xếp email.</span></li>
+<li><span style="font-size: large;">Lịch hẹn và tệp đính kèm.</span></li>
+<li><span style="font-size: large;">Tạo và quản lý cuộc họp.</span></li>
+<li><span style="font-size: large;">Thêm chữ ký email.</span></li>
+<li><span style="font-size: large;">Cách lưu trữ email.</span></li>
+<li><span style="font-size: large;">Xóa thư rác và thư rác.</span></li>
+<li><span style="font-size: large;">Tạo và quản lý các tác vụ và lời nhắc.</span></li>
+<li><span style="font-size: large;">Sử dụng tính năng phối thư để nhập thông tin liên hệ vào Microsoft Word.</span></li>
+<li><span style="font-size: large;">Thêm, quản lý và tìm kiếm địa chỉ liên hệ trong sổ địa chỉ.</span></li>
+<li><span style="font-size: large;">Tạo bộ lọc để tự động hóa thư đến.</span></li>
+<li><span style="font-size: large;">Thực hành những gì bạn đã học với các tập thể dục được bao gồm.</span></li>
+</ul>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<p><span style="font-size: large;"><b><u>Yêu Cầu:</u></b></span></p>
+<ul>
+<li><span style="font-size: large;">Phiên bản Microsoft Office 2016 dành cho máy tính để bàn cho Windows được cài đặt và sẵn sàng để sử dụng trên máy tính của bạn.</span></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b><u>Tải về miễn phí tại đây:</u></b></span><br />
+<span style="color: red; font-size: x-large;"><b>Size: 6.10GB</b></span></div>
+<div style="text-align: center;">[otw_shortcode_button href=&#8221;https://drive.google.com/open?id=1UF6G2dJQkLk-jUQ2HIqsFXt3R2IQgZ8E&#8221; size=&#8221;large&#8221; bgcolor=&#8221;#ff03bc&#8221; icon_type=&#8221;general foundicon-idea&#8221; icon_position=&#8221;left&#8221; shape=&#8221;round&#8221; color_class=&#8221;otw-pink&#8221; target=&#8221;_blank&#8221;]Download Tại đây[/otw_shortcode_button]</div>
+</div>
+<div></div>
+<h3><span style="font-size: large;">Các bạn có thể xem thêm về sự mô tả sơ lược hoặc mua khoá học ủng hộ tác giả tại <a href="https://www.udemy.com/microsoft-excel-outlook-and-word-2016-training-course-for-beginners/" target="_blank" rel="noopener noreferrer">https://www.udemy.com/microsoft-excel-outloo. . .</a></span></h3>
+<div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"></div>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://4.bp.blogspot.com/-Tba4U-apc9o/WxQD9f06GsI/AAAAAAAAIkk/YXKn4Wl8cgcEAhaOgh5N0qaJZkB1zaeBgCLcBGAs/s1600/2018-06-03_220534.png"><img class="aligncenter" src="https://4.bp.blogspot.com/-Tba4U-apc9o/WxQD9f06GsI/AAAAAAAAIkk/YXKn4Wl8cgcEAhaOgh5N0qaJZkB1zaeBgCLcBGAs/s640/2018-06-03_220534.png" width="640" height="226" border="0" data-original-height="358" data-original-width="1010" /></a></div>
+<p><span style="font-size: large;"> </span></p>
+</div>
+<div><span style="font-size: large;">Những hành vi sao chép reup sẽ bị xử phạt theo luật <a href="/internet-mang/dmca-la-gi-dmca-bao-ve-ban-nhung-gi-cach-dang-ky-dmca/" target="_blank" rel="noopener noreferrer">DMCA</a> &#8211; bảo vệ bản quyền tác giả. Hãy là một người văn minh.</span></div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: right;"><span style="font-size: large;">Source: Udemy.com</span></div>
+</div>
+<div><span style="font-size: large;"> </span></div>
+<div>
+<div style="text-align: center;"><span style="color: red; font-size: x-large;"><b>CHÚC CÁC BẠN HỌC TẬP THẬT TỐT</b></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="78"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/excel/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/">Chia sẻ Khóa học Microsoft Excel, Outlook và Word 2016 cho người mới bắt đầu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/excel/khoa-hoc-microsoft-excel-outlook-va-word-2016-cho-nguoi-moi-bat-dau/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

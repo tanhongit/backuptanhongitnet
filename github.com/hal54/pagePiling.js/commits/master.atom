@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/hal54/pagePiling.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/hal54/pagePiling.js/commits/master.atom"/>
+  <title>Recent Commits to pagePiling.js:master</title>
+  <updated>2014-10-22T12:13:12Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fda961e4ba3291201186686ff5fdf95f89d78d46</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/fda961e4ba3291201186686ff5fdf95f89d78d46"/>
+    <title>
+        - Updaing versio numbers #15
+    </title>
+    <updated>2014-10-22T12:13:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updaing versio numbers #15&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/995d64cd6574a29d4181409b217f90efa2d1b749</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/995d64cd6574a29d4181409b217f90efa2d1b749"/>
+    <title>
+        Merge pull request #15 from frostwind/horizontal-scroll-swipe-fix
+    </title>
+    <updated>2014-10-22T12:07:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #15 from frostwind/horizontal-scroll-swipe-fix
+
+Fixed horizontal swipe&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fea483bb92f92bba2afbcc59907fbf1ba8a0d527</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/fea483bb92f92bba2afbcc59907fbf1ba8a0d527"/>
+    <title>
+        A small refactoring of the swiping code
+    </title>
+    <updated>2014-10-22T12:01:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/75196cfaaf58929b4703d045ad61c30e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>hi@frostwind.me</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;A small refactoring of the swiping code
+The new code for horizontal swiping only triggers when the direction is set to horizontal
+Or else, the code behaves as it used to&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cd8d137e57aff964c1a4d7dd37dce1748061b37e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/cd8d137e57aff964c1a4d7dd37dce1748061b37e"/>
+    <title>
+        fixed horizontal swipe
+    </title>
+    <updated>2014-10-22T10:32:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/75196cfaaf58929b4703d045ad61c30e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>hi@frostwind.me</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fixed horizontal swipe&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4bb6d6edba491ea205dbfec5906e386c9611ae88</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/4bb6d6edba491ea205dbfec5906e386c9611ae88"/>
+    <title>
+        Merge pull request #14 from philipheinser/master
+    </title>
+    <updated>2014-10-22T09:46:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #14 from philipheinser/master
+
+Update README.md shorter bower install&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/673b379b64bea53366d7ac4005b03c1ff366219a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/673b379b64bea53366d7ac4005b03c1ff366219a"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-10-22T09:43:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d816c88f3dc8379369966077959c1e4f580db67d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/d816c88f3dc8379369966077959c1e4f580db67d"/>
+    <title>
+        Merge pull request #13 from philipheinser/master
+    </title>
+    <updated>2014-10-22T09:39:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #13 from philipheinser/master
+
+Updated README.md with bower usage&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2d92945eca161df484dc42fe5ec452160a8b182d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/2d92945eca161df484dc42fe5ec452160a8b182d"/>
+    <title>
+        Update README.md
+    </title>
+    <updated>2014-10-22T09:37:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/df4fad5700959289f7ca1438c3689afef3153483</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/df4fad5700959289f7ca1438c3689afef3153483"/>
+    <title>
+        Updated README.md with bower usage
+    </title>
+    <updated>2014-10-22T09:29:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/3705499?s=30&amp;v=4"/>
+    <author>
+      <name>philipheinser</name>
+      <uri>https://github.com/philipheinser</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Updated README.md with bower usage&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e1ee41ff621170b5cf9a6d2a913e66d06272f329</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/e1ee41ff621170b5cf9a6d2a913e66d06272f329"/>
+    <title>
+        - Solved bug when clicking on an active navigation bullet and when lo…
+    </title>
+    <updated>2014-10-22T09:16:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Solved bug when clicking on an active navigation bullet and when loading from an anchor. #12&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e797b2888536c9bba59c9d8c547e4500535a0cdc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/e797b2888536c9bba59c9d8c547e4500535a0cdc"/>
+    <title>
+        - Updated version
+    </title>
+    <updated>2014-10-21T16:01:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a13e052b6f908e56f9e6b7e6445ae9ed45ee1732</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/a13e052b6f908e56f9e6b7e6445ae9ed45ee1732"/>
+    <title>
+        - Modified horizontalScroll.html example #11
+    </title>
+    <updated>2014-10-21T15:28:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Modified horizontalScroll.html example #11&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fee346298260d0ea242c5d119f55bb46de538310</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/fee346298260d0ea242c5d119f55bb46de538310"/>
+    <title>
+        - Refactoring #11
+    </title>
+    <updated>2014-10-21T15:17:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Refactoring #11&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/155391a06f3e1935e4d47888de22860f5a4f7a9b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/155391a06f3e1935e4d47888de22860f5a4f7a9b"/>
+    <title>
+        Merge pull request #11 from frostwind/horizontal-scroll
+    </title>
+    <updated>2014-10-21T13:48:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #11 from frostwind/horizontal-scroll
+
+Added horizontal scrolling ability&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7060a1d68783c7a9ecbb0d338a73486abd6ffb3a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/7060a1d68783c7a9ecbb0d338a73486abd6ffb3a"/>
+    <title>
+        added horizontal scrolling ability
+    </title>
+    <updated>2014-10-20T22:08:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://2.gravatar.com/avatar/75196cfaaf58929b4703d045ad61c30e?d=https%3A%2F%2Fgithub.githubassets.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=g&amp;s=30"/>
+    <author>
+      <name></name>
+      <email>hi@frostwind.me</email>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;added horizontal scrolling ability&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2f2f99a446c7a41b85f4b96f4c432b29b3e6d4d7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/2f2f99a446c7a41b85f4b96f4c432b29b3e6d4d7"/>
+    <title>
+        - Updated README.md
+    </title>
+    <updated>2014-10-16T15:21:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/df59090694e89954284c2d97bc719da0347c14ca</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/df59090694e89954284c2d97bc719da0347c14ca"/>
+    <title>
+        - Added website to &quot;who is using pagePilings.js&quot;
+    </title>
+    <updated>2014-10-14T15:16:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added website to &amp;quot;who is using pagePilings.js&amp;quot;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1746fb5a96a548e8197a65ecfc3fe7f072bbf895</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/1746fb5a96a548e8197a65ecfc3fe7f072bbf895"/>
+    <title>
+        - Updated bower.json #6
+    </title>
+    <updated>2014-10-13T14:16:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated bower.json #6&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8e4315da786be9e7371155d45a4957eb773aa046</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/8e4315da786be9e7371155d45a4957eb773aa046"/>
+    <title>
+        Merge pull request #6 from Sommerfeld/master
+    </title>
+    <updated>2014-10-13T14:11:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #6 from Sommerfeld/master
+
+Added bower manifest&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/50eaa418f33c386145ed1f9e694f9684e1238e29</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hal54/pagePiling.js/commit/50eaa418f33c386145ed1f9e694f9684e1238e29"/>
+    <title>
+        add bower.json
+    </title>
+    <updated>2014-10-11T15:47:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6570689?s=30&amp;v=4"/>
+    <author>
+      <name>Sommerfeld</name>
+      <uri>https://github.com/Sommerfeld</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add bower.json&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C Sharp &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/c-sharp/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Tue, 22 Oct 2019 11:00:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>C Sharp &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</title>
+		<link>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/</link>
+				<comments>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 11:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7188</guid>
+				<description><![CDATA[<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng Open XML và closed XML. điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Các đơn giản nhất để chuyển đổi và ghi một dữ liệu lớn vào file Excel trong C# là sử dụng <strong>Open XML và closed XML.</strong> điều này có thể được sử dụng cho ứng dụng bảng điều khiển cũng như các ứng dụng Web. Để tạo các tệp Excel (.XLSX), chúng ta cần Thêm tham chiếu XML mở và XML đóng kín từ các gói nugget.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png"><img class="aligncenter size-full wp-image-7214" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png" alt="write file excel in c sharp" width="700" height="321" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-excel-in-c-sharp-300x138.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải thư viện <strong>ClosedXML</strong> miễn phí ở địa chỉ: <strong><a href="https://www.nuget.org/packages/ClosedXML/" target="_blank" rel="noopener noreferrer">https://www.nuget.org/packages/ClosedXML/</a></strong></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+<h2><span id="Cach_Cai_dat_truc_tiep_SpireDoc_SpirePDF_vao_Windows" class="ez-toc-section"><strong>Cách Cài đặt trực tiếp ClosedXML vào Windows.</strong></span></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="write file excel c#" width="548" height="100" data-pin-no-hover="true" /></a></p>
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes…</strong></p>
+<p><a href="https://imgur.com/v1lt77N.png"><img class="aligncenter size-full" src="https://imgur.com/v1lt77N.png" width="344" height="242" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>ClosedXML</strong> như hình bên dưới để cài đặt.</p>
+<p><a href="https://imgur.com/M6aSIuL.png"><img class="aligncenter size-full" src="https://imgur.com/M6aSIuL.png" width="1009" height="485" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/AWlx22D.png"><img class="aligncenter size-full" src="https://imgur.com/AWlx22D.png" width="313" height="165" /></a></p>
+<h2><span id="Tao_file_word_va_ghi_1_doan_van_ban_trong_C" class="ez-toc-section"><strong>Tạo file Excel (xlsx) và ghi vào 1 đoạn văn bản trong C#</strong></span></h2>
+<p>Ở đây đang chuyển đổi Dataset thành file Excel, nếu tập dữ liệu chứa nhiều DataTables, nó có thể được lặp vào cùng một Excel với <strong>các trang tính khác nhau</strong>. Dưới đây là code để kết nối Tạo Excel (.xlsx) và lưu vào đường dẫn chỉ định.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Data;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+
+//su dung phong thuc ClosedXML de hoan thanh
+namespace ghifileexcel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Country");
+            dt.Rows.Add("Venkatesh", "India");
+            dt.Rows.Add("Santhosh", "USA");
+            dt.Rows.Add("Venkat Sai", "Dubai");
+            dt.Rows.Add("Venkat Teja", "Pakistan");
+            ds.Tables.Add(dt);
+            ExportDataSetToExcel(ds);
+        }
+
+        public static void ExportDataSetToExcel(DataSet ds)
+        {
+            string AppLocation = "";
+            AppLocation = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            AppLocation = AppLocation.Replace("D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx", "");
+            string date = DateTime.Now.ToShortDateString();
+            date = date.Replace("/", "_");
+            //string filepath = AppLocation + "\\ExcelFiles\\" + "RECEIPTS_COMPARISON_" + date + ".xlsx";
+            string filepath = "D:\\HKIII\\1. BTCL\\tuan4_chuong2_3\\ghifileexcel/DataTable.xlsx";
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                for (int i = 0; i &lt; ds.Tables.Count; i++)
+                {
+                    wb.Worksheets.Add(ds.Tables[i], ds.Tables[i].TableName);
+                }
+                wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                wb.Style.Font.Bold = true;
+                wb.SaveAs(filepath);
+            }
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.fourthbottle.com/2017/07/create-excel-files-in-csharp-using-open-xml.html" target="_blank" rel="noopener noreferrer">Create Excel files in C#</a></li>
+<li><a href="https://stackoverflow.com/questions/9769703/exporting-to-xlsx-using-microsoft-office-interop-excel-saveas-error" target="_blank" rel="noopener noreferrer">Exporting to .xlsx</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7188"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/">Tạo và ghi Excel files trong C# sử dụng Open XML và closed XML</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c/tao-va-ghi-excel-files-trong-c-su-dung-open-xml-va-closed-xml/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</title>
+		<link>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/</link>
+				<comments>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 06:49:13 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7184</guid>
+				<description><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện Spire.Doc của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Có nhiều cách để tạo 1 và ghi vào file Word (DOC, DOCX) hoặc PDF với C#, trong đó cách thuận tiện nhất là dùng thư viện <strong>Spire.Doc</strong> của e-iceblue. Trang web này cung cấp 2 nhóm sản phẩm: 1 nhóm miễn phí và 1 nhóm thương mại. Trong bài này chúng ta sẽ sử dụng thư viện Spire.Doc miễn phí, thư viện này giới hạn 500 đoạn và 25 bảng trong 1 tập tin Word và PDF, đủ để tạo 1 tập tin có dung lượng vừa phải.</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png"><img class="aligncenter wp-image-7210 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png" alt="write file word pdf c# c sharp" width="700" height="299" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp.png 700w, http://localhost:82/demowp/wp-content/uploads/2019/10/write-file-word-pdf-c-sharp-300x128.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Đầu tiên, chúng ta tải 2 thư viện <strong>Spire.Doc</strong> và <strong>Spire.PDF</strong> bản miễn phí ở địa chỉ: <a href="https://www.e-iceblue.com/Download/download-word-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-word-for-net-free.html</a> và <a href="https://www.e-iceblue.com/Download/download-pdf-for-net-free.html" target="_blank" rel="noopener noreferrer">https://www.e-iceblue.com/Download/download-pdf-for-net-free.html</a>.</p>
+<p>Hoặc bạn tải về theo link google drive mình chuẩn bị sẵn   <a class="btn btn-default" href="https://drive.google.com/open?id=1pK7WYtNOcMXDJBGLKS3H84gIveAiPTEX" target="_blank" rel="noopener noreferrer"> Tại Đây</a></p>
+<p>Bạn hãy tạo 1 dự án <strong>C# Console</strong> và nhúng thư viện này vào dự án vừa tạo.</p>
+
+
+<h2><strong>Cách Cài đặt trực tiếp Spire.Doc, Spire.PDF vào Windows.</strong></h2>
+<p>Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" data-pin-no-hover="true"></a></p>
+
+
+
+<p>Tiếp theo bạn chuột phải vào <strong>References</strong> và chọn tiếp vào <strong>Manage Nuger Packafes&#8230;</strong></p>
+<p style="text-align: center;"><a href="https://imgur.com/PrJxxMw.png"><img class="aligncenter" src="https://imgur.com/PrJxxMw.png" alt="Manage Nuger Packafes" width="336" height="218" /></a></p>
+<p>Sau đó bạn <strong>tìm kiếm</strong> với từ khóa <strong>Spire</strong>, nó sẽ sổ ra một list các thư viện, bạn hãy chọn thư viện <strong>Spire.Office</strong> (Sẽ bao gồm đọc tất cả các file office và cả pdf) hoặc chọn <strong>Spire.PDF</strong> và <strong>Spire.Doc</strong>.</p>
+<p><a href="https://imgur.com/nL9cKLY.png"><img class="aligncenter" src="https://imgur.com/nL9cKLY.png" alt="Spire.PDF và Spire.Doc" width="982" height="549" /></a></p>
+<p>Bạn tiếp tục nhấn <strong>Install</strong> và nhấn vào <b>I Accept </b>và chờ cho nó tự động cài đặt thư viện vào nhé!</p>
+<p><a href="https://imgur.com/BqHguk5.png"><img class="aligncenter size-full" src="https://imgur.com/BqHguk5.png" width="516" height="608" /></a></p>
+<p>Sau khi cài xong nếu bạn thấy trong <strong>References</strong> có những thư viện như hình bên dưới thì đã add thành công.</p>
+<p><a href="https://imgur.com/j5s4u0t.png"><img class="aligncenter" src="https://imgur.com/j5s4u0t.png" alt="Tạo file word c#" width="309" height="343" /></a></p>
+<p>Giờ thì bắt đầu Code.</p>
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản trong C#</strong></h2>
+<p>Ví dụ sau tạo 1 đoạn văn bản “Hello World!” in đậm canh giữa vào tập tin mới <strong>test.doc</strong> (hoặc test.pdf). Tập tin mới sẽ nằm ở thư mục Debug, bạn có thể tùy chỉnh đường dẫn tập tin tùy ý nếu muốn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Spire.Doc;
+using Spire.Pdf;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+ 
+namespace TestProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tạo đối tượng tài liệu (Document)
+            Document doc = new Document();
+             
+            // Tạo đối tượng đoạn (Paragraph)
+            Paragraph paragraph = doc.AddSection().AddParagraph();
+ 
+            // Tạo văn bản (TextRange)
+            Spire.Doc.Fields.TextRange text = paragraph.AppendText("Hello World!");
+            //text.CharacterFormat.Italic = true;  // in nghiêng
+            //text.CharacterFormat.UnderlineStyle = UnderlineStyle.Single; // gạch chân
+            text.CharacterFormat.Bold = true;                                   // kiểu in đậm
+            paragraph.Format.TextAlignment = TextAlignment.Center;              // văn bản canh giữa 
+            paragraph.Format.HorizontalAlignment = HorizontalAlignment.Center;  // đoạn canh giữa
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Left;  // đoạn canh trái  
+            //paragraph.Format.HorizontalAlignment = HorizontalAlignment.Right; // đoạn canh phải
+ 
+            // Lưu đối tượng tài liệu vào tập tin test.doc (nằm ở thư mục Debug của dự án)
+            doc.SaveToFile("test.doc", Spire.Doc.FileFormat.Doc);
+            // doc.SaveToFile("test.pdf", Spire.Doc.FileFormat.PDF); -- tạo PDF
+ 
+            // đóng đối tượng
+            doc.Close();
+        }
+    }
+}</pre>
+
+
+
+<h3><strong>Thêm 1 đoạn mới vào file Word C Sharp</strong></h3>
+<p>Nhìn lại code trên, tại dòng 21, khi tạo 1 đoạn mới chúng ta dùng đoạn mã <strong>Paragraph paragraph = doc.AddSection().AddParagraph();</strong></p>
+<p>Tuy nhiên để thêm 1 đoạn mới nữa bạn phải dùng hàm <strong>doc.Sections[0].AddParagraph();</strong>&nbsp;như trong ví dụ sau đây.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// đoạn mới tên biến là  paragraph2
+Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+// tên văn bản mới là text2
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("Nhập nội dung đoạn mới");
+text2.CharacterFormat.FontSize = 18;
+text2.CharacterFormat.Bold = true;</pre>
+
+
+
+<h3><strong>Canh Tab</strong></h3>
+<p>Để canh Tab thì dùng&nbsp;<strong>paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;</strong>&nbsp;với TabJustification.Right là Tab phải và 175 (float) là vị trí Tab, ngoài ra có có Tab trái ở vị trí 375 (Left) và Tab giữa (Centered) chưa được thêm vào.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Paragraph paragraph2 = doc.Sections[0].AddParagraph();
+ 
+// Canh Tab phải vị trí 175
+paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Right;
+paragraph2.Format.Tabs.AddTab(375).Justification = TabJustification.Left;
+//paragraph2.Format.Tabs.AddTab(175).Justification = TabJustification.Centered;
+// Phải có \t để dịch đến Tab cần canh
+Spire.Doc.Fields.TextRange text2 = paragraph2.AppendText("\t Canh phải \t Canh trái");</pre>
+
+
+
+<h3><strong>Chèn hình</strong></h3>
+<p>Đầu tiên bạn phải thêm thư viện&nbsp;<strong>System.Drawing</strong>&nbsp;vào dự án (Add Reference), sau đó gọi 2 namespace ở trên đầu file code.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Spire.Doc.Fields;
+using System.Drawing;</pre>
+
+
+
+<p>Tiếp theo tạo đối tượng Bitmap và DocPicture để thêm hình vào đối tượng Document.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng hình ảnh DocPicture (using using Spire.Doc.Fields;)
+DocPicture picture = doc.Sections[0].Paragraphs[0].AppendPicture(b1);
+ 
+// Vị trí ảnh theo chiều dọc, ngang
+picture.HorizontalPosition = 50.0F;
+picture.VerticalPosition = 200.0F;
+ 
+// Kích thước ảnh
+picture.Width = 150;
+picture.Height = 100;
+ 
+ // Kiểu chèn ảnh nổi trên văn bản
+ picture.TextWrappingStyle = TextWrappingStyle.InFrontOfText;</pre>
+
+
+
+<h3><strong>Thêm bảng biểu</strong></h3>
+<p>Chúng ta dùng đối tượng Table để tạo bảng, trong đó tạo dòng tiêu đề trước và phần dữ liệu từng dòng sau.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Dữ liệu mẫu
+List&lt;string> list = new List&lt;string> { "One", "True", "Three" };
+ 
+// Tạo đối tượng bảng Table
+Spire.Doc.Table table = doc.Sections[0].AddTable(true);
+ 
+// Tạo cột
+String[] Header = { "STT", "Tên"};
+ 
+// Số dòng và số cột cho bảng
+table.ResetCells(list.Count + 1, Header.Length);
+ 
+// Độ rộng bảng ở dòng 0 và 2 cột STT và Tên (tạo tiêu đề bảng)
+doc.Sections[0].Tables[0].Rows[0].Cells[0].Width = 200;
+doc.Sections[0].Tables[0].Rows[0].Cells[1].Width = 200;
+ 
+// Tạo dòng tiêu đề cho bảng (dòng 0)
+Spire.Doc.TableRow FRow = table.Rows[0];
+FRow.IsHeader = true;
+FRow.Height = 23;
+ 
+for (int i = 0; i &lt; Header.Length; i++)
+{
+    // Định dạng cell
+    Paragraph p = FRow.Cells[i].AddParagraph();
+    FRow.Cells[i].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    p.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    // Định dạng văn bản trong bảng
+    Spire.Doc.Fields.TextRange TR = p.AppendText(Header[i]);
+    TR.CharacterFormat.FontName = "Times New Roman";
+    TR.CharacterFormat.FontSize = 13;
+    TR.CharacterFormat.Bold = true;
+}
+ 
+// Định dạng dữ liệu từng dòng (lấy từ list)
+for (int r = 0; r &lt; list.Count; r++)
+{
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[0].Width = 200;
+    doc.Sections[0].Tables[0].Rows[r + 1].Cells[1].Width = 200;
+ 
+    // Định dạng dòng thứ r + 1 (bỏ dòng đầu là tiêu đề)
+    Spire.Doc.TableRow DataRow = table.Rows[r + 1];
+    DataRow.Height = 20;
+ 
+    DataRow.Cells[0].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p1 = DataRow.Cells[0].AddParagraph();
+    Spire.Doc.Fields.TextRange TR1 = p1.AppendText((r + 1).ToString()); // STT
+    p1.Format.HorizontalAlignment = HorizontalAlignment.Center;
+ 
+    DataRow.Cells[1].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
+    Paragraph p2 = DataRow.Cells[1].AddParagraph();
+    Spire.Doc.Fields.TextRange TR2 = p2.AppendText(list[r].ToString()); // Tên
+    p2.Format.HorizontalAlignment = HorizontalAlignment.Center;
+}</pre>
+
+
+
+<hr />
+<h2><strong>Tạo file word và ghi 1 đoạn văn bản nhập từ bàn phím trong C#</strong></h2>
+<p>Tương tự như đoạn code mẫu bên trên. ở phần này mình có thay đổi một chút xíu đó là những gì cần ghi vào file word sẽ phải nhập từ màn hình Console. Các bạn có thể tham khảo.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System.Drawing;
+using System;
+using Spire.Doc;
+using Spire.Doc.Documents;
+using Spire.Doc.Fields;
+using Spire.Doc.Formatting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+//ghi text vao file word su dụng phương thức Spire
+namespace ghifileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Document doc = new Document();
+            Section sec = doc.AddSection();
+            Paragraph par = sec.AddParagraph();
+
+            TextBox textBox = par.AppendTextBox(180, 30);
+            textBox.Format.VerticalOrigin = VerticalOrigin.Margin;
+            textBox.Format.VerticalPosition = 100;
+            textBox.Format.HorizontalOrigin = HorizontalOrigin.Margin;
+            textBox.Format.HorizontalPosition = 50;
+            textBox.Format.NoLine = true;
+
+            CharacterFormat format = new CharacterFormat(doc);
+            format.FontName = "Calibri";
+            format.FontSize = 15;
+            format.Bold = true;
+
+            Paragraph par1 = textBox.Body.AddParagraph();
+            string line = "";
+            Console.WriteLine("Nhap  chu can ghi vao file word : ");
+            line = Console.ReadLine();
+            par1.AppendText(line).ApplyCharacterFormat(format);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.docx", FileFormat.Docx);
+            doc.SaveToFile("D:/HKIII/1. BTCL/tuan4_chuong2_3/ghifileword/result.doc", FileFormat.Doc);
+        }
+    }
+}</pre>
+
+
+
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://www.e-iceblue.com/Tutorials/Spire.Doc/Spire.Doc-Program-Guide/Text/How-to-Insert-Text-to-Word-at-Exact-Position-in-C-VB.NET.html" target="_blank" rel="noopener noreferrer">How to Insert Text to Word at Exact Position in C#, VB.NET</a></li>
+<li><a href="https://www.dammio.com/2017/03/20/cach-tao-tap-tin-word-pdf-voi-thu-vien-spire-doc-spire-pdf-bang-c" target="_blank" rel="noopener noreferrer">tạo tệp tin word excel trong c#</a></li>
+</ul>
+<p>&nbsp;</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua&nbsp;<a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a>&nbsp;để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+
+
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 – Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+
+
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7184"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/">Cách tạo và ghi file Word, PDF trong C# với thư viện Spire.Doc, Spire.PDF</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/c-sharp/cach-tao-va-ghi-file-word-pdf-trong-c-voi-thu-vien-spire-doc-spire-pdf/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</title>
+		<link>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/#respond</comments>
+				<pubDate>Sun, 06 Oct 2019 02:10:26 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7173</guid>
+				<description><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#. Phương pháp này cũng sử dụng thư viện Interop [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#.</p>
+<p>Phương pháp này cũng sử dụng thư viện Interop giống bài viết trước. Đầu tiên, thêm tham chiếu vào <strong><a href="https://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Excel XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Excel.</p>
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;       //Microsoft Excel 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Excel </strong>về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_excel_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Excel.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!C6wyxQIJ!TVdvnUSDGrzcxRNn0hKtQI9mQWAIb05ZeKsqoTbWIbI" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4569.1506</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Excel.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Excel </strong>trong danh sách <strong>Component Name .</strong> Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/VGEKQ1g.png"><img class="aligncenter size-full" src="https://imgur.com/VGEKQ1g.png" width="717" height="879" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+<p>
+
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel; using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Tiếp theo, bạn sẽ cần tạo references cho từng đối tượng COM được truy cập. Mỗi references phải được lưu giữ để thoát khỏi ứng dụng một cách hiệu quả khi hoàn thành.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng COM. Tạo một đối tượng COM cho mọi thứ được tham chiếu
+Excel.Application xlApp = new Excel.Application();
+Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"sandbox_test.xlsx");
+Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+Excel.Range xlRange = xlWorksheet.UsedRange;</pre>
+
+
+
+<p>Sau đó, bạn có thể đọc từ trang tính sheet, hãy nhớ rằng lập chỉ mục trong Excel không dựa trên 0. Điều này chỉ cần đọc các ô và in chúng trở lại giống như trong tệp.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//Lặp lại qua các hàng và cột và in ra bàn điều khiển khi nó xuất hiện trong tệp
+//excel is not zero based!!
+for (int i = 1; i &lt;= rowCount; i++)
+{
+    for (int j = 1; j &lt;= colCount; j++)
+    {
+        //dòng mới
+        if (j == 1)
+            Console.Write("\r\n");
+
+        //ghi giá trị vào bàn điều khiển console
+        if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+            Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t"); 
+    }
+}</pre>
+
+
+
+<p>Cuối cùng, các tham chiếu (references) đến bộ nhớ không được quản lý phải được xuất ra. Nếu điều này không được thực hiện đúng cách, thì sẽ có các quy trình kéo dài giữ quyền truy cập tập tin và ghi vào file Excel của bạn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//cleanup
+GC.Collect();
+GC.WaitForPendingFinalizers();
+
+//quy tắc của việc phát hành các đối tượng com:
+//không bao giờ sử dụng hai dấu chấm, tất cả các đối tượng COM phải được tham chiếu và phát hành riêng lẻ
+//  ví dụ: [somthing].[something].[something] ----&gt; bad
+
+//xuất các đối tượng com để dừng hoàn toàn quá trình excel chạy trong nền
+Marshal.ReleaseComObject(xlRange);
+Marshal.ReleaseComObject(xlWorksheet);
+
+//đóng lại và xuất thông tin
+xlWorkbook.Close();
+Marshal.ReleaseComObject(xlWorkbook);
+
+//thoát và xuất thông tin
+xlApp.Quit();
+Marshal.ReleaseComObject(xlApp);</pre>
+
+
+
+<p><strong>Full Code đầy đủ để đọc 1 file Excel trong C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;           
+using System.Text;
+using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;       //microsoft Excel 14 object in references-&gt; COM tab
+
+namespace Sandbox
+{
+    public class Read_From_Excel
+    {
+        public static void getExcelFile()
+        {
+
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\E56626\Desktop\Teddy\VS2012\Sandbox\sandbox_test - Copy - Copy.xlsx");
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+            //iterate over the rows and columns and print to the console as it appears in the file
+            //excel is not zero based!!
+            for (int i = 1; i &lt;= rowCount; i++)
+            {
+                for (int j = 1; j &lt;= colCount; j++)
+                {
+                    //new line
+                    if (j == 1)
+                        Console.Write("\r\n");
+
+                    //write the value to the console
+                    if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+                        Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t");
+                }
+            }
+
+            //cleanup
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            //rule of thumb for releasing com objects:
+            //  never use two dots, all COM objects must be referenced and released individually
+            //  ex: [somthing].[something].[something] is bad
+
+            //release com objects to fully kill excel process from running in the background
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+        }
+        static void Main(string[] args)
+        {
+            getExcelFile();
+            Console.Read();
+        }
+    }
+}   </pre>
+
+
+
+<div><span style="text-decoration: underline;"><strong>Tài liệu liên quan:</strong></span></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/158706/how-to-properly-clean-up-excel-interop-objects/158752" target="_blank" rel="noopener noreferrer">stackoverflow</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/eaw10et3.aspx" target="_blank" rel="nofollow noopener noreferrer">Interop Marshaling</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7173"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</title>
+		<link>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/#respond</comments>
+				<pubDate>Sat, 05 Oct 2019 18:19:49 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+		<category><![CDATA[Word]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7156</guid>
+				<description><![CDATA[<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé! Với NET 4+ cho phép C # đọc và thao tác các tệp Microsoft Word Excel, đối với các máy tính đã cài đặt Word, Excel [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p>Bài viết này mình hướng dẫn các bạn cách mở file, đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word nhé!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png"><img class="aligncenter size-full wp-image-7163" src="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png" alt="mo doc file word c sharp" width="505" height="226" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp.png 505w, http://localhost:82/demowp/wp-content/uploads/2019/10/mo-doc-file-word-c-sharp-300x134.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Với<strong> NET 4+ cho phép C #</strong> đọc và thao tác các tệp <strong>Microsoft Word Excel</strong>, đối với các máy tính đã cài đặt Word, Excel (nếu bạn chưa cài đặt Word, Excel, hãy xem <a href="http://npoi.codeplex.com/" target="_blank" rel="nofollow noopener noreferrer">NPOI</a> ).</p>
+<p>Đầu tiên, thêm tham chiếu vào <strong><a href="http://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Word XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Word, Excel.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Word = Microsoft.Office.Interop.Word;       //Microsoft Word 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Word</strong> về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Word.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!u3BEhYRL!MSIaE4Y8ueK3fRMkkgJQbvMVNsWYh6C39sgANQfbcAM" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4603.1000</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Word.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter size-full" src="https://imgur.com/LbWXePi.png" alt="console app read file word" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Word </strong>trong danh sách <strong>Component Name . </strong>sau đó nhấn và giữ phím CTRL và chọn <strong>Microsoft.Office.Interop.Excel</strong> nếu có. Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/krK8SSG.png"><img class="aligncenter size-full" src="https://imgur.com/krK8SSG.png" width="945" height="790" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Và cuối cùng bạn chỉ cần thêm đoạn code này vào file <strong>Program.cs</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }</pre>
+
+
+
+<p>Tại line thứ 7, các bạn nhớ sửa lại đường dẫn đến file word trong máy tính của mình nhé!</p>
+<p>Và nhớ truyền đầy đủ các thư viện vào nhé!</p>
+<p><strong>Đây là Code đầy đủ để đọc và mở 1 file Word C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+namespace docfileword
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Application word = new Application();
+            object miss = System.Reflection.Missing.Value;
+            object path = @"D:\HKIII\1. BTCL\tuan4_chuong2_3\docfileword\myDocument.docx";
+            object readOnly = true;
+
+            object missing = System.Type.Missing;
+            Document doc = word.Documents.Open(ref path,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss, ref miss,
+                    ref miss, ref miss, ref miss);
+            string totalText = "";
+            for (int i = 0; i &lt; doc.Paragraphs.Count; i++)
+            {
+                totalText += "\r\n" + doc.Paragraphs[i + 1].Range.Text.ToString();
+            }
+            Console.WriteLine(totalText);
+            Console.Read();
+        }
+    }
+}</pre>
+
+
+
+<p><span style="text-decoration: underline;"><strong>Tài liệu tham khảo:</strong></span></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interop/how-to-access-office-onterop-objects" target="_blank" rel="noopener noreferrer">Access Office Interop Objects&#8230;</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">NPOI</a></li>
+<li><a href="https://www.dllme.com/dll/files/microsoft_office_interop_word_dll.html" target="_blank" rel="noopener noreferrer">dllme</a></li>
+<li><a href="http://www.dotnetperls.com/using-alias" target="_blank" rel="noopener noreferrer">Alias</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7156"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/">Mở và Đọc File Word Trong C# Với Microsoft Office Interop Word dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-va-doc-file-word-c-voi-microsoft-office-interop-word-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

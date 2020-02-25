@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/dazunE/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/dazunE/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2014-05-13T10:00:39Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c41faa1037aee478225d9a5ab306cfa1f3f2bd0a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/c41faa1037aee478225d9a5ab306cfa1f3f2bd0a"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-05-13T10:00:39Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/43387a98c564dba8d9706fc9e81438100786a73c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/43387a98c564dba8d9706fc9e81438100786a73c"/>
+    <title>
+        - Added compatibility image
+    </title>
+    <updated>2014-05-13T09:56:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added compatibility image&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a486c24210abd0dd1d8db9c22e07176cc9dd8f45</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/a486c24210abd0dd1d8db9c22e07176cc9dd8f45"/>
+    <title>
+        - Added to bower package manager
+    </title>
+    <updated>2014-05-12T09:14:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added to bower package manager&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f5324252d8c45e9d7516a1f57c161ec922445f03</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/f5324252d8c45e9d7516a1f57c161ec922445f03"/>
+    <title>
+        - Deleted unused option.
+    </title>
+    <updated>2014-05-09T16:09:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Deleted unused option.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2c7462e30e4742d373f24ec92b0b48e1b04c7b85</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/2c7462e30e4742d373f24ec92b0b48e1b04c7b85"/>
+    <title>
+        - Added link to the blog entry
+    </title>
+    <updated>2014-05-09T09:09:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added link to the blog entry&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a5eb6b0b2e33a05847149bd1e32153165828a66f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/a5eb6b0b2e33a05847149bd1e32153165828a66f"/>
+    <title>
+        - Updated README.md
+    </title>
+    <updated>2014-05-09T09:07:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5028a48b734318cc41a22fb5be231b8edfb7e007</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/5028a48b734318cc41a22fb5be231b8edfb7e007"/>
+    <title>
+        - Fixed bug. Anchors and navigation options are optional.
+    </title>
+    <updated>2014-05-08T17:00:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug. Anchors and navigation options are optional.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4588a467da3f14c5235264325aa0c0f99d5dbb4a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/4588a467da3f14c5235264325aa0c0f99d5dbb4a"/>
+    <title>
+        - Added touch support
+    </title>
+    <updated>2014-05-08T15:17:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added touch support&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/81766b53e03fd344e4603b3cbe57e5fdf22effd6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/81766b53e03fd344e4603b3cbe57e5fdf22effd6"/>
+    <title>
+        - Added donate buttons
+    </title>
+    <updated>2014-05-08T14:54:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added donate buttons&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5f30ed18bfbe606dfb4881feef8bba269fb61f9b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/5f30ed18bfbe606dfb4881feef8bba269fb61f9b"/>
+    <title>
+        - Fixed bug when resizing.
+    </title>
+    <updated>2014-05-08T14:01:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug when resizing.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/32a7f7c7f2e540e8936b03c7c6f427d03fb4f309</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/32a7f7c7f2e540e8936b03c7c6f427d03fb4f309"/>
+    <title>
+        - multiScroll.js Beta
+    </title>
+    <updated>2014-05-02T16:37:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- multiScroll.js Beta&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/715f2066710acc906540619c6eef87c6cbd2e80e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/715f2066710acc906540619c6eef87c6cbd2e80e"/>
+    <title>
+        - multiScroll.js Beta
+    </title>
+    <updated>2014-05-02T16:15:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- multiScroll.js Beta&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/af170ec6c648f16b1e14853dd97a01edfd8ce419</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/af170ec6c648f16b1e14853dd97a01edfd8ce419"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-05-02T16:04:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/da96e015b0bb66bc35354253f0f6d68fdccb1e24</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/da96e015b0bb66bc35354253f0f6d68fdccb1e24"/>
+    <title>
+        - multiScroll.js Beta
+    </title>
+    <updated>2014-05-02T16:03:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- multiScroll.js Beta&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8f3cb08a95fc1f97a8a71506adfa2fce72f4162f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/8f3cb08a95fc1f97a8a71506adfa2fce72f4162f"/>
+    <title>
+        - multiScroll.js Beta
+    </title>
+    <updated>2014-05-02T16:03:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- multiScroll.js Beta&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b52df2717e114f2b2d8ea50615be4301c10ea0a0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/dazunE/multiscroll.js/commit/b52df2717e114f2b2d8ea50615be4301c10ea0a0"/>
+    <title>
+        Create README.md
+    </title>
+    <updated>2014-05-02T16:02:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Create README.md&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

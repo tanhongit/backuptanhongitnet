@@ -1,0 +1,67 @@
+From be9f447b32312c64c7ddb075e957fc4180981a21 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Wed, 20 May 2015 15:35:24 +0100
+Subject: [PATCH] - Changed top comments wrap - Minor change related with
+ pp-scrollable
+
+---
+ jquery.pagepiling.js     | 11 ++++++-----
+ jquery.pagepiling.min.js |  7 +++----
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/jquery.pagepiling.js b/jquery.pagepiling.js
+index 0523e7a..326d388 100644
+--- a/jquery.pagepiling.js
++++ b/jquery.pagepiling.js
+@@ -1,13 +1,11 @@
+-/* ===========================================================
++/**
+  * pagepiling.js 1.5.1
+  *
+  * https://github.com/alvarotrigo/pagePiling.js
+  * MIT licensed
+  *
+  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+- *
+- * ========================================================== */
+-
++ */
+ (function ($, document, window, undefined) {
+     'use strict';
+ 
+@@ -746,11 +744,14 @@
+ 
+             // additional: if one of the normalScrollElements isn't within options.normalScrollElementTouchThreshold hops up the DOM chain
+             if ( !checkParentForNormalScrollElement(event.target) && isReallyTouch(e) ) {
+-                event.preventDefault();
+ 
+                 var activeSection = $('.pp-section.active');
+                 var scrollable = isScrollable(activeSection);
+ 
++                if(!scrollable.length){
++                    event.preventDefault();
++                }
++
+                 if (!isMoving()) {
+                     var touchEvents = getEventsPage(e);
+                     touchEndY = touchEvents.y;
+diff --git a/jquery.pagepiling.min.js b/jquery.pagepiling.min.js
+index c1b46c4..99d7c2e 100644
+--- a/jquery.pagepiling.min.js
++++ b/jquery.pagepiling.min.js
+@@ -1,12 +1,11 @@
+-/* ===========================================================
++/**
+  * pagepiling.js 1.5.1
+  *
+  * https://github.com/alvarotrigo/pagePiling.js
+  * MIT licensed
+  *
+- * Copyright (C) 2014 alvarotrigo.com - A project by Alvaro Trigo
+- *
+- * ========================================================== */
++ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
++ */
+ (function(b,h,k,y){b.fn.pagepiling=function(J){function K(a){var e=b(".pp-section.active").index(".pp-section");a=a.index(".pp-section");return e>a?"up":"down"}function l(a,e){var d={destination:a,animated:e,activeSection:b(".pp-section.active"),anchorLink:a.data("anchor"),sectionIndex:a.index(".pp-section"),toMove:a,yMovement:K(a),leavingSection:b(".pp-section.active").index(".pp-section")+1};d.activeSection.is(a)||("undefined"===typeof d.animated&&(d.animated=!0),"undefined"!==typeof d.anchorLink&&
+ L(d.anchorLink,d.sectionIndex),d.destination.addClass("active").siblings().removeClass("active"),d.sectionsToMove=M(d),"down"===d.yMovement?(d.translate3d="vertical"!==c.direction?"translate3d(-100%, 0px, 0px)":"translate3d(0px, -100%, 0px)",d.scrolling="-100%",c.css3||d.sectionsToMove.each(function(a){a!=d.activeSection.index(".pp-section")&&b(this).css(u(d.scrolling))}),d.animateSection=d.activeSection):(d.translate3d="translate3d(0px, 0px, 0px)",d.scrolling="0",d.animateSection=a),b.isFunction(c.onLeave)&&
+ c.onLeave.call(this,d.leavingSection,d.sectionIndex+1,d.yMovement),N(d),O(d.anchorLink),P(d.anchorLink,d.sectionIndex),z=d.anchorLink,A=(new Date).getTime())}function N(a){c.css3?(B(a.animateSection,a.translate3d,a.animated),a.sectionsToMove.each(function(){B(b(this),a.translate3d,a.animated)}),setTimeout(function(){v(a)},c.scrollingSpeed)):(a.scrollOptions=u(a.scrolling),a.animated?a.animateSection.animate(a.scrollOptions,c.scrollingSpeed,c.easing,function(){C(a);v(a)}):(a.animateSection.css(u(a.scrolling)),

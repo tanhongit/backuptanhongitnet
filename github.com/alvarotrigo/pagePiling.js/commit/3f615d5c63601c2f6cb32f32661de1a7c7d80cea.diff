@@ -1,0 +1,472 @@
+diff --git a/examples/backgrounds.html b/examples/backgrounds.html
+index 14179e8..1d6acff 100644
+--- a/examples/backgrounds.html
++++ b/examples/backgrounds.html
+@@ -89,12 +89,12 @@
+ 	}
+ 	#section2 h1,
+ 	#section2 p{
+-		text-shadow: 1px 5px 20px #000; 
++		text-shadow: 1px 5px 20px #000;
+ 	}
+ 
+ 	#section3 h1,
+ 	#section3 p{
+-		text-shadow: 1px 5px 20px #000; 
++		text-shadow: 1px 5px 20px #000;
+ 		color: #fff;
+ 	}
+     </style>
+@@ -108,8 +108,6 @@
+ 		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+ 	</ul>
+ 
+-	<div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+-
+ 	<div id="pagepiling">
+ 	    <div class="section" id="section1">
+ 	    	<h1>pagePiling.js</h1>
+diff --git a/examples/demoPage.html b/examples/demoPage.html
+new file mode 100644
+index 0000000..cb3070b
+--- /dev/null
++++ b/examples/demoPage.html
+@@ -0,0 +1,193 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++	<title>pagePiling.js plugin</title>
++	<meta name="author" content="Alvaro Trigo Lopez" />
++	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
++	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
++	<meta name="Resource-type" content="Document" />
++
++	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
++	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css" />
++	<link rel="stylesheet" type="text/css" href="examples.css" />
++
++	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++
++	<script type="text/javascript" src="../jquery.pagepiling.min.js"></script>
++	<script type="text/javascript">
++		$(document).ready(function() {
++
++			/*
++			* Plugin intialization
++			*/
++	    	$('#pagepiling').pagepiling({
++	    		menu: '#menu',
++	    		anchors: ['page1', 'page2', 'page3', 'page4'],
++			    sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
++			    navigation: {
++			    	'position': 'right',
++			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
++			   	},
++			    afterRender: function(){
++			    	$('#pp-nav').addClass('custom');
++			    },
++			    afterLoad: function(anchorLink, index){
++			    	if(index>1){
++			    		$('#pp-nav').removeClass('custom');
++			    	}else{
++			    		$('#pp-nav').addClass('custom');
++			    	}
++			    }
++			});
++
++
++			/*
++		    * Internal use of the demo website
++		    */
++		    $('#showExamples').click(function(e){
++				e.stopPropagation();
++				e.preventDefault();
++				$('#examplesList').toggle();
++			});
++
++			$('html').click(function(){
++				$('#examplesList').hide();
++			});
++	    });
++    </script>
++
++
++    <style>
++    /* Section 1
++	 * --------------------------------------- */
++	#section1 h1{
++		color: #444;
++	}
++	#section1 p{
++		color: #333;
++		color: rgba(0,0,0,0.3);
++	}
++	#section1 img{
++		margin: 20px 0;
++		opacity: 0.7;
++	}
++
++	/* Section 2
++	 * --------------------------------------- */
++	#section2 h1,
++	#section2 p{
++		z-index: 3;
++	}
++	#section2 p{
++		opacity: 0.8;
++	}
++
++	#section2 #colors{
++		right: 60px;
++		bottom: 0;
++		position: absolute;
++		height: 413px;
++		width: 258px;
++		background-image: url(imgs/colors.gif);
++		background-repeat: no-repeat;
++	}
++
++	/* Section 3
++	 * --------------------------------------- */
++	#section3 #colors{
++		left: 60px;
++		bottom: 0;
++	}
++	#section3 p{
++		color: #757575;
++	}
++
++	#colors2,
++	#colors3{
++		position: absolute;
++		height: 163px;
++		width: 362px;
++		z-index: 1;
++		background-repeat: no-repeat;
++		left: 0;
++		margin: 0 auto;
++		right: 0;
++	}
++	#colors2{
++		background-image: url(imgs/colors2.gif);
++		top:0;
++	}
++	#colors3{
++		background-image: url(imgs/colors3.gif);
++		bottom:0;
++	}
++
++	/* Section 4
++	 * --------------------------------------- */
++	#section4 p{
++		opacity: 0.6;
++	}
++
++	/* Overwriting fullPage.js tooltip color
++	* --------------------------------------- */
++	#pp-nav.custom .pp-tooltip{
++		color: #AAA;
++	}
++	#markup{
++		display: block;
++		width: 450px;
++		margin: 20px auto;
++		text-align: left;
++	}
++
++</style>
++
++</head>
++<body>
++	<ul id="menu">
++		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
++		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
++		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
++		<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
++	</ul>
++
++
++	<div id="pagepiling">
++	    <div class="section" id="section1">
++	    	<h1>pagePiling.js</h1>
++			<p>Create an original scrolling site</p>
++			<img src="imgs/pagePiling-plugin.gif" alt="pagePiling" />
++			<br />
++
++	    </div>
++	    <div class="section" id="section2">
++	    	<div class="intro">
++	    		<div id="colors"></div>
++	    		<h1>jQuery plugin</h1>
++	    		<p>Pile your sections one over another and access them scrolling or by URL!</p>
++	    		<div id="markup">
++	    			<script src="https://gist.github.com/alvarotrigo/4a87a4b8757d87df8a72.js"></script>
++	    		</div>
++	    	</div>
++	    </div>
++	    <div class="section" id="section3">
++	    	<div class="intro">
++	    		<h1>Configurable</h1>
++	    		<p>Plenty of options, methods and callbacks to use.</p>
++	    		<div id="colors2"></div>
++	    		<div id="colors3"></div>
++	    	</div>
++	    </div>
++	    <div class="section" id="section4">
++	    	<div class="intro">
++	    		<h1>Compatible</h1>
++	    		<p>Designed to work on tablet and mobile devices.</p>
++	    		<p>Oh! And its compatible with old browsers such as IE 8 or Opera 12!</p>
++	    	</div>
++	    </div>
++	</div>
++
++</body>
++</html>
+diff --git a/examples/imgs/colors.gif b/examples/imgs/colors.gif
+new file mode 100644
+index 0000000..1f3eb08
+Binary files /dev/null and b/examples/imgs/colors.gif differ
+diff --git a/examples/imgs/colors2.gif b/examples/imgs/colors2.gif
+new file mode 100644
+index 0000000..94ac3b7
+Binary files /dev/null and b/examples/imgs/colors2.gif differ
+diff --git a/examples/imgs/colors3.gif b/examples/imgs/colors3.gif
+new file mode 100644
+index 0000000..771e609
+Binary files /dev/null and b/examples/imgs/colors3.gif differ
+diff --git a/examples/imgs/flowers.mp4 b/examples/imgs/flowers.mp4
+new file mode 100644
+index 0000000..3b7e6a8
+Binary files /dev/null and b/examples/imgs/flowers.mp4 differ
+diff --git a/examples/imgs/pagePiling-plugin.gif b/examples/imgs/pagePiling-plugin.gif
+new file mode 100644
+index 0000000..ee345e3
+Binary files /dev/null and b/examples/imgs/pagePiling-plugin.gif differ
+diff --git a/examples/looping.html b/examples/looping.html
+index e16afa9..18c24c1 100644
+--- a/examples/looping.html
++++ b/examples/looping.html
+@@ -37,8 +37,6 @@
+ 		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+ 	</ul>
+ 
+-	<div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+-
+ 	<div id="pagepiling">
+ 	    <div class="section" id="section1">
+ 	    	<h1>pagePiling.js</h1>
+diff --git a/examples/noAnchors.html b/examples/noAnchors.html
+index 1a61b9b..392f7a8 100644
+--- a/examples/noAnchors.html
++++ b/examples/noAnchors.html
+@@ -29,8 +29,6 @@
+     </script>
+ </head>
+ <body>
+-	<div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+-
+ 	<div id="pagepiling">
+ 	    <div class="section" id="section1">
+ 	    	<h1>No anchors (#)</h1>
+diff --git a/examples/scrollingSpeed.html b/examples/scrollingSpeed.html
+new file mode 100644
+index 0000000..62b96bb
+--- /dev/null
++++ b/examples/scrollingSpeed.html
+@@ -0,0 +1,77 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++	<title>pagePiling.js plugin - Scrolling speed</title>
++	<meta name="author" content="Alvaro Trigo Lopez" />
++	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
++	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
++	<meta name="Resource-type" content="Document" />
++
++	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
++	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css" />
++	<link rel="stylesheet" type="text/css" href="examples.css" />
++
++	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++
++	<script type="text/javascript" src="../jquery.pagepiling.min.js"></script>
++	<script type="text/javascript">
++		$(document).ready(function() {
++	    	$('#pagepiling').pagepiling({
++	    		menu: '#menu',
++	    		anchors: ['page1', 'page2', 'page3', 'page4'],
++			    sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
++			    navigation: {
++			    	'position': 'right',
++			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
++			   	}
++			});
++	    });
++    </script>
++
++    <style>
++    	.pp-easing {
++		    -webkit-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    -moz-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    -o-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    /* custom */
++		    -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
++		    /* custom */
++		}
++
++    </style>
++</head>
++<body>
++	<ul id="menu">
++		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
++		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
++		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
++	</ul>
++
++	<div id="pagepiling">
++	    <div class="section" id="section1">
++	    	<h1>Set your own speed!</h1>
++			<p>Just override the `.pp-easing` class located in the CSS file.</p>
++			<br />
++	    </div>
++	    <div class="section" id="section2">
++	    	<div class="intro">
++	    		<h1>Using jQuery?</h1>
++				<p>When using css3:false, use the `scrollingSpeed` option to set the animation speed for jQuery animations.</p>
++	    	</div>
++	    </div>
++	    <div class="section" id="section4">
++	    	<div class="intro">
++	    		<h1>Customizable</h1>
++				<p>You can even change the kind of animation!</p>
++	    	</div>
++	    </div>
++	</div>
++
++</body>
++</html>
+diff --git a/examples/videoBackground.html b/examples/videoBackground.html
+new file mode 100644
+index 0000000..a076433
+--- /dev/null
++++ b/examples/videoBackground.html
+@@ -0,0 +1,110 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++	<title>pagePiling.js plugin - Video Background</title>
++	<meta name="author" content="Alvaro Trigo Lopez" />
++	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
++	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
++	<meta name="Resource-type" content="Document" />
++
++	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
++	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css" />
++	<link rel="stylesheet" type="text/css" href="examples.css" />
++
++	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++
++	<script type="text/javascript" src="../jquery.pagepiling.min.js"></script>
++	<script type="text/javascript">
++		$(document).ready(function() {
++	    	$('#pagepiling').pagepiling({
++	    		menu: '#menu',
++	    		anchors: ['page1', 'page2', 'page3', 'page4'],
++			    sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
++			    navigation: {
++			    	'position': 'right',
++			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
++			   	},
++			   	afterRender: function(){
++					//playing the video
++					$('video').get(0).play();
++				}
++			});
++	    });
++    </script>
++
++    <style>
++    	/* Centered texts in each section
++		* --------------------------------------- */
++		.section{
++			text-align:center;
++		}
++
++		#myVideo{
++			position: absolute;
++			z-index: 4;
++			right: 0;
++			bottom: 0;
++			top:0;
++			right:0;
++			width: 100%;
++			height: 100%;
++			background-size: 100% 100%;
++	 		background-color: black; /* in case the video doesn't fit the whole page*/
++	  		background-image: /* our video */;
++	  		background-position: center center;
++	  		background-size: contain;
++	   		object-fit: cover; /*cover video background */
++		}
++
++		/* Layer with position absolute in order to have it over the video
++		* --------------------------------------- */
++		#section1 .layer{
++			position: absolute;
++			z-index: 5;
++			width: 100%;
++			left: 0;
++			top: 43%;
++			height: 100%;
++		}
++
++		#section1 h1{
++			color:#fff;
++		}
++
++    </style>
++</head>
++<body>
++	<ul id="menu">
++		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
++		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
++		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
++	</ul>
++
++	<div id="pagepiling">
++	    <div class="section" id="section1">
++	    	<video autoplay loop muted id="myVideo">
++				<source src="imgs/flowers.mp4" type="video/mp4">
++				<source src="imgs/flowers.webm" type="video/webm">
++			</video>
++			<div class="layer">
++				<h1>pagePiling.js video</h1>
++			</div>
++	    </div>
++	    <div class="section" id="section2">
++	    	<div class="intro">
++	    		<h1>No limits</h1>
++				<p>Anything is possible with pagePiling.js!</p>
++	    	</div>
++	    </div>
++	    <div class="section" id="section4">
++	    	<div class="intro">
++	    		<h1>afterRender</h1>
++				<p>Don't forget to use afterRender callback for it!</p>
++	    	</div>
++	    </div>
++	</div>
++
++</body>
++</html>

@@ -1,0 +1,1375 @@
+From a9055a8e5bd8262661a3782fa70cca92740bb4e7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alvaro=20Trigo=20Lo=CC=81pez?= <atrigol@gmail.com>
+Date: Mon, 5 Mar 2018 15:04:06 +0100
+Subject: [PATCH] - Updating version and dist files
+
+---
+ dist/jquery.multiscroll.css               |  16 +-
+ dist/jquery.multiscroll.extensions.min.js |   4 +-
+ dist/jquery.multiscroll.js                |   2 +-
+ dist/jquery.multiscroll.min.css           |   4 +-
+ dist/jquery.multiscroll.min.css.map       |   2 +-
+ dist/jquery.multiscroll.min.js            | 206 ++++-
+ dist/jquery.multiscroll.min.js.map        |   2 +-
+ examples/scrollable.html                  |  74 ++
+ jquery.multiscroll.css                    |  16 +-
+ jquery.multiscroll.js                     |   2 +-
+ jquery.multiscroll.scrollable.js          | 906 ++++++++++++++++++++++
+ 11 files changed, 1218 insertions(+), 16 deletions(-)
+ create mode 100644 examples/scrollable.html
+ create mode 100644 jquery.multiscroll.scrollable.js
+
+diff --git a/dist/jquery.multiscroll.css b/dist/jquery.multiscroll.css
+index 5e762cb..9883832 100644
+--- a/dist/jquery.multiscroll.css
++++ b/dist/jquery.multiscroll.css
+@@ -1,5 +1,5 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+@@ -8,8 +8,8 @@
+ html, body {
+     margin: 0;
+     padding: 0;
+-	overflow:hidden;
+-	-webkit-tap-highlight-color: rgba(0,0,0,0);
++    overflow:hidden;
++    -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ .ms-section {
+     position: relative;
+@@ -100,3 +100,13 @@ html, body {
+ .ms-responsive .ms-hide{
+     display: none;
+ }
++.ms-scrollable {
++    overflow: hidden;
++    position: relative;
++}
++.ms-scroller{
++    overflow: hidden;
++}
++.iScrollIndicator{
++    border: 0 !important;
++}
+diff --git a/dist/jquery.multiscroll.extensions.min.js b/dist/jquery.multiscroll.extensions.min.js
+index c708ac5..63f9224 100644
+--- a/dist/jquery.multiscroll.extensions.min.js
++++ b/dist/jquery.multiscroll.extensions.min.js
+@@ -1,8 +1,8 @@
+ /*!
+- * multiscroll.js 0.1.8 - Extensions 0.0.4
++ * multiscroll.js 0.1.9 - Extensions 0.0.6
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
+  */
+-!function(e,n,t,o,i){e.fn.multiscroll=function(s){function a(){e.isFunction(s.afterRender)&&s.afterRender.call(this)}function r(){var t=n.location.hash.replace("#",""),o=t;if(o.length){var i=G("responsiveExpand","isResponsive")?e(".ms-left").find('[data-panel="ms-left"][data-anchor="'+o+'"]'):e(".ms-left").find('[data-anchor="'+o+'"]'),s="undefined"==typeof lastScrolledDestiny;(s||o!==lastScrolledDestiny)&&h(i)}}function l(n){if(clearTimeout(oe),s.autoScrolling){var o=e(t.activeElement);if(!o.is("textarea")&&!o.is("input")&&!o.is("select")&&s.keyboardScrolling){var i=n.which,a=[40,38,32,33,34];e.inArray(i,a)>-1&&n.preventDefault(),oe=setTimeout(function(){c(n)},150)}}}function c(n){var t=n.shiftKey;switch(n.which){case 38:case 33:V.moveSectionUp();break;case 32:if(t){V.moveSectionUp();break}case 40:case 34:V.moveSectionDown();break;case 36:V.moveTo(1);break;case 35:V.moveTo(e(".ms-left .ms-section").length);break;default:return}}function d(n){n.preventDefault();var t=e(this).parent().index();h(e(".ms-left .ms-section").eq(t))}function m(){var n=e(this).data("tooltip");e('<div class="multiscroll-tooltip '+s.navigationPosition+'">'+n+"</div>").hide().appendTo(e(this)).fadeIn(200)}function f(){e(this).find(".multiscroll-tooltip").fadeOut(200,function(){e(this).remove()})}function u(){if(te=e(n).height(),e(".ms-tableCell").each(function(){e(this).css({height:k(e(this).parent())})}),Q){var t=te;o.abs(t-ie)>20*o.max(ie,t)/100&&(v(),ie=t)}else v();e.isFunction(s.afterResize)&&s.afterResize.call(this)}function v(){s.css3&&s.autoScrolling?(b(e(".ms-left"),"translate3d(0px, -"+e(".ms-left").find(".ms-section.active").position().top+"px, 0px)",!1),b(e(".ms-right"),"translate3d(0px, -"+e(".ms-right").find(".ms-section.active").position().top+"px, 0px)",!1)):s.autoScrolling?(e(".ms-left").css("top",-e(".ms-left").find(".ms-section.active").position().top),e(".ms-right").css("top",-e(".ms-right").find(".ms-section.active").position().top)):e("html,body").scrollTop(e(".ms-left").find(".ms-section.active").position().top)}function h(n){var t=n.index(),o=e(".ms-right").find(".ms-section").eq(ee-1-t),i=n.data("anchor"),a=e(".ms-left .ms-section.active"),r=a.index()+1,l=w(n);ne=!0;var c={left:n.position().top};if(G("responsiveExpand","isResponsive")||(c.right=o.position().top),G("responsiveExpand","isResponsive")||o.addClass("active").siblings().removeClass("active"),n.addClass("active").siblings().removeClass("active"),T(i),G("responsiveExpand","isResponsive"))V.responsiveExpand.performMovement(n),setTimeout(function(){ne=!1},s.scrollingSpeed);else if(s.css3){e.isFunction(s.onLeave)&&s.onLeave.call(this,r,t+1,l);var d="translate3d(0px, -"+c.left+"px, 0px)",m="translate3d(0px, -"+c.right+"px, 0px)";b(e(".ms-left"),d,!0),b(e(".ms-right"),m,!0),setTimeout(function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,t+1),setTimeout(function(){ne=!1},K)},s.scrollingSpeed)}else e.isFunction(s.onLeave)&&s.onLeave.call(this,r,t+1,l),e(".ms-left").animate({top:-c.left},s.scrollingSpeed,s.easing,function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,t+1),setTimeout(function(){ne=!1},K)}),e(".ms-right").animate({top:-c.right},s.scrollingSpeed,s.easing);lastScrolledDestiny=i,C(i),y(i,t)}function p(){t.addEventListener?(t.removeEventListener("mousewheel",x,!1),t.removeEventListener("wheel",x,!1)):t.detachEvent("onmousewheel",x)}function g(){t.addEventListener?(t.addEventListener("mousewheel",x,!1),t.addEventListener("wheel",x,!1)):t.attachEvent("onmousewheel",x)}function x(e){e=n.event||e;var t=o.max(-1,o.min(1,e.wheelDelta||-e.deltaY||-e.detail));return ne||(t<0?V.moveSectionDown():V.moveSectionUp()),!1}function b(e,n,t){e.toggleClass("ms-easing",t),e.css(S(n))}function S(e){return{"-webkit-transform":e,"-moz-transform":e,"-ms-transform":e,transform:e}}function y(n,t){s.navigation&&(e("#multiscroll-nav").find(".active").removeClass("active"),n?e("#multiscroll-nav").find('a[href="#'+n+'"]').addClass("active"):e("#multiscroll-nav").find("li").eq(t).find("a").addClass("active"))}function C(n){s.menu&&(e(s.menu).find(".active").removeClass("active"),e(s.menu).find('[data-menuanchor="'+n+'"]').addClass("active"))}function w(n){var t=e(".ms-left .ms-section.active").index(),o=n.index();return t>o?"up":"down"}function T(e){s.anchors.length&&(location.hash=e),E()}function E(){var n=e(".ms-left .ms-section.active"),t=n.data("anchor"),o=n.index(),i=String(o);if(s.anchors.length&&(i=t),"undefined"!=typeof i){i=i.replace("/","-").replace("#","");var a=new RegExp("\\b\\s?ms-viewing-[^\\s]+\\b","g");e("body")[0].className=e("body")[0].className.replace(a,""),e("body").addClass("ms-viewing-"+i)}}function I(){var e,o=t.createElement("p"),s={webkitTransform:"-webkit-transform",OTransform:"-o-transform",msTransform:"-ms-transform",MozTransform:"-moz-transform",transform:"transform"};t.body.insertBefore(o,null);for(var a in s)o.style[a]!==i&&(o.style[a]="translate3d(1px,1px,1px)",e=n.getComputedStyle(o).getPropertyValue(s[a]));return t.body.removeChild(o),e!==i&&e.length>0&&"none"!==e}function D(e){e.addClass("ms-table").wrapInner('<div class="ms-tableCell" style="height: '+k(e)+'px" />')}function k(e){var n=te;if(s.paddingTop||s.paddingBottom){var t=parseInt(e.css("padding-top"))+parseInt(e.css("padding-bottom"));n=te-t}return n}function L(){var t=n.location.hash.replace("#",""),o=e('.ms-left .ms-section[data-anchor="'+t+'"]');t.length&&h(o)}function M(t){var i=t.originalEvent;if(B(i)){t.preventDefault();e(".ms-left .ms-section.active");if(!ne){var a=z(i);re=a.y,le=a.x,o.abs(se-re)>e(n).height()/100*s.touchSensitivity&&(se>re?V.moveSectionDown():re>se&&V.moveSectionUp())}}}function B(e){return"undefined"==typeof e.pointerType||"mouse"!=e.pointerType}function O(e){var n=e.originalEvent;if(B(n)){var t=z(n);se=t.y,ae=t.x}}function Z(){if(Q||_){var n=W();e(t).off("touchstart "+n.down).on("touchstart "+n.down,O),e(t).off("touchmove "+n.move).on("touchmove "+n.move,M)}}function R(){if(Q||_){var n=W();e(t).off("touchstart "+n.down),e(t).off("touchmove "+n.move)}}function W(){var e;return e=n.PointerEvent?{down:"pointerdown",move:"pointermove"}:{down:"MSPointerDown",move:"MSPointerMove"}}function z(e){var n=[];return n.y="undefined"!=typeof e.pageY&&(e.pageY||e.pageX)?e.pageY:e.touches[0].pageY,n.x="undefined"!=typeof e.pageX&&(e.pageY||e.pageX)?e.pageX:e.touches[0].pageX,_&&B(e)&&(n.y=e.touches[0].pageY,n.x=e.touches[0].pageX),n}function A(){return{options:s,internals:{isTouchDevice:Q,numberSections:ee,setLastScrollDestiny:j,setURLHash:T,activateMenuElement:C,activateNavDots:y,getYmovement:w,removeMouseWheelHandler:p,addMouseWheelHandler:g,removeTouchHandler:R,addTouchHandler:Z,transformContainer:b,c:X}}}function j(e){lastScrolledDestiny=e}function P(e){var t="ms_"+e+"Extension";J[e]=s[e+"Key"],V[e]="undefined"!=typeof n[t]?new n[t]:null,V[e]&&V[e].c(e)}function Y(e){return s[e]&&V[e]}function G(e,n,t){var o=Array.isArray(t)?t.join(", "):t;return!!Y(e)&&V[e][n](o)}function H(e){function n(e){var n,o,i,s,r,l,c,d="",m=0;for(e=e.replace(/[^A-Za-z0-9+\/=]/g,"");m<e.length;)s=a.indexOf(e.charAt(m++)),r=a.indexOf(e.charAt(m++)),l=a.indexOf(e.charAt(m++)),c=a.indexOf(e.charAt(m++)),n=s<<2|r>>4,o=(15&r)<<4|l>>2,i=(3&l)<<6|c,d+=String.fromCharCode(n),64!=l&&(d+=String.fromCharCode(o)),64!=c&&(d+=String.fromCharCode(i));return d=t(d)}function t(e){for(var n,t="",o=0,i=0,s=0;o<e.length;)i=e.charCodeAt(o),i<128?(t+=String.fromCharCode(i),o++):i>191&&i<224?(s=e.charCodeAt(o+1),t+=String.fromCharCode((31&i)<<6|63&s),o+=2):(s=e.charCodeAt(o+1),n=e.charCodeAt(o+2),t+=String.fromCharCode((15&i)<<12|(63&s)<<6|63&n),o+=3);return t}function o(e){return e}function i(e){return e.slice(3).slice(0,-3)}function s(e){var t=e.split("_");if(t.length>1){var o=t[1],s=e.replace(i(t[1]),"").split("_")[0],a=s;return a+"_"+n(o.slice(3).slice(0,-3))}return i(e)}var a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";return o(s(n(e)))}function N(){if(t.domain.length){for(var e=t.domain.replace(/^(www\.)/,"").split(".");e.length>2;){e.shift()}var n=e.join(".");return n.replace(/(^\.*)|(\.*$)/g,"")}return""}function U(e){var n=N(),t=["localhost","127.0.0.1","jshell.net","UDdDQU5ZNlNN"],o=t[0],i=t[1],s=t[2],a=H(t[3]),r=[o,i,s].indexOf(n)<0&&0!==n.length,l="undefined"!=typeof J[e]&&J[e].length;if(!l&&r)return!1;var c=l?H(J[e]):"";c=c.split("_");var d=c.length>1&&c[1].indexOf(e,c[1].length-e.length)>-1,m=c[0].indexOf(n,c[0].length-n.length)<0;return!(m&&r&&a!=c[0])&&d||!r}function X(e){if(Y(e)&&V[e]){var n=H("MTIzPGRpdiBzdHlsZT0iei1pbmRleDo5OTk5OTk5O3Bvc2l0aW9uOmZpeGVkOyB0b3A6IDIwcHg7IGxlZnQ6MjBweDsgYmFja2dyb3VuZDpyZWQ7IHBhZGRpbmc6IDdweCAxNXB4OyBmb250LXNpemU6IDE0cHg7IGZvbnQtZmFtaWx5OiBhcmlhbDsgY29sb3I6ICNmZmY7IGRpc3BsYXk6IGlubGluZS1ibG9jazsiPjxhIGhyZWY9Imh0dHA6Ly9hbHZhcm90cmlnby5jb20vbXVsdGlTY3JvbGwvZXh0ZW5zaW9ucy8iIHN0eWxlPSJjb2xvcjogI2ZmZjsgdGV4dC1kZWNvcmF0aW9uOm5vbmU7Ij5VbmxpY2Vuc2VkIG11bHRpU2Nyb2xsLmpzIEV4dGVuc2lvbjwvYT48L2Rpdj4xMjM="),t=o.random()<.5;if(!U(e)){var i,s="9999999",a="z-index",r=function(){i=t?q.find("div").first():q.find("div").last(),i.css(a)!==s&&(t?q.prepend(n):q.append(n))};r(),setInterval(r,2e3)}}}var V=e.fn.multiscroll,F="multiscroll-wrapper",q=(e("html, body"),e("body"));s=e.extend({verticalCentered:!0,scrollingSpeed:700,easing:"easeInOutCubic",menu:!1,sectionsColor:[],anchors:[],navigation:!1,navigationPosition:"right",navigationColor:"#000",navigationTooltips:[],loopBottom:!1,loopTop:!1,css3:!1,autoScrolling:!0,paddingTop:0,paddingBottom:0,fixedElements:null,normalScrollElements:null,keyboardScrolling:!0,touchSensitivity:5,responsiveWidth:null,responsiveHeight:null,responsiveExpand:!1,responsiveCombine:!1,sectionSelector:".ms-section",leftSelector:".ms-left",rightSelector:".ms-right",afterLoad:null,onLeave:null,afterRender:null,afterResize:null},s);var K=600,Q=navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/),_="ontouchstart"in n||navigator.msMaxTouchPoints>0||navigator.maxTouchPoints,J={};".ms-right"!==s.rightSelector&&e(s.rightSelector).addClass("ms-right"),".ms-left"!==s.leftSelector&&e(s.leftSelector).addClass("ms-left");var $,ee=e(".ms-left").find(".ms-section").length,ne=!1,te=e(n).height();e(this).length&&(V.getMultiscrollData=A),P("responsiveExpand"),P("responsiveCombine"),g(),Z(),s.css3&&(s.css3=I()),e("html, body").css({overflow:"hidden",height:"100%"}),e(this).addClass(F),".ms-section"!==s.sectionSelector&&e(s.sectionSelector).each(function(){e(this).addClass("ms-section")}),s.navigation&&(e("body").append('<div id="multiscroll-nav"><ul></ul></div>'),$=e("#multiscroll-nav"),$.css("color",s.navigationColor),$.addClass(s.navigationPosition)),e(".ms-right, .ms-left").css({width:"50%",position:"absolute",height:"100%","-ms-touch-action":"none"}),e(".ms-right").css({right:"1px",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left").css({left:"0",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var n=e(this).index();if((s.paddingTop||s.paddingBottom)&&e(this).css("padding",s.paddingTop+" 0 "+s.paddingBottom+" 0"),"undefined"!=typeof s.sectionsColor[n]&&e(this).css("background-color",s.sectionsColor[n]),"undefined"!=typeof s.anchors[n]&&e(this).attr("data-anchor",s.anchors[n]),s.verticalCentered&&D(e(this)),e(this).closest(".ms-left").length&&s.navigation){var t="";s.anchors.length&&(t=s.anchors[n]);var o=s.navigationTooltips[n];"undefined"==typeof o&&(o=""),s.navigation&&$.find("ul").append('<li data-tooltip="'+o+'"><a href="#'+t+'"><span></span></a></li>')}}),e(".ms-right").html(e(".ms-right").find(".ms-section").get().reverse()),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var n=e(this).index();e(this).css({height:"100%"}),!n&&s.navigation&&$.find("li").eq(n).find("a").addClass("active")}).promise().done(function(){e(".ms-left .ms-section.active").length||(e(".ms-right").find(".ms-section").last().addClass("active"),e(".ms-left").find(".ms-section").first().addClass("active")),Y("responsiveExpand")&&(V.responsiveExpand.setIndex("ms-left"),V.responsiveExpand.setIndex("ms-right"),V.responsiveExpand.init()),Y("responsiveCombine")&&V.responsiveCombine.init(),s.navigation&&$.css("margin-top","-"+$.height()/2+"px"),a(),v(),E(),e(n).on("load",function(){L()})}),e(n).on("hashchange",r),e(t).keydown(l);var oe;e(t).mousedown(function(e){if(1==e.button)return e.preventDefault(),!1}),e(t).on("click","#multiscroll-nav a",d),e(t).on({mouseenter:m,mouseleave:f},"#multiscroll-nav li"),s.normalScrollElements&&(e(t).on("mouseenter",s.normalScrollElements,function(){V.setMouseWheelScrolling(!1)}),e(t).on("mouseleave",s.normalScrollElements,function(){V.setMouseWheelScrolling(!0)})),e(n).on("resize",u);var ie=te;V.moveSectionUp=function(){var n=e(".ms-left .ms-section.active").prev(".ms-section");!n.length&&s.loopTop&&(n=e(".ms-left .ms-section").last()),n.length&&h(n)},V.moveSectionDown=function(){var n=e(".ms-left .ms-section.active").next(".ms-section");!n.length&&s.loopBottom&&(n=e(".ms-left .ms-section").first()),n.length&&h(n)},V.moveTo=function(n){var t="";t=isNaN(n)?e('.ms-left [data-anchor="'+n+'"]'):e(".ms-left .ms-section").eq(n-1),h(t)},V.setKeyboardScrolling=function(e){s.keyboardScrolling=e},V.setMouseWheelScrolling=function(e){e?g():p()},V.setScrollingSpeed=function(e){s.scrollingSpeed=e};var se=0,ae=0,re=0,le=0;V.destroy=function(){V.setKeyboardScrolling(!1),V.setMouseWheelScrolling(!1),R(),e(n).off("hashchange",r).off("resize",u),e(t).off("mouseenter","#multiscroll-nav li").off("mouseleave","#multiscroll-nav li").off("click","#multiscroll-nav a")},V.build=function(){V.setKeyboardScrolling(!0),V.setMouseWheelScrolling(!0),e(n).on("hashchange",r).on("resize",u),e(t).on("mouseenter","#multiscroll-nav li").on("mouseleave","#multiscroll-nav li").on("click","#multiscroll-nav a")},V.extensionCall=G}}(jQuery,window,document,Math);
+\ No newline at end of file
++!function(e,t,n,o,i){e.fn.multiscroll=function(s){var l=e.fn.multiscroll;l.shared={afterRender:C};var a="multiscroll-wrapper",r="."+a,c=(e("html, body"),e("body"));s=e.extend({verticalCentered:!0,scrollingSpeed:700,easing:"easeInOutCubic",menu:!1,sectionsColor:[],anchors:[],navigation:!1,navigationPosition:"right",navigationColor:"#000",navigationTooltips:[],loopBottom:!1,loopTop:!1,css3:!1,autoScrolling:!0,paddingTop:0,paddingBottom:0,fixedElements:null,normalScrollElements:null,keyboardScrolling:!0,touchSensitivity:5,responsiveWidth:null,responsiveHeight:null,responsiveExpand:!1,responsiveCombine:!1,scrollOverflow:!1,scrollOverflowOptions:null,sectionSelector:".ms-section",leftSelector:".ms-left",rightSelector:".ms-right",afterLoad:null,onLeave:null,afterRender:null,afterResize:null},s);var d,f,m=600,v=navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/),u="ontouchstart"in t||navigator.msMaxTouchPoints>0||navigator.maxTouchPoints,h={};".ms-right"!==s.rightSelector&&e(s.rightSelector).addClass("ms-right"),".ms-left"!==s.leftSelector&&e(s.leftSelector).addClass("ms-left");var p,g,w=e(".ms-left").find(".ms-section").length,x=!1,b=e(t).height(),S=e(t).width();function C(){e.isFunction(s.afterRender)&&s.afterRender.call(this),s.scrollOverflow&&l.scrollOverflow.iscrollHandler.afterLoad()}function y(){var n=t.location.hash.replace("#","");if(n.length){var o=_("responsiveExpand","isResponsive")?e(".ms-left").find('[data-panel="ms-left"][data-anchor="'+n+'"]'):e(".ms-left").find('[data-anchor="'+n+'"]');("undefined"==typeof lastScrolledDestiny||n!==lastScrolledDestiny)&&I(o)}}e(this).length&&(l.getMultiscrollData=function(){return{options:s,internals:{isTouch:u,isTouchDevice:v,isReallyTouch:G,getEventsPage:V,numberSections:w,setLastScrollDestiny:q,setURLHash:W,activateMenuElement:R,activateNavDots:H,getYmovement:z,removeMouseWheelHandler:L,addMouseWheelHandler:D,removeTouchHandler:F,addTouchHandler:X,transformContainer:B,c:ee}}}),K("responsiveExpand"),K("scrollOverflow"),K("responsiveCombine"),D(),X(),s.css3&&(s.css3=function(){var e,o=n.createElement("p"),s={webkitTransform:"-webkit-transform",OTransform:"-o-transform",msTransform:"-ms-transform",MozTransform:"-moz-transform",transform:"transform"};for(var l in n.body.insertBefore(o,null),s)o.style[l]!==i&&(o.style[l]="translate3d(1px,1px,1px)",e=t.getComputedStyle(o).getPropertyValue(s[l]));return n.body.removeChild(o),e!==i&&e.length>0&&"none"!==e}()),e("html, body").css({overflow:"hidden",height:"100%"}),e(this).addClass(a),".ms-section"!==s.sectionSelector&&e(s.sectionSelector).each(function(){e(this).addClass("ms-section")}),s.navigation&&(e("body").append('<div id="multiscroll-nav"><ul></ul></div>'),(p=e("#multiscroll-nav")).css("color",s.navigationColor),p.addClass(s.navigationPosition)),e(".ms-right, .ms-left").css({width:"50%",position:"absolute",height:"100%","-ms-touch-action":"none"}),e(".ms-right").css({right:"1px",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left").css({left:"0",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t,n=e(this).index();if((s.paddingTop||s.paddingBottom)&&e(this).css("padding",s.paddingTop+" 0 "+s.paddingBottom+" 0"),void 0!==s.sectionsColor[n]&&e(this).css("background-color",s.sectionsColor[n]),void 0!==s.anchors[n]&&e(this).attr("data-anchor",s.anchors[n]),s.verticalCentered&&(t=e(this)).addClass("ms-table").wrapInner('<div class="ms-tableCell" style="height: '+A(t)+'px" />'),e(this).closest(".ms-left").length&&s.navigation){var o="";s.anchors.length&&(o=s.anchors[n]);var i=s.navigationTooltips[n];void 0===i&&(i=""),s.navigation&&p.find("ul").append('<li data-tooltip="'+i+'"><a href="#'+o+'"><span></span></a></li>')}}),e(".ms-right").html(e(".ms-right").find(".ms-section").get().reverse()),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t=e(this).index();e(this).css({height:"100%"}),!t&&s.navigation&&p.find("li").eq(t).find("a").addClass("active")}).promise().done(function(){e(".ms-left .ms-section.active").length||(e(".ms-right").find(".ms-section").last().addClass("active"),e(".ms-left").find(".ms-section").first().addClass("active")),Q("responsiveExpand")&&(l.responsiveExpand.setIndex("ms-left"),l.responsiveExpand.setIndex("ms-right"),l.responsiveExpand.init()),Q("responsiveCombine")&&l.responsiveCombine.init(),Q("scrollOverflow")&&(l.scrollOverflow.init(),d=l.scrollOverflow.iscrollHandler.init(s)),s.navigation&&p.css("margin-top","-"+p.height()/2+"px"),C(),E(),Z(),e(t).on("load",function(){var n,o;n=t.location.hash.replace("#",""),o=e('.ms-left .ms-section[data-anchor="'+n+'"]'),n.length&&I(o)})}),e(t).on("hashchange",y),e(n).keydown(function(t){if(clearTimeout(g),!s.autoScrolling)return;var o=e(n.activeElement);if(!o.is("textarea")&&!o.is("input")&&!o.is("select")&&s.keyboardScrolling){var i=t.which;e.inArray(i,[40,38,32,33,34])>-1&&t.preventDefault(),g=setTimeout(function(){!function(t){var n=t.shiftKey;switch(t.which){case 38:case 33:l.moveSectionUp();break;case 32:if(n){l.moveSectionUp();break}case 40:case 34:l.moveSectionDown();break;case 36:l.moveTo(1);break;case 35:l.moveTo(e(".ms-left .ms-section").length);break;default:;}}(t)},150)}}),e(n).mousedown(function(e){if(1==e.button)return e.preventDefault(),!1}),e(n).on("click","#multiscroll-nav a",function(t){t.preventDefault();var n=e(this).parent().index();I(e(".ms-left .ms-section").eq(n))}),e(n).on({mouseenter:function(){var t=e(this).data("tooltip");e('<div class="multiscroll-tooltip '+s.navigationPosition+'">'+t+"</div>").hide().appendTo(e(this)).fadeIn(200)},mouseleave:function(){e(this).find(".multiscroll-tooltip").fadeOut(200,function(){e(this).remove()})}},"#multiscroll-nav li"),s.normalScrollElements&&(e(n).on("mouseenter",s.normalScrollElements,function(){l.setMouseWheelScrolling(!1)}),e(n).on("mouseleave",s.normalScrollElements,function(){l.setMouseWheelScrolling(!0)})),e(t).on("resize",function(){if(v){var i=e(n.activeElement);if(!i.is("textarea")&&!i.is("input")&&!i.is("select")){var s=e(t).height();o.abs(s-O)>20*o.max(O,s)/100&&(T(!0),O=s)}}else clearTimeout(f),f=setTimeout(function(){T(!0)},350)});var O=b;function T(n){b=e(t).height(),S=e(t).width(),e(".ms-tableCell").each(function(){e(this).css({height:A(e(this).parent())})}),s.scrollOverflow&&d.createScrollBarForAll(),s.scrollOverflow&&l.scrollOverflow.iscrollHandler.afterLoad(),E(),e.isFunction(s.afterResize)&&s.afterResize.call(this)}function E(){s.css3&&s.autoScrolling?(B(e(".ms-left"),"translate3d(0px, -"+e(".ms-left").find(".ms-section.active").position().top+"px, 0px)",!1),B(e(".ms-right"),"translate3d(0px, -"+e(".ms-right").find(".ms-section.active").position().top+"px, 0px)",!1)):s.autoScrolling?(e(".ms-left").css("top",-e(".ms-left").find(".ms-section.active").position().top),e(".ms-right").css("top",-e(".ms-right").find(".ms-section.active").position().top)):e("html,body").scrollTop(e(".ms-left").find(".ms-section.active").position().top)}function I(t){var n=t.index(),o=e(".ms-right").find(".ms-section").eq(w-1-n),i=t.data("anchor"),a=e(".ms-left .ms-section.active").index()+1,r=z(t);x=!0;var c={left:t.position().top};if(_("responsiveExpand","isResponsive")||(c.right=o.position().top),_("responsiveExpand","isResponsive")||o.addClass("active").siblings().removeClass("active"),t.addClass("active").siblings().removeClass("active"),W(i),_("responsiveExpand","isResponsive"))l.responsiveExpand.performMovement(t),setTimeout(function(){x=!1},s.scrollingSpeed);else if(s.css3){e.isFunction(s.onLeave)&&s.onLeave.call(this,a,n+1,r),s.scrollOverflow&&l.scrollOverflow.iscrollHandler.onLeave();var d="translate3d(0px, -"+c.left+"px, 0px)",f="translate3d(0px, -"+c.right+"px, 0px)";B(e(".ms-left"),d,!0),B(e(".ms-right"),f,!0),setTimeout(function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),s.scrollOverflow&&l.scrollOverflow.iscrollHandler.afterLoad(),setTimeout(function(){x=!1},m)},s.scrollingSpeed)}else e.isFunction(s.onLeave)&&s.onLeave.call(this,a,n+1,r),e(".ms-left").animate({top:-c.left},s.scrollingSpeed,s.easing,function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),s.scrollOverflow&&l.scrollOverflow.iscrollHandler.afterLoad(),setTimeout(function(){x=!1},m)}),e(".ms-right").animate({top:-c.right},s.scrollingSpeed,s.easing);lastScrolledDestiny=i,R(i),H(i,n)}function L(){n.addEventListener?(n.removeEventListener("mousewheel",k,!1),n.removeEventListener("wheel",k,!1)):n.detachEvent("onmousewheel",k)}function D(){n.addEventListener?(n.addEventListener("mousewheel",k,!1),n.addEventListener("wheel",k,!1)):n.attachEvent("onmousewheel",k)}function k(n){e(r).trigger("onMouseWheel",[n,S]),n=t.event||n;var i=o.max(-1,o.min(1,n.wheelDelta||-n.deltaY||-n.detail));return x||M(i<0?"down":"up"),!1}function M(t){var n="down"===t?l.moveSectionDown:l.moveSectionUp;if(s.scrollOverflow){var o=l.scrollOverflow.iscrollHandler.scrollable(e.fn.multiscroll.scrollOverflow.g_overedPanel()),i="down"===t?"bottom":"top";if(o.length>0){if(!l.scrollOverflow.iscrollHandler.isScrolled(i,o))return!0;n()}else n()}else n()}function B(e,t,n){var o;e.toggleClass("ms-easing",n),e.css({"-webkit-transform":o=t,"-moz-transform":o,"-ms-transform":o,transform:o})}function H(t,n){s.navigation&&(e("#multiscroll-nav").find(".active").removeClass("active"),t?e("#multiscroll-nav").find('a[href="#'+t+'"]').addClass("active"):e("#multiscroll-nav").find("li").eq(n).find("a").addClass("active"))}function R(t){s.menu&&(e(s.menu).find(".active").removeClass("active"),e(s.menu).find('[data-menuanchor="'+t+'"]').addClass("active"))}function z(t){return e(".ms-left .ms-section.active").index()>t.index()?"up":"down"}function W(e){s.anchors.length&&(location.hash=e),Z()}function Z(){var t=e(".ms-left .ms-section.active"),n=t.data("anchor"),o=t.index(),i=String(o);if(s.anchors.length&&(i=n),void 0!==i){i=i.replace("/","-").replace("#","");var l=new RegExp("\\b\\s?ms-viewing-[^\\s]+\\b","g");e("body")[0].className=e("body")[0].className.replace(l,""),e("body").addClass("ms-viewing-"+i)}}function A(e){var t=b;if(s.paddingTop||s.paddingBottom){var n=parseInt(e.css("padding-top"))+parseInt(e.css("padding-bottom"));t=b-n}return t}l.silentScroll=E,l.moveSectionUp=function(){var t=e(".ms-left .ms-section.active").prev(".ms-section");!t.length&&s.loopTop&&(t=e(".ms-left .ms-section").last()),t.length&&I(t)},l.moveSectionDown=function(){var t=e(".ms-left .ms-section.active").next(".ms-section");!t.length&&s.loopBottom&&(t=e(".ms-left .ms-section").first()),t.length&&I(t)},l.moveTo=function(t){I(isNaN(t)?e('.ms-left [data-anchor="'+t+'"]'):e(".ms-left .ms-section").eq(t-1))},l.setKeyboardScrolling=function(e){s.keyboardScrolling=e},l.setMouseWheelScrolling=function(e){e?D():L()},l.setScrollingSpeed=function(e){s.scrollingSpeed=e};var P=0,j=0;function Y(n){var i=n.originalEvent;if(G(i)){n.preventDefault();e(".ms-left .ms-section.active");if(!x){var l=V(i);j=l.y,l.x,o.abs(P-j)>e(t).height()/100*s.touchSensitivity&&(P>j?M("down"):j>P&&M("up"))}}}function G(e){return void 0===e.pointerType||"mouse"!=e.pointerType}function N(t){var n=t.originalEvent;if(e(r).trigger("onTouch",[n,S]),G(n)){var o=V(n);P=o.y,o.x}}function X(){if(v||u){var t=U();e(n).off("touchstart "+t.down).on("touchstart "+t.down,N),e(n).off("touchmove "+t.move).on("touchmove "+t.move,Y)}}function F(){if(v||u){var t=U();e(n).off("touchstart "+t.down),e(n).off("touchmove "+t.move)}}function U(){return t.PointerEvent?{down:"pointerdown",move:"pointermove"}:{down:"MSPointerDown",move:"MSPointerMove"}}function V(e){var t=[];return t.y=void 0!==e.pageY&&(e.pageY||e.pageX)?e.pageY:e.touches[0].pageY,t.x=void 0!==e.pageX&&(e.pageY||e.pageX)?e.pageX:e.touches[0].pageX,u&&G(e)&&void 0!==e.touches&&(t.y=e.touches[0].pageY,t.x=e.touches[0].pageX),t}function q(e){lastScrolledDestiny=e}function K(e){var n="ms_"+e+"Extension";h[e]=s[e+"Key"],l[e]=void 0!==t[n]?new t[n]:null,l[e]&&l[e].c(e)}function Q(e){return s[e]&&l[e]}function _(e,t,n){var o=Array.isArray(n)?n.join(", "):n;return!!Q(e)&&l[e][t](o)}function J(e){var t="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";function n(e){var n,o,i,s,l,a,r="",c=0;for(e=e.replace(/[^A-Za-z0-9+/=]/g,"");c<e.length;)n=t.indexOf(e.charAt(c++))<<2|(s=t.indexOf(e.charAt(c++)))>>4,o=(15&s)<<4|(l=t.indexOf(e.charAt(c++)))>>2,i=(3&l)<<6|(a=t.indexOf(e.charAt(c++))),r+=String.fromCharCode(n),64!=l&&(r+=String.fromCharCode(o)),64!=a&&(r+=String.fromCharCode(i));return r=function(e){var t,n="",o=0,i=0,s=0;for(;o<e.length;)(i=e.charCodeAt(o))<128?(n+=String.fromCharCode(i),o++):i>191&&i<224?(s=e.charCodeAt(o+1),n+=String.fromCharCode((31&i)<<6|63&s),o+=2):(s=e.charCodeAt(o+1),t=e.charCodeAt(o+2),n+=String.fromCharCode((15&i)<<12|(63&s)<<6|63&t),o+=3);return n}(r)}function o(e){return e.slice(3).slice(0,-3)}return function(e){var t=e.split("_");if(t.length>1){var i=t[1];return e.replace(o(t[1]),"").split("_")[0]+"_"+n(i.slice(3).slice(0,-3))}return o(e)}(n(e))}function $(e){var t=function(){if(n.domain.length){for(var e=n.domain.replace(/^(www\.)/,"").split(".");e.length>2;)e.shift();return e.join(".").replace(/(^\.*)|(\.*$)/g,"")}return""}(),o=["localhost","127.0.0.1","jshell.net","UDdDQU5ZNlNN"],i=o[0],s=o[1],l=o[2],a=J(o[3]),r=[i,s,l].indexOf(t)<0&&0!==t.length,c=void 0!==h[e]&&h[e].length;if(!c&&r)return!1;var d=c?J(h[e]):"",f=(d=d.split("_")).length>1&&d[1].indexOf(e,d[1].length-e.length)>-1;return!(d[0].indexOf(t,d[0].length-t.length)<0&&r&&a!=d[0])&&f||!r}function ee(e){if(Q(e)&&l[e]){var t=J("MTIzPGRpdiBzdHlsZT0iei1pbmRleDo5OTk5OTk5O3Bvc2l0aW9uOmZpeGVkOyB0b3A6IDIwcHg7IGxlZnQ6MjBweDsgYmFja2dyb3VuZDpyZWQ7IHBhZGRpbmc6IDdweCAxNXB4OyBmb250LXNpemU6IDE0cHg7IGZvbnQtZmFtaWx5OiBhcmlhbDsgY29sb3I6ICNmZmY7IGRpc3BsYXk6IGlubGluZS1ibG9jazsiPjxhIGhyZWY9Imh0dHA6Ly9hbHZhcm90cmlnby5jb20vbXVsdGlTY3JvbGwvZXh0ZW5zaW9ucy8iIHN0eWxlPSJjb2xvcjogI2ZmZjsgdGV4dC1kZWNvcmF0aW9uOm5vbmU7Ij5VbmxpY2Vuc2VkIG11bHRpU2Nyb2xsLmpzIEV4dGVuc2lvbjwvYT48L2Rpdj4xMjM="),n=o.random()<.5;if(!$(e)){var i=function(){"9999999"!==(n?c.find("div").first():c.find("div").last()).css("z-index")&&(n?c.prepend(t):c.append(t))};i(),setInterval(i,2e3)}}}l.destroy=function(){l.setKeyboardScrolling(!1),l.setMouseWheelScrolling(!1),F(),e(t).off("hashchange",y).off("resize",doneResizing),e(n).off("mouseenter","#multiscroll-nav li").off("mouseleave","#multiscroll-nav li").off("click","#multiscroll-nav a")},l.build=function(){l.setKeyboardScrolling(!0),l.setMouseWheelScrolling(!0),e(t).on("hashchange",y).on("resize",doneResizing),e(n).on("mouseenter","#multiscroll-nav li").on("mouseleave","#multiscroll-nav li").on("click","#multiscroll-nav a")},l.extensionCall=_}}(jQuery,window,document,Math);
+\ No newline at end of file
+diff --git a/dist/jquery.multiscroll.js b/dist/jquery.multiscroll.js
+index ae5b269..7938dce 100644
+--- a/dist/jquery.multiscroll.js
++++ b/dist/jquery.multiscroll.js
+@@ -1,5 +1,5 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+diff --git a/dist/jquery.multiscroll.min.css b/dist/jquery.multiscroll.min.css
+index bf133bf..35adf96 100644
+--- a/dist/jquery.multiscroll.min.css
++++ b/dist/jquery.multiscroll.min.css
+@@ -1,8 +1,8 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
+- */body,html{margin:0;padding:0;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0)}.ms-section{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.ms-section.ms-table{display:table;width:100%}.ms-tableCell{display:table-cell;vertical-align:middle;width:100%;height:100%}.ms-easing{-webkit-transition:all .7s ease-out;-moz-transition:all .7s ease-out;-o-transition:all .7s ease-out;transition:all .7s ease-out}#multiscroll-nav{position:fixed;z-index:100;margin-top:-32px;top:50%;opacity:1}#multiscroll-nav.right{right:17px}#multiscroll-nav.left{left:17px}#multiscroll-nav ul{margin:0;padding:0}#multiscroll-nav li{display:block;width:14px;height:13px;margin:7px;position:relative}#multiscroll-nav li a{display:block;position:relative;z-index:1;width:100%;height:100%;cursor:pointer;text-decoration:none}#multiscroll-nav li .active span{background:#333}#multiscroll-nav span{top:2px;left:2px;width:8px;height:8px;border:1px solid #000;background:rgba(0,0,0,0);-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;position:absolute;z-index:1}.multiscroll-tooltip{position:absolute;color:#fff;font-size:14px;font-family:arial,helvetica,sans-serif;top:-2px;white-space:nowrap;max-width:220px}.multiscroll-tooltip.right{right:20px}.multiscroll-tooltip.left{left:20px}.ms-responsive .ms-hide{display:none}
++ */body,html{margin:0;padding:0;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0)}.ms-section{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.ms-section.ms-table{display:table;width:100%}.ms-tableCell{display:table-cell;vertical-align:middle;width:100%;height:100%}.ms-easing{-webkit-transition:all .7s ease-out;-moz-transition:all .7s ease-out;-o-transition:all .7s ease-out;transition:all .7s ease-out}#multiscroll-nav{position:fixed;z-index:100;margin-top:-32px;top:50%;opacity:1}#multiscroll-nav.right{right:17px}#multiscroll-nav.left{left:17px}#multiscroll-nav ul{margin:0;padding:0}#multiscroll-nav li{display:block;width:14px;height:13px;margin:7px;position:relative}#multiscroll-nav li a{display:block;position:relative;z-index:1;width:100%;height:100%;cursor:pointer;text-decoration:none}#multiscroll-nav li .active span{background:#333}#multiscroll-nav span{top:2px;left:2px;width:8px;height:8px;border:1px solid #000;background:rgba(0,0,0,0);-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;position:absolute;z-index:1}.multiscroll-tooltip{position:absolute;color:#fff;font-size:14px;font-family:arial,helvetica,sans-serif;top:-2px;white-space:nowrap;max-width:220px}.multiscroll-tooltip.right{right:20px}.multiscroll-tooltip.left{left:20px}.ms-responsive .ms-hide{display:none}.ms-scrollable{overflow:hidden;position:relative}.ms-scroller{overflow:hidden}.iScrollIndicator{border:0!important}
+ /*# sourceMappingURL=jquery.multiscroll.min.css.map */
+diff --git a/dist/jquery.multiscroll.min.css.map b/dist/jquery.multiscroll.min.css.map
+index a233a2d..272714a 100644
+--- a/dist/jquery.multiscroll.min.css.map
++++ b/dist/jquery.multiscroll.min.css.map
+@@ -1 +1 @@
+-{"version":3,"sources":["jquery.multiscroll.css"],"names":[],"mappings":";;;;;;AAOM,KAAN,KACI,OAAQ,EACR,QAAS,EACZ,SAAS,OACT,4BAA6B,cAE9B,YACI,SAAU,SACV,mBAAoB,WACpB,gBAAiB,WACjB,WAAY,WAEhB,qBACI,QAAS,MACT,MAAO,KAEX,cACI,QAAS,WACT,eAAgB,OAChB,MAAO,KACP,OAAQ,KAEZ,WACI,mBAAoB,IAAI,IAAK,SAC7B,gBAAiB,IAAI,IAAK,SAC1B,cAAe,IAAI,IAAK,SACxB,WAAY,IAAI,IAAK,SAEzB,iBACI,SAAU,MACV,QAAS,IACT,WAAY,MACZ,IAAK,IACL,QAAS,EAEb,uBACI,MAAO,KAEX,sBACI,KAAM,KAEV,oBACE,OAAQ,EACR,QAAS,EAEX,oBACI,QAAS,MACT,MAAO,KACP,OAAQ,KACR,OAAQ,IACR,SAAS,SAEb,sBACI,QAAS,MACT,SAAU,SACV,QAAS,EACT,MAAO,KACP,OAAQ,KACR,OAAQ,QACR,gBAAiB,KAErB,iCACI,WAAY,KAEhB,sBACI,IAAK,IACL,KAAM,IACN,MAAO,IACP,OAAQ,IACR,OAAQ,IAAI,MAAM,KAClB,WAAY,cACZ,sBAAuB,IACvB,mBAAoB,IACpB,cAAe,IACf,SAAU,SACV,QAAS,EAEb,qBACI,SAAU,SACV,MAAO,KACP,UAAW,KACX,YAAa,MAAO,UAAW,WAC/B,IAAK,KACL,YAAa,OACb,UAAW,MAEf,2BACI,MAAO,KAEX,0BACI,KAAM,KAEV,wBACI,QAAS","file":"jquery.multiscroll.min.css","sourcesContent":["/*!\r\n * multiscroll.js 0.1.8 Beta\r\n * https://github.com/alvarotrigo/multiscroll.js\r\n * @license MIT licensed\r\n *\r\n * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo\r\n */\r\nhtml, body {\r\n    margin: 0;\r\n    padding: 0;\r\n\toverflow:hidden;\r\n\t-webkit-tap-highlight-color: rgba(0,0,0,0);\r\n}\r\n.ms-section {\r\n    position: relative;\r\n    -webkit-box-sizing: border-box;\r\n    -moz-box-sizing: border-box;\r\n    box-sizing: border-box;\r\n}\r\n.ms-section.ms-table{\r\n    display: table;\r\n    width: 100%;\r\n}\r\n.ms-tableCell {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.ms-easing {\r\n    -webkit-transition: all 0.7s ease-out;\r\n    -moz-transition: all 0.7s ease-out;\r\n    -o-transition: all 0.7s ease-out;\r\n    transition: all 0.7s ease-out;\r\n}\r\n#multiscroll-nav {\r\n    position: fixed;\r\n    z-index: 100;\r\n    margin-top: -32px;\r\n    top: 50%;\r\n    opacity: 1;\r\n}\r\n#multiscroll-nav.right {\r\n    right: 17px;\r\n}\r\n#multiscroll-nav.left {\r\n    left: 17px;\r\n}\r\n#multiscroll-nav ul{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n#multiscroll-nav li{\r\n    display: block;\r\n    width: 14px;\r\n    height: 13px;\r\n    margin: 7px;\r\n    position:relative;\r\n}\r\n#multiscroll-nav li a{\r\n    display: block;\r\n    position: relative;\r\n    z-index: 1;\r\n    width: 100%;\r\n    height: 100%;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n}\r\n#multiscroll-nav li .active span{\r\n    background: #333;\r\n}\r\n#multiscroll-nav span{\r\n    top: 2px;\r\n    left: 2px;\r\n    width: 8px;\r\n    height: 8px;\r\n    border: 1px solid #000;\r\n    background: rgba(0, 0, 0, 0);\r\n    -webkit-border-radius: 50%;\r\n    -moz-border-radius: 50%;\r\n    border-radius: 50%;\r\n    position: absolute;\r\n    z-index: 1;\r\n}\r\n.multiscroll-tooltip {\r\n    position: absolute;\r\n    color: #fff;\r\n    font-size: 14px;\r\n    font-family: arial, helvetica, sans-serif;\r\n    top: -2px;\r\n    white-space: nowrap;\r\n    max-width: 220px;\r\n}\r\n.multiscroll-tooltip.right {\r\n    right: 20px;\r\n}\r\n.multiscroll-tooltip.left {\r\n    left: 20px;\r\n}\r\n.ms-responsive .ms-hide{\r\n    display: none;\r\n}\r\n"]}
+\ No newline at end of file
++{"version":3,"sources":["jquery.multiscroll.css"],"names":[],"mappings":";;;;;;AAOM,KAAN,KACI,OAAQ,EACR,QAAS,EACT,SAAS,OACT,4BAA6B,cAEjC,YACI,SAAU,SACV,mBAAoB,WACpB,gBAAiB,WACjB,WAAY,WAEhB,qBACI,QAAS,MACT,MAAO,KAEX,cACI,QAAS,WACT,eAAgB,OAChB,MAAO,KACP,OAAQ,KAEZ,WACI,mBAAoB,IAAI,IAAK,SAC7B,gBAAiB,IAAI,IAAK,SAC1B,cAAe,IAAI,IAAK,SACxB,WAAY,IAAI,IAAK,SAEzB,iBACI,SAAU,MACV,QAAS,IACT,WAAY,MACZ,IAAK,IACL,QAAS,EAEb,uBACI,MAAO,KAEX,sBACI,KAAM,KAEV,oBACE,OAAQ,EACR,QAAS,EAEX,oBACI,QAAS,MACT,MAAO,KACP,OAAQ,KACR,OAAQ,IACR,SAAS,SAEb,sBACI,QAAS,MACT,SAAU,SACV,QAAS,EACT,MAAO,KACP,OAAQ,KACR,OAAQ,QACR,gBAAiB,KAErB,iCACI,WAAY,KAEhB,sBACI,IAAK,IACL,KAAM,IACN,MAAO,IACP,OAAQ,IACR,OAAQ,IAAI,MAAM,KAClB,WAAY,cACZ,sBAAuB,IACvB,mBAAoB,IACpB,cAAe,IACf,SAAU,SACV,QAAS,EAEb,qBACI,SAAU,SACV,MAAO,KACP,UAAW,KACX,YAAa,MAAO,UAAW,WAC/B,IAAK,KACL,YAAa,OACb,UAAW,MAEf,2BACI,MAAO,KAEX,0BACI,KAAM,KAEV,wBACI,QAAS,KAEb,eACI,SAAU,OACV,SAAU,SAEd,aACI,SAAU,OAEd,kBACI,OAAQ","file":"jquery.multiscroll.min.css","sourcesContent":["/*!\r\n * multiscroll.js 0.1.9\r\n * https://github.com/alvarotrigo/multiscroll.js\r\n * @license MIT licensed\r\n *\r\n * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo\r\n */\r\nhtml, body {\r\n    margin: 0;\r\n    padding: 0;\r\n    overflow:hidden;\r\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\r\n}\r\n.ms-section {\r\n    position: relative;\r\n    -webkit-box-sizing: border-box;\r\n    -moz-box-sizing: border-box;\r\n    box-sizing: border-box;\r\n}\r\n.ms-section.ms-table{\r\n    display: table;\r\n    width: 100%;\r\n}\r\n.ms-tableCell {\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.ms-easing {\r\n    -webkit-transition: all 0.7s ease-out;\r\n    -moz-transition: all 0.7s ease-out;\r\n    -o-transition: all 0.7s ease-out;\r\n    transition: all 0.7s ease-out;\r\n}\r\n#multiscroll-nav {\r\n    position: fixed;\r\n    z-index: 100;\r\n    margin-top: -32px;\r\n    top: 50%;\r\n    opacity: 1;\r\n}\r\n#multiscroll-nav.right {\r\n    right: 17px;\r\n}\r\n#multiscroll-nav.left {\r\n    left: 17px;\r\n}\r\n#multiscroll-nav ul{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n#multiscroll-nav li{\r\n    display: block;\r\n    width: 14px;\r\n    height: 13px;\r\n    margin: 7px;\r\n    position:relative;\r\n}\r\n#multiscroll-nav li a{\r\n    display: block;\r\n    position: relative;\r\n    z-index: 1;\r\n    width: 100%;\r\n    height: 100%;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n}\r\n#multiscroll-nav li .active span{\r\n    background: #333;\r\n}\r\n#multiscroll-nav span{\r\n    top: 2px;\r\n    left: 2px;\r\n    width: 8px;\r\n    height: 8px;\r\n    border: 1px solid #000;\r\n    background: rgba(0, 0, 0, 0);\r\n    -webkit-border-radius: 50%;\r\n    -moz-border-radius: 50%;\r\n    border-radius: 50%;\r\n    position: absolute;\r\n    z-index: 1;\r\n}\r\n.multiscroll-tooltip {\r\n    position: absolute;\r\n    color: #fff;\r\n    font-size: 14px;\r\n    font-family: arial, helvetica, sans-serif;\r\n    top: -2px;\r\n    white-space: nowrap;\r\n    max-width: 220px;\r\n}\r\n.multiscroll-tooltip.right {\r\n    right: 20px;\r\n}\r\n.multiscroll-tooltip.left {\r\n    left: 20px;\r\n}\r\n.ms-responsive .ms-hide{\r\n    display: none;\r\n}\r\n.ms-scrollable {\r\n    overflow: hidden;\r\n    position: relative;\r\n}\r\n.ms-scroller{\r\n    overflow: hidden;\r\n}\r\n.iScrollIndicator{\r\n    border: 0 !important;\r\n}\r\n"]}
+\ No newline at end of file
+diff --git a/dist/jquery.multiscroll.min.js b/dist/jquery.multiscroll.min.js
+index 26b6972..c4a7739 100644
+--- a/dist/jquery.multiscroll.min.js
++++ b/dist/jquery.multiscroll.min.js
+@@ -1,9 +1,211 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
+  */
+-!function(e,t,n,o,i){e.fn.multiscroll=function(s){function a(){var n=t.location.hash.replace("#",""),o=n;if(o.length){var i=e(".ms-left").find('[data-anchor="'+o+'"]'),s="undefined"==typeof lastScrolledDestiny;(s||o!==lastScrolledDestiny)&&h(i)}}function l(t){clearTimeout(O);var o=e(n.activeElement);if(!o.is("textarea")&&!o.is("input")&&!o.is("select")&&s.keyboardScrolling){var i=t.which,a=[40,38,32,33,34];e.inArray(i,a)>-1&&t.preventDefault(),O=setTimeout(function(){r(t)},150)}}function r(t){var n=t.shiftKey;switch(t.which){case 38:case 33:X.moveSectionUp();break;case 32:if(n){X.moveSectionUp();break}case 40:case 34:X.moveSectionDown();break;case 36:X.moveTo(1);break;case 35:X.moveTo(e(".ms-left .ms-section").length);break;default:return}}function c(t){t.preventDefault();var n=e(this).parent().index();h(e(".ms-left .ms-section").eq(n))}function m(){var t=e(this).data("tooltip");e('<div class="multiscroll-tooltip '+s.navigationPosition+'">'+t+"</div>").hide().appendTo(e(this)).fadeIn(200)}function f(){e(this).find(".multiscroll-tooltip").fadeOut(200,function(){e(this).remove()})}function d(){N=e(t).height(),e(".ms-tableCell").each(function(){e(this).css({height:P(e(this).parent())})}),u(),e.isFunction(s.afterResize)&&s.afterResize.call(this)}function u(){s.css3?(S(e(".ms-left"),"translate3d(0px, -"+e(".ms-left").find(".ms-section.active").position().top+"px, 0px)",!1),S(e(".ms-right"),"translate3d(0px, -"+e(".ms-right").find(".ms-section.active").position().top+"px, 0px)",!1)):(e(".ms-left").css("top",-e(".ms-left").find(".ms-section.active").position().top),e(".ms-right").css("top",-e(".ms-right").find(".ms-section.active").position().top))}function h(t){var n=t.index(),o=e(".ms-right").find(".ms-section").eq(W-1-n),i=t.data("anchor"),a=e(".ms-left .ms-section.active"),l=a.index()+1,r=b(t);K=!0;var c={left:t.position().top,right:o.position().top};if(o.addClass("active").siblings().removeClass("active"),t.addClass("active").siblings().removeClass("active"),C(i),s.css3){e.isFunction(s.onLeave)&&s.onLeave.call(this,l,n+1,r);var m="translate3d(0px, -"+c.left+"px, 0px)",f="translate3d(0px, -"+c.right+"px, 0px)";S(e(".ms-left"),m,!0),S(e(".ms-right"),f,!0),setTimeout(function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),setTimeout(function(){K=!1},q)},s.scrollingSpeed)}else e.isFunction(s.onLeave)&&s.onLeave.call(this,l,n+1,r),e(".ms-left").animate({top:-c.left},s.scrollingSpeed,s.easing,function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),setTimeout(function(){K=!1},q)}),e(".ms-right").animate({top:-c.right},s.scrollingSpeed,s.easing);lastScrolledDestiny=i,w(i),x(i,n)}function v(){n.addEventListener?(n.removeEventListener("mousewheel",g,!1),n.removeEventListener("wheel",g,!1)):n.detachEvent("onmousewheel",g)}function p(){n.addEventListener?(n.addEventListener("mousewheel",g,!1),n.addEventListener("wheel",g,!1)):n.attachEvent("onmousewheel",g)}function g(e){e=t.event||e;var n=o.max(-1,o.min(1,e.wheelDelta||-e.deltaY||-e.detail));return K||(n<0?X.moveSectionDown():X.moveSectionUp()),!1}function S(e,t,n){e.toggleClass("ms-easing",n),e.css(y(t))}function y(e){return{"-webkit-transform":e,"-moz-transform":e,"-ms-transform":e,transform:e}}function x(t,n){s.navigation&&(e("#multiscroll-nav").find(".active").removeClass("active"),t?e("#multiscroll-nav").find('a[href="#'+t+'"]').addClass("active"):e("#multiscroll-nav").find("li").eq(n).find("a").addClass("active"))}function w(t){s.menu&&(e(s.menu).find(".active").removeClass("active"),e(s.menu).find('[data-menuanchor="'+t+'"]').addClass("active"))}function b(t){var n=e(".ms-left .ms-section.active").index(),o=t.index();return n>o?"up":"down"}function C(e){s.anchors.length&&(location.hash=e),T()}function T(){var t=e(".ms-left .ms-section.active"),n=t.data("anchor"),o=t.index(),i=String(o);s.anchors.length&&(i=n),i=i.replace("/","-").replace("#","");var a=new RegExp("\\b\\s?ms-viewing-[^\\s]+\\b","g");e("body")[0].className=e("body")[0].className.replace(a,""),e("body").addClass("ms-viewing-"+i)}function E(){var e,o=n.createElement("p"),s={webkitTransform:"-webkit-transform",OTransform:"-o-transform",msTransform:"-ms-transform",MozTransform:"-moz-transform",transform:"transform"};n.body.insertBefore(o,null);for(var a in s)o.style[a]!==i&&(o.style[a]="translate3d(1px,1px,1px)",e=t.getComputedStyle(o).getPropertyValue(s[a]));return n.body.removeChild(o),e!==i&&e.length>0&&"none"!==e}function M(e){e.addClass("ms-table").wrapInner('<div class="ms-tableCell" style="height: '+P(e)+'px" />')}function P(e){var t=N;if(s.paddingTop||s.paddingBottom){var n=parseInt(e.css("padding-top"))+parseInt(e.css("padding-bottom"));t=N-n}return t}function k(){var n=t.location.hash.replace("#",""),o=e('.ms-left .ms-section[data-anchor="'+n+'"]');n.length&&h(o)}function L(n){var i=n.originalEvent;if(D(i)){n.preventDefault();e(".ms-left .ms-section.active");if(!K){var a=F(i);A=a.y,V=a.x,o.abs(Q-A)>e(t).height()/100*s.touchSensitivity&&(Q>A?X.moveSectionDown():A>Q&&X.moveSectionUp())}}}function D(e){return"undefined"==typeof e.pointerType||"mouse"!=e.pointerType}function z(e){var t=e.originalEvent;if(D(t)){var n=F(t);Q=n.y,j=n.x}}function B(){I&&(MSPointer=Y(),e(n).off("touchstart "+MSPointer.down).on("touchstart "+MSPointer.down,z),e(n).off("touchmove "+MSPointer.move).on("touchmove "+MSPointer.move,L))}function R(){I&&(MSPointer=Y(),e(n).off("touchstart "+MSPointer.down),e(n).off("touchmove "+MSPointer.move))}function Y(){var e;return e=t.PointerEvent?{down:"pointerdown",move:"pointermove"}:{down:"MSPointerDown",move:"MSPointerMove"}}function F(e){var t=[];return t.y="undefined"!=typeof e.pageY&&(e.pageY||e.pageX)?e.pageY:e.touches[0].pageY,t.x="undefined"!=typeof e.pageX&&(e.pageY||e.pageX)?e.pageX:e.touches[0].pageX,I&&D(e)&&(t.y=e.touches[0].pageY,t.x=e.touches[0].pageX),t}var X=e.fn.multiscroll;s=e.extend({verticalCentered:!0,scrollingSpeed:700,easing:"easeInQuart",menu:!1,sectionsColor:[],anchors:[],navigation:!1,navigationPosition:"right",navigationColor:"#000",navigationTooltips:[],loopBottom:!1,loopTop:!1,css3:!1,paddingTop:0,paddingBottom:0,fixedElements:null,normalScrollElements:null,keyboardScrolling:!0,touchSensitivity:5,sectionSelector:".ms-section",leftSelector:".ms-left",rightSelector:".ms-right",afterLoad:null,onLeave:null,afterRender:null,afterResize:null},s);var q=600,I="ontouchstart"in t||navigator.msMaxTouchPoints>0||navigator.maxTouchPoints;".ms-right"!==s.rightSelector&&e(s.rightSelector).addClass("ms-right"),".ms-left"!==s.leftSelector&&e(s.leftSelector).addClass("ms-left");var U,W=e(".ms-left").find(".ms-section").length,K=!1,N=e(t).height();p(),B(),s.css3&&(s.css3=E()),e("html, body").css({overflow:"hidden",height:"100%"}),".ms-section"!==s.sectionSelector&&e(s.sectionSelector).each(function(){e(this).addClass("ms-section")}),s.navigation&&(e("body").append('<div id="multiscroll-nav"><ul></ul></div>'),U=e("#multiscroll-nav"),U.css("color",s.navigationColor),U.addClass(s.navigationPosition)),e(".ms-right, .ms-left").css({width:"50%",position:"absolute",height:"100%","-ms-touch-action":"none"}),e(".ms-right").css({right:"1px",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left").css({left:"0",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t=e(this).index();if((s.paddingTop||s.paddingBottom)&&e(this).css("padding",s.paddingTop+" 0 "+s.paddingBottom+" 0"),"undefined"!=typeof s.sectionsColor[t]&&e(this).css("background-color",s.sectionsColor[t]),"undefined"!=typeof s.anchors[t]&&e(this).attr("data-anchor",s.anchors[t]),s.verticalCentered&&M(e(this)),e(this).closest(".ms-left").length&&s.navigation){var n="";s.anchors.length&&(n=s.anchors[t]);var o=s.navigationTooltips[t];"undefined"==typeof o&&(o=""),s.navigation&&U.find("ul").append('<li data-tooltip="'+o+'"><a href="#'+n+'"><span></span></a></li>')}}),e(".ms-right").html(e(".ms-right").find(".ms-section").get().reverse()),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t=e(this).index();e(this).css({height:"100%"}),!t&&s.navigation&&U.find("li").eq(t).find("a").addClass("active")}).promise().done(function(){e(".ms-left .ms-section.active").length||(e(".ms-right").find(".ms-section").last().addClass("active"),e(".ms-left").find(".ms-section").first().addClass("active")),s.navigation&&U.css("margin-top","-"+U.height()/2+"px"),e.isFunction(s.afterRender)&&s.afterRender.call(this),u(),T(),e(t).on("load",function(){k()})}),e(t).on("hashchange",a),e(n).keydown(l);var O;e(n).mousedown(function(e){if(1==e.button)return e.preventDefault(),!1}),e(n).on("click","#multiscroll-nav a",c),e(n).on({mouseenter:m,mouseleave:f},"#multiscroll-nav li"),s.normalScrollElements&&(e(n).on("mouseenter",s.normalScrollElements,function(){X.setMouseWheelScrolling(!1)}),e(n).on("mouseleave",s.normalScrollElements,function(){X.setMouseWheelScrolling(!0)})),e(t).on("resize",d),X.moveSectionUp=function(){var t=e(".ms-left .ms-section.active").prev(".ms-section");!t.length&&s.loopTop&&(t=e(".ms-left .ms-section").last()),t.length&&h(t)},X.moveSectionDown=function(){var t=e(".ms-left .ms-section.active").next(".ms-section");!t.length&&s.loopBottom&&(t=e(".ms-left .ms-section").first()),t.length&&h(t)},X.moveTo=function(t){var n="";n=isNaN(t)?e('.ms-left [data-anchor="'+t+'"]'):e(".ms-left .ms-section").eq(t-1),h(n)},X.setKeyboardScrolling=function(e){s.keyboardScrolling=e},X.setMouseWheelScrolling=function(e){e?p():v()},X.setScrollingSpeed=function(e){s.scrollingSpeed=e};var Q=0,j=0,A=0,V=0;X.destroy=function(){X.setKeyboardScrolling(!1),X.setMouseWheelScrolling(!1),R(),e(t).off("hashchange",a).off("resize",d),e(n).off("mouseenter","#multiscroll-nav li").off("mouseleave","#multiscroll-nav li").off("click","#multiscroll-nav a")},X.build=function(){X.setKeyboardScrolling(!0),X.setMouseWheelScrolling(!0),B(),e(t).on("hashchange",a).on("resize",d),e(n).on("mouseenter","#multiscroll-nav li",m).on("mouseleave","#multiscroll-nav li",f).on("click","#multiscroll-nav a",c)}}}(jQuery,window,document,Math);
++!function(e,t,n,o,i){e.fn.multiscroll=function(s){function a(){var n=t.location.hash.replace("#",""),o=n;if(o.length){var i=e(".ms-left").find('[data-anchor="'+o+'"]'),s="undefined"==typeof lastScrolledDestiny;(s||o!==lastScrolledDestiny)&&h(i)}}function l(t){clearTimeout(O);var o=e(n.activeElement);if(!o.is("textarea")&&!o.is("input")&&!o.is("select")&&s.keyboardScrolling){var i=t.which,a=[40,38,32,33,34];e.inArray(i,a)>-1&&t.preventDefault(),O=setTimeout(function(){r(t)},150)}}/**
++		 * Sliding with arrow keys, both, vertical and horizontal
++		 */
++function r(t){var n=t.shiftKey;switch(t.which){
++//up
++case 38:case 33:X.moveSectionUp();break;
++//down
++case 32://spacebar
++if(n){X.moveSectionUp();break}case 40:case 34:X.moveSectionDown();break;
++//Home
++case 36:X.moveTo(1);break;
++//End
++case 35:X.moveTo(e(".ms-left .ms-section").length);break;default:return}}function c(t){t.preventDefault();var n=e(this).parent().index();h(e(".ms-left .ms-section").eq(n))}function m(){var t=e(this).data("tooltip");e('<div class="multiscroll-tooltip '+s.navigationPosition+'">'+t+"</div>").hide().appendTo(e(this)).fadeIn(200)}function f(){e(this).find(".multiscroll-tooltip").fadeOut(200,function(){e(this).remove()})}/**
++		 * When resizing is finished, we adjust the slides sizes and positions
++		 */
++function d(){N=e(t).height(),e(".ms-tableCell").each(function(){e(this).css({height:P(e(this).parent())})}),u(),e.isFunction(s.afterResize)&&s.afterResize.call(this)}function u(){
++//moving the right section to the bottom
++s.css3?(S(e(".ms-left"),"translate3d(0px, -"+e(".ms-left").find(".ms-section.active").position().top+"px, 0px)",!1),S(e(".ms-right"),"translate3d(0px, -"+e(".ms-right").find(".ms-section.active").position().top+"px, 0px)",!1)):(e(".ms-left").css("top",-e(".ms-left").find(".ms-section.active").position().top),e(".ms-right").css("top",-e(".ms-right").find(".ms-section.active").position().top))}function h(t){var n=t.index(),o=e(".ms-right").find(".ms-section").eq(W-1-n),i=t.data("anchor"),a=e(".ms-left .ms-section.active"),l=a.index()+1,r=b(t);
++//preventing from activating the MouseWheelHandler event
++//more than once if the page is scrolling
++K=!0;var c={left:t.position().top,right:o.position().top};
++// Use CSS3 translate functionality or...
++if(o.addClass("active").siblings().removeClass("active"),t.addClass("active").siblings().removeClass("active"),C(i),s.css3){
++//callback (onLeave)
++e.isFunction(s.onLeave)&&s.onLeave.call(this,l,n+1,r);var m="translate3d(0px, -"+c.left+"px, 0px)",f="translate3d(0px, -"+c.right+"px, 0px)";S(e(".ms-left"),m,!0),S(e(".ms-right"),f,!0),setTimeout(function(){
++//callback (afterLoad)
++e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),setTimeout(function(){K=!1},q)},s.scrollingSpeed)}else
++//callback (onLeave)
++e.isFunction(s.onLeave)&&s.onLeave.call(this,l,n+1,r),e(".ms-left").animate({top:-c.left},s.scrollingSpeed,s.easing,function(){e.isFunction(s.afterLoad)&&s.afterLoad.call(this,i,n+1),setTimeout(function(){K=!1},q)}),e(".ms-right").animate({top:-c.right},s.scrollingSpeed,s.easing);
++//flag to avoid callingn `scrollPage()` twice in case of using anchor links
++lastScrolledDestiny=i,w(i),x(i,n)}/**
++		* Removes the auto scrolling action fired by the mouse wheel and tackpad.
++		* After this function is called, the mousewheel and trackpad movements won't scroll through sections.
++		*/
++function v(){n.addEventListener?(n.removeEventListener("mousewheel",g,!1),//IE9, Chrome, Safari, Oper
++n.removeEventListener("wheel",g,!1)):n.detachEvent("onmousewheel",g)}/**
++		* Adds the auto scrolling action for the mouse wheel and tackpad.
++		* After this function is called, the mousewheel and trackpad movements will scroll through sections
++		*/
++function p(){n.addEventListener?(n.addEventListener("mousewheel",g,!1),//IE9, Chrome, Safari, Oper
++n.addEventListener("wheel",g,!1)):n.attachEvent("onmousewheel",g)}/**
++		 * Detecting mousewheel scrolling
++		 *
++		 * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html
++		 * http://www.sitepoint.com/html5-javascript-mouse-wheel/
++		 */
++function g(e){
++// cross-browser wheel delta
++e=t.event||e;var n=o.max(-1,o.min(1,e.wheelDelta||-e.deltaY||-e.detail));//if theres any #
++//scrolling down?
++return K||(n<0?X.moveSectionDown():X.moveSectionUp()),!1}/**
++		* Adds a css3 transform property to the container class with or without animation depending on the animated param.
++		*/
++function S(e,t,n){e.toggleClass("ms-easing",n),e.css(y(t))}/**
++		* Returns the transform styles for all browsers
++		*/
++function y(e){return{"-webkit-transform":e,"-moz-transform":e,"-ms-transform":e,transform:e}}/**
++		 * Activating the website navigation dots according to the given slide name.
++		 */
++function x(t,n){s.navigation&&(e("#multiscroll-nav").find(".active").removeClass("active"),t?e("#multiscroll-nav").find('a[href="#'+t+'"]').addClass("active"):e("#multiscroll-nav").find("li").eq(n).find("a").addClass("active"))}/**
++		 * Activating the website main menu elements according to the given slide name.
++		 */
++function w(t){s.menu&&(e(s.menu).find(".active").removeClass("active"),e(s.menu).find('[data-menuanchor="'+t+'"]').addClass("active"))}/**
++		* Retuns `up` or `down` depending on the scrolling movement to reach its destination
++		* from the current section.
++		*/
++function b(t){var n=e(".ms-left .ms-section.active").index(),o=t.index();return n>o?"up":"down"}/**
++		* Sets the URL hash for a section with slides
++		*/
++function C(e){s.anchors.length&&(location.hash=e),T()}/**
++		* Sets a class for the body of the page depending on the active section / slide
++		*/
++function T(){var t=e(".ms-left .ms-section.active"),n=t.data("anchor"),o=t.index(),i=String(o);s.anchors.length&&(i=n),
++//changing slash for dash to make it a valid CSS style
++i=i.replace("/","-").replace("#","");
++//removing previous anchor classes
++var a=new RegExp("\\b\\s?ms-viewing-[^\\s]+\\b","g");e("body")[0].className=e("body")[0].className.replace(a,""),
++//adding the current anchor
++e("body").addClass("ms-viewing-"+i)}/**
++		* Checks for translate3d support
++		* @return boolean
++		* http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
++		*/
++function E(){var e,o=n.createElement("p"),s={webkitTransform:"-webkit-transform",OTransform:"-o-transform",msTransform:"-ms-transform",MozTransform:"-moz-transform",transform:"transform"};
++// Add it to the body to get the computed style.
++n.body.insertBefore(o,null);for(var a in s)o.style[a]!==i&&(o.style[a]="translate3d(1px,1px,1px)",e=t.getComputedStyle(o).getPropertyValue(s[a]));return n.body.removeChild(o),e!==i&&e.length>0&&"none"!==e}/**
++		* Wraps an element in order to center it vertically by using a class style.
++		*/
++function M(e){e.addClass("ms-table").wrapInner('<div class="ms-tableCell" style="height: '+P(e)+'px" />')}/**
++		* Gets the height of the section after removing the paddings.
++		*/
++function P(e){var t=N;if(s.paddingTop||s.paddingBottom){var n=parseInt(e.css("padding-top"))+parseInt(e.css("padding-bottom"));t=N-n}return t}/**
++		* Scrolls the page to the existent anchor in the URL
++		*/
++function k(){
++//getting the anchor link in the URL and deleting the `#`
++var n=t.location.hash.replace("#",""),o=e('.ms-left .ms-section[data-anchor="'+n+'"]');n.length&&//if theres any #
++h(o)}/* Detecting touch events
++
++		* As we are changing the top property of the page on scrolling, we can not use the traditional way to detect it.
++		* This way, the touchstart and the touch moves shows an small difference between them which is the
++		* used one to determine the direction.
++		*/
++function L(n){var i=n.originalEvent;if(D(i)){
++//preventing the easing on iOS devices
++n.preventDefault();e(".ms-left .ms-section.active");if(!K){//if theres any #
++var a=F(i);A=a.y,V=a.x,
++//is the movement greater than the minimum resistance to scroll?
++o.abs(Q-A)>e(t).height()/100*s.touchSensitivity&&(Q>A?X.moveSectionDown():A>Q&&X.moveSectionUp())}}}/**
++		* As IE >= 10 fires both touch and mouse events when using a mouse in a touchscreen
++		* this way we make sure that is really a touch event what IE is detecting.
++		*/
++function D(e){
++//if is not IE   ||  IE is detecting `touch` or `pen`
++return"undefined"==typeof e.pointerType||"mouse"!=e.pointerType}/**
++		* Handler to get he coordinates of the starting touch
++		*/
++function z(e){var t=e.originalEvent;if(D(t)){var n=F(t);Q=n.y,j=n.x}}/**
++		* Adds the possibility to auto scroll through sections on touch devices.
++		*/
++function B(){I&&(
++//Microsoft pointers
++MSPointer=Y(),e(n).off("touchstart "+MSPointer.down).on("touchstart "+MSPointer.down,z),e(n).off("touchmove "+MSPointer.move).on("touchmove "+MSPointer.move,L))}/**
++		* Removes the auto scrolling for touch devices.
++		*/
++function R(){I&&(
++//Microsoft pointers
++MSPointer=Y(),e(n).off("touchstart "+MSPointer.down),e(n).off("touchmove "+MSPointer.move))}/*
++		* Returns and object with Microsoft pointers (for IE<11 and for IE >= 11)
++		* http://msdn.microsoft.com/en-us/library/ie/dn304886(v=vs.85).aspx
++		*/
++function Y(){var e;
++//IE >= 11
++return e=t.PointerEvent?{down:"pointerdown",move:"pointermove"}:{down:"MSPointerDown",move:"MSPointerMove"}}/**
++		* Gets the pageX and pageY properties depending on the browser.
++		* https://github.com/alvarotrigo/fullPage.js/issues/194#issuecomment-34069854
++		*/
++function F(e){var t=[];
++//in touch devices with scrollBar:true, e.pageY is detected, but we have to deal with touch events. #1008
++return t.y="undefined"!=typeof e.pageY&&(e.pageY||e.pageX)?e.pageY:e.touches[0].pageY,t.x="undefined"!=typeof e.pageX&&(e.pageY||e.pageX)?e.pageX:e.touches[0].pageX,I&&D(e)&&(t.y=e.touches[0].pageY,t.x=e.touches[0].pageX),t}var X=e.fn.multiscroll;
++// Create some defaults, extending them with any options that were provided
++s=e.extend({verticalCentered:!0,scrollingSpeed:700,easing:"easeInQuart",menu:!1,sectionsColor:[],anchors:[],navigation:!1,navigationPosition:"right",navigationColor:"#000",navigationTooltips:[],loopBottom:!1,loopTop:!1,css3:!1,paddingTop:0,paddingBottom:0,fixedElements:null,normalScrollElements:null,keyboardScrolling:!0,touchSensitivity:5,
++// Custom selectors
++sectionSelector:".ms-section",leftSelector:".ms-left",rightSelector:".ms-right",
++//events
++afterLoad:null,onLeave:null,afterRender:null,afterResize:null},s);
++//Defines the delay to take place before being able to scroll to the next section
++//BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and
++//Apple devices (laptops, mouses...)
++var q=600,I="ontouchstart"in t||navigator.msMaxTouchPoints>0||navigator.maxTouchPoints;
++// adding class namef for right and left blocks
++".ms-right"!==s.rightSelector&&e(s.rightSelector).addClass("ms-right"),".ms-left"!==s.leftSelector&&e(s.leftSelector).addClass("ms-left");var U,W=e(".ms-left").find(".ms-section").length,K=!1,N=e(t).height();p(),B(),
++//if css3 is not supported, it will use jQuery animations
++s.css3&&(s.css3=E()),e("html, body").css({overflow:"hidden",height:"100%"}),
++//adding class names to each sections
++".ms-section"!==s.sectionSelector&&e(s.sectionSelector).each(function(){e(this).addClass("ms-section")}),
++//creating the navigation dots
++s.navigation&&(e("body").append('<div id="multiscroll-nav"><ul></ul></div>'),U=e("#multiscroll-nav"),U.css("color",s.navigationColor),U.addClass(s.navigationPosition)),e(".ms-right, .ms-left").css({width:"50%",position:"absolute",height:"100%","-ms-touch-action":"none"}),e(".ms-right").css({right:"1px",//http://stackoverflow.com/questions/23675457/chrome-and-opera-creating-small-padding-when-using-displaytable
++top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left").css({left:"0",top:"0","-ms-touch-action":"none","touch-action":"none"}),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t=e(this).index();
++//only for the left panel
++if((s.paddingTop||s.paddingBottom)&&e(this).css("padding",s.paddingTop+" 0 "+s.paddingBottom+" 0"),"undefined"!=typeof s.sectionsColor[t]&&e(this).css("background-color",s.sectionsColor[t]),"undefined"!=typeof s.anchors[t]&&e(this).attr("data-anchor",s.anchors[t]),s.verticalCentered&&M(e(this)),e(this).closest(".ms-left").length&&s.navigation){var n="";s.anchors.length&&(n=s.anchors[t]);var o=s.navigationTooltips[t];"undefined"==typeof o&&(o=""),s.navigation&&U.find("ul").append('<li data-tooltip="'+o+'"><a href="#'+n+'"><span></span></a></li>')}}),
++//inverting the right panel
++e(".ms-right").html(e(".ms-right").find(".ms-section").get().reverse()),e(".ms-left .ms-section, .ms-right .ms-section").each(function(){var t=e(this).index();e(this).css({height:"100%"}),!t&&s.navigation&&
++//activating the navigation bullet
++U.find("li").eq(t).find("a").addClass("active")}).promise().done(function(){
++//if no active section is defined, the 1st one will be the default one
++e(".ms-left .ms-section.active").length||(e(".ms-right").find(".ms-section").last().addClass("active"),e(".ms-left").find(".ms-section").first().addClass("active")),
++//vertical centered of the navigation + first bullet active
++s.navigation&&U.css("margin-top","-"+U.height()/2+"px"),e.isFunction(s.afterRender)&&s.afterRender.call(this),
++//scrolling to the defined active section and adjusting right and left panels
++u(),
++//setting the class for the body element
++T(),e(t).on("load",function(){k()})}),
++//detecting any change on the URL to scroll to the given anchor link
++//(a way to detect back history button as we play with the hashes on the URL)
++e(t).on("hashchange",a),/**
++		* Sliding with arrow keys, both, vertical and horizontal
++		*/
++e(n).keydown(l);var O;/**
++		 * Disabling any action when pressing of the mouse wheel (Chrome, IE, Opera, Safari)
++		 */
++e(n).mousedown(function(e){if(1==e.button)return e.preventDefault(),!1}),
++//navigation action
++e(n).on("click","#multiscroll-nav a",c),
++//navigation tooltips
++e(n).on({mouseenter:m,mouseleave:f},"#multiscroll-nav li"),s.normalScrollElements&&(e(n).on("mouseenter",s.normalScrollElements,function(){X.setMouseWheelScrolling(!1)}),e(n).on("mouseleave",s.normalScrollElements,function(){X.setMouseWheelScrolling(!0)})),
++//when resizing the site, we adjust the heights of the sections
++e(t).on("resize",d),X.moveSectionUp=function(){var t=e(".ms-left .ms-section.active").prev(".ms-section");!t.length&&s.loopTop&&(t=e(".ms-left .ms-section").last()),t.length&&h(t)},X.moveSectionDown=function(){var t=e(".ms-left .ms-section.active").next(".ms-section");!t.length&&s.loopBottom&&(t=e(".ms-left .ms-section").first()),t.length&&h(t)},X.moveTo=function(t){var n="";n=isNaN(t)?e('.ms-left [data-anchor="'+t+'"]'):e(".ms-left .ms-section").eq(t-1),h(n)},/**
++		* Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys
++		*/
++X.setKeyboardScrolling=function(e){s.keyboardScrolling=e},/**
++		* Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.
++		*/
++X.setMouseWheelScrolling=function(e){e?p():v()},/**
++		* Defines the scrolling speed
++		*/
++X.setScrollingSpeed=function(e){s.scrollingSpeed=e};var Q=0,j=0,A=0,V=0;/**
++		* Destroy multiscroll.js plugin's events
++		*/
++X.destroy=function(){X.setKeyboardScrolling(!1),X.setMouseWheelScrolling(!1),R(),e(t).off("hashchange",a).off("resize",d),e(n).off("mouseenter","#multiscroll-nav li").off("mouseleave","#multiscroll-nav li").off("click","#multiscroll-nav a")},/**
++		* Build multiscroll.js plugin's events after destroy
++		*/
++X.build=function(){X.setKeyboardScrolling(!0),X.setMouseWheelScrolling(!0),B(),e(t).on("hashchange",a).on("resize",d),e(n).on("mouseenter","#multiscroll-nav li",m).on("mouseleave","#multiscroll-nav li",f).on("click","#multiscroll-nav a",c)}}}(jQuery,window,document,Math);
+ //# sourceMappingURL=jquery.multiscroll.min.js.map
+diff --git a/dist/jquery.multiscroll.min.js.map b/dist/jquery.multiscroll.min.js.map
+index dc7a668..637ae94 100644
+--- a/dist/jquery.multiscroll.min.js.map
++++ b/dist/jquery.multiscroll.min.js.map
+@@ -1 +1 @@
+-{"version":3,"sources":["jquery.multiscroll.js"],"names":["$","window","document","Math","undefined","fn","multiscroll","options","hashChangeHandler","value","location","hash","replace","sectionAnchor","length","section","find","isFirstScrollMove","lastScrolledDestiny","scrollPage","keydownHandler","e","clearTimeout","keydownId","activeElement","is","keyboardScrolling","keyCode","which","keyControls","inArray","preventDefault","setTimeout","onkeydown","shiftPressed","shiftKey","MS","moveSectionUp","moveSectionDown","moveTo","navClickHandler","index","this","parent","eq","navMouseEnterHandler","tooltip","data","navigationPosition","hide","appendTo","fadeIn","navMouseLeaveHandler","fadeOut","remove","doneResizing","windowHeight","height","each","css","getTableHeight","silentScroll","isFunction","afterResize","call","css3","transformContainer","position","top","leftDestination","leftDestinationIndex","rightDestination","numberSections","anchorLink","activeSection","leavingSection","yMovement","getYmovement","isMoving","topPos","left","right","addClass","siblings","removeClass","setURLHash","onLeave","translate3dLeft","translate3dRight","afterLoad","scrollDelay","scrollingSpeed","animate","easing","activateMenuElement","activateNavDots","removeMouseWheelHandler","addEventListener","removeEventListener","MouseWheelHandler","detachEvent","addMouseWheelHandler","attachEvent","event","delta","max","min","wheelDelta","deltaY","detail","container","translate3d","animated","toggleClass","getTransforms","-webkit-transform","-moz-transform","-ms-transform","transform","name","sectionIndex","navigation","menu","destiny","fromIndex","toIndex","anchors","setBodyClass","text","String","classRe","RegExp","className","support3d","has3d","el","createElement","transforms","webkitTransform","OTransform","msTransform","MozTransform","body","insertBefore","t","style","getComputedStyle","getPropertyValue","removeChild","addTableClass","element","wrapInner","sectionHeight","paddingTop","paddingBottom","paddings","parseInt","scrollToAnchor","touchMoveHandler","originalEvent","isReallyTouch","touchEvents","getEventsPage","touchEndY","touchEndX","abs","touchStartY","touchSensitivity","pointerType","touchStartHandler","touchStartX","addTouchHandler","isTouch","MSPointer","getMSPointer","off","down","on","move","removeTouchHandler","pointer","PointerEvent","events","y","pageY","pageX","touches","x","extend","verticalCentered","sectionsColor","navigationColor","navigationTooltips","loopBottom","loopTop","fixedElements","normalScrollElements","sectionSelector","leftSelector","rightSelector","afterRender","navigator","msMaxTouchPoints","nav","overflow","append","width","-ms-touch-action","touch-action","attr","closest","link","html","get","reverse","promise","done","last","first","keydown","mousedown","button","mouseenter","mouseleave","setMouseWheelScrolling","prev","next","isNaN","setKeyboardScrolling","setScrollingSpeed","destroy","build","jQuery"],"mappings":"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","file":"jquery.multiscroll.min.js","sourcesContent":["/*!\r\n * multiscroll.js 0.1.8 Beta\r\n * https://github.com/alvarotrigo/multiscroll.js\r\n * @license MIT licensed\r\n *\r\n * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo\r\n */\r\n(function($, window, document, Math, undefined) {\r\n\r\n\t$.fn.multiscroll = function(options) {\r\n\t\tvar MS = $.fn.multiscroll;\r\n\r\n\t\t// Create some defaults, extending them with any options that were provided\r\n\t\toptions = $.extend({\r\n\t\t\t'verticalCentered' : true,\r\n\t\t\t'scrollingSpeed': 700,\r\n\t\t\t'easing': 'easeInQuart',\r\n\t\t\t'menu': false,\r\n\t\t\t'sectionsColor': [],\r\n\t\t\t'anchors':[],\r\n\t\t\t'navigation': false,\r\n\t\t\t'navigationPosition': 'right',\r\n\t\t\t'navigationColor': '#000',\r\n\t\t\t'navigationTooltips': [],\r\n\t\t\t'loopBottom': false,\r\n\t\t\t'loopTop': false,\r\n\t\t\t'css3': false,\r\n\t\t\t'paddingTop': 0,\r\n\t\t\t'paddingBottom': 0,\r\n\t\t\t'fixedElements': null,\r\n\t\t\t'normalScrollElements': null,\r\n\t\t\t'keyboardScrolling': true,\r\n\t\t\t'touchSensitivity': 5,\r\n\r\n\t\t\t// Custom selectors\r\n\t\t\t'sectionSelector': '.ms-section',\r\n\t\t\t'leftSelector': '.ms-left',\r\n\t\t\t'rightSelector': '.ms-right',\r\n\r\n\t\t\t//events\r\n\t\t\t'afterLoad': null,\r\n\t\t\t'onLeave': null,\r\n\t\t\t'afterRender': null,\r\n\t\t\t'afterResize': null\r\n\t\t}, options);\r\n\r\n\t\t//Defines the delay to take place before being able to scroll to the next section\r\n\t\t//BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and\r\n\t\t//Apple devices (laptops, mouses...)\r\n\t\tvar scrollDelay = 600;\r\n\r\n\t\tvar isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));\r\n\r\n\t\t// adding class namef for right and left blocks\r\n\t\tif (options.rightSelector !== '.ms-right') {\r\n\t\t\t$(options.rightSelector).addClass('ms-right');\r\n\t\t}\r\n\r\n\t\tif (options.leftSelector !== '.ms-left') {\r\n\t\t\t$(options.leftSelector).addClass('ms-left');\r\n\t\t}\r\n\r\n\t\tvar numberSections = $('.ms-left').find('.ms-section').length;\r\n\t\tvar isMoving = false;\r\n\t\tvar nav;\r\n\t\tvar windowHeight = $(window).height();\r\n\r\n\r\n\t\taddMouseWheelHandler();\r\n\t\taddTouchHandler();\r\n\r\n\t\t//if css3 is not supported, it will use jQuery animations\r\n\t\tif(options.css3){\r\n\t\t\toptions.css3 = support3d();\r\n\t\t}\r\n\r\n\t\t$('html, body').css({\r\n\t\t\t'overflow' : 'hidden',\r\n\t\t\t'height' : '100%'\r\n\t\t});\r\n\r\n\t\t//adding class names to each sections\r\n\t\tif (options.sectionSelector !== '.ms-section') {\r\n\t\t\t$(options.sectionSelector).each(function(){\r\n\t\t\t\t$(this).addClass('ms-section');\r\n\t\t\t});\r\n\t\t}\r\n\r\n\t\t//creating the navigation dots\r\n\t\tif (options.navigation) {\r\n\t\t\t$('body').append('<div id=\"multiscroll-nav\"><ul></ul></div>');\r\n\t\t\tnav = $('#multiscroll-nav');\r\n\r\n\t\t\tnav.css('color', options.navigationColor);\r\n\t\t\tnav.addClass(options.navigationPosition);\r\n\t\t}\r\n\r\n\t\t$('.ms-right, .ms-left').css({\r\n\t\t\t'width': '50%',\r\n\t\t\t'position': 'absolute',\r\n\t\t\t'height': '100%',\r\n\t\t\t'-ms-touch-action': 'none'\r\n\t\t});\r\n\r\n\t\t$('.ms-right').css({\r\n\t\t\t'right': '1px', //http://stackoverflow.com/questions/23675457/chrome-and-opera-creating-small-padding-when-using-displaytable\r\n\t\t\t'top': '0',\r\n\t\t\t'-ms-touch-action': 'none',\r\n\t\t\t'touch-action': 'none'\r\n\t\t});\r\n\r\n\t\t$('.ms-left').css({\r\n\t\t\t'left': '0',\r\n\t\t\t'top': '0',\r\n\t\t\t'-ms-touch-action': 'none',\r\n\t\t\t'touch-action': 'none'\r\n\t\t});\r\n\r\n\r\n\t\t$('.ms-left .ms-section, .ms-right .ms-section').each(function(){\r\n\t\t\tvar sectionIndex = $(this).index();\r\n\r\n\t\t\tif(options.paddingTop || options.paddingBottom){\r\n\t\t\t\t$(this).css('padding', options.paddingTop  + ' 0 ' + options.paddingBottom + ' 0');\r\n\t\t\t}\r\n\r\n\t\t\tif (typeof options.sectionsColor[sectionIndex] !==  'undefined') {\r\n\t\t\t\t$(this).css('background-color', options.sectionsColor[sectionIndex]);\r\n\t\t\t}\r\n\r\n\t\t\tif (typeof options.anchors[sectionIndex] !== 'undefined') {\r\n\t\t\t\t$(this).attr('data-anchor', options.anchors[sectionIndex]);\r\n\t\t\t}\r\n\r\n\t\t\tif(options.verticalCentered){\r\n\t\t\t\taddTableClass($(this));\r\n\t\t\t}\r\n\r\n\t\t\t//only for the left panel\r\n\t\t\tif($(this).closest('.ms-left').length && options.navigation) {\r\n\t\t\t\tvar link = '';\r\n\t\t\t\tif(options.anchors.length){\r\n\t\t\t\t\tlink = options.anchors[sectionIndex];\r\n\t\t\t\t}\r\n\t\t\t\tvar tooltip = options.navigationTooltips[sectionIndex];\r\n\t\t\t\tif(typeof tooltip === 'undefined'){\r\n\t\t\t\t\ttooltip = '';\r\n\t\t\t\t}\r\n\t\t\t\tif (options.navigation) {\r\n\t\t\t\t\tnav.find('ul').append('<li data-tooltip=\"' + tooltip + '\"><a href=\"#' + link + '\"><span></span></a></li>');\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t});\r\n\r\n\t\t//inverting the right panel\r\n\t\t$('.ms-right').html( $('.ms-right').find('.ms-section').get().reverse());\r\n\r\n\t\t$('.ms-left .ms-section, .ms-right .ms-section').each(function(){\r\n\t\t\tvar sectionIndex = $(this).index();\r\n\r\n\t\t\t$(this).css({\r\n\t\t\t\t'height': '100%'\r\n\t\t\t});\r\n\r\n\r\n\t\t\tif(!sectionIndex && options.navigation ){\r\n\t\t\t\t//activating the navigation bullet\r\n\t\t\t\tnav.find('li').eq(sectionIndex).find('a').addClass('active');\r\n\t\t\t}\r\n\t\t}).promise().done(function(){\r\n\r\n\t\t\t//if no active section is defined, the 1st one will be the default one\r\n\t\t\tif(!$('.ms-left .ms-section.active').length){\r\n\t\t\t\t$('.ms-right').find('.ms-section').last().addClass('active');\r\n\t\t\t\t$('.ms-left').find('.ms-section').first().addClass('active');\r\n\t\t\t}\r\n\r\n\t\t\t//vertical centered of the navigation + first bullet active\r\n\t\t\tif(options.navigation){\r\n\t\t\t\tnav.css('margin-top', '-' + (nav.height()/2) + 'px');\r\n\t\t\t}\r\n\t\t\t$.isFunction( options.afterRender ) && options.afterRender.call( this);\r\n\r\n\t\t\t//scrolling to the defined active section and adjusting right and left panels\r\n\t\t\tsilentScroll();\r\n\r\n\t\t\t//setting the class for the body element\r\n\t\t\tsetBodyClass();\r\n\r\n\t\t\t$(window).on('load', function() {\r\n\t\t\t\tscrollToAnchor();\r\n\t\t\t});\r\n\t\t});\r\n\r\n\r\n\t\t//detecting any change on the URL to scroll to the given anchor link\r\n\t\t//(a way to detect back history button as we play with the hashes on the URL)\r\n\t\t$(window).on('hashchange', hashChangeHandler);\r\n\r\n\t\tfunction hashChangeHandler(){\r\n\t\t\tvar value =  window.location.hash.replace('#', '');\r\n\t\t\tvar sectionAnchor = value;\r\n\r\n\t\t\tif(sectionAnchor.length){\r\n\t\t\t\tvar section = $('.ms-left').find('[data-anchor=\"'+sectionAnchor+'\"]');\r\n\r\n\t\t\t\tvar isFirstScrollMove = (typeof lastScrolledDestiny === 'undefined' );\r\n\r\n\t\t\t\tif (isFirstScrollMove || sectionAnchor !== lastScrolledDestiny){\r\n\t\t\t\t\tscrollPage(section);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t};\r\n\r\n\r\n\t\t/**\r\n\t\t* Sliding with arrow keys, both, vertical and horizontal\r\n\t\t*/\r\n\t\t$(document).keydown(keydownHandler);\r\n\r\n\r\n\t\tvar keydownId;\r\n\t\tfunction keydownHandler(e) {\r\n\t\t\tclearTimeout(keydownId);\r\n\r\n\t\t\tvar activeElement = $(document.activeElement);\r\n\r\n\t\t\tif(!activeElement.is('textarea') && !activeElement.is('input') && !activeElement.is('select') &&\r\n\t\t\t\toptions.keyboardScrolling){\r\n\t\t\t\tvar keyCode = e.which;\r\n\r\n\t\t\t\t//preventing the scroll with arrow keys & spacebar & Page Up & Down keys\r\n\t\t\t\tvar keyControls = [40, 38, 32, 33, 34];\r\n\t\t\t\tif($.inArray(keyCode, keyControls) > -1){\r\n\t\t\t\t\te.preventDefault();\r\n\t\t\t\t}\r\n\r\n\t\t\t\tkeydownId = setTimeout(function(){\r\n\t\t\t\t\tonkeydown(e);\r\n\t\t\t\t},150);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Sliding with arrow keys, both, vertical and horizontal\r\n\t\t */\r\n\t\tfunction onkeydown(e){\r\n\t\t\tvar shiftPressed = e.shiftKey;\r\n\r\n\t\t\tswitch (e.which) {\r\n\t\t\t\t//up\r\n\t\t\t\tcase 38:\r\n\t\t\t\tcase 33:\r\n\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//down\r\n\t\t\t\tcase 32: //spacebar\r\n\t\t\t\t\tif(shiftPressed){\r\n\t\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t}\r\n\t\t\t\tcase 40:\r\n\t\t\t\tcase 34:\r\n\t\t\t\t\tMS.moveSectionDown();\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//Home\r\n\t\t\t\tcase 36:\r\n\t\t\t\t\tMS.moveTo(1);\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//End\r\n\t\t\t\tcase 35:\r\n\t\t\t\t\tMS.moveTo( $('.ms-left .ms-section').length);\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\tdefault:\r\n\t\t\t\t\treturn; // exit this handler for other keys\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Disabling any action when pressing of the mouse wheel (Chrome, IE, Opera, Safari)\r\n\t\t */\r\n\t\t$(document).mousedown(function(e) {\r\n\t\t\tif(e.button == 1){\r\n\t\t\t\te.preventDefault();\r\n\t\t\t\treturn false;\r\n\t\t\t}\r\n\t\t});\r\n\r\n\t\tfunction navClickHandler(e) {\r\n\t\t\te.preventDefault();\r\n\t\t\tvar index = $(this).parent().index();\r\n\t\t\tscrollPage($('.ms-left .ms-section').eq(index));\r\n\t\t}\r\n\r\n\t\t//navigation action\r\n\t\t$(document).on('click', '#multiscroll-nav a', navClickHandler);\r\n\r\n\t\tfunction navMouseEnterHandler() {\r\n\t\t\tvar tooltip = $(this).data('tooltip');\r\n\t\t\t$('<div class=\"multiscroll-tooltip ' + options.navigationPosition +'\">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);\r\n\t\t}\r\n\r\n\t\tfunction navMouseLeaveHandler() {\r\n\t\t\t$(this).find('.multiscroll-tooltip').fadeOut(200, function() {\r\n\t\t\t\t$(this).remove();\r\n\t\t\t});\r\n\t\t}\r\n\r\n\t\t//navigation tooltips\r\n\t\t$(document).on({\r\n\t\t\tmouseenter: navMouseEnterHandler,\r\n\t\t\tmouseleave: navMouseLeaveHandler\r\n\t\t}, '#multiscroll-nav li');\r\n\r\n\r\n\t\tif(options.normalScrollElements){\r\n\t\t\t$(document).on('mouseenter', options.normalScrollElements, function () {\r\n\t\t\t\tMS.setMouseWheelScrolling(false);\r\n\t\t\t});\r\n\r\n\t\t\t$(document).on('mouseleave', options.normalScrollElements, function(){\r\n\t\t\t\tMS.setMouseWheelScrolling(true);\r\n\t\t\t});\r\n\t\t}\r\n\r\n\r\n\t\t//when resizing the site, we adjust the heights of the sections\r\n\t\t$(window).on('resize', doneResizing);\r\n\r\n\t\t/**\r\n\t\t * When resizing is finished, we adjust the slides sizes and positions\r\n\t\t */\r\n\t\tfunction doneResizing() {\r\n\t\t\twindowHeight = $(window).height();\r\n\t\t\t$('.ms-tableCell').each(function() {\r\n\t\t\t\t$(this).css({ height: getTableHeight($(this).parent()) });\r\n\t\t\t});\r\n\t\t\tsilentScroll();\r\n\t\t\t$.isFunction( options.afterResize ) && options.afterResize.call( this);\r\n\t\t}\r\n\r\n\t\tfunction silentScroll(){\r\n\t\t\t//moving the right section to the bottom\r\n\t\t\tif(options.css3){\r\n\t\t\t\ttransformContainer($('.ms-left'), 'translate3d(0px, -' + $('.ms-left').find('.ms-section.active').position().top + 'px, 0px)', false);\r\n\t\t\t\ttransformContainer($('.ms-right'), 'translate3d(0px, -' + $('.ms-right').find('.ms-section.active').position().top + 'px, 0px)', false);\r\n\t\t\t}else{\r\n\t\t\t\t$('.ms-left').css('top', -$('.ms-left').find('.ms-section.active').position().top );\r\n\t\t\t\t$('.ms-right').css('top', -$('.ms-right').find('.ms-section.active').position().top );\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\tMS.moveSectionUp = function(){\r\n\t\t\tvar prev = $('.ms-left .ms-section.active').prev('.ms-section');\r\n\r\n\t\t\tif(!prev.length && options.loopTop){\r\n\t\t\t\tprev = $('.ms-left .ms-section').last();\r\n\t\t\t}\r\n\r\n\t\t\tif (prev.length) {\r\n\t\t\t\tscrollPage(prev);\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tMS.moveSectionDown = function (){\r\n\t\t\tvar next = $('.ms-left .ms-section.active').next('.ms-section');\r\n\r\n\t\t\tif(!next.length && options.loopBottom ){\r\n\t\t\t\tnext = $('.ms-left .ms-section').first();\r\n\t\t\t}\r\n\r\n\t\t\tif(next.length){\r\n\t\t\t\tscrollPage(next);\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tMS.moveTo = function (section){\r\n\t\t\tvar destiny = '';\r\n\r\n\t\t\tif(isNaN(section)){\r\n\t\t\t\tdestiny = $('.ms-left [data-anchor=\"'+section+'\"]');\r\n\t\t\t}else{\r\n\t\t\t\tdestiny = $('.ms-left .ms-section').eq( (section -1) );\r\n\t\t\t}\r\n\r\n\t\t\tscrollPage(destiny);\r\n\t\t};\r\n\r\n\t\tfunction scrollPage(leftDestination){\r\n\t\t\tvar leftDestinationIndex = leftDestination.index();\r\n\t\t\tvar rightDestination = $('.ms-right').find('.ms-section').eq( numberSections -1 - leftDestinationIndex);\r\n\t\t\tvar rightDestinationIndex = numberSections - 1 - leftDestinationIndex;\r\n\t\t\tvar anchorLink  = leftDestination.data('anchor');\r\n\t\t\tvar activeSection = $('.ms-left .ms-section.active');\r\n\t\t\tvar leavingSection = activeSection.index() + 1;\r\n\t\t\tvar yMovement = getYmovement(leftDestination);\r\n\r\n\t\t\t//preventing from activating the MouseWheelHandler event\r\n\t\t\t//more than once if the page is scrolling\r\n\t\t\tisMoving = true;\r\n\r\n\t\t\tvar topPos = {\r\n\t\t\t\t'left' : leftDestination.position().top,\r\n\t\t\t\t'right': rightDestination.position().top\r\n\t\t\t};\r\n\r\n\t\t\trightDestination.addClass('active').siblings().removeClass('active');\r\n\t\t\tleftDestination.addClass('active').siblings().removeClass('active');\r\n\r\n\t\t\tsetURLHash(anchorLink);\r\n\r\n\t\t\t// Use CSS3 translate functionality or...\r\n\t\t\tif (options.css3){\r\n\t\t\t\t//callback (onLeave)\r\n\t\t\t\t$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);\r\n\r\n\t\t\t\tvar translate3dLeft = 'translate3d(0px, -' + topPos['left'] + 'px, 0px)';\r\n\t\t\t\tvar translate3dRight = 'translate3d(0px, -' + topPos['right'] + 'px, 0px)';\r\n\r\n\t\t\t\ttransformContainer($('.ms-left'), translate3dLeft, true);\r\n\t\t\t\ttransformContainer($('.ms-right'), translate3dRight, true);\r\n\r\n\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t//callback (afterLoad)\r\n\t\t\t\t\t$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));\r\n\r\n\t\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t\tisMoving = false;\r\n\t\t\t\t\t}, scrollDelay);\r\n\t\t\t\t}, options.scrollingSpeed);\r\n\t\t\t}else{\r\n\t\t\t\t//callback (onLeave)\r\n\t\t\t\t$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);\r\n\r\n\t\t\t\t$('.ms-left').animate({\r\n\t\t\t\t\t'top': -topPos['left']\r\n\t\t\t\t}, options.scrollingSpeed, options.easing, function(){\r\n\t\t\t\t\t$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));\r\n\r\n\t\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t\tisMoving = false;\r\n\t\t\t\t\t}, scrollDelay);\r\n\t\t\t\t});\r\n\r\n\t\t\t\t$('.ms-right').animate({\r\n\t\t\t\t\t'top': -topPos['right']\r\n\t\t\t\t}, options.scrollingSpeed, options.easing);\r\n\t\t\t}\r\n\r\n\t\t\t//flag to avoid callingn `scrollPage()` twice in case of using anchor links\r\n\t\t\tlastScrolledDestiny = anchorLink;\r\n\r\n\t\t\tactivateMenuElement(anchorLink);\r\n\t\t\tactivateNavDots(anchorLink, leftDestinationIndex);\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Removes the auto scrolling action fired by the mouse wheel and tackpad.\r\n\t\t* After this function is called, the mousewheel and trackpad movements won't scroll through sections.\r\n\t\t*/\r\n\t\tfunction removeMouseWheelHandler(){\r\n\t\t\tif (document.addEventListener) {\r\n\t\t\t\tdocument.removeEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper\r\n\t\t\t\tdocument.removeEventListener('wheel', MouseWheelHandler, false); //Firefox\r\n\t\t\t} else {\r\n\t\t\t\tdocument.detachEvent(\"onmousewheel\", MouseWheelHandler); //IE 6/7/8\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds the auto scrolling action for the mouse wheel and tackpad.\r\n\t\t* After this function is called, the mousewheel and trackpad movements will scroll through sections\r\n\t\t*/\r\n\t\tfunction addMouseWheelHandler(){\r\n\t\t\tif (document.addEventListener) {\r\n\t\t\t\tdocument.addEventListener(\"mousewheel\", MouseWheelHandler, false); //IE9, Chrome, Safari, Oper\r\n\t\t\t\tdocument.addEventListener(\"wheel\", MouseWheelHandler, false); //Firefox\r\n\t\t\t} else {\r\n\t\t\t\tdocument.attachEvent(\"onmousewheel\", MouseWheelHandler); //IE 6/7/8\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Detecting mousewheel scrolling\r\n\t\t *\r\n\t\t * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html\r\n\t\t * http://www.sitepoint.com/html5-javascript-mouse-wheel/\r\n\t\t */\r\n\t\tfunction MouseWheelHandler(e) {\r\n\t\t\t// cross-browser wheel delta\r\n\t\t\te = window.event || e;\r\n\t\t\tvar delta = Math.max(-1, Math.min(1,\r\n\t\t\t\t\t(e.wheelDelta || -e.deltaY || -e.detail)));\r\n\r\n\t\t\tif (!isMoving) { //if theres any #\r\n\r\n\t\t\t\t//scrolling down?\r\n\t\t\t\tif (delta < 0) {\r\n\t\t\t\t\tMS.moveSectionDown();\r\n\t\t\t\t}\r\n\r\n\t\t\t\t//scrolling up?\r\n\t\t\t\telse {\r\n\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds a css3 transform property to the container class with or without animation depending on the animated param.\r\n\t\t*/\r\n\t\tfunction transformContainer(container, translate3d, animated){\r\n\t\t\tcontainer.toggleClass('ms-easing', animated);\r\n\r\n\t\t\tcontainer.css(getTransforms(translate3d));\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Returns the transform styles for all browsers\r\n\t\t*/\r\n\t\tfunction getTransforms(translate3d){\r\n\t\t\treturn {\r\n\t\t\t\t'-webkit-transform': translate3d,\r\n\t\t\t\t'-moz-transform': translate3d,\r\n\t\t\t\t'-ms-transform':translate3d,\r\n\t\t\t\t'transform': translate3d\r\n\t\t\t};\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Activating the website navigation dots according to the given slide name.\r\n\t\t */\r\n\t\tfunction activateNavDots(name, sectionIndex){\r\n\t\t\tif(options.navigation){\r\n\t\t\t\t$('#multiscroll-nav').find('.active').removeClass('active');\r\n\t\t\t\tif(name){\r\n\t\t\t\t\t$('#multiscroll-nav').find('a[href=\"#' + name + '\"]').addClass('active');\r\n\t\t\t\t}else{\r\n\t\t\t\t\t$('#multiscroll-nav').find('li').eq(sectionIndex).find('a').addClass('active');\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Activating the website main menu elements according to the given slide name.\r\n\t\t */\r\n\t\tfunction activateMenuElement(name){\r\n\t\t\tif(options.menu){\r\n\t\t\t\t$(options.menu).find('.active').removeClass('active');\r\n\t\t\t\t$(options.menu).find('[data-menuanchor=\"'+name+'\"]').addClass('active');\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Retuns `up` or `down` depending on the scrolling movement to reach its destination\r\n\t\t* from the current section.\r\n\t\t*/\r\n\t\tfunction getYmovement(destiny){\r\n\t\t\tvar fromIndex = $('.ms-left .ms-section.active').index();\r\n\t\t\tvar toIndex = destiny.index();\r\n\r\n\t\t\tif(fromIndex > toIndex){\r\n\t\t\t\treturn 'up';\r\n\t\t\t}\r\n\t\t\treturn 'down';\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Sets the URL hash for a section with slides\r\n\t\t*/\r\n\t\tfunction setURLHash(anchorLink){\r\n\t\t\tif(options.anchors.length){\r\n\t\t\t\tlocation.hash = anchorLink;\r\n\t\t\t}\r\n\r\n\t\t\tsetBodyClass();\r\n\t\t}\r\n\r\n\t\t /**\r\n\t\t* Sets a class for the body of the page depending on the active section / slide\r\n\t\t*/\r\n\t\tfunction setBodyClass(){\r\n\t\t\tvar section = $('.ms-left .ms-section.active');\r\n\t\t\tvar sectionAnchor = section.data('anchor');\r\n\t\t\tvar sectionIndex = section.index();\r\n\r\n\t\t\tvar text = String(sectionIndex);\r\n\r\n\t\t\tif(options.anchors.length){\r\n\t\t\t\ttext = sectionAnchor;\r\n\t\t\t}\r\n\r\n\t\t\t//changing slash for dash to make it a valid CSS style\r\n\t\t\ttext = text.replace('/', '-').replace('#','');\r\n\r\n\t\t\t//removing previous anchor classes\r\n\t\t\tvar classRe = new RegExp('\\\\b\\\\s?' + 'ms-viewing' + '-[^\\\\s]+\\\\b', \"g\");\r\n\t\t\t$('body')[0].className = $('body')[0].className.replace(classRe, '');\r\n\r\n\t\t\t//adding the current anchor\r\n\t\t\t$('body').addClass('ms-viewing-' + text);\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Checks for translate3d support\r\n\t\t* @return boolean\r\n\t\t* http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support\r\n\t\t*/\r\n\t\tfunction support3d() {\r\n\t\t\tvar el = document.createElement('p'),\r\n\t\t\t\thas3d,\r\n\t\t\t\ttransforms = {\r\n\t\t\t\t\t'webkitTransform':'-webkit-transform',\r\n\t\t\t\t\t'OTransform':'-o-transform',\r\n\t\t\t\t\t'msTransform':'-ms-transform',\r\n\t\t\t\t\t'MozTransform':'-moz-transform',\r\n\t\t\t\t\t'transform':'transform'\r\n\t\t\t\t};\r\n\r\n\t\t\t// Add it to the body to get the computed style.\r\n\t\t\tdocument.body.insertBefore(el, null);\r\n\r\n\t\t\tfor (var t in transforms) {\r\n\t\t\t\tif (el.style[t] !== undefined) {\r\n\t\t\t\t\tel.style[t] = \"translate3d(1px,1px,1px)\";\r\n\t\t\t\t\thas3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\tdocument.body.removeChild(el);\r\n\r\n\t\t\treturn (has3d !== undefined && has3d.length > 0 && has3d !== \"none\");\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Wraps an element in order to center it vertically by using a class style.\r\n\t\t*/\r\n\t\tfunction addTableClass(element){\r\n\t\t\telement.addClass('ms-table').wrapInner('<div class=\"ms-tableCell\" style=\"height: ' + getTableHeight(element) + 'px\" />');\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Gets the height of the section after removing the paddings.\r\n\t\t*/\r\n\t\tfunction getTableHeight(section){\r\n\t\t\tvar sectionHeight = windowHeight;\r\n\r\n\t\t\tif(options.paddingTop || options.paddingBottom){\r\n\t\t\t\tvar paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));\r\n\t\t\t\tsectionHeight = (windowHeight - paddings);\r\n\t\t\t}\r\n\r\n\t\t\treturn sectionHeight;\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Scrolls the page to the existent anchor in the URL\r\n\t\t*/\r\n\t\tfunction scrollToAnchor(){\r\n\t\t\t//getting the anchor link in the URL and deleting the `#`\r\n\t\t\tvar sectionAnchor =  window.location.hash.replace('#', '');\r\n\t\t\tvar section = $('.ms-left .ms-section[data-anchor=\"'+sectionAnchor+'\"]');\r\n\r\n\t\t\tif(sectionAnchor.length){  //if theres any #\r\n\t\t\t\tscrollPage(section);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys\r\n\t\t*/\r\n\t\tMS.setKeyboardScrolling = function (value){\r\n\t\t\toptions.keyboardScrolling = value;\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.\r\n\t\t*/\r\n\t\tMS.setMouseWheelScrolling = function (value){\r\n\t\t\tif(value){\r\n\t\t\t\taddMouseWheelHandler();\r\n\t\t\t}else{\r\n\t\t\t\tremoveMouseWheelHandler();\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Defines the scrolling speed\r\n\t\t*/\r\n\t\tMS.setScrollingSpeed = function(value){\r\n\t\t\toptions.scrollingSpeed = value;\r\n\t\t};\r\n\r\n\r\n\r\n\t\tvar touchStartY = 0;\r\n\t\tvar touchStartX = 0;\r\n\t\tvar touchEndY = 0;\r\n\t\tvar touchEndX = 0;\r\n\r\n\t\t/* Detecting touch events\r\n\r\n\t\t* As we are changing the top property of the page on scrolling, we can not use the traditional way to detect it.\r\n\t\t* This way, the touchstart and the touch moves shows an small difference between them which is the\r\n\t\t* used one to determine the direction.\r\n\t\t*/\r\n\t\tfunction touchMoveHandler(event){\r\n\t\t\tvar e = event.originalEvent;\r\n\r\n\t\t\tif(isReallyTouch(e)){\r\n\t\t\t\t//preventing the easing on iOS devices\r\n\t\t\t\tevent.preventDefault();\r\n\r\n\t\t\t\tvar activeSection = $('.ms-left .ms-section.active');\r\n\r\n\t\t\t\tif (!isMoving) { //if theres any #\r\n\t\t\t\t\tvar touchEvents = getEventsPage(e);\r\n\t\t\t\t\ttouchEndY = touchEvents['y'];\r\n\t\t\t\t\ttouchEndX = touchEvents['x'];\r\n\r\n\r\n\t\t\t\t\t//is the movement greater than the minimum resistance to scroll?\r\n\t\t\t\t\tif (Math.abs(touchStartY - touchEndY) > ($(window).height() / 100 * options.touchSensitivity)) {\r\n\r\n\t\t\t\t\t\tif (touchStartY > touchEndY) {\r\n\t\t\t\t\t\t\tMS.moveSectionDown();\r\n\r\n\t\t\t\t\t\t} else if (touchEndY > touchStartY) {\r\n\t\t\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* As IE >= 10 fires both touch and mouse events when using a mouse in a touchscreen\r\n\t\t* this way we make sure that is really a touch event what IE is detecting.\r\n\t\t*/\r\n\t\tfunction isReallyTouch(e){\r\n\t\t\t//if is not IE   ||  IE is detecting `touch` or `pen`\r\n\t\t\treturn typeof e.pointerType === 'undefined' || e.pointerType != 'mouse';\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Handler to get he coordinates of the starting touch\r\n\t\t*/\r\n\t\tfunction touchStartHandler(event){\r\n\t\t\tvar e = event.originalEvent;\r\n\r\n\t\t\tif(isReallyTouch(e)){\r\n\t\t\t\tvar touchEvents = getEventsPage(e);\r\n\t\t\t\ttouchStartY = touchEvents['y'];\r\n\t\t\t\ttouchStartX = touchEvents['x'];\r\n\t\t\t}\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Adds the possibility to auto scroll through sections on touch devices.\r\n\t\t*/\r\n\t\tfunction addTouchHandler(){\r\n\t\t\tif(isTouch){\r\n\t\t\t\t//Microsoft pointers\r\n\t\t\t\tMSPointer = getMSPointer();\r\n\r\n\t\t\t\t$(document).off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);\r\n\t\t\t\t$(document).off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Removes the auto scrolling for touch devices.\r\n\t\t*/\r\n\t\tfunction removeTouchHandler(){\r\n\t\t\tif(isTouch){\r\n\t\t\t\t//Microsoft pointers\r\n\t\t\t\tMSPointer = getMSPointer();\r\n\r\n\t\t\t\t$(document).off('touchstart ' + MSPointer.down);\r\n\t\t\t\t$(document).off('touchmove ' + MSPointer.move);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/*\r\n\t\t* Returns and object with Microsoft pointers (for IE<11 and for IE >= 11)\r\n\t\t* http://msdn.microsoft.com/en-us/library/ie/dn304886(v=vs.85).aspx\r\n\t\t*/\r\n\t\tfunction getMSPointer(){\r\n\t\t\tvar pointer;\r\n\r\n\t\t\t//IE >= 11\r\n\t\t\tif(window.PointerEvent){\r\n\t\t\t\tpointer = { down: \"pointerdown\", move: \"pointermove\"};\r\n\t\t\t}\r\n\r\n\t\t\t//IE < 11\r\n\t\t\telse{\r\n\t\t\t\tpointer = { down: \"MSPointerDown\", move: \"MSPointerMove\"};\r\n\t\t\t}\r\n\r\n\t\t\treturn pointer;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Gets the pageX and pageY properties depending on the browser.\r\n\t\t* https://github.com/alvarotrigo/fullPage.js/issues/194#issuecomment-34069854\r\n\t\t*/\r\n\t\tfunction getEventsPage(e){\r\n\t\t\tvar events = [];\r\n\r\n\t\t\tevents.y = (typeof e.pageY !== 'undefined' && (e.pageY || e.pageX) ? e.pageY : e.touches[0].pageY);\r\n\t\t\tevents.x = (typeof e.pageX !== 'undefined' && (e.pageY || e.pageX) ? e.pageX : e.touches[0].pageX);\r\n\r\n\t\t\t//in touch devices with scrollBar:true, e.pageY is detected, but we have to deal with touch events. #1008\r\n\t\t\tif(isTouch && isReallyTouch(e)){\r\n\t\t\t\tevents.y = e.touches[0].pageY;\r\n\t\t\t\tevents.x = e.touches[0].pageX;\r\n\t\t\t}\r\n\r\n\t\t\treturn events;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Destroy multiscroll.js plugin's events\r\n\t\t*/\r\n\t\tMS.destroy = function() {\r\n\t\t\tMS.setKeyboardScrolling(false);\r\n\t\t\tMS.setMouseWheelScrolling(false);\r\n\t\t\tremoveTouchHandler();\r\n\r\n\t\t\t$(window)\r\n\t\t\t\t.off('hashchange', hashChangeHandler)\r\n\t\t\t\t.off('resize', doneResizing);\r\n\r\n\t\t\t$(document)\r\n\t\t\t\t.off('mouseenter', '#multiscroll-nav li')\r\n\t\t\t\t.off('mouseleave', '#multiscroll-nav li')\r\n\t\t\t\t.off('click', '#multiscroll-nav a');\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Build multiscroll.js plugin's events after destroy\r\n\t\t*/\r\n\t\tMS.build = function() {\r\n\t\t\tMS.setKeyboardScrolling(true);\r\n\t\t\tMS.setMouseWheelScrolling(true);\r\n\t\t\taddTouchHandler();\r\n\r\n\t\t\t$(window)\r\n\t\t\t\t.on('hashchange', hashChangeHandler)\r\n\t\t\t\t.on('resize', doneResizing);\r\n\r\n\t\t\t$(document)\r\n\t\t\t\t.on('mouseenter', '#multiscroll-nav li', navMouseEnterHandler)\r\n\t\t\t\t.on('mouseleave', '#multiscroll-nav li', navMouseLeaveHandler)\r\n\t\t\t\t.on('click', '#multiscroll-nav a', navClickHandler);\r\n\t\t};\r\n\r\n\t};\r\n})(jQuery, window, document, Math);\r\n"],"sourceRoot":"/source/"}
+\ No newline at end of file
++{"version":3,"sources":["jquery.multiscroll.js"],"names":["$","window","document","Math","undefined","fn","multiscroll","options","hashChangeHandler","value","location","hash","replace","sectionAnchor","length","section","find","isFirstScrollMove","lastScrolledDestiny","scrollPage","keydownHandler","e","clearTimeout","keydownId","activeElement","is","keyboardScrolling","keyCode","which","keyControls","inArray","preventDefault","setTimeout","onkeydown","shiftPressed","shiftKey","MS","moveSectionUp","moveSectionDown","moveTo","navClickHandler","index","this","parent","eq","navMouseEnterHandler","tooltip","data","navigationPosition","hide","appendTo","fadeIn","navMouseLeaveHandler","fadeOut","remove","doneResizing","windowHeight","height","each","css","getTableHeight","silentScroll","isFunction","afterResize","call","css3","transformContainer","position","top","leftDestination","leftDestinationIndex","rightDestination","numberSections","anchorLink","activeSection","leavingSection","yMovement","getYmovement","isMoving","topPos","left","right","addClass","siblings","removeClass","setURLHash","onLeave","translate3dLeft","translate3dRight","afterLoad","scrollDelay","scrollingSpeed","animate","easing","activateMenuElement","activateNavDots","removeMouseWheelHandler","addEventListener","removeEventListener","MouseWheelHandler","detachEvent","addMouseWheelHandler","attachEvent","event","delta","max","min","wheelDelta","deltaY","detail","container","translate3d","animated","toggleClass","getTransforms","-webkit-transform","-moz-transform","-ms-transform","transform","name","sectionIndex","navigation","menu","destiny","fromIndex","toIndex","anchors","setBodyClass","text","String","classRe","RegExp","className","support3d","has3d","el","createElement","transforms","webkitTransform","OTransform","msTransform","MozTransform","body","insertBefore","t","style","getComputedStyle","getPropertyValue","removeChild","addTableClass","element","wrapInner","sectionHeight","paddingTop","paddingBottom","paddings","parseInt","scrollToAnchor","touchMoveHandler","originalEvent","isReallyTouch","touchEvents","getEventsPage","touchEndY","touchEndX","abs","touchStartY","touchSensitivity","pointerType","touchStartHandler","touchStartX","addTouchHandler","isTouch","MSPointer","getMSPointer","off","down","on","move","removeTouchHandler","pointer","PointerEvent","events","y","pageY","pageX","touches","x","extend","verticalCentered","sectionsColor","navigationColor","navigationTooltips","loopBottom","loopTop","fixedElements","normalScrollElements","sectionSelector","leftSelector","rightSelector","afterRender","navigator","msMaxTouchPoints","nav","overflow","append","width","-ms-touch-action","touch-action","attr","closest","link","html","get","reverse","promise","done","last","first","keydown","mousedown","button","mouseenter","mouseleave","setMouseWheelScrolling","prev","next","isNaN","setKeyboardScrolling","setScrollingSpeed","destroy","build","jQuery"],"mappings":"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","file":"jquery.multiscroll.min.js","sourcesContent":["/*!\r\n * multiscroll.js 0.1.9\r\n * https://github.com/alvarotrigo/multiscroll.js\r\n * @license MIT licensed\r\n *\r\n * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo\r\n */\r\n(function($, window, document, Math, undefined) {\r\n\r\n\t$.fn.multiscroll = function(options) {\r\n\t\tvar MS = $.fn.multiscroll;\r\n\r\n\t\t// Create some defaults, extending them with any options that were provided\r\n\t\toptions = $.extend({\r\n\t\t\t'verticalCentered' : true,\r\n\t\t\t'scrollingSpeed': 700,\r\n\t\t\t'easing': 'easeInQuart',\r\n\t\t\t'menu': false,\r\n\t\t\t'sectionsColor': [],\r\n\t\t\t'anchors':[],\r\n\t\t\t'navigation': false,\r\n\t\t\t'navigationPosition': 'right',\r\n\t\t\t'navigationColor': '#000',\r\n\t\t\t'navigationTooltips': [],\r\n\t\t\t'loopBottom': false,\r\n\t\t\t'loopTop': false,\r\n\t\t\t'css3': false,\r\n\t\t\t'paddingTop': 0,\r\n\t\t\t'paddingBottom': 0,\r\n\t\t\t'fixedElements': null,\r\n\t\t\t'normalScrollElements': null,\r\n\t\t\t'keyboardScrolling': true,\r\n\t\t\t'touchSensitivity': 5,\r\n\r\n\t\t\t// Custom selectors\r\n\t\t\t'sectionSelector': '.ms-section',\r\n\t\t\t'leftSelector': '.ms-left',\r\n\t\t\t'rightSelector': '.ms-right',\r\n\r\n\t\t\t//events\r\n\t\t\t'afterLoad': null,\r\n\t\t\t'onLeave': null,\r\n\t\t\t'afterRender': null,\r\n\t\t\t'afterResize': null\r\n\t\t}, options);\r\n\r\n\t\t//Defines the delay to take place before being able to scroll to the next section\r\n\t\t//BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and\r\n\t\t//Apple devices (laptops, mouses...)\r\n\t\tvar scrollDelay = 600;\r\n\r\n\t\tvar isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));\r\n\r\n\t\t// adding class namef for right and left blocks\r\n\t\tif (options.rightSelector !== '.ms-right') {\r\n\t\t\t$(options.rightSelector).addClass('ms-right');\r\n\t\t}\r\n\r\n\t\tif (options.leftSelector !== '.ms-left') {\r\n\t\t\t$(options.leftSelector).addClass('ms-left');\r\n\t\t}\r\n\r\n\t\tvar numberSections = $('.ms-left').find('.ms-section').length;\r\n\t\tvar isMoving = false;\r\n\t\tvar nav;\r\n\t\tvar windowHeight = $(window).height();\r\n\r\n\r\n\t\taddMouseWheelHandler();\r\n\t\taddTouchHandler();\r\n\r\n\t\t//if css3 is not supported, it will use jQuery animations\r\n\t\tif(options.css3){\r\n\t\t\toptions.css3 = support3d();\r\n\t\t}\r\n\r\n\t\t$('html, body').css({\r\n\t\t\t'overflow' : 'hidden',\r\n\t\t\t'height' : '100%'\r\n\t\t});\r\n\r\n\t\t//adding class names to each sections\r\n\t\tif (options.sectionSelector !== '.ms-section') {\r\n\t\t\t$(options.sectionSelector).each(function(){\r\n\t\t\t\t$(this).addClass('ms-section');\r\n\t\t\t});\r\n\t\t}\r\n\r\n\t\t//creating the navigation dots\r\n\t\tif (options.navigation) {\r\n\t\t\t$('body').append('<div id=\"multiscroll-nav\"><ul></ul></div>');\r\n\t\t\tnav = $('#multiscroll-nav');\r\n\r\n\t\t\tnav.css('color', options.navigationColor);\r\n\t\t\tnav.addClass(options.navigationPosition);\r\n\t\t}\r\n\r\n\t\t$('.ms-right, .ms-left').css({\r\n\t\t\t'width': '50%',\r\n\t\t\t'position': 'absolute',\r\n\t\t\t'height': '100%',\r\n\t\t\t'-ms-touch-action': 'none'\r\n\t\t});\r\n\r\n\t\t$('.ms-right').css({\r\n\t\t\t'right': '1px', //http://stackoverflow.com/questions/23675457/chrome-and-opera-creating-small-padding-when-using-displaytable\r\n\t\t\t'top': '0',\r\n\t\t\t'-ms-touch-action': 'none',\r\n\t\t\t'touch-action': 'none'\r\n\t\t});\r\n\r\n\t\t$('.ms-left').css({\r\n\t\t\t'left': '0',\r\n\t\t\t'top': '0',\r\n\t\t\t'-ms-touch-action': 'none',\r\n\t\t\t'touch-action': 'none'\r\n\t\t});\r\n\r\n\r\n\t\t$('.ms-left .ms-section, .ms-right .ms-section').each(function(){\r\n\t\t\tvar sectionIndex = $(this).index();\r\n\r\n\t\t\tif(options.paddingTop || options.paddingBottom){\r\n\t\t\t\t$(this).css('padding', options.paddingTop  + ' 0 ' + options.paddingBottom + ' 0');\r\n\t\t\t}\r\n\r\n\t\t\tif (typeof options.sectionsColor[sectionIndex] !==  'undefined') {\r\n\t\t\t\t$(this).css('background-color', options.sectionsColor[sectionIndex]);\r\n\t\t\t}\r\n\r\n\t\t\tif (typeof options.anchors[sectionIndex] !== 'undefined') {\r\n\t\t\t\t$(this).attr('data-anchor', options.anchors[sectionIndex]);\r\n\t\t\t}\r\n\r\n\t\t\tif(options.verticalCentered){\r\n\t\t\t\taddTableClass($(this));\r\n\t\t\t}\r\n\r\n\t\t\t//only for the left panel\r\n\t\t\tif($(this).closest('.ms-left').length && options.navigation) {\r\n\t\t\t\tvar link = '';\r\n\t\t\t\tif(options.anchors.length){\r\n\t\t\t\t\tlink = options.anchors[sectionIndex];\r\n\t\t\t\t}\r\n\t\t\t\tvar tooltip = options.navigationTooltips[sectionIndex];\r\n\t\t\t\tif(typeof tooltip === 'undefined'){\r\n\t\t\t\t\ttooltip = '';\r\n\t\t\t\t}\r\n\t\t\t\tif (options.navigation) {\r\n\t\t\t\t\tnav.find('ul').append('<li data-tooltip=\"' + tooltip + '\"><a href=\"#' + link + '\"><span></span></a></li>');\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t});\r\n\r\n\t\t//inverting the right panel\r\n\t\t$('.ms-right').html( $('.ms-right').find('.ms-section').get().reverse());\r\n\r\n\t\t$('.ms-left .ms-section, .ms-right .ms-section').each(function(){\r\n\t\t\tvar sectionIndex = $(this).index();\r\n\r\n\t\t\t$(this).css({\r\n\t\t\t\t'height': '100%'\r\n\t\t\t});\r\n\r\n\r\n\t\t\tif(!sectionIndex && options.navigation ){\r\n\t\t\t\t//activating the navigation bullet\r\n\t\t\t\tnav.find('li').eq(sectionIndex).find('a').addClass('active');\r\n\t\t\t}\r\n\t\t}).promise().done(function(){\r\n\r\n\t\t\t//if no active section is defined, the 1st one will be the default one\r\n\t\t\tif(!$('.ms-left .ms-section.active').length){\r\n\t\t\t\t$('.ms-right').find('.ms-section').last().addClass('active');\r\n\t\t\t\t$('.ms-left').find('.ms-section').first().addClass('active');\r\n\t\t\t}\r\n\r\n\t\t\t//vertical centered of the navigation + first bullet active\r\n\t\t\tif(options.navigation){\r\n\t\t\t\tnav.css('margin-top', '-' + (nav.height()/2) + 'px');\r\n\t\t\t}\r\n\t\t\t$.isFunction( options.afterRender ) && options.afterRender.call( this);\r\n\r\n\t\t\t//scrolling to the defined active section and adjusting right and left panels\r\n\t\t\tsilentScroll();\r\n\r\n\t\t\t//setting the class for the body element\r\n\t\t\tsetBodyClass();\r\n\r\n\t\t\t$(window).on('load', function() {\r\n\t\t\t\tscrollToAnchor();\r\n\t\t\t});\r\n\t\t});\r\n\r\n\r\n\t\t//detecting any change on the URL to scroll to the given anchor link\r\n\t\t//(a way to detect back history button as we play with the hashes on the URL)\r\n\t\t$(window).on('hashchange', hashChangeHandler);\r\n\r\n\t\tfunction hashChangeHandler(){\r\n\t\t\tvar value =  window.location.hash.replace('#', '');\r\n\t\t\tvar sectionAnchor = value;\r\n\r\n\t\t\tif(sectionAnchor.length){\r\n\t\t\t\tvar section = $('.ms-left').find('[data-anchor=\"'+sectionAnchor+'\"]');\r\n\r\n\t\t\t\tvar isFirstScrollMove = (typeof lastScrolledDestiny === 'undefined' );\r\n\r\n\t\t\t\tif (isFirstScrollMove || sectionAnchor !== lastScrolledDestiny){\r\n\t\t\t\t\tscrollPage(section);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t};\r\n\r\n\r\n\t\t/**\r\n\t\t* Sliding with arrow keys, both, vertical and horizontal\r\n\t\t*/\r\n\t\t$(document).keydown(keydownHandler);\r\n\r\n\r\n\t\tvar keydownId;\r\n\t\tfunction keydownHandler(e) {\r\n\t\t\tclearTimeout(keydownId);\r\n\r\n\t\t\tvar activeElement = $(document.activeElement);\r\n\r\n\t\t\tif(!activeElement.is('textarea') && !activeElement.is('input') && !activeElement.is('select') &&\r\n\t\t\t\toptions.keyboardScrolling){\r\n\t\t\t\tvar keyCode = e.which;\r\n\r\n\t\t\t\t//preventing the scroll with arrow keys & spacebar & Page Up & Down keys\r\n\t\t\t\tvar keyControls = [40, 38, 32, 33, 34];\r\n\t\t\t\tif($.inArray(keyCode, keyControls) > -1){\r\n\t\t\t\t\te.preventDefault();\r\n\t\t\t\t}\r\n\r\n\t\t\t\tkeydownId = setTimeout(function(){\r\n\t\t\t\t\tonkeydown(e);\r\n\t\t\t\t},150);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Sliding with arrow keys, both, vertical and horizontal\r\n\t\t */\r\n\t\tfunction onkeydown(e){\r\n\t\t\tvar shiftPressed = e.shiftKey;\r\n\r\n\t\t\tswitch (e.which) {\r\n\t\t\t\t//up\r\n\t\t\t\tcase 38:\r\n\t\t\t\tcase 33:\r\n\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//down\r\n\t\t\t\tcase 32: //spacebar\r\n\t\t\t\t\tif(shiftPressed){\r\n\t\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t}\r\n\t\t\t\tcase 40:\r\n\t\t\t\tcase 34:\r\n\t\t\t\t\tMS.moveSectionDown();\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//Home\r\n\t\t\t\tcase 36:\r\n\t\t\t\t\tMS.moveTo(1);\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\t//End\r\n\t\t\t\tcase 35:\r\n\t\t\t\t\tMS.moveTo( $('.ms-left .ms-section').length);\r\n\t\t\t\t\tbreak;\r\n\r\n\t\t\t\tdefault:\r\n\t\t\t\t\treturn; // exit this handler for other keys\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Disabling any action when pressing of the mouse wheel (Chrome, IE, Opera, Safari)\r\n\t\t */\r\n\t\t$(document).mousedown(function(e) {\r\n\t\t\tif(e.button == 1){\r\n\t\t\t\te.preventDefault();\r\n\t\t\t\treturn false;\r\n\t\t\t}\r\n\t\t});\r\n\r\n\t\tfunction navClickHandler(e) {\r\n\t\t\te.preventDefault();\r\n\t\t\tvar index = $(this).parent().index();\r\n\t\t\tscrollPage($('.ms-left .ms-section').eq(index));\r\n\t\t}\r\n\r\n\t\t//navigation action\r\n\t\t$(document).on('click', '#multiscroll-nav a', navClickHandler);\r\n\r\n\t\tfunction navMouseEnterHandler() {\r\n\t\t\tvar tooltip = $(this).data('tooltip');\r\n\t\t\t$('<div class=\"multiscroll-tooltip ' + options.navigationPosition +'\">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);\r\n\t\t}\r\n\r\n\t\tfunction navMouseLeaveHandler() {\r\n\t\t\t$(this).find('.multiscroll-tooltip').fadeOut(200, function() {\r\n\t\t\t\t$(this).remove();\r\n\t\t\t});\r\n\t\t}\r\n\r\n\t\t//navigation tooltips\r\n\t\t$(document).on({\r\n\t\t\tmouseenter: navMouseEnterHandler,\r\n\t\t\tmouseleave: navMouseLeaveHandler\r\n\t\t}, '#multiscroll-nav li');\r\n\r\n\r\n\t\tif(options.normalScrollElements){\r\n\t\t\t$(document).on('mouseenter', options.normalScrollElements, function () {\r\n\t\t\t\tMS.setMouseWheelScrolling(false);\r\n\t\t\t});\r\n\r\n\t\t\t$(document).on('mouseleave', options.normalScrollElements, function(){\r\n\t\t\t\tMS.setMouseWheelScrolling(true);\r\n\t\t\t});\r\n\t\t}\r\n\r\n\r\n\t\t//when resizing the site, we adjust the heights of the sections\r\n\t\t$(window).on('resize', doneResizing);\r\n\r\n\t\t/**\r\n\t\t * When resizing is finished, we adjust the slides sizes and positions\r\n\t\t */\r\n\t\tfunction doneResizing() {\r\n\t\t\twindowHeight = $(window).height();\r\n\t\t\t$('.ms-tableCell').each(function() {\r\n\t\t\t\t$(this).css({ height: getTableHeight($(this).parent()) });\r\n\t\t\t});\r\n\t\t\tsilentScroll();\r\n\t\t\t$.isFunction( options.afterResize ) && options.afterResize.call( this);\r\n\t\t}\r\n\r\n\t\tfunction silentScroll(){\r\n\t\t\t//moving the right section to the bottom\r\n\t\t\tif(options.css3){\r\n\t\t\t\ttransformContainer($('.ms-left'), 'translate3d(0px, -' + $('.ms-left').find('.ms-section.active').position().top + 'px, 0px)', false);\r\n\t\t\t\ttransformContainer($('.ms-right'), 'translate3d(0px, -' + $('.ms-right').find('.ms-section.active').position().top + 'px, 0px)', false);\r\n\t\t\t}else{\r\n\t\t\t\t$('.ms-left').css('top', -$('.ms-left').find('.ms-section.active').position().top );\r\n\t\t\t\t$('.ms-right').css('top', -$('.ms-right').find('.ms-section.active').position().top );\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\tMS.moveSectionUp = function(){\r\n\t\t\tvar prev = $('.ms-left .ms-section.active').prev('.ms-section');\r\n\r\n\t\t\tif(!prev.length && options.loopTop){\r\n\t\t\t\tprev = $('.ms-left .ms-section').last();\r\n\t\t\t}\r\n\r\n\t\t\tif (prev.length) {\r\n\t\t\t\tscrollPage(prev);\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tMS.moveSectionDown = function (){\r\n\t\t\tvar next = $('.ms-left .ms-section.active').next('.ms-section');\r\n\r\n\t\t\tif(!next.length && options.loopBottom ){\r\n\t\t\t\tnext = $('.ms-left .ms-section').first();\r\n\t\t\t}\r\n\r\n\t\t\tif(next.length){\r\n\t\t\t\tscrollPage(next);\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tMS.moveTo = function (section){\r\n\t\t\tvar destiny = '';\r\n\r\n\t\t\tif(isNaN(section)){\r\n\t\t\t\tdestiny = $('.ms-left [data-anchor=\"'+section+'\"]');\r\n\t\t\t}else{\r\n\t\t\t\tdestiny = $('.ms-left .ms-section').eq( (section -1) );\r\n\t\t\t}\r\n\r\n\t\t\tscrollPage(destiny);\r\n\t\t};\r\n\r\n\t\tfunction scrollPage(leftDestination){\r\n\t\t\tvar leftDestinationIndex = leftDestination.index();\r\n\t\t\tvar rightDestination = $('.ms-right').find('.ms-section').eq( numberSections -1 - leftDestinationIndex);\r\n\t\t\tvar rightDestinationIndex = numberSections - 1 - leftDestinationIndex;\r\n\t\t\tvar anchorLink  = leftDestination.data('anchor');\r\n\t\t\tvar activeSection = $('.ms-left .ms-section.active');\r\n\t\t\tvar leavingSection = activeSection.index() + 1;\r\n\t\t\tvar yMovement = getYmovement(leftDestination);\r\n\r\n\t\t\t//preventing from activating the MouseWheelHandler event\r\n\t\t\t//more than once if the page is scrolling\r\n\t\t\tisMoving = true;\r\n\r\n\t\t\tvar topPos = {\r\n\t\t\t\t'left' : leftDestination.position().top,\r\n\t\t\t\t'right': rightDestination.position().top\r\n\t\t\t};\r\n\r\n\t\t\trightDestination.addClass('active').siblings().removeClass('active');\r\n\t\t\tleftDestination.addClass('active').siblings().removeClass('active');\r\n\r\n\t\t\tsetURLHash(anchorLink);\r\n\r\n\t\t\t// Use CSS3 translate functionality or...\r\n\t\t\tif (options.css3){\r\n\t\t\t\t//callback (onLeave)\r\n\t\t\t\t$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);\r\n\r\n\t\t\t\tvar translate3dLeft = 'translate3d(0px, -' + topPos['left'] + 'px, 0px)';\r\n\t\t\t\tvar translate3dRight = 'translate3d(0px, -' + topPos['right'] + 'px, 0px)';\r\n\r\n\t\t\t\ttransformContainer($('.ms-left'), translate3dLeft, true);\r\n\t\t\t\ttransformContainer($('.ms-right'), translate3dRight, true);\r\n\r\n\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t//callback (afterLoad)\r\n\t\t\t\t\t$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));\r\n\r\n\t\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t\tisMoving = false;\r\n\t\t\t\t\t}, scrollDelay);\r\n\t\t\t\t}, options.scrollingSpeed);\r\n\t\t\t}else{\r\n\t\t\t\t//callback (onLeave)\r\n\t\t\t\t$.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);\r\n\r\n\t\t\t\t$('.ms-left').animate({\r\n\t\t\t\t\t'top': -topPos['left']\r\n\t\t\t\t}, options.scrollingSpeed, options.easing, function(){\r\n\t\t\t\t\t$.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));\r\n\r\n\t\t\t\t\tsetTimeout(function () {\r\n\t\t\t\t\t\tisMoving = false;\r\n\t\t\t\t\t}, scrollDelay);\r\n\t\t\t\t});\r\n\r\n\t\t\t\t$('.ms-right').animate({\r\n\t\t\t\t\t'top': -topPos['right']\r\n\t\t\t\t}, options.scrollingSpeed, options.easing);\r\n\t\t\t}\r\n\r\n\t\t\t//flag to avoid callingn `scrollPage()` twice in case of using anchor links\r\n\t\t\tlastScrolledDestiny = anchorLink;\r\n\r\n\t\t\tactivateMenuElement(anchorLink);\r\n\t\t\tactivateNavDots(anchorLink, leftDestinationIndex);\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Removes the auto scrolling action fired by the mouse wheel and tackpad.\r\n\t\t* After this function is called, the mousewheel and trackpad movements won't scroll through sections.\r\n\t\t*/\r\n\t\tfunction removeMouseWheelHandler(){\r\n\t\t\tif (document.addEventListener) {\r\n\t\t\t\tdocument.removeEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper\r\n\t\t\t\tdocument.removeEventListener('wheel', MouseWheelHandler, false); //Firefox\r\n\t\t\t} else {\r\n\t\t\t\tdocument.detachEvent(\"onmousewheel\", MouseWheelHandler); //IE 6/7/8\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds the auto scrolling action for the mouse wheel and tackpad.\r\n\t\t* After this function is called, the mousewheel and trackpad movements will scroll through sections\r\n\t\t*/\r\n\t\tfunction addMouseWheelHandler(){\r\n\t\t\tif (document.addEventListener) {\r\n\t\t\t\tdocument.addEventListener(\"mousewheel\", MouseWheelHandler, false); //IE9, Chrome, Safari, Oper\r\n\t\t\t\tdocument.addEventListener(\"wheel\", MouseWheelHandler, false); //Firefox\r\n\t\t\t} else {\r\n\t\t\t\tdocument.attachEvent(\"onmousewheel\", MouseWheelHandler); //IE 6/7/8\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Detecting mousewheel scrolling\r\n\t\t *\r\n\t\t * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html\r\n\t\t * http://www.sitepoint.com/html5-javascript-mouse-wheel/\r\n\t\t */\r\n\t\tfunction MouseWheelHandler(e) {\r\n\t\t\t// cross-browser wheel delta\r\n\t\t\te = window.event || e;\r\n\t\t\tvar delta = Math.max(-1, Math.min(1,\r\n\t\t\t\t\t(e.wheelDelta || -e.deltaY || -e.detail)));\r\n\r\n\t\t\tif (!isMoving) { //if theres any #\r\n\r\n\t\t\t\t//scrolling down?\r\n\t\t\t\tif (delta < 0) {\r\n\t\t\t\t\tMS.moveSectionDown();\r\n\t\t\t\t}\r\n\r\n\t\t\t\t//scrolling up?\r\n\t\t\t\telse {\r\n\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\r\n\t\t\treturn false;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds a css3 transform property to the container class with or without animation depending on the animated param.\r\n\t\t*/\r\n\t\tfunction transformContainer(container, translate3d, animated){\r\n\t\t\tcontainer.toggleClass('ms-easing', animated);\r\n\r\n\t\t\tcontainer.css(getTransforms(translate3d));\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Returns the transform styles for all browsers\r\n\t\t*/\r\n\t\tfunction getTransforms(translate3d){\r\n\t\t\treturn {\r\n\t\t\t\t'-webkit-transform': translate3d,\r\n\t\t\t\t'-moz-transform': translate3d,\r\n\t\t\t\t'-ms-transform':translate3d,\r\n\t\t\t\t'transform': translate3d\r\n\t\t\t};\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Activating the website navigation dots according to the given slide name.\r\n\t\t */\r\n\t\tfunction activateNavDots(name, sectionIndex){\r\n\t\t\tif(options.navigation){\r\n\t\t\t\t$('#multiscroll-nav').find('.active').removeClass('active');\r\n\t\t\t\tif(name){\r\n\t\t\t\t\t$('#multiscroll-nav').find('a[href=\"#' + name + '\"]').addClass('active');\r\n\t\t\t\t}else{\r\n\t\t\t\t\t$('#multiscroll-nav').find('li').eq(sectionIndex).find('a').addClass('active');\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t * Activating the website main menu elements according to the given slide name.\r\n\t\t */\r\n\t\tfunction activateMenuElement(name){\r\n\t\t\tif(options.menu){\r\n\t\t\t\t$(options.menu).find('.active').removeClass('active');\r\n\t\t\t\t$(options.menu).find('[data-menuanchor=\"'+name+'\"]').addClass('active');\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Retuns `up` or `down` depending on the scrolling movement to reach its destination\r\n\t\t* from the current section.\r\n\t\t*/\r\n\t\tfunction getYmovement(destiny){\r\n\t\t\tvar fromIndex = $('.ms-left .ms-section.active').index();\r\n\t\t\tvar toIndex = destiny.index();\r\n\r\n\t\t\tif(fromIndex > toIndex){\r\n\t\t\t\treturn 'up';\r\n\t\t\t}\r\n\t\t\treturn 'down';\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Sets the URL hash for a section with slides\r\n\t\t*/\r\n\t\tfunction setURLHash(anchorLink){\r\n\t\t\tif(options.anchors.length){\r\n\t\t\t\tlocation.hash = anchorLink;\r\n\t\t\t}\r\n\r\n\t\t\tsetBodyClass();\r\n\t\t}\r\n\r\n\t\t /**\r\n\t\t* Sets a class for the body of the page depending on the active section / slide\r\n\t\t*/\r\n\t\tfunction setBodyClass(){\r\n\t\t\tvar section = $('.ms-left .ms-section.active');\r\n\t\t\tvar sectionAnchor = section.data('anchor');\r\n\t\t\tvar sectionIndex = section.index();\r\n\r\n\t\t\tvar text = String(sectionIndex);\r\n\r\n\t\t\tif(options.anchors.length){\r\n\t\t\t\ttext = sectionAnchor;\r\n\t\t\t}\r\n\r\n\t\t\t//changing slash for dash to make it a valid CSS style\r\n\t\t\ttext = text.replace('/', '-').replace('#','');\r\n\r\n\t\t\t//removing previous anchor classes\r\n\t\t\tvar classRe = new RegExp('\\\\b\\\\s?' + 'ms-viewing' + '-[^\\\\s]+\\\\b', \"g\");\r\n\t\t\t$('body')[0].className = $('body')[0].className.replace(classRe, '');\r\n\r\n\t\t\t//adding the current anchor\r\n\t\t\t$('body').addClass('ms-viewing-' + text);\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Checks for translate3d support\r\n\t\t* @return boolean\r\n\t\t* http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support\r\n\t\t*/\r\n\t\tfunction support3d() {\r\n\t\t\tvar el = document.createElement('p'),\r\n\t\t\t\thas3d,\r\n\t\t\t\ttransforms = {\r\n\t\t\t\t\t'webkitTransform':'-webkit-transform',\r\n\t\t\t\t\t'OTransform':'-o-transform',\r\n\t\t\t\t\t'msTransform':'-ms-transform',\r\n\t\t\t\t\t'MozTransform':'-moz-transform',\r\n\t\t\t\t\t'transform':'transform'\r\n\t\t\t\t};\r\n\r\n\t\t\t// Add it to the body to get the computed style.\r\n\t\t\tdocument.body.insertBefore(el, null);\r\n\r\n\t\t\tfor (var t in transforms) {\r\n\t\t\t\tif (el.style[t] !== undefined) {\r\n\t\t\t\t\tel.style[t] = \"translate3d(1px,1px,1px)\";\r\n\t\t\t\t\thas3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\tdocument.body.removeChild(el);\r\n\r\n\t\t\treturn (has3d !== undefined && has3d.length > 0 && has3d !== \"none\");\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Wraps an element in order to center it vertically by using a class style.\r\n\t\t*/\r\n\t\tfunction addTableClass(element){\r\n\t\t\telement.addClass('ms-table').wrapInner('<div class=\"ms-tableCell\" style=\"height: ' + getTableHeight(element) + 'px\" />');\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Gets the height of the section after removing the paddings.\r\n\t\t*/\r\n\t\tfunction getTableHeight(section){\r\n\t\t\tvar sectionHeight = windowHeight;\r\n\r\n\t\t\tif(options.paddingTop || options.paddingBottom){\r\n\t\t\t\tvar paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));\r\n\t\t\t\tsectionHeight = (windowHeight - paddings);\r\n\t\t\t}\r\n\r\n\t\t\treturn sectionHeight;\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Scrolls the page to the existent anchor in the URL\r\n\t\t*/\r\n\t\tfunction scrollToAnchor(){\r\n\t\t\t//getting the anchor link in the URL and deleting the `#`\r\n\t\t\tvar sectionAnchor =  window.location.hash.replace('#', '');\r\n\t\t\tvar section = $('.ms-left .ms-section[data-anchor=\"'+sectionAnchor+'\"]');\r\n\r\n\t\t\tif(sectionAnchor.length){  //if theres any #\r\n\t\t\t\tscrollPage(section);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys\r\n\t\t*/\r\n\t\tMS.setKeyboardScrolling = function (value){\r\n\t\t\toptions.keyboardScrolling = value;\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.\r\n\t\t*/\r\n\t\tMS.setMouseWheelScrolling = function (value){\r\n\t\t\tif(value){\r\n\t\t\t\taddMouseWheelHandler();\r\n\t\t\t}else{\r\n\t\t\t\tremoveMouseWheelHandler();\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Defines the scrolling speed\r\n\t\t*/\r\n\t\tMS.setScrollingSpeed = function(value){\r\n\t\t\toptions.scrollingSpeed = value;\r\n\t\t};\r\n\r\n\r\n\r\n\t\tvar touchStartY = 0;\r\n\t\tvar touchStartX = 0;\r\n\t\tvar touchEndY = 0;\r\n\t\tvar touchEndX = 0;\r\n\r\n\t\t/* Detecting touch events\r\n\r\n\t\t* As we are changing the top property of the page on scrolling, we can not use the traditional way to detect it.\r\n\t\t* This way, the touchstart and the touch moves shows an small difference between them which is the\r\n\t\t* used one to determine the direction.\r\n\t\t*/\r\n\t\tfunction touchMoveHandler(event){\r\n\t\t\tvar e = event.originalEvent;\r\n\r\n\t\t\tif(isReallyTouch(e)){\r\n\t\t\t\t//preventing the easing on iOS devices\r\n\t\t\t\tevent.preventDefault();\r\n\r\n\t\t\t\tvar activeSection = $('.ms-left .ms-section.active');\r\n\r\n\t\t\t\tif (!isMoving) { //if theres any #\r\n\t\t\t\t\tvar touchEvents = getEventsPage(e);\r\n\t\t\t\t\ttouchEndY = touchEvents['y'];\r\n\t\t\t\t\ttouchEndX = touchEvents['x'];\r\n\r\n\r\n\t\t\t\t\t//is the movement greater than the minimum resistance to scroll?\r\n\t\t\t\t\tif (Math.abs(touchStartY - touchEndY) > ($(window).height() / 100 * options.touchSensitivity)) {\r\n\r\n\t\t\t\t\t\tif (touchStartY > touchEndY) {\r\n\t\t\t\t\t\t\tMS.moveSectionDown();\r\n\r\n\t\t\t\t\t\t} else if (touchEndY > touchStartY) {\r\n\t\t\t\t\t\t\tMS.moveSectionUp();\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* As IE >= 10 fires both touch and mouse events when using a mouse in a touchscreen\r\n\t\t* this way we make sure that is really a touch event what IE is detecting.\r\n\t\t*/\r\n\t\tfunction isReallyTouch(e){\r\n\t\t\t//if is not IE   ||  IE is detecting `touch` or `pen`\r\n\t\t\treturn typeof e.pointerType === 'undefined' || e.pointerType != 'mouse';\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Handler to get he coordinates of the starting touch\r\n\t\t*/\r\n\t\tfunction touchStartHandler(event){\r\n\t\t\tvar e = event.originalEvent;\r\n\r\n\t\t\tif(isReallyTouch(e)){\r\n\t\t\t\tvar touchEvents = getEventsPage(e);\r\n\t\t\t\ttouchStartY = touchEvents['y'];\r\n\t\t\t\ttouchStartX = touchEvents['x'];\r\n\t\t\t}\r\n\t\t}\r\n\r\n\r\n\t\t/**\r\n\t\t* Adds the possibility to auto scroll through sections on touch devices.\r\n\t\t*/\r\n\t\tfunction addTouchHandler(){\r\n\t\t\tif(isTouch){\r\n\t\t\t\t//Microsoft pointers\r\n\t\t\t\tMSPointer = getMSPointer();\r\n\r\n\t\t\t\t$(document).off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);\r\n\t\t\t\t$(document).off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Removes the auto scrolling for touch devices.\r\n\t\t*/\r\n\t\tfunction removeTouchHandler(){\r\n\t\t\tif(isTouch){\r\n\t\t\t\t//Microsoft pointers\r\n\t\t\t\tMSPointer = getMSPointer();\r\n\r\n\t\t\t\t$(document).off('touchstart ' + MSPointer.down);\r\n\t\t\t\t$(document).off('touchmove ' + MSPointer.move);\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t/*\r\n\t\t* Returns and object with Microsoft pointers (for IE<11 and for IE >= 11)\r\n\t\t* http://msdn.microsoft.com/en-us/library/ie/dn304886(v=vs.85).aspx\r\n\t\t*/\r\n\t\tfunction getMSPointer(){\r\n\t\t\tvar pointer;\r\n\r\n\t\t\t//IE >= 11\r\n\t\t\tif(window.PointerEvent){\r\n\t\t\t\tpointer = { down: \"pointerdown\", move: \"pointermove\"};\r\n\t\t\t}\r\n\r\n\t\t\t//IE < 11\r\n\t\t\telse{\r\n\t\t\t\tpointer = { down: \"MSPointerDown\", move: \"MSPointerMove\"};\r\n\t\t\t}\r\n\r\n\t\t\treturn pointer;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Gets the pageX and pageY properties depending on the browser.\r\n\t\t* https://github.com/alvarotrigo/fullPage.js/issues/194#issuecomment-34069854\r\n\t\t*/\r\n\t\tfunction getEventsPage(e){\r\n\t\t\tvar events = [];\r\n\r\n\t\t\tevents.y = (typeof e.pageY !== 'undefined' && (e.pageY || e.pageX) ? e.pageY : e.touches[0].pageY);\r\n\t\t\tevents.x = (typeof e.pageX !== 'undefined' && (e.pageY || e.pageX) ? e.pageX : e.touches[0].pageX);\r\n\r\n\t\t\t//in touch devices with scrollBar:true, e.pageY is detected, but we have to deal with touch events. #1008\r\n\t\t\tif(isTouch && isReallyTouch(e)){\r\n\t\t\t\tevents.y = e.touches[0].pageY;\r\n\t\t\t\tevents.x = e.touches[0].pageX;\r\n\t\t\t}\r\n\r\n\t\t\treturn events;\r\n\t\t}\r\n\r\n\t\t/**\r\n\t\t* Destroy multiscroll.js plugin's events\r\n\t\t*/\r\n\t\tMS.destroy = function() {\r\n\t\t\tMS.setKeyboardScrolling(false);\r\n\t\t\tMS.setMouseWheelScrolling(false);\r\n\t\t\tremoveTouchHandler();\r\n\r\n\t\t\t$(window)\r\n\t\t\t\t.off('hashchange', hashChangeHandler)\r\n\t\t\t\t.off('resize', doneResizing);\r\n\r\n\t\t\t$(document)\r\n\t\t\t\t.off('mouseenter', '#multiscroll-nav li')\r\n\t\t\t\t.off('mouseleave', '#multiscroll-nav li')\r\n\t\t\t\t.off('click', '#multiscroll-nav a');\r\n\t\t};\r\n\r\n\t\t/**\r\n\t\t* Build multiscroll.js plugin's events after destroy\r\n\t\t*/\r\n\t\tMS.build = function() {\r\n\t\t\tMS.setKeyboardScrolling(true);\r\n\t\t\tMS.setMouseWheelScrolling(true);\r\n\t\t\taddTouchHandler();\r\n\r\n\t\t\t$(window)\r\n\t\t\t\t.on('hashchange', hashChangeHandler)\r\n\t\t\t\t.on('resize', doneResizing);\r\n\r\n\t\t\t$(document)\r\n\t\t\t\t.on('mouseenter', '#multiscroll-nav li', navMouseEnterHandler)\r\n\t\t\t\t.on('mouseleave', '#multiscroll-nav li', navMouseLeaveHandler)\r\n\t\t\t\t.on('click', '#multiscroll-nav a', navClickHandler);\r\n\t\t};\r\n\r\n\t};\r\n})(jQuery, window, document, Math);\r\n"]}
+\ No newline at end of file
+diff --git a/examples/scrollable.html b/examples/scrollable.html
+new file mode 100644
+index 0000000..1fcc2a1
+--- /dev/null
++++ b/examples/scrollable.html
+@@ -0,0 +1,74 @@
++<!DOCTYPE html>
++<html xmlns="http://www.w3.org/1999/xhtml">
++
++<head>
++    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
++    <title>multiscroll.js - split multi-scrolling pages plugin</title>
++    <meta name="author" content="Alvaro Trigo Lopez" />
++    <meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
++    <meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
++    <meta name="Resource-type" content="Document" />
++
++
++    <link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />
++    <link rel="stylesheet" type="text/css" href="examples.css" />
++    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
++    <script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
++    <script type="text/javascript" src="../jquery.multiscroll.js"></script>
++
++    <script type="text/javascript">
++     $(document).ready(function() {
++            $('#myContainer').multiscroll({
++                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
++                anchors: ['first', 'second', 'third'],
++                menu: '#menu',
++                navigation: true,
++                navigationTooltips: ['One', 'Two', 'Three'],
++                loopBottom: true,
++                loopTop: true
++            });
++        });
++    </script>
++</head>
++<body>
++
++
++<ul id="menu">
++    <li data-menuanchor="first"><a href="#first">First slide</a></li>
++    <li data-menuanchor="second"><a href="#second">Second slide</a></li>
++    <li data-menuanchor="third"><a href="#third">Third slide</a></li>
++</ul>
++
++<div id="myContainer">
++
++    <div class="ms-left">
++        <div class="ms-section" id="left1">
++            <h1>Left 1</h1>
++        </div>
++
++        <div class="ms-section" id="left2">
++            <h1>Left 2 </h1>
++        </div>
++
++        <div class="ms-section" id="left3">
++            <h1>Left 3</h1>
++        </div>
++    </div>
++
++    <div class="ms-right">
++        <div class="ms-section" id="right1">
++            <h1>Right 1</h1>
++        </div>
++
++        <div class="ms-section" id="right2">
++            <h1>Right 2</h1>
++        </div>
++
++        <div class="ms-section" id="right3">
++            <h1>Right 3</h1>
++        </div>
++    </div>
++</div>
++
++</body>
++</html>
+diff --git a/jquery.multiscroll.css b/jquery.multiscroll.css
+index 5e762cb..9883832 100644
+--- a/jquery.multiscroll.css
++++ b/jquery.multiscroll.css
+@@ -1,5 +1,5 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+@@ -8,8 +8,8 @@
+ html, body {
+     margin: 0;
+     padding: 0;
+-	overflow:hidden;
+-	-webkit-tap-highlight-color: rgba(0,0,0,0);
++    overflow:hidden;
++    -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ .ms-section {
+     position: relative;
+@@ -100,3 +100,13 @@ html, body {
+ .ms-responsive .ms-hide{
+     display: none;
+ }
++.ms-scrollable {
++    overflow: hidden;
++    position: relative;
++}
++.ms-scroller{
++    overflow: hidden;
++}
++.iScrollIndicator{
++    border: 0 !important;
++}
+diff --git a/jquery.multiscroll.js b/jquery.multiscroll.js
+index ae5b269..7938dce 100644
+--- a/jquery.multiscroll.js
++++ b/jquery.multiscroll.js
+@@ -1,5 +1,5 @@
+ /*!
+- * multiscroll.js 0.1.8 Beta
++ * multiscroll.js 0.1.9
+  * https://github.com/alvarotrigo/multiscroll.js
+  * @license MIT licensed
+  *
+diff --git a/jquery.multiscroll.scrollable.js b/jquery.multiscroll.scrollable.js
+new file mode 100644
+index 0000000..193d246
+--- /dev/null
++++ b/jquery.multiscroll.scrollable.js
+@@ -0,0 +1,906 @@
++/*!
++ * multiscroll.js 0.1.8 Beta
++ * https://github.com/alvarotrigo/multiscroll.js
++ * @license MIT licensed
++ *
++ * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
++ */
++(function($, window, document, Math, undefined) {
++
++    $.fn.multiscroll = function(options) {
++        var MS = $.fn.multiscroll;
++
++        // Create some defaults, extending them with any options that were provided
++        options = $.extend({
++            'verticalCentered' : true,
++            'scrollingSpeed': 700,
++            'easing': 'easeInQuart',
++            'menu': false,
++            'sectionsColor': [],
++            'anchors':[],
++            'navigation': false,
++            'navigationPosition': 'right',
++            'navigationColor': '#000',
++            'navigationTooltips': [],
++            'loopBottom': false,
++            'loopTop': false,
++            'css3': false,
++            'paddingTop': 0,
++            'paddingBottom': 0,
++            'fixedElements': null,
++            'normalScrollElements': null,
++            'keyboardScrolling': true,
++            'touchSensitivity': 5,
++
++            // Custom selectors
++            'sectionSelector': '.ms-section',
++            'leftSelector': '.ms-left',
++            'rightSelector': '.ms-right',
++
++            //events
++            'afterLoad': null,
++            'onLeave': null,
++            'afterRender': null,
++            'afterResize': null
++        }, options);
++
++        //Defines the delay to take place before being able to scroll to the next section
++        //BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and
++        //Apple devices (laptops, mouses...)
++        var scrollDelay = 600;
++
++        var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
++
++        // adding class namef for right and left blocks
++        if (options.rightSelector !== '.ms-right') {
++            $(options.rightSelector).addClass('ms-right');
++        }
++
++        if (options.leftSelector !== '.ms-left') {
++            $(options.leftSelector).addClass('ms-left');
++        }
++
++        var numberSections = $('.ms-left').find('.ms-section').length;
++        var isMoving = false;
++        var nav;
++        var windowHeight = $(window).height();
++
++
++        addMouseWheelHandler();
++        addTouchHandler();
++
++        //if css3 is not supported, it will use jQuery animations
++        if(options.css3){
++            options.css3 = support3d();
++        }
++
++        $('html, body').css({
++            'overflow' : 'hidden',
++            'height' : '100%'
++        });
++
++        //adding class names to each sections
++        if (options.sectionSelector !== '.ms-section') {
++            $(options.sectionSelector).each(function(){
++                $(this).addClass('ms-section');
++            });
++        }
++
++        //creating the navigation dots
++        if (options.navigation) {
++            $('body').append('<div id="multiscroll-nav"><ul></ul></div>');
++            nav = $('#multiscroll-nav');
++
++            nav.css('color', options.navigationColor);
++            nav.addClass(options.navigationPosition);
++        }
++
++        $('.ms-right, .ms-left').css({
++            'width': '50%',
++            'position': 'absolute',
++            'height': '100%',
++            '-ms-touch-action': 'none'
++        });
++
++        $('.ms-right').css({
++            'right': '1px', //http://stackoverflow.com/questions/23675457/chrome-and-opera-creating-small-padding-when-using-displaytable
++            'top': '0',
++            '-ms-touch-action': 'none',
++            'touch-action': 'none'
++        });
++
++        $('.ms-left').css({
++            'left': '0',
++            'top': '0',
++            '-ms-touch-action': 'none',
++            'touch-action': 'none'
++        });
++
++
++        $('.ms-left .ms-section, .ms-right .ms-section').each(function(){
++            var sectionIndex = $(this).index();
++
++            if(options.paddingTop || options.paddingBottom){
++                $(this).css('padding', options.paddingTop  + ' 0 ' + options.paddingBottom + ' 0');
++            }
++
++            if (typeof options.sectionsColor[sectionIndex] !==  'undefined') {
++                $(this).css('background-color', options.sectionsColor[sectionIndex]);
++            }
++
++            if (typeof options.anchors[sectionIndex] !== 'undefined') {
++                $(this).attr('data-anchor', options.anchors[sectionIndex]);
++            }
++
++            if(options.verticalCentered){
++                addTableClass($(this));
++            }
++
++            //only for the left panel
++            if($(this).closest('.ms-left').length && options.navigation) {
++                var link = '';
++                if(options.anchors.length){
++                    link = options.anchors[sectionIndex];
++                }
++                var tooltip = options.navigationTooltips[sectionIndex];
++                if(typeof tooltip === 'undefined'){
++                    tooltip = '';
++                }
++                if (options.navigation) {
++                    nav.find('ul').append('<li data-tooltip="' + tooltip + '"><a href="#' + link + '"><span></span></a></li>');
++                }
++            }
++        });
++
++        $('.ms-scrollable').each(function(){
++            createSlimScrolling($(this));
++        });
++
++        //inverting the right panel
++        $('.ms-right').html( $('.ms-right').find('.ms-section').get().reverse());
++
++        $('.ms-left .ms-section, .ms-right .ms-section').each(function(){
++            var sectionIndex = $(this).index();
++
++            $(this).css({
++                'height': '100%'
++            });
++
++
++            if(!sectionIndex && options.navigation ){
++                //activating the navigation bullet
++                nav.find('li').eq(sectionIndex).find('a').addClass('active');
++            }
++        }).promise().done(function(){
++
++            //if no active section is defined, the 1st one will be the default one
++            if(!$('.ms-left .ms-section.active').length){
++                $('.ms-right').find('.ms-section').last().addClass('active');
++                $('.ms-left').find('.ms-section').first().addClass('active');
++            }
++
++            //vertical centered of the navigation + first bullet active
++            if(options.navigation){
++                nav.css('margin-top', '-' + (nav.height()/2) + 'px');
++            }
++            $.isFunction( options.afterRender ) && options.afterRender.call( this);
++
++            //scrolling to the defined active section and adjusting right and left panels
++            silentScroll();
++
++            //setting the class for the body element
++            setBodyClass();
++
++            $(window).on('load', function() {
++                scrollToAnchor();
++            });
++        });
++
++
++        //detecting any change on the URL to scroll to the given anchor link
++        //(a way to detect back history button as we play with the hashes on the URL)
++        $(window).on('hashchange', hashChangeHandler);
++
++        function hashChangeHandler(){
++            var value =  window.location.hash.replace('#', '');
++            var sectionAnchor = value;
++
++            if(sectionAnchor.length){
++                var section = $('.ms-left').find('[data-anchor="'+sectionAnchor+'"]');
++
++                var isFirstScrollMove = (typeof lastScrolledDestiny === 'undefined' );
++
++                if (isFirstScrollMove || sectionAnchor !== lastScrolledDestiny){
++                    scrollPage(section);
++                }
++            }
++        };
++
++
++        /**
++        * Sliding with arrow keys, both, vertical and horizontal
++        */
++        $(document).keydown(keydownHandler);
++
++
++        var keydownId;
++        function keydownHandler(e) {
++            clearTimeout(keydownId);
++
++            var activeElement = $(document.activeElement);
++
++            if(!activeElement.is('textarea') && !activeElement.is('input') && !activeElement.is('select') &&
++                options.keyboardScrolling){
++                var keyCode = e.which;
++
++                //preventing the scroll with arrow keys & spacebar & Page Up & Down keys
++                var keyControls = [40, 38, 32, 33, 34];
++                if($.inArray(keyCode, keyControls) > -1){
++                    e.preventDefault();
++                }
++
++                keydownId = setTimeout(function(){
++                    onkeydown(e);
++                },150);
++            }
++        }
++
++        /**
++         * Sliding with arrow keys, both, vertical and horizontal
++         */
++        function onkeydown(e){
++            var shiftPressed = e.shiftKey;
++
++            switch (e.which) {
++                //up
++                case 38:
++                case 33:
++                    MS.moveSectionUp();
++                    break;
++
++                //down
++                case 32: //spacebar
++                    if(shiftPressed){
++                        MS.moveSectionUp();
++                        break;
++                    }
++                case 40:
++                case 34:
++                    MS.moveSectionDown();
++                    break;
++
++                //Home
++                case 36:
++                    MS.moveTo(1);
++                    break;
++
++                //End
++                case 35:
++                    MS.moveTo( $('.ms-left .ms-section').length);
++                    break;
++
++                default:
++                    return; // exit this handler for other keys
++            }
++        }
++
++        /**
++         * Disabling any action when pressing of the mouse wheel (Chrome, IE, Opera, Safari)
++         */
++        $(document).mousedown(function(e) {
++            if(e.button == 1){
++                e.preventDefault();
++                return false;
++            }
++        });
++
++        function navClickHandler(e) {
++            e.preventDefault();
++            var index = $(this).parent().index();
++            scrollPage($('.ms-left .ms-section').eq(index));
++        }
++
++        //navigation action
++        $(document).on('click', '#multiscroll-nav a', navClickHandler);
++
++        function navMouseEnterHandler() {
++            var tooltip = $(this).data('tooltip');
++            $('<div class="multiscroll-tooltip ' + options.navigationPosition +'">' + tooltip + '</div>').hide().appendTo($(this)).fadeIn(200);
++        }
++
++        function navMouseLeaveHandler() {
++            $(this).find('.multiscroll-tooltip').fadeOut(200, function() {
++                $(this).remove();
++            });
++        }
++
++        //navigation tooltips
++        $(document).on({
++            mouseenter: navMouseEnterHandler,
++            mouseleave: navMouseLeaveHandler
++        }, '#multiscroll-nav li');
++
++
++        if(options.normalScrollElements){
++            $(document).on('mouseenter', options.normalScrollElements, function () {
++                MS.setMouseWheelScrolling(false);
++            });
++
++            $(document).on('mouseleave', options.normalScrollElements, function(){
++                MS.setMouseWheelScrolling(true);
++            });
++        }
++
++
++        //when resizing the site, we adjust the heights of the sections
++        $(window).on('resize', doneResizing);
++
++        /**
++         * When resizing is finished, we adjust the slides sizes and positions
++         */
++        function doneResizing() {
++            windowHeight = $(window).height();
++            $('.ms-tableCell').each(function() {
++                $(this).css({ height: getTableHeight($(this).parent()) });
++            });
++            silentScroll();
++            $.isFunction( options.afterResize ) && options.afterResize.call( this);
++        }
++
++        function silentScroll(){
++            //moving the right section to the bottom
++            if(options.css3){
++                transformContainer($('.ms-left'), 'translate3d(0px, -' + $('.ms-left').find('.ms-section.active').position().top + 'px, 0px)', false);
++                transformContainer($('.ms-right'), 'translate3d(0px, -' + $('.ms-right').find('.ms-section.active').position().top + 'px, 0px)', false);
++            }else{
++                $('.ms-left').css('top', -$('.ms-left').find('.ms-section.active').position().top );
++                $('.ms-right').css('top', -$('.ms-right').find('.ms-section.active').position().top );
++            }
++        }
++
++        MS.moveSectionUp = function(){
++            var prev = $('.ms-left .ms-section.active').prev('.ms-section');
++
++            if(!prev.length && options.loopTop){
++                prev = $('.ms-left .ms-section').last();
++            }
++
++            if (prev.length) {
++                scrollPage(prev);
++            }
++        };
++
++        MS.moveSectionDown = function (){
++            var next = $('.ms-left .ms-section.active').next('.ms-section');
++
++            if(!next.length && options.loopBottom ){
++                next = $('.ms-left .ms-section').first();
++            }
++
++            if(next.length){
++                scrollPage(next);
++            }
++        };
++
++        MS.moveTo = function (section){
++            var destiny = '';
++
++            if(isNaN(section)){
++                destiny = $('.ms-left [data-anchor="'+section+'"]');
++            }else{
++                destiny = $('.ms-left .ms-section').eq( (section -1) );
++            }
++
++            scrollPage(destiny);
++        };
++
++        function scrollPage(leftDestination){
++            var leftDestinationIndex = leftDestination.index();
++            var rightDestination = $('.ms-right').find('.ms-section').eq( numberSections -1 - leftDestinationIndex);
++            var rightDestinationIndex = numberSections - 1 - leftDestinationIndex;
++            var anchorLink  = leftDestination.data('anchor');
++            var activeSection = $('.ms-left .ms-section.active');
++            var leavingSection = activeSection.index() + 1;
++            var yMovement = getYmovement(leftDestination);
++
++            //preventing from activating the MouseWheelHandler event
++            //more than once if the page is scrolling
++            isMoving = true;
++
++            var topPos = {
++                'left' : leftDestination.position().top,
++                'right': rightDestination.position().top
++            };
++
++            rightDestination.addClass('active').siblings().removeClass('active');
++            leftDestination.addClass('active').siblings().removeClass('active');
++
++            setURLHash(anchorLink);
++
++            // Use CSS3 translate functionality or...
++            if (options.css3){
++                //callback (onLeave)
++                $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);
++
++                var translate3dLeft = 'translate3d(0px, -' + topPos['left'] + 'px, 0px)';
++                var translate3dRight = 'translate3d(0px, -' + topPos['right'] + 'px, 0px)';
++
++                transformContainer($('.ms-left'), translate3dLeft, true);
++                transformContainer($('.ms-right'), translate3dRight, true);
++
++                setTimeout(function () {
++                    //callback (afterLoad)
++                    $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));
++
++                    setTimeout(function () {
++                        isMoving = false;
++                    }, scrollDelay);
++                }, options.scrollingSpeed);
++            }else{
++                //callback (onLeave)
++                $.isFunction(options.onLeave) && options.onLeave.call(this, leavingSection, (leftDestinationIndex + 1), yMovement);
++
++                $('.ms-left').animate({
++                    'top': -topPos['left']
++                }, options.scrollingSpeed, options.easing, function(){
++                    $.isFunction(options.afterLoad) && options.afterLoad.call(this, anchorLink, (leftDestinationIndex + 1));
++
++                    setTimeout(function () {
++                        isMoving = false;
++                    }, scrollDelay);
++                });
++
++                $('.ms-right').animate({
++                    'top': -topPos['right']
++                }, options.scrollingSpeed, options.easing);
++            }
++
++            //flag to avoid callingn `scrollPage()` twice in case of using anchor links
++            lastScrolledDestiny = anchorLink;
++
++            activateMenuElement(anchorLink);
++            activateNavDots(anchorLink, leftDestinationIndex);
++        }
++
++        /**
++        * Removes the auto scrolling action fired by the mouse wheel and tackpad.
++        * After this function is called, the mousewheel and trackpad movements won't scroll through sections.
++        */
++        function removeMouseWheelHandler(){
++            if (document.addEventListener) {
++                document.removeEventListener('mousewheel', MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
++                document.removeEventListener('wheel', MouseWheelHandler, false); //Firefox
++            } else {
++                document.detachEvent("onmousewheel", MouseWheelHandler); //IE 6/7/8
++            }
++        }
++
++        /**
++        * Adds the auto scrolling action for the mouse wheel and tackpad.
++        * After this function is called, the mousewheel and trackpad movements will scroll through sections
++        */
++        function addMouseWheelHandler(){
++            if (document.addEventListener) {
++                document.addEventListener("mousewheel", MouseWheelHandler, false); //IE9, Chrome, Safari, Oper
++                document.addEventListener("wheel", MouseWheelHandler, false); //Firefox
++            } else {
++                document.attachEvent("onmousewheel", MouseWheelHandler); //IE 6/7/8
++            }
++        }
++
++        /**
++         * Detecting mousewheel scrolling
++         *
++         * http://blogs.sitepointstatic.com/examples/tech/mouse-wheel/index.html
++         * http://www.sitepoint.com/html5-javascript-mouse-wheel/
++         */
++        function MouseWheelHandler(e) {
++            // cross-browser wheel delta
++            e = window.event || e;
++            var delta = Math.max(-1, Math.min(1,
++                    (e.wheelDelta || -e.deltaY || -e.detail)));
++
++            if (!isMoving) { //if theres any #
++
++                //scrolling down?
++                if (delta < 0) {
++                    if(isScrolled('bottom')){
++                        MS.moveSectionDown();
++                    }
++                }
++
++                //scrolling up?
++                else {
++                    if(isScrolled('top')){
++                        MS.moveSectionUp();
++                    }
++                }
++            }
++
++
++            return false;
++        }
++
++        /**
++        * Return a boolean depending on whether the scrollable element is at the end or at the start of the scrolling
++        * depending on the given type.
++        */
++        function isScrolled(type){
++            var activeSections = $('.ms-section.active');
++
++            activeSections.each(function(element, index){
++                console.log(index);
++                var scrollable = $(this).find(SCROLLABLE_SEL);
++
++                if(type === 'top'){
++                    scrollableReached(!scrollable.scrollTop());
++                }else if(type === 'bottom'){
++                    scrollableReached.push(scrollable.scrollTop() + 1 + scrollable.innerHeight() >= scrollable[0].scrollHeight);
++                }
++            });
++
++            $.each(scrollableReached, function(index, value){
++                if(value){
++
++                }
++            });
++        }
++
++        /**
++        * Adds a css3 transform property to the container class with or without animation depending on the animated param.
++        */
++        function transformContainer(container, translate3d, animated){
++            container.toggleClass('ms-easing', animated);
++
++            container.css(getTransforms(translate3d));
++        }
++
++
++        /**
++        * Returns the transform styles for all browsers
++        */
++        function getTransforms(translate3d){
++            return {
++                '-webkit-transform': translate3d,
++                '-moz-transform': translate3d,
++                '-ms-transform':translate3d,
++                'transform': translate3d
++            };
++        }
++
++        /**
++         * Activating the website navigation dots according to the given slide name.
++         */
++        function activateNavDots(name, sectionIndex){
++            if(options.navigation){
++                $('#multiscroll-nav').find('.active').removeClass('active');
++                if(name){
++                    $('#multiscroll-nav').find('a[href="#' + name + '"]').addClass('active');
++                }else{
++                    $('#multiscroll-nav').find('li').eq(sectionIndex).find('a').addClass('active');
++                }
++            }
++        }
++
++        /**
++         * Activating the website main menu elements according to the given slide name.
++         */
++        function activateMenuElement(name){
++            if(options.menu){
++                $(options.menu).find('.active').removeClass('active');
++                $(options.menu).find('[data-menuanchor="'+name+'"]').addClass('active');
++            }
++        }
++
++        /**
++        * Retuns `up` or `down` depending on the scrolling movement to reach its destination
++        * from the current section.
++        */
++        function getYmovement(destiny){
++            var fromIndex = $('.ms-left .ms-section.active').index();
++            var toIndex = destiny.index();
++
++            if(fromIndex > toIndex){
++                return 'up';
++            }
++            return 'down';
++        }
++
++
++        /**
++        * Sets the URL hash for a section with slides
++        */
++        function setURLHash(anchorLink){
++            if(options.anchors.length){
++                location.hash = anchorLink;
++            }
++
++            setBodyClass();
++        }
++
++         /**
++        * Sets a class for the body of the page depending on the active section / slide
++        */
++        function setBodyClass(){
++            var section = $('.ms-left .ms-section.active');
++            var sectionAnchor = section.data('anchor');
++            var sectionIndex = section.index();
++
++            var text = String(sectionIndex);
++
++            if(options.anchors.length){
++                text = sectionAnchor;
++            }
++
++            //changing slash for dash to make it a valid CSS style
++            text = text.replace('/', '-').replace('#','');
++
++            //removing previous anchor classes
++            var classRe = new RegExp('\\b\\s?' + 'ms-viewing' + '-[^\\s]+\\b', "g");
++            $('body')[0].className = $('body')[0].className.replace(classRe, '');
++
++            //adding the current anchor
++            $('body').addClass('ms-viewing-' + text);
++        }
++
++
++        /**
++        * Checks for translate3d support
++        * @return boolean
++        * http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
++        */
++        function support3d() {
++            var el = document.createElement('p'),
++                has3d,
++                transforms = {
++                    'webkitTransform':'-webkit-transform',
++                    'OTransform':'-o-transform',
++                    'msTransform':'-ms-transform',
++                    'MozTransform':'-moz-transform',
++                    'transform':'transform'
++                };
++
++            // Add it to the body to get the computed style.
++            document.body.insertBefore(el, null);
++
++            for (var t in transforms) {
++                if (el.style[t] !== undefined) {
++                    el.style[t] = "translate3d(1px,1px,1px)";
++                    has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
++                }
++            }
++
++            document.body.removeChild(el);
++
++            return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
++        }
++
++        /**
++        * Wraps an element in order to center it vertically by using a class style.
++        */
++        function addTableClass(element){
++            element.addClass('ms-table').wrapInner('<div class="ms-tableCell" style="height: ' + getTableHeight(element) + 'px" />');
++        }
++
++        /**
++        * Gets the height of the section after removing the paddings.
++        */
++        function getTableHeight(section){
++            var sectionHeight = windowHeight;
++
++            if(options.paddingTop || options.paddingBottom){
++                var paddings = parseInt(section.css('padding-top')) + parseInt(section.css('padding-bottom'));
++                sectionHeight = (windowHeight - paddings);
++            }
++
++            return sectionHeight;
++        }
++
++
++        /**
++        * Scrolls the page to the existent anchor in the URL
++        */
++        function scrollToAnchor(){
++            //getting the anchor link in the URL and deleting the `#`
++            var sectionAnchor =  window.location.hash.replace('#', '');
++            var section = $('.ms-left .ms-section[data-anchor="'+sectionAnchor+'"]');
++
++            if(sectionAnchor.length){  //if theres any #
++                scrollPage(section);
++            }
++        }
++
++        /**
++        * Adds or remove the possiblity of scrolling through sections by using the keyboard arrow keys
++        */
++        MS.setKeyboardScrolling = function (value){
++            options.keyboardScrolling = value;
++        };
++
++        /**
++        * Adds or remove the possiblity of scrolling through sections by using the mouse wheel or the trackpad.
++        */
++        MS.setMouseWheelScrolling = function (value){
++            if(value){
++                addMouseWheelHandler();
++            }else{
++                removeMouseWheelHandler();
++            }
++        };
++
++        /**
++        * Defines the scrolling speed
++        */
++        MS.setScrollingSpeed = function(value){
++            options.scrollingSpeed = value;
++        };
++
++
++
++        var touchStartY = 0;
++        var touchStartX = 0;
++        var touchEndY = 0;
++        var touchEndX = 0;
++
++        /* Detecting touch events
++
++        * As we are changing the top property of the page on scrolling, we can not use the traditional way to detect it.
++        * This way, the touchstart and the touch moves shows an small difference between them which is the
++        * used one to determine the direction.
++        */
++        function touchMoveHandler(event){
++            var e = event.originalEvent;
++
++            if(isReallyTouch(e)){
++                //preventing the easing on iOS devices
++                event.preventDefault();
++
++                var activeSection = $('.ms-left .ms-section.active');
++
++                if (!isMoving) { //if theres any #
++                    var touchEvents = getEventsPage(e);
++                    touchEndY = touchEvents['y'];
++                    touchEndX = touchEvents['x'];
++
++
++                    //is the movement greater than the minimum resistance to scroll?
++                    if (Math.abs(touchStartY - touchEndY) > ($(window).height() / 100 * options.touchSensitivity)) {
++
++                        if (touchStartY > touchEndY) {
++                            MS.moveSectionDown();
++
++                        } else if (touchEndY > touchStartY) {
++                            MS.moveSectionUp();
++                        }
++                    }
++                }
++            }
++        }
++
++        /**
++        * As IE >= 10 fires both touch and mouse events when using a mouse in a touchscreen
++        * this way we make sure that is really a touch event what IE is detecting.
++        */
++        function isReallyTouch(e){
++            //if is not IE   ||  IE is detecting `touch` or `pen`
++            return typeof e.pointerType === 'undefined' || e.pointerType != 'mouse';
++        }
++
++
++        /**
++        * Handler to get he coordinates of the starting touch
++        */
++        function touchStartHandler(event){
++            var e = event.originalEvent;
++
++            if(isReallyTouch(e)){
++                var touchEvents = getEventsPage(e);
++                touchStartY = touchEvents['y'];
++                touchStartX = touchEvents['x'];
++            }
++        }
++
++
++        /**
++        * Adds the possibility to auto scroll through sections on touch devices.
++        */
++        function addTouchHandler(){
++            if(isTouch){
++                //Microsoft pointers
++                MSPointer = getMSPointer();
++
++                $(document).off('touchstart ' +  MSPointer.down).on('touchstart ' + MSPointer.down, touchStartHandler);
++                $(document).off('touchmove ' + MSPointer.move).on('touchmove ' + MSPointer.move, touchMoveHandler);
++            }
++        }
++
++        /**
++        * Removes the auto scrolling for touch devices.
++        */
++        function removeTouchHandler(){
++            if(isTouch){
++                //Microsoft pointers
++                MSPointer = getMSPointer();
++
++                $(document).off('touchstart ' + MSPointer.down);
++                $(document).off('touchmove ' + MSPointer.move);
++            }
++        }
++
++        /*
++        * Returns and object with Microsoft pointers (for IE<11 and for IE >= 11)
++        * http://msdn.microsoft.com/en-us/library/ie/dn304886(v=vs.85).aspx
++        */
++        function getMSPointer(){
++            var pointer;
++
++            //IE >= 11
++            if(window.PointerEvent){
++                pointer = { down: "pointerdown", move: "pointermove"};
++            }
++
++            //IE < 11
++            else{
++                pointer = { down: "MSPointerDown", move: "MSPointerMove"};
++            }
++
++            return pointer;
++        }
++
++        /**
++        * Gets the pageX and pageY properties depending on the browser.
++        * https://github.com/alvarotrigo/fullPage.js/issues/194#issuecomment-34069854
++        */
++        function getEventsPage(e){
++            var events = [];
++
++            events.y = (typeof e.pageY !== 'undefined' && (e.pageY || e.pageX) ? e.pageY : e.touches[0].pageY);
++            events.x = (typeof e.pageX !== 'undefined' && (e.pageY || e.pageX) ? e.pageX : e.touches[0].pageX);
++
++            //in touch devices with scrollBar:true, e.pageY is detected, but we have to deal with touch events. #1008
++            if(isTouch && isReallyTouch(e)){
++                events.y = e.touches[0].pageY;
++                events.x = e.touches[0].pageX;
++            }
++
++            return events;
++        }
++
++        /**
++        * Destroy multiscroll.js plugin's events
++        */
++        MS.destroy = function() {
++            MS.setKeyboardScrolling(false);
++            MS.setMouseWheelScrolling(false);
++            removeTouchHandler();
++
++            $(window)
++                .off('hashchange', hashChangeHandler)
++                .off('resize', doneResizing);
++
++            $(document)
++                .off('mouseenter', '#multiscroll-nav li')
++                .off('mouseleave', '#multiscroll-nav li')
++                .off('click', '#multiscroll-nav a');
++        };
++
++        /**
++        * Build multiscroll.js plugin's events after destroy
++        */
++        MS.build = function() {
++            MS.setKeyboardScrolling(true);
++            MS.setMouseWheelScrolling(true);
++            addTouchHandler();
++
++            $(window)
++                .on('hashchange', hashChangeHandler)
++                .on('resize', doneResizing);
++
++            $(document)
++                .on('mouseenter', '#multiscroll-nav li', navMouseEnterHandler)
++                .on('mouseleave', '#multiscroll-nav li', navMouseLeaveHandler)
++                .on('click', '#multiscroll-nav a', navClickHandler);
++        };
++
++    };
++})(jQuery, window, document, Math);

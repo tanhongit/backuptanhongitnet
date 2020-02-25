@@ -1,0 +1,1965 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>phanmem &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/category/phanmem/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Mon, 09 Dec 2019 07:27:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>phanmem &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</title>
+		<link>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/</link>
+				<comments>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/#respond</comments>
+				<pubDate>Thu, 05 Dec 2019 15:15:23 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7470</guid>
+				<description><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn. Ở Bài 1: Giới thiệu tổng quan ngôn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn.</p>
+<p>Ở <a href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer"><span style="color: #ff0000;"><span style="text-decoration: underline;"><em><strong>Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình</strong></em><strong> PHP</strong></span><span style="color: #000000;">. </span></span></a>Tân Hồng IT đã dùng WampServer làm môi trường chính để lập trình PHP. Cùng tìm hiểu xem web server này có gì thú vị nữa không nhé!!!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png"><img class="aligncenter size-full wp-image-7486" src="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png" alt="loi port truy cap localhost" width="503" height="283" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost-300x169.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a></p>
+<h4><strong>Ưu điểm khi sử dụng WampServer là gì?</strong></h4>
+<p><strong>WampServer</strong> hoạt động giống một máy chủ ảo, chạy ngay trên máy của bạn. Nó cho phép bạn kiểm thử trang web mà không gặp trở ngại hay tác hại nào. Do nó được cài trên máy tính của bạn và chưa được xuất bản. <strong>WampServer</strong> vào lúc này đóng vai trò là một căn nhà an toàn cho website của bạn, bạn chưa phải đưa nó online, nhưng vẫn xem được cách nó hiển thị online trên trình duyệt là như thế nào.</p>
+<p>Các ưu điểm khi cài đặt <strong>WampServer</strong> là:</p>
+<ul>
+<li>Bạn không phải mất thời gian chờ file được upload lên mạng nữa.</li>
+<li>Tạo backup dễ dàng hơn, nhanh hơn.</li>
+<li>Không phụ thuộc vào kết nối internet, máy tính không kết cần nối mạng bạn vẫn có thể phát triển web tại localhost.</li>
+<li>Tăng tốc quá trình xử lý, thao tác. Lập trình viên và chuyên gia thiết kế của bạn sẽ thích điều này.</li>
+<li>Bạn hình dung được nội dung được bố cục như thế nào.</li>
+</ul>
+<p>Sau khi đã có một website hoàn chỉnh tại localhost nhờ vào việc cài WampServer, để đưa website lên mạng bạn chỉ việc mua thêm hosting và tên miền cho nó.</p>
+<h4><strong>Tổng quan về thanh menu của WampServer:</strong></h4>
+<ul>
+<li><strong>Localhost</strong>: Cho phép mở website nằm trong folder web root bằng trình duyệt web.</li>
+<li><strong>phpMyAdmin</strong>: Cho phép mở trang quản lý cơ sở dữ liệu <strong>phpMyAdmin</strong> thông qua trình duyệt web.</li>
+<li><strong>Apache</strong>: Các lệnh liên quan đến web chủ Apache.</li>
+<li><strong>MySQL</strong>: Các lệnh liên quan đế hệ quản trị cơ sở dữ liệu MySQL.</li>
+<li><strong>PHP</strong>: Nơi sẽ hiển thị và cho phép bạn chỉnh sửa các tập tin cấu hình sử dụng ngôn ngữ lập trình PHP.</li>
+<li><strong>Start All Services</strong>: Bật tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Stop All Services</strong>: Tắt tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Restart All Services</strong>: Khởi động lại tất cả các chức năng/dịch vụ của WAMP.</li>
+</ul>
+<h4><strong>Thiết lập Port mới trên WampServer tránh lỗi không truy cập vào localhost:</strong></h4>
+<p>Khi bạn cài đặt nhiều <strong>gói webserver</strong> vào máy tính thì khi này các địa chỉ <strong>localhost</strong> phải được cấu hình khác nhau, Nếu không khi truy cập vào địa chỉ <strong>localhost</strong> sẽ bị lỗi không truy cập được.</p>
+<p>Ví dụ bạn cài đặt <strong>Xampp</strong> đầu tiên, khi này nó sẽ mặc định lấy địa chỉ <strong>https://localhost/</strong> làm port của nó. Sau đó bạn lại cài thêm <strong>Wampserver</strong> vào máy, lúc này khi truy cập vào <strong>https://localhost/</strong> sẽ bị lỗi. Bạn phải chỉnh sửa thành một Port  khác ví dụ như<strong> https://localhost:81/</strong> , <strong>https://localhost:83/ ,&#8230;</strong></p>
+<p>Hãy cùng Tân Hồng IT tìm hiểu về cách thay đổi port trên <strong>WampServer</strong> nha. Thay đổi port giúp cho máy của bạn tránh những xung đột không đáng có khi lập trình.</p>
+<p>Đầu tiên, các bạn mở <strong>WampServer</strong> lên và click chuột trái vào icon <strong>W màu xanh</strong> của Wamp. Sau đó bạn chọn <strong>Apache</strong>, tiếp theo click vào file <strong>httpd.conf</strong>.</p>
+<figure id="attachment_7476" aria-describedby="caption-attachment-7476" style="width: 502px" class="wp-caption aligncenter"><img class="wp-image-7476 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png" alt="Bước 1" width="502" height="360" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png 502w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-300x215.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-120x86.png 120w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-350x250.png 350w" sizes="(max-width: 502px) 100vw, 502px" /><figcaption id="caption-attachment-7476" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>Lúc này file <strong>httpd.conf </strong>đã được mở tự động bằng <strong>Notepad++</strong> nếu máy của bạn có sẵn hoặc một trình soạn thảo khác. Trên file <strong>httpd.conf</strong> các bạn tìm kiếm bằng cách ấn <strong>CTRL+H</strong>, tại <strong>Find What: </strong>nhập <strong>80</strong>, rồi thay đổi lại tại <strong>Replace with</strong>: nhập <strong>82. </strong>Xong tất cả thì bạn chọn <strong>Replace All </strong>và nhớ <strong>CTRL+S </strong>nha <strong>^^.</strong></p>
+<figure id="attachment_7475" aria-describedby="caption-attachment-7475" style="width: 1366px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png"><img class="wp-image-7475 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png" alt="lỗi không truy cập localhost" width="1366" height="728" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png 1366w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-300x160.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1024x546.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-768x409.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-750x400.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1140x608.png 1140w" sizes="(max-width: 1366px) 100vw, 1366px" /></a><figcaption id="caption-attachment-7475" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi đã lưu lại các bạn nhớ nhấn <strong>Restart All Services</strong> để port mới được hoạt động nhé.</p>
+<figure id="attachment_7473" aria-describedby="caption-attachment-7473" style="width: 230px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png"><img class="wp-image-7473 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png" alt="Bước 3" width="230" height="309" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png 230w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh3-223x300.png 223w" sizes="(max-width: 230px) 100vw, 230px" /></a><figcaption id="caption-attachment-7473" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Cuối cùng các bạn mở trình duyệt lên nhập <strong>localhost:82 </strong>và hiện ra như ảnh dưới là các bạn đã thay đổi port thành công rồi đó.</p>
+<figure id="attachment_7477" aria-describedby="caption-attachment-7477" style="width: 1352px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png"><img class="wp-image-7477 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png" alt="Bước 4" width="1352" height="537" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png 1352w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-300x119.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1024x407.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-768x305.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-750x298.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1140x453.png 1140w" sizes="(max-width: 1352px) 100vw, 1352px" /></a><figcaption id="caption-attachment-7477" class="wp-caption-text">Bước 4</figcaption></figure>
+<h4><strong>Tạo thư mục ảo trên WampServer:</strong></h4>
+<p>Khi sử dụng WampServer, file php của bạn thường nằm bên trong thư mục <strong>C:/wamp64/www/*.php</strong>. Điều này rất bất tiện đối với các máy đã đóng băng, vì khi tắt hay reset máy đồng nghĩa với dữ liệu trong ổ C:/ trước đó bạn đã từng thao tác sẽ bay màu. Sau đây mình sẽ hướng dẫn các bạn tạo thư mục ảo để bạn quản lý file dễ dàng hơn.</p>
+<p>Các bạn Click chuột trái vào biểu tượng của <strong>WAMP</strong>, chọn <strong>Apache –&gt; Alias directories –&gt; Add an alias.</strong></p>
+<figure id="attachment_7478" aria-describedby="caption-attachment-7478" style="width: 503px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png"><img class="wp-image-7478 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png" alt="Bước 1" width="503" height="311" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh5-300x185.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a><figcaption id="caption-attachment-7478" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>&nbsp;</p>
+<p>Một cửa sổ <strong>Command</strong> sẽ hiện lên, và các bạn làm theo hướng dẫn trên màn hình. Ở đây mình đặt alias là <strong>larva</strong></p>
+<figure id="attachment_7479" aria-describedby="caption-attachment-7479" style="width: 977px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png"><img class="wp-image-7479 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png" alt="Bước 2" width="977" height="509" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png 977w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-300x156.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-768x400.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-750x391.png 750w" sizes="(max-width: 977px) 100vw, 977px" /></a><figcaption id="caption-attachment-7479" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi Enter nó sẽ yêu cầu bạn gõ đường dẫn đến thư mục cần tạo thư mục ảo (lưu ý thư mục này phải tồn tại), ở đây mình tạo thư mục ảo trỏ đến <strong>D:/larva </strong>và ấn <strong>Enter</strong> và sẽ hiện thông báo bạn đã tạo thư mục ảo thành công.</p>
+<p><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong>Lưu ý:</strong></span></span> Khi bạn đặt tên cho <strong>alias</strong> là tên gì thì thư mục bạn muốn dẫn đến cũng nên đặt tên tương tự để tránh bị lỗi nhé !</p>
+<figure id="attachment_7483" aria-describedby="caption-attachment-7483" style="width: 978px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png"><img class="wp-image-7483 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png" alt="Bước 3" width="978" height="515" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png 978w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-768x404.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-750x395.png 750w" sizes="(max-width: 978px) 100vw, 978px" /></a><figcaption id="caption-attachment-7483" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Sau khi tạo xong, khi muốn chạy file .php trong thư mục<strong> D:/larva/</strong> bạn vào trình duyệt gõ <strong>localhost:82/larva/file php của bạn</strong> ( Tương tự khi các bạn đặt <strong>alias</strong> và trỏ đến thư mục khác ).</p>
+<p>Đến đây mình xin kết thúc bài viết này, hẹn gặp lại các bạn ở những bài tiếp theo nhé. &lt;3</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7470"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Free Adobe InDesign CC 2020 Full Active</title>
+		<link>http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/</link>
+				<comments>http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/#respond</comments>
+				<pubDate>Thu, 14 Nov 2019 02:41:14 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[InDesign]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Indesign CC]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[Phần mềm thiết kế]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7341</guid>
+				<description><![CDATA[<p>Adobe InDesign CC 2020 phiên bản mới nhất hiện tại là Adobe InDesign CC. Nó giúp bạn tạo tờ rơi, bao bì, áp phích, tạp chí, tài liệu quảng cáo, sách,… Với InDesign CC 2020, bạn có thể tạo nên những trang văn bản tuyệt đẹp trong việc in ấn, hãy việc xuất ra các dạng dạng văn bản [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/">Download Free Adobe InDesign CC 2020 Full Active</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Adobe InDesign CC 2020 </strong>phiên bản mới nhất hiện tại là <strong>Adobe InDesign CC</strong>. Nó giúp bạn <strong>tạo tờ rơi, bao b</strong><strong>ì, áp phích, tạp chí, tài liệu quảng cáo, sách,… </strong>Với <strong>InDesign CC 2020</strong>, bạn có thể tạo nên những trang văn bản tuyệt đẹp trong việc in ấn, hãy việc xuất ra các dạng dạng văn bản nổi hiển thị trên tablet và các loại màn hình khác.</p>
+<p><figure id="attachment_7346" aria-describedby="caption-attachment-7346" style="width: 747px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/11/adobe-indesign-cc-2020.png"><img class="size-full wp-image-7346" src="http://localhost:82/demowp/wp-content/uploads/2019/11/adobe-indesign-cc-2020.png" alt="adobe indesign cc 2020" width="747" height="496" srcset="http://localhost:82/demowp/wp-content/uploads/2019/11/adobe-indesign-cc-2020.png 747w, http://localhost:82/demowp/wp-content/uploads/2019/11/adobe-indesign-cc-2020-300x199.png 300w" sizes="(max-width: 747px) 100vw, 747px" /></a><figcaption id="caption-attachment-7346" class="wp-caption-text">Download Full adobe indesign cc 2020</figcaption></figure></p>
+<p>Adobe InDesign CC có tất cả các tính năng nâng cao và các công cụ bố trí máy mà bạn có thể thiết kế nhanh chóng và hiệu quả các trang có độ phức tạp. Chương trình hỗ trợ nhập bản vẽ và văn bản từ nhiều định dạng khác nhau, bao gồm các tệp PDF và XML, cung cấp một bộ công cụ lớn để chỉnh sửa các tài liệu đã nhập, bao gồm làm việc với các lớp, kiểu xếp tầng, bảng và mẫu.</p>
+<h2><strong><span id="2_Tinh_nang_moi_co_trong_Adobe_InDesign_CC_2020">Tính năng mới có trong Adobe InDesign CC 2020:</span></strong></h2>
+<ul>
+<li>Content-Aware Fit tự động thay đổi kích thước và điều chỉnh hình ảnh</li>
+<li>Điều chỉnh bố cục, kích thước văn bản, đồ họa tự động</li>
+<li>Bây giờ khi bạn tạo tệp PDF, nhập các nhận xét vào tệp</li>
+<li>Bảng thuộc tính với giao diện mới đẹp hơn, trực quan hơn</li>
+<li>Bây giờ bạn có thể chèn chú thích vào một bảng trong InDesign</li>
+<li>Điều chỉnh bố cục trong InDesign giờ đây nhanh chóng và dễ dàng</li>
+<li>Bây giờ bạn có thể duyệt hàng ngàn phông chữ dễ dàng và nhanh hơn</li>
+<li>Hỗ trợ đầy đủ cho phông chữ OpenType SVG với nhiều thuộc tính</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span id="Download_mien_phi_Adobe_Bridge_CC_2020" class="ez-toc-section"><strong>Download miễn phí Adobe InDesign CC 2020</strong></span></h2>
+<p style="text-align: center;"><strong>Phiên bản Adobe InDesign CC 2020 15.0.0.155</strong></p>
+<p style="text-align: center;"><a href="https://www.fshare.vn/file/Z4D5FDB8YSTI" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-buysellads" style="font-size:21px;color:#ffffff"></i> Download Adobe Indesign CC 2020 Repack tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Fshare</small></span></a></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1qpv90Iowccte8SeHiBFj1wJUmtmhdvxR" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-buysellads" style="font-size:21px;color:#ffffff"></i> Link Download Dự Phòng Tốc Độ Cao<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ GG Drive</small></span></a></p>
+<h2><strong>Yêu cầu hệ thống cho Adobe InDesign CC 2020</strong></h2>
+<p>Trước khi cài đặt, bạn cần biết máy tính của mình có đáp ứng các yêu cầu hệ thống được đề xuất hoặc tối thiểu không:</p>
+<p><strong>Hệ điều hành </strong></p>
+<ul>
+<li>Bộ xử lý Intel® Pentium® 4 hoặc AMD Athlon® 64</li>
+<li>Microsoft® Windows® 7 với Gói dịch vụ 1, Windows 8 hoặc Windows 8.1</li>
+<li>RAM 2GB (khuyên dùng 8GB)</li>
+<li>6GB dung lượng đĩa cứng khả dụng để cài đặt; không gian trống bổ sung cần thiết trong quá trình cài đặt. Không thể cài đặt trên các thiết bị lưu trữ flash rời</li>
+<li>Màn hình 1024 × 768 (khuyên dùng 1280 × 800) với thẻ video 32 bit</li>
+<li>Cần có phần mềm Adobe® Flash® Player 10 hoặc cao hơn để xuất các tệp SWF</li>
+</ul>
+<div class="su-button-center"></div>
+<hr />
+<h2><span id="Huong_dan_cai_dat_phan_mem_Adobe_Bridge_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Dreamweaver_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Adobe InDesign CC 2020</strong></span></span></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7341"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/">Download Free Adobe InDesign CC 2020 Full Active</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Media Encoder CC 2020 Chuyển đổi định dạng Media chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 23:13:29 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Audio Production]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[Media]]></category>
+		<category><![CDATA[Music Techniques]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Video]]></category>
+		<category><![CDATA[Video Design]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Media Encoder CC]]></category>
+		<category><![CDATA[Music]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[phần mềm ghép video nhạc]]></category>
+		<category><![CDATA[phần mềm làm video]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Youtube]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7285</guid>
+				<description><![CDATA[<p>Download Adobe Media Encoder CC 2020 &#8211; là một chương trình mã hóa cho phép bạn mã hóa các tệp âm thanh và video thành các định dạng phân phối khác nhau cho các ứng dụng và đối tượng khác nhau. Các định dạng video và âm thanh như vậy được đặc trưng bởi mức [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/">Download Adobe Media Encoder CC 2020 Chuyển đổi định dạng Media chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Download Adobe Media Encoder CC 2020</strong> &#8211; là một chương trình mã hóa cho phép bạn mã hóa các tệp âm thanh và video thành các định dạng phân phối khác nhau cho các ứng dụng và đối tượng khác nhau. Các định dạng video và âm thanh như vậy được đặc trưng bởi mức độ nén cao.</p>
+<p><figure id="attachment_7288" aria-describedby="caption-attachment-7288" style="width: 730px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-media-encoder-cc-2020.png"><img class="size-full wp-image-7288" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-media-encoder-cc-2020.png" alt="adobe media encoder cc 2020" width="730" height="489" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-media-encoder-cc-2020.png 730w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-media-encoder-cc-2020-300x201.png 300w" sizes="(max-width: 730px) 100vw, 730px" /></a><figcaption id="caption-attachment-7288" class="wp-caption-text">Download full adobe media encoder cc 2020</figcaption></figure></p>
+<p>Sử dụng chương trình này, bạn có thể xuất video sang các định dạng được hỗ trợ bởi các thiết bị khác nhau, từ đầu DVD và trang web sang điện thoại di động, trình phát phương tiện di động và TV tiêu chuẩn và độ phân giải cao.</p>
+<h2><strong>Adobe Media Encoder CC 2020 Tổng quan về tải xuống miễn phí</strong></h2>
+<p>Nhập, chuyển mã, tạo proxy và xuất ra hầu hết mọi định dạng bạn có thể tưởng tượng. Công cụ mạnh mẽ này cho phép bạn làm việc với phương tiện theo cách thống nhất giữa các ứng dụng. Tích hợp chặt chẽ với Adobe Premiere Pro, After Effects và các ứng dụng khác cung cấp quy trình làm việc liền mạch.</p>
+<p>Bạn cũng có thể tải xuống <strong><a class="row-title" href="http://localhost:82/demowp/adobe/download-adobe-after-effects-cc-2020/" target="_blank" rel="noopener noreferrer" aria-label="Tải xuống Adobe Adobe After Effects CC 2020 Tải xuống miễn phí (Chỉnh sửa)">Adobe After Effects CC 2020</a></strong></p>
+<h2><strong>Tính năng Adobe Media Encoder CC 2020</strong></h2>
+<ul>
+<li>Xuất định dạng XAVC QFHD dài GOP 4: 2: 2</li>
+<li>Giải mã định dạng máy ảnh Sony RAW / X-OCN</li>
+<li>Hỗ trợ nhập định dạng máy ảnh Sony Venice</li>
+<li>Hỗ trợ xuất bản đích cho giới hạn 280 ký tự Twitter mới</li>
+<li>Lựa chọn danh sách phát khi xuất bản lên YouTube</li>
+<li>Thêm tiêu đề tùy chỉnh khi xuất bản lên YouTube, Facebook hoặc Vimeo</li>
+<li>Thông báo cho các mục bị thiếu trong hàng đợi trước khi mã hóa</li>
+<li>Cải thiện hiệu ứng Time Tuner</li>
+<li>Cảnh báo khi nhập nguồn không phải nguồn gốc</li>
+<li>Sửa đổi mã thời gian cho phương tiện 720p 59.94</li>
+<li>Hỗ trợ cho Hồ sơ màu từ các nguồn After Effects</li>
+<li>Tùy chọn duy trì phát lại trong Premiere Pro trong khi hiển thị trong Media Encoder</li>
+<li>Sắp xếp hợp lý độ sâu bit và kênh alpha (chỉ dành cho QuickTime)</li>
+<li>Hỗ trợ xuất khẩu cho âm thanh xung quanh (chỉ H.264)</li>
+<li>Có hỗ trợ cho Gamma lai LOG (HLG)</li>
+<li>Hỗ trợ xuất khẩu HDR trong HEVC (H.265) Hỗ trợ xuất cho Panasonic AVC-Long GOP Op1b</li>
+</ul>
+<h2><b>Yêu cầu cấu hình tối thiểu Adobe Media Encoder CC 2020</b></h2>
+<ul>
+<li>Bộ xử lý Intel Core2 Duo hoặc AMD Phenom II; Yêu cầu hỗ trợ 64 bit</li>
+<li>Microsoft Windows 10 (64 bit) versions 1703 hoặc cao hơn</li>
+<li>RAM 8 GB (khuyên dùng 16 GB)</li>
+<li>3 GB dung lượng đĩa cứng khả dụng; không gian trống bổ sung cần thiết trong quá trình cài đặt (không thể cài đặt trên các thiết bị lưu trữ flash rời)</li>
+<li>Dung lượng 4 GB</li>
+<li>Màn hình 1280 x 800</li>
+<li>Hệ thống hỗ trợ OpenGL 2.0</li>
+<li>Tùy chọn: Thẻ GPU được Adobe chứng nhận cho trình kết xuất 3D theo dõi tia được tăng tốc GPU</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Download miễn phí Adobe Media Encoder CC 2020</strong></span></h2>
+<p style="text-align: center;"><strong>Phiên bản Adobe Media 2020 14.0.0.556</strong></p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1ZbL8_g2TlYVFszJIiQ8Ox94iLB_QH0Dy" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Media Encoder CC 2020 Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<hr />
+<h2><span id="Huong_dan_cai_dat_phan_mem_Dreamweaver_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Adobe Media Encoder CC 2020</strong></span></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7285"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/">Download Adobe Media Encoder CC 2020 Chuyển đổi định dạng Media chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 05:31:23 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[blogger]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Tài Liệu]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Animate CC]]></category>
+		<category><![CDATA[đồ họa]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[Game Development]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[Phần mềm thiết kế]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Tài Liệu Web]]></category>
+		<category><![CDATA[Thiết kế web]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7275</guid>
+				<description><![CDATA[<p>Download Adobe Animate CC 2020, thay thế Flash Professional, là một môi trường mạnh mẽ để tạo hoạt hình và nội dung đa phương tiện. Cho phép bạn tạo các dự án tương tác biểu cảm được hiển thị với chất lượng tuyệt vời trên máy tính để bàn và các thiết bị khác nhau, [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/">Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Download Adobe Animate CC 2020</strong>, thay thế Flash Professional, là một môi trường mạnh mẽ để tạo hoạt hình và nội dung đa phương tiện. Cho phép bạn tạo các dự án tương tác biểu cảm được hiển thị với chất lượng tuyệt vời trên máy tính để bàn và các thiết bị khác nhau, bao gồm cả máy tính bảng và điện thoại thông minh, cũng như trên màn hình tivi.</p>
+<p><figure id="attachment_7278" aria-describedby="caption-attachment-7278" style="width: 748px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png"><img class="size-full wp-image-7278" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png" alt="adobe animate cc 2020" width="748" height="498" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020.png 748w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-animate-cc-2020-300x200.png 300w" sizes="(max-width: 748px) 100vw, 748px" /></a><figcaption id="caption-attachment-7278" class="wp-caption-text">Full bộ adobe animate cc 2020</figcaption></figure></p>
+<p><strong>Adobe Animate CC</strong> cũng cho phép bạn làm việc với raster, vector, cũng như đồ họa ba chiều bằng GPU. Cũng hỗ trợ truyền phát hai chiều âm thanh và video.</p>
+<p><strong>Adobe Animate CC </strong>sẽ giúp bạn trở thành một người thiết kế website chuyên nghiệp, tùy biến một cách bát mắt bằng các tạo ra các hiệu ứng<strong> HTML</strong> làm động nội dung web, giúp cho giao diện đẹp hơn trong mới lạ hơn. Tạo nội dung dựa trên web tương tác cho các trò chơi và quảng cáo bằng các công cụ minh họa và hoạt hình mạnh mẽ.</p>
+<h2><strong>Các tính năng của Adobe Animate CC 2020 Tải xuống miễn phí</strong></h2>
+<p>Dưới đây là một số tính năng tuyệt vời mà bạn có thể trải nghiệm sau khi cài đặt Adobe Animate CC 2020 Tải xuống miễn phí, xin lưu ý các tính năng có thể thay đổi và hoàn toàn phụ thuộc nếu hệ thống của bạn hỗ trợ chúng.</p>
+<p><strong>Tạo nhân vật trở nên sống động.</strong></p>
+<ul>
+<li>Phác thảo và vẽ các ký tự biểu cảm hơn bằng các bút vẽ vectơ nhạy áp lực và nghiêng, hoạt động như thật. Làm cho nhân vật của bạn chớp mắt, nói chuyện và đi bộ với hoạt hình theo từng khung hình đơn giản. Và tạo các biểu ngữ web tương tác đáp ứng các tương tác của người dùng như di chuyển chuột, chạm và nhấp chuột.</li>
+</ul>
+<p><strong>Hoạt hình với chân và tay và đầu.</strong></p>
+<ul>
+<li>Tiếp cận đối tượng của bạn trên máy tính để bàn, thiết bị di động và TV bằng cách xuất hình động của bạn sang nhiều nền tảng, bao gồm HTML5 Canvas, WebGL, Flash / Adobe AIR và các nền tảng tùy chỉnh như SVG. Bạn có thể bao gồm mã ngay trong các dự án của bạn và thậm chí thêm các hành động mà không cần phải mã.</li>
+</ul>
+<p><strong>Xem những gì mới có thể làm.</strong></p>
+<ul>
+<li>Animate luôn trở nên tốt hơn, với các tính năng mới được tung ra thường xuyên. Và với tư cách thành viên Creative Cloud của bạn, bạn sẽ có được chúng ngay khi chúng tôi phát hành chúng. Dưới đây là một số cập nhật mới nhất.</li>
+</ul>
+<p><strong>Điêu khắc tài sản</strong></p>
+<ul>
+<li>Tạo tư thế mới cho nội dung vectơ hoặc raster bằng cách sử dụng biến dạng lưới.</li>
+</ul>
+<p><strong>Kiểm soát lớp tốt hơn</strong></p>
+<ul>
+<li>Sắp xếp các lớp của bạn theo phân cấp cha-con để tạo hiệu ứng động dễ dàng hơn giữa các tư thế.</li>
+</ul>
+<p><strong>Tự động hát nhép</strong></p>
+<ul>
+<li>Nhờ Adobe Sensei, Animate giờ đây tự động khớp với tư thế miệng với âm thanh.</li>
+</ul>
+<p><strong>Tác giả và xuất bản VR</strong></p>
+<ul>
+<li>Sử dụng các kỹ năng 2D của bạn để xuất hình động 360 VR và tạo trải nghiệm tuyệt vời cho các bước đi ảo.</li>
+</ul>
+<h2><strong>Yêu cầu hệ thống cho Adobe Animate CC 2020 Tải xuống miễn phí</strong></h2>
+<p>Trước khi bạn cài đặt Tải xuống miễn phí <strong>Adobe Animate CC 2020</strong>, bạn cần biết máy tính của mình có đáp ứng các yêu cầu hệ thống được đề xuất hoặc tối thiểu không</p>
+<ul>
+<li><strong>Hệ điều hành</strong> : Windows 10 (Phiên bản cập nhật mới nhất)</li>
+<li><strong>Bộ nhớ (RAM):</strong>  Yêu cầu 4 GB RAM.</li>
+<li><strong>Dung lượng đĩa cứng</strong> : Cần 3 GB dung lượng trống để cài đặt đầy đủ.</li>
+<li><strong>Bộ xử lý:</strong>  Intel Pentium 4 Dual Core GHz trở lên.</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Download miễn phí Adobe Animate CC 2020</strong></span></h2>
+<p style="text-align: center;"><strong>Phiên bản Adobe Animate 2020 20.0.0.17400</strong></p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1Rxjxrw_ftApvQOXQ9vgh21OvFIRjFxRx" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Animate CC 2020 Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<hr />
+<h2><span id="Huong_dan_cai_dat_phan_mem_Dreamweaver_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Adobe Animate CC 2020</strong></span></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7275"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/">Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Prelude CC 2020 &#8211; Hướng dẫn cài đặt Prelude 2020</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/#respond</comments>
+				<pubDate>Mon, 28 Oct 2019 23:24:25 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Video]]></category>
+		<category><![CDATA[Video Design]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Biên Tập Video]]></category>
+		<category><![CDATA[phan]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[phần mềm ghép video]]></category>
+		<category><![CDATA[Xử Lý Video]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7242</guid>
+				<description><![CDATA[<p>Download Adobe Prelude CC 2020 &#8211; là một công cụ để chuẩn bị và đánh dấu video trực quan và hiệu quả, tổ chức nội dung phương tiện và thêm siêu dữ liệu. Với công cụ này, bạn có thể nhanh chóng thêm thẻ và chuyển mã video, cũng như dễ dàng tạo các phiên [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/">Download Adobe Prelude CC 2020 &#8211; Hướng dẫn cài đặt Prelude 2020</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Download Adobe Prelude CC 2020</strong> &#8211; là một công cụ để chuẩn bị và đánh dấu video trực quan và hiệu quả, tổ chức nội dung phương tiện và thêm siêu dữ liệu. Với công cụ này, bạn có thể nhanh chóng thêm thẻ và chuyển mã video, cũng như dễ dàng tạo các phiên bản sơ bộ của video. Prelude cho phép bạn dễ dàng tiếp tục làm việc trên các tài liệu trong Adobe Premiere Pro, cung cấp sự tương tác thuận tiện và hợp lý hóa quy trình sản xuất video.</p>
+<p><figure id="attachment_7271" aria-describedby="caption-attachment-7271" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-prelude-cc-2020.jpg"><img class="size-full wp-image-7271" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-prelude-cc-2020.jpg" alt="adobe prelude cc 2020" width="699" height="467" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-prelude-cc-2020.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-prelude-cc-2020-300x200.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7271" class="wp-caption-text">Download full bộ adobe prelude cc 2020</figcaption></figure></p>
+<p><strong>Adobe Prelude CC 2020</strong> giúp bạn phát triển và chỉnh sửa nội dung video nhanh hơn và thậm chí có tổ chức hơn. Inserter và tiến hành tạp chí video, được thiết kế để hoạt động hiệu quả với mục nhập siêu dữ liệu và phương tiện. Video được chuyển dễ dàng sang Adobe Premiere Pro, qua đó đảm bảo giao tiếp và tổ chức tuyệt vời cho toàn bộ quy trình sản xuất video.</p>
+<h2><span>Các tính năng của Adobe Prelude CC 2020 Tải xuống miễn phí</span></h2>
+<ul>
+<li><span>Chuyển mã sang nhiều định dạng. Chuyển mã tập tin sang các định dạng ưa thích của bạn khi bạn nhập clip. Đơn giản chỉ cần thiết lập một thư mục đích chính và định dạng. Thêm nhiều điểm đến và định dạng tương ứng của chúng, rồi bấm Nhập.</span></li>
+<li><span>Nhập toàn bộ hoặc một phần clip. Bắt đầu làm việc nhanh hơn bằng cách nhập các clip đầy đủ, hoặc chỉ các phần bạn muốn, để tiết kiệm thời gian và giảm nhu cầu lưu trữ. Đặt các điểm vào và ra ngay trên hình thu nhỏ của clip. Adobe Media Encoder sẽ tạo một clip mới từ phạm vi được đánh dấu.</span></li>
+<li><span>Siêu dữ liệu có thể tìm kiếm đầy đủ. Tìm clip bạn cần một cách nhanh chóng với siêu dữ liệu có thể tìm kiếm. Ngay cả trong số terabyte cảnh quay. Thêm siêu dữ liệu trong thời gian thực với mục nhập bàn phím, trong khi nhập bằng cách sử dụng các mẫu tùy chỉnh.</span></li>
+<li><span>Thủ trưởng đăng nhập. Tăng tốc quy trình ghi nhật ký của bạn với giao diện hợp lý và điều khiển bàn phím thông minh. Xem trước các clip và ghi lại các dấu thời gian và siêu dữ liệu có thể tìm kiếm khác trong khi vẫn theo dõi các cảnh quay.</span></li>
+<li><span>Hình thu nhỏ lơ lửng. Hover-Scrub hình thu nhỏ trong bảng Project. Chỉ cần di chuyển con trỏ qua clip để xem trước nó.</span></li>
+<li><span>Đổi tên tập tin khi nhập. Thiết lập cài đặt trước tên tệp của riêng bạn để tự động đổi tên tệp khi nhập để bạn có thể tìm kiếm và tìm tệp dễ dàng hơn.</span></li>
+<li><span>Xuất khẩu cắt thô. Chia sẻ cắt giảm nhanh hơn bằng cách xuất trực tiếp sang Adobe Media Encoder từ Prelude. Bạn cũng có thể chọn gửi tới Adobe Premiere Pro để chỉnh sửa lần cuối.</span></li>
+<li><span>Siêu dữ liệu tùy chỉnh trên ingest. Khi bạn tạo quy tắc, bạn sẽ nhận được chính xác siêu dữ liệu bạn cần. Mở đầu cho phép bạn tạo các mẫu siêu dữ liệu tùy chỉnh. Do đó, thu thập thông tin chính trở thành một phần dễ dàng và nhất quán trong quy trình làm việc.</span></li>
+<li><span>Kịch bản cảnh như siêu dữ liệu. Làm việc với các tập lệnh được tạo trong Creative Cloud, bạn có thể kéo và thả các cảnh để liên kết chúng với các cảnh quay dưới dạng siêu dữ liệu có thể tìm kiếm. Tìm kiếm với độ chính xác từ cụ thể nhờ các dấu phiên âm giọng nói phù hợp với đoạn phim của bạn trong suốt quy trình sản xuất.</span></li>
+</ul>
+<h2>Yêu cầu hệ thống cho Adobe Prelude CC 2020 Tải xuống miễn phí</h2>
+<p><span>Trước khi bạn cài đặt Adobe Prelude CC 2020 Tải xuống miễn phí, bạn cần biết máy tính của mình có đáp ứng các yêu cầu hệ thống tối thiểu hoặc được đề xuất không</span></p>
+<ul>
+<li><strong><span>Hệ điều hành</span></strong><span> : Windows 10 (Chỉ phiên bản cập nhật mới)</span></li>
+<li><strong><span>Bộ nhớ (RAM):</span></strong><span>  Yêu cầu 4 GB RAM.</span></li>
+<li><strong><span>Dung lượng đĩa cứng</span></strong><span> : Cần 1 GB dung lượng trống để cài đặt đầy đủ.</span></li>
+<li><strong><span>Bộ xử lý:</span></strong><span>  Intel Pentium 4 Dual Core GHz trở lên.</span></li>
+</ul>
+<h2 style="text-align: center;"><span style="color: #ff0000;"><strong>Download miễn phí Adobe Prelude CC CC 2020</strong></span></h2>
+<p style="text-align: center;"><strong>Phiên  bản Adobe Prelude CC 2020 9.0.0.415</strong></p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=15v-_7Linz6Kcup2QlWbYJ3u30g65kAl-" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Prelude CC 2020 Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<hr />
+<h2><span id="Huong_dan_cai_dat_phan_mem_Dreamweaver_CC_2020" class="ez-toc-section"><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Adobe Prelude CC 2020</strong></span></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7242"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/">Download Adobe Prelude CC 2020 &#8211; Hướng dẫn cài đặt Prelude 2020</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Full Bộ Adobe CC 2020 – Video hướng dẫn cài đặt</title>
+		<link>http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/#respond</comments>
+				<pubDate>Sat, 26 Oct 2019 03:19:42 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Photoshop]]></category>
+		<category><![CDATA[Văn Phòng]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Adobe After Effects]]></category>
+		<category><![CDATA[Adobe Lightroom]]></category>
+		<category><![CDATA[Adobe Photoshop]]></category>
+		<category><![CDATA[Adobe Photoshop CC]]></category>
+		<category><![CDATA[Adobe Premiere]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[phần mềm làm video]]></category>
+		<category><![CDATA[phần mềm quay màn hình]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7237</guid>
+				<description><![CDATA[<p>Download Full Bộ Adobe CC 2020 sẽ đi kèm với 20 ứng dụng máy tính để bàn (Photoshop CC, Illustrator CC, InDesign CC, Animate CC, Premiere Pro CC, After Effects CC, Lightroom Classic và các ứng dụng khác bao gồm người mới chơi Premiere Rush CC ), cũng như các ứng dụng di động thú [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/">Download Full Bộ Adobe CC 2020 – Video hướng dẫn cài đặt</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Download Full Bộ Adobe CC 2020</strong> sẽ đi kèm với 20 ứng dụng máy tính để bàn (<strong>Photoshop CC, Illustrator CC, InDesign CC, Animate CC, Premiere Pro CC, After Effects CC, Lightroom Classic và các ứng dụng khác bao gồm người mới chơi Premiere Rush CC</strong> ), cũng như các ứng dụng di động thú vị như Adobe Fresco mới , cùng với các công cụ và dịch vụ bổ sung khác (như Acrobat DC Pro, Adobe Fonts , Adobe Spark Premium, Adobe Port portfolio ), và nhiều hơn nữa.</p>
+<p><figure id="attachment_7239" aria-describedby="caption-attachment-7239" style="width: 701px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-cc-2020.jpg"><img class="size-full wp-image-7239" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-cc-2020.jpg" alt="adobe cc 2020" width="701" height="418" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-cc-2020.jpg 701w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-cc-2020-300x179.jpg 300w" sizes="(max-width: 701px) 100vw, 701px" /></a><figcaption id="caption-attachment-7239" class="wp-caption-text">Full Bộ Adobe CC 2020</figcaption></figure></p>
+<h2><strong>Download Bộ Adobe CC 2020</strong></h2>
+<ul>
+<li><span style="font-size: 20px; color: #0000ff;"><strong><a style="color: #0000ff;" href="http://localhost:82/demowp/adobe/download-adobe-premiere-pro-2020-phan-mem-dung-phim-chuyen-nghiep/" target="_blank" rel="noopener noreferrer">Adobe Premiere Pro CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px; color: #0000ff;"><strong><a style="color: #0000ff;" href="http://localhost:82/demowp/adobe/download-free-adobe-photoshop-cc-2020/" target="_blank" rel="noopener noreferrer">Adobe Photoshop CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/" target="_blank" rel="noopener noreferrer">Adobe Dreamweaver 2020</a></strong></span></li>
+<li><span style="font-size: 20px; color: #0000ff;"><strong><a style="color: #0000ff;" href="http://localhost:82/demowp/adobe/download-adobe-after-effects-cc-2020/" target="_blank" rel="noopener noreferrer">Download Adobe After Effects CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/download-adobe-media-encoder-cc-2020/" target="_blank" rel="noopener noreferrer">Adobe Media Encoder CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/download-adobe-audition-cc-2020/" target="_blank" rel="noopener noreferrer">Adobe Audition CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a class="row-title" href="http://localhost:82/demowp/adobe/download-adobe-animate-cc-2020-hieu-ung-tuong-tac-cho-website-chuyen-nghiep/" target="_blank" rel="noopener noreferrer" aria-label="“Download Adobe Animate CC 2020 Hiệu ứng tương tác cho website chuyên nghiệp” (Edit)">Adobe Animate CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a class="row-title" href="http://localhost:82/demowp/adobe/download-adobe-prelude-cc-2020/" target="_blank" rel="noopener noreferrer" aria-label="“Download Adobe Prelude CC 2020 – Hướng dẫn cài đặt Prelude 2020” (Edit)">Download Adobe Prelude CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/download-free-adobe-indesign-cc-2020-full-active/" target="_blank" rel="noopener noreferrer">Adobe InDesign CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/adobe-bridge-cc-2020/" target="_blank" rel="noopener noreferrer">Adobe Bridge CC 2020</a></strong></span></li>
+<li><span style="font-size: 20px;"><strong><a href="http://localhost:82/demowp/adobe/adobe-incopy-cc-2020/" target="_blank" rel="noopener noreferrer">Adobe InCopy CC 2020</a></strong></span></li>
+<li><a href="http://localhost:82/demowp/adobe/adobe-illustrator-cc-2020/" target="_blank" rel="noopener noreferrer"><span style="font-size: 20px;"><strong>Adobe Illustrator CC 2020</strong></span></a></li>
+<li><span style="font-size: 20px;"><strong>Vẫn còn đang tiếp tục cập nhật&#8230;</strong></span></li>
+</ul>
+<h2><strong><span id="Cau_hinh_bo_Adobe_CC_2020" class="ez-toc-section">Yêu cầu c</span><span id="Cau_hinh_bo_Adobe_CC_2020" class="ez-toc-section">ấu hình cài đặt bộ Adobe CC 2020</span></strong></h2>
+<ul>
+<li><strong>Hệ điều hành </strong>Windows 7 SP1 / 8.1 / 10 (chỉ 64-bit)</li>
+<li>Có một số phần mềm khuyến nghị<strong> chỉ chạy tốt trên Windows 10</strong></li>
+<li><strong>Bộ vi xử lý</strong>: Intel thế hệ thứ 4 trở lên</li>
+<li><strong>Ram</strong>: Tối thiểu 8GB (Đề nghị 16GB trở lên).</li>
+<li><strong>Dung lượng</strong> : Tối thiểu 30 GB dung lượng trống cho ổ đĩa cài đặt (nếu cài full bộ). Nếu cài riêng lẻ tùy thuộc dung lượng phần mềm cần cài đặt.</li>
+<li><strong>Độ phân giải màn hình</strong> 1920 x 1080 hoặc lớn hơn</li>
+<li><strong>Card đồ hoạ:</strong> Intel HD Graphic 6000 tương đương hoặc cao hơn</li>
+</ul>
+<h2><span id="Yeu_cau_tang_toc_xu_ly_do_hoa" class="ez-toc-section"><em><strong>Yêu cầu tăng tốc xử lý đồ họa:</strong></em></span></h2>
+<ul>
+<li>AMD: Radeon GPU có hỗ trợ DirectX 12 hoặc OpenGL 3.3.</li>
+<li>Intel: Skylake hoặc GPU mới hơn có hỗ trợ DirectX 12.</li>
+<li>NVIDIA: GPU có hỗ trợ DirectX 12 hoặc OpenGL 3.3.</li>
+<li>Bộ điều hợp video OpenGL 3.3 và DirectX 10 có khả năng hỗ trợ chức năng liên quan đến GPU.</li>
+<li>RAM video 1 GB (VRAM). 2 GB VRAM chuyên dụng (khuyến nghị 4 GB) cho màn hình lớn</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><strong>Download Full bộ Adobe CC 2020 với 1 link duy nhất</strong></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://www.fshare.vn/folder/N23X7WPJBPC9" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Full bộ Link Fshare<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<p style="text-align: center;"><strong>Hiện tại vẫn còn trong giai đoạn cập nhật các phần mềm Adobe CC 2020 mới.</strong></p>
+<h2><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt các phần mềm Adobe 2020</strong></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<p style="text-align: center;"><strong>NHỮNG PHẦN MỀM KHÁC CŨNG CÀI ĐẶT THEO CÁC BƯỚC TƯƠNG TỰ NHƯ HƯỚNG DẪN NÀY.</strong></p>
+<p><span style="text-decoration: underline;"><strong><span style="font-size: 24px;">Xem thêm:</span></strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7237"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/">Download Full Bộ Adobe CC 2020 – Video hướng dẫn cài đặt</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>PRODUCT KEYS AUTODESK 2020 COLLECTION + Download X-Force Keygen 2020 For Autodesk</title>
+		<link>http://localhost:82/demowp/autodesk/product-keys-autodesk-2020-collection/</link>
+				<comments>http://localhost:82/demowp/autodesk/product-keys-autodesk-2020-collection/#respond</comments>
+				<pubDate>Tue, 17 Sep 2019 11:16:35 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Autocad]]></category>
+		<category><![CDATA[Autodesk]]></category>
+		<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Photography Tools]]></category>
+		<category><![CDATA[Photoshop]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Architecture]]></category>
+		<category><![CDATA[Autodesk 2020]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Phần mềm thiết kế]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6931</guid>
+				<description><![CDATA[<p>Với phiên bản mới nhất của các sản phẩm Autodesk, SieuShare mang đến cho bạn một danh sách mới về các PRODUCT KEYS (khóa sản phẩm) Autodesk 2020. Bắt buộc cần có khóa sản phẩm để cài đặt các sản phẩm Autodesk và được sử dụng để phân biệt các sản phẩm được bán độc [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/autodesk/product-keys-autodesk-2020-collection/">PRODUCT KEYS AUTODESK 2020 COLLECTION + Download X-Force Keygen 2020 For Autodesk</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Với phiên bản mới nhất của các sản phẩm <strong>Autodesk</strong>, SieuShare mang đến cho bạn một danh sách mới về các <strong>PRODUCT KEYS</strong> (khóa sản phẩm) <strong>Autodesk 2020</strong>. Bắt buộc cần có khóa sản phẩm để cài đặt các sản phẩm Autodesk và được sử dụng để phân biệt các sản phẩm được bán độc lập và là một phần của bộ sản phẩm.</p>
+<p><figure id="attachment_6946" aria-describedby="caption-attachment-6946" style="width: 551px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/autodesk-2020.png"><img class="size-full wp-image-6946" src="http://localhost:82/demowp/wp-content/uploads/2019/09/autodesk-2020.png" alt="" width="551" height="305" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/autodesk-2020.png 551w, http://localhost:82/demowp/wp-content/uploads/2019/09/autodesk-2020-300x166.png 300w" sizes="(max-width: 551px) 100vw, 551px" /></a><figcaption id="caption-attachment-6946" class="wp-caption-text">Product Key X-Force Keygen Autodesk 2020</figcaption></figure></p>
+<h2><strong>All Product Key For Autodesk Collection 2020</strong></h2>
+<p><strong>Lưu ý:</strong> Đảm bảo bạn sử dụng mã khóa sản phẩm chính xác cho sản phẩm Autodesk và phiên bản bạn đang cài đặt. Nhập khóa sản phẩm không chính xác sẽ dẫn đến lỗi kích hoạt.</p>
+<p>Bạn chỉ cần Tìm sản phẩm của mình bằng Ctrl + F và nhận Khóa sản phẩm.</p>
+<table style="width: 100%; height: 2227px;" border="1" cellspacing="0" cellpadding="2">
+<thead>
+<tr style="height: 17px;">
+<th style="width: 59.9713%; height: 17px;" colspan="1" rowspan="1"><span style="font-size: 24px; color: #ff0000;"><strong>Product Name</strong></span></th>
+<th style="text-align: center; width: 40.0185%; height: 17px;" colspan="1" rowspan="1"><span style="font-size: 24px; color: #0000ff;"><strong>Product Key</strong></span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong><span class="">Autodesk 3ds Max 2020</span></strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>128L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk 3ds Max 2020 with Softimage</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>978L1 or 980L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Advance Steel 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>959L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Alias ​​AutoStudio 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>966L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Alias ​​Concept 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A63L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Alias ​​Design 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>712L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Alias ​​SpeedForm 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A62L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Alias ​​Surface 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>736L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>001L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Architecture 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>185L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>768L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Design Suite Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>767L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Electrical 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>225L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Inventor LT Suite 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>596L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD LT 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>057L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD LT with CALS Tools 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>545L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Map 3D 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>129L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Mechanical 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>206L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD MEP 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>235L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Plant 3D 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>426L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Raster Design 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>340L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk AutoCAD Revit LT Suite 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>834L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Building Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>765L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Building Design Suite Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>784L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Building Design Suite Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>766L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Burn 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0YL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Civil 3D 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>237L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Fabrication CADmep 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>839L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Fabrication CAMduct 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>842L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Fabrication ESTmep 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>841L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Factory Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>757L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Factory Design Suite Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>789L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Factory Design Suite Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>760L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Factory Design Utilities 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P03L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk FeatureCAM Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9FL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk FeatureCAM Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9GL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk FeatureCAM Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9EL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Flame 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0TL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Flame 2020 &#8211; Education</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C14L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Flame Assist 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0VL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Flame Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0XL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Flare 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0WL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk HSM Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C12L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk HSM Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C13L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Infrastructure Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>786L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Infrastructure Design Suite Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>787L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Infrastructure Design Suite Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>785L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>208L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Engineer-to-Order 2020 &#8211; Developer.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A66L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Engineer-to-Order 2020 &#8211; Distribution.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>996L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Engineer-to-Order 2020 &#8211; Server.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>997L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Engineer-to-Order Series 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>805L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Engineer-to-Order Server 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>752L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor HSM Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>969L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor HSM Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>970L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor LT 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>529L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor OEM 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>798L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Inventor Professional 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>797L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Lustre 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0UL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Lustre Burn 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C10L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Lustre ShotReactor 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C11L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Manufacturing Automation Utility 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9YL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Manufacturing Data Exchange Utility Premium 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9VL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Manufacturing Data Exchange Utility Standard 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9XL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Manufacturing Post Processor Utility 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9TL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Maya LT 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>923L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk MEP Fabrication Suite 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00QL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Nastran 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>986L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Nastran In-CAD 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>987L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Navisworks Manage 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>507L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Navisworks Simulate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>506L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PartMaker 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9SL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Plant Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>763L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Plant Design Suite Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>788L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Plant Design Suite Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>764L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Point Layout 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>925L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerInspect Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9JL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerInspect Standard 2017</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9KL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerInspect Standard 2018</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9KL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerInspect Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9KL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerInspect Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9HL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerMill Modeling 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9UL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerMill Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9AL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerMill Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9QL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerMill Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9PL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerShape Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9ML1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerShape Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9NL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk PowerShape Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9LL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Product Design Suite Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>782L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Product Design Suite Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>781L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk ReCap Pro</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>919L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Revit 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>829L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Revit LT 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>828L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Robot Structural Analysis Professional 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>547L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk SketchBook for Enterprise</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>871L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruComp 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00EL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruFiber 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>01WL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruLaser 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00DL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruNest 2020 &#8211; Nesting Engine</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00FL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruNest Composites 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00BL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruNest Contour 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00AL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruNest Multi-Tool 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>00CL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk TruPlan 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>01VL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Vault Office 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>555L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Vault Professional 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>569L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Vault Workgroup 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>559L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Vehicle Tracking 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>955L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>884L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Design 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>885L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Presenter 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>888L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Professional 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>886L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Render Node &#8211; consumption-based license 2020.</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A93L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Render Node 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>890L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk VRED Server 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>887L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>Autodesk Wiretap Gateway 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>C0ZL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>FeatureCAM Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P16L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>FeatureCAM Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P15L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>FeatureCAM Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P17L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>HSMWorks Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>873L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>HSMWorks Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>872L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerInspect Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P13L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerInspect Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P12L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerInspect Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P14L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerMill Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P07L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerMill Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>A9ZL1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerMill Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P08L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerShape Premium 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P10L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerShape Standard 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P09L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>PowerShape Ultimate 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>P11L1</strong></span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 59.9713%; height: 17px;"><span style="font-size: 16px;"><strong>T1 Enterprise Multi-flex 2020</strong></span></td>
+<td style="text-align: center; width: 40.0185%; height: 17px;"><span style="font-size: 16px;"><strong>535L1</strong></span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2><strong>Download X-Force Keygen Active For Autodesk 2020</strong></h2>
+<p>X-force 2020 là phần mềm tuyệt vời để kích hoạt các sản phẩm Autodesk 2020 một cách nhanh chóng và chính xác không làm mất nhiều thời gian của bạn.</p>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://www.fshare.vn/file/AT1B8WM5J2FM" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> X-Force Keygen Active For Autodesk 2020<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://mega.nz/#!6mRCDabL!qDLOXUPtgxeyqgLSUchQufGwGZ2FkZ5_O_QIBxSU_x0" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Dự Phòng &#8211; X-Force Keygen Active For Autodesk 2020<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây - Link Dự Phòng</small></span></a></div>
+<hr />
+<h2><strong>Hướng dẫn sử dụng X-force 2020</strong></h2>
+<ol>
+<li>Tải sản phẩm phù hợp về cài đặt cho máy.</li>
+<li>Ngắt kết nối Internet cho máy và mở X-force lên.</li>
+<li>Chọn <strong>Active</strong> &gt;&gt;điền <strong>Serial Number</strong> ở trên &gt;&gt; <strong>Next </strong>&gt;&gt;<strong> Request an activation code using an offline method </strong>&gt;&gt;<strong> Next </strong>&gt;&gt; <strong>Back</strong></li>
+<li>Mở chạy file kích hoạt với quyền <strong>Administrator</strong></li>
+<li>Copy <strong>Request Code</strong> &gt;&gt; ấn <strong>Generate</strong> &gt;&gt; ấn <strong>Patch</strong> &gt;&gt; Copy <strong>Activation Key</strong> và dán vào phần mềm.</li>
+<li>Tắt tất cả các cửa sổ hiện hành và mở phần mềm lên để sử dụng.</li>
+</ol>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/adobe/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi sản phẩm của hãng Adobe</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/cong-cu/tai-va-crack-idm-6-32-vinh-vien-2019/" target="_blank" rel="noopener noreferrer">Tải Và Cách Crack IDM Vĩnh Viễn Mới Nhất 2019 – Không Báo Fake Serial [UPDATE]</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng Hợp tài liệu, khóa học hay nhất có trên Siêu Share</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6931"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 88px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">4</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/autodesk/product-keys-autodesk-2020-collection/">PRODUCT KEYS AUTODESK 2020 COLLECTION + Download X-Force Keygen 2020 For Autodesk</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/autodesk/product-keys-autodesk-2020-collection/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</title>
+		<link>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/</link>
+				<comments>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/#respond</comments>
+				<pubDate>Sun, 08 Sep 2019 03:52:25 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Backup]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Tool Windows]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Windows]]></category>
+		<category><![CDATA[Phần Mềm Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Restore]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6895</guid>
+				<description><![CDATA[<p>Acronis True Image 2020 là gói phần mềm tích hợp giúp Sao lưu và Phục hồi dữ liệu đảm bảo tính bảo mật của tất cả thông tin trên máy tính của bạn. True Image cung cấp khả năng sao lưu hệ điều hành, ứng dụng, cài đặt người dùng và tất cả dữ liệu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/">Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Acronis True Image 2020</strong> là gói phần mềm tích hợp giúp Sao lưu và Phục hồi dữ liệu đảm bảo tính bảo mật của tất cả thông tin trên máy tính của bạn. <strong>True Image</strong> cung cấp khả năng sao lưu hệ điều hành, ứng dụng, cài đặt người dùng và tất cả dữ liệu có sẵn, cũng như phá hủy đáng tin cậy tất cả thông tin bí mật đã trở nên không cần thiết.</p>
+<p><figure id="attachment_6902" aria-describedby="caption-attachment-6902" style="width: 854px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png"><img class="size-full wp-image-6902" src="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png" alt="acronis true image" width="854" height="451" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image.png 854w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-768x406.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-750x396.png 750w" sizes="(max-width: 854px) 100vw, 854px" /></a><figcaption id="caption-attachment-6902" class="wp-caption-text">acronis true image 2020</figcaption></figure></p>
+<p>Sử dụng phần mềm này, bạn có thể sao lưu các tệp và thư mục đã chọn, cài đặt và email từ khách hàng của <strong>Microsoft</strong> và thậm chí toàn bộ đĩa và phân vùng đã chọn. Lưu trữ trực tuyến cho phép bạn lưu trữ các tệp quan trọng nhất trong một bộ lưu trữ từ xa. Dữ liệu của bạn sẽ được bảo vệ ngay cả trong trường hợp mất, trộm hoặc phá hủy máy tính. <strong>Acronis Nonstop Backup</strong> định kỳ (cứ sau năm phút) lưu các thay đổi đã xảy ra với hệ thống và tệp</p>
+<p>True Image với sức mạnh và tính năng tương tự như Ghost nhưng giao diện thân thiện và dễ sử dụng hơn nhiều. Ngoài ra <strong>Acronis True Image</strong> còn có thềm chức năng không cần đĩa để boot mà khi bật máy tính lên bấm phím F11 tự động máy tính sẽ chạy chương trình để restore lại cho dù lúc đó Win đã lỗi không thể vào được nữa hay bạn đã fomat lại ổ cứng cài Win.</p>
+<p><figure id="attachment_7387" aria-describedby="caption-attachment-7387" style="width: 337px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png"><img class="size-full wp-image-7387" src="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png" alt="acronis true image 2020 full" width="337" height="463" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full.png 337w, http://localhost:82/demowp/wp-content/uploads/2019/09/acronis-true-image-2020-full-218x300.png 218w" sizes="(max-width: 337px) 100vw, 337px" /></a><figcaption id="caption-attachment-7387" class="wp-caption-text">acronis true image 2020 full</figcaption></figure></p>
+<h3><strong>Những tính năng mới trong Acronis True Image 2020</strong></h3>
+<ul>
+<li>Acronis bảo vệ kép làm cho quá trình bảo vệ dễ dàng và hiệu quả hơn bằng cách tự động sao chép các bản sao lưu cục bộ lên đám mây. Vì vậy, bạn sẽ luôn có một bản sao trong bộ nhớ từ xa để phục hồi. Sau khi tạo thành công bản sao lưu đầu tiên, các thao tác sao lưu và sao chép được thực hiện đồng thời.</li>
+<li>Cải thiện công nghệ sao lưu Định dạng sao lưu mới cải thiện hiệu suất tổng thể bằng cách cung cấp duyệt nhanh các bản sao lưu trên đám mây, sao lưu và phục hồi nhanh hơn và sao chép dữ liệu.</li>
+<li>Trung tâm khu vực thông báo.<br />
+Bạn có thể nhận tin nhắn trong khu vực thông báo trên máy tính của bạn. Điều này giúp dễ dàng theo dõi trạng thái của các bản sao lưu, nhận các đề xuất kịp thời để tăng cường bảo vệ và nhanh chóng phản hồi bất kỳ vấn đề nào.</li>
+<li>Cải thiện khả năng bảo vệ chống lại ransomware.<br />
+Trước sự xuất hiện liên tục của các mối đe dọa mạng mới, chúng tôi không ngừng nâng cao khả năng bảo vệ Acronis Active Protection để đi trước một bước. Các mô hình học máy mới làm cho các giải pháp phần mềm của chúng tôi thậm chí còn hiệu quả hơn. Phiên bản mới nhất của bảo vệ hiện dừng các cuộc tấn công bằng việc chấm dứt dịch vụ trái phép. Bạn sẽ được cung cấp thông tin về lý do theo dõi hoặc chặn một quy trình cụ thể.</li>
+<li>Sao lưu trong các mạng Wi-Fi đã chọn.<br />
+Bạn có thể dễ dàng tránh lưu lượng truy cập không mong muốn với các kết nối hạn chế và rủi ro dữ liệu trong các mạng công cộng không an toàn bằng cách chọn một số mạng Wi-Fi nhất định để sao lưu. Điều này sẽ đảm bảo tính bảo mật của dữ liệu đã tải xuống.</li>
+<li>Quản lý năng lượng người dùng Quản.<br />
+lý sao lưu để tiết kiệm pin. Vì vậy, máy tính xách tay của bạn sẽ có sẵn cho công việc. Bạn có thể đặt mức sạc tối thiểu cho các bản sao lưu hoặc chặn hoàn toàn các bản sao lưu khi chạy bằng nguồn pin.</li>
+</ul>
+<p><strong>Các bạn có thể xem thêm những thay đổi ở phiên bản này <a href="https://www.acronis.com/en-us/support/updates/changes.html?p=41999" target="_blank" rel="noopener noreferrer">tại đây</a>.</strong></p>
+<hr />
+<h3 style="text-align: center;"><span style="color: #ff0000;"><strong>Download Acronis True Image 2020 Full (24.5.1.22510) </strong></span></h3>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1SwFSMt2428qSBqtN0DSyAMCIrPi0VHvl" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> link tải Acronis True Image 2020 full Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h4><span style="text-decoration: underline;"><strong>Download các phiên bản cũ:</strong></span></h4>
+<ul>
+<li><a href="https://drive.google.com/open?id=1SY8beOEn67gO6Y1gy8dusnb7pFq7IZLO" target="_blank" rel="noopener noreferrer"><strong>24.3.1.20770 version Acronis True Image 2020</strong></a></li>
+</ul>
+<hr />
+<h3><strong>Hướng dẫn cài đặt phần mềm giúp sao lưu phục hồi</strong></h3>
+<ul>
+<li><strong>Bước 1:</strong> Tải file nén theo đường link ở trên về và giải nén ra</li>
+<li><strong>Bước 2:</strong> Mở chạy file setup có trong folder vừa giải nén lên để cài đặt.</li>
+<li><strong>Tiếp Bước 3:</strong> Lựa chọn ngôn ngữ và nhấn <strong>Next</strong>.</li>
+<li><strong>Bước 4:</strong> Bó tích chọn <strong>&#8220;Install as homepage and&#8230;&#8221;</strong> như hình bên dưới và nhấn <strong>Install</strong>.</li>
+</ul>
+<p><a href="https://imgur.com/xplVJIR.png"><img class="aligncenter size-full" src="https://imgur.com/xplVJIR.png" alt="cài đặt Acronis True Image 2020" width="499" height="388" /></a></p>
+<ul>
+<li><strong>Bước 4:</strong> Chờ cài đặt xong và sử dụng phần mềm.</li>
+</ul>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 &#8211; Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/aida64-business/" target="_blank" rel="noopener noreferrer">AIDA64 Business/Engineer/Extreme Full Key Update 7/2019 &#8211; Kiểm Tra Mọi Thông Tin Phần Cứng, Phần Mềm Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/ccleaner/" target="_blank" rel="noopener noreferrer">Download CCleaner Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/download-anhdv-boot-2019/" target="_blank" rel="noopener noreferrer">Download Anhdv Boot 2019 &#8211; Tạo USB BOOT cứu hộ máy tính đa năng</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6895"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/">Download Acronis True Image 2020 Full (24.5.1.22510) Giúp Sao lưu và Phục hồi dữ liệu</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/phan-mem/camtasia-studio-2019/</link>
+				<comments>http://localhost:82/demowp/phan-mem/camtasia-studio-2019/#comments</comments>
+				<pubDate>Wed, 21 Aug 2019 03:44:33 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Đồ Họa]]></category>
+		<category><![CDATA[Hệ Thống]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[TechSmith]]></category>
+		<category><![CDATA[Camtasia]]></category>
+		<category><![CDATA[đồ họa]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Đồ Họa]]></category>
+		<category><![CDATA[phần mềm ghép video]]></category>
+		<category><![CDATA[phần mềm ghép video nhạc]]></category>
+		<category><![CDATA[phần mềm làm video]]></category>
+		<category><![CDATA[phần mềm quay màn hình]]></category>
+		<category><![CDATA[quay phim]]></category>
+		<category><![CDATA[studio]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6527</guid>
+				<description><![CDATA[<p>TechSmith Camtasia Studio 2019 là một tiện ích mạnh mẽ để ghi hình ảnh màn hình thành các tệp video ở nhiều định dạng khác nhau, có khả năng chỉnh sửa video, có Macromedia Flash (SWF) tích hợp và trình phát video. Camtasia ghi lại các hành động và âm thanh trong bất kỳ phần [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/camtasia-studio-2019/">Download Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>TechSmith Camtasia</strong> <strong>Studio 2019</strong> là một tiện ích mạnh mẽ để ghi hình ảnh màn hình thành các tệp video ở nhiều định dạng khác nhau, có khả năng chỉnh sửa video, có Macromedia Flash (SWF) tích hợp và trình phát video. Camtasia ghi lại các hành động và âm thanh trong bất kỳ phần nào của các hệ thống Windows và lưu vào tệp chuẩn AVI. Video được tạo bằng chương trình có thể được xuất sang một trong các định dạng được chương trình hỗ trợ &#8211; AVI, SWF, FLV, MOV, WMV, RM, GIF, CAMV.</p>
+<p><img class=" wp-image-6532 aligncenter" src="http://localhost:82/demowp/wp-content/uploads/2019/08/camtasia-studio-2019-300x166.png" alt="camtasia studio 2019" width="481" height="266" srcset="http://localhost:82/demowp/wp-content/uploads/2019/08/camtasia-studio-2019-300x166.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/08/camtasia-studio-2019.png 641w" sizes="(max-width: 481px) 100vw, 481px" /></p>
+<p><strong>Camtasia</strong> cho Video của bạn sẽ có âm thanh tốt hơn bao giờ hết, bất kể bạn thêm bao nhiêu tệp âm thanh vào trình chỉnh sửa Video thì với &#8220;Tự động cân bằng âm thanh&#8221;, Camtasia 2019 sẽ tự động điều chỉnh các bản âm thanh của bạn để bạn có mức độ nhất quán trong mọi dự án video.</p>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Tinh_nang_chinh_cua_Camtasia_Studio_2019" title="Tính năng chính của Camtasia Studio 2019:">Tính năng chính của Camtasia Studio 2019:</a></li><li><a href="#Yeu_cau_cau_hinh_he_thong_toi_thieu_de_cai_dat_phien_ban_Camtasia_Studio_2019" title="Yêu cầu cấu hình hệ thống tối thiểu để cài đặt phiên bản Camtasia Studio 2019">Yêu cầu cấu hình hệ thống tối thiểu để cài đặt phiên bản Camtasia Studio 2019</a></li><li><a href="#Download_Camtasia_Studio_2019_ve_may_tinh" title="Download Camtasia Studio 2019 về máy tính">Download Camtasia Studio 2019 về máy tính</a><ul><li><a href="#TechSmith_Camtasia2019_19065004_Update_2182019" title="TechSmith Camtasia.2019 19.0.6.5004 (Update 21/8/2019)">TechSmith Camtasia.2019 19.0.6.5004 (Update 21/8/2019)</a></li><li><a href="#TechSmith_Camtasia2019_19075034_Update_792019" title="TechSmith Camtasia.2019 19.0.7.5034 (Update 7/9/2019)">TechSmith Camtasia.2019 19.0.7.5034 (Update 7/9/2019)</a></li></ul></li><li><a href="#Huong_dan_cai_dat_TechSmith_Camtasia_Studio_2019_ve_may_tinh" title="Hướng dẫn cài đặt TechSmith Camtasia Studio 2019 về máy tính">Hướng dẫn cài đặt TechSmith Camtasia Studio 2019 về máy tính</a></li></ul></nav></div>
+<p><strong>Camtasia</strong> <strong>2019</strong> giúp bạn ghi lại bất kì chuyển động nào trên màn hình máy tính của bạn và xuất ra video định dạng do bạn lựa chọn. Nó còn cho phép bạn xem trước các hiệu ứng trong trình chỉnh sửa video. Sau đó, cải thiện video bằng  nhiều công cụ chỉnh sửa khác nhau để tạo ra video có cái nhìn chuyên nghiệp.</p>
+<h2><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong><span style="color: #ff0000; text-decoration: underline;">Tính năng chính của Camtasia Studio 2019:</span></strong></span></span></h2>
+<ul>
+<li>Ghi lại màn hình từ các slide PowerPoint, thử nghiệm phần mềm, các trang web…</li>
+<li>Có trình chỉnh sửa video tích hợp cho phép bạn loại bỏ các phần không mong muốn, nâng cao video của bạn.</li>
+<li>Dễ dàng tạo, lưu và áp dụng các chủ đề với tùy chọn phông chữ và màu tùy chỉnh.</li>
+<li>Chỉnh sửa lại video ghi màn hình bằng cách cắt, nối và kết hợp nhiều đoạn video lại với nhau một cách dễ dàng.</li>
+<li>Import video camera, âm nhạc, ảnh… vào đoạn video ghi hình của bạn để tăng thêm độ trung thực.</li>
+<li>Tùy chỉnh màn hình ghi video với nhiều theme khác nhau, chèn thêm được ảnh nền, đồ họa, các dòng mô tả…</li>
+<li>Tạo video tương tác có thể kích vào liên kết, nội dung bảng, tìm kiếm….</li>
+<li>Trình chỉnh sửa Camtasia đã được tinh chỉnh để cung cấp trải nghiệm mượt mà hơn.</li>
+<li>Dễ dàng chia sẻ video bằng nhiều cách khác nhau, trên nhiều thiết bị.</li>
+<li>Đơn giản, dễ sử dụng hơn đối với những người “mù công nghệ” bạn chỉ cần kéo và thả các hiệu ứng vào đoạn video chỉnh sửa của mình.</li>
+</ul>
+<h2><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong><span style="color: #ff0000; text-decoration: underline;">Yêu cầu cấu hình hệ thống tối thiểu để cài đặt phiên bản Camtasia Studio 2019</span></strong></span></span></h2>
+<ul>
+<li>Hệ điều hành Windows 64bit (muốn dùng bản 32bit, các bạn nên tải và cài đặt<span style="font-size: 24px;"><strong> <a href="http://localhost:82/demowp/cong-cu/camtasia-studio-8-6/" target="_blank" rel="noopener noreferrer">Camtasia 8.6</a></strong></span>)</li>
+<li>CPU 2.0 GHz với bộ vi xử lý lõi kép tối thiểu (Khuyến khích Quad-core i5 trở lên)</li>
+<li>Dung lượng RAM tổi thiểu 2 GB</li>
+<li>Dung lượng ổ cứng tối thiểu 2 GB</li>
+<li>Độ phân giải màn hình: 1024×768 trở lên</li>
+<li>Microsoft .NET 4.6 hoặc cao hơn</li>
+<li>Card âm thanh, micrô và loa tương thích dành riêng cho Windows</li>
+<li>Microsoft DirectX 9.0 hoặc sau đó</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span style="text-decoration: underline; font-size: 28px;"><strong><span style="color: #ff0000; text-decoration: underline;">Download Camtasia Studio 2019 về máy tính</span></strong></span></h2>
+<h3 style="text-align: center;"><span style="color: #0000ff;"><strong>TechSmith Camtasia.2019 19.0.6.5004 (Update 21/8/2019)</strong></span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1t63oyX7lsfyKUyzUzIJw-happLfOTeOc" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-video-camera" style="font-size:21px;color:#ffffff"></i> Tải file setup + crack về máy tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1_G9HlnvK555KEfheqv-rOsUbPKKaNFql" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-video-camera" style="font-size:21px;color:#ffffff"></i> Tải Camtasia Studio 2019 về máy tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải dự phòng</small></span></a></p>
+<h3 style="text-align: center;"><span style="color: #0000ff;"><strong>TechSmith Camtasia.2019 19.0.7.5034 (Update 7/9/2019)</strong></span></h3>
+<p style="text-align: center;"><a href="https://drive.google.com/open?id=1B6DAaBC-pu-CY4L4W_mFbyqQjDHzMza7" class="su-button su-button-style-glass" style="color:#ffffff;background-color:#f81094;border-color:#c70d77;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Tải về nhấn vào đây bạn nhé!"><span style="color:#ffffff;padding:9px 28px;font-size:21px;line-height:32px;border-color:#fb58b5;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-video-camera" style="font-size:21px;color:#ffffff"></i> Tải file setup repack về máy tại đây<small style="padding-bottom:9px;color:#ffffff">Link tải miễn phí từ Google Drive</small></span></a></p>
+<p style="text-align: center;"><strong>(Với bản update repack này, bạn chỉ cần tải về mở file setup lên để cài đặt là có thể sử dụng bản quyền được ngay mà không cần đến file crack.)</strong></p>
+<hr />
+<h2>Hướng dẫn cài đặt TechSmith Camtasia Studio 2019 về máy tính</h2>
+<p><span style="text-decoration: underline; font-size: 16px; color: #0000ff;"><strong>Bước 1:</strong></span> Các bạn tải về và giải nén ra. Sau đó bạn mở file <strong>cài đặt có đuôi .exe</strong> lên để bắt đầu cài đặt.</p>
+<p>Bạn lựa chọn ngôn ngữ và nhấn <strong>OK</strong>.</p>
+<p><span style="text-decoration: underline; color: #0000ff; font-size: 16px;"><strong>Bước 2:</strong></span> Bạn bỏ tích chọn <em><strong>&#8220;Install as homepage&#8230;&#8230;..&#8221;  </strong></em>đi rồi nhấn chọn <strong>Next.</strong></p>
+<p><img class="size-medium aligncenter" src="https://imgur.com/juWC7DZ.png" alt="cài đặt camtasia 2019" width="499" height="388" /></p>
+<p><span style="text-decoration: underline; color: #0000ff; font-size: 16px;"><strong>Bước 3:</strong></span> Bạn chọn nơi chứa folder setup rồi nhấn InInstall để bắt đầu quá trình cài đặt nhé!</p>
+<p><img class="size-medium aligncenter" src="https://imgur.com/E4XqgNv.png" alt="nơi chứa folder cài đặt camtasia 2019" width="499" height="388" /></p>
+<p><span style="text-decoration: underline; color: #0000ff; font-size: 16px;"><strong>Bước 4:</strong></span> Bạn chờ nó tự động cài đặt cho máy. Khi đã cài đặt xong thì bạn nhấn vào <strong>Finish</strong>.</p>
+<p><img class="size-medium aligncenter" src="https://imgur.com/ERdp5de.png" width="499" height="388" /></p>
+<p>Vì phiên bản này đã repack sẵn rồi nên khi cài đặt xong nó sẽ tự động kích hoạt bản quyền cho các bạn luôn. Sau khi cài đặt các bạn có thể sử dụng phần mềm với mọi chức năng rồi đó.</p>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website SieuShare.Com thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/sieusharechamcom" target="_blank" rel="noopener noreferrer">fanpage của SieuShare</a> để được hỗ trợ nhé! Chúng mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 20px;"><strong>Xem Thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/ccleaner/" target="_blank" rel="noopener noreferrer">Download CCleaner Full Key Cập Nhật – Lấy Bản Quyền Vĩnh Viễn [UPDATE KEY]</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/auslogics-disk-defrag-pro/" target="_blank" rel="noopener noreferrer">AusLogics Disk Defrag Pro FULL Final Phần Mềm Chống Phân Mảnh Ổ Đĩa</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/windows-nt-3-5/" target="_blank" rel="noopener noreferrer">Download ISO Windows NT 3.5 cài đặt cho máy</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/tong-hop-nhung-phim-tat-huu-ich-cua-trinh-duyet-google-chrome/" target="_blank" rel="noopener noreferrer">Tổng hợp những phím tắt hữu ích của trình duyệt Google Chrome</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 32px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6527"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/camtasia-studio-2019/">Download Camtasia Studio 2019 Full Active – Chỉnh sửa và quay video màn hình chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/phan-mem/camtasia-studio-2019/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+							</item>
+		<item>
+		<title>Download Folder Guard 19.9 – Đặt mật khẩu cho thư mục có hỗ trợ tiếng Việt</title>
+		<link>http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/</link>
+				<comments>http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/#comments</comments>
+				<pubDate>Thu, 25 Jul 2019 10:09:20 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Tiện Ích]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Phần Mềm Đa Phương Tiện]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+		<category><![CDATA[Phân Mềm Văn Phòng]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=6333</guid>
+				<description><![CDATA[<p>Folder Guard là một tiện ích phần mềm để đặt mật khẩu bảo vệ wifi và dữ liệu các thư mục. Chương trình này có thể dễ dàng hạn chế quyền truy cập của người dùng vào các tệp, thư mục và các tài nguyên Windows khác. Folder Guard Nó cho phép bạn bảo vệ [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/">Download Folder Guard 19.9 – Đặt mật khẩu cho thư mục có hỗ trợ tiếng Việt</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Folder Guard</strong> là một tiện ích phần mềm để đặt mật khẩu bảo vệ wifi và dữ liệu các thư mục. Chương trình này có thể dễ dàng hạn chế quyền truy cập của người dùng vào các tệp, thư mục và các tài nguyên Windows khác.</p>
+<p><figure id="attachment_6362" aria-describedby="caption-attachment-6362" style="width: 600px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/07/folder-guard-profesional.png"><img class="size-full wp-image-6362" src="http://localhost:82/demowp/wp-content/uploads/2019/07/folder-guard-profesional.png" alt="folder guard profesional" width="600" height="340" srcset="http://localhost:82/demowp/wp-content/uploads/2019/07/folder-guard-profesional.png 600w, http://localhost:82/demowp/wp-content/uploads/2019/07/folder-guard-profesional-300x170.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-6362" class="wp-caption-text">Download Folder Guard – Đặt mật khẩu cho thư mục</figcaption></figure></p>
+<h2><span style="font-size: 24px;"><strong><span id="Folder_Guard" class="ez-toc-section">Folder Guard</span></strong></span></h2>
+<p>Nó cho phép bạn bảo vệ tất cả các dữ liệu quan trọng của bạn bằng cách giấu, hạn chế truy cập, hoặc khóa nó bằng mật khẩu. Đây là một giải pháp đơn giản để bảo vệ dữ liệu trên máy tính công cộng, do đó chỉ những người dùng được ủy quyền mới có thể truy cập vào dữ liệu.</p>
+<p>Ngoài ra, bạn thậm chí có thể ẩn hoàn toàn các tệp cá nhân, thư mục và ứng dụng từ hầu hết các ứng dụng khác. Bạn cũng có thể vô hiệu hóa quyền truy cập vào các ổ đĩa, Bảng điều khiển , bảo vệ tệp hệ thống khỏi thay đổi và hơn thế nữa.</p>
+<p>Khi bạn hạn chế người dùng, bạn thậm chí có thể hạn chế người dùng quản trị viên. Không phải bạn là người dùng thông thường với chương trình này sẽ mã hóa tệp và quản trị viên có thể mở tệp đó bằng quyền truy cập của anh ta. Quản trị viên cũng sẽ cần một mật khẩu để mở nó.</p>
+<h2><strong><span id="Tinh_nang_Folder_Guard" class="ez-toc-section">Tính năng của Folder Guard</span></strong></h2>
+<ul>
+<li>Dễ dàng tạm dừng và tiếp tục bảo vệ</li>
+<li>Ẩn, hạn chế quyền truy cập và Bảo vệ mật khẩu</li>
+<li>Dừng cài đặt chương trình hoặc mở các chương trình bạn muốn</li>
+<li>Các thư mục bảo vệ bằng mật khẩu từ người dùng mạng</li>
+<li>Ngăn chặn sửa đổi tệp và thư mục</li>
+<li>Hạn chế quyền truy cập vào bất kỳ ổ đĩa rời</li>
+<li>Cho phép hoặc từ chối truy cập vào các ổ đĩa rời</li>
+<li>Có thể kiểm soát truy cập vào các chương trình và các tập tin</li>
+<li>Chỉ định và tin cậy các chương trình sao lưu</li>
+<li>Vô hiệu hoá chạy hoặc cài đặt các chương trình trái phép</li>
+<li>Bảo vệ bằng mật khẩu và hạn chế quyền truy cập</li>
+<li>Bảo vệ và ẩn thư mục cá nhân của bạn</li>
+<li>Giải pháp đơn giản, dễ sử dụng và hiệu quả</li>
+<li>Hỗ trợ tất cả các tệp tin, đầu và ứng dụng</li>
+<li>Khóa ổ USB, CD-ROM và các ổ đĩa di động khác.</li>
+<li>Làm việc trong chế độ ẩn, và nhiều hơn nữa.</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><strong><span id="Download_Folder_Guard_Full_Crck" class="ez-toc-section">Download Folder Guard</span></strong></h2>
+<h3 style="text-align: center;"><span style="color: #0000ff;"><strong>Folder Guard 19.9 Update 5/10/2019</strong></span></h3>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://www.fshare.vn/file/X6ONWEW3HTFE" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Tải Folder Guard Tại Đây<small style="padding-bottom:8px;color:#FFFFFF">Download Tốc Độ Cao Tại Đây</small></span></a></div>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://mega.nz/#!jihlDIxT!SivItRmQy9ZkIkVE-r4Io64sMoqYM3uQ28vIvARctFo" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Link Tải Dự Phòng<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h2><span style="text-decoration: underline;">Các phiên bản cũ hơn:</span></h2>
+<ul>
+<li>
+<h3 style="text-align: left;"><a href="https://mega.nz/#!mnQDyQ7K!56RFfYgKfQL3f4zXustTTSQ1gryfq9MH-oi301ttINs" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;"><strong>19.7 Update 23/9/2019</strong></span></a></h3>
+</li>
+</ul>
+<h2><strong><span id="Huong_dan_cai_dat_Folder_Guard" class="ez-toc-section">Hướng dẫn cài đặt Folder Guard</span></strong></h2>
+<ul>
+<li>Giải nén file rar vừa tải về</li>
+<li>Chạy file <strong>Setup</strong> để cài đặt phần mềm.</li>
+<li>Copy file <strong>Patch</strong> đến nơi vừa cài đặt phần mềm “<strong>C:\Program Files\Folder Guard</strong>” và sau đó nhấn chuột phải chọn <strong>Run as Administrator</strong></li>
+<li><strong>Khởi động lại máy tính</strong></li>
+<li>Mở phần mềm lên, cùng chạy file <strong>Keygen.exe</strong> nhập tên máy, số máy tính vào keygen, và chọn đúng phần mềm <strong>Folder Guard</strong> ấn<strong> Generate</strong>.</li>
+</ul>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></span></div>
+<div>
+<div class="alert alert-success"><span style="font-size: 16px;"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></span></div>
+<div><span style="font-size: 16px;"><strong>Xem Thêm:</strong></span></div>
+<div>
+<div class="alert alert-info"><span style="font-size: 16px;"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></span></div>
+<div>
+<div class="alert alert-info"><strong><span style="font-size: 16px;"><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></span></strong></div>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/cong-cu/easy-context-menu/" target="_blank" rel="noopener noreferrer">Easy Context Menu Thiết lập, chỉnh sửa, thêm ứng dụng vào menu chuột phải trên Windows</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/he-thong/acronis-true-image/" target="_blank" rel="noopener noreferrer">Download Acronis True Image 2020 Full (24.3.1.20770) Giúp Sao lưu và Phục hồi dữ liệu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/download/full-key-professional-enterprise-microsoft-visual-studio/" target="_blank" rel="noopener noreferrer">Full Key Professional + Enterprise Và Link Download Microsoft Visual Studio Tất Cả Các Phiên Bản Mới Nhất</a></strong></li>
+</ul>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="6333"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/">Download Folder Guard 19.9 – Đặt mật khẩu cho thư mục có hỗ trợ tiếng Việt</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/phan-mem/download-folder-guard-dat-mat-khau-cho-thu-muc/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

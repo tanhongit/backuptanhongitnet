@@ -1,0 +1,30 @@
+From 3b0d136f0be190b3c414a5e89e48246fa774fb10 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C3=81lvaro?= <atrigol@gmail.com>
+Date: Mon, 24 Apr 2017 11:39:56 +0100
+Subject: [PATCH] - Docs for responsive options
+
+---
+ README.md | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/README.md b/README.md
+index 4c93b43..83f59b6 100644
+--- a/README.md
++++ b/README.md
+@@ -111,7 +111,6 @@ $(document).ready(function() {
+ 		responsiveWidth: 0,
+ 		responsiveHeight: 0,
+ 		responsiveExpand: false,
+-		responsiveCombine: false,
+ 
+ 		// Custom selectors
+ 		sectionSelector: '.ms-section',
+@@ -224,8 +223,6 @@ $('#multiscroll').multiscroll({
+ 
+ - `responsiveExpand`: (default `false`) [Extension of multiScroll.js](http://alvarotrigo.com/multiScroll/extensions/). When responsive mode is fired (by using the `responsiveWidth` or `responsiveHeight` options detailed above) it turns auto scrolling off and expands each left and right side into a full-width section placing one after another. Then the page can be scrolled normally. [Read more about how to use the Responsive Expand option.](https://github.com/alvarotrigo/multiscroll.js/wiki/Responsive-Expand-Extension)
+ 
+-- `responsiveCombine`: (default `false`) [Extension of multiScroll.js](http://alvarotrigo.com/multiScroll/extensions/).  When responsive mode is fired (by using the `responsiveWidth` or `responsiveHeight` options detailed above) it turns auto scrolling off and combine each left and right so they will scroll normally together.
+-
+ ## Methods
+ 
+ ### moveSectionUp()

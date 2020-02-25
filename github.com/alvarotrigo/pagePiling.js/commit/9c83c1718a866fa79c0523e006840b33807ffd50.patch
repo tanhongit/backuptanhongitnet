@@ -1,0 +1,24 @@
+From 9c83c1718a866fa79c0523e006840b33807ffd50 Mon Sep 17 00:00:00 2001
+From: SakhirAtwi <saaelayaz@outlook.com>
+Date: Tue, 7 Aug 2018 16:18:39 +0500
+Subject: [PATCH] Fix the section1 vertical overflow issue.
+
+---
+ examples/videoBackground.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/examples/videoBackground.html b/examples/videoBackground.html
+index 03753d7..c3f7a5c 100644
+--- a/examples/videoBackground.html
++++ b/examples/videoBackground.html
+@@ -77,6 +77,10 @@
+ 			color: #fff;
+ 		}
+ 
++		#section1{
++			overflow: hidden;
++		}
++
+ 
+     </style>
+ </head>

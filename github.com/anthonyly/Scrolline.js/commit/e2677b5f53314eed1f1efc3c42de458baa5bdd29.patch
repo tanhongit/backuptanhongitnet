@@ -1,0 +1,25 @@
+From e2677b5f53314eed1f1efc3c42de458baa5bdd29 Mon Sep 17 00:00:00 2001
+From: AnthonyLy <AnthonyLy.com@gmail.com>
+Date: Fri, 12 Dec 2014 19:30:26 +0100
+Subject: [PATCH] Update demo link
+
+---
+ readme.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/readme.md b/readme.md
+index 86c708e..bbba80b 100644
+--- a/readme.md
++++ b/readme.md
+@@ -3,9 +3,9 @@ Scrolline.js
+ 
+ A jQuery plugin. Create a scroll line bar indicator on the page.
+ 
+-## Demonstrations
++## Demonstration
+ 
+-* [Demonstration](http://anthonyly.com/scrolline)
++* [Anthonyly.com/jquery.plugins/scrolline](http://anthonyly.com/jquery.plugins/scrolline)
+ 
+ ## Documentation
+ 

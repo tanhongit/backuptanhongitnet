@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/hubotio/hubot/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/hubotio/hubot/commits/master.atom"/>
+  <title>Recent Commits to hubot:master</title>
+  <updated>2019-04-17T04:49:47Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7795fe53fb1a3dde85537589149cab0f0b58404a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/7795fe53fb1a3dde85537589149cab0f0b58404a"/>
+    <title>
+        Merge pull request #1497 from Trott/silence-deprecation-warning
+    </title>
+    <updated>2019-04-17T04:49:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1497 from Trott/silence-deprecation-warning
+
+fix: address deprecation warning on startup&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/39b8d5955b8d44a73a22161f4592139b2481b223</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/39b8d5955b8d44a73a22161f4592139b2481b223"/>
+    <title>
+        Update robot.js
+    </title>
+    <updated>2019-04-01T23:56:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/718899?s=30&amp;v=4"/>
+    <author>
+      <name>Trott</name>
+      <uri>https://github.com/Trott</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update robot.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/af8acb3f436cecf98d41c6102c7fb5b79a611de4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/af8acb3f436cecf98d41c6102c7fb5b79a611de4"/>
+    <title>
+        fix: address deprecation warning on startup
+    </title>
+    <updated>2019-03-12T21:11:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/718899?s=30&amp;v=4"/>
+    <author>
+      <name>Trott</name>
+      <uri>https://github.com/Trott</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix: address deprecation warning on startup
+
+The `body-parser` deprecation warning on startup is due to `express.urlencode()`
+requiring an `extended` property in the options argument in Express 4.x.
+
+Fixes: https://github.com/hubotio/hubot/issues/1476&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c1c2611fc826d9419d3224f959d33b260521009c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/c1c2611fc826d9419d3224f959d33b260521009c"/>
+    <title>
+        Merge pull request #1496 from mistydemeo/fix_circular_reference
+    </title>
+    <updated>2019-03-06T17:11:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1496 from mistydemeo/fix_circular_reference
+
+Brain: avoid retaining dangerous robot/brain references&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/947d988cf7cf11056050cb42fe89a47da2a610e1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/947d988cf7cf11056050cb42fe89a47da2a610e1"/>
+    <title>
+        fix(Brain): avoid retaining dangerous robot/brain references
+    </title>
+    <updated>2019-03-05T20:50:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix(Brain): avoid retaining dangerous robot/brain references&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d2b57bd796749fbb9ca02eff33b7a345bcd40d68</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/d2b57bd796749fbb9ca02eff33b7a345bcd40d68"/>
+    <title>
+        Merge pull request #1489 from hubotio/add_datastore_clean
+    </title>
+    <updated>2019-02-19T19:01:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1489 from hubotio/add_datastore_clean
+
+Add a new persistence model - Datastore&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8392f0dc6328361055e8d4fe8c2fee7df280f4c1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/8392f0dc6328361055e8d4fe8c2fee7df280f4c1"/>
+    <title>
+        Merge branch &#39;master&#39; into add_datastore_clean
+    </title>
+    <updated>2019-02-13T21:03:30Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge branch &amp;#39;master&amp;#39; into add_datastore_clean&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/067a70d930dc186c4c1412503c701df3cad5af5f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/067a70d930dc186c4c1412503c701df3cad5af5f"/>
+    <title>
+        Merge pull request #1482 from mistydemeo/dep_updates
+    </title>
+    <updated>2019-01-11T03:31:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1482 from mistydemeo/dep_updates
+
+Dependency updates&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d7b0ee77656b46286a8c95f72937fb9784118b14</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/d7b0ee77656b46286a8c95f72937fb9784118b14"/>
+    <title>
+        Merge branch &#39;master&#39; into dep_updates
+    </title>
+    <updated>2019-01-11T02:46:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge branch &amp;#39;master&amp;#39; into dep_updates&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/40712e134161032300f759b7b9ecb1085a1d17bc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/40712e134161032300f759b7b9ecb1085a1d17bc"/>
+    <title>
+        feat(User): add Datastore support
+    </title>
+    <updated>2019-01-11T00:39:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat(User): add Datastore support&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a494d0e5273dec1b83c14fc1f8950611d4d9373c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/a494d0e5273dec1b83c14fc1f8950611d4d9373c"/>
+    <title>
+        feat: Add new Datastore class
+    </title>
+    <updated>2019-01-11T00:39:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat: Add new Datastore class
+
+The Datastore class provides a persistent, database-backed key-value
+data storage class. This complements the existing Brain class in a few
+ways:
+
+1. Each get/set operation is directly backed by the backing database,
+   allowing multiple Hubot instances to share cooperative access to
+   data simultaneously;
+2. get/set operations are asynchronous, mapping well to the async
+   access methods used by many database adapters.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/02ef730d8aacc2ad63de8f5eed96639a210541f3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/02ef730d8aacc2ad63de8f5eed96639a210541f3"/>
+    <title>
+        Merge pull request #1468 from mattr-/upgrade-nyc
+    </title>
+    <updated>2019-01-10T22:24:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1468 from mattr-/upgrade-nyc
+
+chore(package): Upgrade nyc to the 13.x series&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d7b3a336edd24d9039ae30f8eba978ac761d9316</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/d7b3a336edd24d9039ae30f8eba978ac761d9316"/>
+    <title>
+        Merge branch &#39;master&#39; into upgrade-nyc
+    </title>
+    <updated>2019-01-10T22:18:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge branch &amp;#39;master&amp;#39; into upgrade-nyc&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a3d80c1faed497a1c96019c2b3ffd839dc1893e4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/a3d80c1faed497a1c96019c2b3ffd839dc1893e4"/>
+    <title>
+        Merge pull request #1487 from mistydemeo/reconstruct_users
+    </title>
+    <updated>2019-01-10T22:08:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1487 from mistydemeo/reconstruct_users
+
+Brain: ensure User objects are actually User objects&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a6201ad4e856a0d467a925d6335bc422b9ed1577</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/a6201ad4e856a0d467a925d6335bc422b9ed1577"/>
+    <title>
+        feat(Brain): ensure User objects are actually User objects
+    </title>
+    <updated>2019-01-10T22:03:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;feat(Brain): ensure User objects are actually User objects&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/42bff238718923225949cff4e143454202e1e871</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/42bff238718923225949cff4e143454202e1e871"/>
+    <title>
+        chore(package.json): bump to the latest coveralls
+    </title>
+    <updated>2019-01-10T21:56:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore(package.json): bump to the latest coveralls&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/031c4663b65eb13128e550872140398955588bf7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/031c4663b65eb13128e550872140398955588bf7"/>
+    <title>
+        chore(package.json): bump to the latest mocha
+    </title>
+    <updated>2019-01-10T21:56:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/780485?s=30&amp;v=4"/>
+    <author>
+      <name>mistydemeo</name>
+      <uri>https://github.com/mistydemeo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;chore(package.json): bump to the latest mocha&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f9b18bec15a1db4e3dd19a5869b0d3edde125e14</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/f9b18bec15a1db4e3dd19a5869b0d3edde125e14"/>
+    <title>
+        Merge pull request #1466 from loveonelong/master
+    </title>
+    <updated>2019-01-10T21:40:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1466 from loveonelong/master
+
+chore(package): Move coffee-scirpt to coffeescript&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/37ea3d443b15834ada4d08b7fcac6093b820e5a1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/37ea3d443b15834ada4d08b7fcac6093b820e5a1"/>
+    <title>
+        Merge branch &#39;master&#39; into master
+    </title>
+    <updated>2019-01-10T21:30:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge branch &amp;#39;master&amp;#39; into master&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3e32c1e380ca9ce39a7c25a4d277c24de6c70c7a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/hubotio/hubot/commit/3e32c1e380ca9ce39a7c25a4d277c24de6c70c7a"/>
+    <title>
+        Merge pull request #1477 from tsukakei/patch-1
+    </title>
+    <updated>2019-01-10T21:29:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/159?s=30&amp;v=4"/>
+    <author>
+      <name>technicalpickles</name>
+      <uri>https://github.com/technicalpickles</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1477 from tsukakei/patch-1
+
+docs(src/robot.js): add comment for alias&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

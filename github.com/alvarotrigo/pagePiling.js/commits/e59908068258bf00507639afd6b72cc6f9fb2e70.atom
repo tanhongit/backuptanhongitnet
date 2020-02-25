@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/alvarotrigo/pagePiling.js/commits/e59908068258bf00507639afd6b72cc6f9fb2e70</id>
+  <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commits/e59908068258bf00507639afd6b72cc6f9fb2e70"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/alvarotrigo/pagePiling.js/commits/e59908068258bf00507639afd6b72cc6f9fb2e70.atom"/>
+  <title>Recent Commits to pagePiling.js:e59908068258bf00507639afd6b72cc6f9fb2e70</title>
+  <updated>2014-09-24T20:18:00Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e59908068258bf00507639afd6b72cc6f9fb2e70</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commit/e59908068258bf00507639afd6b72cc6f9fb2e70"/>
+    <title>
+        - Added examples &amp; small fixes
+    </title>
+    <updated>2014-09-24T20:18:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added examples &amp;amp; small fixes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0ee38bdb3cf0c79caf2df4f839794e444fb67449</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commit/0ee38bdb3cf0c79caf2df4f839794e444fb67449"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-09-24T15:00:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/96356593948af21b7d0c0ba5e3a1f91948cfd373</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commit/96356593948af21b7d0c0ba5e3a1f91948cfd373"/>
+    <title>
+        Delete LICENSE
+    </title>
+    <updated>2014-09-24T14:59:09Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Delete LICENSE&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/733b9a5502be4ba61a3e9c5f9ef9f1b00344edf6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commit/733b9a5502be4ba61a3e9c5f9ef9f1b00344edf6"/>
+    <title>
+        - Initial commit
+    </title>
+    <updated>2014-09-24T14:58:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Initial commit&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/df953b924a61df64fd826a07e02cc197176b44fe</id>
+    <link type="text/html" rel="alternate" href="https://github.com/alvarotrigo/pagePiling.js/commit/df953b924a61df64fd826a07e02cc197176b44fe"/>
+    <title>
+        Initial commit
+    </title>
+    <updated>2014-09-24T14:33:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Initial commit&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/jpaezsa/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/jpaezsa/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2014-05-28T13:28:56Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9b9552d562392588d69014157912921434d691e2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/9b9552d562392588d69014157912921434d691e2"/>
+    <title>
+        - Fixed bug which created a gap between the two panels #2
+    </title>
+    <updated>2014-05-28T13:28:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug which created a gap between the two panels #2&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7e1d0893e81382bc1a835ad7dc296d53c225967e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/7e1d0893e81382bc1a835ad7dc296d53c225967e"/>
+    <title>
+        - Added 6 more examples of how to use multiscroll.js
+    </title>
+    <updated>2014-05-22T09:33:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added 6 more examples of how to use multiscroll.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0da2d32afa5596a731e6b13530846617920d4c2a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/0da2d32afa5596a731e6b13530846617920d4c2a"/>
+    <title>
+        - Added paddingTop and paddingBottom options.
+    </title>
+    <updated>2014-05-22T09:33:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added paddingTop and paddingBottom options.
+- Solved bug with css3:true&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3b9b1fa7a5a9e3b1795f4c1957b3227590a96813</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/3b9b1fa7a5a9e3b1795f4c1957b3227590a96813"/>
+    <title>
+        - Added similar website.
+    </title>
+    <updated>2014-05-16T13:48:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added similar website.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/69e175ef25773c79a578168d81d101584f90093f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/69e175ef25773c79a578168d81d101584f90093f"/>
+    <title>
+        - updated version
+    </title>
+    <updated>2014-05-15T14:27:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- updated version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b35784c737f442f20ebbf2c422463f1b5336fd4f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/b35784c737f442f20ebbf2c422463f1b5336fd4f"/>
+    <title>
+        - Added a few more function comments
+    </title>
+    <updated>2014-05-15T14:25:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added a few more function comments 
+- Removed unused variable.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b08163a8085aec250a804e8ee8d0ea6e1b6fd2dd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/b08163a8085aec250a804e8ee8d0ea6e1b6fd2dd"/>
+    <title>
+        - Updated information about starting point on load.
+    </title>
+    <updated>2014-05-15T09:59:30Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updated information about starting point on load.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f8ac3b3757d8e1431f4dddbfff5efa8cfad17928</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/f8ac3b3757d8e1431f4dddbfff5efa8cfad17928"/>
+    <title>
+        - Added new feature: Set active section by adding the `active` class …
+    </title>
+    <updated>2014-05-15T09:54:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added new feature: Set active section by adding the `active` class in sections.
+- Added new feature: scroll to the given hashtag in the URL. (useful for bookmarking)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e7c2e163e4974d041e6d05831175612742f166f4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/e7c2e163e4974d041e6d05831175612742f166f4"/>
+    <title>
+        - Added sites using similar effect
+    </title>
+    <updated>2014-05-14T16:29:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added sites using similar effect&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b776b279614a62515d8794690aa5bddb2fc35c95</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/b776b279614a62515d8794690aa5bddb2fc35c95"/>
+    <title>
+        - Updating bower version.
+    </title>
+    <updated>2014-05-14T11:25:46Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating bower version.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/17407b32d6ce3246c4698779bee5af113ad3b231</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/17407b32d6ce3246c4698779bee5af113ad3b231"/>
+    <title>
+        - Moving the example to the examples folder. Deleted unnecessary files.
+    </title>
+    <updated>2014-05-14T11:24:37Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Moving the example to the examples folder. Deleted unnecessary files.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/73c4fb667771d064227bdab63ea4b1f320980d7f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/73c4fb667771d064227bdab63ea4b1f320980d7f"/>
+    <title>
+        - Deleting `display:block` for sections.
+    </title>
+    <updated>2014-05-14T11:23:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Deleting `display:block` for sections.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/35a85bd3a9f5eb63916de4daef8e586947fbaa17</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/35a85bd3a9f5eb63916de4daef8e586947fbaa17"/>
+    <title>
+        - Deleted unnecessary styles.
+    </title>
+    <updated>2014-05-14T11:10:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Deleted unnecessary styles.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6131d286a8565a9618ab8ea8cec5501cf9727813</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/6131d286a8565a9618ab8ea8cec5501cf9727813"/>
+    <title>
+        - updated version number
+    </title>
+    <updated>2014-05-14T11:07:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- updated version number&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b2d2f4e8b894703d4fe2455829164464219d199d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/b2d2f4e8b894703d4fe2455829164464219d199d"/>
+    <title>
+        - Disabling mouse wheel click scrolling for IE, Chrome, Opera and Saf…
+    </title>
+    <updated>2014-05-14T11:06:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Disabling mouse wheel click scrolling for IE, Chrome, Opera and Safari. #1&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c41faa1037aee478225d9a5ab306cfa1f3f2bd0a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/c41faa1037aee478225d9a5ab306cfa1f3f2bd0a"/>
+    <title>
+        No commit message
+    </title>
+    <updated>2014-05-13T10:00:39Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/43387a98c564dba8d9706fc9e81438100786a73c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/43387a98c564dba8d9706fc9e81438100786a73c"/>
+    <title>
+        - Added compatibility image
+    </title>
+    <updated>2014-05-13T09:56:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added compatibility image&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a486c24210abd0dd1d8db9c22e07176cc9dd8f45</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/a486c24210abd0dd1d8db9c22e07176cc9dd8f45"/>
+    <title>
+        - Added to bower package manager
+    </title>
+    <updated>2014-05-12T09:14:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added to bower package manager&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f5324252d8c45e9d7516a1f57c161ec922445f03</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/f5324252d8c45e9d7516a1f57c161ec922445f03"/>
+    <title>
+        - Deleted unused option.
+    </title>
+    <updated>2014-05-09T16:09:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Deleted unused option.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2c7462e30e4742d373f24ec92b0b48e1b04c7b85</id>
+    <link type="text/html" rel="alternate" href="https://github.com/jpaezsa/multiscroll.js/commit/2c7462e30e4742d373f24ec92b0b48e1b04c7b85"/>
+    <title>
+        - Added link to the blog entry
+    </title>
+    <updated>2014-05-09T09:09:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Added link to the blog entry&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

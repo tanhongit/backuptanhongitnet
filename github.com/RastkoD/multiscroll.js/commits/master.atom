@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/RastkoD/multiscroll.js/commits/master</id>
+  <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commits/master"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/RastkoD/multiscroll.js/commits/master.atom"/>
+  <title>Recent Commits to multiscroll.js:master</title>
+  <updated>2019-10-29T18:14:58Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/cdb69c01dea4b037f5a2e9df0df0aaed8089fcd3"/>
+    <title>
+        Merge pull request #118 from talgautb/patch-1
+    </title>
+    <updated>2019-10-29T18:14:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #118 from talgautb/patch-1
+
+update README.md&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ee8f487520999adba917374043e846606feee9f6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/ee8f487520999adba917374043e846606feee9f6"/>
+    <title>
+        update README.md
+    </title>
+    <updated>2019-10-29T16:34:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/1547797?s=30&amp;v=4"/>
+    <author>
+      <name>talgautb</name>
+      <uri>https://github.com/talgautb</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;update README.md
+
+update docs, add method setMouseWheelScrolling
+
+closes #81&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/dc6dde2621494d75e0d0c272647840a05348d2f2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/dc6dde2621494d75e0d0c272647840a05348d2f2"/>
+    <title>
+        Documentation: fixed missing param in onLeave callback ##117
+    </title>
+    <updated>2019-09-11T10:39:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Documentation: fixed missing param in onLeave callback ##117&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/74c8ffcad4ccaf1b8d05faf57ceef53cb902388d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/74c8ffcad4ccaf1b8d05faf57ceef53cb902388d"/>
+    <title>
+        - Revert
+    </title>
+    <updated>2018-08-01T15:45:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Revert&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/361521d266ac8acf77ddc29e5ef491404a0e4b2c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/361521d266ac8acf77ddc29e5ef491404a0e4b2c"/>
+    <title>
+        - Updating version and dist files
+    </title>
+    <updated>2018-08-01T15:44:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f0fde0687d3bb7ad00c7a90a86bad8d6dd684cbb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/f0fde0687d3bb7ad00c7a90a86bad8d6dd684cbb"/>
+    <title>
+        - Fixed bug: not working anymore on smartphones #110
+    </title>
+    <updated>2018-08-01T15:43:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixed bug: not working anymore on smartphones #110
+- Fixed bug: doneResizing is not defined #105&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b5cff48b7fe54094df23a63fc7ec611212feed7e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/b5cff48b7fe54094df23a63fc7ec611212feed7e"/>
+    <title>
+        - Fixing issue with scrollOverflow extension and touch devices.
+    </title>
+    <updated>2018-03-07T16:31:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixing issue with scrollOverflow extension and touch devices.
+- Updating version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ef11829dcd05dee3b48a89f2ffe134023c1ef31a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/ef11829dcd05dee3b48a89f2ffe134023c1ef31a"/>
+    <title>
+        - Updating release number
+    </title>
+    <updated>2018-03-07T15:31:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating release number&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a47d9e40948711c1055cd71d0a9693f536b97aab</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/a47d9e40948711c1055cd71d0a9693f536b97aab"/>
+    <title>
+        - Fixing bug ##103
+    </title>
+    <updated>2018-03-07T15:27:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Fixing bug ##103
+- Updating version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a6f8d967af1db0572ddabe698c6f207911e4fca9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/a6f8d967af1db0572ddabe698c6f207911e4fca9"/>
+    <title>
+        - Removed typo
+    </title>
+    <updated>2018-03-05T17:32:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Removed typo&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f388ee68729171fb78d9ed1c0cf1c3d2f4faa570</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/f388ee68729171fb78d9ed1c0cf1c3d2f4faa570"/>
+    <title>
+        - remove file
+    </title>
+    <updated>2018-03-05T17:31:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- remove file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/983cab60e04695bf2780e8ff5a9fe2c7b477697c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/983cab60e04695bf2780e8ff5a9fe2c7b477697c"/>
+    <title>
+        - Updating dist files
+    </title>
+    <updated>2018-03-05T17:28:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1f72e20481a250030543c347ed9a80e8147d4e31</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/1f72e20481a250030543c347ed9a80e8147d4e31"/>
+    <title>
+        - Updating keywords
+    </title>
+    <updated>2018-03-05T17:21:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating keywords&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e828b37a562539bdc8ba2558c0deba50d5271ee4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/e828b37a562539bdc8ba2558c0deba50d5271ee4"/>
+    <title>
+        - Updating version
+    </title>
+    <updated>2018-03-05T17:20:13Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating version&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7c38ff18c63fd30183848b0599bc9c68c89d1ae6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/7c38ff18c63fd30183848b0599bc9c68c89d1ae6"/>
+    <title>
+        - Improved docs
+    </title>
+    <updated>2018-03-05T14:42:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improved docs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4cbdc76219d1e7ce75d9f14636f19e86ff1d20bc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/4cbdc76219d1e7ce75d9f14636f19e86ff1d20bc"/>
+    <title>
+        - Improved docs
+    </title>
+    <updated>2018-03-05T14:40:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improved docs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4fb9d854fc5be8312f30b0dbf067b885baec773b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/4fb9d854fc5be8312f30b0dbf067b885baec773b"/>
+    <title>
+        - Improving resizeHandler
+    </title>
+    <updated>2018-03-05T14:31:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Improving resizeHandler
+- Improving mobile detection&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ba9160b806b373ff5502e3e8d90d0cded1cdb1a5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/ba9160b806b373ff5502e3e8d90d0cded1cdb1a5"/>
+    <title>
+        - Updating docs regarding `scrollOverflow` extension.
+    </title>
+    <updated>2018-03-05T14:18:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating docs regarding `scrollOverflow` extension.
+- Added multiple sites using multiScroll.js&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a9055a8e5bd8262661a3782fa70cca92740bb4e7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/a9055a8e5bd8262661a3782fa70cca92740bb4e7"/>
+    <title>
+        - Updating version and dist files
+    </title>
+    <updated>2018-03-05T14:04:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating version and dist files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/858e271a032f14fde0f517ceb00a2a97ede87701</id>
+    <link type="text/html" rel="alternate" href="https://github.com/RastkoD/multiscroll.js/commit/858e271a032f14fde0f517ceb00a2a97ede87701"/>
+    <title>
+        - Updating gulp-uglify version
+    </title>
+    <updated>2018-03-05T14:03:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/1706326?s=30&amp;v=4"/>
+    <author>
+      <name>alvarotrigo</name>
+      <uri>https://github.com/alvarotrigo</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;- Updating gulp-uglify version&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

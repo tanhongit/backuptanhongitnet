@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Công Cụ Lập Trình &#8211; Tân Hồng IT</title>
+	<atom:link href="http://localhost/demowp/tag/cong-cu-lap-trinh/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost:82/demowp</link>
+	<description>Siêu Chia Sẻ Kiến Thức, Công Nghệ, Phần Mềm, Thủ Thuật, Tiện Ích Máy Tính</description>
+	<lastBuildDate>Sat, 25 Jan 2020 02:42:21 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>http://localhost:82/demowp/wp-content/uploads/2019/04/logo-TanHongIT-one-75x75.png</url>
+	<title>Công Cụ Lập Trình &#8211; Tân Hồng IT</title>
+	<link>http://localhost:82/demowp</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bài 7: Vòng lặp Foreach trong PHP (Các loại vòng lặp phần 2)</title>
+		<link>http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/#respond</comments>
+				<pubDate>Wed, 01 Jan 2020 09:37:29 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Tài Liệu Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7604</guid>
+				<description><![CDATA[<p>Ở bài trước ta đã học về các loại vòng lặp như for, while, do while các bạn có thể xem lại Bài 6: Các loại Vòng lặp trong PHP (for, while, do while). Còn ở bài này mình sẽ vẫn giới thiệu về vòng lặp nhưng nội dung chỉ xoay quanh duy nhất một [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/">Bài 7: Vòng lặp Foreach trong PHP (Các loại vòng lặp phần 2)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài trước ta đã học về các loại vòng lặp như for, while, do while các bạn có thể xem lại <strong><a href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/" target="_blank" rel="noopener noreferrer">Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</a></strong>. Còn ở bài này mình sẽ vẫn giới thiệu về vòng lặp nhưng nội dung chỉ xoay quanh duy nhất một vòng lặp đó là <strong>vòng lặp foreach trong PHP.</strong></p>
+<figure id="attachment_7611" aria-describedby="caption-attachment-7611" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2020/01/vong-lap-foreach-trong-php.png"><img class="size-full wp-image-7611" src="http://localhost:82/demowp/wp-content/uploads/2020/01/vong-lap-foreach-trong-php.png" alt="vong lap foreach trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2020/01/vong-lap-foreach-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2020/01/vong-lap-foreach-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7611" class="wp-caption-text">Vòng lặp foreach trong PJP</figcaption></figure>
+<h2><span style="color: #0000ff;"><strong>Vòng lặp foreach trong PHP</strong></span></h2>
+<p>Vòng lặp <strong>foreach</strong> là loại loop được dùng để duyệt các phần tử trong mảng, object. Đây là loại vòng lặp thường sẽ được sử dụng rất nhiều trong các dự án PHP sau này, đặc biệt là các bài liên kết đến cơ sở dữ liệu.</p>
+<h3><strong>Cú pháp</strong></h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+foreach ($variable as $key =&gt; $value) {
+    // code...
+}
+?&gt;</pre>
+<p>hoặc</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+foreach ($variable as $value) {
+    // code...
+}
+?&gt;</pre>
+<p><strong>Trong đó:</strong></p>
+<ul>
+<li><strong><span style="color: #0000ff;"><code>$variable</code></span>: </strong>Là biến mà các bạn muốn lặp (có thể là array, object).</li>
+<li><strong><span style="color: #0000ff;"><code>$key</code></span>: </strong>Là các key của mảng hoặc properties của object.</li>
+<li><strong><span style="color: #0000ff;"><code>$value</code></span>: </strong>Là một biến tạm dùng để chứa giá trị được sao chép của từng phần tử của mảng, object.</li>
+</ul>
+<h3><strong>Bài tập ví dụ 1</strong></h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+//Khởi tạo mảng có key tự tăng.
+$array= [
+    'A',
+    'B',
+    'C',
+    'D'
+];
+// Lặp cả key lẫn value của mảng
+foreach ($array as $key =&gt; $value) {
+    echo "Đây là phần tử có key = $key và có giá trị= $value &lt;br/&gt;";
+}
+?&gt;</pre>
+<p>Ở ví dụ trên thì <strong>$array</strong> là mảng ta truyền vào, <strong>$key</strong> và<strong> $value</strong> là 2 tham số mà ở mỗi vòng lặp nó tự động truyền giá trị. Kết quae xuất ra màn hình là:</p>
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%;">Phần tử có key = 0 và giá trị= A<br />
+Phần tử có key = 1 và giá trị= B<br />
+Phần tử có key = 2 và giá trị= C<br />
+Phần tử có key = 3 và giá trị= D</td>
+</tr>
+</tbody>
+</table>
+<p>Cũng từ bài ví dụ trên ta có thể dùng theo cú pháp thứ 2 của vòng lặp foreach trong php như sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+//Khởi tạo mảng có key tự tăng.
+$array= [
+    'A',
+    'B',
+    'C',
+    'D'
+];
+// Lặp lại value của mảng
+foreach ($array as $value) {
+    echo "$value -";
+}
+?&gt;</pre>
+<p>Ở mỗi vòng lặp <strong>foreach</strong>, <strong>PHP</strong> sẽ tạo ra các bản sao để chúng ta lấy dữ liệu của phần tử đang lặp đó, bản sao này sẽ được loại bỏ ngay lập tức sau khi kết thúc vòng lặp. Và ở mỗi vòng lặp sẽ kiểm tra còn phần tử liền kề hay không? Nếu còn thì vòng lặp được tiếp tục, ngược lại thì sẽ dừng.</p>
+<p>Ở ví dụ trên, các bản sao của biến <strong>$array</strong> đã được tạo ra và mình đã không truyền biến $key vào trong vòng forech nên mình chỉ có thể xuất được các giá trị $value ra màn hình mà thôi.</p>
+<p>Kết quả xuất ra màn hình sẽ là:<span style="color: #0000ff;"> <strong>A -B -C -D &#8211;</strong></span></p>
+<h3><strong>Dùng tham chiếu để thay đổi phần tử hiện tại trong mảng foreach</strong></h3>
+<p>Hãy xem ví dụ bên dưới.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$mang = array('one', 'two', 'three', 'four', 'five');
+foreach ( $mang as $value ) {
+    $value = strtoupper($value); // hàm strtoupper dùng để in hoa chuỗi ký tự
+}
+echo '&lt;pre&gt;';
+print_r($mang); //xuất mảng
+?&gt;</pre>
+<p>Kết quả ra màn hình sẽ là:</p>
+<pre>Array
+(
+    [0] =&gt; one
+    [1] =&gt; two
+    [2] =&gt; three
+    [3] =&gt; four
+    [4] =&gt; five
+)</pre>
+<p>Ở ví dụ trên mình đã sử dụng hàm <strong>strtoupper</strong> nhằm mục đích in hoa hết các chuỗi ký tự là các giá trị của các phần tử có trong bảng array. Nhưng kết quả xuất ra màn hình vẫn là chứ thường.</p>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<p>Khi bắng đầu 1 loop <strong>foreach</strong>, <strong>PHP</strong> sẽ <strong>tạo ra 1 bản sao của mảng gốc</strong> để lặp, cho nên khi thay đổi các giá trị trong mảng gốc thì sẽ không có tác dụng. Vì vậy khi lặp chúng ta sẽ truyền tham chiếu truy xuất đến mảng gốc, có như vậy thì <strong>PHP sẽ không tạo 1 bản copy mảng</strong> để dùng nữa mà nó sẽ được gọi đến và lặp trực tiếp trên mảng gốc. Khi này, chúng ta thay đổi giá trị các phần tử trong mảng gốc sẽ có tác dụng.</p>
+<p>Cách gọi 1 tham chiếu cho biến: đặt thêm ký tự &#8220;<span style="color: #0000ff;"><strong>&amp;</strong></span>&#8221; trước biến đó.</p>
+<p>Như vậy cũng từ ví dụ trên ta sẽ làm như sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$mang = array('Xin', 'Chao', 'Moi', 'Nguoi', 'Den', 'Voi', 'Khoa', 'Hoc', 'PHP', 'Can', 'Ban');
+foreach ( $mang as &amp;$value ) { //mình đã thêm ký tự &amp; trước biến $value để gọi 1 tham chiếu
+    $value = strtoupper($value); // hàm strtoupper dùng để in hoa chuỗi ký tự
+}
+echo '&lt;pre&gt;';
+print_r($mang); //xuất mảng
+?&gt;</pre>
+<p>Ở đây mình đã sử dụng tham chiếu <span style="color: #0000ff;"><strong>&amp;$value</strong></span> để truy xuất đến mảng gốc, khi này ta thay đổi giá trị của các phần tử trong mảng gốc sẽ có hiệu lực và ra kết quả như sau.<code></code></p>
+<pre>Array
+(
+    [0] =&gt; XIN
+    [1] =&gt; CHAO
+    [2] =&gt; MOI
+    [3] =&gt; NGUOI
+    [4] =&gt; DEN
+    [5] =&gt; VOI
+    [6] =&gt; KHOA
+    [7] =&gt; HOC
+    [8] =&gt; PHP
+    [9] =&gt; CAN
+    [10] =&gt; BAN
+)</pre>
+<p>Kết luận:</p>
+<ul>
+<li>Foreach trong PHP sẽ tạo ra một bản sao của mảng để lặp.</li>
+<li>Khi foreach đang lặp theo bản sao của mảng gốc thì thay đổi giá trị phần tử trong mảng theo cách thông thường sẽ không có tác dụng</li>
+<li>Muốn thay đổi giá trị phần tử hiện tại trong khi lặp thì phải dùng tham chiếu.</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Vòng lặp foreach lồng nhau (mảng 2 chiều)</strong></span></h2>
+<p>Cũng như các vòng lặp đã được đề cập ở bài 6 thì đối với vòng lặp foreach trong bài này cũng có tính chất tương tự là có thể lồng nhau. Thường thì ta sẽ sử dụng vòng lặp foreach lồng nhau để duyệt phần tử của mảng 2 chiều.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> duyệt các phần tử của mảng 2 chiều bằng vòng lặp foreach:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+//Khởi tạo mảng 2 chiều
+$array = [
+        0 =&gt; 1, 
+        1 =&gt; [1 =&gt; 4, 2 =&gt; 6],
+        2 =&gt; [1 =&gt; "aa", 2 =&gt; "bb"],
+        3 =&gt; [1 =&gt; 10, 2 =&gt; "cc", 3 =&gt; 0]
+];
+foreach ($array as $value) {
+    if (is_array($value)) {
+        foreach ($value as $item) {
+            echo $item . " - ";
+        }
+    } else
+        echo $value . " - ";
+}
+?&gt;</pre>
+<p>Như vậy ta sẽ có kêt quả như sau: <span style="color: #0000ff;"><strong>1 &#8211; 4 &#8211; 6 &#8211; aa &#8211; bb &#8211; 10 &#8211; cc &#8211; 0 &#8211;</strong></span></p>
+<div>
+<h2><span id="Ket_thuc" class="ez-toc-section">Kết thúc:</span></h2>
+<p>Vậy là qua <strong><a href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/" target="_blank" rel="noopener noreferrer">bài 6</a></strong> và bài 7 này mình đã giới thiệu cho các bạn về 4 loạn vòng lặp khác nhau thường được dùng trong PHP. Nếu các bạn có thắc mắc nay cần tư vấn điều gì thì hãy để lại comment bên dưới bài viết này nhé!, Mình sẽ cố gắng hỗ trợ các bạn!</p>
+<p>Hãy tiếp tục trong series học PHP căn bản ở các bài viết tiếp theo các bạn nhé!</p>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/" target="_blank" rel="noopener noreferrer">Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7604"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/">Bài 7: Vòng lặp Foreach trong PHP (Các loại vòng lặp phần 2)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-7-vong-lap-foreach-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</title>
+		<link>http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/#respond</comments>
+				<pubDate>Sat, 28 Dec 2019 13:39:16 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7560</guid>
+				<description><![CDATA[<p>Ở bài trước mình đã giới thiều về các biểu thức điều kiện if else và cấu trúc rẽ nhánh switch case, các bạn nếu chưa xem có thể xem thêm tại Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch). Tiếp tục lộ trình học PHP căn bản thì qua bài này [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/">Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài trước mình đã giới thiều về các biểu thức điều kiện if else và cấu trúc rẽ nhánh switch case, các bạn nếu chưa xem có thể xem thêm tại <strong><a href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a></strong>. Tiếp tục lộ trình học PHP căn bản thì qua bài này mình sẽ giới thiệu cho các bạn về <strong>vòng lặp </strong>(tên khác là<strong> Loop</strong>) <strong>trong PHP</strong> nhé!</p>
+<figure id="attachment_7592" aria-describedby="caption-attachment-7592" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/vong-lap-trong-php.png"><img class="size-full wp-image-7592" src="http://localhost:82/demowp/wp-content/uploads/2019/12/vong-lap-trong-php.png" alt="vong lap trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/vong-lap-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/12/vong-lap-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7592" class="wp-caption-text">Các Loại vòng lặp trong PHP</figcaption></figure>
+<h2><span style="color: #0000ff;"><strong>Vòng lặp là gì ?</strong></span></h2>
+<p>Nói ngắn gọn thì vòng lặp được sử dụng để thực thi một đoạn code lặp đi lặp lại một số lần nhất định dựa trên giá trị trả về từ một điều kiện cho trước.</p>
+<h2><span style="color: #0000ff;"><strong>Các Loại Vòng Lặp Trong PHP</strong></span></h2>
+<p>Khi lập trình đôi khi chúng ta sẽ cần chạy một đoạn code lặp đi lặp lại, lúc này sử dụng vòng lặp sẽ giúp chúng ta tránh việc phải thêm vào tập tin PHP những đoạn code giống nhau này nhiều lần.</p>
+<p><strong>Trong PHP chúng ta có các loại vòng lặp sau:</strong></p>
+<ul>
+<li>Vòng lặp <span style="color: #0000ff;"><strong><span style="color: #0000ff;"><code>while</code></span>. </strong><span style="color: #000000;">&#8211; Lặp một hành động dựa theo một điều kiện cụ thể mà nó trả về là true</span></span></li>
+<li>Vòng lặp <span style="color: #0000ff;"><strong><span style="color: #0000ff;"><code>do...while</code></span>. </strong><span style="color: #000000;">&#8211; Lặp một hành động với số lần lặp nhất định</span></span></li>
+<li>Vòng lặp <span style="color: #0000ff;"><strong><code>for</code>. </strong><span style="color: #000000;">&#8211; Lặp một hành động với số lần lặp nhất định</span></span></li>
+<li>Vòng lặp <span style="color: #0000ff;"><strong><code>foreach</code>. </strong><span style="color: #000000;">&#8211; Sử dụng để lặp các khoá và giá trị trong một dữ liệu mảng.</span></span></li>
+</ul>
+<h2><strong><span style="color: #0000ff;">Vòng lặp for trong PHP</span></strong></h2>
+<p>Thường bạn sử dụng vòng lặp này khi đã biết rõ trước số lần cần lặp lại là bao nhiêu.</p>
+<h3>Cú pháp</h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">for ($bien_khoi_tao; $bieu_thuc_dieu_kien; $bieu_thuc_thay_doi_bien_khoi_tao)
+{
+    // phần câu lệnh thực thi vòng lặp
+}</pre>
+<ul>
+<li><span style="color: #0000ff;"><strong>$bien_khoi_tao</strong></span>: là một câu lệnh chứa <strong>biến</strong> được gán<strong> giá trị ban đầu</strong> mà ta <strong>truyền vào trước khi chạy vòng lặp</strong>. Câu lệnh này chỉ thực hiện 1 lần duy nhất</li>
+<li><span style="color: #0000ff;"><strong>$bieu_thuc_dieu_kien</strong></span>: là một <strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/#Toan_tu_quan_he_so_sanh_trong_PHP" target="_blank" rel="noopener noreferrer">biểu thức quan hệ</a></strong> nào đó nhằm mục đích xác định điều kiện thoát khỏi vòng lập.</li>
+<li><span style="color: #0000ff;"><strong>$bieu_thuc_thay_doi_bien_khoi_tao</strong></span>: Là biểu thức xác định <span style="color: #0000ff;"><strong>$bien_khoi_tao</strong></span> sẽ bị thay đổi như thế nào sau mỗi lần vòng lặp được lặp lại</li>
+</ul>
+<div class="alert alert-warning"><span style="text-decoration: underline;"><strong>Lưu ý:</strong></span> cú pháp khai báo vòng lặp là mỗi biểu thức phải cách nhua bằng dấu chấm phẩy ( ; )</div>
+<div><span style="font-size: 16px;"><span style="text-decoration: underline;"><strong>Ví dụ:</strong> </span>Xuất ra màn hình các số lần lượt tăng dần từ 0 đến 10.</span></div>
+<div>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+for ($i = 0 ; $i &lt;= 10 ; $i++){
+    echo $i . '&lt;br&gt;';
+}
+?&gt;</pre>
+<ul>
+<li><strong><code><span style="color: #0000ff;">$i = 0</span></code></strong> là biến khỏi tạo cho vòng lặp và có giá trị khởi tạo bằng 0</li>
+<li><strong><span style="color: #0000ff;"><code>$i &lt;= 10</code></span></strong> là biểu thức điều kiện để dừng vòng lặp ( nếu <strong><code>$i &lt;= 10</code></strong> thì vòng lặp sẽ vẫn tiếp tục lặp, ngược lại nếu <strong><code>$i &gt; 10</code></strong> thì biểu thức sẽ hiểu là sai nên vòng lặp sẽ thoát</li>
+<li><span style="color: #0000ff;"><strong><code>$i++</code></strong></span> là biểu thức thay đổi biến khởi tại, sau mỗi lần lặp <strong><code>$i</code></strong> sẽ tăng lên 1</li>
+</ul>
+<p>Ngoài ra khi khai báo cú pháp của vòng lặp thì trong thân của nó ta có thể thêm các biểu thức phụ bằng dấu phẩy để phâ biệt và ngăn cách chúng.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php 
+for ($i = 0 , $j = 5 ; $i &lt;= 10 ; $i++ , $j++)
+{ 
+    echo 'i = ' . $i . '&lt;br&gt;';
+    echo 'j = ' . $j . '&lt;br&gt;'; // biến j sẽ xuất hiện theo thứ tự lần lượt cùng với biến i cho đến khi i&gt;10 và kết thúc vòng lặp
+} 
+?&gt;</pre>
+<h3><strong>Vòng lặp for lồng nhau</strong></h3>
+<p>Nói một cách nôm na là có một vòng lặp cha sẽ bao một vòng lặp con khác bên trong nó. Ở mỗi lần lặp cho vòng lặp cha, vòng lặp con bên trong phải lặp hết điều kiện lặp của nó, sau đó mới lặp tiếp vòng lặp cha và cứ tiếp tục như vậy.</p>
+<p>Như vậy ta sẽ thấy nó đang tuân thủ theo quy tắc phải thực hiện hết tất cả nội dung dòng lệnh bên trong vòng lặp rồi mới thực hiện vòng kế tiếp.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php 
+$a=0;
+for ($i = 0; $i &lt; 10; ++$i)
+{
+    for ($j = 0; $j &lt; 10; ++$j)
+    {
+        $a++;
+        echo "Line $a =   " . $i*$j .'&lt;br/&gt;';
+    }
+}
+?&gt;</pre>
+<p>Với mỗi giá trị <strong>$i</strong> , chương trình thực hiện lệnh <strong>for($j=0;$j&lt;10;++$j)</strong> 1 lần.</p>
+<p>Bây giờ ta xét với vòng <strong>for($j=0;$j&lt;10;++$j)</strong>, và giá trị i là cố định, vòng for này sẽ thực hiện <strong>câu lệnh</strong> <strong>echo</strong> 10 lần.</p>
+<p>Như vậy khi giá trị <strong>$i</strong> thay đổi 10 lần, với mỗi giá trị <strong>$i</strong> thì chương trình lại in câu lệnh <strong>echo</strong> 10 lần, như vậy tổng cộng là 100 lần in tất cả. Các bạn hãy code lại đoạn code cí dụ trên và chạy trên trình duyệt thử nhé!</p>
+<h2><span style="color: #0000ff;"><strong>Vòng lặp while trong PHP</strong></span></h2>
+<p>Vòng lặp while cũng dùng để lặp dữ liệu như các vòng lặp khác nhưng ưu điểm của nó là có thể <strong>giải quyết những bài toán không biết chính xác số vòng lặp</strong> (một số bài toán thì for cũng có thể làm được) và cách sử dụng nó cũng rất đơn giản.</p>
+<h3>Cú pháp</h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">while ($dieu_kien)
+{
+   // phần câu lệnh thực thi vòng lặp
+}</pre>
+<ul>
+<li><span style="color: #0000ff;"><strong><code>$dieu_kien</code></strong></span> là điều kiện của vòng lặp. Nếu điều kiện trả về <strong>true</strong> thì vòng lặp sẽ chạy và ngược lại <strong>false</strong> thì sẽ dừng.</li>
+<li>Suy ra nếu vòng lặp while sẽ lặp vô hạn nếu biểu thức điều kiện bạn truyền vào luôn luôn là <strong>true</strong>.</li>
+</ul>
+<h3><span style="text-decoration: underline;"><strong>Ví dụ</strong></span></h3>
+<p>liệt kê các số từ 1 tới 10 bằng cách sử dụng vòng lặp while.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+    $i = 1; //khởi tạo biến $i bằng 1
+    while ($i &lt;= 10) {
+        echo $i++;
+    }
+?&gt;</pre>
+</div>
+<p>Trong đó <span style="color: #0000ff;"><strong><code>$i = 1</code></strong></span> là biến dùng để lặp. Biểu thức <span style="color: #0000ff;"><strong><code>$i &lt;= 10</code></strong></span> là điều kiện lặp. Bài toán sẽ thực hiện lặp cho đến khi $i = 10, vậy ta sẽ có 10 lần lặp và mỗi lần lặp biến $i sẽ tăng thêm 1 giá trị, như vậy ta sẽ có kết quả là lần lượt các số từ 1 đến 10 : <strong>12345678910</strong></p>
+<div>
+<h2><strong><span style="color: #0000ff;">Vòng lặp do while trong PHP</span></strong></h2>
+<p>Đây là một vòng lặp ngược lại với các vòng lặp từ trước đến giờ, các vòng lặp khác <strong>kiểm tra điều kiện trước rồi với thực thi câu lệnh</strong>, còn vòng lặp <strong>do-while</strong> <strong>thực thi câu lệnh trước rồi mới kiểm tra điều kiện</strong>. Nếu điều kiện đúng thì sẽ thực hiện tiếp vòng lặp kế tiếp, nếu điều kiện sai thì sẽ dừng vòng lặp.</p>
+<p>Vòng lặp <strong>do while</strong> tương tự như vòng lặp <strong>while</strong> tuy nhiên đoạn mã lệnh trong vòng lặp <strong>do while</strong> luôn được thực thi ít nhất một lần.</p>
+<h3>Cú pháp</h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+    do{
+        // phần câu lệnh thực thi vòng lặp
+    }while($bieu_thuc_dieu_kien); //phải có dấu chấm phẩu sau khi hết thúc dòng while
+?&gt;</pre>
+<p><strong><span style="text-decoration: underline;">Chú ý:</span> </strong>Phải có dấu <code>;</code> ở phía sau while không chương trình sẽ báo lỗi.</p>
+<h3>Ví dụ</h3>
+<p>Liệt kê các số từ 1 tới 10 bằng cách sử dụng vòng lặp do while.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+$i = 1; //khởi tạo biến $i bằng 1
+do {
+    echo $i++; // cộng thêm 1 đơn vị sau mỗi lần lặp
+} while ($i &lt;= 10); // nếu $i lớn hơn 10 dừng vòng lặp
+?&gt;</pre>
+<p>Tương tự như vòng lặp while, <span style="color: #0000ff;"><strong><code>$i = 1</code></strong></span> là biến dùng để lặp. Biểu thức <span style="color: #0000ff;"><strong><code>$i &lt;= 10</code></strong></span> là điều kiện lặp. Bài toán sẽ thực hiện lặp cho đến khi $i = 10, vậy ta sẽ có 10 lần lặp và mỗi lần lặp biến $i sẽ tăng thêm 1 giá trị, như vậy ta sẽ có kết quả là lần lượt các số từ 1 đến 10 : <strong>12345678910</strong></p>
+<div class="alert alert-warning">Tuy rằng nó có thể giải quyết những bài toán không biết chính xác số vòng lặp, nhưng cả vòng lặp <strong>while</strong> lẫn vòng lặp <strong>do while</strong> đều rất dễ vị lặp vô hạn. Vì vậy khi code bạn phải cẩn thận về logic của bài toán, đặt biệt là biểu thức điều kiện.</div>
+<div>
+<h2 id="load-h2-2" data-index="2"><span style="color: #0000ff;"><strong>Vòng lặp While, Do while lồng nhau</strong></span></h2>
+<p>Tương tự như vòng lặp for và các mệnh đề quan hệ như if else thì cả 2 vòng lặp while và do while đều có thể lồng nhau.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 1:</strong></span> vẽ tam giác vuông với vòng lặp <strong>while</strong> lồng nhau.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$i = 0;
+while ($i &lt;= 10) {
+    $j = $i;
+    while ($j &lt;= 10) {
+        echo "*";
+        $j++;
+    }
+    echo "&lt;br&gt;";
+    $i++;
+}
+?&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Ví dụ 2:</strong></span> vẽ tam giác vuông với vòng lặp <strong>do while</strong> lồng nhau.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$i = 0;
+do {
+    $j = $i;
+    do {
+        echo "*";
+        $j++;
+    } while ($j &lt;= 10);
+    echo "&lt;br&gt;";
+    $i++;
+} while ($i &lt;= 10);
+?&gt;</pre>
+<h2><span style="color: #0000ff;"><strong>Khi nào nên sử dụng vòng lặp for, while, do while ?</strong></span></h2>
+<p>Thông thường, đối với các bài toán khi đã biết rõ trước số lần cần lặp lại là bao nhiêu thì ta nên dùng vòng lặp for để thực hiện bài toán.</p>
+<p>Còn đối với những bài toán không biết chính xác số vòng lặp thì ta nên dùng vòng lặp <strong>while</strong> hoặc <strong>do while</strong>.</p>
+<p>Tuy nhiên ở một số bài toán, ta <strong>vẫn có thể sử dụng 3 vòng lặp trên để thực hiện theo 3 phương pháp khác nhau</strong> đều được. Tất cả là phụ thuộc vào kinh nghiệm của người lập trình, bạn sẽ là người quyết định nên dùng vòng lặp nào vào bài toán của bạn để nó chạy nhanh nhất và tối ưu hoá nhất cho chương trình của mình mà không phát sinh lỗi.</p>
+<h2>Kết thúc:</h2>
+<p>Thực ra vẫn còn 1 loại vòng lặp nữa là vòng lặp foreach. Nhưng mình sẽ nói riêng về vòng lặp này ở bài viết tiếp theo các bạn nhé!</p>
+<p>Vòng lặp là một kiến thức cơ bản mà bạn nên nắm vững để sau này thực hiện nhiều bài toán trong dự án của bạn. Vì thế nếu có thắc mắc gì các bạn cứ để lại comment ở bên dưới bài viết mình sẽ cố gắng giải đáp nhé!</p>
+</div>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/" target="_blank" rel="noopener noreferrer">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7560"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/">Bài 6: Các loại Vòng lặp trong PHP (for, while, do while)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-6-cac-loai-vong-lap-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mô hình Client-Server là gì và cách hoạt động Client-Server</title>
+		<link>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/</link>
+				<comments>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/#respond</comments>
+				<pubDate>Mon, 23 Dec 2019 06:38:33 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Internet]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7568</guid>
+				<description><![CDATA[<p>Mô hình client-server là một mô hình nổi tiếng trong mạng máy tính, được áp dụng rất rộng rãi và là mô hình của mọi trang web hiện có. Ý tưởng của mô hình này là máy con (đóng vài trò là máy khách) gửi một yêu cầu (request) để máy chủ (đóng vai trò [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/">Mô hình Client-Server là gì và cách hoạt động Client-Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Mô hình</strong> <strong>client-server</strong> là một mô hình nổi tiếng trong <strong>mạng máy tính</strong>, được áp dụng rất rộng rãi và là mô hình của mọi trang web hiện có. Ý tưởng của mô hình này là <strong>máy con (đóng vài trò là máy khách)</strong> gửi một <strong>yêu cầu (request)</strong> để <strong>máy chủ (đóng vai trò người cung ứng dịch vụ)</strong>, máy chủ sẽ xử lý và trả kết quả về cho máy khách.</p>
+<p>Trong mô hình này, chương trình ứng dụng được chia thành 2 thành phần: <strong class="emphasis">Server </strong>và <strong class="emphasis">Client. </strong><strong>Client</strong> hay còn gọi là máy khách, nó bao gồm máy tính và các thiết bị điện tử nói chung. <strong>Server</strong> hay còn gọi là máy chủ, là nơi cài đặt các chương trình dịch vụ và lưu trữ tài nguyên.</p>
+<figure id="attachment_7575" aria-describedby="caption-attachment-7575" style="width: 750px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png"><img class="size-full wp-image-7575" src="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png" alt="client server" width="750" height="424" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/mo-hinh-client-server-300x170.png 300w" sizes="(max-width: 750px) 100vw, 750px" /></a><figcaption id="caption-attachment-7575" class="wp-caption-text">Mô hình Client-Server</figcaption></figure>
+<p>Việc yêu cầu của máy khách, đáp ứng, xử lý, và phản hồi của máy chủ tạo thành một dịch vụ. Dịch vụ này hoạt động trên nền web nên nó được gọi là dịch vụ web (hay web service).</p>
+<p>Ngoài ra, việc giao tiếp giữa <strong>Client</strong> với <strong>Server</strong> phải dựa trên các giao thức chuẩn. Các giao thức chuẩn được sử dụng phổ biến nhất hiện nay là : giao thức TCP/IP, giao thức SNA của IBM, OSI, ISDN, X.25 hay giao thức LAN-to-LAN NetBIOS.</p>
+<h2><span style="color: #0000ff;"><strong>Vì sao các Website thường sử dụng mô hình client-server</strong></span></h2>
+<ul>
+<li>Dữ liệu và tài nguyên được tập trung lại và tăng tính toàn vẹn của các dữ liệu.</li>
+<li>Sự linh động trong việc mở rộng được hệ thống mạng.</li>
+<li>Không phụ thuộc vào cùng một nền tảng, chỉ cần chung một định dạng giao tiếp (<strong>protocol</strong>) là có thể hoạt động được.</li>
+</ul>
+<p>Chỉ có điều nhược điểm của mô hình này là <strong>tính an toàn và bảo mật các thông tin trên mạng</strong>. Do phải trao đổi các dữ liệu giữa hai máy ở hai khu vực khác nhau nên dễ dàng xảy ra hiện tượng thông tin trên mạng <strong>bị mất bí mật</strong> và từ đó vai trò của quản trị mạng trở nên quan trọng lên rất nhiều.</p>
+<h2><span id="Bang_so_sanh_mo_hinh_client_server_voi_cac_mo_hinh_khac" style="color: #0000ff;"><strong>Bảng so sánh mô hình client server với các mô hình khác</strong></span></h2>
+<table style="width: 92.1285%;">
+<tbody>
+<tr>
+<td style="width: 16.3424%;"><span style="font-size: 14px; color: #0000ff;"><strong>Mô hình mạng / tiêu chí đánh giá</strong></span></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px; color: #0000ff;"><strong>Client Server</strong></span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px; color: #0000ff;"><strong>Peer-to-Peer</strong></span></td>
+<td style="width: 25.4475%;"><span style="color: #0000ff;"><strong>Hybrid</strong></span></td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Khả năng bảo mật thông tin và độ an toàn</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Khả năng bảo mật và an toàn thông tin cao. Có thể điều chỉnh quyền truy cập thông tin.</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Khả năng bảo mật và an toàn thông tin kém. Phần lớn phụ thuộc vào mức độ quyền được chia sẻ.</span></td>
+<td style="width: 25.4475%;">Khả năng bảo mật và an toàn thông tin cao. Có thể điều chỉnh quyền truy cập thông tin.</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Khả năng cài đặt</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Cài đặt khá khó khăn.</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Cài dặt dễ dàng.</span></td>
+<td style="width: 25.4475%;">Cài đặt khá khó khăn.</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Yêu cầu về phần cứng và phần mềm</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Bao gồm:+ Máy chủ</span><span style="font-size: 14px;">+ Hệ điều hành</span></p>
+<p><span style="font-size: 14px;">+ Phần cứng</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Chỉ cần ít phần cứng bổ sung. Ngoài ra không cần máy chủ và hệ điều hành như 2 mô hình trên.</span></td>
+<td style="width: 25.4475%;">Bao gồm:+ Máy chủ+ Hệ điều hành</p>
+<p>+ Phần cứng</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Yêu cầu về quản trị mạng</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Cần phải có quản trị mạng</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Không cần quản trị mạng</span></td>
+<td style="width: 25.4475%;">Cần phải có quản trị mạng</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Có khả năng xử lý và lưu trữ tập trung không?</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Có</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Không</span></td>
+<td style="width: 25.4475%;">Không</td>
+</tr>
+<tr>
+<td style="width: 16.3424%;"><strong><span style="font-size: 14px;">Chi phí cài đặt</span></strong></td>
+<td style="width: 27.6265%;"><span style="font-size: 14px;">Chi phí cao</span></td>
+<td style="width: 30.5058%;"><span style="font-size: 14px;">Chi phí thấp</span></td>
+<td style="width: 25.4475%;">Chi phí thấp</td>
+</tr>
+</tbody>
+</table>
+<h2><span style="color: #0000ff;"><strong>Cách thức mô hình client server hoạt động như thế nào ?</strong></span></h2>
+<p>Quy trình hoạt đông được chia làm 2 bước:</p>
+<h3>Client</h3>
+<p>Các máy trạm trong mô hình này gọi là <strong>máy khách (client)</strong>. Đây là nơi tiếp nhận những thao tác yêu cầu từ người dùng và sau đó<strong>gởi các yêu cầu xử lý</strong> về <strong>máy chủ (server).</strong></p>
+<p>Phần phía Client là nơi trung gian tổ chức giao tiếp giữa người dùng với môi trường làm việc trên <strong>máy khách (client)</strong> và với phía Server. Sau khi tiếp nhận yêu cầu của người dùng, máy khách client sẽ thành lập các query string để gửi về phía Server.</p>
+<h3>Server</h3>
+<p>Phần phía Server <strong>quản lý các giao tiếp</strong> môi trường giữa <strong>Server</strong> và với các <strong>Client</strong>, tiếp nhận các yêu cầu dưới dạng các xâu ký tự (query string). Sau khi phân tích các query string được request từ máy khách client, phần phía Server sẽ xử lý dữ liệu và gửi kết quả trả lời về phía các Client.</p>
+<p>Sau đó sẽ hiện lên màn hình đến cho người dùng.</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Ưu điểm </strong><strong>mô hình client-server là gì?</strong></span></h2>
+<p>Ưu điểm của mô hình client server là với mô hình client server thì mọi thứ dường như đều nằm trên bàn của người sử dụng, nó có thể truy cập dữ liệu từ xa (bao gồm các công việc như gửi và nhận file, tìm kiếm thông tin,…) với nhiều dịch vụ đa dạng mà mô hình cũ không thể làm được.</p>
+<p>Mô hình <strong>client-server</strong> cung cấp một nền tảng lý tưởng cho phép tích hợp các kỹ thuật hiện đại như mô hình thiết kế hướng đối tượng, hệ chuyên gia, hệ thông tin địa lý (GIS)…</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Nhược điểm </strong><strong>mô hình client server là gì?</strong></span></h2>
+<p>Như đã nói ở các phần trên, nhược điểm duy nhất của mô hình này là <strong>tính an toàn và bảo mật các thông tin trên mạng</strong>. Do phải trao đổi các dữ liệu giữa hai máy ở hai khu vực khác nhau ở xa nhau nên dễ dàng xảy ra hiện tượng thông không được an toàn.</p>
+<h2><span id="Uu_diem_mo_hinh_client_server_la_gi" style="color: #0000ff;"><strong>Một số ví dụ về mô hình client server</strong></span></h2>
+<h3><strong>Mail Server </strong></h3>
+<p>Ở bên phía Client, người dùng soạn thảo Email và sẽ gửi đến Mail Server, phía bên Mail Server sẽ tiếp nhận và lưu trữ, tìm kiếm địa chỉ của mail được gửi đến và gửi đi.</p>
+<h3><strong>Web Server </strong></h3>
+<p>Lưu trữ các trang Web. khi người dùng ở phía máy Client nhập địa chỉ của trang web, Client sẽ gửi yêu cầu đến máy chủ Web và máy chủ Web sẽ gửi toàn bộ nội dung của trang web về cho phía Client.</p>
+<h3><strong>File Server </strong></h3>
+<p>Lưu trữ các tập tin. Nhận và truyền đi các tập tin về phía Client , người dùng có thể download – upload các tập tin lên Server qua Web browser hoặc là giao thức FTP</p>
+<h2><span style="color: #0000ff;"><b>Các cấu hình cơ sở dữ liệu Client/Server</b></span></h2>
+<p><span style="font-weight: 400;">Nhìn chung mọi ứng dụng cơ sở dữ liệu đều bao gồm các phần:</span></p>
+<ul>
+<li><span style="font-weight: 400;"><strong>Thành phần xử lý ứng dụng</strong> (Application processing components)</span></li>
+<li><span style="font-weight: 400;"><strong>Thành phần phần mềm cơ sở dữ liệu</strong> (Database software componets)</span></li>
+<li><span style="font-weight: 400;"><strong>Bản thân cơ sở dữ liệu</strong> (The database itself)</span></li>
+</ul>
+<p><span style="font-weight: 400;">Các mô hình về xử lý cơ sở dữ liệu khác nhau là bởi các trường hợp của 3 loại thành phần nói trên định vị ở đâu. Bài viết này này xin giới thiệu 5 mô hình kiến trúc dựa trên cấu hình phân tán về truy nhập dữ liệu của hệ thống máy tính Client/Server.</span></p>
+<ol>
+<li><strong>Mô hình cơ sở dữ liệu tập trung (Centralized database model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu theo kiểu file &#8211; server (File &#8211; server database model)</strong></li>
+<li><strong>Mô hình xử lý từng phần cơ sở dữ liệu (Database extract processing model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu Client/Server (Client/Server database model)</strong></li>
+<li><strong>Mô hình cơ sở dữ liệu phân tán (Distributed database model)</strong></li>
+</ol>
+<p>Ngoài ra ta còn có m<span style="font-weight: 400;">ột mô hình ngược lại là mô hình <strong>master-slaver</strong>, trong đó máy chủ (đóng vai trò ông chủ) sẽ gửi dữ liệu đến máy con (đóng vai trò nô lệ) bất kể máy con có cần hay không.</span></p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer">Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-2-cu-phap-php-co-ban-khai-bao-hang-va-bien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/laravel/laravel-error-no-application-encryption-key-has-been-specified/" target="_blank" rel="noopener noreferrer">Laravel Error: No application encryption key has been specified</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+<div style="text-align: right;">via wiki, bkhost, internet</div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7568"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/">Mô hình Client-Server là gì và cách hoạt động Client-Server</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/kien-thuc/mo-hinh-client-server/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</title>
+		<link>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/#respond</comments>
+				<pubDate>Sun, 15 Dec 2019 01:58:50 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Khóa Học]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7538</guid>
+				<description><![CDATA[<p>Biểu thức điều kiện trong PHP là tập hợp các câu điều kiện để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau. Cũng tương tự như các ngôn ngữ lập trình khác, PHP hỗ trợ các biểu thức điều kiện sau: if if&#8230;else if&#8230;elseif&#8230;else switch Giải thích: Chỉnh ta [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><strong>Biểu thức điều kiện trong PHP</strong> là tập hợp các câu điều kiện để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.</p>
+<p><span class="fontstyle0">Cũng tương tự như các ngôn ngữ lập trình khác, PHP hỗ trợ các biểu thức điều kiện sau:</span></p>
+<ul>
+<li><span class="fontstyle0">if<br />
+</span></li>
+<li><span class="fontstyle0">if&#8230;else</span></li>
+<li><span class="fontstyle0">if&#8230;elseif&#8230;else<br />
+</span></li>
+<li><span class="fontstyle0">switch</span></li>
+</ul>
+<figure id="attachment_7547" aria-describedby="caption-attachment-7547" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png"><img class="size-full wp-image-7547" src="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png" alt="bieu thuc dieu kien trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/12/bieu-thuc-dieu-kien-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7547" class="wp-caption-text">Biểu thức điều kiện trong php</figcaption></figure>
+<p><span style="text-decoration: underline; color: #0000ff;"><strong>Giải thích:</strong></span> Chỉnh ta hầu hết đều biết các chương trình thường <strong>chạy theo một trình tự từ trên xuống</strong> mà không chừa bất kì một dòng code nào <strong>(ngoại trừ các dòng comment).</strong> Nhưng trong thực tế, đối với một số chương trình chúng ta cần chúng chạy theo nhiều luồng chứ không phải theo trình tự như vậy. Vì thế, biểu thức điều kiện đã ra đời.</p>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if</strong></span></h2>
+<p>Biểu thức điều kiện if, hay còn thường gọi là câu điều kiện if cho phép ta đưa ra các quyết định dựa trên việc kiểm tra điều kiện nào đó đúng (true) hay sai (false).</p>
+<h3>Cú pháp</h3>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">if(bieu-thuc-dieu-kien){
+  //Câu lệnh
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;?php
+  $so=50;
+  if($so % 2 == 0){ //điều kiện kiểm tra số chẵn
+    echo "Số ".$so." là số chẵn";"
+  }
+
+  if($so &gt;= 0){ //điều kiện kiểm tra số dương
+    echo "Số ".$so." là số dương";
+  }
+?&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Ta gán biến $so có giá trị là 50.</li>
+<li>Kiểm tra phần dư sau khi lấy $so chia cho 2 có bằng 0 hay không (toán tử % dùng để chia lấy số dư, tham khảo lại toán tử trong <strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong>). Nếu đúng thì echo ra kết quả.</li>
+<li>Điều kiện kiểm tra số dương từ dòng số 7 trở đi cũng có ý nghĩa tương tự.</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if else trong PHP</strong></span></h2>
+<p>Nói một cách đơn giản, bạn sẽ thực hiện <strong>đoạn code thứ nhất</strong> được bao trong <strong>if()</strong> nếu điều kiện đặt ra là <strong>đúng (true)</strong>, ngược lại nếu điều kiện đó là <strong>sai (false)</strong> thì bạn sẽ thực hiện <strong>đoạn code thứ 2</strong> được bao bởi <strong>else</strong>. Trong trường hợp này, bạn sẽ phải dùng đến <strong>câu lệnh if else trong PHP.</strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">if (biểu_thức_điều_kiện){
+   //câu lệnh 1
+   //phần code này được thực thi nếu điều kiện là true
+}
+else{
+   //câu lệnh 1
+   //phần code này được thực thi nếu điều kiện là false
+}</pre>
+<p><strong>Giải thích</strong><u>:</u></p>
+<ul>
+<li>Nếu <strong>biểu_thức_điều_kiện</strong> đúng thì Những Câu Lệnh 1 sẽ được thực hiện và Những Câu Lệnh 2 sẽ không được thực hiện.</li>
+<li>Ngược lại nếu <strong>biểu_thức_điều_kiện</strong> sai thì những câu lệnh 1 sẽ bị bỏ qua và sẽ thực hiện những câu lệnh 2.</li>
+</ul>
+<p>Ví dụ:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">$so = 20;
+if ($so % 2 == 0){
+    echo 'Số ' . $so . ' Là Số Chẵn';
+}
+else{
+    echo 'Số ' . $so . ' Là Số Lẻ';
+}</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Ta gán biến $so có giá trị là 20.</li>
+<li>Kiểm tra phần dư sau khi lấy $so chia cho 2 có bằng 0 hay không (toán tử % dùng để chia lấy số dư, tham khảo lại toán tử trong <strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong>). Nếu đúng thì echo ra kết quả <span style="color: #0000ff;"><strong>Số 20 Là Số Chẵn</strong></span>, nếu sai thì cho ra <span style="color: #0000ff;"><strong>Số 20 Là Số Lẻ</strong></span>.3</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if&#8230;elseif&#8230;else trong PHP</strong></span></h2>
+<p>Nói đơn giản về ý nghĩa của biểu thức này hơn đó là kết hợp nhiều câu lệnh if else trong một bài code. Bới vì trong thực tế, không phải lúc nào cũng chỉ có 2 điều kiện mà sẽ có hàng chục điều kiện khác nhau, lúc này ta phải kết hợp nhuần nhuyễn giữa 2 lệnh <strong>if và else</strong> để xử lý bài toán.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Ta xuất thông tin chào đón các học sinh vào năm học mới theo khối lớp của trường trung học cơ sở.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;html&gt;
+   &lt;body&gt;
+      &lt;?php
+         $lop="Lop 6";
+         if ($lop == "Lop 6")
+            echo "Chào mừng các em học sonh lớp 6!";
+         elseif ($lop == "Lop 7")
+            echo "Chào mừng các em học sonh lớp 7!";
+         elseif ($lop == "Lop 8")
+            echo "Chào mừng các em học sonh lớp 8!";
+         else
+            echo "Chào mừng các em học sonh lớp 9!"; 
+      ?&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span style="text-decoration: underline;"><strong>Giải thích:</strong></span></p>
+<ul>
+<li>Nếu $lop bằng ‘<strong>Lop 6</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 6</strong>”,</li>
+<li>Ngược lại nếu bằng ‘<strong>Lop 7</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 7</strong>”,</li>
+<li>Ngược lại nếu bằng ‘<strong>Lop 8</strong>’ thì xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 8</strong>”,</li>
+<li>Ngược lại không cần kiểm tra gì nữa vì là trương hợp cuối cùng, không phải là các trưởng hợp ở trên nên ta xuất ra màn hình “<strong>Chào mừng các em học sinh lớp 9</strong>”.</li>
+</ul>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức điều kiện if else lồng nhau trong PHP</strong></span></h2>
+<p>Biểu thức điều kiện có rất nhiều biến thể, đặc biệt là các biểu thức được lồng vào nhau. Tức là sẽ có 1 hoặc nhiều câu điều kiện if con nằm trong một câu điều kiện if cha nào đó. (Riêng bản thân mình thường tự gọi đây là 1 dạng <strong>biểu thức điều kiện đa cấp</strong>).</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Cho một số và kiểm tra xem số đó bé hơn 100 hay không. Nếu bé hơn thì kiểm tra tiếp xem số đó có là số dương hay không. Nếu số đó cũng là số dương thì hãy kiểm tra tiếp xem số đó là số chẵn hay số lẻ. Sau đó xuất ra màn hình các kêt quả phù hợp.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+    $so = 800; // cho 1 giá trị là 80
+    if ($so &lt; 100) // Nếu số bé hơn 100, thì điều kiện kiểm tra là đúng và ta sẽ chạy tiếp câu lệnh bên trong
+    {
+        if ($so &gt; 0) { // Nếu số lớn hơn 0 thì điều kiện kiểm tra là đúng và chạy tiếp lệnh bên trong
+            if ($so % 2 == 0) { // Nếu số dư khi chia cho 2 = 0, tức là số chẵn ta sẽ chạy tiếp câu lệnh bên trong
+                echo "So " . $so . " Là số chẵn, lớn hơn 0 và bé hơn 100";
+            } else echo "So " . $so . " Là số lẻ, lớn hơn 0 và bé hơn 100";
+        } elseif ($so % 2 == 0) { // Ngược lại đây sẽ là số bé hơn 0 và ta tiếp tục kiểm tra nếu số dư khi chia cho 2 = 0, tức là số chẵn ta sẽ chạy tiếp câu lệnh bên trong
+            echo "So " . $so . " Là số chẵn và bé hơn 0";
+        } else echo "So " . $so . " Là số lẻ và bé hơn 0";
+    }
+    else //trường hợp này đã ra ngoài phạm vi yêu cầu của đề bài, tức là số cho trước khi này sẽ lớn hơn 100
+        echo "Ngoài vùng phủ sóng :3 ";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<h2><span style="color: #0000ff;"><strong>Lưu ý khi dùng các biểu thức quan hệ if, if&#8230;else, if&#8230;elseif&#8230;else</strong></span></h2>
+<div class="alert alert-warning">
+<ul>
+<li><strong><span style="font-size: 16px;">Biểu Thức chứa trong cặp dấu ngoặc tròn <code>()</code> chính là các biểu thức quan hệ. Có thể kết hợp nhiều biểu thức quan hệ thông qua toán tử<span style="color: #0000ff;"> &amp;&amp; </span>(nghĩa là AND) hay <span style="color: #0000ff;">|| </span>(nghĩa là OR)</span></strong></li>
+<li><strong><span style="font-size: 16px;">Trong một khối lệnh nếu bên trong chứa nhiều hơn 2 lệnh thì phải có cặp ngoặc nhọn <code>{}</code> dùng để mở khối lệnh và đóng khối lênh, như vậy trình biên dịch sẽ hiểu đây là một khối lệnh và nó sẽ thực thi hết khối lệnh này.</span></strong></li>
+</ul>
+</div>
+<h2 id="goto-h2-1" class="ads_displayed" data-stt="1"><span style="color: #0000ff;"><strong>Biểu thức Switch Trong PHP</strong></span></h2>
+<p>Câu lệnh <strong>switch</strong> <strong>trong php</strong> cho phép ta đưa ra quyết định có nhiều cách lựa chọn để giá trị của biểu thức truyền vào. Mục đích của lệnh <strong>switch</strong> hay được sử dụng để tránh các khối <b>if…elseif…else</b> dài.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">switch ($variable) {
+    case $value_1:
+       // các câu lênh 1
+       break;
+    case $value_2:
+        // các câu lệnh 2
+        break;
+    default:
+        // các câu lệnh khác
+        break;
+        //phần code này được thực thi nếu biểu_thức là khác với $value_1, $value_2, ...
+}</pre>
+<p>Giá trị ở <strong>case</strong> chỉ chấp nhận các<strong> kiễu dữ liệu string, INT, boolean, null, foat</strong> hoặc là một <strong>biểu thức</strong> có kết quả trả về một trong năm loại dữ liệu đó và toán tử quan hệ so sánh trong switch luôn luôn là <code>==</code></p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> Chương trình xác định 1 số và xuất ra tên tháng tương ứng với số đó.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+        $th = 1;
+        switch ($th)
+        {
+            case 1:
+                echo 'Tháng một';
+                break;
+            case 2:
+                echo 'Tháng hai';
+                break;
+            case 3:
+                echo 'Tháng ba';
+                break;
+            case 4 :
+                echo 'Tháng bốn';
+                break;
+            case 5 :
+                echo 'Tháng năm';
+                break;
+            case 6 :
+                echo 'Tháng sáu';
+                break;
+            case 7 :
+                echo 'Tháng bảy';
+                break;
+            case 8 :
+                echo 'Tháng tám';
+                break;
+            case 9 :
+                echo 'Tháng chín';
+                break;
+            case 10 :
+                echo 'Tháng mười';
+                break;
+            case 11 :
+                echo 'Tháng mười một';
+                break;
+            case 12 :
+                echo 'Tháng mười hai';
+                break;
+            default:
+                echo 'Tháng không tồn tại';
+                break;
+        }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Ngoài ra, cũng tương tự như câu lệnh if, câu lệnh <strong>switch cũng có thể lồng nhau</strong>.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$a = 5;
+// Kiểm tra $a có phải là số nguyên không
+$check = is_int($a); 
+switch ($check) {
+    // Nếu $a là số nguyên thì thực thi dòng lệnh bên dưới
+    case "true": 
+        switch ($a) {
+            case 0:
+                echo "a bằng 0";
+                break;
+            case 2:
+                echo "a bằng 2";
+                break;
+            case 3:
+                echo "a bằng 3";
+                break;
+            case 4:
+                echo "a bằng 4";
+                break;
+            case 5:
+                echo "a bằng 5";
+                break;
+            default:
+                echo "$a";
+        }
+        break;
+    default: // Nếu $a không là số nguyên thì thực thi dòng lệnh bên dưới
+        echo "a không là số nguyên";
+}
+?&gt;</pre>
+<p>Qua bài viết này mình đã giới thiệu sơ lược về các biểu thức điều kiện như if, if&#8230;else, iii&#8230;elseif&#8230;else và câu lệnh switch để các bạn tự học và thực hành cho những bài toán sau này.</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/" target="_blank" rel="noopener noreferrer">Bài 4: Toán tử và biểu thức trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/" target="_blank" rel="noopener noreferrer">Bài 3: Những kiểu dữ liệu trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7538"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/">Bài 5: Biểu Thức Điều Kiện Trong PHP (Lệnh if, else, switch)</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-5-bieu-thuc-dieu-kien-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bài 4: Toán tử và biểu thức trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/#respond</comments>
+				<pubDate>Sat, 14 Dec 2019 00:33:29 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7520</guid>
+				<description><![CDATA[<p>Trong ngôn ngữ PHP nói riêng và các ngôn ngữ lập trình nói chung thường hỗ trợ một tập các toán tử (operator): nó có hành vi gần giống như hàm, nhưng có cú pháp và ngữ nghĩa khác với hàm thông thường. Các ví dụ đơn giản thông dụng bao gồm toán tử số [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/">Bài 4: Toán tử và biểu thức trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Trong ngôn ngữ PHP nói riêng và các ngôn ngữ lập trình nói chung thường hỗ trợ một tập các toán tử (operator): nó có hành vi gần giống như hàm, nhưng có cú pháp và ngữ nghĩa khác với hàm thông thường. Các ví dụ đơn giản thông dụng bao gồm toán tử số học (phép cộng với +), so sánh (với &gt;), và logic (như AND hay &amp;&amp;).</p>
+<figure id="attachment_7531" aria-describedby="caption-attachment-7531" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/toan-tu-trong-php.png"><img class="size-full wp-image-7531" src="http://localhost:82/demowp/wp-content/uploads/2019/12/toan-tu-trong-php.png" alt="toan tu trong php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/toan-tu-trong-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/12/toan-tu-trong-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7531" class="wp-caption-text">Toán Tử trong PHP</figcaption></figure>
+<p><strong>Ngôn ngữ PHP hỗ trợ các kiểu toán tử sau:</strong></p>
+<ul class="list">
+<li>Toán tử số học</li>
+<li>Toán tử so sánh (hay toán tử quan hệ)</li>
+<li>Toán tử logic (hay toán tử luận lý)</li>
+<li>Toán tử gán</li>
+<li>Toán tử điều kiện (hoặc toán tử 3 ngôi)</li>
+</ul>
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Mục Lục B&agrave;i Viết</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list"><li><a href="#Khai_Niem_Ve_Bieu_Thuc" title="Khái Niệm Về Biểu Thức">Khái Niệm Về Biểu Thức</a></li><li><a href="#Toan_tu_so_hoc_trong_PHP" title="Toán tử số học trong PHP">Toán tử số học trong PHP</a></li><li><a href="#Toan_tu_quan_he_so_sanh_trong_PHP" title="Toán tử quan hệ (so sánh) trong PHP">Toán tử quan hệ (so sánh) trong PHP</a></li><li><a href="#Toan_tu_luan_ly_logic_trong_PHP" title="Toán tử luận lý logic trong PHP">Toán tử luận lý logic trong PHP</a><ul><li><a href="#Do_uu_tien_toan_tu_luan_ly" title="Độ ưu tiên toán tử luận lý">Độ ưu tiên toán tử luận lý</a></li></ul></li><li><a href="#Toan_tu_gan_trong_PHP" title="Toán tử gán trong PHP">Toán tử gán trong PHP</a></li><li><a href="#Toan_tu_dieu_kien_trong_PHP" title="Toán tử điều kiện trong PHP">Toán tử điều kiện trong PHP</a></li><li><a href="#Phan_loai_toan_tu_trong_PHP" title="Phân loại toán tử trong PHP">Phân loại toán tử trong PHP</a></li><li><a href="#Do_uu_tien_cua_cac_toan_tu_trong_PHP" title="Độ ưu tiên của các toán tử trong PHP">Độ ưu tiên của các toán tử trong PHP</a></li></ul></nav></div>
+
+<p>Trước khi tham gia soi mó vào các toán tử trên, ta cần phải  biết thêm 1 khái niệm nữa đó là <strong>Biểu Thức.</strong></p>
+<h2><span style="color: #0000ff;"><strong>Khái Niệm Về Biểu Thức</strong></span></h2>
+<p><strong>Biểu thức</strong> là sự kết hợp của một hay nhiều giá trị, hằng số, biến, toán tử, và hàm,&#8230; Mói một cách khác, Biểu Thức là một tập hợp bao gồm các toán hạng và toán tử.</p>
+<p><strong>Toán hạng</strong> là những giá trị, hằng số, biến,&#8230;được truyền vào trong phép toán. <strong>Toán tử</strong> (<strong>operator</strong>) là các phép tính <strong>+ , &#8211; , * , / , % ,&#8230;</strong></p>
+<h2><span style="color: #0000ff;"><strong>Toán tử số học trong PHP</strong></span></h2>
+<p>Bảng dưới liệt kê các toán tử số học được hỗ trợ bởi ngôn ngữ PHP:</p>
+<p>Giả sử biến <strong>$a</strong> giữ giá trị 10, biến <strong>$b</strong> giữ giá trị là 20 thì:</p>
+<table class="table table-bordered" style="width: 92.1285%;">
+<tbody>
+<tr>
+<th style="width: 14.5136%;" width="10%">Toán tử</th>
+<th style="width: 40.4864%;" width="45%">Miêu tả</th>
+<th style="width: 45.0584%;">Biểu Thức Ví dụ</th>
+</tr>
+<tr>
+<td style="width: 14.5136%;">+</td>
+<td style="width: 40.4864%;">$cộng hai toán hạng</td>
+<td style="width: 45.0584%;">$a + $b kết quả là 30</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">&#8211;</td>
+<td style="width: 40.4864%;">Trừ toán hạng thứ hai từ toán hạng đầu</td>
+<td style="width: 45.0584%;">$a &#8211; $b kết quả là -10</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">*</td>
+<td style="width: 40.4864%;">Nhân hai toán hạng</td>
+<td style="width: 45.0584%;">$a * $b kết quả là 200</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">/</td>
+<td style="width: 40.4864%;">Phép chia</td>
+<td style="width: 45.0584%;">$b / $a kết quả là 2</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">%</td>
+<td style="width: 40.4864%;">Phép lấy số dư</td>
+<td style="width: 45.0584%;">$b % $a kết quả là 0</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">++</td>
+<td style="width: 40.4864%;">Toán tử tăng, tăng giá trị toán hạng thêm một đơn vị</td>
+<td style="width: 45.0584%;">$a++ kết quả là 11</td>
+</tr>
+<tr>
+<td style="width: 14.5136%;">&#8212;</td>
+<td style="width: 40.4864%;">Toán tử giảm, giảm giá trị toán hạng đi một đơn vị</td>
+<td style="width: 45.0584%;">$a&#8211; kết quả là 9</td>
+</tr>
+</tbody>
+</table>
+<h2><span style="color: #0000ff;"><strong>Toán tử quan hệ (so sánh) trong PHP</strong></span></h2>
+<p>Bảng dưới liệt kê các toán tử so sánh được hỗ trợ bởi ngôn ngữ PHP. Giả sử biến $a giữ giá trị 10, biến $b giữ giá trị 20, thì:</p>
+<table class="table table-bordered" style="width: 92.1285%; height: 171px;">
+<tbody>
+<tr style="height: 17px;">
+<th style="width: 13.5019%; height: 17px;" width="10%">Toán tử</th>
+<th style="width: 49.3651%; height: 17px;" width="45%">Miêu tả</th>
+<th style="width: 37.1914%; height: 17px;">Biểu Thức Ví dụ</th>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 13.5019%; height: 17px;">==</td>
+<td style="width: 49.3651%; height: 17px;">Kiểm tra nếu 2 toán hạng bằng nhau hay không. Nếu bằng thì điều kiện là true.</td>
+<td style="width: 37.1914%; height: 17px;">($a == $b) là false.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 13.5019%; height: 17px;">!=</td>
+<td style="width: 49.3651%; height: 17px;">Kiểm tra 2 toán hạng có giá trị khác nhau hay không. Nếu không bằng thì điều kiện là true.</td>
+<td style="width: 37.1914%; height: 17px;">($a != $b) là true.</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.5019%; height: 34px;">&gt;</td>
+<td style="width: 49.3651%; height: 34px;">Kiểm tra nếu toán hạng bên trái có giá trị lớn hơn toán hạng bên phải hay không. Nếu lớn hơn thì điều kiện là true.</td>
+<td style="width: 37.1914%; height: 34px;">($a &gt; $b) là false.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 13.5019%; height: 17px;">&lt;</td>
+<td style="width: 49.3651%; height: 17px;">Kiểm tra nếu toán hạng bên trái nhỏ hơn toán hạng bên phải hay không. Nếu nhỏ hơn thì là true.</td>
+<td style="width: 37.1914%; height: 17px;">($a &lt; $b) là true.</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.5019%; height: 34px;">&gt;=</td>
+<td style="width: 49.3651%; height: 34px;">Kiểm tra nếu toán hạng bên trái có giá trị lớn hơn hoặc bằng giá trị của toán hạng bên phải hay không. Nếu đúng là true.</td>
+<td style="width: 37.1914%; height: 34px;">($a &gt;= $b) là false.</td>
+</tr>
+<tr style="height: 35px;">
+<td style="width: 13.5019%; height: 35px;">&lt;=</td>
+<td style="width: 49.3651%; height: 35px;">Kiểm tra nếu toán hạng bên trái có giá trị nhỏ hơn hoặc bằng toán hạng bên phải hay không. Nếu đúng là true.</td>
+<td style="width: 37.1914%; height: 35px;">($a &lt;= $b) là true.</td>
+</tr>
+</tbody>
+</table>
+<p>Ngoài ra còn có toán tử quan hệ <span style="color: #0000ff;"><strong><code>===</code> </strong></span>dùng để so sánh giá trị giữa các biến và hằng đúng theo giá trị và kiểu dữ liệu của nó.</p>
+<p>Ví dụ ta có <span style="color: #0000ff;"><strong><code>$a = ’123′</code></strong></span> là kiểu string, <span style="color: #0000ff;"><strong><code>$b = 123</code></strong></span> là kiểu int thì phép <span style="color: #0000ff;"><strong><code>($a == $b)</code></strong></span> cho kết quả là <strong>true</strong>, còn phép <span style="color: #0000ff;"><strong><code>($a === $b)</code> </strong></span>sẽ cho kết quả là false vì 2 biến tuy giá trị bằng nhau nhưng <strong>không cùng kiểu dữ liệu.</strong></p>
+<p><strong>=&gt;</strong> Toán tử quan hệ <span style="color: #0000ff;"><strong><code>===</code></strong><span style="color: #000000;">mang tính chất tuyệt đối.</span></span></p>
+<h2><strong><span style="color: #0000ff;">Toán tử luận lý logic trong PHP</span></strong></h2>
+<p>Toán tử luận lý là ký hiệu dùng để kết hợp hay phủ định biểu thức có chứa các toán tử quan hệ, những biểu thức dùng toán tử luận lý trả về giá trị TRUE hoặc FALSE.</p>
+<p>Bảng dưới đây chỉ rõ tất cả các toán tử logic được hỗ trợ bởi ngôn ngữ PHP. Giả sử biến $a có giá trị 10 và biến $b có giá trị 20, thì:</p>
+<table class="table table-bordered" style="width: 92.1285%;">
+<tbody>
+<tr>
+<th style="width: 13.3463%;" width="10%">Toán tử</th>
+<th style="width: 49.6829%;" width="45%">Miêu tả</th>
+<th style="width: 37.0292%;">Biểu Thức Ví dụ</th>
+</tr>
+<tr>
+<td style="width: 13.3463%;">and</td>
+<td style="width: 49.6829%;">Được gọi là toán tử Logic AND. Nếu cả hai toán hạng là true thì điều kiện trở thành true</td>
+<td style="width: 37.0292%;">($a and $b) là true.</td>
+</tr>
+<tr>
+<td style="width: 13.3463%;">or</td>
+<td style="width: 49.6829%;">Được gọi là toán tử Logic OR. Nếu một trong hai toán hạng là đúng thì điều kiện trở thành true</td>
+<td style="width: 37.0292%;">($a or $b) là true.</td>
+</tr>
+<tr>
+<td style="width: 13.3463%;">&amp;&amp;</td>
+<td style="width: 49.6829%;">Được gọi là toán tử Logic AND. Nếu cả hai toán hạng là true thì điều kiện trở thành true</td>
+<td style="width: 37.0292%;">($a &amp;&amp; $b) là true.</td>
+</tr>
+<tr>
+<td style="width: 13.3463%;">||</td>
+<td style="width: 49.6829%;">Được gọi là toán tử Logic OR. Nếu một trong hai toán hạng là đúng thì điều kiện trở thành true</td>
+<td style="width: 37.0292%;">($a || $b) là true.</td>
+</tr>
+<tr>
+<td style="width: 13.3463%;">!</td>
+<td style="width: 49.6829%;">Được gọi là toán tử Logic NOT. Sử dụng để đảo ngược trạng thái logic của toán hạng. Nếu điều kiện là true thì toán tử Logic NOT sẽ cho kết quả là false</td>
+<td style="width: 37.0292%;">!($a &amp;&amp; $b) là false.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="goto-h3-2"><strong>Độ ưu tiên toán tử luận lý</strong></h3>
+<p>Độ ưu tiên theo thứ tự như sau: NOT -&gt; AND -&gt; OR</p>
+<h2><span style="color: #0000ff;"><strong>Toán tử gán trong PHP</strong></span></h2>
+<p>Dưới đây là những toán tử gán được hỗ trợ bởi ngôn ngữ PHP:</p>
+<table class="table table-bordered" style="width: 92.1285%; height: 221px;">
+<tbody>
+<tr style="height: 17px;">
+<th style="width: 13.7354%; height: 17px;" width="10%">Toán tử</th>
+<th style="width: 36.2646%; height: 17px;" width="40%">Miêu tả</th>
+<th style="width: 50.0389%; height: 17px;">Biểu Thức Ví dụ</th>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">=</td>
+<td style="width: 36.2646%; height: 34px;">Toán tử gán đơn giản. Gán giá trị toán hạng bên phải cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c = $a + $b sẽ gán giá trị của $a + $b vào trong $c</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">+=</td>
+<td style="width: 36.2646%; height: 34px;">Thêm giá trị toán hạng phải tới toán hạng trái và gán giá trị đó cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c += $a là tương đương với $c = $c + $a</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">-=</td>
+<td style="width: 36.2646%; height: 34px;">Trừ đi giá trị toán hạng phải từ toán hạng trái và gán giá trị này cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c -= $a là tương đương với $c = $c &#8211; $a</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">*=</td>
+<td style="width: 36.2646%; height: 34px;">Nhân giá trị toán hạng phải với toán hạng trái và gán giá trị này cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c *= $a là tương đương với $c = $c * $a</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">/=</td>
+<td style="width: 36.2646%; height: 34px;">Chia toán hạng trái cho toán hạng phải và gán giá trị này cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c /= $a là tương đương với $c = $c / $a</td>
+</tr>
+<tr style="height: 34px;">
+<td style="width: 13.7354%; height: 34px;">%=</td>
+<td style="width: 36.2646%; height: 34px;">Lấy phần dư của phép chia toán hạng trái cho toán hạng phải và gán cho toán hạng trái</td>
+<td style="width: 50.0389%; height: 34px;">$c %= $a là tương đương với $c = $c % $a</td>
+</tr>
+</tbody>
+</table>
+<pre class="EnlighterJSRAW" data-enlighter-language="null">//ví dụ
+$a = $b = $c =10; //gán các toán hạng bằng nhau</pre>
+<h2><span style="color: #0000ff;"><strong>Toán tử điều kiện trong PHP</strong></span></h2>
+<p>Có nhiều hơn một toán tử được gọi là toán tử điều kiện. Đầu tiên, nó ước lượng một biểu thức là true hoặc false và sau đó thực thi một trong hai lệnh đã cho tùy thuộc vào kết quả của việc ước lượng. Toán tử điều kiện có cú pháp như sau:</p>
+<table class="table table-bordered" style="width: 92.1285%;">
+<tbody>
+<tr>
+<th style="width: 13.8911%;" width="10%">Toán tử</th>
+<th style="width: 36.1089%;" width="40%">Miêu tả</th>
+<th style="width: 50.0389%;">Ví dụ</th>
+</tr>
+<tr>
+<td style="width: 13.8911%;">? :</td>
+<td style="width: 36.1089%;">Biểu thức điều kiện</td>
+<td style="width: 50.0389%;">Nếu điều kiện là true ? Thì giá trị X : Nếu không thì giá trị Y</td>
+</tr>
+</tbody>
+</table>
+<h2><span style="color: #0000ff;"><strong>Phân loại toán tử trong PHP</strong></span></h2>
+<p>Tất cả toán tử ở trên có thể được phân thành các loại sau trong PHP:</p>
+<ul class="list">
+<li><strong>Toán tử một ngôi (unary operator</strong>), mà đặt trước một toán hạng.</li>
+<li><strong>Toán tử nhị phân (binary operator),</strong> nhận hai toán hạng và thực hiện các hoạt động số học và logic đa dạng.</li>
+<li><strong>Toán tử điều kiện (ternary operator)</strong> hay là toán tử tam ngôi, nhận ba toán hạng và ước lượng hoặc biểu thức thứ hai hoặc biểu thức thứ ba, phụ thuộc vào kết quả ước lượng của biểu thức đầu tiên.</li>
+<li><strong>Toán tử gán</strong>, mà gán một giá trị cho một biến.</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Độ ưu tiên của các toán tử trong PHP</strong></span></h2>
+<p>Độ ưu tiên các toán tử trong PHP thiết lập thứ tự ưu tiên tính toán của một biểu thức. Hay nói cách khác, Thứ tự ưu tiên toán tử trong PHP xác định cách biểu thức được tính toán.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span> toán tử nhân có quyền ưu tiên hơn toán tử cộng, và nó được thực hiện trước.</p>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th>Loại</th>
+<th>Toán tử</th>
+<th>Thứ tự ưu tiên</th>
+</tr>
+<tr>
+<td>Unary</td>
+<td><strong>!</strong> , <strong>++</strong> , &#8212;</td>
+<td>Phải sang trái</td>
+</tr>
+<tr>
+<td>Tính nhân</td>
+<td><strong>*</strong> , <strong>/</strong> ,<strong> %</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Tính cộng</td>
+<td><strong>+</strong> , <strong>&#8211;</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Quan hệ</td>
+<td><strong>&lt;</strong> , <strong>&lt;=</strong> ,<strong> &gt;</strong> , <strong>&gt;=</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Tính bằng</td>
+<td><strong>==</strong> , <strong>!=</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Logic AND</td>
+<td><strong>&amp;&amp;</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Logic OR</td>
+<td><strong>||</strong></td>
+<td>Trái sang phải</td>
+</tr>
+<tr>
+<td>Điều kiện</td>
+<td><strong>?:</strong></td>
+<td>Phải sang trái</td>
+</tr>
+<tr>
+<td>Gán</td>
+<td><strong>=</strong> , <strong>+=</strong> , <strong>-=</strong> , <strong>*=</strong> ,<strong> /=</strong> ,<strong> %=</strong></td>
+<td>Phải sang trái</td>
+</tr>
+</tbody>
+</table>
+<p><span style="text-decoration: underline;"><strong>Lưu ý:</strong></span> Việc tính toán biểu thức số học sẽ được tính toán từ trái qua phải và ưu tiên trong ngoặc trước kết hợp với độ ưu tiên trong bảng</p>
+<p><strong>Xem thêm:</strong></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/" target="_blank" rel="noopener noreferrer">Bài 3: Những kiểu dữ liệu trong PHP</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-2-cu-phap-php-co-ban-khai-bao-hang-va-bien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7520"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/">Bài 4: Toán tử và biểu thức trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-4-toan-tu-va-bieu-thuc-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Bài 3: Những kiểu dữ liệu trong PHP</title>
+		<link>http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/</link>
+				<comments>http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/#respond</comments>
+				<pubDate>Sat, 07 Dec 2019 05:10:40 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7497</guid>
+				<description><![CDATA[<p>Ở Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP đã hướng dẫn cơ bản về cú pháp và khái kiệm về biến, hằng, trong bài viết này mình sẽ giới thiệu những kiểu dữ liệu được sử dụng trong biến của ngôn ngữ PHP nhé! Cách chính để lưu [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/">Bài 3: Những kiểu dữ liệu trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở <strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-2-cu-phap-php-co-ban-khai-bao-hang-va-bien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP </a></strong>đã hướng dẫn cơ bản về cú pháp và khái kiệm về biến, hằng, trong bài viết này mình sẽ giới thiệu những kiểu dữ liệu được sử dụng trong biến của ngôn ngữ PHP nhé!</p>
+<figure id="attachment_7512" aria-describedby="caption-attachment-7512" style="width: 482px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/cac-kieu-du-lieu-php.png"><img class="size-full wp-image-7512" src="http://localhost:82/demowp/wp-content/uploads/2019/12/cac-kieu-du-lieu-php.png" alt="cac kieu du lieu php" width="482" height="271" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/cac-kieu-du-lieu-php.png 482w, http://localhost:82/demowp/wp-content/uploads/2019/12/cac-kieu-du-lieu-php-300x169.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a><figcaption id="caption-attachment-7512" class="wp-caption-text">Các kiểu dữ liệu trong PHP</figcaption></figure>
+<p>Cách chính để lưu trữ thông tin trong chương trình PHP là sử dụng một biến.</p>
+<p><span style="text-decoration: underline;"><strong>Dưới đây là những điều quan trọng nhất bạn nên biết về biến trong PHP.</strong></span></p>
+<ul class="list">
+<li>Tất cả các biến trong PHP đều được <strong>kí hiệu với dấu $ ở đầu.</strong></li>
+<li>Giá trị của một biến là giá trị của phép gán gần đây nhất của nó.</li>
+<li>Các <strong>biến được gán với toán tử =</strong>, biến ở bên trái còn biểu thức được ước lượng ở bên phải.</li>
+</ul>
+<ul class="list">
+<li>PHP làm rất tốt việc chuyển đổi tự động từ kiểu này sang kiểu khác khi cần thiết.</li>
+<li>Biến trong PHP giống với Perl.</li>
+</ul>
+<p><span style="text-decoration: underline;"><strong>PHP có tổng tất cả 8 kiểu dữ liệu mà chúng ta sử dụng để xây dựng các biến.</strong></span></p>
+<ul class="list">
+<li><b>Integer</b> − Kiểu INT số nguyên. Ví dụ 1989</li>
+<li><b>Double, Float</b>− Kiểu số thực. Ví dụ 3.14159 hay 49.1.</li>
+<li><b>Boolean</b> − có 2 giá trị TRUE hoặc FALSE.</li>
+<li><b>NULL</b> − là một kiểu đặc biệt, nó chỉ có giá trị: NULL</li>
+<li><b>String</b> − là chuỗi các kí tự.</li>
+<li><b>Array</b> − là tập hợp được đặt tên và lập chỉ mục của các giá trị khác.</li>
+<li><b>Object</b> − là instance (sự thể hiện) của các lớp mà lập trình viên tự định nghĩa, nó có thể đóng gói các các loại giá trị và hàm khác nhau, nó dành riêng cho các lớp.</li>
+<li><b>Resource</b> − là một biến đặc biệt nó giữ tham chiếu tới các tài nguyên ngoại vi đến PHP (ví dụ: kết nối Database).</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Kiểu dữ liệu Int (Integer)</strong></span></h2>
+<p>Chúng là tất cả các số, bao gồm cả nguyên âm và nguyên dương, nhưng không bao gồm số thực. Nó là kiểu đơn giản nhất. Chúng có thể được gán cho một biến hoặc được sử dụng trong biểu thức</p>
+<p>Phạm vi kiểu int nằm trong vùng từ -2147483648 đến 2147483648</p>
+<p>Đặc biệt kiểu int có thể ở viết ở nhiều cơ số khác nhau. Kiểu số nguyên có thể trong hệ thập phân, hệ bát phân và hệ thập lục phân. Mặc định là hệ thập phân, hệ bát phân &#8211; số nguyên được chỉ định bắt đầu với số 0 và hệ thập lục phân bắt đầu với 0x.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$bien_int = 12345;
+$bien_int_2 = -12345 + 12345;
+echo $bien_int . $bien_int_2;
+$thap_luc_phan = 0x1A; // số thập lục phân
+?&gt;</pre>
+<h3><strong>Ép dữ liệu sang kiểu INT</strong></h3>
+<p><strong>Cú Pháp</strong>: <strong><span style="color: #0000ff;"><code>(int)$ten_bien;</code></span></strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$bien1 = '123'; //đây là 1 biến chứa chuỗi ký tự $bien = (int)$bien; //biến khi giờ đã được ép kiểu sang int và nó có giá trị là số 123
+$bien1 = (int)$bien1;
+echo $bien1; //khi chạy lệnh echo thì kết quả xuất ra màn hình sẽ là số 123
+
+$bien2 = '123a';
+$bien2 = (int)$bien2;
+echo $bien2; //khi chạy lệnh echo thì kết quả xuất ra màn hình sẽ là số 123, ký tự a sẽ không in được vì không thể chuyển sang số và nó sẽ xoá ký tự đó đi
+
+$bien3 = 'a123';
+$bien3 = (int)$bien3;
+echo $bien3; //khi chạy lệnh echo thì kết quả xuất ra màn hình sẽ là số 0 , ký tự a sẽ không in được vì không thể chuyển sang số và nó sẽ xoá ký tự đó đi
+?&gt;</pre>
+<p>Trong đoạn code trên, các bạn chú ý vào <span style="color: #0000ff;"><strong>$bien3</strong></span>, biến này có chứa lý tự &#8216;a&#8217; đầu tiên nên nó sẽ không chuyển sang kiểu int được và tự động cắt bỏ tất cả mọi thứ đằng sau nó. Suy ra khi này nó sẽ thành biến rống, và khi nó là chuỗi rống thì sang kiểu <strong>INT</strong> nó sẽ là số 0</p>
+<p>Để kiểm tra một biến nào đó có phải kiểu <strong>INT</strong> không bạn dùng 2 hàm <strong><span style="color: #0000ff;"><code>is_int($bien)</code> </span></strong>hoặc <strong><span style="color: #0000ff;"><code>is_integer($bien)</code></span></strong> kết quả trả về giá trị <strong>True </strong>nếu là kiểu INT và <strong>False </strong>nếu không phải kiểu INT.</p>
+<h2><span style="color: #0000ff;"><strong>Kiểu số thực (Double, Float)</strong></span></h2>
+<p><span class="fontstyle0">Số thực gồm hai phần, phần nguyên và phần thập phân, được ngăn cách nhau bằng dấu chấm. Kích cỡ của nó được xác định phụ thuộc vào từng <strong>platform </strong>, giá trị lớn nhất xấp xỉ 1.8e308</span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+   $bien_double_1 = 2.2888800;
+   $bien_double_2 = 2.2111200;
+   $ket_qua = $bien_double_1 + $bien_double_2;
+   print("$bien_double_1 + $bien_double_2 = $ket_qua &lt;br&gt;");
+?&gt;</pre>
+<p>Kết quá xuất ra hàm hình sẽ là: <span style="color: #ff0000;"><strong>2.28888 + 2.21112 = 4.5</strong></span></p>
+<h3><strong>Ép dữ liệu sáng kiểu số thực</strong></h3>
+<p>Cũng như kiểu INT, đẻ ép 1 biến sang kiểu số thực bạn chỉ việc sử dụng (float) hoặc (double) trước biến đó. Ví dụ:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$bien = 12;
+$bien = (float) $bien; // khi này biến bị ép sang kiểu float
+$bien = (double) $bien; // khi này biến bị ép sang kiểu double
+echo $bien;
+?&gt;</pre>
+<p>Cũng giống INT, nếu bạn muốn <strong>kiểm tra xem 1 biến có phải thuộc kiểu dữ liệu là số thực</strong> hay không thì bạn sử dụng 2 hàm này nhé: <strong>is_float($bien)</strong> hoặc <strong>is_double($bien)</strong></p>
+<h2><span style="color: #0000ff;"><strong>Kiểu Boolean trong PHP</strong></span></h2>
+<p>Kiểu dữ liệu đơn giản nhất trong PHP. Nó chỉ chứa 2 giá trị là đúng hoặc sai (TRUE hoặc FALSE). Để tạo biến kiểu boolean thì bạn gán giá trị cho nó là TRUE hoặc FALSE.</p>
+<p><strong>Đây là quy tắc để xác định tính đúng đắn của bất kì giá trị nào chưa phải là kiểu Boolean.</strong></p>
+<ul class="list">
+<li>Nếu giá trị là một số, nó là <strong>false nếu nó bằng 0 và true nếu khác 0.</strong></li>
+<li>Nếu giá trị là một chuỗi, nó <strong>false</strong> nếu <strong>chuỗi là rỗng</strong> (không tồn tại kí tự nào) hoặc là chuỗi &#8220;0&#8221;, nếu không là true.</li>
+<li>Giá trị của kiểu NULL <strong>luôn luôn là false.</strong></li>
+<li>Nếu giá trị là một array, nó false nếu nó không chứa các giá trị khác và nếu không là true. Với một object, chứa một giá trị nghĩa là có một biến thành viên đã được gán một giá trị.</li>
+<li>Resource hợp lệ là true (mặc dù có một vài hàm trả về các resource khi chúng thành công, và trả về FALSE nếu thất bại).</li>
+<li>Đừng sử dụng double như là Boolean.</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">&lt;?php
+$a = 123; // TRUE
+$b = 0; // FALSE
+$c = '0'; // FALSE
+$d = 'a123b' // TRUE
+$e = null; // FALSE
+$f = ''; // FALSE
+?&gt;</pre>
+<h2><span style="color: #0000ff;"><strong>Kiểu Chuỗi (String) trong PHP</strong></span></h2>
+<p>Kiểu chuỗi trong PHP gồm string(chuỗi) và kiểu char(ký tự). Để khai báo chuỗi cho 1 biến, các bạn chỉ cần gán 1 chuỗi vào biến đó.</p>
+<p>Chuỗi phải được bao quanh bằng dấu nháy đơn <code>‘</code> hoặc dấu nháy kép <code>“</code>. Chuỗi sử dụng nháy đơn là một chuỗi tĩnh, còn chuỗi sử dụng nháy kép là một chuỗi động, thay đổi tùy theo giá trị của biến.</p>
+<p>Không có giới hạn về độ dài của chuỗi, có thể dài tùy ý nếu bộ nhớ cho phép.</p>
+<p><span style="text-decoration: underline;"><strong>Ví dụ:</strong></span></p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">$string_1 = "Chào mừng đến với tanhongit.net";
+$string_2 = "abc 123 hello";</pre>
+<p><strong>Các chuỗi được giới hạn bởi các dấu nháy kép được PHP xử lý bằng 2 cách sau đây:</strong></p>
+<ul class="list">
+<li>Các chuỗi kí tự bắt đầu với (\) được thay thế với một kí tự đặc biệt</li>
+<li>Các biến (bắt đầu với $) được thay thế bằng biểu diễn chuỗi của giá trị của nó.</li>
+</ul>
+<p><strong>Các quy tắc thay thế:</strong></p>
+<ul class="list">
+<li><span style="color: #0000ff;"><strong>\n</strong></span> được thay thế bằng ký tự newline (dòng mới)</li>
+<li><span style="color: #0000ff;"><strong>\r</strong> </span>được thay thế bởi ký tự carriage-return, được hiểu là đưa con trỏ về đầu dòng nhưng không xuống dòng.</li>
+<li><span style="color: #0000ff;"><strong>\t</strong></span> được thay thế bởi ký tự tab</li>
+<li><span style="color: #0000ff;"><strong>$</strong> </span>được thay thế bằng một dấu $</li>
+<li><span style="color: #0000ff;"><strong>\&#8221;</strong></span> được thay thế bằng một dấu nháy kép &#8220;</li>
+<li><span style="color: #0000ff;"><strong>\\</strong></span> được thay thế bằng một dấu nháy đơn \</li>
+</ul>
+<p>Để kiểm tra một biến kiểu chuỗi (string) ta dùng hàm <span style="color: #0000ff;"><strong><code>is_string($bien)</code></strong></span>, kết quả hàm này trả về TRUE nếu đúng và FALSE nếu không đúng.</p>
+<h2><span style="color: #0000ff;"><strong>Kiểu Mảng (Array) trong PHP</strong></span></h2>
+<p>Một mảng là một cấu trúc dữ liệu mà lưu giữ danh sách  các phần tử có cùng kiểu dữ liệu và nó là một trong các kiểu dữ liệu trong php có độ phức tạp tính toán cao. Riêng với PHP thì các phần tử của mảng có thể không cùng kiểu dữ liệu, và các phần tử của mảng được truy xuất thông qua các chỉ mục(vị trí) của nó nằm trong mảng.</p>
+<h3 id="_2-cu-phap-1"><strong>Cú pháp</strong></h3>
+<p>Để tạo mảng chúng ta sử dụng hàm <span style="color: #0000ff;"><strong><code>array()</code></strong></span> trong PHP (Từ PHP 5.4 trở lên bạn chỉ cần viết giá trị trong cặp dấu [ ] cũng được)</p>
+<p><strong>Note:</strong> Các bạn dùng hàm <strong>var_dump($mang);</strong> để in ra các phần tử của mạng để test trong quá trình học nhé. Hàm này có thể sử dụng được tất cả các kiểu dữ liệu trong php. (Hàm var_dump chỉ dùng để test)</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//cách tạo mảng 1
+&lt;?php
+    $names=array("Tan","Binh","Minh");
+    var_dump($names);
+?&gt;</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//cách tạo mảng 2
+&lt;?php 
+$names=array(
+0 =&gt; 'Tan',
+1 =&gt; 'Binh',
+2 =&gt; 'Minh'
+); 
+var_dump($names); 
+?&gt;</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//cách tạo mảng 3 
+&lt;?php 
+$names=array(); 
+$names[0] = 'Tan';
+$names[1] = 'Binh';
+$names[2] = 'Minh';
+var_dump($names);
+?&gt;</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">//cách tạo mảng 4 
+&lt;?php 
+$names=array(); 
+$names[] = 'Tan'; 
+$names[] = 'Binh'; 
+$names[] = 'Minh'; 
+var_dump($names); 
+?&gt;</pre>
+<p><strong>Có 3 loại mảng trong PHP:</strong></p>
+<ul>
+<li> Mảng indexed</li>
+<li>Mảng associative</li>
+<li>Mảng đa chiều</li>
+</ul>
+<p>Các bạn xem chi tiết về mảng ở bài viết sau nhé!</p>
+<h2><span style="color: #0000ff;"><strong>Kiểu NULL trong PHP</strong></span></h2>
+<p>NULL là một kiểu đặc biệt mà chỉ có một giá trị NULL. Để cung cấp cho biến giá trị NULL, đơn giản bạn gán nó như sau:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php">$a = null; // Khởi tạo biến $a và mang gán giá trị null
+$b = (int)$a; // sau khi ép kiểu, biến $b có giá trị là ( 0 )
+$c = (string)$a; // sau khi ép kiểu, biến $c có giá trị rỗng ( '' )
+$d = (bool)$a; // sau khi ép kiểu, biến $d có giá trị FALSE</pre>
+<p><span class="fontstyle0">Giá trị của biến có thể được xóa bằng cách gán giá trị NULL cho biến đó.</span></p>
+<p>Lúc bạn khởi tạo một biến và bạn gán = NULL thì sẽ hệ thông sẽ không tốn bộ nhớ để lưu trữ, nên việc sử dụng nó rất có lợi.</p>
+<p>Theo qui ước, hằng đặc biệt NULL là viết hoa, nhưng thực sự nó là không phân biệt kiểu chữ, cho nên bạn vẫn có thể viết thường mà không bị lỗi.</p>
+<p><strong>Một biến mà đã được gán NULL sẽ có các thuộc tính sau:</strong></p>
+<ul class="list">
+<li>Nó ước lượng là FALSE trong một ngữ cảnh Boolean.</li>
+<li>Nó trả về FALSE khi được kiểm tra với hàm IsSet() trong PHP.</li>
+</ul>
+<h2><span style="color: #0000ff;"><strong>Kiểu Object (đối tượng)</strong></span></h2>
+<p>Các bạn sẽ tìm hiểu và học về kiểu dữ liệu này ở phần lập trình hướng đối tượng OOP của PHP ở chương sau nhé!</p>
+<h2><span style="color: #0000ff;"><strong>Kiểu Resource</strong></span></h2>
+<p><span class="fontstyle0"><strong>resource</strong> không phải là một kiểu dữ liệu thật sự. Nó được dùng để lưu trữ các tham chiếu đến các hàm hoặc cái tài nguyên bên ngoài.</span>  Ví dụ dễ thấy nhất là kêt nối đến database.</p>
+<p><span style="text-decoration: underline;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/learn-php/bai-2-cu-phap-php-co-ban-khai-bao-hang-va-bien-trong-php/" target="_blank" rel="noopener noreferrer">Bài 2: Cú pháp PHP cơ bản, Khai báo hằng và biến trong PHP</a></strong></li>
+<li><strong><a href="http://localhost:82/demowp/hoc-lap-trinh-php-can-ban/" target="_blank" rel="noopener noreferrer">Lộ trình học PHP Căn Bản</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/error-establishing-a-database-connection/" target="_blank" rel="noopener noreferrer">Cách sửa lỗi error establishing a database connection cho website</a></strong></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></div>
+</div>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7497"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">5</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/">Bài 3: Những kiểu dữ liệu trong PHP</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/learn-php/bai-3-nhung-kieu-du-lieu-trong-php/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</title>
+		<link>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/</link>
+				<comments>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/#respond</comments>
+				<pubDate>Thu, 05 Dec 2019 15:15:23 +0000</pubDate>
+		<dc:creator><![CDATA[Hoàng Tú]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Kiến Thức Máy Tính]]></category>
+		<category><![CDATA[phanmem]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Learn PHP]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7470</guid>
+				<description><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn. Ở Bài 1: Giới thiệu tổng quan ngôn [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tân Hồng IT sẽ hướng dẫn các bạn cách thiết lập Port và tạo thư mục ảo trên WampServer khi bị lỗi không truy cập vào được Localhost nhé. Việc tạo thư mục ảo giúp bạn có thể quản lý file PHP của mình dễ dàng hơn.</p>
+<p>Ở <a href="http://localhost:82/demowp/learn-php/bai-1-gioi-thieu-tong-quan-ngon-ngu-php-va-huong-dan-thiet-lap-moi-truong-de-lap-trinh-php/" target="_blank" rel="noopener noreferrer"><span style="color: #ff0000;"><span style="text-decoration: underline;"><em><strong>Bài 1: Giới thiệu tổng quan ngôn ngữ PHP và hướng dẫn thiết lập môi trường để lập trình</strong></em><strong> PHP</strong></span><span style="color: #000000;">. </span></span></a>Tân Hồng IT đã dùng WampServer làm môi trường chính để lập trình PHP. Cùng tìm hiểu xem web server này có gì thú vị nữa không nhé!!!</p>
+<p><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png"><img class="aligncenter size-full wp-image-7486" src="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png" alt="loi port truy cap localhost" width="503" height="283" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/loi-port-truy-cap-localhost-300x169.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a></p>
+<h4><strong>Ưu điểm khi sử dụng WampServer là gì?</strong></h4>
+<p><strong>WampServer</strong> hoạt động giống một máy chủ ảo, chạy ngay trên máy của bạn. Nó cho phép bạn kiểm thử trang web mà không gặp trở ngại hay tác hại nào. Do nó được cài trên máy tính của bạn và chưa được xuất bản. <strong>WampServer</strong> vào lúc này đóng vai trò là một căn nhà an toàn cho website của bạn, bạn chưa phải đưa nó online, nhưng vẫn xem được cách nó hiển thị online trên trình duyệt là như thế nào.</p>
+<p>Các ưu điểm khi cài đặt <strong>WampServer</strong> là:</p>
+<ul>
+<li>Bạn không phải mất thời gian chờ file được upload lên mạng nữa.</li>
+<li>Tạo backup dễ dàng hơn, nhanh hơn.</li>
+<li>Không phụ thuộc vào kết nối internet, máy tính không kết cần nối mạng bạn vẫn có thể phát triển web tại localhost.</li>
+<li>Tăng tốc quá trình xử lý, thao tác. Lập trình viên và chuyên gia thiết kế của bạn sẽ thích điều này.</li>
+<li>Bạn hình dung được nội dung được bố cục như thế nào.</li>
+</ul>
+<p>Sau khi đã có một website hoàn chỉnh tại localhost nhờ vào việc cài WampServer, để đưa website lên mạng bạn chỉ việc mua thêm hosting và tên miền cho nó.</p>
+<h4><strong>Tổng quan về thanh menu của WampServer:</strong></h4>
+<ul>
+<li><strong>Localhost</strong>: Cho phép mở website nằm trong folder web root bằng trình duyệt web.</li>
+<li><strong>phpMyAdmin</strong>: Cho phép mở trang quản lý cơ sở dữ liệu <strong>phpMyAdmin</strong> thông qua trình duyệt web.</li>
+<li><strong>Apache</strong>: Các lệnh liên quan đến web chủ Apache.</li>
+<li><strong>MySQL</strong>: Các lệnh liên quan đế hệ quản trị cơ sở dữ liệu MySQL.</li>
+<li><strong>PHP</strong>: Nơi sẽ hiển thị và cho phép bạn chỉnh sửa các tập tin cấu hình sử dụng ngôn ngữ lập trình PHP.</li>
+<li><strong>Start All Services</strong>: Bật tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Stop All Services</strong>: Tắt tất cả các chức năng/dịch vụ của WAMP.</li>
+<li><strong>Restart All Services</strong>: Khởi động lại tất cả các chức năng/dịch vụ của WAMP.</li>
+</ul>
+<h4><strong>Thiết lập Port mới trên WampServer tránh lỗi không truy cập vào localhost:</strong></h4>
+<p>Khi bạn cài đặt nhiều <strong>gói webserver</strong> vào máy tính thì khi này các địa chỉ <strong>localhost</strong> phải được cấu hình khác nhau, Nếu không khi truy cập vào địa chỉ <strong>localhost</strong> sẽ bị lỗi không truy cập được.</p>
+<p>Ví dụ bạn cài đặt <strong>Xampp</strong> đầu tiên, khi này nó sẽ mặc định lấy địa chỉ <strong>https://localhost/</strong> làm port của nó. Sau đó bạn lại cài thêm <strong>Wampserver</strong> vào máy, lúc này khi truy cập vào <strong>https://localhost/</strong> sẽ bị lỗi. Bạn phải chỉnh sửa thành một Port  khác ví dụ như<strong> https://localhost:81/</strong> , <strong>https://localhost:83/ ,&#8230;</strong></p>
+<p>Hãy cùng Tân Hồng IT tìm hiểu về cách thay đổi port trên <strong>WampServer</strong> nha. Thay đổi port giúp cho máy của bạn tránh những xung đột không đáng có khi lập trình.</p>
+<p>Đầu tiên, các bạn mở <strong>WampServer</strong> lên và click chuột trái vào icon <strong>W màu xanh</strong> của Wamp. Sau đó bạn chọn <strong>Apache</strong>, tiếp theo click vào file <strong>httpd.conf</strong>.</p>
+<figure id="attachment_7476" aria-describedby="caption-attachment-7476" style="width: 502px" class="wp-caption aligncenter"><img class="wp-image-7476 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png" alt="Bước 1" width="502" height="360" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1.png 502w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-300x215.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-120x86.png 120w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh1-1-350x250.png 350w" sizes="(max-width: 502px) 100vw, 502px" /><figcaption id="caption-attachment-7476" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>Lúc này file <strong>httpd.conf </strong>đã được mở tự động bằng <strong>Notepad++</strong> nếu máy của bạn có sẵn hoặc một trình soạn thảo khác. Trên file <strong>httpd.conf</strong> các bạn tìm kiếm bằng cách ấn <strong>CTRL+H</strong>, tại <strong>Find What: </strong>nhập <strong>80</strong>, rồi thay đổi lại tại <strong>Replace with</strong>: nhập <strong>82. </strong>Xong tất cả thì bạn chọn <strong>Replace All </strong>và nhớ <strong>CTRL+S </strong>nha <strong>^^.</strong></p>
+<figure id="attachment_7475" aria-describedby="caption-attachment-7475" style="width: 1366px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png"><img class="wp-image-7475 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png" alt="lỗi không truy cập localhost" width="1366" height="728" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1.png 1366w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-300x160.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1024x546.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-768x409.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-750x400.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh2-1-1140x608.png 1140w" sizes="(max-width: 1366px) 100vw, 1366px" /></a><figcaption id="caption-attachment-7475" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi đã lưu lại các bạn nhớ nhấn <strong>Restart All Services</strong> để port mới được hoạt động nhé.</p>
+<figure id="attachment_7473" aria-describedby="caption-attachment-7473" style="width: 230px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png"><img class="wp-image-7473 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png" alt="Bước 3" width="230" height="309" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh3.png 230w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh3-223x300.png 223w" sizes="(max-width: 230px) 100vw, 230px" /></a><figcaption id="caption-attachment-7473" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Cuối cùng các bạn mở trình duyệt lên nhập <strong>localhost:82 </strong>và hiện ra như ảnh dưới là các bạn đã thay đổi port thành công rồi đó.</p>
+<figure id="attachment_7477" aria-describedby="caption-attachment-7477" style="width: 1352px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png"><img class="wp-image-7477 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png" alt="Bước 4" width="1352" height="537" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh4.png 1352w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-300x119.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1024x407.png 1024w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-768x305.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-750x298.png 750w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh4-1140x453.png 1140w" sizes="(max-width: 1352px) 100vw, 1352px" /></a><figcaption id="caption-attachment-7477" class="wp-caption-text">Bước 4</figcaption></figure>
+<h4><strong>Tạo thư mục ảo trên WampServer:</strong></h4>
+<p>Khi sử dụng WampServer, file php của bạn thường nằm bên trong thư mục <strong>C:/wamp64/www/*.php</strong>. Điều này rất bất tiện đối với các máy đã đóng băng, vì khi tắt hay reset máy đồng nghĩa với dữ liệu trong ổ C:/ trước đó bạn đã từng thao tác sẽ bay màu. Sau đây mình sẽ hướng dẫn các bạn tạo thư mục ảo để bạn quản lý file dễ dàng hơn.</p>
+<p>Các bạn Click chuột trái vào biểu tượng của <strong>WAMP</strong>, chọn <strong>Apache –&gt; Alias directories –&gt; Add an alias.</strong></p>
+<figure id="attachment_7478" aria-describedby="caption-attachment-7478" style="width: 503px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png"><img class="wp-image-7478 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png" alt="Bước 1" width="503" height="311" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh5.png 503w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh5-300x185.png 300w" sizes="(max-width: 503px) 100vw, 503px" /></a><figcaption id="caption-attachment-7478" class="wp-caption-text">Bước 1</figcaption></figure>
+<p>&nbsp;</p>
+<p>Một cửa sổ <strong>Command</strong> sẽ hiện lên, và các bạn làm theo hướng dẫn trên màn hình. Ở đây mình đặt alias là <strong>larva</strong></p>
+<figure id="attachment_7479" aria-describedby="caption-attachment-7479" style="width: 977px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png"><img class="wp-image-7479 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png" alt="Bước 2" width="977" height="509" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh6.png 977w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-300x156.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-768x400.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh6-750x391.png 750w" sizes="(max-width: 977px) 100vw, 977px" /></a><figcaption id="caption-attachment-7479" class="wp-caption-text">Bước 2</figcaption></figure>
+<p>Sau khi Enter nó sẽ yêu cầu bạn gõ đường dẫn đến thư mục cần tạo thư mục ảo (lưu ý thư mục này phải tồn tại), ở đây mình tạo thư mục ảo trỏ đến <strong>D:/larva </strong>và ấn <strong>Enter</strong> và sẽ hiện thông báo bạn đã tạo thư mục ảo thành công.</p>
+<p><span style="text-decoration: underline;"><span style="font-size: 20px;"><strong>Lưu ý:</strong></span></span> Khi bạn đặt tên cho <strong>alias</strong> là tên gì thì thư mục bạn muốn dẫn đến cũng nên đặt tên tương tự để tránh bị lỗi nhé !</p>
+<figure id="attachment_7483" aria-describedby="caption-attachment-7483" style="width: 978px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png"><img class="wp-image-7483 size-full" src="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png" alt="Bước 3" width="978" height="515" srcset="http://localhost:82/demowp/wp-content/uploads/2019/12/anh7.png 978w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-300x158.png 300w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-768x404.png 768w, http://localhost:82/demowp/wp-content/uploads/2019/12/anh7-750x395.png 750w" sizes="(max-width: 978px) 100vw, 978px" /></a><figcaption id="caption-attachment-7483" class="wp-caption-text">Bước 3</figcaption></figure>
+<p>Sau khi tạo xong, khi muốn chạy file .php trong thư mục<strong> D:/larva/</strong> bạn vào trình duyệt gõ <strong>localhost:82/larva/file php của bạn</strong> ( Tương tự khi các bạn đặt <strong>alias</strong> và trỏ đến thư mục khác ).</p>
+<p>Đến đây mình xin kết thúc bài viết này, hẹn gặp lại các bạn ở những bài tiếp theo nhé. &lt;3</p>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7470"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">2</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/">Thay đổi Port sửa lỗi không truy cập vào được localhost và cách tạo thư mục ảo trên WampServer</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/thiet-lap-port-loi-khong-truy-cap-localhost/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</title>
+		<link>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/</link>
+				<comments>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/#respond</comments>
+				<pubDate>Sat, 26 Oct 2019 06:05:51 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[Adobe]]></category>
+		<category><![CDATA[Bootstrap]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công cụ]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Front End]]></category>
+		<category><![CDATA[graphic-design]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Phần Mềm]]></category>
+		<category><![CDATA[Share Code]]></category>
+		<category><![CDATA[Ứng Dụng]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Website]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[Adobe 2020]]></category>
+		<category><![CDATA[Phần Mềm Tiện Ích]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7248</guid>
+				<description><![CDATA[<p>Download Adobe Dreamweaver CC 2020 &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động. Nó được coi là [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p><span><strong>Download Adobe Dreamweaver CC 2020</strong> &#8211; là phiên bản mới của ứng dụng được thiết kế để tạo các trang web chuyên nghiệp. </span><span>Phần mềm thiết kế web Adobe Dreamweaver CC có giao diện trực quan cho phép bạn tạo và chỉnh sửa các trang web và ứng dụng di động.</span></p>
+<p>Nó được coi là trình soạn thảo <strong>HTML</strong> chuẩn <strong>WYSIWYG</strong> tiêu chuẩn của ngành, điều này sẽ làm cho việc thiết kế web trở nên rất dễ dàng cũng như rất thoải mái.</p>
+<p><figure id="attachment_7250" aria-describedby="caption-attachment-7250" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg"><img class="size-full wp-image-7250" src="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg" alt="adobe dreamweaver cc 2020" width="699" height="456" srcset="http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/10/adobe-dreamweaver-cc-2020-300x196.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7250" class="wp-caption-text">Download adobe dreamweaver cc 2020</figcaption></figure></p>
+<p><strong>Adobe Dreamweaver CC 2020</strong> giúp bạn tạo,  mã và quản lý các trang web động dễ dàng bằng công cụ mã hóa thông minh, đơn giản.</p>
+<p>Đây được coi như là một phần mềm <strong>thiết kế web</strong> chuyên nghiệp cung cấp giao diện hình ảnh trực quan cho việc thiết kế và chỉnh sửa các trang web của Adobe.</p>
+<h2><span id="Cac_tinh_nang_cua_Adobe_Dreamweaver_CC_2019" class="ez-toc-section"><strong>Các tính năng của Adobe Dreamweaver CC</strong></span></h2>
+<ul>
+<li>Được coi là trình soạn thảo HTML WYSIWYG tiêu chuẩn của ngành, điều này sẽ làm cho web desiging rất dễ dàng cũng như rất thoải mái.</li>
+<li>Cho phép nhà thiết kế tạo trang web có khả năng hoạt động trên máy tính để bàn, thiết bị di động và máy tính bảng.</li>
+<li>Có công nghệ Bố cục Lưới Chất lỏng cùng với bảng điều khiển Xem trước MultiScreen sẽ cho phép bạn có được khả năng tương thích với các sản phẩm cầm tay.</li>
+<li>Có một bộ chuyển tiếp CSS sẽ đơn giản hóa quá trình tạo một số hình ảnh động hấp dẫn.</li>
+</ul>
+<h2><strong><span id="Tinh_nang_moi">Các tính năng mới của Adobe Dreamweaver CC 2020</span></strong></h2>
+<ul>
+<li>Thiết kế và xây dựng các trang Web tiêu chuẩn</li>
+<li>Mã hóa được tích hợp với môi trường đồ họa</li>
+<li>Hỗ trợ các công nghệ web và ngôn ngữ lập trình</li>
+<li>Hỗ trợ JavaScript, ActionScript, CSS, ASP, PHP, HTML</li>
+<li>Thiết kế và phát triển nhiều trang động dựa trên công nghệ Ajax</li>
+<li>Khả năng tự động phát hiện loại chương trình mã lập trình</li>
+<li>Xem và chỉnh sửa các trang web được thiết kế trực tuyến</li>
+<li>Khả năng tải lên các trang trực tiếp trên các máy chủ</li>
+<li>Công cụ thiết kế mới và hỗ trợ tích hợp công nghệ CSS</li>
+<li>Tương thích hoàn toàn với các tiêu chuẩn web mới nhất</li>
+<li>Hỗ trợ nhiều màn hình dành cho người dùng Windows</li>
+<li>Giao diện người dùng được thiết kế lại, hiện đại hơn</li>
+<li>Tăng cường tích hợp Bootstrap và hỗ trợ phiên bản mới nhất</li>
+</ul>
+<h2><span id="Cau_hinh_toi_thieu" class="ez-toc-section"><strong>Cấu hình tối thiểu:</strong></span></h2>
+<ul>
+<li>CPU: Intel® Core 2 or AMD Athlon® 64 processor; 2 GHz hoặc cao hơn</li>
+<li>Hệ điều hành: Microsoft Windows 7 SP1, Windows 8.1, or Windows 10 64 bit</li>
+<li>Ram: 2 GB of RAM (4 GB khuyến nghị)</li>
+<li>Ổ cứng: 2 GB</li>
+<li>Màn hình: 1280×1024 display with 16-bit video card</li>
+</ul>
+<hr />
+<h2 style="text-align: center;"><span id="Download_Adobe_Dreamweaver_CC_2019" class="ez-toc-section" style="color: #ff0000;"><strong>Download Adobe Dreamweaver CC 2020</strong></span></h2>
+<p style="text-align: center;"><div class="su-button-center"><a href="https://drive.google.com/open?id=1LMPndHjZOhD7COxSvna-Eywa2NK0qbwd" class="su-button su-button-style-default" style="color:#FFFFFF;background-color:#ef2d7a;border-color:#c02462;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" target="_blank" rel="noopener noreferrer" title="Download Tại Đây"><span style="color:#FFFFFF;padding:8px 26px;font-size:20px;line-height:30px;border-color:#f46ca2;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none"><i class="sui sui-download" style="font-size:20px;color:#FFFFFF"></i> Download Adobe Dreamweaver CC 2020<small style="padding-bottom:8px;color:#FFFFFF">Download Tại Đây</small></span></a></div>
+<h2><span id="Huong_dan_cai_dat_phan_mem_Premiere_Pro_2020" class="ez-toc-section"><strong>Hướng dẫn cài đặt phần mềm Dreamweaver CC 2020</strong></span></h2>
+<ol>
+<li>Tắt phần mềm diệt virus (Chú ý tắt cả <strong>Windows Defender</strong> mặc định từ Windows.)</li>
+<li>Chạy file Setup <strong>.exe</strong> lên và chọn ngôn ngữ English.</li>
+<li>Bỏ tích ở ô “<strong>Install Home Page…”</strong> đi (Nếu bạn đã cài <strong>Microsoft Visual C++ Full</strong> rồi thì có thể bỏ tích cả 2 dấu).</li>
+<li>Nhấn <strong>Install</strong> và chờ quá trình cài đặt hoàn tất.</li>
+<li>Sử dụng phần mềm đã được cài sẵn bản quyền.</li>
+</ol>
+<hr />
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+<div><strong>Xem Thêm:</strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/phan-mem/da-phuong-tien/" target="_blank" rel="noopener noreferrer">Một số phần mềm đa phương tiện khác.</a></strong></div>
+<div>
+<div class="alert alert-info"><a href="http://localhost:82/demowp/adobe/download-full-bo-adobe-cc-2020/" target="_blank" rel="noopener noreferrer"><strong>Download Full Trọn Bộ Adobe 2020</strong></a></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a class="ajax" href="http://localhost:82/demowp/adobe/download-tron-bo-adobe-cc-2019-portable/" target="_blank" rel="noopener noreferrer">Download Trọn Bộ Adobe CC 2019 Portable</a></strong></div>
+</div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/category/tai-lieu/" target="_blank" rel="noopener noreferrer">Tổng hợp mọi tài liệu, khoá học hay và hấp dẫn có trên TanHongIT.</a></strong></div>
+<div>
+<div class="alert alert-info"><strong><a href="http://localhost:82/demowp/adobe" target="_blank" rel="noopener noreferrer">Tổng hợp các phần mềm khác của hãng Adobe</a></strong></div>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/adobe/adobe-dreamweaver-cc-2019/" target="_blank" rel="noopener noreferrer">Download Adobe Dreamweaver CC 2019 Full Active &#8211; Phần mềm thiết kế, chỉnh sửa trang web chuyên nghiệp</a></strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000; font-size: 28px;"><strong>CHÚC CÁC BẠN THÀNH CÔNG</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7248"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">1</strong>
+        <span class="kksr-muted">
+            vote        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/">Download Adobe Dreamweaver CC 2020 &#8211; Phần mềm thiết kế trang web chuyên nghiệp</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/adobe/download-adobe-dreamweaver-2020/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</title>
+		<link>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/</link>
+				<comments>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/#respond</comments>
+				<pubDate>Sun, 06 Oct 2019 02:10:26 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng IT]]></dc:creator>
+				<category><![CDATA[C Sharp]]></category>
+		<category><![CDATA[Code]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Kiến thức]]></category>
+		<category><![CDATA[Kiến Thức Lập Trình]]></category>
+		<category><![CDATA[Excel]]></category>
+		<category><![CDATA[KiếnThức Lập Trình]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=7173</guid>
+				<description><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#. Phương pháp này cũng sử dụng thư viện Interop [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Ở bài viết trước mình có hướng dẫn cho các bạn cách  đọc file Word trong C Sharp (còn gọi là C#) cùng với thư viện hỗ trợ Microsoft.Office.Interop.Word. Và ở bài viết này mình sẽ hướng dẫn các bạn cách đọc file Excel Trong C#.</p>
+<p>Phương pháp này cũng sử dụng thư viện Interop giống bài viết trước. Đầu tiên, thêm tham chiếu vào <strong><a href="https://msdn.microsoft.com/en-us/library/dd264733.aspx" target="_blank" rel="nofollow noopener noreferrer">Thư viện đối tượng Microsoft Excel XX.X</a> </strong>, nằm trong tab COM của Trình quản lý tham chiếu. Mình đã đưa ra điều này bằng cách sử dụng <strong><a href="http://www.dotnetperls.com/using-alias" rel="nofollow">bí danh</a> </strong>của Excel.</p>
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel;       //Microsoft Excel 14 object in references-&gt; COM tab</pre>
+
+
+
+<p>Nếu các bạn cảm thấy khó khăn ở bước trên mình sẽ hướng dẫn chi tiết về bước trên cho các bạn tại đây.</p>
+<p>Bạn bắt buộc phải tải <strong>DLL Microsoft.Office.Interop.Excel </strong>về máy mới có thể hoàn thành bài code này.</p>
+<p style="text-align: center;">Đây là link cập nhật phiên bản mới nhất: <a class="btn btn-default" href="https://www.dllme.com/dll/files/microsoft_office_interop_excel_dll.html" target="_blank" rel="noopener noreferrer">Download Microsoft.Office.Interop.Excel.dll</a></p>
+<p style="text-align: center;">Hoặc nếu link die thì các bạn cũng có thể <a class="btn btn-default" href="https://mega.nz/#!C6wyxQIJ!TVdvnUSDGrzcxRNn0hKtQI9mQWAIb05ZeKsqoTbWIbI" target="_blank" rel="noopener noreferrer">Download Phiên bản 15.0.4569.1506</a></p>
+<h3>Cách Cài đặt trực tiếp Microsoft.Office.Interop.Excel.dll vào Windows.</h3>
+<ol>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\System32 (nếu sử dụng HĐH 32 bit)</strong></li>
+<li>Sao chép tệp .DLL vào thư mục <strong>C:\Windows\SysWOW64 (nếu sử dụng HĐH 64 bit)</strong></li>
+<li>Cài đặt DLL đã được hoàn thành!</li>
+</ol>
+<p>Tiếp theo Bạn tạo 1 Project <strong>Console App(.Net Framework)</strong></p>
+<p><a href="https://imgur.com/LbWXePi.png"><img class="aligncenter" src="https://imgur.com/LbWXePi.png" alt="console app read file excel" width="548" height="100" /></a></p>
+<p>Trong <strong>Solution Explorer</strong> , bấm chuột phải vào tên dự án của bạn và sau đó bấm <strong>Add Reference</strong> . Các <strong>Add Reference</strong> hộp thoại sẽ xuất hiện.</p>
+<p>Trên trang <strong>Assemblies</strong>, click chọn <strong>Microsoft.Office.Interop.Excel </strong>trong danh sách <strong>Component Name .</strong> Và nhấn <strong>OK</strong>.</p>
+<p><a href="https://imgur.com/VGEKQ1g.png"><img class="aligncenter size-full" src="https://imgur.com/VGEKQ1g.png" width="717" height="879" /></a></p>
+<p>Sau khi đã làm những bước trên bạn có thể thêm tham chiếu vào thư viện được rồi.</p>
+<p>
+
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using Excel = Microsoft.Office.Interop.Excel; using Word = Microsoft.Office.Interop.Word;</pre>
+
+
+
+<p>Tiếp theo, bạn sẽ cần tạo references cho từng đối tượng COM được truy cập. Mỗi references phải được lưu giữ để thoát khỏi ứng dụng một cách hiệu quả khi hoàn thành.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">// Tạo đối tượng COM. Tạo một đối tượng COM cho mọi thứ được tham chiếu
+Excel.Application xlApp = new Excel.Application();
+Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"sandbox_test.xlsx");
+Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+Excel.Range xlRange = xlWorksheet.UsedRange;</pre>
+
+
+
+<p>Sau đó, bạn có thể đọc từ trang tính sheet, hãy nhớ rằng lập chỉ mục trong Excel không dựa trên 0. Điều này chỉ cần đọc các ô và in chúng trở lại giống như trong tệp.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//Lặp lại qua các hàng và cột và in ra bàn điều khiển khi nó xuất hiện trong tệp
+//excel is not zero based!!
+for (int i = 1; i &lt;= rowCount; i++)
+{
+    for (int j = 1; j &lt;= colCount; j++)
+    {
+        //dòng mới
+        if (j == 1)
+            Console.Write("\r\n");
+
+        //ghi giá trị vào bàn điều khiển console
+        if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+            Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t"); 
+    }
+}</pre>
+
+
+
+<p>Cuối cùng, các tham chiếu (references) đến bộ nhớ không được quản lý phải được xuất ra. Nếu điều này không được thực hiện đúng cách, thì sẽ có các quy trình kéo dài giữ quyền truy cập tập tin và ghi vào file Excel của bạn.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">//cleanup
+GC.Collect();
+GC.WaitForPendingFinalizers();
+
+//quy tắc của việc phát hành các đối tượng com:
+//không bao giờ sử dụng hai dấu chấm, tất cả các đối tượng COM phải được tham chiếu và phát hành riêng lẻ
+//  ví dụ: [somthing].[something].[something] ----&gt; bad
+
+//xuất các đối tượng com để dừng hoàn toàn quá trình excel chạy trong nền
+Marshal.ReleaseComObject(xlRange);
+Marshal.ReleaseComObject(xlWorksheet);
+
+//đóng lại và xuất thông tin
+xlWorkbook.Close();
+Marshal.ReleaseComObject(xlWorkbook);
+
+//thoát và xuất thông tin
+xlApp.Quit();
+Marshal.ReleaseComObject(xlApp);</pre>
+
+
+
+<p><strong>Full Code đầy đủ để đọc 1 file Excel trong C# :</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="csharp" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;           
+using System.Text;
+using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;       //microsoft Excel 14 object in references-&gt; COM tab
+
+namespace Sandbox
+{
+    public class Read_From_Excel
+    {
+        public static void getExcelFile()
+        {
+
+            //Create COM Objects. Create a COM object for everything that is referenced
+            Excel.Application xlApp = new Excel.Application();
+            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\E56626\Desktop\Teddy\VS2012\Sandbox\sandbox_test - Copy - Copy.xlsx");
+            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
+            Excel.Range xlRange = xlWorksheet.UsedRange;
+
+            int rowCount = xlRange.Rows.Count;
+            int colCount = xlRange.Columns.Count;
+
+            //iterate over the rows and columns and print to the console as it appears in the file
+            //excel is not zero based!!
+            for (int i = 1; i &lt;= rowCount; i++)
+            {
+                for (int j = 1; j &lt;= colCount; j++)
+                {
+                    //new line
+                    if (j == 1)
+                        Console.Write("\r\n");
+
+                    //write the value to the console
+                    if (xlRange.Cells[i, j] != null &amp;&amp; xlRange.Cells[i, j].Value2 != null)
+                        Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t");
+                }
+            }
+
+            //cleanup
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            //rule of thumb for releasing com objects:
+            //  never use two dots, all COM objects must be referenced and released individually
+            //  ex: [somthing].[something].[something] is bad
+
+            //release com objects to fully kill excel process from running in the background
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorksheet);
+
+            //close and release
+            xlWorkbook.Close();
+            Marshal.ReleaseComObject(xlWorkbook);
+
+            //quit and release
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlApp);
+        }
+        static void Main(string[] args)
+        {
+            getExcelFile();
+            Console.Read();
+        }
+    }
+}   </pre>
+
+
+
+<div><span style="text-decoration: underline;"><strong>Tài liệu liên quan:</strong></span></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/158706/how-to-properly-clean-up-excel-interop-objects/158752" target="_blank" rel="noopener noreferrer">stackoverflow</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/eaw10et3.aspx" target="_blank" rel="nofollow noopener noreferrer">Interop Marshaling</a></li>
+</ul>
+<div class="alert alert-success"><strong>Nếu các bạn cảm thấy Website TanHongIT.Net thật sự hữu ích mình mong các bạn có thể chia sẻ những bài viết đến cho cộng đồng cùng thao khảo nhé. Cảm ơn các bạn !!!</strong></div>
+<div>
+<div class="alert alert-success"><strong>Các bạn có bất kì thắc mắc cần được hỗ trợ hay yêu cầu các phần mềm, thủ thuật, khoá học,… thì cứ để lại comment bên dưới bài viết hoặc liên hệ qua <a href="https://www.facebook.com/tanhongit.net/" target="_blank" rel="noopener noreferrer">fanpage của TanHongIT</a> để được hỗ trợ nhé! Mình sẽ cố gắng chia sẻ cho các bạn mọi thứ cần thiết nhất!</strong></div>
+</div>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code/thuat-toan-tinh-tong-cong-hai-so-cuc-lon-java/" target="_blank" rel="noopener noreferrer">Thuật Toán Tính Tổng Cộng Hai Số Cực Lớn JAVA</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/khoa-hoc/thiet-ke-website-voi-wix/" target="_blank" rel="noopener noreferrer">Khóa Học Thiết Kế Website Với WIX Cho Người Mới Bắt Đầu</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/entertainment/classic-game-windows-7/" target="_blank" rel="noopener noreferrer">Download Classic Game Windows 7 dành cho Windows 10 / 8.1</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-bo-code-web-html5-to-tinh-don-gian-nhung-that-ngot-ngao/" target="_blank" rel="noopener noreferrer">Share bộ code web HTML5 tỏ tình đơn giản nhưng thật ngọt ngào</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-logo-avata-giong-porn-hub-dep-mat/" target="_blank" rel="noopener noreferrer">Source Code Logo Avata giống Porn Hub đẹp mắt</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/share-source-code-ma-tran-html-viet-bang-canvas-tuyet-dep/" target="_blank" rel="noopener noreferrer">Share Source Code Ma Trận Html Viết Bằng Canvas Tuyệt Đẹp</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/revo-uninstaller-pro-full/" target="_blank" rel="noopener noreferrer">Download Revo Uninstaller Pro Full Repack Update Mới nhất 2019 &#8211; Gỡ bỏ phần mềm tiện dụng hiệu quả</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/python/khoa-hoc-python/" target="_blank" rel="noopener noreferrer">Chia Sẻ Khóa Học Python Cho Người Mới Bắt Đầu (Python for Beginners: Learn with Examples and Mini-Project)</a></strong></li>
+</ul>
+<p style="text-align: center;"><span style="font-size: 28px; color: #ff0000;"><strong>CHÚC CÁC BẠN THÀNH CÔNG VÀ VUI VẺ</strong></span></p>
+<div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="7173"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">4</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/">Mở Đọc File Excel Trong C# Với Microsoft Office Interop Excel dll</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code/mo-doc-file-excel-trong-c-voi-microsoft-office-interop-excel-dll/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</title>
+		<link>http://localhost:82/demowp/code-web/plugin-for-vscode/</link>
+				<comments>http://localhost:82/demowp/code-web/plugin-for-vscode/#respond</comments>
+				<pubDate>Mon, 30 Sep 2019 04:47:05 +0000</pubDate>
+		<dc:creator><![CDATA[Tân Hồng]]></dc:creator>
+				<category><![CDATA[Code Web]]></category>
+		<category><![CDATA[Công Cụ Lập Trình]]></category>
+		<category><![CDATA[Front End]]></category>
+
+		<guid isPermaLink="false">http://localhost:82/demowp/?p=5492</guid>
+				<description><![CDATA[<p>Tổng Hợp Những Plugin Hỗ Trợ không thể thiếu cho VSCode. Visual Studio Code (viết tắt là VSCode) là một trình biên tập được phát triển bởi Microsoft dành cho Windows, Linux và macOS. Nó hỗ trợ chức năng debug, đi kèm với Git, có syntax highlighting, tự hoàn thành mã thông mình, snippets, và [&#8230;]</p>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/plugin-for-vscode/">Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[<p>Tổng Hợp Những Plugin Hỗ Trợ không thể thiếu cho VSCode. Visual Studio Code (viết tắt là VSCode) là một trình biên tập được phát triển bởi Microsoft dành cho Windows, Linux và macOS. Nó hỗ trợ chức năng debug, đi kèm với Git, có syntax highlighting, tự hoàn thành mã thông mình, snippets, và cải tiến mã nguồn.</p>
+<p><figure id="attachment_7104" aria-describedby="caption-attachment-7104" style="width: 699px" class="wp-caption aligncenter"><a href="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg"><img class="size-full wp-image-7104" src="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg" alt="plugin for vscode" width="699" height="437" srcset="http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode.jpg 699w, http://localhost:82/demowp/wp-content/uploads/2019/09/plugin-for-vscode-300x188.jpg 300w" sizes="(max-width: 699px) 100vw, 699px" /></a><figcaption id="caption-attachment-7104" class="wp-caption-text">Những Plugin không thể thiếu cho VSCode</figcaption></figure></p>
+<p>Hiện nay, VSCode chiếm được nhiều cảm tình của dân lập trình web nhờ hiệu suất ổn định, dễ sử dụng, cộng với vô vàn tính năng hữu ích được đóng gói sẵn. Bên cạnh đó, kho plugin đồ sộ của VSCode cho phép người dùng tha hồ tùy biến và cải thiện trình soạn thảo theo hướng tiện dụng nhất.</p>
+<h2 id="_1-snippets-0"><span id="1-snippets" class="ez-toc-section">1. Snippets</span></h2>
+<p>Đầu tiên phải kể đến những snippets thông dụng. Mặc dù VSCode đã hỗ trợ khá nhiều snippet trong bộ cài đặt, bạn vẫn cần snippets của các frameworks/ thư viện như React, Vue hay Angular. Bạn có thể dễ dàng tìm chúng từ VSCode Marketplace, chẳng hạn như:</p>
+<ul>
+<li>HTML Snippets</li>
+<li>JavaScript (ES6) code snippets</li>
+<li>Vue VSCode Snippets</li>
+<li>Vue 2 Snippets</li>
+</ul>
+<h2 id="_2-bracket-pair-colorizer-va-indent-rainbow-1"><span id="2-bracket-pair-colorizer-va-indent-rainbow" class="ez-toc-section">2. Bracket Pair Colorizer và Indent Rainbow</span></h2>
+<p>“Cặp đôi hoàn hảo” Bracket Pair Colorizer và Indent Rainbow sẽ tô màu cho những cặp dấu ngoặc nhọn khác nhau, đồng thời màu nền của trình soạn thảo cũng thay đổi mỗi khi bạn “đẩy vào” một cột.</p>
+<p><em>Mặc định:</em></p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/c8a8af19-3067-428c-8a63-8e739eae09af.png" alt="Bracket Pair Colorizer" width="412" height="147" data-zoom-target="https://images.viblo.asia/1600/c8a8af19-3067-428c-8a63-8e739eae09af.png" /></p>
+<p>*Với Bracket Pair Colorizer và Indent Rainbow: *</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/abd692ec-acfa-44bc-aa11-c1567cc8ad83.png" alt="Indent Rainbow" width="443" height="156" data-zoom-target="https://images.viblo.asia/1600/abd692ec-acfa-44bc-aa11-c1567cc8ad83.png" /></p>
+<h2 id="_3-indenticator-2"><span id="3-indenticator" class="ez-toc-section">3. Indenticator</span></h2>
+<p>Indenticator giúp bạn nhận biết dễ dàng các block code đang được sử dụng.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/249add0a-4bf7-451c-b350-bfd5a809d071.gif" alt="Indenticator" width="746" height="571" data-zoom-target="https://images.viblo.asia/1600/249add0a-4bf7-451c-b350-bfd5a809d071.gif" /></p>
+<h2 id="_4-gitlens-3"><span id="4-gitlens" class="ez-toc-section">4. GitLens</span></h2>
+<p>Gitlens giống như một GUI tool cho git được tích hợp vào VSCode. Nó bao gồm hàng tá features như commit, add, commit search, history, Gitlens explorer. Nó giúp cho bạn dễ dàng hơn rất nhiều trong việc teamwork khi mọi người cùng làm việc trên cùng một Repo</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/f2754dcc-2ddc-44b8-99d4-855ecaecda05.gif" alt="GitLens vscode" width="727" height="600" data-zoom-target="https://images.viblo.asia/1600/f2754dcc-2ddc-44b8-99d4-855ecaecda05.gif" /></p>
+<h2 id="_5-polacode-4"><span id="5-polacode" class="ez-toc-section">5. Polacode</span></h2>
+<p>Polacode giúp “screenshot” code một cách đẹp đẽ hơn, như ví dụ bên dưới. Rất hữu ích khi bạn cần gửi code lên diễn đàn hay mạng xã hội nhờ trợ giúp.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/1000cdf0-8e0a-495f-9a72-6657300e363c.png" alt="Polacode" width="825" height="576" data-zoom-target="https://images.viblo.asia/1600/1000cdf0-8e0a-495f-9a72-6657300e363c.png" /></p>
+<h2 id="_6-import-cost-5"><span id="6-import-cost" class="ez-toc-section">6. Import Cost</span></h2>
+<p>Bằng cách sử dụng webpack và babili-webpack-plugin, Import Cost hiển thị ngay lập tức dung lượng các thư viện được sử dụng trong dự án. Điều này rất hữu ích vì nếu càng gửi nhiều JavaScript về phía người dùng, trình duyệt càng phải tốn thời gian để dịch và thực thi, làm giảm đi hiệu suất của ứng dụng.</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/d8faa20f-67f2-42ea-a046-4456b47d61d8.png" alt="Import Cost" width="825" height="223" data-zoom-target="https://images.viblo.asia/1600/d8faa20f-67f2-42ea-a046-4456b47d61d8.png" /></p>
+<h2 id="_7-material-icon-theme-6"><span id="7-material-icon-theme" class="ez-toc-section">7. Material Icon Theme</span></h2>
+<p>Material Icon Theme là Plugin giúp hiển thị icon theo phong cách Material Design</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/688e4489-4391-47ce-b916-3e956864464c.png" alt="Material Icon Theme" width="806" height="375" data-zoom-target="https://images.viblo.asia/1600/688e4489-4391-47ce-b916-3e956864464c.png" /></p>
+<h2 id="_8-vscode-icons-7"><span id="8-vscode-icons" class="ez-toc-section">8. VSCode-icons</span></h2>
+<p>Là một plugin giúp các icon trên VSCode được hiển thị một cách đẹp mắt hơn, qua đó giúp cho lập trình viên dễ dàng hơn trong quá trình làm việc với VSCode</p>
+<p><img class="medium-zoom-image aligncenter" src="https://images.viblo.asia/162e4e1e-9591-4321-bda9-ee0d20476aab.jpeg" alt="VSCode-icons" width="528" height="296" data-zoom-target="https://images.viblo.asia/1600/162e4e1e-9591-4321-bda9-ee0d20476aab.jpeg" /></p>
+<h2 id="_loi-ket-8"><span id="loi-ket" class="ez-toc-section">Lời kết</span></h2>
+<p>Trên đây là một số Plugin mà mình đã tổng hợp được từ nhiều bài viết được chia sẻ trên các diễn đàn mà mình nghĩ bạn nên sử dụng khi bắt đầu làm việc cùng với VSCode. Hi vọng bài viết này sẽ giúp cho các bạn dễ dàng hơn trong việc sử dụng và làm việc với VSCode để tạo ra những sản phẩm tốt và ưng ý nhất.</p>
+<p><span style="text-decoration: underline; font-size: 24px;"><strong>Xem thêm:</strong></span></p>
+<ul>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/6-dieu-ban-co-the-hieu-sai-khi-su-dung-may-tinh/" target="_blank" rel="noopener noreferrer">6 điều bạn có thể hiểu sai khi sử dụng Máy Tính</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/kien-thuc/danh-so-phien-ban-phan-mem-software-versioning/" target="_blank" rel="noopener noreferrer">Đánh số phiên bản phần mềm – Software Versioning</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/code-web/khoa-hoc-git-github/" target="_blank" rel="noopener noreferrer">Chia sẻ Khóa Học Git &amp; Github cho lập trình và thiết kế website</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/video/tang-toc-may-tinh/" target="_blank" rel="noopener noreferrer">Bộ Video Hướng Dẫn Tăng Tốc Máy Tính Của Bạn (Speeding Up Your PC)</a></strong></li>
+<li><strong><a class="LinkSuggestion__Link-sc-1mdih4x-2 jZPuuT" href="http://localhost:82/demowp/phan-mem/magix-vegas-pro-17/" target="_blank" rel="noopener noreferrer">MAGIX VEGAS Pro 17.0 Build 284 Full Active 2020 &#8211; Phần Mềm Làm Video Phim Chuyên Nghiệp</a></strong></li>
+</ul>
+<p style="text-align: right;"><strong>via <a href="https://viblo.asia/p/nhung-plugin-khong-the-thieu-cho-vscode-Qbq5QvLzKD8" target="_new" rel="nofollow noopener noreferrer" data-wpel-link="external">Viblo</a></strong></p>
+<p><!-- /wp:syntaxhighlighter/code --><div style="display: none;"
+    class="kk-star-ratings kksr-valign-bottom kksr-align-right kksr-disabled"
+    data-id="5492"
+    data-slug="">
+    <div class="kksr-stars">
+    <div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+    <div class="kksr-stars-active" style="width: 110px;">
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+            <div class="kksr-star">
+            <div class="kksr-icon" style="width: 22px; height: 22px;"></div>
+        </div>
+    </div>
+</div>
+    <div class="kksr-legend">
+            <strong class="kksr-score">5</strong>
+        <span class="kksr-muted">/</span>
+        <strong>5</strong>
+        <span class="kksr-muted">(</span>
+        <strong class="kksr-count">3</strong>
+        <span class="kksr-muted">
+            votes        </span>
+        <span class="kksr-muted">)</span>
+    </div>
+</div>
+<p>The post <a rel="nofollow" href="http://localhost:82/demowp/code-web/plugin-for-vscode/">Những Plugin Extensions Hỗ Trợ không thể thiếu cho VSCode</a> appeared first on <a rel="nofollow" href="http://localhost:82/demowp">Tân Hồng IT</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>http://localhost:82/demowp/code-web/plugin-for-vscode/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

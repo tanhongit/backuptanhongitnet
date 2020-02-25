@@ -1,0 +1,23 @@
+From 4cbf3c0ef0bab921830c025af1f015054b672795 Mon Sep 17 00:00:00 2001
+From: Kevin Kirsche <Kev.Kirsche+GitHub@gmail.com>
+Date: Thu, 11 Jun 2015 21:11:15 -0400
+Subject: [PATCH] Remove moot `version` property from bower.json
+
+Per bower/bower.json-spec@a325da3
+
+Also their maintainer says they probably won't ever use it: http://stackoverflow.com/questions/24844901/bowers-bower-json-file-version-property
+---
+ bower.json | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/bower.json b/bower.json
+index 49d0020..05f4530 100644
+--- a/bower.json
++++ b/bower.json
+@@ -1,6 +1,5 @@
+ {
+   "name": "pagePiling.js",
+-  "version": "1.5.1",
+   "homepage": "https://github.com/alvarotrigo/pagePiling.js",
+   "authors": [
+     "Alvaro Trigo https://github.com/alvarotrigo"
