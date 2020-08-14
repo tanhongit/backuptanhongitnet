@@ -2,8 +2,8 @@
 
 link : https://tanhongit.github.io/backuptanhongitnet.github.io/
 
-Website https://tanhongit.net hiện tại đã dừng đăng bài kể từ tháng 2/2020, nhưng mình vẫn  duy trì hoạt động sự tồn tại của nó trên internet. 
+Website https://tanhongit.net currently stopped posting since February 2020, but I still maintain its existence on the internet.
 
-Bởi vì một kỷ niệm đẹp đôi với website nên mình đã chuyển tổng thể source code từ php sang html tĩnh để lưu trữ dự phòng làm kỷ niệm. Tuy nhiên vẫn còn khá nhiều lỗi trong source html static này.
+Because of a beautiful memory with the website, I have moved the overall source code from PHP to static HTML for backup as a souvenir. However, there are still many errors in this static HTML source.
 
-Hiện tại tanhongit đã lập một site mới có địa chỉ tại https://tanhongit.com chuyên chia sẻ kiến thức lập trình và tổng hợp một số thủ thuật về máy tính, công nghệ. Mong các bạn đón đọc. <3
+Currently, tanhongit has established a new site at https://tanhongit.com, specializing in sharing programming knowledge and synthesizing some computer tips and technology. Hope you welcome to read. <3
